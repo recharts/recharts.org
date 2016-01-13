@@ -3,10 +3,28 @@ import { connect } from 'react-redux';
 import { pushPath } from 'redux-simple-router';
 import 'styles/app.scss';
 
-@connect(state => { return {} }, { pushPath })
+function convertPath2Page(pathName = '') {
+  const candidates = ['guide', 'api', 'examples', 'blog'];
+  const cleanPath = pathName.split('?')[0];
+  const finalPath = cleanPath.replace('/', '');
+
+  if (candidates.indexOf(finalPath) !== -1) {
+    return finalPath;
+  }
+
+  return 'index';
+}
+
+@connect(state => {
+  return {
+    page: convertPath2Page(state.routing.path),
+  };
+}, { pushPath })
 class Frame extends Component {
   static propTypes = {
+    page: PropTypes.string,
     children: PropTypes.node,
+    pushPath: PropTypes.func,
   };
 
   handleNavRoute(route, e) {
@@ -18,42 +36,36 @@ class Frame extends Component {
   }
 
   render() {
-    const { children } = this.props;
+    const { page, children } = this.props;
 
     return (
       <div className="container">
         <header>
           <div className="header-wrapper">
-            <h1 className="logo">&lt;Recharts /&gt;</h1>
+            <h1 className="logo">
+              <a href="/" className="nav-logo" onClick={this.handleNavRoute.bind(this, '/')}>&lt;Recharts /&gt;</a>
+            </h1>
             <nav>
               <ul className="nav" id="nav">
                 <li>
-                  <a href="/"
-                    onClick={this.handleNavRoute.bind(this, '/')}
-                    className="nav-link">Index</a>
+                  <a href="/guide" className={'nav-link ' + (page === 'guide' ? 'active' : '')}
+                    onClick={this.handleNavRoute.bind(this, '/guide')}>Guide</a>
                 </li>
                 <li>
-                  <a href="/guide"
-                    onClick={this.handleNavRoute.bind(this, '/area')}
-                    className="nav-link">Guide</a>
+                  <a href="/api" className={'nav-link ' + (page === 'api' ? 'active' : '')}
+                    onClick={this.handleNavRoute.bind(this, '/api')}>API</a>
                 </li>
                 <li>
-                  <a href="/api"
-                    onClick={this.handleNavRoute.bind(this, '/api')}
-                    className="nav-link">API</a>
+                  <a href="/examples" className={'nav-link ' + (page === 'examples' ? 'active' : '')}
+                    onClick={this.handleNavRoute.bind(this, '/examples')}>Examples</a>
                 </li>
                 <li>
-                  <a href="/examples"
-                    onClick={this.handleNavRoute.bind(this, '/examples')}
-                    className="nav-link">Examples</a>
-                </li>
-                <li>
-                  <a href="/blog"
-                    onClick={this.handleNavRoute.bind(this, '/blog')}
-                    className="nav-link">Blog</a>
+                  <a href="/blog" className={'nav-link ' + (page === 'blog' ? 'active' : '')}
+                    onClick={this.handleNavRoute.bind(this, '/blog')}>Blog</a>
                 </li>
                 <li>
                   <a href="https://github.com/recharts/recharts"
+                    target="_blank"
                     className="nav-github">Github</a>
                 </li>
               </ul>

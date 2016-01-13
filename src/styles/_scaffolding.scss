@@ -81,9 +81,17 @@ img {
 }
 
 ul, ol {
+  list-style: none;
+}
+
+code {
+  font-size: $font-size-base;
+}
+
+div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, p, blockquote,
+th, td {
   margin: 0;
   padding: 0;
-  list-style: none;
 }
 
 // Button
@@ -98,4 +106,8 @@ a.button {
   padding: 12px 14px;
   border-radius: 4px;
   transition: all 0.15s ease;
+
+  &:hover {
+    background-color: darken($brand-primary, 3%);
+  }
 }

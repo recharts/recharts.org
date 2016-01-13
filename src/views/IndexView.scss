@@ -5,19 +5,20 @@
   .desc {
     width: 1000px;
     margin: 0 auto;
+    padding-top: 60px;
 
     > p, > a {
       text-align: center;
     }
 
     .title {
-      margin: 60px 0 10px;
       font-size: 64px;
       font-family: $font-family-logo;
       color: $brand-info;
     }
 
     .subtitle {
+      margin: 20px 0;
       font-size: 24px;
       color: $gray-lighter;
     }
@@ -25,16 +26,13 @@
     .install-btn {
       width: 280px;
       margin: 0 auto;
-
-      &:hover {
-        background-color: darken($brand-primary, 3%);
-      }
     }
   }
 
   .examples {
     width: 1000px;
     margin: 0 auto;
+    margin-top: 60px;
 
     > .ex-code {
       width: 540px;
@@ -43,9 +41,9 @@
   }
 
   .features {
-    padding: 3em 0;
     text-align: center;
     background-color: #f9f9f9;
+    margin-top: 60px;
 
     .feat {
       width: 1000px;
@@ -65,9 +63,33 @@
         }
 
         .text {
+          font-size: $font-size-lg;
           line-height: 1.5;
         }
       }
+    }
+  }
+
+  .like {
+    margin-bottom: 20px;
+    text-align: center;
+    background-color: #eee;
+
+    .text {
+      padding-top: 40px;
+      font-size: $font-size-xxxl;
+    }
+
+    .btn {
+      padding: 40px 0;
+    }
+
+    .getting-started-btn {
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      display: inline-block;
+      padding: 12px 20px;
+      border-radius: 25px;
     }
   }
 }
