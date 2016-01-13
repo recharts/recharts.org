@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Highlight from 'react-highlight';
+import Highlight from 'utils/Highlight';
 
 const Installation = () => {
   return (

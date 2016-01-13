@@ -3,6 +3,7 @@ var fs = require('fs');
 var webpack = require('webpack');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var cssnano = require('cssnano');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 var sassLoaderBuild = 'css!postcss!sass?includePaths[]=' + encodeURIComponent(path.resolve(__dirname, './src/styles'));
 
@@ -16,7 +17,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'build'),
     filename: '[name].js',
-    publicPath: '/static/',
+    publicPath: '',
   },
 
   module: {
@@ -54,6 +55,7 @@ module.exports = {
       'components': path.join(__dirname, './src/components'),
       'layouts': path.join(__dirname, './src/layouts'),
       'views': path.join(__dirname, './src/views'),
+      'utils': path.join(__dirname, './src/utils'),
       'styles': path.join(__dirname, './src/styles'),
     },
     extensions: ['', '.js', '.jsx', '.scss', '.css'],
@@ -74,6 +76,9 @@ module.exports = {
         unused: true,
         dead_code: true,
       },
+    }),
+    new HtmlWebpackPlugin({
+      template: 'template.html'
     })
   ],
 };

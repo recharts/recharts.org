@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { LineChart, LineItem, XAxis, YAxis, Tooltip, CartesianGrid } from 'recharts';
-import Highlight from 'react-highlight';
+import Highlight from 'utils/Highlight';
 import './IndexView.scss';
 
 const data = [{name: '上海', uv: 400, pv: 2400, amt: 2400},
