@@ -1,0 +1,59 @@
+.container {
+}
+
+header {
+  width: 100%;
+  background-color: #fcfcfc;
+  box-shadow: 0 0 4px rgba(0,0,0,0.25);
+
+  .header-wrapper {
+    width: 1000px;
+    height: 60px;
+    line-height: 60px;
+    margin: 0 auto;
+    @include clearfix;
+  }
+
+  .logo {
+    float: left;
+    width: 130px;
+    margin: 0 20px 0;
+    font-family: $font-family-code;
+    font-weight: 300;
+    font-size: $font-size-xl;
+    color: $brand-info;
+  }
+
+  nav {
+    @include clearfix;
+    height: 60px;
+    line-height: 60px;
+  }
+
+  .nav {
+    > li {
+      float: left;
+      padding: 0 10px;
+
+      > a {
+        font-size: $font-size-lg;
+      }
+    }
+
+    > li:last-child {
+      float: right;
+    }
+  }
+}
+
+footer {
+  text-align: center;
+
+  > p {
+    margin: 6px 0;
+  }
+}
+
+.page {
+  margin: 20px 0;
+}

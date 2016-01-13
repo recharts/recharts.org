@@ -1,0 +1,73 @@
+@import 'variables';
+@import 'mixins';
+
+.page-index {
+  .desc {
+    width: 1000px;
+    margin: 0 auto;
+
+    > p, > a {
+      text-align: center;
+    }
+
+    .title {
+      margin: 60px 0 10px;
+      font-size: 64px;
+      font-family: $font-family-logo;
+      color: $brand-info;
+    }
+
+    .subtitle {
+      font-size: 24px;
+      color: $gray-lighter;
+    }
+
+    .install-btn {
+      width: 280px;
+      margin: 0 auto;
+
+      &:hover {
+        background-color: darken($brand-primary, 3%);
+      }
+    }
+  }
+
+  .examples {
+    width: 1000px;
+    margin: 0 auto;
+
+    > .ex-code {
+      width: 540px;
+      margin: 0 auto;
+    }
+  }
+
+  .features {
+    padding: 3em 0;
+    text-align: center;
+    background-color: #f9f9f9;
+
+    .feat {
+      width: 1000px;
+      margin: 0 auto;
+      @include clearfix;
+
+      > li {
+        float: left;
+        text-align: left;
+        vertical-align: top;
+        width: 250px;
+        margin: 40px;
+
+        strong {
+          font-size: $font-size-xxl;
+          font-weight: 700;
+        }
+
+        .text {
+          line-height: 1.5;
+        }
+      }
+    }
+  }
+}
