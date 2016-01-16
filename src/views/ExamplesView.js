@@ -14,6 +14,11 @@ class ExamplesView extends Component {
           </ul>
         </div>
         <div className="content">
+          <div className="mod" id="LineChart">
+            <h3>LineChart</h3>
+            <iframe src="//jsfiddle.net/pshrsx1j/embedded/" allow-modals allow-forms allow-popups allow-scripts allow-same-origin>
+            </iframe>
+          </div>
         </div>
       </div>
     );

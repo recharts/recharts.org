@@ -127,6 +127,16 @@ footer {
   margin: 0 auto;
 }
 
+.page-examples {
+  iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: none;
+    margin: 0;
+  }
+}
+
 .page-api {
   table {
     display: block;
