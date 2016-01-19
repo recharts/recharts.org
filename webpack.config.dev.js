@@ -43,6 +43,7 @@ module.exports = {
       'views': path.join(__dirname, './src/views'),
       'utils': path.join(__dirname, './src/utils'),
       'styles': path.join(__dirname, './src/styles'),
+      'docs': path.join(__dirname, './src/docs'),
     },
     extensions: ['', '.js', '.jsx', '.scss', '.css'],
   },

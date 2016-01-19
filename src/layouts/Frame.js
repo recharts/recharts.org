@@ -3,21 +3,9 @@ import { connect } from 'react-redux';
 import { pushPath } from 'redux-simple-router';
 import 'styles/app.scss';
 
-function convertPath2Page(pathName = '') {
-  const candidates = ['guide', 'api', 'examples', 'blog'];
-  const cleanPath = pathName.split('?')[0];
-  const finalPath = cleanPath.replace('/', '');
-
-  if (candidates.indexOf(finalPath) !== -1) {
-    return finalPath;
-  }
-
-  return 'index';
-}
-
 @connect(state => {
   return {
-    page: convertPath2Page(state.routing.path),
+    page: state.routing.path.split('/').filter(item => !!item)[0] || 'index',
   };
 }, { pushPath })
 class Frame extends Component {

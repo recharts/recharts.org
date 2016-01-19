@@ -1,55 +1,80 @@
-import React, { Component } from 'react';
+import React, { cloneElement, Component } from 'react';
 import { connect } from 'react-redux';
+import { pushPath } from 'redux-simple-router';
+import API from 'docs/api';
 
+@connect(state => {
+  return {
+    page: state.routing.path.split('/').filter(item => !!item)[1] || 'area',
+  };
+}, { pushPath })
 class APIView extends Component {
+  handleNavRoute(route, e) {
+    e.preventDefault();
+
+    const { pushPath } = this.props;
+
+    pushPath(route);
+  }
+
   render() {
+    const { children, page } = this.props;
+    const api = API[page];
+
     return (
       <div className="page page-api">
         <div className="sidebar">
           <h2>API</h2>
           <ul className="menu">
-            <li><a href="#Area">Area</a></li>
-            <li><a href="#Bar">Bar</a></li>
-            <li><a href="#Line">Line</a></li>
+            <li>
+              <a href="#" className={page === 'area' ? 'active' : ''}
+                onClick={this.handleNavRoute.bind(this, '/api/area')}>Area</a>
+            </li>
+            <li>
+              <a href="#" className={page === 'bar' ? 'active' : ''}
+                onClick={this.handleNavRoute.bind(this, '/api/bar')}>Bar</a>
+            </li>
+            <li>
+              <a href="#" className={page === 'line' ? 'active' : ''}
+                onClick={this.handleNavRoute.bind(this, '/api/line')}>Line</a>
+            </li>
           </ul>
         </div>
         <div className="content">
-          <div className="mod-area" id="Area">
-            <h3>Area</h3>
-            <h4>Properties</h4>
-            <table>
-              <thead>
-                <tr>
-                  <th>Name</th>
-                  <th>Type</th>
-                  <th>Default</th>
-                  <th>Description</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>area</td>
-                  <td>boolean</td>
-                  <td>true</td>
-                  <td><em>optaional.</em> The classname of the icon on the left of the app bar. If you are using a stylesheet for your icons, enter the class name for the icon to be used here.</td>
-                </tr>
-                <tr>
-                  <td>area</td>
-                  <td>boolean</td>
-                  <td>true</td>
-                  <td><em>optaional.</em> The classname of the icon on the left of the app bar. If you are using a stylesheet for your icons, enter the class name for the icon to be used here.</td>
-                </tr>
-                <tr>
-                  <td>area</td>
-                  <td>boolean</td>
-                  <td>true</td>
-                  <td><em>optaional.</em> The classname of the icon on the left of the app bar. If you are using a stylesheet for your icons, enter the class name for the icon to be used here.</td>
-                </tr>
-              </tbody>
-            </table>
-            <h4>Examples</h4>
-            <p><a href="/examples#areaChart">Simple AreaChart</a></p>
-          </div>
+          <h3>{api.name}</h3>
+          <h4>Properties</h4>
+          <table>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Default</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              {
+                api.props.map((item, i) => {
+                  const optional = item.isOptional ? <em>optaional.</em> : '';
+
+                  return (
+                    <tr key={`api-${i}`}>
+                      <td>{item.name}</td>
+                      <td>{item.type}</td>
+                      <td>{item.defaultValue}</td>
+                      <td>{optional} <span>{item.desc}</span></td>
+                    </tr>
+                  );
+                })
+              }
+            </tbody>
+          </table>
+          <h4>Examples</h4>
+          {
+            api.examples.map((item, i) => {
+              return <p key={`examples-${i}`}><a href={item.url}>{item.name}</a></p>;
+            })
+          }
         </div>
       </div>
     );
