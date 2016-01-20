@@ -61,7 +61,7 @@ class APIView extends Component {
                     <tr key={`api-${i}`}>
                       <td>{item.name}</td>
                       <td>{item.type}</td>
-                      <td>{item.defaultValue}</td>
+                      <td>{item.defaultVal}</td>
                       <td>{optional} <span>{item.desc}</span></td>
                     </tr>
                   );
