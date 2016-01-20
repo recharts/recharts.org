@@ -1,26 +1,26 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
-import { pushPath } from 'redux-simple-router';
+import { routeActions } from 'redux-simple-router';
 import 'styles/app.scss';
 
 @connect(state => {
   return {
-    page: state.routing.path.split('/').filter(item => !!item)[0] || 'index',
+    page: state.routing.location.pathname.split('/').filter(item => !!item)[0] || 'index',
   };
-}, { pushPath })
+}, { push: routeActions.push })
 class Frame extends Component {
   static propTypes = {
     page: PropTypes.string,
     children: PropTypes.node,
-    pushPath: PropTypes.func,
+    routeActions: PropTypes.func,
   };
 
   handleNavRoute(route, e) {
     e.preventDefault();
 
-    const { pushPath } = this.props;
+    const { push } = this.props;
 
-    pushPath(route);
+    push(route);
   }
 
   render() {

@@ -1,20 +1,20 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { pushPath } from 'redux-simple-router';
+import { routeActions } from 'redux-simple-router';
 import { Installation, GettingStarted, Customize } from 'components/GuideView';
 
 @connect(state => {
   return {
-    page: state.routing.path.split('/').filter(item => !!item)[1] || 'installation',
+    page: state.routing.location.pathname.split('/').filter(item => !!item)[1] || 'installation',
   };
-}, { pushPath })
+}, { push: routeActions.push })
 class GuideView extends Component {
   handleNavRoute(route, e) {
     e.preventDefault();
 
-    const { pushPath } = this.props;
+    const { push } = this.props;
 
-    pushPath(route);
+    push(route);
   }
 
   renderGuide() {

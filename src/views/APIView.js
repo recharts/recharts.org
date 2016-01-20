@@ -1,20 +1,20 @@
 import React, { cloneElement, Component } from 'react';
 import { connect } from 'react-redux';
-import { pushPath } from 'redux-simple-router';
+import { routeActions } from 'redux-simple-router';
 import API from 'docs/api';
 
 @connect(state => {
   return {
-    page: state.routing.path.split('/').filter(item => !!item)[1] || 'area',
+    page: state.routing.location.pathname.split('/').filter(item => !!item)[1] || 'area',
   };
-}, { pushPath })
+}, { push: routeActions.push })
 class APIView extends Component {
   handleNavRoute(route, e) {
     e.preventDefault();
 
-    const { pushPath } = this.props;
+    const { push } = this.props;
 
-    pushPath(route);
+    push(route);
   }
 
   render() {

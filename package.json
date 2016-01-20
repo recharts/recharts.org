@@ -54,16 +54,16 @@
     "webpack-hot-middleware": "~2.6.0"
   },
   "dependencies": {
-    "highlight.js": "^9.1.0",
+    "highlight.js": "~9.1.0",
     "history": "~1.17.0",
-    "pure-render-decorator": "^0.2.0",
+    "pure-render-decorator": "~0.2.0",
     "react": "~0.14.6",
     "react-dom": "~0.14.6",
     "react-redux": "~4.0.6",
     "react-router": "~1.0.3",
     "recharts": "~0.3.13",
     "redux": "~3.0.5",
-    "redux-simple-router": "~1.0.2",
+    "redux-simple-router": "~2.0.4",
     "scroll-behavior": "~0.3.0"
   },
   "license": "MIT"

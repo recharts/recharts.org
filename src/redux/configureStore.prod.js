@@ -1,15 +1,18 @@
 import { createStore, combineReducers, applyMiddleware } from 'redux';
-import { syncReduxAndRouter } from 'redux-simple-router';
-import { routeReducer } from 'redux-simple-router';
-
+import { syncHistory, routeReducer } from 'redux-simple-router'
 import rootReducer from './reducers';
 
-const reducer = combineReducers(Object.assign({}, rootReducer, {
-  routing: routeReducer,
-}));
+export default function configureStore(history) {
+  const reduxRouterMiddleware = syncHistory(history);
 
-export default function configureStore(initialState) {
-  const store = createStore(reducer, initialState);
+  const finalCreateStore = applyMiddleware(reduxRouterMiddleware)(createStore);
+
+  const reducer = combineReducers(Object.assign({}, rootReducer, {
+    routing: routeReducer,
+  }));
+
+  const store = finalCreateStore(reducer);
+  reduxRouterMiddleware.listenForReplays(store);
 
   return store;
 }
