@@ -1,15 +1,13 @@
 import 'babel-polyfill';
 import React from 'react';
 import { render } from 'react-dom';
-import createHistory from 'history/lib/createBrowserHistory';
-import useScroll from 'scroll-behavior/lib/useScrollToTop';
+import { browserHistory } from 'react-router'
 import configureStore from './redux/configureStore';
 import Root from './containers/Root';
 import routes from './routes';
 
-const history = useScroll(createHistory)();
-const store = configureStore(history);
+const store = configureStore(browserHistory);
 
 render(
-  <Root store={store} history={history} routes={routes} />,
+  <Root store={store} history={browserHistory} routes={routes} />,
   document.getElementById('app'));
