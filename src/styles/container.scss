@@ -77,10 +77,18 @@ footer {
     top: 60px;
     width: 250px;
     padding-top: 30px;
+    height: 100%;
+    overflow: auto;
+    padding-bottom: 100px;
 
     > h2 {
       margin-bottom: 20px;
       font-size: 24px;
+    }
+
+    > h4 {
+      margin: 16px 0;
+      font-size: 18px;
     }
 
     > .menu {
@@ -96,9 +104,9 @@ footer {
   }
 
   > .content {
-    width: 850px;
+    width: 870px;
     margin-top: 60px;
-    padding: 0 0 0 250px;
+    padding: 0 0 0 270px;
 
     h3 {
       padding-top: 30px;

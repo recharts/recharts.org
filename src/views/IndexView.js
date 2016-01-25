@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { LineChart, LineItem, XAxis, YAxis, Tooltip, CartesianGrid } from 'recharts';
+import { LineChart, Line, XAxis, YAxis, Tooltip, CartesianGrid } from 'recharts';
 import Highlight from 'utils/Highlight';
 import './IndexView.scss';
 
@@ -16,7 +16,7 @@ class IndexView extends Component {
     const exCode = `
   <LineChart width={400} height={300} data={data}>
     <CartesianGrid stroke='#f5f5f5'/>
-    <LineItem type='monotone' dataKey='uv' stroke='#ff7300'/>
+    <Line type='monotone' dataKey='uv' stroke='#ff7300'/>
   </LineChart>
     `;
 
@@ -31,7 +31,7 @@ class IndexView extends Component {
           <div className="ex-code">
             <LineChart width={540} height={300} data={data}>
               <CartesianGrid stroke='#f5f5f5' />
-              <LineItem type='monotone' dataKey='uv' stroke='#ff7300' />
+              <Line type='monotone' dataKey='uv' stroke='#ff7300' />
             </LineChart>
             <Highlight className="jsx">{exCode}</Highlight>
           </div>
