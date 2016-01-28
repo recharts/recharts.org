@@ -8,18 +8,6 @@ export default {
       isOptional: false,
       desc: 'The layout (horizontal or vertical) of area in the chart.',
     }, {
-      name: 'unit',
-      type: 'String | Number',
-      defaultVal: 'null',
-      isOptional: true,
-      desc: 'The unit of data.',
-    }, {
-      name: 'name',
-      type: 'String | Number',
-      defaultVal: 'null',
-      isOptional: true,
-      desc: 'The name of data.',
-    }, {
       name: 'dataKey',
       type: 'String | Number',
       defaultVal: 'null',
@@ -37,6 +25,12 @@ export default {
       defaultVal: '0',
       isOptional: false,
       desc: 'The id of y-axis which is corresponding to the data.',
+    }, {
+      name: 'stackId',
+      type: 'String | Number',
+      defaultVal: 'null',
+      isOptional: true,
+      desc: 'The stack id of bar, when two bars have the same value axis and same stackId, then the two bars are stacked in order.',
     }, {
       name: 'legendType',
       type: 'String',
@@ -85,6 +79,18 @@ export default {
       defaultVal: 'null',
       isOptional: true,
       desc: 'The function will be called when mouse click the area.'
+    }, {
+      name: 'unit',
+      type: 'String | Number',
+      defaultVal: 'null',
+      isOptional: true,
+      desc: 'The unit of data.',
+    }, {
+      name: 'name',
+      type: 'String | Number',
+      defaultVal: 'null',
+      isOptional: true,
+      desc: 'The name of data.',
     },
   ],
   examples: [

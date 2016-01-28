@@ -8,18 +8,6 @@ export default {
       isOptional: false,
       desc: 'The interpolation type of area, which can be linear, monotone, step, stepBefore, stepAfter',
     }, {
-      name: 'unit',
-      type: 'String | Number',
-      defaultVal: 'null',
-      isOptional: true,
-      desc: 'The unit of data.',
-    }, {
-      name: 'name',
-      type: 'String | Number',
-      defaultVal: 'null',
-      isOptional: true,
-      desc: 'The name of data.',
-    }, {
       name: 'dataKey',
       type: 'String | Number',
       defaultVal: 'null',
@@ -43,12 +31,6 @@ export default {
       defaultVal: 'line',
       isOptional: false,
       desc: 'The type of icon in legend, which can be line, scatter, square, rect.',
-    }, {
-      name: 'formatter',
-      type: 'Function',
-      defaultVal: 'null',
-      isOptional: true,
-      desc: 'The formatter function of data.',
     }, {
       name: 'dot',
       type: 'Boolean | Object | ReactElement',
@@ -86,23 +68,29 @@ export default {
       isOptional: false,
       desc: 'The coordinates of all the points in the area.',
     }, {
-      name: 'onMouseEnter',
-      type: 'Function',
+      name: 'stackId',
+      type: 'String | Number',
       defaultVal: 'null',
       isOptional: true,
-      desc: 'The function will be called when mouse enter the area.'
+      desc: 'The stack id of area, when two areas have the same value axis and same stackId, then the two areas area stacked in order.',
     }, {
-      name: 'onMouseLeave',
+      name: 'formatter',
       type: 'Function',
       defaultVal: 'null',
       isOptional: true,
-      desc: 'The function will be called when mouse leave the area.'
+      desc: 'The formatter function of data.',
     }, {
-      name: 'onClick',
-      type: 'Function',
+      name: 'unit',
+      type: 'String | Number',
       defaultVal: 'null',
       isOptional: true,
-      desc: 'The function will be called when mouse click the area.'
+      desc: 'The unit of data.',
+    }, {
+      name: 'name',
+      type: 'String | Number',
+      defaultVal: 'null',
+      isOptional: true,
+      desc: 'The name of data.',
     },
   ],
   examples: [

@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
 import Highlight from 'utils/Highlight';
+import CustomAxisLabel from './CustomAxisLabel';
 import { LineChart, Line, XAxis, YAxis, Tooltip, CartesianGrid } from 'recharts';
 
-const data = [{name: '上海', uv: 400, pv: 2400, amt: 2400},
-              {name: '北京', uv: 300, pv: 4567, amt: 2400},
-              {name: '杭州', uv: 300, pv: 1398, amt: 2400},
-              {name: '上饶', uv: 200, pv: 9800, amt: 2400},
-              {name: '台湾', uv: 278, pv: 3908, amt: 2400},
-              {name: '香港', uv: 189, pv: 4800, amt: 2400}];
+const data = [{name: 'Page A', uv: 400, pv: 2400, amt: 2400},
+              {name: 'Page B', uv: 300, pv: 4567, amt: 2400},
+              {name: 'Page C', uv: 300, pv: 1398, amt: 2400},
+              {name: 'Page D', uv: 200, pv: 9800, amt: 2400},
+              {name: 'Page E', uv: 278, pv: 3908, amt: 2400},
+              {name: 'Page F', uv: 189, pv: 4800, amt: 2400}];
+
 
 const GettingStarted = () => {
   return (
@@ -31,13 +33,13 @@ const GettingStarted = () => {
       </div>
 
       <h4>2. Add componets need to be drawed</h4>
-      <p>LineChart can have XAxis, YAxis, Tooltip, Legend, CartesianGrid and so on.</p>
+      <p>LineChart can have XAxis, YAxis, Legend, CartesianGrid and so on.</p>
       <div className="step-2">
         <Highlight className="jsx">
         {
-          `<LineChart width={400} height={400} data={data}>
+          `<LineChart width={600} height={300} data={data}>
   <Line type="monotone" dataKey="uv" stroke="#ff7300"/>
-  <CartesianGrid stroke="#f5f5f5"/>
+  <CartesianGrid stroke="#ccc"/>
   <XAxis dataKey="name"/>
   <YAxis/>
 </LineChart>`
@@ -46,20 +48,20 @@ const GettingStarted = () => {
 
         <LineChart width={600} height={300} data={data}>
           <Line type="monotone" dataKey="uv" stroke="#ff7300"/>
-          <CartesianGrid stroke="#f5f5f5"/>
+          <CartesianGrid stroke="#ccc"/>
           <XAxis dataKey="name"/>
           <YAxis/>
         </LineChart>
       </div>
 
       <h4>3. Adjust the props of some components</h4>
-      <p>For example, the margin-right shoule be bigger to display the whole x-axis, and the width of y-axis should be smaller to be harmonize with the right.</p>
-      <div className="step-2">
+      <p>For example, the margin-right shoule be bigger to display the whole x-axis, the width of y-axis should be smaller to be harmonize with the right, and the storke style of grid may need to be dashed.</p>
+      <div className="step-3">
         <Highlight className="jsx">
         {
-          `<LineChart width={400} height={400} data={data} margin={{top: 5, right: 20, bottom: 5, left: 0}}>
+          `<LineChart width={600} height={300} data={data} margin={{top: 5, right: 20, bottom: 5, left: 0}}>
   <Line type="monotone" dataKey="uv" stroke="#ff7300"/>
-  <CartesianGrid stroke="#f5f5f5"/>
+  <CartesianGrid stroke="#ccc" strokeDasharray="5 5"/>
   <XAxis dataKey="name"/>
   <YAxis/>
 </LineChart>`
@@ -68,7 +70,7 @@ const GettingStarted = () => {
 
         <LineChart width={600} height={300} data={data} margin={{top: 20, right: 20, bottom: 5, left: 0}}>
           <Line type="monotone" dataKey="uv" stroke="#ff7300"/>
-          <CartesianGrid stroke="#f5f5f5"/>
+          <CartesianGrid stroke="#ccc" strokeDasharray="5 5"/>
           <XAxis dataKey="name"/>
           <YAxis width={40}/>
         </LineChart>
@@ -76,12 +78,12 @@ const GettingStarted = () => {
 
       <h4>4. Add interaction</h4>
       <p>Default, we can add Tooltip.</p>
-      <div className="step-2">
+      <div className="step-4">
         <Highlight className="jsx">
         {
-          `<LineChart width={400} height={400} data={data} margin={{top: 5, right: 20, bottom: 5, left: 0}}>
+          `<LineChart width={600} height={300} data={data} margin={{top: 5, right: 20, bottom: 5, left: 0}}>
   <Line type="monotone" dataKey="uv" stroke="#ff7300"/>
-  <CartesianGrid stroke="#f5f5f5"/>
+  <CartesianGrid stroke="#ccc" strokeDasharray="5 5"/>
   <XAxis dataKey="name"/>
   <YAxis/>
   <Tooltip/>
@@ -91,8 +93,32 @@ const GettingStarted = () => {
 
         <LineChart width={600} height={300} data={data} margin={{top: 20, right: 20, bottom: 5, left: 0}}>
           <Line type="monotone" dataKey="uv" stroke="#ff7300"/>
-          <CartesianGrid stroke="#f5f5f5"/>
+          <CartesianGrid stroke="#ccc" strokeDasharray="5 5"/>
           <XAxis dataKey="name"/>
+          <YAxis width={40}/>
+          <Tooltip/>
+        </LineChart>
+      </div>
+
+      <h4>5. Custom some components</h4>
+      <p>Default, we can add Tooltip.</p>
+      <div className="step-5">
+        <Highlight className="jsx">
+        {
+          `<LineChart width={600} height={300} data={data} margin={{top: 5, right: 20, bottom: 5, left: 0}}>
+  <Line type="monotone" dataKey="uv" stroke="#ff7300"/>
+  <CartesianGrid stroke="#ccc" strokeDasharray="5 5"/>
+  <XAxis dataKey="name" label={<CustomAxisLabel/>}/>
+  <YAxis/>
+  <Tooltip/>
+</LineChart>`
+        }
+        </Highlight>
+
+        <LineChart width={600} height={300} data={data} margin={{top: 20, right: 20, bottom: 5, left: 0}}>
+          <Line type="monotone" dataKey="uv" stroke="#ff7300"/>
+          <CartesianGrid stroke="#ccc" strokeDasharray="5 5"/>
+          <XAxis dataKey="name" label={<CustomAxisLabel/>}/>
           <YAxis width={40}/>
           <Tooltip/>
         </LineChart>
