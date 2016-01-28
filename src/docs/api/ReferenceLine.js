@@ -14,24 +14,6 @@ export default {
       isOptional: false,
       desc: 'The id of y-axis which is corresponding to the data.',
     }, {
-      name: 'viewBox',
-      type: 'Object',
-      defaultVal: 'null',
-      isOptional: false,
-      desc: 'The box of viewing area, which has the shape of {x: someVal, y: someVal, width: someVal, height: someVal}.',
-    }, {
-      name: 'xAxisMap',
-      type: 'Object',
-      defaultVal: 'null',
-      isOptional: false,
-      desc: 'The configurations of all the x-axes in the chart.',
-    }, {
-      name: 'yAxisMap',
-      type: 'Object',
-      defaultVal: 'null',
-      isOptional: false,
-      desc: 'The configurations of all the y-axes in the chart.',
-    }, {
       name: 'type',
       type: 'String',
       defaultVal: 'null',
@@ -43,6 +25,24 @@ export default {
       defaultVal: 'null',
       isOptional: false,
       desc: 'The value which displayed by the line.',
+    }, {
+      name: 'viewBox',
+      type: 'Object',
+      defaultVal: 'null',
+      isOptional: false,
+      desc: 'The box of viewing area, which has the shape of {x: someVal, y: someVal, width: someVal, height: someVal}, usually calculated internally.',
+    }, {
+      name: 'xAxisMap',
+      type: 'Object',
+      defaultVal: 'null',
+      isOptional: false,
+      desc: 'The configurations of all the x-axes in the chart, usually calculated internally.',
+    }, {
+      name: 'yAxisMap',
+      type: 'Object',
+      defaultVal: 'null',
+      isOptional: false,
+      desc: 'The configurations of all the y-axes in the chart, usually calculated internally.',
     },
   ],
   examples: [

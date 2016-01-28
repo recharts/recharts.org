@@ -54,19 +54,19 @@ export default {
       type: 'String',
       defaultVal: 'null',
       isOptional: false,
-      desc: 'The type of baseline in an area, which can be horizontal, vertical or curve.',
+      desc: 'The type of baseline in an area, which can be horizontal, vertical or curve, usually calculated internally.',
     }, {
       name: 'baseLine',
       type: 'Number | Array',
       defaultVal: 'null',
       isOptional: false,
-      desc: 'The value which can describle the line.',
+      desc: 'The value which can describle the line, usually calculated internally.',
     }, {
       name: 'points',
       type: 'Array',
       defaultVal: 'null',
       isOptional: false,
-      desc: 'The coordinates of all the points in the area.',
+      desc: 'The coordinates of all the points in the area, usually calculated internally.',
     }, {
       name: 'stackId',
       type: 'String | Number',

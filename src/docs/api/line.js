@@ -8,18 +8,6 @@ export default {
       isOptional: false,
       desc: 'The interpolation type of area, which can be linear, monotone, step, stepBefore, stepAfter',
     }, {
-      name: 'unit',
-      type: 'String | Number',
-      defaultVal: 'null',
-      isOptional: true,
-      desc: 'The unit of data.',
-    }, {
-      name: 'name',
-      type: 'String | Number',
-      defaultVal: 'null',
-      isOptional: true,
-      desc: 'The name of data.',
-    }, {
       name: 'dataKey',
       type: 'String | Number',
       defaultVal: 'null',
@@ -44,12 +32,6 @@ export default {
       isOptional: false,
       desc: 'The type of icon in legend, which can be line, scatter, square, rect.',
     }, {
-      name: 'formatter',
-      type: 'Function',
-      defaultVal: 'null',
-      isOptional: true,
-      desc: 'The formatter function of data.',
-    }, {
       name: 'dot',
       type: 'Boolean | Object | ReactElement',
       defaultVal: 'false',
@@ -66,25 +48,25 @@ export default {
       type: 'Array',
       defaultVal: 'null',
       isOptional: false,
-      desc: 'The coordinates of all the points in the area.',
+      desc: 'The coordinates of all the points in the line, usually calculated internally.',
     }, {
-      name: 'onMouseEnter',
+      name: 'formatter',
       type: 'Function',
       defaultVal: 'null',
       isOptional: true,
-      desc: 'The function will be called when mouse enter the area.'
+      desc: 'The formatter function of data.',
     }, {
-      name: 'onMouseLeave',
-      type: 'Function',
+      name: 'unit',
+      type: 'String | Number',
       defaultVal: 'null',
       isOptional: true,
-      desc: 'The function will be called when mouse leave the area.'
+      desc: 'The unit of data.',
     }, {
-      name: 'onClick',
-      type: 'Function',
+      name: 'name',
+      type: 'String | Number',
       defaultVal: 'null',
       isOptional: true,
-      desc: 'The function will be called when mouse click the area.'
+      desc: 'The name of data.',
     },
   ],
   examples: [

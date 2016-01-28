@@ -8,6 +8,12 @@ export default {
       isOptional: false,
       desc: 'The interpolation type of area, which can be linear, monotone, step, stepBefore, stepAfter',
     }, {
+      name: 'points',
+      type: 'Array',
+      defaultVal: 'null',
+      isOptional: false,
+      desc: 'The coordinates of all the points in the curve.',
+    }, {
       name: 'baseLineType',
       type: 'String',
       defaultVal: 'null',
@@ -19,12 +25,6 @@ export default {
       defaultVal: 'null',
       isOptional: true,
       desc: 'The value which can describle the line.',
-    }, {
-      name: 'points',
-      type: 'Array',
-      defaultVal: 'null',
-      isOptional: false,
-      desc: 'The coordinates of all the points in the curve.',
     }, {
       name: 'onMouseEnter',
       type: 'Function',

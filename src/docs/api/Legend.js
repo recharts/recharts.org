@@ -38,17 +38,17 @@ export default {
       isOptional: false,
       desc: 'The size of icon in each legend item.',
     }, {
+      name: 'payload',
+      type: 'Array',
+      defaultVal: '[]',
+      isOptional: false,
+      desc: 'The source data of the content to be displayed in the legend, usually calculated internally.',
+    }, {
       name: 'wrapperStyle',
       type: 'Object',
       defaultVal: 'null',
       isOptional: true,
       desc: 'The style of legend container which is a ul element.',
-    }, {
-      name: 'data',
-      type: 'Array',
-      defaultVal: '[]',
-      isOptional: false,
-      desc: 'The source data of the content to be displayed in the legend.',
     },
   ],
   examples: [

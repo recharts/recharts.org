@@ -43,24 +43,6 @@ export default {
       defaultVal: 'null',
       isOptional: false,
       desc: 'The coordinates of all the points in the area.',
-    }, {
-      name: 'onMouseEnter',
-      type: 'Function',
-      defaultVal: 'null',
-      isOptional: true,
-      desc: 'The function will be called when mouse enter the area.'
-    }, {
-      name: 'onMouseLeave',
-      type: 'Function',
-      defaultVal: 'null',
-      isOptional: true,
-      desc: 'The function will be called when mouse leave the area.'
-    }, {
-      name: 'onClick',
-      type: 'Function',
-      defaultVal: 'null',
-      isOptional: true,
-      desc: 'The function will be called when mouse click the area.'
     },
   ],
   examples: [

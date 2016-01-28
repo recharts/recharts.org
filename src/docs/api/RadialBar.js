@@ -61,24 +61,6 @@ export default {
       defaultVal: 'null',
       isOptional: false,
       desc: 'The source data which each element is an object.',
-    }, {
-      name: 'onMouseEnter',
-      type: 'Function',
-      defaultVal: 'null',
-      isOptional: true,
-      desc: 'The function will be called when mouse enter the pies.'
-    }, {
-      name: 'onMouseLeave',
-      type: 'Function',
-      defaultVal: 'null',
-      isOptional: true,
-      desc: 'The function will be called when mouse leave the pies.'
-    }, {
-      name: 'onClick',
-      type: 'Function',
-      defaultVal: 'null',
-      isOptional: true,
-      desc: 'The function will be called when mouse click the pies.'
     },
   ],
   examples: [
