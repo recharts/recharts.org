@@ -1,6 +1,6 @@
 import React, { cloneElement, Component } from 'react';
 import { connect } from 'react-redux';
-import { routeActions } from 'redux-simple-router';
+import { routeActions } from 'react-router-redux';
 import API from 'docs/api';
 
 @connect(state => {

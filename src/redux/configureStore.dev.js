@@ -1,6 +1,6 @@
 import { createStore, combineReducers, compose, applyMiddleware } from 'redux';
 import { persistState } from 'redux-devtools';
-import { syncHistory, routeReducer } from 'redux-simple-router'
+import { syncHistory, routeReducer } from 'react-router-redux';
 import rootReducer from './reducers';
 import DevTools from '../containers/DevTools';
 

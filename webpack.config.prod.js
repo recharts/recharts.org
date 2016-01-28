@@ -11,7 +11,7 @@ module.exports = {
   devtool: 'source-map',
   entry: {
     app: ['./src/app'],
-    vendors: ['react', 'react-dom', 'react-router', 'redux', 'react-redux', 'redux-simple-router'],
+    vendors: ['react', 'react-dom', 'react-router', 'redux', 'react-redux', 'react-router-redux'],
   },
 
   output: {
