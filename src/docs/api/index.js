@@ -1,5 +1,6 @@
 import AreaChart from './AreaChart';
 import BarChart from './BarChart';
+import ComposedChart from './ComposedChart';
 import LineChart from './LineChart';
 import PieChart from './PieChart';
 import ScatterChart from './ScatterChart';
@@ -34,6 +35,7 @@ export default {
   AreaChart,
   BarChart,
   LineChart,
+  ComposedChart,
   PieChart,
   ScatterChart,
   RadialBarChart,

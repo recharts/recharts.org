@@ -25,10 +25,13 @@ class ExamplesView extends Component {
       <div className="page page-examples">
         <div className="sidebar">
           <h2>Examples</h2>
+
+
+          <h4>AreaChart</h4>
           <ul className="menu">
             <li>
-              <a href="#" className={page === 'area' ? 'active' : ''}
-                onClick={this.handleNavRoute.bind(this, '/examples/area')}>Bar</a>
+              <a href="#" className={page === 'SimpleAreaChart' ? 'active' : ''}
+                onClick={this.handleNavRoute.bind(this, '/examples/SimpleAreaChart')}>SimpleAreaChart</a>
             </li>
             <li>
               <a href="#" className={page === 'line' ? 'active' : ''}

@@ -40,6 +40,10 @@ class APIView extends Component {
                 onClick={this.handleNavRoute.bind(this, '/api/LineChart')}>LineChart</a>
             </li>
             <li>
+              <a href="#" className={page === 'ComposedChart' ? 'active' : ''}
+                onClick={this.handleNavRoute.bind(this, '/api/ComposedChart')}>ComposedChart</a>
+            </li>
+            <li>
               <a href="#" className={page === 'PieChart' ? 'active' : ''}
                 onClick={this.handleNavRoute.bind(this, '/api/PieChart')}>PieChart</a>
             </li>
@@ -156,6 +160,7 @@ class APIView extends Component {
         </div>
         <div className="content">
           <h3>{api.name}</h3>
+          {api.desc && <p className="survey">{api.desc}</p>}
           <h4>Properties</h4>
           <table>
             <thead>
