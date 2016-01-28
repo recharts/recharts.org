@@ -5,7 +5,7 @@ import Examples from 'docs/examples';
 
 @connect(state => {
   return {
-    page: state.routing.location.pathname.split('/').filter(item => !!item)[1] || 'area',
+    page: state.routing.location.pathname.split('/').filter(item => !!item)[1] || 'SimpleAreaChart',
   };
 }, { push: routeActions.push })
 class ExamplesView extends Component {
