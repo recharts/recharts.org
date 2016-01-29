@@ -2,14 +2,14 @@ var path = require('path');
 var fs = require('fs');
 var webpack = require('webpack');
 
-var sassLoader = 'style!css!sass?sourceMap=true&sourceMapContents=true&includePaths[]=' + encodeURIComponent(path.resolve(__dirname, "./src/styles"));
+var sassLoader = 'style!css!sass?sourceMap=true&sourceMapContents=true&includePaths[]=' + encodeURIComponent(path.resolve(__dirname, './src/styles'));
 
 module.exports = {
   devtool: 'cheap-module-eval-source-map',
   entry: {
     app: [
       'webpack-hot-middleware/client',   // Automatic Refresh
-      './src/app'
+      './src/app',
     ],
     vendors: ['react', 'react-dom', 'react-router', 'redux', 'react-redux', 'react-router-redux'],
   },
@@ -32,8 +32,8 @@ module.exports = {
       loaders: ['react-hot', 'babel'],
     }, {
       test: /\.scss$/,
-      loader: sassLoader
-    }]
+      loader: sassLoader,
+    }],
   },
 
   resolve: {
@@ -57,6 +57,6 @@ module.exports = {
       __DEVTOOLS__: true,
     }),
     new webpack.NoErrorsPlugin(),
-    new webpack.HotModuleReplacementPlugin()
+    new webpack.HotModuleReplacementPlugin(),
   ],
 };

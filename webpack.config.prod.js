@@ -26,13 +26,14 @@ module.exports = {
       include: [
         path.resolve(__dirname, 'src'),
         path.resolve(__dirname, './node_modules/recharts'),
+        path.resolve(__dirname, './node_modules/react-smooth'),
         path.resolve(__dirname, './node_modules/remaps'),
       ],
       loaders: ['babel'],
     }, {
       test: /\.scss$/,
       loader: ExtractTextPlugin.extract('style-loader', sassLoaderBuild),
-    }]
+    }],
   },
 
   postcss: [
@@ -44,9 +45,9 @@ module.exports = {
         browsers: ['last 2 version'],
       },
       discardComments: {
-        removeAll: true
-      }
-    })
+        removeAll: true,
+      },
+    }),
   ],
 
   resolve: {
@@ -70,7 +71,7 @@ module.exports = {
       __DEVTOOLS__: false,
     }),
     new ExtractTextPlugin('style.css', {
-      allChunks: true
+      allChunks: true,
     }),
     new webpack.optimize.UglifyJsPlugin({
       compress: {
@@ -79,7 +80,7 @@ module.exports = {
       },
     }),
     new HtmlWebpackPlugin({
-      template: 'template.html'
-    })
+      template: 'template.html',
+    }),
   ],
 };
