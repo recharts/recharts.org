@@ -17,6 +17,20 @@ class APIView extends Component {
     push(route);
   }
 
+  renderExamples(examples) {
+    if (!examples || !examples.length) {return null;}
+    return (
+      <div className="examples">
+        <h4>Examples</h4>
+        {
+          examples.map((item, i) => {
+            return <p key={`examples-${i}`}><a href={item.url}>{item.name}</a></p>;
+          })
+        }
+      </div>
+    );
+  }
+
   render() {
     const { children, page } = this.props;
     const api = API[page];
@@ -188,12 +202,7 @@ class APIView extends Component {
               }
             </tbody>
           </table>
-          <h4>Examples</h4>
-          {
-            api.examples.map((item, i) => {
-              return <p key={`examples-${i}`}><a href={item.url}>{item.name}</a></p>;
-            })
-          }
+          {this.renderExamples(api && api.examples)}
         </div>
       </div>
     );

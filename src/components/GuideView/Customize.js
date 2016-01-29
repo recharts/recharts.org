@@ -27,7 +27,7 @@ const Customize = () => {
           `<BarChart width={600} height={300} data={data}>
   <XAxis dataKey="name" label={<CustomAxisLabel/>}/>
   <YAxis/>
-  <Bar type="monotone" dataKey="uv" barSize={30} fill="#ff7300"
+  <Bar type="monotone" dataKey="uv" barSize={30} fill="#8884d8"
     label={<CustomBarLabel />}/>
 </BarChart>`
         }
@@ -36,7 +36,7 @@ const Customize = () => {
         <BarChart width={600} height={300} data={data}>
           <XAxis dataKey="name" label={<CustomAxisLabel/>}/>
           <YAxis/>
-          <Bar type="monotone" dataKey="uv" barSize={30} fill="#ff7300" label={<CustomBarLabel />}/>
+          <Bar type="monotone" dataKey="uv" barSize={30} fill="#8884d8" label={<CustomBarLabel />}/>
         </BarChart>
       </div>
 
@@ -48,7 +48,7 @@ const Customize = () => {
           `<BarChart width={600} height={300} data={data}>
   <XAxis dataKey="name" label={<CustomAxisLabel/>}/>
   <YAxis/>
-  <Bar type="monotone" dataKey="uv" fill="#ff7300"
+  <Bar type="monotone" dataKey="uv" fill="#8884d8"
     shape={<TriangleBar />}/>
 </BarChart>`
         }
@@ -57,7 +57,7 @@ const Customize = () => {
         <BarChart width={600} height={300} data={data}>
           <XAxis dataKey="name" label={<CustomAxisLabel/>}/>
           <YAxis/>
-          <Bar type="monotone" dataKey="uv" fill="#ff7300" shape={<TriangleBar />}/>
+          <Bar type="monotone" dataKey="uv" fill="#8884d8" shape={<TriangleBar />}/>
         </BarChart>
       </div>
 
@@ -70,7 +70,7 @@ const Customize = () => {
   <XAxis dataKey="name" label={<CustomAxisLabel/>}/>
   <YAxis/>
   <Tooltip content={<CustomTooltip />}/>
-  <Bar type="monotone" dataKey="uv" fill="#ff7300"
+  <Bar type="monotone" dataKey="uv" fill="#8884d8"
     shape={<TriangleBar />}/>
 </BarChart>`
         }
@@ -80,7 +80,7 @@ const Customize = () => {
           <XAxis dataKey="name" label={<CustomAxisLabel/>}/>
           <YAxis/>
           <Tooltip content={<CustomTooltip />}/>
-          <Bar type="monotone" dataKey="uv" fill="#ff7300" shape={<TriangleBar />}/>
+          <Bar type="monotone" dataKey="uv" fill="#8884d8" shape={<TriangleBar />}/>
         </BarChart>
       </div>
 
@@ -90,11 +90,11 @@ const Customize = () => {
         <Highlight className="jsx">
         {
           `<BarChart width={600} height={300} data={data}>
-  <XAxis dataKey="name" stroke="#ff7300"/>
+  <XAxis dataKey="name" stroke="#8884d8"/>
   <YAxis/>
   <Tooltip/>
   <CartesianGrid stroke="#ccc" strokeDasharray="5 5"/>
-  <Bar type="monotone" dataKey="uv" fill="#ff7300" barSize={30} />
+  <Bar type="monotone" dataKey="uv" fill="#8884d8" barSize={30} />
 </BarChart>`
         }
         </Highlight>
@@ -114,23 +114,23 @@ const Customize = () => {
         <Highlight className="jsx">
         {
           `<BarChart width={600} height={300} data={data}>
-  <XAxis dataKey="name" stroke="#ff7300"/>
+  <XAxis dataKey="name" stroke="#8884d8"/>
   <YAxis/>
   <Tooltip wrapperStyle={{width: 100, backgroundColor: '#ccc'}}/>
   <Legend wrapperStyle={{border: '1px solid #d5d5d5', borderRadius: 3, width: '100%', lineHeight: '40px'}}/>
   <CartesianGrid stroke="#ccc" strokeDasharray="5 5"/>
-  <Bar type="monotone" dataKey="uv" fill="#ff7300" barSize={30} />
+  <Bar type="monotone" dataKey="uv" fill="#8884d8" barSize={30} />
 </BarChart>`
         }
         </Highlight>
 
         <BarChart width={600} height={300} data={data}>
-          <XAxis dataKey="name" stroke="#ff7300"/>
+          <XAxis dataKey="name" stroke="#8884d8"/>
           <YAxis/>
           <Tooltip wrapperStyle={{width: 100, backgroundColor: '#ccc'}}/>
           <Legend wrapperStyle={{border: '1px solid #d5d5d5', borderRadius: 3, width: '100%', lineHeight: '40px'}}/>
           <CartesianGrid stroke="#ccc" strokeDasharray="5 5"/>
-          <Bar type="monotone" dataKey="uv" fill="#ff7300" barSize={30} />
+          <Bar type="monotone" dataKey="uv" fill="#8884d8" barSize={30} />
         </BarChart>
       </div>
 

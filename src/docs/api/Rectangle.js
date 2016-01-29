@@ -52,9 +52,5 @@ export default {
     },
   ],
   examples: [
-    {
-      name: 'Simple AreaChart',
-      url: '/examples#areaChart',
-    }
   ]
 };

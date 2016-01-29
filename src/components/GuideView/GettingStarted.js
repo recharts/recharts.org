@@ -22,13 +22,13 @@ const GettingStarted = () => {
         <Highlight className="jsx">
         {
           `<LineChart width={400} height={400} data={data}>
-  <Line type="monotone" dataKey="uv" stroke="#ff7300"/>
+  <Line type="monotone" dataKey="uv" stroke="#8884d8"/>
 </LineChart>`
         }
         </Highlight>
 
         <LineChart width={600} height={300} data={data}>
-          <Line type="monotone" dataKey="uv" stroke="#ff7300" />
+          <Line type="monotone" dataKey="uv" stroke="#8884d8" />
         </LineChart>
       </div>
 
@@ -38,7 +38,7 @@ const GettingStarted = () => {
         <Highlight className="jsx">
         {
           `<LineChart width={600} height={300} data={data}>
-  <Line type="monotone" dataKey="uv" stroke="#ff7300"/>
+  <Line type="monotone" dataKey="uv" stroke="#8884d8"/>
   <CartesianGrid stroke="#ccc"/>
   <XAxis dataKey="name"/>
   <YAxis/>
@@ -47,7 +47,7 @@ const GettingStarted = () => {
         </Highlight>
 
         <LineChart width={600} height={300} data={data}>
-          <Line type="monotone" dataKey="uv" stroke="#ff7300"/>
+          <Line type="monotone" dataKey="uv" stroke="#8884d8"/>
           <CartesianGrid stroke="#ccc"/>
           <XAxis dataKey="name"/>
           <YAxis/>
@@ -60,7 +60,7 @@ const GettingStarted = () => {
         <Highlight className="jsx">
         {
           `<LineChart width={600} height={300} data={data} margin={{top: 5, right: 20, bottom: 5, left: 0}}>
-  <Line type="monotone" dataKey="uv" stroke="#ff7300"/>
+  <Line type="monotone" dataKey="uv" stroke="#8884d8"/>
   <CartesianGrid stroke="#ccc" strokeDasharray="5 5"/>
   <XAxis dataKey="name"/>
   <YAxis/>
@@ -69,7 +69,7 @@ const GettingStarted = () => {
         </Highlight>
 
         <LineChart width={600} height={300} data={data} margin={{top: 20, right: 20, bottom: 5, left: 0}}>
-          <Line type="monotone" dataKey="uv" stroke="#ff7300"/>
+          <Line type="monotone" dataKey="uv" stroke="#8884d8"/>
           <CartesianGrid stroke="#ccc" strokeDasharray="5 5"/>
           <XAxis dataKey="name"/>
           <YAxis width={40}/>
@@ -82,7 +82,7 @@ const GettingStarted = () => {
         <Highlight className="jsx">
         {
           `<LineChart width={600} height={300} data={data} margin={{top: 5, right: 20, bottom: 5, left: 0}}>
-  <Line type="monotone" dataKey="uv" stroke="#ff7300"/>
+  <Line type="monotone" dataKey="uv" stroke="#8884d8"/>
   <CartesianGrid stroke="#ccc" strokeDasharray="5 5"/>
   <XAxis dataKey="name"/>
   <YAxis/>
@@ -92,7 +92,7 @@ const GettingStarted = () => {
         </Highlight>
 
         <LineChart width={600} height={300} data={data} margin={{top: 20, right: 20, bottom: 5, left: 0}}>
-          <Line type="monotone" dataKey="uv" stroke="#ff7300"/>
+          <Line type="monotone" dataKey="uv" stroke="#8884d8"/>
           <CartesianGrid stroke="#ccc" strokeDasharray="5 5"/>
           <XAxis dataKey="name"/>
           <YAxis width={40}/>
@@ -106,7 +106,7 @@ const GettingStarted = () => {
         <Highlight className="jsx">
         {
           `<LineChart width={600} height={300} data={data} margin={{top: 5, right: 20, bottom: 5, left: 0}}>
-  <Line type="monotone" dataKey="uv" stroke="#ff7300"/>
+  <Line type="monotone" dataKey="uv" stroke="#8884d8"/>
   <CartesianGrid stroke="#ccc" strokeDasharray="5 5"/>
   <XAxis dataKey="name" label={<CustomAxisLabel/>}/>
   <YAxis/>
@@ -116,7 +116,7 @@ const GettingStarted = () => {
         </Highlight>
 
         <LineChart width={600} height={300} data={data} margin={{top: 20, right: 20, bottom: 5, left: 0}}>
-          <Line type="monotone" dataKey="uv" stroke="#ff7300"/>
+          <Line type="monotone" dataKey="uv" stroke="#8884d8"/>
           <CartesianGrid stroke="#ccc" strokeDasharray="5 5"/>
           <XAxis dataKey="name" label={<CustomAxisLabel/>}/>
           <YAxis width={40}/>

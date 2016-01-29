@@ -4,19 +4,22 @@ import { LineChart, Line, XAxis, YAxis, Tooltip, CartesianGrid } from 'recharts'
 import Highlight from 'utils/Highlight';
 import './IndexView.scss';
 
-const data = [{name: '上海', uv: 400, pv: 2400, amt: 2400},
-              {name: '北京', uv: 300, pv: 4567, amt: 2400},
-              {name: '杭州', uv: 300, pv: 1398, amt: 2400},
-              {name: '上饶', uv: 200, pv: 9800, amt: 2400},
-              {name: '台湾', uv: 278, pv: 3908, amt: 2400},
-              {name: '香港', uv: 189, pv: 4800, amt: 2400}];
+const data = [{name: 'A', uv: 400, pv: 240, amt: 2400},
+              {name: 'B', uv: 300, pv: 456, amt: 2400},
+              {name: 'C', uv: 300, pv: 139, amt: 2400},
+              {name: 'D', uv: 200, pv: 980, amt: 2400},
+              {name: 'E', uv: 278, pv: 390, amt: 2400},
+              {name: 'F', uv: 189, pv: 480, amt: 2400}];
 
 class IndexView extends Component {
   render() {
     const exCode = `
   <LineChart width={400} height={300} data={data}>
-    <CartesianGrid stroke='#f5f5f5'/>
-    <Line type='monotone' dataKey='uv' stroke='#ff7300'/>
+    <XAxis dataKey="name"/>
+    <YAxis/>
+    <CartesianGrid stroke='#eee' strokeDasharray="5 5"/>
+    <Line type='monotone' dataKey='uv' stroke='#8884d8' />
+    <Line type='monotone' dataKey='pv' stroke='#82ca9d' />
   </LineChart>
     `;
 
@@ -30,8 +33,11 @@ class IndexView extends Component {
         <div className="examples">
           <div className="ex-code">
             <LineChart width={540} height={300} data={data}>
-              <CartesianGrid stroke='#f5f5f5' />
-              <Line type='monotone' dataKey='uv' stroke='#ff7300' />
+              <XAxis dataKey="name"/>
+              <YAxis/>
+              <CartesianGrid stroke='#eee' strokeDasharray="5 5"/>
+              <Line type='monotone' dataKey='uv' stroke='#8884d8' />
+              <Line type='monotone' dataKey='pv' stroke='#82ca9d' />
             </LineChart>
             <Highlight className="jsx">{exCode}</Highlight>
           </div>
