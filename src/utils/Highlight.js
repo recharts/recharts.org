@@ -1,36 +1,51 @@
-var hljs = require('highlight.js');
-var React = require('react');
-var ReactDOM = require('react-dom');
+import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
+import hljs from 'highlight.js';
 
-var Highlight = React.createClass({
-  getDefaultProps: function () {
+class Highlight extends Component {
+  getDefaultProps() {
     return {
       innerHTML: false,
-      className: null
+      className: null,
     };
-  },
-  componentDidMount: function () {
+  }
+
+  componentDidMount() {
     this.highlightCode();
-  },
-  componentDidUpdate: function () {
+  }
+
+  componentDidUpdate() {
     this.highlightCode();
-  },
-  highlightCode: function () {
-    var domNode = ReactDOM.findDOMNode(this);
-    var nodes = domNode.querySelectorAll('pre code');
+  }
+
+  highlightCode() {
+    const domNode = ReactDOM.findDOMNode(this);
+    const nodes = domNode.querySelectorAll('pre code');
+
     if (nodes.length > 0) {
-      for (var i = 0; i < nodes.length; i=i+1) {
+      for (let i = 0; i < nodes.length; i++) {
         hljs.highlightBlock(nodes[i]);
       }
     }
-  },
-  render: function () {
-    if (this.props.innerHTML) {
-      return <div dangerouslySetInnerHTML={{__html: this.props.children}} className={this.props.className || null}></div>;
-    } else {
-      return <pre><code className={this.props.className}>{this.props.children}</code></pre>;
-    }
   }
-});
 
-module.exports = Highlight;
+  render() {
+    const { innerHTML, children, className } = this.props;
+
+    if (innerHTML) {
+      return (
+        <div
+          dangerouslySetInnerHTML={{ __html: children }}
+          className={className || null}
+        ></div>);
+    }
+
+    return (
+      <pre>
+        <code className={className}>{children}</code>
+      </pre>
+    );
+  }
+}
+
+export default Highlight;
