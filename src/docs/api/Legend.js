@@ -44,6 +44,12 @@ export default {
       isOptional: false,
       desc: 'The source data of the content to be displayed in the legend, usually calculated internally.',
     }, {
+      name: 'content',
+      type: 'ReactElement',
+      defaultVal: 'null',
+      isOptional: true,
+      desc: 'If set a React element, the option is the custom react element of rendering tooltip.',
+    }, {
       name: 'wrapperStyle',
       type: 'Object',
       defaultVal: 'null',
