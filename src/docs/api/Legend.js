@@ -54,7 +54,7 @@ export default {
       type: 'Object',
       defaultVal: 'null',
       isOptional: true,
-      desc: 'The style of legend container which is a ul element.',
+      desc: 'The style of legend container which is a "position: absolute;" div element. Because the position of legend is quite flexible, so you can change the position by the value of top, left, right, bottom in this option.',
     },
   ],
   examples: [

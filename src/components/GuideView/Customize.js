@@ -109,7 +109,7 @@ const Customize = () => {
       </div>
 
       <h4>5. The style of tooltip, legend can be customized</h4>
-      <p>Though tooltip, legend are drawed by svg elements, you may change the style of tooltip, legend by the apis wo offer, and of cource you can change the style in css.</p>
+      <p>Though tooltip, legend are drawed by svg elements, you may change the style of tooltip, legend by the apis wo offer. of cource, you can change the style in css too.</p>
       <div className="demo">
         <Highlight className="jsx">
         {
@@ -117,7 +117,7 @@ const Customize = () => {
   <XAxis dataKey="name" stroke="#8884d8"/>
   <YAxis/>
   <Tooltip wrapperStyle={{width: 100, backgroundColor: '#ccc'}}/>
-  <Legend wrapperStyle={{border: '1px solid #d5d5d5', borderRadius: 3, width: '100%', lineHeight: '40px'}}/>
+  <Legend width={100} wrapperStyle={{top: 40, right: 20, backgroundColor: '#f5f5f5', border: '1px solid #d5d5d5', borderRadius: 3, lineHeight: '40px'}}/>
   <CartesianGrid stroke="#ccc" strokeDasharray="5 5"/>
   <Bar type="monotone" dataKey="uv" fill="#8884d8" barSize={30} />
 </BarChart>`
@@ -128,7 +128,7 @@ const Customize = () => {
           <XAxis dataKey="name" stroke="#8884d8"/>
           <YAxis/>
           <Tooltip wrapperStyle={{width: 100, backgroundColor: '#ccc'}}/>
-          <Legend wrapperStyle={{border: '1px solid #d5d5d5', borderRadius: 3, width: '100%', lineHeight: '40px'}}/>
+          <Legend width={100} wrapperStyle={{top: 40, right: 20, backgroundColor: '#f5f5f5', border: '1px solid #d5d5d5', borderRadius: 3, lineHeight: '40px'}}/>
           <CartesianGrid stroke="#ccc" strokeDasharray="5 5"/>
           <Bar type="monotone" dataKey="uv" fill="#8884d8" barSize={30} />
         </BarChart>
