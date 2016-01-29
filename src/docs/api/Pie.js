@@ -65,8 +65,12 @@ export default {
   ],
   examples: [
     {
-      name: 'Simple AreaChart',
-      url: '/examples#areaChart',
-    }
+      name: 'Simple PieChart',
+      url: '/examples/TwoSimplePieChart',
+    },
+    {
+      name: 'PieChart of level datas',
+      url: '/examples/TwoLevelPieChart',
+    },
   ]
 };

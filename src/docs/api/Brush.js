@@ -59,8 +59,8 @@ export default {
   ],
   examples: [
     {
-      name: 'Simple AreaChart',
-      url: '/examples#areaChart',
+      name: 'A BarChart with Brush',
+      url: '/examples/BrushBarChart',
     }
   ]
 };

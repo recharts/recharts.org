@@ -22,6 +22,9 @@ class ExamplesView extends Component {
   renderMenuList(type) {
     const { page } = this.props;
     const typeNameList = Object.keys(Examples).filter(name => {
+      if (type === 'BarChart') {
+        return name.indexOf(type) >= 0 && name.indexOf('RadialBarChart') === -1;
+      }
       return name.indexOf(type) >= 0;
     });
 
@@ -57,6 +60,18 @@ class ExamplesView extends Component {
 
           <h4>ComposedChart</h4>
           {this.renderMenuList('ComposedChart')}
+
+          <h4>ScatterChart</h4>
+          {this.renderMenuList('ScatterChart')}
+
+          <h4>PieChart</h4>
+          {this.renderMenuList('PieChart')}
+
+          <h4>RadialBarChart</h4>
+          {this.renderMenuList('RadialBarChart')}
+
+          <h4>Tooltip</h4>
+          {this.renderMenuList('Tooltip')}
 
         </div>
         <div className="content">

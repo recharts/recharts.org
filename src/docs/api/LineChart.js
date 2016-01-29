@@ -35,8 +35,20 @@ export default {
   ],
   examples: [
     {
-      name: 'Simple AreaChart',
-      url: '/examples#areaChart',
-    }
+      name: 'Simple LineChart',
+      url: '/examples/SimpleLineChart',
+    },
+    {
+      name: 'Tiny LineChart',
+      url: '/examples/TinyLineChart',
+    },
+    {
+      name: 'Vertical LineChart',
+      url: '/examples/VerticalLineChart',
+    },
+    {
+      name: 'LineChart with two number axes',
+      url: '/examples/BiaxialLineChart',
+    },
   ]
 };

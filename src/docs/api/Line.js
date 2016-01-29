@@ -1,5 +1,5 @@
 export default {
-  name: 'Area',
+  name: 'Line',
   props: [
     {
       name: 'type',
@@ -44,35 +44,11 @@ export default {
       isOptional: false,
       desc: 'If false set, labels will not be drawed. If true set, labels will be drawed which have the props calculated internally. If object set, labels will be drawed which have the props mergered by the internal calculated props and the option. If ReactElement set, the option can be the custom label element.',
     }, {
-      name: 'curve',
-      type: 'Boolean',
-      defaultVal: 'true',
-      isOptional: false,
-      desc: 'If false set, curve will not be drawed.',
-    }, {
-      name: 'baseLineType',
-      type: 'String',
-      defaultVal: 'null',
-      isOptional: false,
-      desc: 'The type of baseline in an area, which can be horizontal, vertical or curve, usually calculated internally.',
-    }, {
-      name: 'baseLine',
-      type: 'Number | Array',
-      defaultVal: 'null',
-      isOptional: false,
-      desc: 'The value which can describle the line, usually calculated internally.',
-    }, {
       name: 'points',
       type: 'Array',
       defaultVal: 'null',
       isOptional: false,
-      desc: 'The coordinates of all the points in the area, usually calculated internally.',
-    }, {
-      name: 'stackId',
-      type: 'String | Number',
-      defaultVal: 'null',
-      isOptional: true,
-      desc: 'The stack id of area, when two areas have the same value axis and same stackId, then the two areas area stacked in order.',
+      desc: 'The coordinates of all the points in the line, usually calculated internally.',
     }, {
       name: 'formatter',
       type: 'Function',
@@ -95,8 +71,32 @@ export default {
   ],
   examples: [
     {
-      name: 'Simple AreaChart',
-      url: '/examples#areaChart',
-    }
+      name: 'Simple LineChart',
+      url: '/examples/SimpleLineChart',
+    },
+    {
+      name: 'Tiny LineChart',
+      url: '/examples/TinyLineChart',
+    },
+    {
+      name: 'Vertical LineChart',
+      url: '/examples/VerticalLineChart',
+    },
+    {
+      name: 'LineChart with two number axes',
+      url: '/examples/BiaxialLineChart',
+    },
+    {
+      name: 'ComposedChart of a line, a bar and a area',
+      url: '/examples/LineBarAreaComposedChart',
+    },
+    {
+      name: 'Vertical ComposedChart',
+      url: '/examples/LineBarAreaComposedChart',
+    },
+    {
+      name: 'ComposedChart of a line and a bar which both display the same data',
+      url: '/examples/SameDataComposedChart',
+    },
   ]
 };

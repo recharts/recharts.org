@@ -53,8 +53,32 @@ export default {
   ],
   examples: [
     {
-      name: 'Simple AreaChart',
-      url: '/examples#areaChart',
-    }
+      name: 'Simple BarChart',
+      url: '/examples/SimpleBarChart',
+    },
+    {
+      name: 'Stacked BarChart',
+      url: '/examples/StackedBarChart',
+    },
+    {
+      name: 'Tiny BarChart',
+      url: '/examples/TinyBarChart',
+    },
+    {
+      name: 'Mix BarChart with stacked bars and unstacked bars ',
+      url: '/examples/MixBarChart',
+    },
+    {
+      name: 'BarChart with custom shape',
+      url: '/examples/CustomShapeBarChart',
+    },
+    {
+      name: 'BarChart with positive and negative values',
+      url: '/examples/PositiveAndNegativeBarChart'
+    },
+    {
+      name: 'A BarChart with Brush',
+      url: '/examples/BrushBarChart',
+    },
   ]
 };

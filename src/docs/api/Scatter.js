@@ -47,8 +47,16 @@ export default {
   ],
   examples: [
     {
-      name: 'Simple AreaChart',
-      url: '/examples#areaChart',
-    }
+      name: 'Simple ScatterChart',
+      url: '/examples/SimpleScatterChart',
+    },
+    {
+      name: 'ScatterChart of three-dimensional data',
+      url: '/examples/ThreeDimScatterChart',
+    },
+    {
+      name: 'Joint all the points in ScatterChart',
+      url: '/examples/JointLineScatterChart',
+    },
   ]
 };

@@ -36,7 +36,15 @@ export default {
   examples: [
     {
       name: 'Simple AreaChart',
-      url: '/examples#areaChart',
+      url: '/examples/SimpleAreaChart',
+    },
+    {
+      name: 'Stacked AreaChart',
+      url: '/examples/StackedAreaChart',
+    },
+    {
+      name: 'Tiny AreaChart',
+      url: '/examples/TinyAreaChart',
     }
   ]
 };

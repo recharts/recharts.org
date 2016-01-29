@@ -84,7 +84,11 @@ export default {
   examples: [
     {
       name: 'Simple AreaChart',
-      url: '/examples#areaChart',
+      url: '/examples/SimpleAreaChart',
+    },
+    {
+      name: 'Customize the content of tooltip',
+      url: '/examples/CustomContentOfTooltip'
     }
   ]
 };

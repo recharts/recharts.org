@@ -65,8 +65,8 @@ export default {
   ],
   examples: [
     {
-      name: 'Simple AreaChart',
-      url: '/examples#areaChart',
+      name: 'Simple RadialBarChart',
+      url: '/examples/SimpleRadialBarChart',
     }
   ]
 };

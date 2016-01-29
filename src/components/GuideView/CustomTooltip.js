@@ -1,7 +1,7 @@
 import React, { PropTypes, Component } from 'react';
 import './CustomTooltip.scss'
 
-class SearchWordTrendTooltip extends Component {
+class CustomTooltip extends Component {
   static propTypes = {
     type: PropTypes.string,
     payload: PropTypes.array,
@@ -42,4 +42,4 @@ class SearchWordTrendTooltip extends Component {
   }
 }
 
-export default SearchWordTrendTooltip;
+export default CustomTooltip;

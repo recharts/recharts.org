@@ -53,8 +53,12 @@ export default {
   ],
   examples: [
     {
-      name: 'Simple AreaChart',
-      url: '/examples#areaChart',
-    }
+      name: 'Simple LineChart',
+      url: '/examples/SimpleLineChart',
+    },
+    {
+      name: 'Simple ScatterChart',
+      url: '/examples/SimpleScatterChart',
+    },
   ]
 };

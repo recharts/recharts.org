@@ -78,7 +78,11 @@ export default {
   examples: [
     {
       name: 'Simple AreaChart',
-      url: '/examples#areaChart',
-    }
+      url: '/examples/SimpleAreaChart',
+    },
+    {
+      name: 'Simple ScatterChart',
+      url: '/examples/SimpleScatterChart',
+    },
   ]
 };
