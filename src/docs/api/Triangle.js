@@ -1,5 +1,5 @@
 export default {
-  name: 'Rectangle',
+  name: 'Triangle',
   props: [
     {
       name: 'points',
