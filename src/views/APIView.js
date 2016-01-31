@@ -62,6 +62,10 @@ class APIView extends Component {
                 onClick={this.handleNavRoute.bind(this, '/api/PieChart')}>PieChart</a>
             </li>
             <li>
+              <a href="#" className={page === 'RadarChart' ? 'active' : ''}
+                onClick={this.handleNavRoute.bind(this, '/api/RadarChart')}>RadarChart</a>
+            </li>
+            <li>
               <a href="#" className={page === 'RadialBarChart' ? 'active' : ''}
                 onClick={this.handleNavRoute.bind(this, '/api/RadialBarChart')}>RadialBarChart</a>
             </li>
@@ -92,6 +96,10 @@ class APIView extends Component {
             <li>
               <a href="#" className={page === 'Pie' ? 'active' : ''}
                 onClick={this.handleNavRoute.bind(this, '/api/Pie')}>Pie</a>
+            </li>
+            <li>
+              <a href="#" className={page === 'Radar' ? 'active' : ''}
+                onClick={this.handleNavRoute.bind(this, '/api/Radar')}>Radar</a>
             </li>
             <li>
               <a href="#" className={page === 'RadialBar' ? 'active' : ''}
@@ -134,6 +142,18 @@ class APIView extends Component {
                 onClick={this.handleNavRoute.bind(this, '/api/Legend')}>Legend</a>
             </li>
             <li>
+              <a href="#" className={page === 'PolarAngleAxis' ? 'active' : ''}
+                onClick={this.handleNavRoute.bind(this, '/api/PolarAngleAxis')}>PolarAngleAxis</a>
+            </li>
+            <li>
+              <a href="#" className={page === 'PolarGrid' ? 'active' : ''}
+                onClick={this.handleNavRoute.bind(this, '/api/PolarGrid')}>PolarGrid</a>
+            </li>
+            <li>
+              <a href="#" className={page === 'PolarRadiusAxis' ? 'active' : ''}
+                onClick={this.handleNavRoute.bind(this, '/api/PolarRadiusAxis')}>PolarRadiusAxis</a>
+            </li>
+            <li>
               <a href="#" className={page === 'ReferenceLine' ? 'active' : ''}
                 onClick={this.handleNavRoute.bind(this, '/api/ReferenceLine')}>ReferenceLine</a>
             </li>
@@ -156,6 +176,10 @@ class APIView extends Component {
             <li>
               <a href="#" className={page === 'Dot' ? 'active' : ''}
                 onClick={this.handleNavRoute.bind(this, '/api/Dot')}>Dot</a>
+            </li>
+            <li>
+              <a href="#" className={page === 'Polygon' ? 'active' : ''}
+                onClick={this.handleNavRoute.bind(this, '/api/Polygon')}>Polygon</a>
             </li>
             <li>
               <a href="#" className={page === 'Rectangle' ? 'active' : ''}
