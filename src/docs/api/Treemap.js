@@ -14,6 +14,12 @@ export default {
       isOptional: false,
       desc: 'The width of chart container.',
     }, {
+      name: 'ratio',
+      type: 'Number',
+      defaultVal: 'null',
+      isOptional: false,
+      desc: 'The ratio of every single rectangle in the treemap.',
+    }, {
       name: 'margin',
       type: 'Object',
       defaultVal: '{ top: 5, right: 5, bottom: 5, left: 5 }',
