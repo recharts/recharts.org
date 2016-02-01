@@ -3,12 +3,10 @@ import ReactDOM from 'react-dom';
 import hljs from 'highlight.js';
 
 class Highlight extends Component {
-  getDefaultProps() {
-    return {
-      innerHTML: false,
-      className: null,
-    };
-  }
+  static defaultProps = {
+    innerHTML: false,
+    className: null,
+  };
 
   componentDidMount() {
     this.highlightCode();
