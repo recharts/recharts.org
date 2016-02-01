@@ -6,7 +6,7 @@ export default {
       type: 'Array',
       defaultVal: 'null',
       isOptional: false,
-      desc: 'The coordinates of all the vertexes, like { x, y }.',
+      desc: 'The coordinates of all the vertexes of the polygon, like { x, y }.',
     },
   ],
   examples: [
