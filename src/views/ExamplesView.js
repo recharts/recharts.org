@@ -73,6 +73,9 @@ class ExamplesView extends Component {
           <h4>RadialBarChart</h4>
           {this.renderMenuList('RadialBarChart')}
 
+          <h4>Treemap</h4>
+          {this.renderMenuList('Treemap')}
+
           <h4>Tooltip</h4>
           {this.renderMenuList('Tooltip')}
 

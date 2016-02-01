@@ -29,8 +29,12 @@ export default {
   ],
   examples: [
     {
-      name: 'Simple AreaChart',
-      url: '/examples#areaChart',
-    }
+      name: 'Simple Treemap',
+      url: '/examples/SimpleTreemap',
+    },
+    {
+      name: 'Treemap with customized content',
+      url: '/examples/CustomContentTreemap',
+    },
   ]
 };

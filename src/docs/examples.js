@@ -30,6 +30,9 @@ export default {
   SimpleRadarChart: '//jsfiddle.net/6Lv4efu6/embedded/',
   SpecifiedDomainRadarChart: '//jsfiddle.net/mg3e0zur/embedded/',
 
+  SimpleTreemap: '//jsfiddle.net/pu515LnL/embedded/',
+  CustomContentTreemap: '//jsfiddle.net/0q0094ef/embedded/',
+
   SimpleRadialBarChart: '//jsfiddle.net/2da6ghwa/embedded/',
 
   CustomContentOfTooltip: '//jsfiddle.net/eckozra5/embedded/',
