@@ -8,7 +8,7 @@ class BlogView extends Component {
       <div className="page page-blog">
         <div className="blog">
           <p className="title">
-            <a href="https://medium.com/p/fbb31cf78415/edit" title="Re-designed Chart for React" target="_blank">Re-designed Chart for React</a>
+            <a href="https://medium.com/@arcthur/re-designed-chart-for-react-fbb31cf78415#.gc1k19sdv" title="Re-designed Chart for React" target="_blank">Re-designed Chart for React</a>
           </p>
           <p className="date">Jan 29, 2016</p>
           <p className="abstract">
