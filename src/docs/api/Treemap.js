@@ -18,7 +18,7 @@ export default {
       type: 'Number',
       defaultVal: 'null',
       isOptional: false,
-      desc: 'The ratio of every single rectangle in the treemap.',
+      desc: 'The treemap will try to keep every single rectangle\'s aspect ratio near the ratio given.',
     }, {
       name: 'margin',
       type: 'Object',
