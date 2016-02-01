@@ -28,9 +28,9 @@ export default {
     }, {
       name: 'orient',
       type: 'String',
-      defaultVal: 'bottom',
+      defaultVal: '\'bottom\'',
       isOptional: false,
-      desc: 'The orientation of axis, which can be top, bottom, left or right.',
+      desc: 'The orientation of axis, which can be \'top\', \'bottom\', \'left\' or \'right\'.',
     }, {
       name: 'viewBox',
       type: 'Object',
@@ -64,7 +64,7 @@ export default {
     }, {
       name: 'interval',
       type: 'String | Number',
-      defaultVal: 'auto',
+      defaultVal: '\'auto\'',
       isOptional: false,
       desc: 'If set auto, the labels which is to be showed or hided will be calculated autoly.',
     }, {

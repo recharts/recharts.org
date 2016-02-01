@@ -28,7 +28,7 @@ export default {
     }, {
       name: 'barCategoryGap',
       type: 'Percent String| Number',
-      defaultVal: '10%',
+      defaultVal: '\'10%\'',
       isOptional: false,
       desc: 'The gab betwwen two bar categorys which can be percent value and a fixed value.',
     }, {

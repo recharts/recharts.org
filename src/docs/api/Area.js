@@ -4,9 +4,9 @@ export default {
     {
       name: 'type',
       type: 'String',
-      defaultVal: 'linear',
+      defaultVal: '\'linear\'',
       isOptional: false,
-      desc: 'The interpolation type of area, which can be linear, monotone, step, stepBefore, stepAfter',
+      desc: 'The interpolation type of area, which can be \'linear\', \'monotone\', \'step\', \'stepBefore\', \'stepAfter\'',
     }, {
       name: 'dataKey',
       type: 'String | Number',
@@ -28,9 +28,9 @@ export default {
     }, {
       name: 'legendType',
       type: 'String',
-      defaultVal: 'line',
+      defaultVal: '\'line\'',
       isOptional: false,
-      desc: 'The type of icon in legend, which can be line, scatter, square, rect.',
+      desc: 'The type of icon in legend, which can be \'line\', \'scatter\', \'square\', \'rect\'.',
     }, {
       name: 'dot',
       type: 'Boolean | Object | ReactElement',

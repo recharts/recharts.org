@@ -4,9 +4,9 @@ export default {
     {
       name: 'layout',
       type: 'String',
-      defaultVal: 'horizontal',
+      defaultVal: '\'horizontal\'',
       isOptional: false,
-      desc: 'The layout (horizontal or vertical) of area in the chart.',
+      desc: 'The layout (\'horizontal\' or \'vertical\') of area in the chart.',
     }, {
       name: 'dataKey',
       type: 'String | Number',
@@ -28,9 +28,9 @@ export default {
     }, {
       name: 'legendType',
       type: 'String',
-      defaultVal: 'line',
+      defaultVal: '\'rect\'',
       isOptional: false,
-      desc: 'The type of icon in legend, which can be line, scatter, square, rect.',
+      desc: 'The type of icon in legend, which can be \'line\', \'scatter\', \'square\', \'rect\'.',
     }, {
       name: 'label',
       type: 'Boolean | Object | ReactElement',

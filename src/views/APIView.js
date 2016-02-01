@@ -70,8 +70,8 @@ class APIView extends Component {
                 onClick={this.handleNavRoute.bind(this, '/api/ScatterChart')}>ScatterChart</a>
             </li>
             <li>
-              <a href="#" className={page === 'TreemapChart' ? 'active' : ''}
-                onClick={this.handleNavRoute.bind(this, '/api/TreemapChart')}>TreemapChart</a>
+              <a href="#" className={page === 'Treemap' ? 'active' : ''}
+                onClick={this.handleNavRoute.bind(this, '/api/Treemap')}>Treemap</a>
             </li>
           </ul>
 

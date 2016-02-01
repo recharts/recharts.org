@@ -4,9 +4,9 @@ export default {
     {
       name: 'layout',
       type: 'String',
-      defaultVal: 'horizontal',
+      defaultVal: '\'horizontal\'',
       isOptional: false,
-      desc: 'The layout (horizontal or vertical) of area in the chart.',
+      desc: 'The layout (\'horizontal\' or \'vertical\') of area in the chart.',
     }, {
       name: 'width',
       type: 'Number',

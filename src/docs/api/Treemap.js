@@ -1,5 +1,5 @@
 export default {
-  name: 'TreemapChart',
+  name: 'Treemap',
   props: [
     {
       name: 'width',

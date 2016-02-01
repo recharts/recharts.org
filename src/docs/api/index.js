@@ -5,7 +5,7 @@ import LineChart from './LineChart';
 import PieChart from './PieChart';
 import ScatterChart from './ScatterChart';
 import RadialBarChart from './RadialBarChart';
-import TreemapChart from './TreemapChart';
+import Treemap from './Treemap';
 
 import Area from './Area';
 import Bar from './Bar';
@@ -39,7 +39,7 @@ export default {
   PieChart,
   ScatterChart,
   RadialBarChart,
-  TreemapChart,
+  Treemap,
 
   Area,
   Bar,

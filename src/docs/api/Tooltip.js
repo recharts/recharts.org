@@ -4,7 +4,7 @@ export default {
     {
       name: 'separator',
       type: 'String',
-      defaultVal: ' : ',
+      defaultVal: '\' : \'',
       isOptional: false,
       desc: 'The separator between name and value.',
     }, {

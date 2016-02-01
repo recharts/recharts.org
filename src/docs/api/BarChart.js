@@ -4,9 +4,9 @@ export default {
     {
       name: 'layout',
       type: 'String',
-      defaultVal: 'horizontal',
+      defaultVal: '\'horizontal\'',
       isOptional: false,
-      desc: 'The layout (horizontal or vertical) of area in the chart.',
+      desc: 'The layout (\'horizontal\' or \'vertical\') of area in the chart.',
     }, {
       name: 'width',
       type: 'Number',
@@ -34,7 +34,7 @@ export default {
     }, {
       name: 'barCategoryGap',
       type: 'Percent String| Number',
-      defaultVal: '10%',
+      defaultVal: '\'10%\'',
       isOptional: false,
       desc: 'The gab betwwen two bar categorys which can be percent value and a fixed value.',
     }, {

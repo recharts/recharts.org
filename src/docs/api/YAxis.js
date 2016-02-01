@@ -34,15 +34,15 @@ export default {
     }, {
       name: 'orient',
       type: 'String',
-      defaultVal: 'left',
+      defaultVal: '\'left\'',
       isOptional: false,
-      desc: 'The orientation of axis, which can be left, right.',
+      desc: 'The orientation of axis, which can be \'left\', \'right\'.',
     }, {
       name: 'type',
       type: 'String',
-      defaultVal: 'number',
+      defaultVal: '\'number\'',
       isOptional: false,
-      desc: 'The type of axis, which can be number, category.',
+      desc: 'The type of axis, which can be \'number\', \'category\'.',
     }, {
       name: 'tickCount',
       type: 'Number',

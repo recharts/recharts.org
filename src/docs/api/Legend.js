@@ -16,21 +16,21 @@ export default {
     }, {
       name: 'layout',
       type: 'String',
-      defaultVal: 'horizontal',
+      defaultVal: '\'horizontal\'',
       isOptional: false,
-      desc: 'The layout of legend items, which can be horizontal, vertical.',
+      desc: 'The layout of legend items, which can be \'horizontal\', \'vertical\'.',
     }, {
       name: 'align',
       type: 'String',
-      defaultVal: 'center',
+      defaultVal: '\'center\'',
       isOptional: false,
-      desc: 'The alignment of legend items when the layout is horizontal, which cen be left, center, right.',
+      desc: 'The alignment of legend items when the layout is \'horizontal\', which cen be \'left\', \'center\', \'right\'.',
     }, {
       name: 'verticalAlign',
       type: 'String',
-      defaultVal: 'middle',
+      defaultVal: '\'middle\'',
       isOptional: false,
-      desc: 'The alignment of legend items when the layout is vertical, which can be top, middle, bottom.',
+      desc: 'The alignment of legend items when the layout is \'vertical\', which can be \'top\', \'middle\', \'bottom\'.',
     }, {
       name: 'iconSize',
       type: 'Number',

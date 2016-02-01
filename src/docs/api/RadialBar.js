@@ -40,9 +40,9 @@ export default {
     }, {
       name: 'legendType',
       type: 'String',
-      defaultVal: 'line',
+      defaultVal: '\'rect\'',
       isOptional: false,
-      desc: 'The type of icon in legend, which can be line, scatter, square, rect.',
+      desc: 'The type of icon in legend, which can be \'line\', \'scatter\', \'square\', \'rect\'.',
     }, {
       name: 'label',
       type: 'Boolean | Object | ReactElement',

@@ -4,9 +4,9 @@ export default {
     {
       name: 'type',
       type: 'String',
-      defaultVal: 'linear',
+      defaultVal: '\'linear\'',
       isOptional: false,
-      desc: 'The interpolation type of area, which can be linear, monotone, step, stepBefore, stepAfter',
+      desc: 'The interpolation type of area, which can be \'linear\', \'monotone\', \'step\', \'stepBefore\', \'stepAfter\'',
     }, {
       name: 'points',
       type: 'Array',

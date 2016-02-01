@@ -18,7 +18,7 @@ export default {
       type: 'String',
       defaultVal: 'null',
       isOptional: false,
-      desc: 'The type of line, which can be horizontal, vertical.',
+      desc: 'The type of line, which can be \'horizontal\', \'vertical\'.',
     }, {
       name: 'value',
       type: 'Number | String',
