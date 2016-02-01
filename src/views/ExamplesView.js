@@ -67,6 +67,9 @@ class ExamplesView extends Component {
           <h4>PieChart</h4>
           {this.renderMenuList('PieChart')}
 
+          <h4>RadarChart</h4>
+          {this.renderMenuList('RadarChart')}
+
           <h4>RadialBarChart</h4>
           {this.renderMenuList('RadialBarChart')}
 

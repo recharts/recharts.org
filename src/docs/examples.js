@@ -27,6 +27,9 @@ export default {
   TwoSimplePieChart: '//jsfiddle.net/r50p2vye/embedded/',
   TwoLevelPieChart: '//jsfiddle.net/4y451mLy/embedded',
 
+  SimpleRadarChart: '//jsfiddle.net/6Lv4efu6/embedded/',
+  SpecifiedDomainRadarChart: '//jsfiddle.net/mg3e0zur/embedded/',
+
   SimpleRadialBarChart: '//jsfiddle.net/2da6ghwa/embedded/',
 
   CustomContentOfTooltip: '//jsfiddle.net/eckozra5/embedded/',
