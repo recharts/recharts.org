@@ -3,7 +3,6 @@ var fs = require('fs');
 var webpack = require('webpack');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var cssnano = require('cssnano');
-var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 var sassLoaderBuild = 'css!postcss!sass?includePaths[]=' + encodeURIComponent(path.resolve(__dirname, './src/styles'));
 
@@ -79,9 +78,6 @@ module.exports = {
         unused: true,
         dead_code: true,
       },
-    }),
-    new HtmlWebpackPlugin({
-      template: 'template.html',
     }),
   ],
 };
