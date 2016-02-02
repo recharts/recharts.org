@@ -11,14 +11,6 @@ const firstChartName = Object.keys(Examples)[0];
   };
 }, { push: routeActions.push })
 class ExamplesView extends Component {
-  handleNavRoute(route, e) {
-    e.preventDefault();
-
-    const { push } = this.props;
-
-    push(route);
-  }
-
   renderMenuList(type) {
     const { page } = this.props;
     const typeNameList = Object.keys(Examples).filter(name => {
