@@ -32,7 +32,7 @@ export default {
       isOptional: false,
       desc: 'The height of axis, which can be setted by user.',
     }, {
-      name: 'orient',
+      name: 'orientation',
       type: 'String',
       defaultVal: '\'bottom\'',
       isOptional: false,

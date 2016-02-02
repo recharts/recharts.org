@@ -79,7 +79,7 @@ class APIView extends Component {
               <a href="/api#Radar" className={page === 'Radar' ? 'active' : ''}>Radar</a>
             </li>
             <li>
-              <a href="/api#RadarBar" className={page === 'RadialBar' ? 'active' : ''}>RadialBar</a>
+              <a href="/api#RadialBar" className={page === 'RadialBar' ? 'active' : ''}>RadialBar</a>
             </li>
             <li>
               <a href="/api#Scatter" className={page === 'Scatter' ? 'active' : ''}>Scatter</a>

@@ -26,7 +26,7 @@ export default {
       isOptional: false,
       desc: 'The height of axis.',
     }, {
-      name: 'orient',
+      name: 'orientation',
       type: 'String',
       defaultVal: '\'bottom\'',
       isOptional: false,

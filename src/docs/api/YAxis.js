@@ -32,7 +32,7 @@ export default {
       isOptional: false,
       desc: 'The height of axis which is usually calculated internally.',
     }, {
-      name: 'orient',
+      name: 'orientation',
       type: 'String',
       defaultVal: '\'left\'',
       isOptional: false,

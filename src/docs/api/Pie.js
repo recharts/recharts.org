@@ -28,15 +28,15 @@ export default {
     }, {
       name: 'startAngle',
       type: 'Number',
-      defaultVal: '0',
+      defaultVal: 0,
       isOptional: false,
       desc: 'The start angle of first sector.',
     }, {
-      name: 'clockWise',
-      type: 'Boolean',
-      defaultVal: 'true',
+      name: 'endAngle',
+      type: 'Number',
+      defaultVal: 360,
       isOptional: false,
-      desc: 'The direction of drawing sectors.',
+      desc: 'The end angle of last sector, which should be unequal to startAngle.',
     }, {
       name: 'minAngle',
       type: 'Number',

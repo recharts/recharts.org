@@ -16,21 +16,21 @@ export default {
     }, {
       name: 'startAngle',
       type: 'Number',
-      defaultVal: '0',
+      defaultVal: 180,
       isOptional: false,
       desc: 'The start angle of all the bars.',
     }, {
       name: 'endAngle',
       type: 'Number',
-      defaultVal: '0',
+      defaultVal: 0,
       isOptional: false,
       desc: 'The end angle of all the bars.',
     }, {
-      name: 'clockWise',
-      type: 'Boolean',
-      defaultVal: 'true',
+      name: 'maxAngle',
+      type: 'Number',
+      defaultVal: '135',
       isOptional: false,
-      desc: 'The direction of drawing sectors.',
+      desc: 'The angle of the value which has the max absolute value, which should be a positive number and less than Math.abs(endAngle - startAngle).',
     }, {
       name: 'minAngle',
       type: 'Number',

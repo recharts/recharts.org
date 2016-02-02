@@ -20,7 +20,7 @@ export default {
       isOptional: false,
       desc: 'The angle of radial direction line to display axis text.',
     }, {
-      name: 'orient',
+      name: 'orientation',
       type: 'String',
       defaultVal: 'right',
       isOptional: false,
