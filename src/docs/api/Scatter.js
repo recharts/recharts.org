@@ -48,15 +48,15 @@ export default {
   examples: [
     {
       name: 'Simple ScatterChart',
-      url: '/examples/SimpleScatterChart',
+      url: '/examples#SimpleScatterChart',
     },
     {
       name: 'ScatterChart of three-dimensional data',
-      url: '/examples/ThreeDimScatterChart',
+      url: '/examples#ThreeDimScatterChart',
     },
     {
       name: 'Joint all the points in ScatterChart',
-      url: '/examples/JointLineScatterChart',
+      url: '/examples#JointLineScatterChart',
     },
   ]
 };

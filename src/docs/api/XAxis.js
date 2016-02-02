@@ -78,23 +78,23 @@ export default {
   examples: [
     {
       name: 'Simple AreaChart',
-      url: '/examples/SimpleAreaChart',
+      url: '/examples#SimpleAreaChart',
     },
     {
       name: 'Simple BarChart',
-      url: '/examples/SimpleBarChart',
+      url: '/examples#SimpleBarChart',
     },
     {
       name: 'Simple LineChart',
-      url: '/examples/SimpleLineChart',
+      url: '/examples#SimpleLineChart',
     },
     {
       name: 'ComposedChart of a line, a bar and a area',
-      url: '/examples/LineBarAreaComposedChart',
+      url: '/examples#LineBarAreaComposedChart',
     },
     {
       name: 'Simple ScatterChart',
-      url: '/examples/SimpleScatterChart',
+      url: '/examples#SimpleScatterChart',
     },
   ]
 };

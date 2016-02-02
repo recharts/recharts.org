@@ -54,11 +54,11 @@ export default {
   examples: [
     {
       name: 'Simple LineChart',
-      url: '/examples/SimpleLineChart',
+      url: '/examples#SimpleLineChart',
     },
     {
       name: 'Simple ScatterChart',
-      url: '/examples/SimpleScatterChart',
+      url: '/examples#SimpleScatterChart',
     },
   ]
 };

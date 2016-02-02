@@ -60,19 +60,19 @@ export default {
   examples: [
     {
       name: 'Simple LineChart',
-      url: '/examples/SimpleLineChart',
+      url: '/examples#SimpleLineChart',
     },
     {
       name: 'Simple BarChart',
-      url: '/examples/SimpleBarChart',
+      url: '/examples#SimpleBarChart',
     },
     {
       name: 'ComposedChart of a line, a bar and a area',
-      url: '/examples/LineBarAreaComposedChart',
+      url: '/examples#LineBarAreaComposedChart',
     },
     {
       name: 'Simple RadialBarChart',
-      url: '/examples/SimpleRadialBarChart',
+      url: '/examples#SimpleRadialBarChart',
     }
   ]
 };

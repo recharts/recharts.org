@@ -72,31 +72,31 @@ export default {
   examples: [
     {
       name: 'Simple LineChart',
-      url: '/examples/SimpleLineChart',
+      url: '/examples#SimpleLineChart',
     },
     {
       name: 'Tiny LineChart',
-      url: '/examples/TinyLineChart',
+      url: '/examples#TinyLineChart',
     },
     {
       name: 'Vertical LineChart',
-      url: '/examples/VerticalLineChart',
+      url: '/examples#VerticalLineChart',
     },
     {
       name: 'LineChart with two number axes',
-      url: '/examples/BiaxialLineChart',
+      url: '/examples#BiaxialLineChart',
     },
     {
       name: 'ComposedChart of a line, a bar and a area',
-      url: '/examples/LineBarAreaComposedChart',
+      url: '/examples#LineBarAreaComposedChart',
     },
     {
       name: 'Vertical ComposedChart',
-      url: '/examples/LineBarAreaComposedChart',
+      url: '/examples#LineBarAreaComposedChart',
     },
     {
       name: 'ComposedChart of a line and a bar which both display the same data',
-      url: '/examples/SameDataComposedChart',
+      url: '/examples#SameDataComposedChart',
     },
   ]
 };

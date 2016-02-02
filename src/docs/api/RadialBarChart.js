@@ -72,7 +72,7 @@ export default {
   examples: [
     {
       name: 'Simple RadialBarChart',
-      url: '/examples/SimpleRadialBarChart',
+      url: '/examples#SimpleRadialBarChart',
     }
   ]
 };

@@ -36,19 +36,19 @@ export default {
   examples: [
     {
       name: 'Simple LineChart',
-      url: '/examples/SimpleLineChart',
+      url: '/examples#SimpleLineChart',
     },
     {
       name: 'Tiny LineChart',
-      url: '/examples/TinyLineChart',
+      url: '/examples#TinyLineChart',
     },
     {
       name: 'Vertical LineChart',
-      url: '/examples/VerticalLineChart',
+      url: '/examples#VerticalLineChart',
     },
     {
       name: 'LineChart with two number axes',
-      url: '/examples/BiaxialLineChart',
+      url: '/examples#BiaxialLineChart',
     },
   ]
 };

@@ -55,15 +55,15 @@ export default {
   examples: [
     {
       name: 'ComposedChart of a line, a bar and a area',
-      url: '/examples/LineBarAreaComposedChart',
+      url: '/examples#LineBarAreaComposedChart',
     },
     {
       name: 'Vertical ComposedChart',
-      url: '/examples/LineBarAreaComposedChart',
+      url: '/examples#LineBarAreaComposedChart',
     },
     {
       name: 'ComposedChart of a line and a bar which both display the same data',
-      url: '/examples/SameDataComposedChart',
+      url: '/examples#SameDataComposedChart',
     },
   ]
 };

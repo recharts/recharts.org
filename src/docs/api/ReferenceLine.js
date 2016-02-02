@@ -48,7 +48,7 @@ export default {
   examples: [
     {
       name: 'BarChart with positive and negative values',
-      url: '/examples/PositiveAndNegativeBarChart'
+      url: '/examples#PositiveAndNegativeBarChart'
     }
   ]
 };

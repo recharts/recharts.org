@@ -30,11 +30,11 @@ export default {
   examples: [
     {
       name: 'Simple Treemap',
-      url: '/examples/SimpleTreemap',
+      url: '/examples#SimpleTreemap',
     },
     {
       name: 'Treemap with customized content',
-      url: '/examples/CustomContentTreemap',
+      url: '/examples#CustomContentTreemap',
     },
   ]
 };

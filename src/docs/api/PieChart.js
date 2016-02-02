@@ -42,11 +42,11 @@ export default {
   examples: [
     {
       name: 'Simple PieChart',
-      url: '/examples/TwoSimplePieChart',
+      url: '/examples#TwoSimplePieChart',
     },
     {
       name: 'PieChart of level datas',
-      url: '/examples/TwoLevelPieChart',
+      url: '/examples#TwoLevelPieChart',
     },
   ]
 };
