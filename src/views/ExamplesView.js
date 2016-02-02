@@ -7,7 +7,7 @@ const firstChartName = Object.keys(Examples)[0];
 
 @connect(state => {
   return {
-    page: state.routing.location.pathname.split('/').filter(item => !!item)[1] || firstChartName,
+    page: state.routing.location.hash ? state.routing.location.hash.slice(1) : firstChartName,
   };
 }, { push: routeActions.push })
 class ExamplesView extends Component {
@@ -31,8 +31,7 @@ class ExamplesView extends Component {
     const items = typeNameList.map(name => {
       return (
         <li key={name}>
-          <a href="#" className={page === name ? 'active' : ''}
-            onClick={this.handleNavRoute.bind(this, `/examples/${name}`)}>{name}</a>
+          <a href={`/examples#${name}`} className={page === name ? 'active' : ''}>{name}</a>
         </li>
       );
     });

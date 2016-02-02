@@ -1,22 +1,13 @@
 import React, { cloneElement, Component } from 'react';
 import { connect } from 'react-redux';
-import { routeActions } from 'react-router-redux';
 import API from 'docs/api';
 
 @connect(state => {
   return {
-    page: state.routing.location.pathname.split('/').filter(item => !!item)[1] || 'AreaChart',
+    page: state.routing.location.hash ? state.routing.location.hash.slice(1) : 'AreaChart',
   };
-}, { push: routeActions.push })
+})
 class APIView extends Component {
-  handleNavRoute(route, e) {
-    e.preventDefault();
-
-    const { push } = this.props;
-
-    push(route);
-  }
-
   renderExamples(examples) {
     if (!examples || !examples.length) {return null;}
     return (
@@ -42,156 +33,121 @@ class APIView extends Component {
           <h4>Chart Wrappers</h4>
           <ul className="menu">
             <li>
-              <a href="#" className={page === 'AreaChart' ? 'active' : ''}
-                onClick={this.handleNavRoute.bind(this, '/api/AreaChart')}>AreaChart</a>
+              <a href="/api#AreaChart" className={page === 'AreaChart' ? 'active' : ''}>AreaChart</a>
             </li>
             <li>
-              <a href="#" className={page === 'BarChart' ? 'active' : ''}
-                onClick={this.handleNavRoute.bind(this, '/api/BarChart')}>BarChart</a>
+              <a href="/api#BarChart" className={page === 'BarChart' ? 'active' : ''}>BarChart</a>
             </li>
             <li>
-              <a href="#" className={page === 'LineChart' ? 'active' : ''}
-                onClick={this.handleNavRoute.bind(this, '/api/LineChart')}>LineChart</a>
+              <a href="/api#LineChart" className={page === 'LineChart' ? 'active' : ''}>LineChart</a>
             </li>
             <li>
-              <a href="#" className={page === 'ComposedChart' ? 'active' : ''}
-                onClick={this.handleNavRoute.bind(this, '/api/ComposedChart')}>ComposedChart</a>
+              <a href="/api#ComposedChart" className={page === 'ComposedChart' ? 'active' : ''}>ComposedChart</a>
             </li>
             <li>
-              <a href="#" className={page === 'PieChart' ? 'active' : ''}
-                onClick={this.handleNavRoute.bind(this, '/api/PieChart')}>PieChart</a>
+              <a href="/api#PieChart" className={page === 'PieChart' ? 'active' : ''}>PieChart</a>
             </li>
             <li>
-              <a href="#" className={page === 'RadarChart' ? 'active' : ''}
-                onClick={this.handleNavRoute.bind(this, '/api/RadarChart')}>RadarChart</a>
+              <a href="/api#RadarChart" className={page === 'RadarChart' ? 'active' : ''}>RadarChart</a>
             </li>
             <li>
-              <a href="#" className={page === 'RadialBarChart' ? 'active' : ''}
-                onClick={this.handleNavRoute.bind(this, '/api/RadialBarChart')}>RadialBarChart</a>
+              <a href="/api#RadialBarChart" className={page === 'RadialBarChart' ? 'active' : ''}>RadialBarChart</a>
             </li>
             <li>
-              <a href="#" className={page === 'ScatterChart' ? 'active' : ''}
-                onClick={this.handleNavRoute.bind(this, '/api/ScatterChart')}>ScatterChart</a>
+              <a href="/api#ScatterChart" className={page === 'ScatterChart' ? 'active' : ''}>ScatterChart</a>
             </li>
             <li>
-              <a href="#" className={page === 'Treemap' ? 'active' : ''}
-                onClick={this.handleNavRoute.bind(this, '/api/Treemap')}>Treemap</a>
+              <a href="/api#Treemap" className={page === 'Treemap' ? 'active' : ''}>Treemap</a>
             </li>
           </ul>
 
           <h4>Chart Components</h4>
           <ul className="menu">
             <li>
-              <a href="#" className={page === 'Area' ? 'active' : ''}
-                onClick={this.handleNavRoute.bind(this, '/api/Area')}>Area</a>
+              <a href="/api#Area" className={page === 'Area' ? 'active' : ''}>Area</a>
             </li>
             <li>
-              <a href="#" className={page === 'Bar' ? 'active' : ''}
-                onClick={this.handleNavRoute.bind(this, '/api/Bar')}>Bar</a>
+              <a href="/api#Bar" className={page === 'Bar' ? 'active' : ''}>Bar</a>
             </li>
             <li>
-              <a href="#" className={page === 'Line' ? 'active' : ''}
-                onClick={this.handleNavRoute.bind(this, '/api/Line')}>Line</a>
+              <a href="/api#Line" className={page === 'Line' ? 'active' : ''}>Line</a>
             </li>
             <li>
-              <a href="#" className={page === 'Pie' ? 'active' : ''}
-                onClick={this.handleNavRoute.bind(this, '/api/Pie')}>Pie</a>
+              <a href="/api#Pie" className={page === 'Pie' ? 'active' : ''}>Pie</a>
             </li>
             <li>
-              <a href="#" className={page === 'Radar' ? 'active' : ''}
-                onClick={this.handleNavRoute.bind(this, '/api/Radar')}>Radar</a>
+              <a href="/api#Radar" className={page === 'Radar' ? 'active' : ''}>Radar</a>
             </li>
             <li>
-              <a href="#" className={page === 'RadialBar' ? 'active' : ''}
-                onClick={this.handleNavRoute.bind(this, '/api/RadialBar')}>RadialBar</a>
+              <a href="/api#RadarBar" className={page === 'RadialBar' ? 'active' : ''}>RadialBar</a>
             </li>
             <li>
-              <a href="#" className={page === 'Scatter' ? 'active' : ''}
-                onClick={this.handleNavRoute.bind(this, '/api/Scatter')}>Scatter</a>
+              <a href="/api#Scatter" className={page === 'Scatter' ? 'active' : ''}>Scatter</a>
             </li>
             <li>
-              <a href="#" className={page === 'XAxis' ? 'active' : ''}
-                onClick={this.handleNavRoute.bind(this, '/api/XAxis')}>XAxis</a>
+              <a href="/api#XAxis" className={page === 'XAxis' ? 'active' : ''}>XAxis</a>
             </li>
             <li>
-              <a href="#" className={page === 'YAxis' ? 'active' : ''}
-                onClick={this.handleNavRoute.bind(this, '/api/YAxis')}>YAxis</a>
+              <a href="/api#YAxis" className={page === 'YAxis' ? 'active' : ''}>YAxis</a>
             </li>
             <li>
-              <a href="#" className={page === 'ZAxis' ? 'active' : ''}
-                onClick={this.handleNavRoute.bind(this, '/api/ZAxis')}>ZAxis</a>
+              <a href="/api#ZAxis" className={page === 'ZAxis' ? 'active' : ''}>ZAxis</a>
             </li>
           </ul>
 
           <h4>General Components</h4>
           <ul className="menu">
             <li>
-              <a href="#" className={page === 'Brush' ? 'active' : ''}
-                onClick={this.handleNavRoute.bind(this, '/api/Brush')}>Brush</a>
+              <a href="/api#Brush" className={page === 'Brush' ? 'active' : ''}>Brush</a>
             </li>
             <li>
-              <a href="#" className={page === 'CartesianAxis' ? 'active' : ''}
-                onClick={this.handleNavRoute.bind(this, '/api/CartesianAxis')}>CartesianAxis</a>
+              <a href="/api#CartesianAxis" className={page === 'CartesianAxis' ? 'active' : ''}>CartesianAxis</a>
             </li>
             <li>
-              <a href="#" className={page === 'CartesianGrid' ? 'active' : ''}
-                onClick={this.handleNavRoute.bind(this, '/api/CartesianGrid')}>CartesianGrid</a>
+              <a href="/api#CartesianGrid" className={page === 'CartesianGrid' ? 'active' : ''}>CartesianGrid</a>
             </li>
             <li>
-              <a href="#" className={page === 'Legend' ? 'active' : ''}
-                onClick={this.handleNavRoute.bind(this, '/api/Legend')}>Legend</a>
+              <a href="/api#Legend" className={page === 'Legend' ? 'active' : ''}>Legend</a>
             </li>
             <li>
-              <a href="#" className={page === 'PolarAngleAxis' ? 'active' : ''}
-                onClick={this.handleNavRoute.bind(this, '/api/PolarAngleAxis')}>PolarAngleAxis</a>
+              <a href="/api#PolarAngleAxis" className={page === 'PolarAngleAxis' ? 'active' : ''}>PolarAngleAxis</a>
             </li>
             <li>
-              <a href="#" className={page === 'PolarGrid' ? 'active' : ''}
-                onClick={this.handleNavRoute.bind(this, '/api/PolarGrid')}>PolarGrid</a>
+              <a href="/api#PolarGrid" className={page === 'PolarGrid' ? 'active' : ''}>PolarGrid</a>
             </li>
             <li>
-              <a href="#" className={page === 'PolarRadiusAxis' ? 'active' : ''}
-                onClick={this.handleNavRoute.bind(this, '/api/PolarRadiusAxis')}>PolarRadiusAxis</a>
+              <a href="/api#PolarRadiusAxis" className={page === 'PolarRadiusAxis' ? 'active' : ''}>PolarRadiusAxis</a>
             </li>
             <li>
-              <a href="#" className={page === 'ReferenceLine' ? 'active' : ''}
-                onClick={this.handleNavRoute.bind(this, '/api/ReferenceLine')}>ReferenceLine</a>
+              <a href="/api#ReferenceLine" className={page === 'ReferenceLine' ? 'active' : ''}>ReferenceLine</a>
             </li>
             <li>
-              <a href="#" className={page === 'Tooltip' ? 'active' : ''}
-                onClick={this.handleNavRoute.bind(this, '/api/Tooltip')}>Tooltip</a>
+              <a href="/api#Tooltip" className={page === 'Tooltip' ? 'active' : ''}>Tooltip</a>
             </li>
           </ul>
 
           <h4>Shapes</h4>
           <ul className="menu">
             <li>
-              <a href="#" className={page === 'Cross' ? 'active' : ''}
-                onClick={this.handleNavRoute.bind(this, '/api/Cross')}>Cross</a>
+              <a href="/api#Cross" className={page === 'Cross' ? 'active' : ''}>Cross</a>
             </li>
             <li>
-              <a href="#" className={page === 'Curve' ? 'active' : ''}
-                onClick={this.handleNavRoute.bind(this, '/api/Curve')}>Curve</a>
+              <a href="/api#Curve" className={page === 'Curve' ? 'active' : ''}>Curve</a>
             </li>
             <li>
-              <a href="#" className={page === 'Dot' ? 'active' : ''}
-                onClick={this.handleNavRoute.bind(this, '/api/Dot')}>Dot</a>
+              <a href="/api#Dot" className={page === 'Dot' ? 'active' : ''}>Dot</a>
             </li>
             <li>
-              <a href="#" className={page === 'Polygon' ? 'active' : ''}
-                onClick={this.handleNavRoute.bind(this, '/api/Polygon')}>Polygon</a>
+              <a href="/api#Polygon" className={page === 'Polygon' ? 'active' : ''}>Polygon</a>
             </li>
             <li>
-              <a href="#" className={page === 'Rectangle' ? 'active' : ''}
-                onClick={this.handleNavRoute.bind(this, '/api/Rectangle')}>Rectangle</a>
+              <a href="/api#Rectangle" className={page === 'Rectangle' ? 'active' : ''}>Rectangle</a>
             </li>
             <li>
-              <a href="#" className={page === 'Sector' ? 'active' : ''}
-                onClick={this.handleNavRoute.bind(this, '/api/Sector')}>Sector</a>
+              <a href="/api#Sector" className={page === 'Sector' ? 'active' : ''}>Sector</a>
             </li>
             <li>
-              <a href="#" className={page === 'Triangle' ? 'active' : ''}
-                onClick={this.handleNavRoute.bind(this, '/api/Triangle')}>Triangle</a>
+              <a href="/api#Triangle" className={page === 'Triangle' ? 'active' : ''}>Triangle</a>
             </li>
           </ul>
 

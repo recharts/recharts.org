@@ -28,7 +28,7 @@ class IndexView extends Component {
         <div className="desc">
           <p className="title">Recharts = React + Charts</p>
           <p className="subtitle">Re-designed charting library built with React</p>
-          <p><a href="/guide/installation" className="button install-btn">Install v0.4.7</a></p>
+          <p><a href="/guide#installation" className="button install-btn">Install v0.4.7</a></p>
         </div>
         <div className="examples">
           <div className="ex-code">
@@ -63,7 +63,7 @@ class IndexView extends Component {
         </div>
         <div className="like">
           <p className="text">Recharts enables deeper integration of charts into your React application</p>
-          <p className="btn"><a href="/guide/getting-started" className="button getting-started-btn">Getting Started</a></p>
+          <p className="btn"><a href="/guide#getting-started" className="button getting-started-btn">Getting Started</a></p>
         </div>
       </div>
     );
