@@ -2,7 +2,9 @@ export default {
   SimpleLineChart: '//jsfiddle.net/0cd1LL55/embedded/result,js,css,html,resources/',
   TinyLineChart: '//jsfiddle.net/2crt5bqn/embedded/result,js,css,html,resources/',
   VerticalLineChart: '//jsfiddle.net/m5nar6xn/embedded/result,js,css,html,resources/',
-  BiaxialLineChart: '//jsfiddle.net/09uhvgkg/embedded/result,js,css,html,resources/',
+  BiaxialLineChart: '//jsfiddle.net/o4796ztd/embedded/result,js,css,html,resources/',
+  CustomizedDotLineChart: '//jsfiddle.net/azgb3Lh5/embedded/result,js,css,html,resources/',
+  CustomizedLabelLineChart: '//jsfiddle.net/8wLa7k0m/embedded/result,js,css,html,resources/',
 
   SimpleAreaChart: '//jsfiddle.net/300001uv/embedded/result,js,css,html,resources/',
   StackedAreaChart: '//jsfiddle.net/mk8vxh5w/embedded/result,js,css,html,resources/',
@@ -26,6 +28,7 @@ export default {
 
   TwoSimplePieChart: '//jsfiddle.net/r50p2vye/embedded/result,js,css,html,resources/',
   TwoLevelPieChart: '//jsfiddle.net/4y451mLy/embedded/result,js,css,html,resources/',
+  StraightAnglePieChart: '//jsfiddle.net/kvacfLtd/embedded/result,js,css,html,resources/',
 
   SimpleRadarChart: '//jsfiddle.net/6Lv4efu6/embedded/result,js,css,html,resources/',
   SpecifiedDomainRadarChart: '//jsfiddle.net/mg3e0zur/embedded/result,js,css,html,resources/',

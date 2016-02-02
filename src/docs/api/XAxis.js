@@ -96,5 +96,9 @@ export default {
       name: 'Simple ScatterChart',
       url: '/examples#SimpleScatterChart',
     },
+    {
+      name: 'LineChart with customized label and x-axis label',
+      url: '/examples#CustomizedLabelLineChart',
+    },
   ]
 };

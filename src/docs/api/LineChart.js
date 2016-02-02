@@ -50,5 +50,13 @@ export default {
       name: 'LineChart with two number axes',
       url: '/examples#BiaxialLineChart',
     },
+    {
+      name: 'LineChart with customized dot',
+      url: '/examples#CustomizedDotLineChart',
+    },
+    {
+      name: 'LineChart with customized label and x-axis label',
+      url: '/examples#CustomizedLabelLineChart',
+    },
   ]
 };
