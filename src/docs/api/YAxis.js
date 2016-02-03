@@ -50,6 +50,12 @@ export default {
       isOptional: false,
       desc: 'The number of axis ticks.',
     }, {
+      name: 'domain',
+      type: 'Array',
+      defaultVal: 'null',
+      isOptional: true,
+      desc: 'Specify the domain of axis when the axis is a number axis. The length of domain should be 2, and we will validate the values in domain.',
+    }, {
       name: 'tickFormatter',
       type: 'Function',
       defaultVal: 'null',

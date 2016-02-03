@@ -43,6 +43,12 @@ export default {
       defaultVal: 'null',
       isOptional: false,
       desc: 'The function to formatting tick.',
+    }, {
+      name: 'domain',
+      type: 'Array',
+      defaultVal: 'null',
+      isOptional: true,
+      desc: 'Specify the domain of radius in a polar chart. And the length should be 2.',
     },
   ],
   examples: [

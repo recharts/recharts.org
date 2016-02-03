@@ -30,7 +30,7 @@ class APIView extends Component {
       <div className="page page-api">
         <div className="sidebar">
           <h2>API</h2>
-          <h4>Chart Wrappers</h4>
+          <h4>Charts</h4>
           <ul className="menu">
             <li>
               <a href="/api#AreaChart" className={page === 'AreaChart' ? 'active' : ''}>AreaChart</a>
@@ -61,7 +61,20 @@ class APIView extends Component {
             </li>
           </ul>
 
-          <h4>Chart Components</h4>
+          <h4>General Components</h4>
+          <ul className="menu">
+            <li>
+              <a href="/api#AdaptionWrapper" className={page === 'AdaptionWrapper' ? 'active' : ''}>AdaptionWrapper</a>
+            </li>
+            <li>
+              <a href="/api#Legend" className={page === 'Legend' ? 'active' : ''}>Legend</a>
+            </li>
+            <li>
+              <a href="/api#Tooltip" className={page === 'Tooltip' ? 'active' : ''}>Tooltip</a>
+            </li>
+          </ul>
+
+          <h4>Components of cartesian coordinate system charts</h4>
           <ul className="menu">
             <li>
               <a href="/api#Area" className={page === 'Area' ? 'active' : ''}>Area</a>
@@ -71,15 +84,6 @@ class APIView extends Component {
             </li>
             <li>
               <a href="/api#Line" className={page === 'Line' ? 'active' : ''}>Line</a>
-            </li>
-            <li>
-              <a href="/api#Pie" className={page === 'Pie' ? 'active' : ''}>Pie</a>
-            </li>
-            <li>
-              <a href="/api#Radar" className={page === 'Radar' ? 'active' : ''}>Radar</a>
-            </li>
-            <li>
-              <a href="/api#RadialBar" className={page === 'RadialBar' ? 'active' : ''}>RadialBar</a>
             </li>
             <li>
               <a href="/api#Scatter" className={page === 'Scatter' ? 'active' : ''}>Scatter</a>
@@ -93,10 +97,6 @@ class APIView extends Component {
             <li>
               <a href="/api#ZAxis" className={page === 'ZAxis' ? 'active' : ''}>ZAxis</a>
             </li>
-          </ul>
-
-          <h4>General Components</h4>
-          <ul className="menu">
             <li>
               <a href="/api#Brush" className={page === 'Brush' ? 'active' : ''}>Brush</a>
             </li>
@@ -107,7 +107,20 @@ class APIView extends Component {
               <a href="/api#CartesianGrid" className={page === 'CartesianGrid' ? 'active' : ''}>CartesianGrid</a>
             </li>
             <li>
-              <a href="/api#Legend" className={page === 'Legend' ? 'active' : ''}>Legend</a>
+              <a href="/api#ReferenceLine" className={page === 'ReferenceLine' ? 'active' : ''}>ReferenceLine</a>
+            </li>
+          </ul>
+
+          <h4>Components of polar coordinate system charts</h4>
+          <ul className="menu">
+            <li>
+              <a href="/api#Pie" className={page === 'Pie' ? 'active' : ''}>Pie</a>
+            </li>
+            <li>
+              <a href="/api#Radar" className={page === 'Radar' ? 'active' : ''}>Radar</a>
+            </li>
+            <li>
+              <a href="/api#RadialBar" className={page === 'RadialBar' ? 'active' : ''}>RadialBar</a>
             </li>
             <li>
               <a href="/api#PolarAngleAxis" className={page === 'PolarAngleAxis' ? 'active' : ''}>PolarAngleAxis</a>
@@ -117,12 +130,6 @@ class APIView extends Component {
             </li>
             <li>
               <a href="/api#PolarRadiusAxis" className={page === 'PolarRadiusAxis' ? 'active' : ''}>PolarRadiusAxis</a>
-            </li>
-            <li>
-              <a href="/api#ReferenceLine" className={page === 'ReferenceLine' ? 'active' : ''}>ReferenceLine</a>
-            </li>
-            <li>
-              <a href="/api#Tooltip" className={page === 'Tooltip' ? 'active' : ''}>Tooltip</a>
             </li>
           </ul>
 

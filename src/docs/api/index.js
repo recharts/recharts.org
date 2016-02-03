@@ -11,23 +11,25 @@ import Treemap from './Treemap';
 import Area from './Area';
 import Bar from './Bar';
 import Line from './Line';
-import Pie from './Pie';
-import Radar from './Radar';
-import RadialBar from './RadialBar';
 import Scatter from './Scatter';
 import XAxis from './XAxis';
 import YAxis from './YAxis';
 import ZAxis from './ZAxis';
-
+import ReferenceLine from './ReferenceLine';
 import Brush from './Brush';
 import CartesianAxis from './CartesianAxis';
 import CartesianGrid from './CartesianGrid';
+
+import AdaptionWrapper from './AdaptionWrapper';
 import Legend from './Legend';
+import Tooltip from './Tooltip';
+
+import Pie from './Pie';
+import Radar from './Radar';
+import RadialBar from './RadialBar';
 import PolarAngleAxis from './PolarAngleAxis';
 import PolarGrid from './PolarGrid';
 import PolarRadiusAxis from './PolarRadiusAxis';
-import ReferenceLine from './ReferenceLine';
-import Tooltip from './Tooltip';
 
 import Cross from './Cross';
 import Curve from './Curve';
@@ -51,23 +53,25 @@ export default {
   Area,
   Bar,
   Line,
-  Pie,
-  Radar,
-  RadialBar,
   Scatter,
   XAxis,
   YAxis,
   ZAxis,
-
   Brush,
   CartesianAxis,
   CartesianGrid,
+
+  AdaptionWrapper,
   Legend,
+  Tooltip,
+
+  Pie,
+  RadialBar,
+  Radar,
   PolarAngleAxis,
   PolarGrid,
   PolarRadiusAxis,
   ReferenceLine,
-  Tooltip,
 
   Cross,
   Curve,
