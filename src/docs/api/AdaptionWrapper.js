@@ -17,5 +17,17 @@ export default {
     },
   ],
   examples: [
+    {
+      name: 'An AreaChart wrapped by AdaptionWrapper',
+      url: '/examples#AreaAdaptionWrapper',
+    },
+    {
+      name: 'An ComposedChart wrapped by AdaptionWrapper',
+      url: '/examples#AreaAdaptionWrapper',
+    },
+    {
+      name: 'A PieChart wrapped by AdaptionWrapper',
+      url: '/examples#AreaAdaptionWrapper',
+    },
   ]
 };

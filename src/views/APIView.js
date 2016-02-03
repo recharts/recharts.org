@@ -74,7 +74,7 @@ class APIView extends Component {
             </li>
           </ul>
 
-          <h4>Components of cartesian coordinate system charts</h4>
+          <h4>Cartesian Components</h4>
           <ul className="menu">
             <li>
               <a href="/api#Area" className={page === 'Area' ? 'active' : ''}>Area</a>
@@ -111,7 +111,7 @@ class APIView extends Component {
             </li>
           </ul>
 
-          <h4>Components of polar coordinate system charts</h4>
+          <h4>Polar Components</h4>
           <ul className="menu">
             <li>
               <a href="/api#Pie" className={page === 'Pie' ? 'active' : ''}>Pie</a>

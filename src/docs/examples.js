@@ -34,9 +34,13 @@ export default {
   SpecifiedDomainRadarChart: '//jsfiddle.net/mg3e0zur/embedded/result,js,css,html,resources/',
 
   SimpleTreemap: '//jsfiddle.net/pu515LnL/embedded/result,js,css,html,resources/',
-  CustomContentTreemap: '//jsfiddle.net/0q0094ef/embedded/result,js,css,html,resources/',
+  CustomContentTreemap: '//jsfiddle.net/6ptyLav7/embedded/result,js,css,html,resources/',
 
   SimpleRadialBarChart: '//jsfiddle.net/2da6ghwa/embedded/result,js,css,html,resources/',
 
   CustomContentOfTooltip: '//jsfiddle.net/eckozra5/embedded/result,js,css,html,resources/',
+
+  AreaAdaptionWrapper: '//jsfiddle.net/om3d6c7x/embedded/result,js,css,html,resources/',
+  ComposedAdaptionWrapper: '//jsfiddle.net/Lpk2ky66/embedded/result,js,css,html,resources/',
+  PieAdaptionWrapper: '//jsfiddle.net/0y448y0z/embedded/result,js,css,html,resources/',
 };
