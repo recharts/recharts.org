@@ -6,7 +6,7 @@ export default {
       type: 'String | Number',
       defaultVal: 'null',
       isOptional: false,
-      desc: 'The key of a group of data which should be unique in an radar chart.',
+      desc: 'The key of a group of data which should be unique in a radar chart.',
     }, {
       name: 'points',
       type: 'Array',

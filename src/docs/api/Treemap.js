@@ -14,6 +14,12 @@ export default {
       isOptional: false,
       desc: 'The width of chart container.',
     }, {
+      name: 'dataKey',
+      type: 'String',
+      defaultVal: 'value',
+      isOptional: false,
+      desc: 'The key of a group of data which should be unique in a treemap.',
+    }, {
       name: 'ratio',
       type: 'Number',
       defaultVal: 'null',

@@ -33,8 +33,8 @@ export default {
   SimpleRadarChart: '//jsfiddle.net/6Lv4efu6/embedded/result,js,css,html,resources/',
   SpecifiedDomainRadarChart: '//jsfiddle.net/mg3e0zur/embedded/result,js,css,html,resources/',
 
-  SimpleTreemap: '//jsfiddle.net/pu515LnL/embedded/result,js,css,html,resources/',
-  CustomContentTreemap: '//jsfiddle.net/6ptyLav7/embedded/result,js,css,html,resources/',
+  SimpleTreemap: '//jsfiddle.net/qxqywjzw/embedded/result,js,css,html,resources/',
+  CustomContentTreemap: '//jsfiddle.net/2mdvtb7c/embedded/result,js,css,html,resources/',
 
   SimpleRadialBarChart: '//jsfiddle.net/2da6ghwa/embedded/result,js,css,html,resources/',
 
