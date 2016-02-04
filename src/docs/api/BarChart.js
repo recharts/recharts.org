@@ -33,7 +33,7 @@ export default {
       desc: 'The sizes of whitespace around the container.',
     }, {
       name: 'barCategoryGap',
-      type: 'Percent String| Number',
+      type: 'Percentage | Number',
       defaultVal: '\'10%\'',
       isOptional: false,
       desc: 'The gab betwwen two bar categorys which can be percent value and a fixed value.',

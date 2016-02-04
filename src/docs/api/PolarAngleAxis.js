@@ -21,10 +21,10 @@ export default {
       desc: 'The y-coordinate of center.',
     }, {
       name: 'radius',
-      type: 'Number',
+      type: 'Percentage | Number',
       defaultVal: 'null',
       isOptional: false,
-      desc: 'The outer radius of circle grid.',
+      desc: 'The outer radius of circle grid. If set a percentage, the final value is obtained by multiplying the percentage of maxRadius which is calculated by the width, height, cx, cy.',
     }, {
       name: 'axisLine',
       type: 'Bool | Object',

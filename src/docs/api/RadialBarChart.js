@@ -27,7 +27,7 @@ export default {
       desc: 'The sizes of whitespace around the container.',
     }, {
       name: 'barCategoryGap',
-      type: 'Percent String| Number',
+      type: 'Percentage| Number',
       defaultVal: '\'10%\'',
       isOptional: false,
       desc: 'The gab betwwen two bar categorys which can be percent value and a fixed value.',
@@ -38,35 +38,35 @@ export default {
       isOptional: false,
       desc: 'The gab betwwen two bar in the same category.',
     }, {
+      name: 'cx',
+      type: 'Percentage | Number',
+      defaultVal: '\'50%\'',
+      isOptional: false,
+      desc: 'The x-coordinate of center. If set a percentage, the final value is obtained by multiplying the percentage of width.',
+    }, {
+      name: 'cy',
+      type: 'Percentage | Number',
+      defaultVal: '\'50%\'',
+      isOptional: false,
+      desc: 'The y-coordinate of center. If set a percentage, the final value is obtained by multiplying the percentage of width.',
+    }, {
+      name: 'innerRadius',
+      type: 'Percentage | Number',
+      defaultVal: '\'30%\'',
+      isOptional: false,
+      desc: 'The innerRadius of the radial bar which is most close to the center. If set a percentage, the final value is obtained by multiplying the percentage of maxRadius which is calculated by the width, height, cx, cy.',
+    }, {
+      name: 'outerRadius',
+      type: 'Percentage | Number',
+      defaultVal: '\'100%\'',
+      isOptional: false,
+      desc: 'The outerRadius of the radial bar which is most far away from the center. If set a percentage, the final value is obtained by multiplying the percentage of maxRadius which is calculated by the width, height, cx, cy.',
+    }, {
       name: 'barSize',
       type: 'Number',
       defaultVal: 'null',
       isOptional: true,
       desc: 'The width or height of each bar. If the barSize is not specified, the size of bar will be calculated by the barCategoryGap, barGap and the quantity of bar groups.',
-    }, {
-      name: 'cx',
-      type: 'Number',
-      defaultVal: 'null',
-      isOptional: true,
-      desc: 'The x-coordinate of center. If the cx is not specified, the center will be calculated by the half size of width',
-    }, {
-      name: 'cy',
-      type: 'Number',
-      defaultVal: 'null',
-      isOptional: true,
-      desc: 'The y-coordinate of center. If the cy is not specified, the center will be calculated by the half size of height',
-    }, {
-      name: 'innerRadius',
-      type: 'Number',
-      defaultVal: 'null',
-      isOptional: true,
-      desc: 'The innerRadius of the radial bar which is most close to the center.',
-    }, {
-      name: 'outerRadius',
-      type: 'Number',
-      defaultVal: 'null',
-      isOptional: true,
-      desc: 'The outerRadius of the radial bar which is most far away from the center.',
     },
   ],
   examples: [
