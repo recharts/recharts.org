@@ -24,8 +24,6 @@ module.exports = {
       test: /\.jsx?$/,
       include: [
         path.resolve(__dirname, 'src'),
-        path.resolve(__dirname, './node_modules/recharts'),
-        path.resolve(__dirname, './node_modules/react-smooth'),
         path.resolve(__dirname, './node_modules/remaps'),
       ],
       loaders: ['babel'],
