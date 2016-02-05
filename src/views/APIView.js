@@ -64,7 +64,7 @@ class APIView extends Component {
           <h4>General Components</h4>
           <ul className="menu">
             <li>
-              <a href="/api#AdaptionWrapper" className={page === 'AdaptionWrapper' ? 'active' : ''}>AdaptionWrapper</a>
+              <a href="/api#ResponsiveContainer" className={page === 'ResponsiveContainer' ? 'active' : ''}>ResponsiveContainer</a>
             </li>
             <li>
               <a href="/api#Legend" className={page === 'Legend' ? 'active' : ''}>Legend</a>

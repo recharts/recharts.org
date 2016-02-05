@@ -20,7 +20,7 @@ import Brush from './Brush';
 import CartesianAxis from './CartesianAxis';
 import CartesianGrid from './CartesianGrid';
 
-import AdaptionWrapper from './AdaptionWrapper';
+import ResponsiveContainer from './ResponsiveContainer';
 import Legend from './Legend';
 import Tooltip from './Tooltip';
 
@@ -61,7 +61,7 @@ export default {
   CartesianAxis,
   CartesianGrid,
 
-  AdaptionWrapper,
+  ResponsiveContainer,
   Legend,
   Tooltip,
 
