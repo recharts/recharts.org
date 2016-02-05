@@ -70,8 +70,8 @@ class ExamplesView extends Component {
           <h4>Tooltip</h4>
           {this.renderMenuList('Tooltip')}
 
-          <h4>AdaptionWrapper</h4>
-          {this.renderMenuList('AdaptionWrapper')}
+          <h4>ResponsiveContainer</h4>
+          {this.renderMenuList('ResponsiveContainer')}
 
         </div>
         <div className="content">

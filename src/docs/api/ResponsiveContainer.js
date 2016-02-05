@@ -5,15 +5,15 @@ export default {
     {
       name: 'width',
       type: 'String',
-      defaultVal: '100%',
+      defaultVal: '\'100%\'',
       isOptional: false,
-      desc: 'The width of the horizontal line of the cross.',
+      desc: 'The percentage value of the chart\'s width.',
     }, {
       name: 'height',
       type: 'Number',
-      defaultVal: '100%',
+      defaultVal: '\'100%\'',
       isOptional: false,
-      desc: 'The height of the vertical line of the cross.',
+      desc: 'The percentage value of the chart\'s width.',
     },
   ],
   examples: [
@@ -23,11 +23,11 @@ export default {
     },
     {
       name: 'An ComposedChart wrapped by ResponsiveContainer',
-      url: '/examples#AreaResponsiveContainer',
+      url: '/examples#ComposedResponsiveContainer',
     },
     {
       name: 'A PieChart wrapped by ResponsiveContainer',
-      url: '/examples#AreaResponsiveContainer',
+      url: '/examples#PieResponsiveContainer',
     },
   ]
 };
