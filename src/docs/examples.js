@@ -4,7 +4,7 @@ export default {
   VerticalLineChart: '//jsfiddle.net/gs4b8e3t/embedded/result,js,css,html,resources/',
   BiaxialLineChart: '//jsfiddle.net/b4Lv4fL0/embedded/result,js,css,html,resources/',
   CustomizedDotLineChart: '//jsfiddle.net/xfp4Lmyf/embedded/result,js,css,html,resources/',
-  CustomizedLabelLineChart: '//jsfiddle.net/sfhbcmtg/embedded/result,js,css,html,resources/',
+  CustomizedLabelLineChart: '//jsfiddle.net/epj0rg6e/embedded/result,js,css,html,resources/',
 
   SimpleAreaChart: '//jsfiddle.net/fs57to34/embedded/result,js,css,html,resources/',
   StackedAreaChart: '//jsfiddle.net/33w4pv8e/embedded/result,js,css,html,resources/',
@@ -20,7 +20,7 @@ export default {
 
   LineBarAreaComposedChart: '//jsfiddle.net/28f496uq/embedded/result,js,css,html,resources/',
   VerticalComposedChart: '//jsfiddle.net/jstoukL4/embedded/result,js,css,html,resources/',
-  SameDataComposedChart: '//jsfiddle.net/kk4bh4rj/1/embedded/result,js,css,html,resources/',
+  SameDataComposedChart: '//jsfiddle.net/kk4bh4rj/embedded/result,js,css,html,resources/',
 
   SimpleScatterChart: '//jsfiddle.net/o0eoehy1/embedded/result,js,css,html,resources/',
   ThreeDimScatterChart: '//jsfiddle.net/dfc5kjz1/embedded/result,js,css,html,resources/',
@@ -30,13 +30,13 @@ export default {
   TwoLevelPieChart: '//jsfiddle.net/qaqgza7t/embedded/result,js,css,html,resources/',
   StraightAnglePieChart: '//jsfiddle.net/fysndezz/embedded/result,js,css,html,resources/',
 
-  SimpleRadarChart: '//jsfiddle.net/8s6cjkny/embedded/result,js,css,html,resources/',
+  SimpleRadarChart: '//jsfiddle.net/s39Lc9L4/embedded/result,js,css,html,resources/',
   SpecifiedDomainRadarChart: '//jsfiddle.net/x05tytdx/embedded/result,js,css,html,resources/',
 
   SimpleTreemap: '//jsfiddle.net/qxqywjzw/embedded/result,js,css,html,resources/',
   CustomContentTreemap: '//jsfiddle.net/wdyu8mwb/embedded/result,js,css,html,resources/',
 
-  SimpleRadialBarChart: '//jsfiddle.net/wdyu8mwb/embedded/result,js,css,html,resources/',
+  SimpleRadialBarChart: '//jsfiddle.net/ttz5j6rL/embedded/result,js,css,html,resources/',
 
   CustomContentOfTooltip: '//jsfiddle.net/300yzm44/embedded/result,js,css,html,resources/',
 

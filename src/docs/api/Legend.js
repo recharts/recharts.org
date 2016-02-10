@@ -44,6 +44,24 @@ export default {
       isOptional: false,
       desc: 'The source data of the content to be displayed in the legend, usually calculated internally.',
     }, {
+      name: 'chartWidth',
+      type: 'Number',
+      defaultVal: 'null',
+      isOptional: false,
+      desc: 'The width of chart container, usually calculated internally.',
+    }, {
+      name: 'chartHeight',
+      type: 'Number',
+      defaultVal: 'null',
+      isOptional: false,
+      desc: 'The height of chart container, usually calculated internally.',
+    }, {
+      name: 'margin',
+      type: 'Object',
+      defaultVal: 'null',
+      isOptional: true,
+      desc: 'The margin of chart container, usually calculated internally.',
+    }, {
       name: 'content',
       type: 'ReactElement',
       defaultVal: 'null',
