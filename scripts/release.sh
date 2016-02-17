@@ -7,7 +7,7 @@ fi
 
 git checkout master
 
-GIT_STATUS=`git status | grep -e 'commit'`
+GIT_STATUS=`git status | grep -e 'nothing to commit'`
 
 if [ -n "$GIT_STATUS" ]; then
   echo "Please commit the master firstly"
