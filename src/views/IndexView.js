@@ -14,7 +14,7 @@ const data = [{ name: 'A', uv: 400, pv: 240, amt: 2400 },
 class IndexView extends Component {
   render() {
     const exCode = `
-  <LineChart width={400} height={300} data={data}>
+  <LineChart width={500} height={300} data={data}>
     <XAxis dataKey="name"/>
     <YAxis/>
     <CartesianGrid stroke="#eee" strokeDasharray="5 5"/>
@@ -32,7 +32,7 @@ class IndexView extends Component {
         </div>
         <div className="examples">
           <div className="ex-code">
-            <LineChart width={540} height={300} data={data}>
+            <LineChart width={500} height={300} data={data} margin={{top: 5, right: 5, bottom: 5, left: 0}}>
               <XAxis dataKey="name"/>
               <YAxis/>
               <CartesianGrid stroke="#eee" strokeDasharray="5 5"/>

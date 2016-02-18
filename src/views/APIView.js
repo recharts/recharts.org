@@ -11,7 +11,8 @@ import './APIView.scss';
 })
 class APIView extends Component {
   renderExamples(examples) {
-    if (!examples || !examples.length) {return null;}
+    if (!examples || !examples.length) { return null; }
+
     return (
       <div className="examples">
         <ul className="example-list">
