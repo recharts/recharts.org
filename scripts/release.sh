@@ -18,7 +18,7 @@ npm run build
 
 git checkout gh-pages
 
-git pull origin gh-pages --rebase
+git pull --rebase origin gh-pages
 
 mv -f build/* .
 
