@@ -89,6 +89,9 @@ export default {
       examples: [{
         name: 'A stacked bar chart',
         url: '/examples#StackedBarChart',
+      }, {
+        name: 'A bar chart with stacked bars and unstacked bars',
+        url: '/examples#MixBarChart',
       }],
     }, {
       name: 'unit',

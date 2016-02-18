@@ -94,6 +94,12 @@ export default {
       isOptional: true,
       desc: 'If set a React element, the option is the custom react element of rendering tooltip.',
       format: [`<Tooltip content={<CustomizedTooltip external={external} />}/>`],
+      examples: [
+        {
+          name: 'Customize tooltip content',
+          url: '/examples#CustomContentOfTooltip',
+        }
+      ],
     }, {
       name: 'formatter',
       type: 'Function',

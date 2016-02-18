@@ -61,7 +61,7 @@ export default {
   examples: [
 {
       name: 'Simple RadarChart',
-      url: '//jsfiddle.net/5q0n1cgs/embedded/result/',
+      url: '//jsfiddle.net/59ew4p74/embedded/result/',
       code: `<RadarChart cx={300} cy={250} outerRadius={150} width={600} height={500} data={data}>
   <Radar name="Mike" dataKey="A" stroke="#8884d8" fill="#8884d8" fillOpacity={0.6}/>
   <Radar name="Lily" dataKey="B" stroke="#82ca9d" fill="#82ca9d" fillOpacity={0.6}/>

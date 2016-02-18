@@ -25,7 +25,7 @@ export default {
   examples: [
     {
       name: 'Simple Scatter',
-      url: '//jsfiddle.net/89u0cwwj/embedded/result/',
+      url: '//jsfiddle.net/avr69b9d/embedded/result/',
       code: `<ScatterChart width={400} height={400}
     margin={{top: 20, right: 20, bottom: 10, left: 10}}>
   <XAxis dataKey="x" name="stature" unit="cm"/>

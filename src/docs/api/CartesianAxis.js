@@ -73,6 +73,10 @@ export default {
       defaultVal: 'null',
       isOptional: true,
       desc: 'If set false, no ticks will be drawed. If set a object, the option is the configuration of ticks. If set a React element, the option is the custom react element of drawing ticks.',
+      examples: [{
+        name: 'A line chart with customized x-axis tick',
+        url: '/examples#CustomizedLabelLineChart',
+      }],
     }, {
       name: 'label',
       type: 'String | Number | ReactElement',

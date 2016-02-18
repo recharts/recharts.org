@@ -30,7 +30,7 @@ export default {
   examples: [
     {
       name: 'Simple Treemap',
-      url: '//jsfiddle.net/us0mcbyx/embedded/result/',
+      url: '//jsfiddle.net/cgmqwqjL/embedded/result/',
       code: `<Treemap
   width={400}
   height={200}

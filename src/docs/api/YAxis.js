@@ -79,6 +79,33 @@ export default {
       defaultVal: 'null',
       isOptional: true,
       desc: 'The name of data displayed in the axis.',
+    }, {
+      name: 'tick',
+      type: 'Boolean | Object | ReactElement',
+      defaultVal: 'null',
+      isOptional: true,
+      desc: 'If set false, no ticks will be drawed. If set a object, the option is the configuration of ticks. If set a React element, the option is the custom react element of drawing ticks.',
+      format: [
+        `<YAxis tick={fasle}/>`,
+        `<YAxis tick={{stroke: 'red', strokeWidth: 2}}/>`,
+        `<YAxis tick={<CustomizedTick/>}/>`,
+      ],
+    }, {
+      name: 'label',
+      type: 'String | Number | ReactElement',
+      defaultVal: 'null',
+      isOptional: true,
+      desc: 'If set a string or a number, default label will be drawed, and the option is content. If set a React element, the option is the custom react element of drawing label.',
+      format: [
+        `<YAxis label="Height"/>`,
+        `<YAxis label={<CustomizedLabel/>}/>`,
+      ],
+      examples: [
+        {
+          name: 'A composed chart with axis labels',
+          url: '/examples#ComposedChartWithAxisLabels',
+        },
+      ],
     },
   ],
   examples: [

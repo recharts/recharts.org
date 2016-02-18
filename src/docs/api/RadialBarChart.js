@@ -74,7 +74,7 @@ export default {
   examples: [
     {
       name: 'Simple RadialBarChart',
-      url: '//jsfiddle.net/ayktxe5t/embedded/result/',
+      url: '//jsfiddle.net/L4ys0ma0/embedded/result/',
       code: `<RadialBarChart width={500} height={300} cx={150} cy={150} innerRadius={20} outerRadius={140} data={data}>
   <RadialBar startAngle={90} endAngle={-270} label={label} background dataKey="pv" />
   <Legend iconSize={10} width={120} height={140} layout="vertical" verticalAlign="middle" wrapperStyle={style} />

@@ -79,6 +79,37 @@ export default {
       defaultVal: 'null',
       isOptional: true,
       desc: 'The name of data displayed in the axis.',
+    }, {
+      name: 'tick',
+      type: 'Boolean | Object | ReactElement',
+      defaultVal: 'null',
+      isOptional: true,
+      desc: 'If set false, no ticks will be drawed. If set a object, the option is the configuration of ticks. If set a React element, the option is the custom react element of drawing ticks.',
+      format: [
+        `<XAxis tick={fasle}/>`,
+        `<XAxis tick={{stroke: 'red', strokeWidth: 2}}/>`,
+        `<XAxis tick={<CustomizedTick/>}/>`,
+      ],
+      examples: [{
+        name: 'A line chart with customized x-axis tick',
+        url: '/examples#CustomizedLabelLineChart',
+      }],
+    }, {
+      name: 'label',
+      type: 'String | Number | ReactElement',
+      defaultVal: 'null',
+      isOptional: true,
+      desc: 'If set a string or a number, default label will be drawed, and the option is content. If set a React element, the option is the custom react element of drawing label.',
+      format: [
+        `<XAxis label="Height"/>`,
+        `<XAxis label={<CustomizedLabel/>}/>`,
+      ],
+      examples: [
+        {
+          name: 'A composed chart with axis labels',
+          url: '/examples#ComposedChartWithAxisLabels',
+        },
+      ],
     },
   ],
   examples: [

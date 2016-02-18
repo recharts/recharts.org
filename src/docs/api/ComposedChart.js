@@ -57,7 +57,7 @@ export default {
   examples: [
     {
       name: 'Simple LineChart',
-      url: '//jsfiddle.net/feoye87n/embedded/result/',
+      url: '//jsfiddle.net/a5vxamjs/embedded/result/',
       code: `<ComposedChart width={600} height={400} data={data}>
   <XAxis dataKey="name"/>
   <YAxis />

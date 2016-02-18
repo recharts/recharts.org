@@ -66,7 +66,7 @@ export default {
   examples: [
     {
       name: 'Simple BarChart',
-      url: '//jsfiddle.net/wuuvvax0/embedded/result/',
+      url: '//jsfiddle.net/weomrc4q/embedded/result/',
       code: `<BarChart width={300} height={200} data={data}>
  <XAxis dataKey="name"/>
  <YAxis/>

@@ -38,7 +38,7 @@ export default {
   examples: [
     {
       name: 'Simple LineChart',
-      url: '//jsfiddle.net/f9r65cc9/embedded/result/',
+      url: '//jsfiddle.net/a5vxamjs/embedded/result/',
       code: `<LineChart width={600} height={300} data={data}
       margin={{top: 5, right: 30, left: 20, bottom: 5}}>
  <XAxis dataKey="name"/>
