@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Highlight from 'utils/Highlight';
 import { BarChart, Bar, LineChart, Legend, Line, XAxis, YAxis, Tooltip, CartesianGrid } from 'recharts';
 import CustomBarLabel from './CustomBarLabel';
-import CustomAxisLabel from './CustomAxisLabel';
+import CustomAxisTick from './CustomAxisTick';
 import TriangleBar from './TriangleBar';
 import CustomTooltip from './CustomTooltip';
 
@@ -20,12 +20,12 @@ const Customize = () => {
       <h3>Customize</h3>
 
       <h4>1. Labels of line, area, bar, axis can be customized</h4>
-      <p>For example, we can create a bar with customized label and customized axis label.</p>
+      <p>For example, we can create a bar with customized label and customized axis tick.</p>
       <div className="demo">
         <Highlight className="jsx">
         {
           `<BarChart width={600} height={300} data={data}>
-  <XAxis dataKey="name" label={<CustomAxisLabel/>}/>
+  <XAxis dataKey="name" tick={<CustomAxisTick/>}/>
   <YAxis/>
   <Bar type="monotone" dataKey="uv" barSize={30} fill="#8884d8"
     label={<CustomBarLabel />}/>
@@ -34,7 +34,7 @@ const Customize = () => {
         </Highlight>
 
         <BarChart width={600} height={300} data={data}>
-          <XAxis dataKey="name" label={<CustomAxisLabel/>}/>
+          <XAxis dataKey="name" tick={<CustomAxisTick/>}/>
           <YAxis/>
           <Bar type="monotone" dataKey="uv" barSize={30} fill="#8884d8" label={<CustomBarLabel />}/>
         </BarChart>
@@ -46,7 +46,7 @@ const Customize = () => {
         <Highlight className="jsx">
         {
           `<BarChart width={600} height={300} data={data}>
-  <XAxis dataKey="name" label={<CustomAxisLabel/>}/>
+  <XAxis dataKey="name" tick={<CustomAxisTick/>}/>
   <YAxis/>
   <Bar type="monotone" dataKey="uv" fill="#8884d8"
     shape={<TriangleBar />}/>
@@ -55,7 +55,7 @@ const Customize = () => {
         </Highlight>
 
         <BarChart width={600} height={300} data={data}>
-          <XAxis dataKey="name" label={<CustomAxisLabel/>}/>
+          <XAxis dataKey="name" tick={<CustomAxisTick/>}/>
           <YAxis/>
           <Bar type="monotone" dataKey="uv" fill="#8884d8" shape={<TriangleBar />}/>
         </BarChart>
@@ -67,7 +67,7 @@ const Customize = () => {
         <Highlight className="jsx">
         {
           `<BarChart width={600} height={300} data={data}>
-  <XAxis dataKey="name" label={<CustomAxisLabel/>}/>
+  <XAxis dataKey="name" tick={<CustomAxisTick/>}/>
   <YAxis/>
   <Tooltip content={<CustomTooltip />}/>
   <Bar type="monotone" dataKey="uv" fill="#8884d8"
@@ -77,7 +77,7 @@ const Customize = () => {
         </Highlight>
 
         <BarChart width={600} height={300} data={data}>
-          <XAxis dataKey="name" label={<CustomAxisLabel/>}/>
+          <XAxis dataKey="name" tick={<CustomAxisTick/>}/>
           <YAxis/>
           <Tooltip content={<CustomTooltip />}/>
           <Bar type="monotone" dataKey="uv" fill="#8884d8" shape={<TriangleBar />}/>

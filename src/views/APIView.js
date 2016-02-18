@@ -1,6 +1,8 @@
 import React, { cloneElement, Component } from 'react';
 import { connect } from 'react-redux';
 import API from 'docs/api';
+import Highlight from 'utils/Highlight';
+import './APIView.scss';
 
 @connect(state => {
   return {
@@ -12,14 +14,81 @@ class APIView extends Component {
     if (!examples || !examples.length) {return null;}
     return (
       <div className="examples">
-        <h4>Examples</h4>
-        {
-          examples.map((item, i) => {
-            return <p key={`examples-${i}`}><a href={item.url}>{item.name}</a></p>;
-          })
-        }
+        <ul className="example-list">
+          {
+            examples.map((item, i) => (
+              <li key={`example-${i}`}>
+                <div className="iframe-wrapper">
+                  <iframe
+                    className="example-iframe"
+                    src={item.url}
+                    allow-modals
+                    allow-forms
+                    allow-popups
+                    allow-scripts
+                    allow-same-origin
+                  />
+                </div>
+                <div className="code">
+                  <Highlight className="jsx">{item.code}</Highlight>
+                </div>
+              </li>
+            ))
+          }
+        </ul>
       </div>
     );
+  }
+
+  renderFormat(format) {
+    return format.join('\n');
+  }
+
+  renderPropsExamples(examples) {
+    return examples.map((entry, i) => (
+      <li key={`example-${i}`}>
+         <a href={entry.url} target="_blank">{entry.name}</a>
+      </li>
+    ));
+  }
+
+  renderProps(props) {
+    if (!props || !props.length) {return null;}
+
+    return props.map((entry, i) => {
+      return (
+        <li className="props-item" key={`props-${i}`}>
+          <p className="header">
+            <span className="title">{entry.name}</span>
+            <span className="type">{entry.type}</span>
+            {entry.isOptional ? <em className="optaional">optaional</em> : null}
+          </p>
+          <p className="desc">{entry.desc}</p>
+          {entry.defaultVal ? (
+            <p className="default">
+              <span className="title">DEFAULT:</span>
+              <span>{entry.defaultVal}</span>
+            </p>
+          ): null}
+          {entry.format && entry.format.length ? (
+            <div className="format">
+              <p className="title">Format:</p>
+              <Highlight className="jsx">
+                {this.renderFormat(entry.format)}
+              </Highlight>
+            </div>
+          ) : null}
+          {entry.examples && entry.examples.length ? (
+            <div className="examples">
+              <p className="title">Examples:</p>
+              <ul className="list">
+                {this.renderPropsExamples(entry.examples)}
+              </ul>
+            </div>
+          ) : null}
+        </li>
+      );
+    });
   }
 
   render() {
@@ -162,34 +231,12 @@ class APIView extends Component {
         <div className="content">
           <h3>{api.name}</h3>
           {api.desc && <p className="survey">{api.desc}</p>}
-          <h4>Properties</h4>
-          <table>
-            <thead>
-              <tr>
-                <th>Name</th>
-                <th>Type</th>
-                <th>Default</th>
-                <th>Description</th>
-              </tr>
-            </thead>
-            <tbody>
-              {
-                api.props.map((item, i) => {
-                  const optional = item.isOptional ? <em>optaional.</em> : '';
-
-                  return (
-                    <tr key={`api-${i}`}>
-                      <td>{item.name}</td>
-                      <td>{item.type}</td>
-                      <td>{item.defaultVal}</td>
-                      <td>{optional} <span>{item.desc}</span></td>
-                    </tr>
-                  );
-                })
-              }
-            </tbody>
-          </table>
           {this.renderExamples(api && api.examples)}
+
+          <h4 className="sub-title">Properties</h4>
+          <ul className="props-list">
+            {this.renderProps(api && api.props)}
+          </ul>
         </div>
       </div>
     );

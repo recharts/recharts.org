@@ -58,9 +58,6 @@ export default {
     }
   ],
   examples: [
-    {
-      name: 'A BarChart with Brush',
-      url: '/examples#BrushBarChart',
-    }
-  ]
+
+  ],
 };

@@ -70,13 +70,6 @@ export default {
     },
   ],
   examples: [
-    {
-      name: 'Simple RadarChart',
-      url: '/examples#SimpleRadarChart',
-    },
-    {
-      name: 'RadarChart with specified domain',
-      url: '/examples#SpecifiedDomainRadarChart',
-    },
+
   ],
 };

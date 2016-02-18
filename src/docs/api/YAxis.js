@@ -33,16 +33,16 @@ export default {
       desc: 'The height of axis which is usually calculated internally.',
     }, {
       name: 'orientation',
-      type: 'String',
+      type: '\'left\' , \'right\'',
       defaultVal: '\'left\'',
       isOptional: false,
-      desc: 'The orientation of axis, which can be \'left\', \'right\'.',
+      desc: 'The orientation of axis.',
     }, {
       name: 'type',
-      type: 'String',
+      type: '\'number\' , \'category\'',
       defaultVal: '\'number\'',
       isOptional: false,
-      desc: 'The type of axis, which can be \'number\', \'category\'.',
+      desc: 'The type of axis.',
     }, {
       name: 'tickCount',
       type: 'Number',
@@ -82,25 +82,6 @@ export default {
     },
   ],
   examples: [
-    {
-      name: 'Simple AreaChart',
-      url: '/examples#SimpleAreaChart',
-    },
-    {
-      name: 'Simple BarChart',
-      url: '/examples#SimpleBarChart',
-    },
-    {
-      name: 'Simple LineChart',
-      url: '/examples#SimpleLineChart',
-    },
-    {
-      name: 'ComposedChart of a line, a bar and a area',
-      url: '/examples#LineBarAreaComposedChart',
-    },
-    {
-      name: 'Simple ScatterChart',
-      url: '/examples#SimpleScatterChart',
-    },
+
   ]
 };

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const CustomAxisLabel = (props) => {
+const CustomAxisTick = (props) => {
   const { x, y, payload } = props;
   let path = '';
 
@@ -32,4 +32,4 @@ const CustomAxisLabel = (props) => {
   );
 };
 
-export default CustomAxisLabel;
+export default CustomAxisTick;

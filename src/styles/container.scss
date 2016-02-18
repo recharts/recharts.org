@@ -93,6 +93,7 @@ footer {
 
     > .menu {
       > li {
+        padding-left: 10px;
         line-height: 1.5;
         font-size: $font-size-lg;
 
@@ -104,7 +105,7 @@ footer {
   }
 
   > .content {
-    width: 870px;
+    width: 1000px;
     margin-top: 60px;
     margin-bottom: 60px;
     padding: 0 0 0 270px;

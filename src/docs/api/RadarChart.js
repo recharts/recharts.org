@@ -44,6 +44,13 @@ export default {
       isOptional: false,
       desc: 'The outer radius of last circle grid. If set a percentage, the final value is obtained by multiplying the percentage of maxRadius which is calculated by the width, height, cx, cy.',
     }, {
+      name: 'margin',
+      type: 'Object',
+      defaultVal: '{ top: 0, right: 0, bottom: 0, left: 0 }',
+      isOptional: false,
+      desc: 'The sizes of whitespace around the container.',
+      format: ['{ top: 5, right: 5, bottom: 5, left: 5 }'],
+    }, {
       name: 'clockWise',
       type: 'Bool',
       defaultVal: 'true',
@@ -52,13 +59,18 @@ export default {
     },
   ],
   examples: [
-    {
+{
       name: 'Simple RadarChart',
-      url: '/examples#SimpleRadarChart',
-    },
-    {
-      name: 'RadarChart with specified domain',
-      url: '/examples#SpecifiedDomainRadarChart',
+      url: '//jsfiddle.net/5q0n1cgs/embedded/result/',
+      code: `<RadarChart cx={300} cy={250} outerRadius={150} width={600} height={500} data={data}>
+  <Radar name="Mike" dataKey="A" stroke="#8884d8" fill="#8884d8" fillOpacity={0.6}/>
+  <Radar name="Lily" dataKey="B" stroke="#82ca9d" fill="#82ca9d" fillOpacity={0.6}/>
+  <PolarGrid />
+  <Legend />
+  <PolarAngleAxis dataKey="subject" />
+  <PolarRadiusAxis angle={30} domain={[0, 150]}/>
+</RadarChart>
+`,
     },
   ],
 };

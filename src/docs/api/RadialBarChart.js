@@ -4,39 +4,41 @@ export default {
     {
       name: 'width',
       type: 'Number',
-      defaultVal: 'null',
+      defaultVal: 'undefined',
       isOptional: false,
       desc: 'The width of chart container.',
     }, {
       name: 'height',
       type: 'Number',
-      defaultVal: 'null',
+      defaultVal: 'undefined',
       isOptional: false,
       desc: 'The width of chart container.',
     }, {
       name: 'data',
       type: 'Array',
-      defaultVal: 'null',
+      defaultVal: 'undefined',
       isOptional: false,
       desc: 'The source data which each element is an object.',
+      format: ['[{name: \'a\', value: 12}]'],
     }, {
       name: 'margin',
       type: 'Object',
       defaultVal: '{ top: 5, right: 5, bottom: 5, left: 5 }',
-      isOptional: true,
+      isOptional: false,
       desc: 'The sizes of whitespace around the container.',
+      format: ['{ top: 5, right: 5, bottom: 5, left: 5 }'],
     }, {
       name: 'barCategoryGap',
       type: 'Percentage| Number',
       defaultVal: '\'10%\'',
       isOptional: false,
-      desc: 'The gab betwwen two bar categorys which can be percent value and a fixed value.',
+      desc: 'The gab between two bar categorys which can be percent value and a fixed value.',
     }, {
       name: 'barGap',
       type: 'Number',
       defaultVal: 4,
       isOptional: false,
-      desc: 'The gab betwwen two bar in the same category.',
+      desc: 'The gab between two bar in the same category.',
     }, {
       name: 'cx',
       type: 'Percentage | Number',
@@ -64,7 +66,7 @@ export default {
     }, {
       name: 'barSize',
       type: 'Number',
-      defaultVal: 'null',
+      defaultVal: 'undefined',
       isOptional: true,
       desc: 'The width or height of each bar. If the barSize is not specified, the size of bar will be calculated by the barCategoryGap, barGap and the quantity of bar groups.',
     },
@@ -72,7 +74,13 @@ export default {
   examples: [
     {
       name: 'Simple RadialBarChart',
-      url: '/examples#SimpleRadialBarChart',
-    }
+      url: '//jsfiddle.net/ayktxe5t/embedded/result/',
+      code: `<RadialBarChart width={500} height={300} cx={150} cy={150} innerRadius={20} outerRadius={140} data={data}>
+  <RadialBar startAngle={90} endAngle={-270} label={label} background dataKey="pv" />
+  <Legend iconSize={10} width={120} height={140} layout="vertical" verticalAlign="middle" wrapperStyle={style} />
+  <Tooltip/>
+</RadialBarChart>
+`,
+    },
   ]
 };

@@ -3,60 +3,52 @@ export default {
   props: [
     {
       name: 'layout',
-      type: 'String',
+      type: '\'horizontal\' , \'vertical\'',
       defaultVal: '\'horizontal\'',
       isOptional: false,
-      desc: 'The layout (\'horizontal\' or \'vertical\') of area in the chart.',
+      desc: 'The layout of line in the chart.',
     }, {
       name: 'width',
       type: 'Number',
-      defaultVal: 'null',
+      defaultVal: 'undefined',
       isOptional: false,
       desc: 'The width of chart container.',
     }, {
       name: 'height',
       type: 'Number',
-      defaultVal: 'null',
+      defaultVal: 'undefined',
       isOptional: false,
       desc: 'The width of chart container.',
     }, {
       name: 'data',
       type: 'Array',
-      defaultVal: 'null',
+      defaultVal: 'undefined',
       isOptional: false,
       desc: 'The source data which each element is an object.',
+      format: ['[{name: \'a\', value: 12}]']
     }, {
       name: 'margin',
       type: 'Object',
       defaultVal: '{ top: 5, right: 5, bottom: 5, left: 5 }',
-      isOptional: true,
+      isOptional: false,
       desc: 'The sizes of whitespace around the container.',
+      format: ['{ top: 5, right: 5, bottom: 5, left: 5 }'],
     },
   ],
   examples: [
     {
       name: 'Simple LineChart',
-      url: '/examples#SimpleLineChart',
-    },
-    {
-      name: 'Tiny LineChart',
-      url: '/examples#TinyLineChart',
-    },
-    {
-      name: 'Vertical LineChart',
-      url: '/examples#VerticalLineChart',
-    },
-    {
-      name: 'LineChart with two number axes',
-      url: '/examples#BiaxialLineChart',
-    },
-    {
-      name: 'LineChart with customized dot',
-      url: '/examples#CustomizedDotLineChart',
-    },
-    {
-      name: 'LineChart with customized label and x-axis label',
-      url: '/examples#CustomizedLabelLineChart',
+      url: '//jsfiddle.net/f9r65cc9/embedded/result/',
+      code: `<LineChart width={600} height={300} data={data}
+      margin={{top: 5, right: 30, left: 20, bottom: 5}}>
+ <XAxis dataKey="name"/>
+ <YAxis/>
+ <CartesianGrid strokeDasharray="3 3"/>
+ <Tooltip/>
+ <Legend />
+ <Line type="monotone" dataKey="pv" stroke="#8884d8" />
+ <Line type="monotone" dataKey="uv" stroke="#82ca9d" />
+</LineChart>`
     },
   ]
 };

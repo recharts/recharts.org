@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Highlight from 'utils/Highlight';
-import CustomAxisLabel from './CustomAxisLabel';
+import CustomAxisTick from './CustomAxisTick';
 import { LineChart, Line, XAxis, YAxis, Tooltip, CartesianGrid } from 'recharts';
 
 const data = [{name: 'Page A', uv: 400, pv: 2400, amt: 2400},
@@ -108,7 +108,7 @@ const GettingStarted = () => {
           `<LineChart width={600} height={300} data={data} margin={{top: 5, right: 20, bottom: 5, left: 0}}>
   <Line type="monotone" dataKey="uv" stroke="#8884d8"/>
   <CartesianGrid stroke="#ccc" strokeDasharray="5 5"/>
-  <XAxis dataKey="name" label={<CustomAxisLabel/>}/>
+  <XAxis dataKey="name" tick={<CustomAxisTick/>}/>
   <YAxis/>
   <Tooltip/>
 </LineChart>`
@@ -118,7 +118,7 @@ const GettingStarted = () => {
         <LineChart width={600} height={300} data={data} margin={{top: 20, right: 20, bottom: 5, left: 0}}>
           <Line type="monotone" dataKey="uv" stroke="#8884d8"/>
           <CartesianGrid stroke="#ccc" strokeDasharray="5 5"/>
-          <XAxis dataKey="name" label={<CustomAxisLabel/>}/>
+          <XAxis dataKey="name" tick={<CustomAxisTick/>}/>
           <YAxis width={40}/>
           <Tooltip/>
         </LineChart>

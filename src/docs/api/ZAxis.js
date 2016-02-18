@@ -34,13 +34,6 @@ export default {
     },
   ],
   examples: [
-    {
-      name: 'ScatterChart of three-dimensional data',
-      url: '/examples#ThreeDimScatterChart',
-    },
-    {
-      name: 'Joint all the points in ScatterChart',
-      url: '/examples#JointLineScatterChart',
-    },
+
   ]
 };

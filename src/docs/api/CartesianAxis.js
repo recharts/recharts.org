@@ -27,10 +27,10 @@ export default {
       desc: 'The height of axis.',
     }, {
       name: 'orientation',
-      type: 'String',
+      type: '\'top\', \'bottom\', \'left\' or \'right\'',
       defaultVal: '\'bottom\'',
       isOptional: false,
-      desc: 'The orientation of axis, which can be \'top\', \'bottom\', \'left\' or \'right\'.',
+      desc: 'The orientation of axis.',
     }, {
       name: 'viewBox',
       type: 'Object',
@@ -50,7 +50,7 @@ export default {
       isOptional: false,
       desc: 'If set false, no axis tick lines will be drawed. If set a object, the option is the configuration of tick lines.',
     }, {
-      name: 'minLabelGap',
+      name: 'minTickGap',
       type: 'Number',
       defaultVal: '5',
       isOptional: false,
@@ -68,25 +68,20 @@ export default {
       isOptional: false,
       desc: 'If set auto, the labels which is to be showed or hided will be calculated autoly.',
     }, {
-      name: 'label',
+      name: 'tick',
       type: 'Boolean | Object | ReactElement',
       defaultVal: 'null',
       isOptional: true,
-      desc: 'If set false, no labels will be drawed. If set a object, the option is the configuration of labels. If set a React element, the option is the custom react element of drawing labels.',
+      desc: 'If set false, no ticks will be drawed. If set a object, the option is the configuration of ticks. If set a React element, the option is the custom react element of drawing ticks.',
+    }, {
+      name: 'label',
+      type: 'String | Number | ReactElement',
+      defaultVal: 'null',
+      isOptional: true,
+      desc: 'If set a string or a number, default label will be drawed, and the option is content. If set a React element, the option is the custom react element of drawing label.',
     },
   ],
   examples: [
-    {
-      name: 'Simple AreaChart',
-      url: '/examples#SimpleAreaChart',
-    },
-    {
-      name: 'Simple ScatterChart',
-      url: '/examples#SimpleScatterChart',
-    },
-    {
-      name: 'LineChart with customized label and x-axis label',
-      url: '/examples#CustomizedLabelLineChart',
-    },
+
   ]
 };
