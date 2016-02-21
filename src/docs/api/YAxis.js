@@ -86,7 +86,7 @@ export default {
       isOptional: true,
       desc: 'If set false, no ticks will be drawed. If set a object, the option is the configuration of ticks. If set a React element, the option is the custom react element of drawing ticks.',
       format: [
-        `<YAxis tick={fasle}/>`,
+        `<YAxis tick={false}/>`,
         `<YAxis tick={{stroke: 'red', strokeWidth: 2}}/>`,
         `<YAxis tick={<CustomizedTick/>}/>`,
       ],
