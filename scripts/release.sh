@@ -27,3 +27,7 @@ git commit -am "build"
 git push origin gh-pages
 
 git checkout master
+
+git pull --rebse origin master
+
+git push origin master
