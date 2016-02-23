@@ -16,6 +16,7 @@ import XAxis from './XAxis';
 import YAxis from './YAxis';
 import ZAxis from './ZAxis';
 import ReferenceLine from './ReferenceLine';
+import ReferenceDot from './ReferenceDot';
 import Brush from './Brush';
 import CartesianAxis from './CartesianAxis';
 import CartesianGrid from './CartesianGrid';
@@ -72,6 +73,7 @@ export default {
   PolarGrid,
   PolarRadiusAxis,
   ReferenceLine,
+  ReferenceDot,
 
   Cross,
   Curve,

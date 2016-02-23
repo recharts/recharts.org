@@ -14,17 +14,27 @@ export default {
       isOptional: false,
       desc: 'The id of y-axis which is corresponding to the data.',
     }, {
-      name: 'type',
-      type: '\'horizontal\', \'vertical\'',
-      defaultVal: 'null',
-      isOptional: false,
-      desc: 'The type of line. If set \'horizontal\', the reference line is parallel to x-axis. If set \'vertical\', the reference line is parallel to y-axis.',
-    }, {
-      name: 'value',
+      name: 'x',
       type: 'Number | String',
       defaultVal: 'null',
+      isOptional: true,
+      desc: 'If set a string or a number, a vertical line perpendicular to the x-axis specified by xAxisId will be drawn. If the specified x-axis is a number axis, the type of x must be Number. If the specified x-axis is a category axis, the value of x must be one of the categorys, otherwise no line will be drawn.',
+    }, {
+      name: 'y',
+      type: 'Number | String',
+      defaultVal: 'null',
+      isOptional: true,
+      desc: 'If set a string or a number, a horizontal line perpendicular to the y-axis specified by yAxisId will be drawn. If the specified y-axis is a number axis, the type of y must be Number. If the specified y-axis is a category axis, the value of y must be one of the categorys, otherwise no line will be drawn.',
+    }, {
+      name: 'alwaysShow',
+      type: 'Boolean',
+      defaultVal: 'false',
       isOptional: false,
-      desc: 'The value which displayed by the line. If the type of line is \'horizontal\', the option must be consistent with corresponding y-axis. If the type of line is \'vertical\', the option must be consistent with corresponding x-axis.',
+      desc: 'If the corresponding axis is a number axis and this option is set true, the value of reference line will be take into account when calculate the domain of corresponding axis, so that the reference line will always show.',
+      examples: [{
+        name: 'A LineChart with alwaysShow ReferenceLine',
+        url: '//jsfiddle.net/9shwdgtq/'
+      }],
     }, {
       name: 'viewBox',
       type: 'Object',
@@ -62,16 +72,16 @@ export default {
   examples: [
     {
       name: 'A AreaChart with ReferenceLines',
-      url: '//jsfiddle.net/ukLgfra1/embedded/result/',
+      url: '//jsfiddle.net/9eovm97f/embedded/result/',
       code: `<AreaChart width={300} height={200} data={data}
   margin={{top: 10, right: 30, left: 0, bottom: 0}}>
   <XAxis dataKey="name"/>
   <YAxis/>
   <CartesianGrid strokeDasharray="3 3"/>
   <Tooltip/>
-  <ReferenceLine type="vertical" value="Page C" stroke="green" label="Min PAGE"/>
-  <ReferenceLine type="horizontal" value={4000} label="Max" stroke="red" strokeDasharray="3 3"/>
-  <Area type='monotone' dataKey='uv' stroke='#8884d8' fill='#8884d8' />
+  <ReferenceLine x="Page C" stroke="green" label="Min PAGE"/>
+  <ReferenceLine y={4000} label="Max" stroke="red" strokeDasharray="3 3"/>
+  <Area type="monotone" dataKey="uv" stroke="#8884d8" fill="#8884d8" />
 </AreaChart>
 `,
     },
