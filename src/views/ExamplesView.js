@@ -1,15 +1,14 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { routeActions } from 'react-router-redux';
 import Examples from 'docs/examples';
 
 const firstChartName = Object.keys(Examples)[0];
 
-@connect(state => {
+@connect((state, ownProps) => {
   return {
-    page: state.routing.location.hash ? state.routing.location.hash.slice(1) : firstChartName,
+    page: ownProps.location.hash ? ownProps.location.hash.slice(1) : firstChartName,
   };
-}, { push: routeActions.push })
+})
 class ExamplesView extends Component {
   renderMenuList(type) {
     const { page } = this.props;

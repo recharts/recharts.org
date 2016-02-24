@@ -4,9 +4,9 @@ import API from 'docs/api';
 import Highlight from 'utils/Highlight';
 import './APIView.scss';
 
-@connect(state => {
+@connect((state, ownProps) => {
   return {
-    page: state.routing.location.hash ? state.routing.location.hash.slice(1) : 'AreaChart',
+    page: ownProps.location.hash ? ownProps.location.hash.slice(1) : 'AreaChart',
   };
 })
 class APIView extends Component {

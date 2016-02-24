@@ -1,6 +1,6 @@
 import { createStore, combineReducers, compose, applyMiddleware } from 'redux';
 import { persistState } from 'redux-devtools';
-import { syncHistory, routeReducer } from 'react-router-redux';
+import { routerMiddleware, routerReducer } from 'react-router-redux';
 import rootReducer from './reducers';
 import DevTools from '../containers/DevTools';
 
@@ -10,7 +10,7 @@ function getDebugSessionKey() {
 }
 
 export default function configureStore(history) {
-  const reduxRouterMiddleware = syncHistory(history);
+  const reduxRouterMiddleware = routerMiddleware(history);
 
   const finalCreateStore = compose(
     applyMiddleware(reduxRouterMiddleware),
@@ -19,11 +19,10 @@ export default function configureStore(history) {
   )(createStore);
 
   const reducer = combineReducers(Object.assign({}, rootReducer, {
-    routing: routeReducer,
+    routing: routerReducer,
   }));
 
   const store = finalCreateStore(reducer);
-  reduxRouterMiddleware.listenForReplays(store);
 
   if (module.hot) {
     module.hot.accept('./reducers', () =>

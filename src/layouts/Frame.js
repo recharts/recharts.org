@@ -1,18 +1,17 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
-import { routeActions } from 'react-router-redux';
+import { push } from 'react-router-redux';
 import 'styles/app.scss';
 
-@connect(state => {
+@connect((state, ownProps) => {
   return {
-    page: state.routing.location.pathname.split('/').filter(item => !!item)[0] || 'index',
+    page: ownProps.location.pathname.split('/').filter(item => !!item)[0] || 'index',
   };
-}, { push: routeActions.push })
+}, { push })
 class Frame extends Component {
   static propTypes = {
     page: PropTypes.string,
     children: PropTypes.node,
-    routeActions: PropTypes.func,
   };
 
   handleNavRoute(route, e) {
