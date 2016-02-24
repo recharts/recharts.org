@@ -12,7 +12,6 @@ export default function configureStore(history) {
   }));
 
   const store = finalCreateStore(reducer);
-  reduxRouterMiddleware.listenForReplays(store);
 
   return store;
 }
