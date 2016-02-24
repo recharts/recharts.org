@@ -38,7 +38,7 @@ export default {
       isOptional: false,
       desc: 'If false set, dots will not be drawed. If true set, dots will be drawed which have the props calculated internally. If object set, dots will be drawed which have the props mergered by the internal calculated props and the option. If ReactElement set, the option can be the custom dot element.',
       format: [
-        `<Line dataKey="value" dot={fasle}/>`,
+        `<Line dataKey="value" dot={false}/>`,
         `<Line dataKey="value" dot={{stroke: 'red', strokeWidth: 2}}/>`,
         `<Line dataKey="value" dot={<CustomizedDot/>}/>`,
       ],
@@ -92,6 +92,30 @@ export default {
       defaultVal: 'null',
       isOptional: true,
       desc: 'The name of data.',
+    }, {
+      name: 'isAnimationActive',
+      type: 'Boolean',
+      defaultVal: 'true',
+      isOptional: false,
+      desc: 'If set false, animation of line will be disabled.',
+    }, {
+      name: 'animationBegin',
+      type: 'Number',
+      defaultVal: 0,
+      isOptional: false,
+      desc: 'Defines when the animation should begin.',
+    }, {
+      name: 'animationDuration',
+      type: 'Number',
+      defaultVal: 1500,
+      isOptional: false,
+      desc: 'Specifies the duration of animation, the unit of this option is ms.',
+    }, {
+      name: 'animationEasing',
+      type: `'ease', 'ease-in', 'ease-out', 'ease-in-out', 'linear'`,
+      defaultVal: `'ease'`,
+      isOptional: false,
+      desc: 'The type of easing function.',
     },
   ],
   examples: [

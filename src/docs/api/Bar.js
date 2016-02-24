@@ -105,6 +105,30 @@ export default {
       defaultVal: 'undefined',
       isOptional: true,
       desc: 'The name of data.',
+    }, {
+      name: 'isAnimationActive',
+      type: 'Boolean',
+      defaultVal: 'true',
+      isOptional: false,
+      desc: 'If set false, animation of line will be disabled.',
+    }, {
+      name: 'animationBegin',
+      type: 'Number',
+      defaultVal: 0,
+      isOptional: false,
+      desc: 'Defines when the animation should begin.',
+    }, {
+      name: 'animationDuration',
+      type: 'Number',
+      defaultVal: 1500,
+      isOptional: false,
+      desc: 'Specifies the duration of animation, the unit of this option is ms.',
+    }, {
+      name: 'animationEasing',
+      type: `'ease', 'ease-in', 'ease-out', 'ease-in-out', 'linear'`,
+      defaultVal: `'ease'`,
+      isOptional: false,
+      desc: 'The type of easing function.',
     },
   ],
   examples: [

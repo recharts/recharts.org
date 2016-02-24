@@ -179,6 +179,9 @@ class APIView extends Component {
             <li>
               <a href="/api#ReferenceLine" className={page === 'ReferenceLine' ? 'active' : ''}>ReferenceLine</a>
             </li>
+            <li>
+              <a href="/api#ReferenceDot" className={page === 'ReferenceDot' ? 'active' : ''}>ReferenceDot</a>
+            </li>
           </ul>
 
           <h4>Polar Components</h4>

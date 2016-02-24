@@ -5,7 +5,7 @@ export default {
   BiaxialLineChart: '//jsfiddle.net/ragrbruL/embedded/result,js,css,html,resources/',
   CustomizedDotLineChart: '//jsfiddle.net/p0zwLx5z/embedded/result,js,css,html,resources/',
   CustomizedLabelLineChart: '//jsfiddle.net/344uh0ax/embedded/result,js,css,html,resources/',
-  LineChartWithReferenceLines: '//jsfiddle.net/njnqef9y/embedded/result,js,css,html,resources/',
+  LineChartWithReferenceLines: '//jsfiddle.net/njnqef9y/1/embedded/result,js,css,html,resources/',
   DashedLineChart: '//jsfiddle.net/tqar2v5x/embedded/result,js,css,html,resources/',
 
   SimpleAreaChart: '//jsfiddle.net/5p61t9qp/embedded/result,js,css,html,resources/',
@@ -17,8 +17,8 @@ export default {
   StackedBarChart: '//jsfiddle.net/kca9npkg/embedded/result,js,css,html,resources/',
   MixBarChart: '//jsfiddle.net/1uh85zxe/embedded/result,js,css,html,resources/',
   CustomShapeBarChart: '//jsfiddle.net/amjvtcqz/embedded/result,js,css,html,resources/',
-  PositiveAndNegativeBarChart: '//jsfiddle.net/grgdaw75/embedded/result,js,css,html,resources/',
-  BrushBarChart: '//jsfiddle.net/xtdssj96/embedded/result,js,css,html,resources/',
+  PositiveAndNegativeBarChart: '//jsfiddle.net/grgdaw75/1/embedded/result,js,css,html,resources/',
+  BrushBarChart: '//jsfiddle.net/xtdssj96/1/embedded/result,js,css,html,resources/',
 
   LineBarAreaComposedChart: '//jsfiddle.net/vfnmdp53/embedded/result,js,css,html,resources/',
   VerticalComposedChart: '//jsfiddle.net/t4t5rx16/embedded/result,js,css,html,resources/',
