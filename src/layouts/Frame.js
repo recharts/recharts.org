@@ -1,6 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import { push } from 'react-router-redux';
+import Link from 'utils/Link';
 import 'styles/app.scss';
 
 @connect((state, ownProps) => {
@@ -14,41 +15,43 @@ class Frame extends Component {
     children: PropTypes.node,
   };
 
-  handleNavRoute(route, e) {
-    e.preventDefault();
-
-    const { push } = this.props;
-
-    push(route);
-  }
-
   render() {
-    const { page, children } = this.props;
+    const { push, page, children } = this.props;
 
     return (
       <div className="container">
         <header>
           <div className="header-wrapper">
             <h1 className="logo">
-              <a href="/" className="nav-logo" onClick={this.handleNavRoute.bind(this, '/')}>&lt;Recharts /&gt;</a>
+              <Link
+                className="nav-logo"
+                route={() => push("/")}>&lt;Recharts /&gt;</Link>
             </h1>
             <nav>
               <ul className="nav" id="nav">
                 <li>
-                  <a href="/guide" className={'nav-link ' + (page === 'guide' ? 'active' : '')}
-                    onClick={this.handleNavRoute.bind(this, '/guide')}>Guide</a>
+                  <Link
+                    className="nav-link"
+                    activeCondition={page === 'guide'}
+                    route={() => push("/guide")}>Guide</Link>
                 </li>
                 <li>
-                  <a href="/api" className={'nav-link ' + (page === 'api' ? 'active' : '')}
-                    onClick={this.handleNavRoute.bind(this, '/api')}>API</a>
+                  <Link
+                    className="nav-link"
+                    activeCondition={page === 'api'}
+                    route={() => push("/api")}>API</Link>
                 </li>
                 <li>
-                  <a href="/examples" className={'nav-link ' + (page === 'examples' ? 'active' : '')}
-                    onClick={this.handleNavRoute.bind(this, '/examples')}>Examples</a>
+                  <Link
+                    className="nav-link"
+                    activeCondition={page === 'examples'}
+                    route={() => push("/examples")}>Examples</Link>
                 </li>
                 <li>
-                  <a href="/blog" className={'nav-link ' + (page === 'blog' ? 'active' : '')}
-                    onClick={this.handleNavRoute.bind(this, '/blog')}>Blog</a>
+                  <Link
+                    className="nav-link"
+                    activeCondition={page === 'blog'}
+                    route={() => push("/blog")}>Blog</Link>
                 </li>
                 <li>
                   <a href="https://github.com/recharts/recharts"
