@@ -1,5 +1,6 @@
 export default {
   name: 'Legend',
+  examples: [],
   props: [
     {
       name: 'width',
@@ -82,7 +83,4 @@ export default {
       }],
     },
   ],
-  examples: [
-
-  ]
 };

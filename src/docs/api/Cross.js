@@ -1,5 +1,6 @@
 export default {
   name: 'Cross',
+  examples: [],
   props: [
     {
       name: 'x',
@@ -57,6 +58,4 @@ export default {
       desc: 'The function will be called when mouse click the area.'
     },
   ],
-  examples: [
-  ]
 };

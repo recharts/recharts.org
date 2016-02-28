@@ -1,5 +1,6 @@
 export default {
   name: 'Brush',
+  examples: [],
   props: [
     {
       name: 'x',
@@ -56,8 +57,5 @@ export default {
       isOptional: true,
       desc: 'The handler of changing the active scope of brush.',
     }
-  ],
-  examples: [
-
   ],
 };

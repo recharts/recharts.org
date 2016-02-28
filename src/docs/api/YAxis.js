@@ -1,5 +1,6 @@
 export default {
   name: 'YAxis',
+  examples: [],
   props: [
     {
       name: 'hide',
@@ -113,7 +114,4 @@ export default {
       ],
     },
   ],
-  examples: [
-
-  ]
 };

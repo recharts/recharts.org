@@ -1,5 +1,6 @@
 export default {
   name: 'CartesianAxis',
+  examples: [],
   props: [
     {
       name: 'x',
@@ -85,7 +86,4 @@ export default {
       desc: 'If set a string or a number, default label will be drawed, and the option is content. If set a React element, the option is the custom react element of drawing label.',
     },
   ],
-  examples: [
-
-  ]
 };

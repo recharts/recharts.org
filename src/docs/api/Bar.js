@@ -1,5 +1,6 @@
 export default {
   name: 'Bar',
+  examples: [],
   props: [
     {
       name: 'layout',
@@ -131,7 +132,4 @@ export default {
       desc: 'The type of easing function.',
     },
   ],
-  examples: [
-
-  ]
 };

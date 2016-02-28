@@ -1,5 +1,6 @@
 export default {
   name: 'Dot',
+  examples: [],
   props: [
     {
       name: 'cx',
@@ -21,6 +22,4 @@ export default {
       desc: 'The radius of dot.',
     },
   ],
-  examples: [
-  ]
 };

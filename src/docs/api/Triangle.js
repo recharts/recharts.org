@@ -1,5 +1,6 @@
 export default {
   name: 'Triangle',
+  examples: [],
   props: [
     {
       name: 'points',
@@ -27,6 +28,4 @@ export default {
       desc: 'The function will be called when mouse click the area.'
     },
   ],
-  examples: [
-  ]
 };

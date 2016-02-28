@@ -1,5 +1,6 @@
 export default {
   name: 'CartesianGrid',
+  examples: [],
   props: [
     {
       name: 'x',
@@ -51,7 +52,4 @@ export default {
       desc: 'The x-coordinates of all vertical lines.',
     },
   ],
-  examples: [
-
-  ]
 };

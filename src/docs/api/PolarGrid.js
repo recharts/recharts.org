@@ -1,5 +1,6 @@
 export default {
   name: 'PolarGrid',
+  examples: [],
   props: [
     {
       name: 'cx',
@@ -50,8 +51,5 @@ export default {
       isOptional: false,
       desc: 'The type of polar grids.',
     },
-  ],
-  examples: [
-
   ],
 };

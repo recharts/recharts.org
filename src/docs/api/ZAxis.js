@@ -1,5 +1,6 @@
 export default {
   name: 'ZAxis',
+  examples: [],
   props: [
     {
       name: 'dataKey',
@@ -33,7 +34,4 @@ export default {
       desc: 'The name of data displayed in the axis.',
     },
   ],
-  examples: [
-
-  ]
 };

@@ -1,8 +1,6 @@
 export default {
   name: 'Area',
-  examples: [
-
-  ],
+  examples: [],
   props: [
     {
       name: 'type',

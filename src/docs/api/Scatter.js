@@ -1,5 +1,6 @@
 export default {
   name: 'Scatter',
+  examples: [],
   props: [
     {
       name: 'legendType',
@@ -55,7 +56,4 @@ export default {
       format: [`[{cx: 12, cy: 12, r: 4, payload: {x: 12, y: 45, z: 9}}]`],
     },
   ],
-  examples: [
-
-  ]
 };

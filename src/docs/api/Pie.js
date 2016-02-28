@@ -1,5 +1,6 @@
 export default {
   name: 'Pie',
+  examples: [],
   props: [
     {
       name: 'cx',
@@ -99,6 +100,4 @@ export default {
       desc: 'The type of easing function or a customized ease function.',
     },
   ],
-  examples: [
-  ]
 };

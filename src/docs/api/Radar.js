@@ -1,5 +1,6 @@
 export default {
   name: 'Radar',
+  examples: [],
   props: [
     {
       name: 'dataKey',
@@ -32,7 +33,5 @@ export default {
       isOptional: false,
       desc: 'If false set, labels will not be drawed. If true set, labels will be drawed which have the props calculated internally. If object set, labels will be drawed which have the props mergered by the internal calculated props and the option. If ReactElement set, the option can be the custom label element.',
     },
-  ],
-  examples: [
   ],
 };

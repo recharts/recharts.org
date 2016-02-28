@@ -1,5 +1,6 @@
 export default {
   name: 'Tooltip',
+  examples: [],
   props: [
     {
       name: 'separator',
@@ -108,7 +109,4 @@ export default {
       desc: 'The formatter function of value in tooltip.',
     },
   ],
-  examples: [
-
-  ]
 };

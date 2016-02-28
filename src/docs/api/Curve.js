@@ -1,5 +1,6 @@
 export default {
   name: 'Curve',
+  examples: [],
   props: [
     {
       name: 'type',
@@ -45,6 +46,4 @@ export default {
       desc: 'The function will be called when mouse click the area.'
     },
   ],
-  examples: [
-  ]
 };

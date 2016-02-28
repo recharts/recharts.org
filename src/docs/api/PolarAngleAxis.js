@@ -1,5 +1,6 @@
 export default {
   name: 'PolarAngleAxis',
+  examples: [],
   props: [
     {
       name: 'dataKey',
@@ -68,8 +69,5 @@ export default {
       isOptional: false,
       desc: 'The function to formatting tick.',
     },
-  ],
-  examples: [
-
   ],
 };

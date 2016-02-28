@@ -20,15 +20,7 @@ class APIView extends Component {
             examples.map((item, i) => (
               <li key={`example-${i}`}>
                 <div className="iframe-wrapper">
-                  <iframe
-                    className="example-iframe"
-                    src={item.url}
-                    allow-modals
-                    allow-forms
-                    allow-popups
-                    allow-scripts
-                    allow-same-origin
-                  />
+                  {item.demo()}
                 </div>
                 <div className="code">
                   <Highlight className="jsx">{item.code}</Highlight>

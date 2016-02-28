@@ -1,5 +1,6 @@
 export default {
   name: 'Line',
+  examples: [],
   props: [
     {
       name: 'type',
@@ -118,6 +119,4 @@ export default {
       desc: 'The type of easing function.',
     },
   ],
-  examples: [
-  ]
 };
