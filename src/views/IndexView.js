@@ -28,7 +28,7 @@ class IndexView extends Component {
         <div className="desc">
           <p className="title">Recharts = React + Charts</p>
           <p className="subtitle">Re-designed charting library built with React</p>
-          <p><a href="/guide#installation" className="button install-btn">Install v0.8.0</a></p>
+          <p><a href="/guide#installation" className="button install-btn">Install v0.8.3</a></p>
         </div>
         <div className="examples">
           <div className="ex-code">
