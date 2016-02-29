@@ -28,6 +28,6 @@ git push origin gh-pages
 
 git checkout master
 
-git pull --rebse origin master
+git pull --rebase origin master
 
 git push origin master
