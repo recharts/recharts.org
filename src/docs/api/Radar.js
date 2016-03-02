@@ -32,6 +32,30 @@ export default {
       defaultVal: 'true',
       isOptional: false,
       desc: 'If false set, labels will not be drawed. If true set, labels will be drawed which have the props calculated internally. If object set, labels will be drawed which have the props mergered by the internal calculated props and the option. If ReactElement set, the option can be the custom label element.',
+    }, {
+      name: 'isAnimationActive',
+      type: 'Boolean',
+      defaultVal: 'true',
+      isOptional: false,
+      desc: 'If set false, animation of polygon will be disabled.',
+    }, {
+      name: 'animationBegin',
+      type: 'Number',
+      defaultVal: 0,
+      isOptional: false,
+      desc: 'Defines when the animation should begin.',
+    }, {
+      name: 'animationDuration',
+      type: 'Number',
+      defaultVal: 1500,
+      isOptional: false,
+      desc: 'Specifies the duration of animation, the unit of this option is ms.',
+    }, {
+      name: 'animationEasing',
+      type: `'ease', 'ease-in', 'ease-out', 'ease-in-out', 'linear'`,
+      defaultVal: `'ease'`,
+      isOptional: false,
+      desc: 'The type of easing function.',
     },
   ],
 };

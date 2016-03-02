@@ -107,6 +107,12 @@ export default {
       defaultVal: 'null',
       isOptional: true,
       desc: 'The formatter function of value in tooltip.',
+    }, {
+      name: 'labelFormatter',
+      type: 'Function',
+      defaultVal: 'null',
+      isOptional: true,
+      desc: 'The formatter function of label in tooltip.',
     },
   ],
 };

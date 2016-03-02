@@ -24,6 +24,7 @@ import CartesianGrid from './CartesianGrid';
 import ResponsiveContainer from './ResponsiveContainer';
 import Legend from './Legend';
 import Tooltip from './Tooltip';
+import Cell from './Cell';
 
 import Pie from './Pie';
 import Radar from './Radar';
@@ -65,6 +66,7 @@ export default {
   ResponsiveContainer,
   Legend,
   Tooltip,
+  Cell,
 
   Pie,
   RadialBar,

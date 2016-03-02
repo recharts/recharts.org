@@ -111,7 +111,7 @@ export default {
       type: 'Boolean',
       defaultVal: 'true',
       isOptional: false,
-      desc: 'If set false, animation of line will be disabled.',
+      desc: 'If set false, animation of bar will be disabled.',
     }, {
       name: 'animationBegin',
       type: 'Number',

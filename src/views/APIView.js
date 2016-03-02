@@ -134,6 +134,9 @@ class APIView extends Component {
             <li>
               <a href="/api#Tooltip" className={page === 'Tooltip' ? 'active' : ''}>Tooltip</a>
             </li>
+            <li>
+              <a href="/api#Cell" className={page === 'Cell' ? 'active' : ''}>Cell</a>
+            </li>
           </ul>
 
           <h4>Cartesian Components</h4>

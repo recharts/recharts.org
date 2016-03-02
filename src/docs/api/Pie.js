@@ -69,6 +69,12 @@ export default {
       isOptional: false,
       desc: 'If false set, labels will not be drawed. If true set, labels will be drawed which have the props calculated internally. If object set, labels will be drawed which have the props mergered by the internal calculated props and the option. If ReactElement set, the option can be the custom label element.',
     }, {
+      name: 'labelLine',
+      type: 'Boolean | Object | ReactElement',
+      defaultVal: 'false',
+      isOptional: false,
+      desc: 'If false set, label lines will not be drawed. If true set, label lines will be drawed which have the props calculated internally. If object set, label lines will be drawed which have the props mergered by the internal calculated props and the option. If ReactElement set, the option can be the custom label line element.',
+    }, {
       name: 'data',
       type: 'Array',
       defaultVal: 'null',

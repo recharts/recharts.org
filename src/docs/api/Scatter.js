@@ -54,6 +54,30 @@ export default {
       isOptional: false,
       desc: 'The coordinates of all the scatters.',
       format: [`[{cx: 12, cy: 12, r: 4, payload: {x: 12, y: 45, z: 9}}]`],
+    }, {
+      name: 'isAnimationActive',
+      type: 'Boolean',
+      defaultVal: 'true',
+      isOptional: false,
+      desc: 'If set false, animation of scatters will be disabled.',
+    }, {
+      name: 'animationBegin',
+      type: 'Number',
+      defaultVal: 0,
+      isOptional: false,
+      desc: 'Defines when the animation should begin.',
+    }, {
+      name: 'animationDuration',
+      type: 'Number',
+      defaultVal: 1500,
+      isOptional: false,
+      desc: 'Specifies the duration of animation, the unit of this option is ms.',
+    }, {
+      name: 'animationEasing',
+      type: `'ease', 'ease-in', 'ease-out', 'ease-in-out', 'linear'`,
+      defaultVal: `'ease'`,
+      isOptional: false,
+      desc: 'The type of easing function.',
     },
   ],
 };
