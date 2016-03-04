@@ -2,11 +2,9 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Installation, GettingStarted, Customize } from 'components/GuideView';
 
-@connect((state, ownProps) => {
-  return {
-    page: ownProps.location.hash ? ownProps.location.hash.slice(1) : 'installation',
-  };
-})
+@connect((state, ownProps) => ({
+  page: ownProps.location.hash ? ownProps.location.hash.slice(1) : 'installation',
+}))
 class GuideView extends Component {
   renderGuide() {
     const { page } = this.props;

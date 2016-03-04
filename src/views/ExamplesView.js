@@ -1,15 +1,17 @@
-import React, { Component } from 'react';
+import React, { PropTypes, Component } from 'react';
 import { connect } from 'react-redux';
 import Examples from 'docs/examples';
 
 const firstChartName = Object.keys(Examples)[0];
 
-@connect((state, ownProps) => {
-  return {
-    page: ownProps.location.hash ? ownProps.location.hash.slice(1) : firstChartName,
-  };
-})
+@connect((state, ownProps) => ({
+  page: ownProps.location.hash ? ownProps.location.hash.slice(1) : firstChartName,
+}))
 class ExamplesView extends Component {
+  static propTypes = {
+    page: PropTypes.string,
+  };
+
   renderMenuList(type) {
     const { page } = this.props;
     const typeNameList = Object.keys(Examples).filter(name => {
@@ -19,13 +21,11 @@ class ExamplesView extends Component {
       return name.indexOf(type) >= 0;
     });
 
-    const items = typeNameList.map(name => {
-      return (
-        <li key={name}>
-          <a href={`/examples#${name}`} className={page === name ? 'active' : ''}>{name}</a>
-        </li>
-      );
-    });
+    const items = typeNameList.map(name => (
+      <li key={name}>
+        <a href={`/examples#${name}`} className={page === name ? 'active' : ''}>{name}</a>
+      </li>
+    ));
 
     return <ul className="menu">{items}</ul>;
   }
@@ -75,7 +75,14 @@ class ExamplesView extends Component {
         </div>
         <div className="content">
           <h3>{page}</h3>
-          <iframe src={examples} allow-modals allow-forms allow-popups allow-scripts allow-same-origin>
+          <iframe
+            src={examples}
+            allow-modals
+            allow-forms
+            allow-popups
+            allow-scripts
+            allow-same-origin
+          >
           </iframe>
         </div>
       </div>

@@ -23,10 +23,10 @@ class Link extends Component {
   }
 
   render() {
-    const { activeCondition, activeClassName, ...props } = this.props
+    const { activeCondition, activeClassName, ...props } = this.props;
 
     if (activeCondition) {
-      props.className += props.className === '' ? activeClassName : ` ${activeClassName}`
+      props.className += props.className === '' ? activeClassName : ` ${activeClassName}`;
     }
 
     return (

@@ -1,15 +1,17 @@
-import React, { cloneElement, Component } from 'react';
+import React, { PropTypes, cloneElement, Component } from 'react';
 import { connect } from 'react-redux';
 import API from 'docs/api';
 import Highlight from 'utils/Highlight';
 import './APIView.scss';
 
-@connect((state, ownProps) => {
-  return {
-    page: ownProps.location.hash ? ownProps.location.hash.slice(1) : 'AreaChart',
-  };
-})
+@connect((state, ownProps) => ({
+  page: ownProps.location.hash ? ownProps.location.hash.slice(1) : 'AreaChart',
+}))
 class APIView extends Component {
+  static propTypes = {
+    page: PropTypes.string,
+  };
+
   renderExamples(examples) {
     if (!examples || !examples.length) { return null; }
 
@@ -48,44 +50,42 @@ class APIView extends Component {
   renderProps(props) {
     if (!props || !props.length) {return null;}
 
-    return props.map((entry, i) => {
-      return (
-        <li className="props-item" key={`props-${i}`}>
-          <p className="header">
-            <span className="title">{entry.name}</span>
-            <span className="type">{entry.type}</span>
-            {entry.isOptional ? <em className="optaional">optaional</em> : null}
+    return props.map((entry, i) => (
+      <li className="props-item" key={`props-${i}`}>
+        <p className="header">
+          <span className="title">{entry.name}</span>
+          <span className="type">{entry.type}</span>
+          {entry.isOptional ? <em className="optaional">optaional</em> : null}
+        </p>
+        <p className="desc">{entry.desc}</p>
+        {entry.defaultVal ? (
+          <p className="default">
+            <span className="title">DEFAULT:</span>
+            <span>{entry.defaultVal}</span>
           </p>
-          <p className="desc">{entry.desc}</p>
-          {entry.defaultVal ? (
-            <p className="default">
-              <span className="title">DEFAULT:</span>
-              <span>{entry.defaultVal}</span>
-            </p>
-          ): null}
-          {entry.format && entry.format.length ? (
-            <div className="format">
-              <p className="title">Format:</p>
-              <Highlight className="jsx">
-                {this.renderFormat(entry.format)}
-              </Highlight>
-            </div>
-          ) : null}
-          {entry.examples && entry.examples.length ? (
-            <div className="examples">
-              <p className="title">Examples:</p>
-              <ul className="list">
-                {this.renderPropsExamples(entry.examples)}
-              </ul>
-            </div>
-          ) : null}
-        </li>
-      );
-    });
+        ) : null}
+        {entry.format && entry.format.length ? (
+          <div className="format">
+            <p className="title">Format:</p>
+            <Highlight className="jsx">
+              {this.renderFormat(entry.format)}
+            </Highlight>
+          </div>
+        ) : null}
+        {entry.examples && entry.examples.length ? (
+          <div className="examples">
+            <p className="title">Examples:</p>
+            <ul className="list">
+              {this.renderPropsExamples(entry.examples)}
+            </ul>
+          </div>
+        ) : null}
+      </li>
+    ));
   }
 
   render() {
-    const { children, page } = this.props;
+    const { page } = this.props;
     const api = API[page];
 
     return (

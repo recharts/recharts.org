@@ -8,7 +8,7 @@ export default {
       defaultVal: '\'linear\'',
       isOptional: false,
       desc: 'The interpolation type of area.',
-      examples: []
+      examples: [],
     }, {
       name: 'dataKey',
       type: 'String | Number',

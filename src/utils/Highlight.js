@@ -1,8 +1,14 @@
-import React, { Component } from 'react';
+import React, { PropTypes, Component } from 'react';
 import ReactDOM from 'react-dom';
 import hljs from 'highlight.js';
 
 class Highlight extends Component {
+  static propTypes = {
+    innerHTML: PropTypes.bool,
+    className: PropTypes.string,
+    children: PropTypes.node,
+  };
+
   static defaultProps = {
     innerHTML: false,
     className: null,

@@ -1,7 +1,6 @@
 import React from 'react';
 
-const CustomAxisTick = (props) => {
-  const { x, y, payload } = props;
+const CustomAxisTick = ({ x, y, payload }) => {
   let path = '';
 
   switch (payload.value) {
@@ -27,7 +26,7 @@ const CustomAxisTick = (props) => {
 
   return (
     <svg x={x - 12} y={y + 4} width={24} height={24} viewBox="0 0 1024 1024" fill="#666">
-      <path d={path}/>
+      <path d={path} />
     </svg>
   );
 };
