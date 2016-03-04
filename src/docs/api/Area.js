@@ -40,9 +40,9 @@ export default {
       isOptional: false,
       desc: 'If false set, dots will not be drawed. If true set, dots will be drawed which have the props calculated internally. If object set, dots will be drawed which have the props mergered by the internal calculated props and the option. If ReactElement set, the option can be the custom dot element.',
       format: [
-        `<Area dataKey="value" dot={false}/>`,
-        `<Area dataKey="value" dot={{stroke: 'red', strokeWidth: 2}}/>`,
-        `<Area dataKey="value" dot={<CustomizedDot/>}/>`,
+        `<Area dataKey="value" dot={false} />`,
+        `<Area dataKey="value" dot={{ stroke: 'red', strokeWidth: 2 }} />`,
+        `<Area dataKey="value" dot={<CustomizedDot />} />`,
       ],
     }, {
       name: 'label',
@@ -51,9 +51,9 @@ export default {
       isOptional: false,
       desc: 'If false set, labels will not be drawed. If true set, labels will be drawed which have the props calculated internally. If object set, labels will be drawed which have the props mergered by the internal calculated props and the option. If ReactElement set, the option can be the custom label element.',
       format: [
-        `<Area dataKey="value" label/>`,
-        `<Area dataKey="value" label={{fill: 'red', fontSize: 20}}/>`,
-        `<Area dataKey="value" label={<CustomizedLabel/>}/>`,
+        `<Area dataKey="value" label />`,
+        `<Area dataKey="value" label={{ fill: 'red', fontSize: 20 }} />`,
+        `<Area dataKey="value" label={<CustomizedLabel />} />`,
       ],
     }, {
       name: 'curve',
@@ -74,8 +74,8 @@ export default {
       isOptional: false,
       desc: 'The value which can describle the line, usually calculated internally.',
       format: [
-        `<Area dataKey="value" baseLine={8}/>`,
-        `<Area dataKey="value" baseLine={[{x: 12, y: 15}]}/>`,
+        `<Area dataKey="value" baseLine={8} />`,
+        `<Area dataKey="value" baseLine={[{ x: 12, y: 15 }]} />`,
       ],
     }, {
       name: 'points',
@@ -83,7 +83,7 @@ export default {
       defaultVal: 'undefined',
       isOptional: false,
       desc: 'The coordinates of all the points in the area, usually calculated internally.',
-      format: [`[{x: 12, y: 12, value: 240}]`],
+      format: [`[{ x: 12, y: 12, value: 240 }]`],
     }, {
       name: 'stackId',
       type: 'String | Number',
@@ -92,10 +92,10 @@ export default {
       desc: 'The stack id of area, when two areas have the same value axis and same stackId, then the two areas area stacked in order.',
       format: [
         `<AreaChart data={data} width={400} height={300}>
-  <Area stackId="pv" dataKey="pv01"/>
-  <Area stackId="pv" dataKey="pv02"/>
-  <Area stackId="uv" dataKey="uv01"/>
-  <Area stackId="uv" dataKey="uv02"/>
+  <Area stackId="pv" dataKey="pv01" />
+  <Area stackId="pv" dataKey="pv02" />
+  <Area stackId="uv" dataKey="uv01" />
+  <Area stackId="uv" dataKey="uv02" />
 </AreaChart>
 `
       ],

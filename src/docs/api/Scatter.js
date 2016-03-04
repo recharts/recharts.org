@@ -33,9 +33,9 @@ export default {
       isOptional: false,
       desc: 'If false set, line will not be drawed. If true set, line will be drawed which have the props calculated internally. If object set, line will be drawed which have the props mergered by the internal calculated props and the option. If ReactElement set, the option can be the custom line element.',
       format: [
-        `<Scatter data={data} line/>`,
-        `<Scatter data={data} line={{stroke: 'red', strokeWidth: 2}}/>`,
-        `<Scatter data={data} line={<CustomizedLine/>}/>`,
+        `<Scatter data={data} line />`,
+        `<Scatter data={data} line={{stroke: 'red', strokeWidth: 2}} />`,
+        `<Scatter data={data} line={<CustomizedLine/>} />`,
       ],
       examples: [{
         name: 'A scatter chart with joint line',
@@ -53,7 +53,7 @@ export default {
       defaultVal: 'null',
       isOptional: false,
       desc: 'The coordinates of all the scatters.',
-      format: [`[{cx: 12, cy: 12, r: 4, payload: {x: 12, y: 45, z: 9}}]`],
+      format: [`[{ cx: 12, cy: 12, r: 4, payload: {x: 12, y: 45, z: 9 }}]`],
     }, {
       name: 'isAnimationActive',
       type: 'Boolean',

@@ -1,5 +1,6 @@
 export default {
   name: 'RadialBar',
+  examples: [],
   props: [
     {
       name: 'cx',
@@ -87,7 +88,4 @@ export default {
       desc: 'The type of easing function.',
     },
   ],
-  examples: [
-
-  ]
 };

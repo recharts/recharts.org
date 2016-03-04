@@ -30,10 +30,10 @@ export default {
       demo: example,
       code: `<AreaChart width={730} height={250} data={data}
   margin={{top: 10, right: 30, left: 0, bottom: 0}}>
-  <XAxis dataKey="name"/>
-  <YAxis/>
-  <CartesianGrid strokeDasharray="3 3"/>
-  <Tooltip/>
+  <XAxis dataKey="name" />
+  <YAxis />
+  <CartesianGrid strokeDasharray="3 3" />
+  <Tooltip />
   <Area type='monotone' dataKey='uv' stroke='#8884d8' fill='#8884d8' />
 </AreaChart>
 `,
@@ -64,7 +64,7 @@ export default {
       defaultVal: 'null',
       isOptional: false,
       desc: 'The source data which each element is an object.',
-      format: ['[{name: \'a\', value: 12}]']
+      format: ['[{ name: \'a\', value: 12 }]']
     }, {
       name: 'margin',
       type: 'Object',

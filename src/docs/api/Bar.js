@@ -39,9 +39,9 @@ export default {
       isOptional: false,
       desc: 'If false set, labels will not be drawed. If true set, labels will be drawed which have the props calculated internally. If object set, labels will be drawed which have the props mergered by the internal calculated props and the option. If ReactElement set, the option can be the custom label element.',
       format: [
-        `<Bar dataKey="value" label/>`,
-        `<Bar dataKey="value" label={{fill: 'red', fontSize: 20}}/>`,
-        `<Bar dataKey="value" label={<CustomizedLabel/>}/>`,
+        `<Bar dataKey="value" label />`,
+        `<Bar dataKey="value" label={{ fill: 'red', fontSize: 20 }} />`,
+        `<Bar dataKey="value" label={<CustomizedLabel />} />`,
       ],
     }, {
       name: 'data',
@@ -79,13 +79,12 @@ export default {
       isOptional: true,
       desc: 'The stack id of bar, when two bars have the same value axis and same stackId, then the two bars are stacked in order.',
       format: [
-  `<BarChart data={data} width={400} height={300}>
-  <Bar stackId="pv" dataKey="pv01"/>
-  <Bar stackId="pv" dataKey="pv02"/>
-  <Bar stackId="uv" dataKey="uv01"/>
-  <Bar stackId="uv" dataKey="uv02"/>
-</BarChart>
-`
+`<BarChart data={data} width={400} height={300}>
+  <Bar stackId="pv" dataKey="pv01" />
+  <Bar stackId="pv" dataKey="pv02" />
+  <Bar stackId="uv" dataKey="uv01" />
+  <Bar stackId="uv" dataKey="uv02" />
+</BarChart>`
       ],
       examples: [{
         name: 'A stacked bar chart',

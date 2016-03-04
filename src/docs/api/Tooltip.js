@@ -51,9 +51,9 @@ export default {
       isOptional: false,
       desc: 'If set false, no cursor will be drawed when tooltip is active. If set a object, the option is the configuration of cursor. If set a React element, the option is the custom react element of drawing cursor.',
       format: [
-        `<Tooltip cursor={false}/>`,
-        `<Tooltip cursor={{stroke: 'red', strokeWidth: 2}}/>`,
-        `<Tooltip cursor={<CustomizedCursor/>}/>`,
+        `<Tooltip cursor={false} />`,
+        `<Tooltip cursor={{ stroke: 'red', strokeWidth: 2 }} />`,
+        `<Tooltip cursor={<CustomizedCursor />} />`,
       ],
     }, {
       name: 'viewBox',
@@ -61,7 +61,7 @@ export default {
       defaultVal: 'null',
       isOptional: false,
       desc: 'The box of viewing area, which has the shape of {x: someVal, y: someVal, width: someVal, height: someVal}, usually calculated internally.',
-      format: [`{x: 0, y: 0, width: 400, height: 400}`],
+      format: [`{ x: 0, y: 0, width: 400, height: 400 }`],
     }, {
       name: 'active',
       type: 'Boolean',
@@ -74,14 +74,14 @@ export default {
       defaultVal: '{ x: 0, y: 0 }',
       isOptional: false,
       desc: 'The coordinate of tooltip position, usually calculated internally.',
-      format: [`{x: 100, y: 140}`],
+      format: [`{ x: 100, y: 140 }`],
     }, {
       name: 'payload',
       type: 'Array',
       defaultVal: '[]',
       isOptional: false,
       desc: 'The source data of the content to be displayed in the tooltip, usually calculated internally.',
-      format: [`[{name: '05-01', value: 12, unit: 'kg'}]`],
+      format: [`[{ name: '05-01', value: 12, unit: 'kg' }]`],
     }, {
       name: 'label',
       type: 'String | Number',
@@ -94,7 +94,7 @@ export default {
       defaultVal: 'null',
       isOptional: true,
       desc: 'If set a React element, the option is the custom react element of rendering tooltip.',
-      format: [`<Tooltip content={<CustomizedTooltip external={external} />}/>`],
+      format: [`<Tooltip content={<CustomizedTooltip external={external} />} />`],
       examples: [
         {
           name: 'Customize tooltip content',

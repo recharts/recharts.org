@@ -44,7 +44,7 @@ export default {
       defaultVal: '[]',
       isOptional: false,
       desc: 'The source data of the content to be displayed in the legend, usually calculated internally.',
-      format: ['[{value: \'item name\', type: \'line\', id: \'ID01\'}]'],
+      format: ['[{ value: \'item name\', type: \'line\', id: \'ID01\' }]'],
     }, {
       name: 'chartWidth',
       type: 'Number',
@@ -63,14 +63,14 @@ export default {
       defaultVal: 'null',
       isOptional: true,
       desc: 'The margin of chart container, usually calculated internally.',
-      format: [`{top: 0, left: 0, right: 0, bottom: 0}`],
+      format: [`{ top: 0, left: 0, right: 0, bottom: 0 }`],
     }, {
       name: 'content',
       type: 'ReactElement',
       defaultVal: 'null',
       isOptional: true,
       desc: 'If set a React element, the option is the custom react element of rendering tooltip.',
-      format: [`<Legend content={<CustomizedLegend external={external} />}/>`],
+      format: [`<Legend content={<CustomizedLegend external={external} />} />`],
     }, {
       name: 'wrapperStyle',
       type: 'Object',

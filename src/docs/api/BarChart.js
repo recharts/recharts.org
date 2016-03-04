@@ -13,10 +13,10 @@ const data = [
 
 const example = () => (
   <BarChart width={730} height={250} data={data}>
-    <XAxis dataKey="name"/>
-    <YAxis/>
-    <CartesianGrid strokeDasharray="3 3"/>
-    <Tooltip/>
+    <XAxis dataKey="name" />
+    <YAxis />
+    <CartesianGrid strokeDasharray="3 3" />
+    <Tooltip />
     <Legend />
     <Bar dataKey="pv" fill="#8884d8" />
     <Bar dataKey="uv" fill="#82ca9d" />
@@ -65,7 +65,7 @@ export default {
       defaultVal: 'undefined',
       isOptional: false,
       desc: 'The source data which each element is an object.',
-      format: ['[{name: \'a\', value: 12}]']
+      format: ['[{ name: \'a\', value: 12 }]']
     }, {
       name: 'margin',
       type: 'Object',
