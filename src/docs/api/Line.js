@@ -34,14 +34,15 @@ export default {
       desc: 'The type of icon in legend.',
     }, {
       name: 'dot',
-      type: 'Boolean | Object | ReactElement',
+      type: 'Boolean | Object | ReactElement | Function',
       defaultVal: 'false',
       isOptional: false,
-      desc: 'If false set, dots will not be drawed. If true set, dots will be drawed which have the props calculated internally. If object set, dots will be drawed which have the props mergered by the internal calculated props and the option. If ReactElement set, the option can be the custom dot element.',
+      desc: 'If false set, dots will not be drawed. If true set, dots will be drawed which have the props calculated internally. If object set, dots will be drawed which have the props mergered by the internal calculated props and the option. If ReactElement set, the option can be the custom dot element.If set a function, the function will be called to render customized dot.',
       format: [
         `<Line dataKey="value" dot={false} />`,
         `<Line dataKey="value" dot={{ stroke: 'red', strokeWidth: 2 }} />`,
         `<Line dataKey="value" dot={<CustomizedDot />} />`,
+        `<Line dataKey="value" dot={renderDot} />`,
       ],
       examples: [{
         name: 'A line chart with customized dot',
@@ -49,14 +50,15 @@ export default {
       }],
     }, {
       name: 'label',
-      type: 'Boolean | Object | ReactElement',
+      type: 'Boolean | Object | ReactElement | Function',
       defaultVal: 'false',
       isOptional: false,
-      desc: 'If false set, labels will not be drawed. If true set, labels will be drawed which have the props calculated internally. If object set, labels will be drawed which have the props mergered by the internal calculated props and the option. If ReactElement set, the option can be the custom label element.',
+      desc: 'If false set, labels will not be drawed. If true set, labels will be drawed which have the props calculated internally. If object set, labels will be drawed which have the props mergered by the internal calculated props and the option. If ReactElement set, the option can be the custom label element. If set a function, the function will be called to render customized label.',
       format: [
         `<Line dataKey="value" label />`,
         `<Line dataKey="value" label={{ fill: 'red', fontSize: 20 }} />`,
         `<Line dataKey="value" label={<CustomizedLabel />} />`,
+        `<Line dataKey="value" label={renderLabel} />`,
       ],
       examples: [{
         name: 'A line chart with customized label',

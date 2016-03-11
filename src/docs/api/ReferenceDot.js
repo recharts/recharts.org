@@ -93,13 +93,14 @@ export default {
       desc: 'The configurations of all the y-axes in the chart, usually calculated internally.',
     }, {
       name: 'label',
-      type: 'String | Number | ReactElement',
+      type: 'String | Number | ReactElement | Function',
       defaultVal: 'null',
       isOptional: true,
-      desc: 'If set a string or a number, default label will be drawed, and the option is content. If set a React element, the option is the custom react element of drawing label.',
+      desc: 'If set a string or a number, default label will be drawed, and the option is content. If set a React element, the option is the custom react element of drawing label. If set a function, the function will be called to render customized dot.',
       format: [
         `<ReferenceDot x="a" y={400} label="MAX"/>`,
         `<ReferenceDot x="a" y={400} label={<CustomizedLabel />}/>`,
+        `<ReferenceDot x="a" y={400} label={renderLabel}/>`,
       ],
     },
   ],

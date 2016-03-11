@@ -35,25 +35,27 @@ export default {
       desc: 'The type of icon in legend.',
     }, {
       name: 'dot',
-      type: 'Boolean | Object | ReactElement',
+      type: 'Boolean | Object | ReactElement | Function',
       defaultVal: 'false',
       isOptional: false,
-      desc: 'If false set, dots will not be drawed. If true set, dots will be drawed which have the props calculated internally. If object set, dots will be drawed which have the props mergered by the internal calculated props and the option. If ReactElement set, the option can be the custom dot element.',
+      desc: 'If false set, dots will not be drawed. If true set, dots will be drawed which have the props calculated internally. If object set, dots will be drawed which have the props mergered by the internal calculated props and the option. If ReactElement set, the option can be the custom dot element. If set a function, the function will be called to render customized dot.',
       format: [
         `<Area dataKey="value" dot={false} />`,
         `<Area dataKey="value" dot={{ stroke: 'red', strokeWidth: 2 }} />`,
         `<Area dataKey="value" dot={<CustomizedDot />} />`,
+        `<Area dataKey="value" dot={renderDot}/>`,
       ],
     }, {
       name: 'label',
-      type: 'Boolean | Object | ReactElement',
+      type: 'Boolean | Object | ReactElement | Function',
       defaultVal: 'false',
       isOptional: false,
-      desc: 'If false set, labels will not be drawed. If true set, labels will be drawed which have the props calculated internally. If object set, labels will be drawed which have the props mergered by the internal calculated props and the option. If ReactElement set, the option can be the custom label element.',
+      desc: 'If false set, labels will not be drawed. If true set, labels will be drawed which have the props calculated internally. If object set, labels will be drawed which have the props mergered by the internal calculated props and the option. If ReactElement set, the option can be the custom label element. If set a function, the function will be called to render customized label.',
       format: [
         `<Area dataKey="value" label />`,
         `<Area dataKey="value" label={{ fill: 'red', fontSize: 20 }} />`,
         `<Area dataKey="value" label={<CustomizedLabel />} />`,
+        `<Area dataKey="value" label={renderLabel} />`,
       ],
     }, {
       name: 'curve',

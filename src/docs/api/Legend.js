@@ -66,11 +66,28 @@ export default {
       format: [`{ top: 0, left: 0, right: 0, bottom: 0 }`],
     }, {
       name: 'content',
-      type: 'ReactElement',
+      type: 'ReactElement | Function',
       defaultVal: 'null',
       isOptional: true,
-      desc: 'If set a React element, the option is the custom react element of rendering tooltip.',
-      format: [`<Legend content={<CustomizedLegend external={external} />} />`],
+      desc: 'If set a React element, the option is the custom react element of rendering tooltip. If set a function, the function will be called to render tooltip content.',
+      format: [
+        `<Legend content={<CustomizedLegend external={external} />} />`,
+        `
+const renderLegend = (props) => {
+  const { payload } = props;
+
+  return (
+    <ul>
+      {
+        payload.map((entry, index) => (
+          <li key={\`item-\$\{index\}\`}>{entry.value}</li>
+        ))
+      }
+    </ul>
+  );
+}
+<Legend content={renderLegend} />`
+      ],
     }, {
       name: 'wrapperStyle',
       type: 'Object',

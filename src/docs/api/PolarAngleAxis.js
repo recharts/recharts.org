@@ -46,10 +46,10 @@ export default {
       desc: 'If false set, tick lines will not be drawed. If true set, tick lines will be drawed which have the props calculated internally. If object set, tick lines will be drawed which have the props mergered by the internal calculated props and the option.',
     }, {
       name: 'tick',
-      type: 'Bool | Object | Element',
+      type: 'Bool | Object | ReactElement | Function',
       defaultVal: 'true',
       isOptional: false,
-      desc: 'If false set, ticks will not be drawed. If true set, ticks will be drawed which have the props calculated internally. If object set, ticks will be drawed which have the props mergered by the internal calculated props and the option. If ReactElement set, the option can be the custom tick element.',
+      desc: 'If false set, ticks will not be drawed. If true set, ticks will be drawed which have the props calculated internally. If object set, ticks will be drawed which have the props mergered by the internal calculated props and the option. If ReactElement set, the option can be the custom tick element. If set a function, the function will be called to render customized ticks.',
     }, {
       name: 'ticks',
       type: 'Array',

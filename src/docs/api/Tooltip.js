@@ -90,11 +90,14 @@ export default {
       desc: 'The label value which is active now, usually calculated internally.',
     }, {
       name: 'content',
-      type: 'ReactElement',
+      type: 'ReactElement | Function',
       defaultVal: 'null',
       isOptional: true,
-      desc: 'If set a React element, the option is the custom react element of rendering tooltip.',
-      format: [`<Tooltip content={<CustomizedTooltip external={external} />} />`],
+      desc: 'If set a React element, the option is the custom react element of rendering tooltip.  If set a function, the function will be called to render tooltip content.',
+      format: [
+        `<Tooltip content={<CustomizedTooltip external={external} />} />`,
+        `<Tooltip content={renderTooltip} />`,
+      ],
       examples: [
         {
           name: 'Customize tooltip content',

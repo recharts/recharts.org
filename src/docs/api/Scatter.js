@@ -28,10 +28,10 @@ export default {
       desc: 'The id of z-axis which is corresponding to the data.',
     }, {
       name: 'line',
-      type: 'Boolean | Object | ReactElement',
+      type: 'Boolean | Object | ReactElement | Function',
       defaultVal: 'false',
       isOptional: false,
-      desc: 'If false set, line will not be drawed. If true set, line will be drawed which have the props calculated internally. If object set, line will be drawed which have the props mergered by the internal calculated props and the option. If ReactElement set, the option can be the custom line element.',
+      desc: 'If false set, line will not be drawed. If true set, line will be drawed which have the props calculated internally. If object set, line will be drawed which have the props mergered by the internal calculated props and the option. If ReactElement set, the option can be the custom line element. If set a function, the function will be called to render Customized line.',
       format: [
         `<Scatter data={data} line />`,
         `<Scatter data={data} line={{stroke: 'red', strokeWidth: 2}} />`,

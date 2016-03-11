@@ -64,16 +64,16 @@ export default {
       desc: 'The type of icon in legend, which can be \'line\', \'scatter\', \'square\', \'rect\'.',
     }, {
       name: 'label',
-      type: 'Boolean | Object | ReactElement',
+      type: 'Boolean | Object | ReactElement | Function',
       defaultVal: 'false',
       isOptional: false,
-      desc: 'If false set, labels will not be drawed. If true set, labels will be drawed which have the props calculated internally. If object set, labels will be drawed which have the props mergered by the internal calculated props and the option. If ReactElement set, the option can be the custom label element.',
+      desc: 'If false set, labels will not be drawed. If true set, labels will be drawed which have the props calculated internally. If object set, labels will be drawed which have the props mergered by the internal calculated props and the option. If ReactElement set, the option can be the custom label element. If set a function, the function will be called to render customized label.',
     }, {
       name: 'labelLine',
-      type: 'Boolean | Object | ReactElement',
+      type: 'Boolean | Object | ReactElement | Function',
       defaultVal: 'false',
       isOptional: false,
-      desc: 'If false set, label lines will not be drawed. If true set, label lines will be drawed which have the props calculated internally. If object set, label lines will be drawed which have the props mergered by the internal calculated props and the option. If ReactElement set, the option can be the custom label line element.',
+      desc: 'If false set, label lines will not be drawed. If true set, label lines will be drawed which have the props calculated internally. If object set, label lines will be drawed which have the props mergered by the internal calculated props and the option. If ReactElement set, the option can be the custom label line element. If set a function, the function will be called to render customized label line.',
     }, {
       name: 'data',
       type: 'Array',

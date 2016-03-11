@@ -70,20 +70,20 @@ export default {
       desc: 'If set auto, the labels which is to be showed or hided will be calculated autoly.',
     }, {
       name: 'tick',
-      type: 'Boolean | Object | ReactElement',
+      type: 'Boolean | Object | ReactElement | Function',
       defaultVal: 'null',
       isOptional: true,
-      desc: 'If set false, no ticks will be drawed. If set a object, the option is the configuration of ticks. If set a React element, the option is the custom react element of drawing ticks.',
+      desc: 'If set false, no ticks will be drawed. If set a object, the option is the configuration of ticks. If set a React element, the option is the custom react element of drawing ticks. If set a function, the function will be called to render customized tick.',
       examples: [{
         name: 'A line chart with customized x-axis tick',
         url: '/examples#CustomizedLabelLineChart',
       }],
     }, {
       name: 'label',
-      type: 'String | Number | ReactElement',
+      type: 'String | Number | ReactElement | Function',
       defaultVal: 'null',
       isOptional: true,
-      desc: 'If set a string or a number, default label will be drawed, and the option is content. If set a React element, the option is the custom react element of drawing label.',
+      desc: 'If set a string or a number, default label will be drawed, and the option is content. If set a React element, the option is the custom react element of drawing label. If set a function, the function will be called to render customized label.',
     },
   ],
 };

@@ -34,10 +34,10 @@ export default {
       desc: 'The type of icon in legend, which can be \'line\', \'scatter\', \'square\', \'rect\'.',
     }, {
       name: 'label',
-      type: 'Boolean | Object | ReactElement',
+      type: 'Boolean | Object | ReactElement | Function',
       defaultVal: 'false',
       isOptional: false,
-      desc: 'If false set, labels will not be drawed. If true set, labels will be drawed which have the props calculated internally. If object set, labels will be drawed which have the props mergered by the internal calculated props and the option. If ReactElement set, the option can be the custom label element.',
+      desc: 'If false set, labels will not be drawed. If true set, labels will be drawed which have the props calculated internally. If object set, labels will be drawed which have the props mergered by the internal calculated props and the option. If ReactElement set, the option can be the custom label element. If set a function, the function will be called to render customized label.',
       format: [
         `<Bar dataKey="value" label />`,
         `<Bar dataKey="value" label={{ fill: 'red', fontSize: 20 }} />`,
@@ -63,11 +63,14 @@ export default {
       desc: 'The width or height of each bar. If the barSize is not specified, the size of bar will be caculated by the barCategoryGap, barGap and the quantity of bar groups.'
     }, {
       name: 'shape',
-      type: 'ReactElement',
+      type: 'ReactElement | Function',
       defaultVal: 'undefined',
       isOptional: true,
-      desc: 'If set a ReactElement, the shape of bar can be customized.',
-      format: [`<Bar dataKey="value" shape={<CustomizedShape/>}/>`],
+      desc: 'If set a ReactElement, the shape of bar can be customized. If set a function, the function will be called to render customized shape.',
+      format: [
+        `<Bar dataKey="value" shape={<CustomizedShape/>}/>`,
+        `<Bar dataKey="value" shape={renderShape}/>`,
+      ],
       examples: [{
         name: 'A bar chart with customized shape',
         url: 'examples#CustomShapeBarChart',

@@ -16,22 +16,22 @@ export default {
       desc: 'The coordinates of all the vertexes of the radar shape, like { x, y }.',
     }, {
       name: 'shape',
-      type: 'Element',
+      type: 'Element | Function',
       defaultVal: 'null',
       isOptional: false,
-      desc: 'The custom shape element.',
+      desc: 'The custom shape element. If set a function, the function will be called to render customized shape.',
     }, {
       name: 'dot',
-      type: 'Bool | Object | Element',
+      type: 'Bool | Object | Element | Function',
       defaultVal: 'true',
       isOptional: false,
-      desc: 'If false set, dots will not be drawed. If true set, dots will be drawed which have the props calculated internally. If object set, dots will be drawed which have the props mergered by the internal calculated props and the option. If ReactElement set, the option can be the custom dot element.',
+      desc: 'If false set, dots will not be drawed. If true set, dots will be drawed which have the props calculated internally. If object set, dots will be drawed which have the props mergered by the internal calculated props and the option. If ReactElement set, the option can be the custom dot element. If set a function, the function will be called to render customized dot.',
     }, {
       name: 'label',
-      type: 'Bool | Object | Element',
+      type: 'Bool | Object | Element | Function',
       defaultVal: 'true',
       isOptional: false,
-      desc: 'If false set, labels will not be drawed. If true set, labels will be drawed which have the props calculated internally. If object set, labels will be drawed which have the props mergered by the internal calculated props and the option. If ReactElement set, the option can be the custom label element.',
+      desc: 'If false set, labels will not be drawed. If true set, labels will be drawed which have the props calculated internally. If object set, labels will be drawed which have the props mergered by the internal calculated props and the option. If ReactElement set, the option can be the custom label element. If set a function, the function will be called to render customized label.',
     }, {
       name: 'isAnimationActive',
       type: 'Boolean',
