@@ -13,19 +13,19 @@ export default {
       type: 'Function',
       defaultVal: 'null',
       isOptional: true,
-      desc: 'The function will be called when mouse enter the area.'
+      desc: 'The function will be called when mouse enter the area.',
     }, {
       name: 'onMouseLeave',
       type: 'Function',
       defaultVal: 'null',
       isOptional: true,
-      desc: 'The function will be called when mouse leave the area.'
+      desc: 'The function will be called when mouse leave the area.',
     }, {
       name: 'onClick',
       type: 'Function',
       defaultVal: 'null',
       isOptional: true,
-      desc: 'The function will be called when mouse click the area.'
+      desc: 'The function will be called when mouse click the area.',
     },
   ],
 };

@@ -131,7 +131,7 @@ const data = [
       { name: 'OperatorSwitch', size: 2581 },
       { name: 'SortOperator', size: 2023 },
     ],
-  }
+  },
 ];
 
 const example = () => (
@@ -140,7 +140,7 @@ const example = () => (
     height={250}
     data={data}
     dataKey="size"
-    ratio={4/3}
+    ratio={4 / 3}
     stroke="#fff"
     fill="#8884d8"
   />
@@ -148,10 +148,10 @@ const example = () => (
 
 export default {
   name: 'Treemap',
-  examples: [{
-      name: 'Simple Treemap',
-      demo: example,
-      code: `<Treemap
+    examples: [{
+    name: 'Simple Treemap',
+    demo: example,
+    code: `<Treemap
   width={730}
   height={250}
   data={data}

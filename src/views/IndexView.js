@@ -2,15 +2,19 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { LineChart, Line, XAxis, YAxis, Tooltip, CartesianGrid } from 'recharts';
 import Highlight from 'utils/Highlight';
+import pureRender from 'pure-render-decorator';
 import './IndexView.scss';
 
-const data = [{ name: 'A', uv: 400, pv: 240, amt: 2400 },
-              { name: 'B', uv: 300, pv: 456, amt: 2400 },
-              { name: 'C', uv: 300, pv: 139, amt: 2400 },
-              { name: 'D', uv: 200, pv: 980, amt: 2400 },
-              { name: 'E', uv: 278, pv: 390, amt: 2400 },
-              { name: 'F', uv: 189, pv: 480, amt: 2400 }];
+const data = [
+  { name: 'A', uv: 400, pv: 240, amt: 2400 },
+  { name: 'B', uv: 300, pv: 456, amt: 2400 },
+  { name: 'C', uv: 300, pv: 139, amt: 2400 },
+  { name: 'D', uv: 200, pv: 980, amt: 2400 },
+  { name: 'E', uv: 278, pv: 390, amt: 2400 },
+  { name: 'F', uv: 189, pv: 480, amt: 2400 },
+];
 
+@pureRender
 class IndexView extends Component {
   render() {
     const exCode = `

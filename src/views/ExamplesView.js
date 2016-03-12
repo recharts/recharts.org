@@ -1,9 +1,11 @@
 import React, { PropTypes, Component } from 'react';
 import { connect } from 'react-redux';
+import pureRender from 'pure-render-decorator';
 import Examples from 'docs/examples';
 
 const firstChartName = Object.keys(Examples)[0];
 
+@pureRender
 @connect((state, ownProps) => ({
   page: ownProps.location.hash ? ownProps.location.hash.slice(1) : firstChartName,
 }))

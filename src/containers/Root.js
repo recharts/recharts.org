@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
+import React, { PropTypes } from 'react';
 import { Provider } from 'react-redux';
 import { Router } from 'react-router';
 import DevTools from './DevTools';
 
-const Root = ({ store, history, routes }) => {
+function Root({ store, history, routes }) {
   return (
     <Provider store={store}>
       {
@@ -20,6 +20,6 @@ const Root = ({ store, history, routes }) => {
       }
     </Provider>
   );
-};
+}
 
 export default Root;

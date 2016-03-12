@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import pureRender from 'pure-render-decorator';
 import './BlogView.scss';
 
+@pureRender
 class BlogView extends Component {
   render() {
     return (

@@ -6,15 +6,16 @@ import CustomAxisTick from './CustomAxisTick';
 import TriangleBar from './TriangleBar';
 import CustomTooltip from './CustomTooltip';
 
-const data = [{name: 'Page A', uv: 400, pv: 2400, amt: 2400},
-              {name: 'Page B', uv: 300, pv: 4567, amt: 2400},
-              {name: 'Page C', uv: 300, pv: 1398, amt: 2400},
-              {name: 'Page D', uv: 200, pv: 9800, amt: 2400},
-              {name: 'Page E', uv: 278, pv: 3908, amt: 2400},
-              {name: 'Page F', uv: 189, pv: 4800, amt: 2400}];
+const data = [
+  { name: 'Page A', uv: 400, pv: 2400, amt: 2400 },
+  { name: 'Page B', uv: 300, pv: 4567, amt: 2400 },
+  { name: 'Page C', uv: 300, pv: 1398, amt: 2400 },
+  { name: 'Page D', uv: 200, pv: 9800, amt: 2400 },
+  { name: 'Page E', uv: 278, pv: 3908, amt: 2400 },
+  { name: 'Page F', uv: 189, pv: 4800, amt: 2400 },
+];
 
-
-const Customize = () => {
+function Customize() {
   return (
     <div className="mod-customize" id="Customize">
       <h3>Customize</h3>
@@ -25,8 +26,8 @@ const Customize = () => {
         <Highlight className="jsx">
         {
           `<BarChart width={600} height={300} data={data}>
-  <XAxis dataKey="name" tick={<CustomAxisTick/>}/>
-  <YAxis/>
+  <XAxis dataKey="name" tick={<CustomAxisTick />} />
+  <YAxis />
   <Bar type="monotone" dataKey="uv" barSize={30} fill="#8884d8"
     label={<CustomBarLabel />}/>
 </BarChart>`
@@ -34,9 +35,9 @@ const Customize = () => {
         </Highlight>
 
         <BarChart width={600} height={300} data={data}>
-          <XAxis dataKey="name" tick={<CustomAxisTick/>}/>
-          <YAxis/>
-          <Bar type="monotone" dataKey="uv" barSize={30} fill="#8884d8" label={<CustomBarLabel />}/>
+          <XAxis dataKey="name" tick={<CustomAxisTick />} />
+          <YAxis />
+          <Bar type="monotone" dataKey="uv" barSize={30} fill="#8884d8" label={<CustomBarLabel />} />
         </BarChart>
       </div>
 
@@ -46,18 +47,18 @@ const Customize = () => {
         <Highlight className="jsx">
         {
           `<BarChart width={600} height={300} data={data}>
-  <XAxis dataKey="name" tick={<CustomAxisTick/>}/>
-  <YAxis/>
+  <XAxis dataKey="name" tick={<CustomAxisTick />} />
+  <YAxis />
   <Bar type="monotone" dataKey="uv" fill="#8884d8"
-    shape={<TriangleBar />}/>
+    shape={<TriangleBar />} />
 </BarChart>`
         }
         </Highlight>
 
         <BarChart width={600} height={300} data={data}>
-          <XAxis dataKey="name" tick={<CustomAxisTick/>}/>
-          <YAxis/>
-          <Bar type="monotone" dataKey="uv" fill="#8884d8" shape={<TriangleBar />}/>
+          <XAxis dataKey="name" tick={<CustomAxisTick />} />
+          <YAxis />
+          <Bar type="monotone" dataKey="uv" fill="#8884d8" shape={<TriangleBar />} />
         </BarChart>
       </div>
 
@@ -67,20 +68,20 @@ const Customize = () => {
         <Highlight className="jsx">
         {
           `<BarChart width={600} height={300} data={data}>
-  <XAxis dataKey="name" tick={<CustomAxisTick/>}/>
-  <YAxis/>
+  <XAxis dataKey="name" tick={<CustomAxisTick />} />
+  <YAxis />
   <Tooltip content={<CustomTooltip />}/>
   <Bar type="monotone" dataKey="uv" fill="#8884d8"
-    shape={<TriangleBar />}/>
+    shape={<TriangleBar />} />
 </BarChart>`
         }
         </Highlight>
 
         <BarChart width={600} height={300} data={data}>
-          <XAxis dataKey="name" tick={<CustomAxisTick/>}/>
-          <YAxis/>
-          <Tooltip content={<CustomTooltip />}/>
-          <Bar type="monotone" dataKey="uv" fill="#8884d8" shape={<TriangleBar />}/>
+          <XAxis dataKey="name" tick={<CustomAxisTick />} />
+          <YAxis />
+          <Tooltip content={<CustomTooltip />} />
+          <Bar type="monotone" dataKey="uv" fill="#8884d8" shape={<TriangleBar />} />
         </BarChart>
       </div>
 
@@ -90,20 +91,20 @@ const Customize = () => {
         <Highlight className="jsx">
         {
           `<BarChart width={600} height={300} data={data}>
-  <XAxis dataKey="name" stroke="#8884d8"/>
-  <YAxis/>
-  <Tooltip/>
-  <CartesianGrid stroke="#ccc" strokeDasharray="5 5"/>
+  <XAxis dataKey="name" stroke="#8884d8" />
+  <YAxis />
+  <Tooltip />
+  <CartesianGrid stroke="#ccc" strokeDasharray="5 5" />
   <Bar type="monotone" dataKey="uv" fill="#8884d8" barSize={30} />
 </BarChart>`
         }
         </Highlight>
 
         <BarChart width={600} height={300} data={data}>
-          <XAxis dataKey="name" stroke="red"/>
-          <YAxis stroke="red"/>
-          <Tooltip/>
-          <CartesianGrid stroke="#ccc" strokeDasharray="5 5"/>
+          <XAxis dataKey="name" stroke="red" />
+          <YAxis stroke="red" />
+          <Tooltip />
+          <CartesianGrid stroke="#ccc" strokeDasharray="5 5" />
           <Bar type="monotone" dataKey="uv" fill="green" barSize={30} />
         </BarChart>
       </div>
@@ -114,27 +115,25 @@ const Customize = () => {
         <Highlight className="jsx">
         {
           `<BarChart width={600} height={300} data={data}>
-  <XAxis dataKey="name" stroke="#8884d8"/>
-  <YAxis/>
-  <Tooltip wrapperStyle={{width: 100, backgroundColor: '#ccc'}}/>
-  <Legend width={100} wrapperStyle={{top: 40, right: 20, backgroundColor: '#f5f5f5', border: '1px solid #d5d5d5', borderRadius: 3, lineHeight: '40px'}}/>
-  <CartesianGrid stroke="#ccc" strokeDasharray="5 5"/>
+  <XAxis dataKey="name" stroke="#8884d8" />
+  <YAxis />
+  <Tooltip wrapperStyle={{ width: 100, backgroundColor: '#ccc' }} />
+  <Legend width={100} wrapperStyle={{ top: 40, right: 20, backgroundColor: '#f5f5f5', border: '1px solid #d5d5d5', borderRadius: 3, lineHeight: '40px' }} />
+  <CartesianGrid stroke="#ccc" strokeDasharray="5 5" />
   <Bar type="monotone" dataKey="uv" fill="#8884d8" barSize={30} />
 </BarChart>`
         }
         </Highlight>
 
         <BarChart width={600} height={300} data={data}>
-          <XAxis dataKey="name" stroke="#8884d8"/>
-          <YAxis/>
-          <Tooltip wrapperStyle={{width: 100, backgroundColor: '#ccc'}}/>
-          <Legend width={100} wrapperStyle={{top: 40, right: 20, backgroundColor: '#f5f5f5', border: '1px solid #d5d5d5', borderRadius: 3, lineHeight: '40px'}}/>
-          <CartesianGrid stroke="#ccc" strokeDasharray="5 5"/>
+          <XAxis dataKey="name" stroke="#8884d8" />
+          <YAxis />
+          <Tooltip wrapperStyle={{ width: 100, backgroundColor: '#ccc' }} />
+          <Legend width={100} wrapperStyle={{ top: 40, right: 20, backgroundColor: '#f5f5f5', border: '1px solid #d5d5d5', borderRadius: 3, lineHeight: '40px' }} />
+          <CartesianGrid stroke="#ccc" strokeDasharray="5 5" />
           <Bar type="monotone" dataKey="uv" fill="#8884d8" barSize={30} />
         </BarChart>
       </div>
-
-
     </div>
   );
 }
