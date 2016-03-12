@@ -15,6 +15,10 @@
     "url": "git@github.com/recharts/recharts.org.git"
   },
   "author": "recharts group",
+  "peerDependencies": {
+    "react": "^0.14.0",
+    "react-dom": "^0.14.0",
+  },
   "devDependencies": {
     "babel": "^6.5.2",
     "babel-cli": "^6.6.5",
