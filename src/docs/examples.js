@@ -37,7 +37,7 @@ export default {
   SpecifiedDomainRadarChart: '//jsfiddle.net/jfnq7qks/embedded/result,js,css,html,resources/',
 
   SimpleTreemap: '//jsfiddle.net/vrkben8c/embedded/result,js,css,html,resources/',
-  CustomContentTreemap: '//jsfiddle.net/jxdae9nt/embedded/result,js,css,html,resources/',
+  CustomContentTreemap: '//jsfiddle.net/o51aa5s9/embedded/result,js,css,html,resources/',
 
   SimpleRadialBarChart: '//jsfiddle.net/kxyhx6vg/embedded/result,js,css,html,resources/',
 
