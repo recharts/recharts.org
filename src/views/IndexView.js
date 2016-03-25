@@ -32,7 +32,7 @@ class IndexView extends Component {
         <div className="desc">
           <p className="title">Recharts</p>
           <p className="subtitle">Redefined chart library built with React</p>
-          <p><a href="/guide#installation" className="button install-btn">Install v0.8.6</a></p>
+          <p><a href="/guide#installation" className="button install-btn">Install v0.8.8</a></p>
         </div>
         <div className="examples">
           <div className="ex-code">
