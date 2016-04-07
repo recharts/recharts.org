@@ -81,6 +81,26 @@ export default {
       isOptional: false,
       desc: 'The source data which each element is an object.',
     }, {
+      name: 'activeIndex',
+      type: 'Array',
+      defaultVal: 'null',
+      isOptional: false,
+      desc: 'The index of active sector in Pie, this option can be changed in mouse event handlers.',
+      examples: [{
+        name: 'A pie chart with customized active shape',
+        url: 'examples#CustomActiveShapePieChart',
+      }],
+    }, {
+      name: 'activeShape',
+      type: 'Object | ReactElement | Function',
+      defaultVal: 'null',
+      isOptional: false,
+      desc: 'The shape of active sector.',
+      examples: [{
+        name: 'A pie chart with customized active shape',
+        url: 'examples#CustomActiveShapePieChart',
+      }],
+    }, {
       name: 'isAnimationActive',
       type: 'Boolean',
       defaultVal: 'true',

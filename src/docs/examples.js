@@ -32,6 +32,7 @@ export default {
   TwoLevelPieChart: '//jsfiddle.net/tmy98ykv/embedded/result,js,css,html,resources/',
   StraightAnglePieChart: '//jsfiddle.net/vjbfztqb/embedded/result,js,css,html,resources/',
   TwoSimplePieChart: '//jsfiddle.net/xtned4bj/embedded/result,js,css,html,resources/',
+  CustomActiveShapePieChart: '//jsfiddle.net/5vbaxwmL/embedded/result,js,css,html,resources/',
 
   SimpleRadarChart: '//jsfiddle.net/jct83jky/embedded/result,js,css,html,resources/',
   SpecifiedDomainRadarChart: '//jsfiddle.net/jfnq7qks/embedded/result,js,css,html,resources/',

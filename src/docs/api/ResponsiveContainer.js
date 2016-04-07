@@ -47,16 +47,16 @@ export default {
   props: [
     {
       name: 'width',
-      type: 'String',
+      type: 'Percentage | Number',
       defaultVal: '\'100%\'',
       isOptional: false,
-      desc: 'The percentage value of the chart\'s width.',
+      desc: 'The percentage value of the chart\'s width or a fixed width.',
     }, {
       name: 'height',
-      type: 'Number',
+      type: 'Percentage | Number',
       defaultVal: '\'100%\'',
       isOptional: false,
-      desc: 'The percentage value of the chart\'s width.',
+      desc: 'The percentage value of the chart\'s width or a fixed height.',
     },
   ],
 };
