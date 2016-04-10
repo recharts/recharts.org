@@ -23,9 +23,9 @@ function Customize() {
       <h4>1. Labels of line, area, bar, axis can be customized</h4>
       <p>For example, we can create a bar with customized label and customized axis tick.</p>
       <div className="demo">
-        <Highlight className="jsx">
+        <Highlight className="e4x">
         {
-          `<BarChart width={600} height={300} data={data}>
+`<BarChart width={600} height={300} data={data}>
   <XAxis dataKey="name" tick={<CustomAxisTick />} />
   <YAxis />
   <Bar type="monotone" dataKey="uv" barSize={30} fill="#8884d8"
@@ -44,9 +44,9 @@ function Customize() {
       <h4>2. The shape of bar can be customized</h4>
       <p>Generates a simple chart by the data.</p>
       <div className="demo">
-        <Highlight className="jsx">
+        <Highlight className="e4x">
         {
-          `<BarChart width={600} height={300} data={data}>
+`<BarChart width={600} height={300} data={data}>
   <XAxis dataKey="name" tick={<CustomAxisTick />} />
   <YAxis />
   <Bar type="monotone" dataKey="uv" fill="#8884d8"
@@ -65,9 +65,9 @@ function Customize() {
       <h4>3. The content of tooltip can be customized</h4>
       <p>Sometime we may want tooltip to display much more information.</p>
       <div className="demo">
-        <Highlight className="jsx">
+        <Highlight className="e4x">
         {
-          `<BarChart width={600} height={300} data={data}>
+`<BarChart width={600} height={300} data={data}>
   <XAxis dataKey="name" tick={<CustomAxisTick />} />
   <YAxis />
   <Tooltip content={<CustomTooltip />}/>
@@ -88,9 +88,9 @@ function Customize() {
       <h4>4. The style of each chart element can be customized</h4>
       <p>Except tooltip and legend, all the element in a chart is drawed by svg element. So you can change the attributes of each chart element conveniently.</p>
       <div className="demo">
-        <Highlight className="jsx">
+        <Highlight className="e4x">
         {
-          `<BarChart width={600} height={300} data={data}>
+`<BarChart width={600} height={300} data={data}>
   <XAxis dataKey="name" stroke="#8884d8" />
   <YAxis />
   <Tooltip />
@@ -112,9 +112,9 @@ function Customize() {
       <h4>5. The style of tooltip, legend can be customized</h4>
       <p>Though tooltip, legend are drawed by svg elements, you may change the style of tooltip, legend by the apis wo offer. of cource, you can change the style in css too.</p>
       <div className="demo">
-        <Highlight className="jsx">
+        <Highlight className="e4x">
         {
-          `<BarChart width={600} height={300} data={data}>
+`<BarChart width={600} height={300} data={data}>
   <XAxis dataKey="name" stroke="#8884d8" />
   <YAxis />
   <Tooltip wrapperStyle={{ width: 100, backgroundColor: '#ccc' }} />

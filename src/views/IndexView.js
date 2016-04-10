@@ -32,7 +32,7 @@ class IndexView extends Component {
         <div className="desc">
           <p className="title">Recharts</p>
           <p className="subtitle">Redefined chart library built with React</p>
-          <p><a href="/guide#installation" className="button install-btn">Install v0.9.0</a></p>
+          <p><a href="/guide#installation" className="button install-btn">Install v0.9.1</a></p>
         </div>
         <div className="examples">
           <div className="ex-code">
@@ -43,7 +43,7 @@ class IndexView extends Component {
               <Line type="monotone" dataKey="uv" stroke="#8884d8" />
               <Line type="monotone" dataKey="pv" stroke="#82ca9d" />
             </LineChart>
-            <Highlight className="jsx">{exCode}</Highlight>
+            <Highlight className="e4x">{exCode}</Highlight>
           </div>
         </div>
         <div className="features">

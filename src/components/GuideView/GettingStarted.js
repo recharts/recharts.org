@@ -20,7 +20,7 @@ const GettingStarted = () => (
     <p>Generates a simple chart by the data.</p>
 
     <div className="step-1">
-      <Highlight className="jsx">
+      <Highlight className="e4x">
       {
 `<LineChart width={400} height={400} data={data}>
   <Line type="monotone" dataKey="uv" stroke="#8884d8" />
@@ -36,7 +36,7 @@ const GettingStarted = () => (
     <h4>2. Add componets need to be drawed</h4>
     <p>LineChart can have XAxis, YAxis, Legend, CartesianGrid and so on.</p>
     <div className="step-2">
-      <Highlight className="jsx">
+      <Highlight className="e4x">
       {
 `<LineChart width={600} height={300} data={data}>
   <Line type="monotone" dataKey="uv" stroke="#8884d8" />
@@ -58,7 +58,7 @@ const GettingStarted = () => (
     <h4>3. Adjust the props of some components</h4>
     <p>For example, the margin-right shoule be bigger to display the whole x-axis, the width of y-axis should be smaller to be harmonize with the right, and the storke style of grid may need to be dashed.</p>
     <div className="step-3">
-      <Highlight className="jsx">
+      <Highlight className="e4x">
       {
 `<LineChart width={600} height={300} data={data} margin={{ top: 5, right: 20, bottom: 5, left: 0 }}>
   <Line type="monotone" dataKey="uv" stroke="#8884d8" />
@@ -80,7 +80,7 @@ const GettingStarted = () => (
     <h4>4. Add interaction</h4>
     <p>Default, we can add Tooltip.</p>
     <div className="step-4">
-      <Highlight className="jsx">
+      <Highlight className="e4x">
       {
 `<LineChart width={600} height={300} data={data} margin={{ top: 5, right: 20, bottom: 5, left: 0 }}>
   <Line type="monotone" dataKey="uv" stroke="#8884d8" />
@@ -104,7 +104,7 @@ const GettingStarted = () => (
     <h4>5. Custom some components</h4>
     <p>Default, we can add Tooltip.</p>
     <div className="step-5">
-      <Highlight className="jsx">
+      <Highlight className="e4x">
       {
 `<LineChart width={600} height={300} data={data} margin={{ top: 5, right: 20, bottom: 5, left: 0 }}>
   <Line type="monotone" dataKey="uv" stroke="#8884d8" />

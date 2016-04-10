@@ -27,7 +27,7 @@ class APIView extends Component {
                   {item.demo()}
                 </div>
                 <div className="code">
-                  <Highlight className="jsx">{item.code}</Highlight>
+                  <Highlight className="e4x">{item.code}</Highlight>
                 </div>
               </li>
             ))

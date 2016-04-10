@@ -43,27 +43,27 @@ export default {
       name: 'A PieChart with cells',
       demo: example,
       code: `<PieChart width={730} height={250}>
-    <Pie data={data} cx="50%" cy="50%" outerRadius={50}>
-      \{
-        data.map((entry, index) => (
-          <Cell key={\`cell-\$\{index\}\`} fill={colors[index]}/>
-        ))
-      \}
-    </Pie>
-  </PieChart>
+  <Pie data={data} cx="50%" cy="50%" outerRadius={50}>
+    \{
+      data.map((entry, index) => (
+        <Cell key={\`cell-\$\{index\}\`} fill={colors[index]} />
+      ))
+    \}
+  </Pie>
+</PieChart>
   `
   }, {
     name: 'A BarChart with cells',
       demo: barExample,
       code: `<BarChart width={730} height={250} data={data}>
-    <Bar dataKey="value">
-      \{
-        data.map((entry, index) => (
-          <Cell key={\`cell-\$\{index\}\`} stroke={colors[index]}  strokeWidth={index === 2 ? 4 : 1}/>
-        ))
-      \}
-    </Bar>
-  </BarChart>
+  <Bar dataKey="value">
+    \{
+      data.map((entry, index) => (
+        <Cell key={\`cell-\$\{index\}\`} stroke={colors[index]}  strokeWidth={index === 2 ? 4 : 1} />
+      ))
+    \}
+  </Bar>
+</BarChart>
   `
   }],
   props: [
