@@ -104,13 +104,13 @@ export default {
       type: 'String | Number',
       defaultVal: 'null',
       isOptional: true,
-      desc: 'The unit of data.',
+      desc: 'The unit of data. This option will be used in tooltip.',
     }, {
       name: 'name',
       type: 'String | Number',
       defaultVal: 'null',
       isOptional: true,
-      desc: 'The name of data.',
+      desc: 'The name of data. This option will be used in tooltip and legend to represent a line. If no value was set to this option, the value of dataKey will be used alternatively.',
     }, {
       name: 'isAnimationActive',
       type: 'Boolean',

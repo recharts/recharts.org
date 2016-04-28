@@ -78,13 +78,13 @@ export default {
       type: 'String | Number',
       defaultVal: 'null',
       isOptional: true,
-      desc: 'The unit of data displayed in the axis.',
+      desc: 'The unit of data displayed in the axis. This option will be used to represent an index unit in a scatter chart.',
     }, {
       name: 'name',
       type: 'String | Number',
       defaultVal: 'null',
       isOptional: true,
-      desc: 'The name of data displayed in the axis.',
+      desc: 'The name of data displayed in the axis. This option will be used to represent an index in a scatter chart.',
     }, {
       name: 'tick',
       type: 'Boolean | Object | ReactElement',
