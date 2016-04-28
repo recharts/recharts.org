@@ -1,5 +1,5 @@
 export default {
-  SimpleLineChart: '//jsfiddle.net/x1yoboc7/embedded/result,js,css,html,resources/',
+  SimpleLineChart: '//jsfiddle.net/x1yoboc7/32/embedded/result,js,css,html,resources/',
   TinyLineChart: '//jsfiddle.net/xyw5e9yb/embedded/result,js,css,html,resources/',
   VerticalLineChart: '//jsfiddle.net/r5n3fkwr/embedded/result,js,css,html,resources/',
   BiaxialLineChart: '//jsfiddle.net/ragrbruL/embedded/result,js,css,html,resources/',
@@ -26,8 +26,8 @@ export default {
   ComposedChartWithAxisLabels: '//jsfiddle.net/7ruotcdg/embedded/result,js,css,html,resources/',
 
   SimpleScatterChart: '//jsfiddle.net/hmq8ycLy/embedded/result,js,css,html,resources/',
-  ThreeDimScatterChart: '//jsfiddle.net/udo080s6/embedded/result,js,css,html,resources/',
-  JointLineScatterChart: '//jsfiddle.net/a843mwaf/embedded/result,js,css,html,resources/',
+  ThreeDimScatterChart: '//jsfiddle.net/udo080s6/2/embedded/result,js,css,html,resources/',
+  JointLineScatterChart: '//jsfiddle.net/a843mwaf/1/embedded/result,js,css,html,resources/',
 
   TwoLevelPieChart: '//jsfiddle.net/tmy98ykv/embedded/result,js,css,html,resources/',
   StraightAnglePieChart: '//jsfiddle.net/vjbfztqb/embedded/result,js,css,html,resources/',

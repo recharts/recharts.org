@@ -49,6 +49,22 @@ export default {
         url: '/examples#CustomizedDotLineChart',
       }],
     }, {
+      name: 'activeDot',
+      type: 'Boolean | Object | ReactElement | Function',
+      defaultVal: 'true',
+      isOptional: false,
+      desc: 'The dot is shown when muser enter a line chart and this chart has tooltip. If false set, no active dot will not be drawed. If true set, active dot will be drawed which have the props calculated internally. If object set, active dot will be drawed which have the props mergered by the internal calculated props and the option. If ReactElement set, the option can be the custom active dot element.If set a function, the function will be called to render customized active dot.',
+      format: [
+        `<Line dataKey="value" activeDot={false} />`,
+        `<Line dataKey="value" activeDot={{ stroke: 'red', strokeWidth: 2, r: 10 }} />`,
+        `<Line dataKey="value" activeDot={<CustomizedActiveDot />} />`,
+        `<Line dataKey="value" activeDot={renderDot} />`,
+      ],
+      examples: [{
+        name: 'A simple line chart',
+        url: '/examples#SimpleLineChart',
+      }],
+    },  {
       name: 'label',
       type: 'Boolean | Object | ReactElement | Function',
       defaultVal: 'false',

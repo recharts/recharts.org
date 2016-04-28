@@ -42,6 +42,21 @@ export default {
         url: '/examples#JointLineScatterChart',
       }],
     }, {
+      name: 'shape',
+      type: '\'circle\' | \'cross\' | \'diamond\' | \'square\' | \'star\' | \'triangle\' | \'wye\' | ReactElement | Function',
+      defaultVal: '\'circle\'',
+      isOptional: false,
+      desc: 'If a string set, specified symbol will be used to show scatter item. If ReactElement set, the option can be the custom scatter item element. If set a function, the function will be called to render customized scatter item.',
+      format: [
+        `<Scatter data={data} shape="cross" />`,
+        `<Scatter data={data} shape={<CustomizedShape/>} />`,
+        `<Scatter data={data} shape={<renderCustomizedShape/>} />`,
+      ],
+      examples: [{
+        name: 'A scatter chart with joint line',
+        url: '/examples#JointLineScatterChart',
+      }],
+    }, {
       name: 'lineType',
       type: `'joint' , 'fitting'`,
       defaultVal: '\'joint\'',

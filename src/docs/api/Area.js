@@ -46,6 +46,18 @@ export default {
         `<Area dataKey="value" dot={renderDot}/>`,
       ],
     }, {
+      name: 'activeDot',
+      type: 'Boolean | Object | ReactElement | Function',
+      defaultVal: 'true',
+      isOptional: false,
+      desc: 'The dot is shown when muser enter a area chart and this chart has tooltip. If false set, no active dot will not be drawed. If true set, active dot will be drawed which have the props calculated internally. If object set, active dot will be drawed which have the props mergered by the internal calculated props and the option. If ReactElement set, the option can be the custom active dot element.If set a function, the function will be called to render customized active dot.',
+      format: [
+        `<Area dataKey="value" activeDot={false} />`,
+        `<Area dataKey="value" activeDot={{ stroke: 'red', strokeWidth: 2, r: 10 }} />`,
+        `<Area dataKey="value" activeDot={<CustomizedActiveDot />} />`,
+        `<Area dataKey="value" activeDot={renderDot} />`,
+      ],
+    }, {
       name: 'label',
       type: 'Boolean | Object | ReactElement | Function',
       defaultVal: 'false',
