@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
-import { push } from 'react-router-redux';
+import { browserHistory } from 'react-router';
 import Link from 'utils/Link';
 import 'styles/app.scss';
 
@@ -8,7 +8,7 @@ import 'styles/app.scss';
   return {
     page: ownProps.location.pathname.split('/').filter(item => !!item)[0] || 'index',
   };
-}, { push })
+})
 class Frame extends Component {
   static propTypes = {
     page: PropTypes.string,
@@ -16,7 +16,7 @@ class Frame extends Component {
   };
 
   render() {
-    const { push, page, children } = this.props;
+    const { page, children } = this.props;
 
     return (
       <div className="container">
@@ -25,7 +25,7 @@ class Frame extends Component {
             <h1 className="logo">
               <Link
                 className="nav-logo"
-                route={() => push("/")}>&lt;Recharts /&gt;</Link>
+                route={() => browserHistory.push("/")}>&lt;Recharts /&gt;</Link>
             </h1>
             <nav>
               <ul className="nav" id="nav">
@@ -33,25 +33,25 @@ class Frame extends Component {
                   <Link
                     className="nav-link"
                     activeCondition={page === 'guide'}
-                    route={() => push("/guide")}>Guide</Link>
+                    route={() => browserHistory.push("/guide")}>Guide</Link>
                 </li>
                 <li>
                   <Link
                     className="nav-link"
                     activeCondition={page === 'api'}
-                    route={() => push("/api")}>API</Link>
+                    route={() => browserHistory.push("/api")}>API</Link>
                 </li>
                 <li>
                   <Link
                     className="nav-link"
                     activeCondition={page === 'examples'}
-                    route={() => push("/examples")}>Examples</Link>
+                    route={() => browserHistory.push("/examples")}>Examples</Link>
                 </li>
                 <li>
                   <Link
                     className="nav-link"
                     activeCondition={page === 'blog'}
-                    route={() => push("/blog")}>Blog</Link>
+                    route={() => browserHistory.push("/blog")}>Blog</Link>
                 </li>
                 <li>
                   <a href="https://github.com/recharts/recharts"

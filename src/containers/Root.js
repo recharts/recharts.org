@@ -3,18 +3,18 @@ import { Provider } from 'react-redux';
 import { Router } from 'react-router';
 import DevTools from './DevTools';
 
-function Root({ store, history, routes }) {
+function Root({ store, history, routes, render }) {
   return (
     <Provider store={store}>
       {
         __DEV__ ?
         (<div>
-          <Router history={history}>
+          <Router history={history} render={render}>
             {routes}
           </Router>
           <DevTools />
         </div>) :
-        <Router history={history}>
+        <Router history={history} render={render}>
           {routes}
         </Router>
       }
