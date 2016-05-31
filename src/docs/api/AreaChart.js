@@ -74,6 +74,16 @@ export default {
       isOptional: false,
       desc: 'The sizes of whitespace around the container.',
       format: ['{ top: 5, right: 5, bottom: 5, left: 5 }'],
+    }, {
+      name: 'stackOffset',
+      type: `'expand', 'none', 'wiggle', 'silhouette'`,
+      defaultVal: `'none'`,
+      isOptional: false,
+      desc: 'The type of offset function used to generate the lower and upper values in the series array. The four types are built-in offsets in d3-shape',
+      examples: [{
+        name: `An AreaChart with stackOffset specified to be  'expand'`,
+        url: '/examples#PercentAreaChart',
+      }],
     },
   ],
 };

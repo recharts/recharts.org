@@ -112,6 +112,12 @@ export default {
         name: 'ReferenceLines with label',
         url: '/examples#LineChartWithReferenceLines',
       }]
+    }, {
+      name: 'isFront',
+      type: 'Boolean',
+      defaultVal: 'false',
+      isOptional: false,
+      desc: 'If set true, the line will be rendered in front of bars in BarChart, etc.'
     },
   ],
 };

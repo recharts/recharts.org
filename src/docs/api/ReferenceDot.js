@@ -102,6 +102,12 @@ export default {
         `<ReferenceDot x="a" y={400} label={<CustomizedLabel />}/>`,
         `<ReferenceDot x="a" y={400} label={renderLabel}/>`,
       ],
+    }, {
+      name: 'isFront',
+      type: 'Boolean',
+      defaultVal: 'false',
+      isOptional: false,
+      desc: 'If set true, the dot will be rendered in front of bars in BarChart, etc.'
     },
   ],
 };

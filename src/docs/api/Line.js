@@ -4,7 +4,8 @@ export default {
   props: [
     {
       name: 'type',
-      type: '\'linear\', \'monotone\', \'step\', \'stepBefore\', \'stepAfter\'',
+      type: `'basis', 'basisClosed', 'basisOpen', 'linear', 'linearClosed', 'natural',
+      'monotoneX', 'monotoneY', 'monotone', 'step', 'stepBefore', 'stepAfter'`,
       defaultVal: '\'linear\'',
       isOptional: false,
       desc: 'The interpolation type of line.',

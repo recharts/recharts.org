@@ -93,6 +93,46 @@ export default {
       defaultVal: `'ease'`,
       isOptional: false,
       desc: 'The type of easing function.',
+    }, {
+      name: 'onClick',
+      type: 'Function',
+      isOptional: true,
+      desc: 'The customized event handler of click on the symbols in this group',
+    }, {
+      name: 'onMouseDown',
+      type: 'Function',
+      isOptional: true,
+      desc: 'The customized event handler of mousedown on the symbols in this group',
+    }, {
+      name: 'onMouseUp',
+      type: 'Function',
+      isOptional: true,
+      desc: 'The customized event handler of mouseup on the symbols in this group',
+    }, {
+      name: 'onMouseMove',
+      type: 'Function',
+      isOptional: true,
+      desc: 'The customized event handler of mousemove on the symbols in this group',
+    }, {
+      name: 'onMouseOver',
+      type: 'Function',
+      isOptional: true,
+      desc: 'The customized event handler of mouseover on the symbols in this group',
+    }, {
+      name: 'onMouseOut',
+      type: 'Function',
+      isOptional: true,
+      desc: 'The customized event handler of mouseout on the symbols in this group',
+    }, {
+      name: 'onMouseEnter',
+      type: 'Function',
+      isOptional: true,
+      desc: 'The customized event handler of moustenter on the symbols in this group',
+    }, {
+      name: 'onMouseLeave',
+      type: 'Function',
+      isOptional: true,
+      desc: 'The customized event handler of mouseleave on the symbols in this group',
     },
   ],
 };

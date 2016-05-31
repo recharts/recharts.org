@@ -3,6 +3,13 @@ export default {
   examples: [],
   props: [
     {
+      name: 'dataKey',
+      type: 'Number | String',
+      defaultVal: 'null',
+      isOptional: false,
+      desc: 'The key of data displayed in Brush.',
+    },
+    {
       name: 'x',
       type: 'Number',
       defaultVal: '0',
@@ -31,7 +38,7 @@ export default {
       type: 'Array',
       defaultVal: 'null',
       isOptional: false,
-      desc: 'The set of all values.',
+      desc: 'The original data of a LineChart, a BarChart or an AreaChart.',
     }, {
       name: 'travellerWidth',
       type: 'Number',

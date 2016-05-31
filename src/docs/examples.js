@@ -11,6 +11,7 @@ export default {
   SimpleAreaChart: '//jsfiddle.net/5p61t9qp/embedded/result,js,css,html,resources/',
   StackedAreaChart: '//jsfiddle.net/ze8c333g/embedded/result,js,css,html,resources/',
   TinyAreaChart: '//jsfiddle.net/kfyyjvqx/embedded/result,js,css,html,resources/',
+  PercentAreaChart: '//jsfiddle.net/ty4cn9p8/embedded/result,js,css,html,resources/',
 
   TinyBarChart: '//jsfiddle.net/576yk9so/embedded/result,js,css,html,resources/',
   SimpleBarChart: '//jsfiddle.net/u8udorvy/embedded/result,js,css,html,resources/',
@@ -19,6 +20,7 @@ export default {
   CustomShapeBarChart: '//jsfiddle.net/amjvtcqz/embedded/result,js,css,html,resources/',
   PositiveAndNegativeBarChart: '//jsfiddle.net/grgdaw75/1/embedded/result,js,css,html,resources/',
   BrushBarChart: '//jsfiddle.net/xtdssj96/1/embedded/result,js,css,html,resources/',
+  BarChartWithCustomizedEvent: '//jsfiddle.net/o72mj9br/embedded/result,js,css,html,resources/',
 
   LineBarAreaComposedChart: '//jsfiddle.net/vfnmdp53/embedded/result,js,css,html,resources/',
   VerticalComposedChart: '//jsfiddle.net/t4t5rx16/embedded/result,js,css,html,resources/',

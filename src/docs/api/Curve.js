@@ -4,10 +4,10 @@ export default {
   props: [
     {
       name: 'type',
-      type: 'String',
+      type: `'basis', 'basisClosed', 'basisOpen', 'linear', 'linearClosed', 'natural', 'monotoneX', 'monotoneY', 'monotone', 'step', 'stepBefore', 'stepAfter'`,
       defaultVal: '\'linear\'',
       isOptional: false,
-      desc: 'The interpolation type of area, which can be \'linear\', \'monotone\', \'step\', \'stepBefore\', \'stepAfter\'',
+      desc: 'The interpolation type of curve.',
     }, {
       name: 'points',
       type: 'Array',
@@ -15,11 +15,11 @@ export default {
       isOptional: false,
       desc: 'The coordinates of all the points in the curve.',
     }, {
-      name: 'baseLineType',
-      type: 'String',
+      name: 'layout',
+      type: `'horizontal', 'vertical'`,
       defaultVal: 'null',
       isOptional: true,
-      desc: 'If set a string value (horizontal, vertical or curve), the option is the type of baseline in an area.',
+      desc: `The option can effect the interpolation algorithm when the props type is set to be 'monotone'. Meanwhile, this option will specified the type of baseline when the curve is colsed.`,
     }, {
       name: 'baseLine',
       type: 'Number | Array',

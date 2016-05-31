@@ -60,7 +60,7 @@ class APIView extends Component {
           {entry.isOptional ? <em className="optaional">optaional</em> : null}
         </p>
         <p className="desc">{entry.desc}</p>
-        {entry.defaultVal ? (
+        {entry.defaultVal && (entry.defaultVal !== 'null' && entry.defaultVal !== 'undefined') ? (
           <p className="default">
             <span className="title">DEFAULT:</span>
             <span>{entry.defaultVal}</span>
