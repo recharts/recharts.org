@@ -57,7 +57,7 @@ class APIView extends Component {
         <p className="header">
           <span className="title">{entry.name}</span>
           <span className="type">{entry.type}</span>
-          {entry.isOptional ? <em className="optaional">optaional</em> : null}
+          {entry.isOptional ? <em className="optional">optional</em> : null}
         </p>
         <p className="desc">{entry.desc}</p>
         {entry.defaultVal && (entry.defaultVal !== 'null' && entry.defaultVal !== 'undefined') ? (
