@@ -60,6 +60,12 @@ export default {
       defaultVal: 'null',
       isOptional: false,
       desc: 'The function to formatting tick.',
+    }, {
+      name: 'tickCount',
+      type: 'Number',
+      defaultVal: 5,
+      isOptional: false,
+      desc: 'The number of axis ticks.',
     },
   ],
   examples: [

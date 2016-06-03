@@ -46,8 +46,8 @@ export default {
       desc: 'The count of polar grids.',
     }, {
       name: 'gridType',
-      type: 'String',
-      defaultVal: 'circle',
+      type: `'polygon', 'circle'`,
+      defaultVal: 'polygon',
       isOptional: false,
       desc: 'The type of polar grids.',
     },
