@@ -62,6 +62,18 @@ export default {
       isOptional: true,
       desc: 'The width or height of each bar. If the barSize is not specified, the size of bar will be caculated by the barCategoryGap, barGap and the quantity of bar groups.'
     }, {
+      name: 'minPointSize',
+      type: 'Number',
+      defaultVal: 0,
+      isOptional: false,
+      desc: `The minimal height of a bar in a horizontal BarChart, or the minimal width of a bar in a vertical BarChart.
+      By default, 0 values are not shown. To visualize a 0 (or close to zero) point, set the minimal point size to a pixel
+      value like 3. In stacked bar charts, minPointSize might not be respected for tightly packed values. So we strongly recommend not using this props in stacked BarChart.`,
+      examples: [{
+        name: 'A BarChart with non-zero minPointSize',
+        url: 'examples/#BarChartWithMinHeight',
+      }]
+    }, {
       name: 'shape',
       type: 'ReactElement | Function',
       defaultVal: 'undefined',

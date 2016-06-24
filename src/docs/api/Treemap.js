@@ -180,11 +180,11 @@ export default {
       isOptional: false,
       desc: 'The key of a group of data which should be unique in a treemap.',
     }, {
-      name: 'ratio',
+      name: 'aspectRatio',
       type: 'Number',
       defaultVal: 'null',
       isOptional: false,
-      desc: 'The treemap will try to keep every single rectangle\'s aspect ratio near the ratio given.',
+      desc: 'The treemap will try to keep every single rectangle\'s aspect ratio near the aspectRatio given.',
     }, {
       name: 'isAnimationActive',
       type: 'Boolean',

@@ -4,10 +4,17 @@ export default {
   props: [
     {
       name: 'type',
-      type: `'basis', 'basisClosed', 'basisOpen', 'linear', 'linearClosed', 'natural', 'monotoneX', 'monotoneY', 'monotone', 'step', 'stepBefore', 'stepAfter'`,
+      type: `'basis' | 'basisClosed' | 'basisOpen' | 'linear' | 'linearClosed' | 'natural' | 'monotoneX' | 'monotoneY' | 'monotone' | 'step' | 'stepBefore' | 'stepAfter' | Function`,
       defaultVal: '\'linear\'',
       isOptional: false,
-      desc: 'The interpolation type of curve.',
+      desc: 'The interpolation type of curve. Line and Area use this component to draw line and area.',
+      examples: [{
+        name: 'd3-shape interpolation',
+        url: 'https://github.com/d3/d3-shape#curves',
+      }, {
+        name: 'An AreaChart which has two area with different interpolation.',
+        url: '/examples#CardinalAreaChart',
+      }],
     }, {
       name: 'points',
       type: 'Array',

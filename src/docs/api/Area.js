@@ -4,11 +4,18 @@ export default {
   props: [
     {
       name: 'type',
-      type: '\'linear\', \'monotone\', \'step\', \'stepBefore\', \'stepAfter\'',
+      type: `'basis' | 'basisClosed' | 'basisOpen' | 'linear' | 'linearClosed' | 'natural' |
+      'monotoneX' | 'monotoneY' | 'monotone' | 'step' | 'stepBefore' | 'stepAfter' | Function`,
       defaultVal: '\'linear\'',
       isOptional: false,
-      desc: 'The interpolation type of area.',
-      examples: [],
+      desc: 'The interpolation type of area. And customized interpolation function can be set to type.',
+      examples: [{
+        name: 'd3-shape interpolation',
+        url: 'https://github.com/d3/d3-shape#curves',
+      }, {
+        name: 'An AreaChart which has two area with different interpolation.',
+        url: '/examples#CardinalAreaChart',
+      }],
     }, {
       name: 'dataKey',
       type: 'String | Number',
