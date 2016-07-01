@@ -68,12 +68,20 @@ export default {
       defaultVal: 'false',
       isOptional: false,
       desc: 'If false set, labels will not be drawed. If true set, labels will be drawed which have the props calculated internally. If object set, labels will be drawed which have the props mergered by the internal calculated props and the option. If ReactElement set, the option can be the custom label element. If set a function, the function will be called to render customized label.',
+      examples: [{
+        name: 'A pie chart with customized label',
+        url: 'examples#PieChartWithCustomizedLabel',
+      }],
     }, {
       name: 'labelLine',
       type: 'Boolean | Object | ReactElement | Function',
       defaultVal: 'false',
       isOptional: false,
       desc: 'If false set, label lines will not be drawed. If true set, label lines will be drawed which have the props calculated internally. If object set, label lines will be drawed which have the props mergered by the internal calculated props and the option. If ReactElement set, the option can be the custom label line element. If set a function, the function will be called to render customized label line.',
+      examples: [{
+        name: 'A pie chart with customized label',
+        url: 'examples#PieChartWithCustomizedLabel',
+      }],
     }, {
       name: 'data',
       type: 'Array',
