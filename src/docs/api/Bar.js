@@ -50,12 +50,6 @@ export default {
       isOptional: false,
       desc: 'The position information of all the rectangles, usually calculated internally.',
     }, {
-      name: 'formatter',
-      type: 'Function',
-      defaultVal: 'undefined',
-      isOptional: true,
-      desc: 'The formatter function of data.',
-    }, {
       name: 'barSize',
       type: 'Number',
       defaultVal: 'undefined',

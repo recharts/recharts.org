@@ -125,12 +125,6 @@ export default {
         url: '/examples#StackedAreaChart'
       }],
     }, {
-      name: 'formatter',
-      type: 'Function',
-      defaultVal: 'undefined',
-      isOptional: true,
-      desc: 'The formatter function of data.',
-    }, {
       name: 'unit',
       type: 'String | Number',
       defaultVal: 'undefined',
