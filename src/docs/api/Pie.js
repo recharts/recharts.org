@@ -45,6 +45,16 @@ export default {
       isOptional: false,
       desc: 'The minimum angle of each unzero data.',
     }, {
+      name: 'paddingAngle',
+      type: 'Number',
+      defaultVal: '0',
+      isOptional: false,
+      desc: 'The angle between two sectors.',
+      examples: [{
+        name: 'Pie with nozero padding angle',
+        url: 'examples#PieChartWithPaddingAngle',
+      }]
+    }, {
       name: 'nameKey',
       type: 'String',
       defaultVal: '\'name\'',
