@@ -35,7 +35,7 @@ const example = () => (
 
 export default {
   name: 'AreaChart',
-  desc: 'All the svg elements can be added into an AreaChart, such as defs, linearGradient, etc.',
+  desc: 'All svg elements can be added into the AreaChart component, such as defs, linearGradient, etc.',
   examples: [
     {
       name: 'Simple AreaChart',
@@ -80,13 +80,13 @@ export default {
       type: 'Number',
       defaultVal: 'null',
       isOptional: false,
-      desc: 'The width of chart container.',
+      desc: 'The height of chart container.',
     }, {
       name: 'data',
       type: 'Array',
       defaultVal: 'null',
       isOptional: false,
-      desc: 'The source data which each element is an object.',
+      desc: 'The source data, in which each element is an object.',
       format: ['[{ name: \'a\', value: 12 }]']
     }, {
       name: 'margin',
@@ -100,9 +100,9 @@ export default {
       type: `'expand', 'none', 'wiggle', 'silhouette'`,
       defaultVal: `'none'`,
       isOptional: false,
-      desc: 'The type of offset function used to generate the lower and upper values in the series array. The four types are built-in offsets in d3-shape',
+      desc: 'The type of offset function used to generate the lower and upper values in the series array. The four types are built-in offsets in d3-shape.',
       examples: [{
-        name: `An AreaChart with stackOffset specified to be  'expand'`,
+        name: `An AreaChart with stackOffset specified to 'expand'`,
         url: '/examples#PercentAreaChart',
       }],
     },

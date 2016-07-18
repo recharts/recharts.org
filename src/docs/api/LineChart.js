@@ -48,7 +48,7 @@ export default {
       type: '\'horizontal\' , \'vertical\'',
       defaultVal: '\'horizontal\'',
       isOptional: false,
-      desc: 'The layout of line in the chart.',
+      desc: 'The layout of lines in the chart.',
     }, {
       name: 'width',
       type: 'Number',
@@ -60,13 +60,13 @@ export default {
       type: 'Number',
       defaultVal: 'undefined',
       isOptional: false,
-      desc: 'The width of chart container.',
+      desc: 'The height of chart container.',
     }, {
       name: 'data',
       type: 'Array',
       defaultVal: 'undefined',
       isOptional: false,
-      desc: 'The source data which each element is an object.',
+      desc: 'The source data, in which each element is an object.',
       format: ['[{name: \'a\', value: 12}]']
     }, {
       name: 'margin',

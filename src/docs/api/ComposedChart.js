@@ -26,10 +26,10 @@ const example = () => (
 
 export default {
   name: 'ComposedChart',
-  desc: 'A composed chart of line, area, bar. When you just want to draw chart of single type like line, then LineChart is recommended.',
+  desc: 'A chart composed of line, area, and bar charts. When you just want to draw a chart of a single type like line, then LineChart is recommended.',
   examples: [
     {
-      name: 'Simple LineChart',
+      name: 'Composed Chart',
       demo: example,
       code: `<ComposedChart width={730} height={250} data={data}>
   <XAxis dataKey="name" />
@@ -49,7 +49,7 @@ export default {
       type: '\'horizontal\' , \'vertical\'',
       defaultVal: '\'horizontal\'',
       isOptional: false,
-      desc: 'The layout of area, line, bar in the chart.',
+      desc: 'The layout of areas, lines, or bars in the chart.',
     }, {
       name: 'width',
       type: 'Number',
@@ -61,13 +61,13 @@ export default {
       type: 'Number',
       defaultVal: 'undefined',
       isOptional: false,
-      desc: 'The width of chart container.',
+      desc: 'The height of chart container.',
     }, {
       name: 'data',
       type: 'Array',
       defaultVal: 'undefined',
       isOptional: false,
-      desc: 'The source data which each element is an object.',
+      desc: 'The source data, in which each element is an object.',
       format: ['[{name: \'a\', value: 12}]']
     }, {
       name: 'margin',
@@ -81,19 +81,19 @@ export default {
       type: 'Percentage | Number',
       defaultVal: '\'10%\'',
       isOptional: false,
-      desc: 'The gab between two bar categorys which can be percent value and a fixed value.',
+      desc: 'The gap between two bar categories, which can be a percent value or a fixed value.',
     }, {
       name: 'barGap',
       type: 'Number',
       defaultVal: 4,
       isOptional: false,
-      desc: 'The gab between two bar in the same category.',
+      desc: 'The gap between two bars in the same category.',
     }, {
       name: 'barSize',
       type: 'Number',
       defaultVal: 'undefined',
       isOptional: true,
-      desc: 'The width or height of each bar. If the barSize is not specified, the size of bar will be caculated by the barCategoryGap, barGap and the quantity of bar groups.',
+      desc: 'The width or height of each bar. If the barSize is not specified, the size of the bar will be calculated by the barCategoryGap, barGap and the quantity of bar groups.',
     },
   ],
 };
