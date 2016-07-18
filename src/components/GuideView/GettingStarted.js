@@ -16,8 +16,8 @@ const data = [
 const GettingStarted = () => (
   <div className="mod-getting-started" id="Getting_Started">
     <h3>Getting Started</h3>
-    <h4>1. Choose the type of chart</h4>
-    <p>Generates a simple chart by the data.</p>
+    <h4>1. Choose the type of chart you need</h4>
+    <p>Generates a simple chart by using plain javascript data (usually an array of objects).</p>
 
     <div className="step-1">
       <Highlight className="e4x">
@@ -33,7 +33,7 @@ const GettingStarted = () => (
       </LineChart>
     </div>
 
-    <h4>2. Add componets need to be drawed</h4>
+    <h4>2. Add components that you want to be drawn</h4>
     <p>LineChart can have XAxis, YAxis, Legend, CartesianGrid and so on.</p>
     <div className="step-2">
       <Highlight className="e4x">
@@ -56,7 +56,7 @@ const GettingStarted = () => (
     </div>
 
     <h4>3. Adjust the props of some components</h4>
-    <p>For example, the margin-right shoule be bigger to display the whole x-axis, the width of y-axis should be smaller to be harmonize with the right, and the storke style of grid may need to be dashed.</p>
+    <p>For example, margin-right should be bigger in order to display the right-most x-axis label and the stroke style of the cartesian grid can be dashed for better readability.</p>
     <div className="step-3">
       <Highlight className="e4x">
       {
@@ -77,8 +77,8 @@ const GettingStarted = () => (
       </LineChart>
     </div>
 
-    <h4>4. Add interaction</h4>
-    <p>Default, we can add Tooltip.</p>
+    <h4>4. Add interactions</h4>
+    <p>We can easily drop-in a Tooltip component and have rich hovering tooltip functionality.</p>
     <div className="step-4">
       <Highlight className="e4x">
       {
@@ -101,8 +101,8 @@ const GettingStarted = () => (
       </LineChart>
     </div>
 
-    <h4>5. Custom some components</h4>
-    <p>Default, we can add Tooltip.</p>
+    <h4>5. Customize your components</h4>
+    <p>For example, you can edit your x-axis label very easily by passing in a custom axis tick component. You can do similar things with other graphs as well, such as custom shapes for bar charts and much more!</p>
     <div className="step-5">
       <Highlight className="e4x">
       {

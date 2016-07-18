@@ -46,7 +46,7 @@ export default {
       type: '\'horizontal\' , \'vertical\'',
       defaultVal: '\'horizontal\'',
       isOptional: false,
-      desc: 'The layout of bar in the chart.',
+      desc: 'The layout of bars in the chart.',
     }, {
       name: 'width',
       type: 'Number',
@@ -58,13 +58,13 @@ export default {
       type: 'Number',
       defaultVal: 'undefined',
       isOptional: false,
-      desc: 'The width of chart container.',
+      desc: 'The height of chart container.',
     }, {
       name: 'data',
       type: 'Array',
       defaultVal: 'undefined',
       isOptional: false,
-      desc: 'The source data which each element is an object.',
+      desc: 'The source data, in which each element is an object.',
       format: ['[{ name: \'a\', value: 12 }]']
     }, {
       name: 'margin',
@@ -78,19 +78,19 @@ export default {
       type: 'Percentage | Number',
       defaultVal: '\'10%\'',
       isOptional: false,
-      desc: 'The gab between two bar categorys which can be percent value and a fixed value.',
+      desc: 'The gap between two bar categories, which can be a percent value or a fixed value.',
     }, {
       name: 'barGap',
       type: 'Number',
       defaultVal: 4,
       isOptional: false,
-      desc: 'The gab between two bar in the same category.',
+      desc: 'The gap between two bars in the same category.',
     }, {
       name: 'barSize',
       type: 'Number',
       defaultVal: 'undefined',
       isOptional: true,
-      desc: 'The width or height of each bar. If the barSize is not specified, the size of bar will be caculated by the barCategoryGap, barGap and the quantity of bar groups.',
+      desc: 'The width or height of each bar. If the barSize is not specified, the size of the bar will be calculated by the barCategoryGap, barGap and the quantity of bar groups.',
       examples: [
         {
           name: 'Tiny BarChart',
@@ -106,47 +106,47 @@ export default {
       type: `'expand', 'none', 'wiggle', 'silhouette'`,
       defaultVal: `'none'`,
       isOptional: false,
-      desc: 'The type of offset function used to generate the lower and upper values in the series array. The four types are built-in offsets in d3-shape',
+      desc: 'The type of offset function used to generate the lower and upper values in the series array. The four types are built-in offsets in d3-shape.',
     }, {
       name: 'onClick',
       type: 'Function',
       isOptional: true,
-      desc: 'The customized event handler of click on all the bars',
+      desc: 'The customized event handler of click on all the bars.',
     }, {
       name: 'onMouseDown',
       type: 'Function',
       isOptional: true,
-      desc: 'The customized event handler of mousedown on all the bars',
+      desc: 'The customized event handler of mousedown on all the bars.',
     }, {
       name: 'onMouseUp',
       type: 'Function',
       isOptional: true,
-      desc: 'The customized event handler of mouseup on all the bars',
+      desc: 'The customized event handler of mouseup on all the bars.',
     }, {
       name: 'onMouseMove',
       type: 'Function',
       isOptional: true,
-      desc: 'The customized event handler of mousemove on all the bars',
+      desc: 'The customized event handler of mousemove on all the bars.',
     }, {
       name: 'onMouseOver',
       type: 'Function',
       isOptional: true,
-      desc: 'The customized event handler of mouseover on all the bars',
+      desc: 'The customized event handler of mouseover on all the bars.',
     }, {
       name: 'onMouseOut',
       type: 'Function',
       isOptional: true,
-      desc: 'The customized event handler of mouseout on all the bars',
+      desc: 'The customized event handler of mouseout on all the bars.',
     }, {
       name: 'onMouseEnter',
       type: 'Function',
       isOptional: true,
-      desc: 'The customized event handler of moustenter on all the bars',
+      desc: 'The customized event handler of moustenter on all the bars.',
     }, {
       name: 'onMouseLeave',
       type: 'Function',
       isOptional: true,
-      desc: 'The customized event handler of mouseleave on all the bars',
+      desc: 'The customized event handler of mouseleave on all the bars.',
     },
   ],
 };
