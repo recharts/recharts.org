@@ -17,7 +17,7 @@ const GettingStarted = () => (
   <div className="mod-getting-started" id="Getting_Started">
     <h3>Getting Started</h3>
     <h4>1. Choose the type of chart you need</h4>
-    <p>Generates a simple chart by using plain javascript data (usually an array of objects).</p>
+    <p>Generate a simple chart by using plain javascript data (usually an array of objects).</p>
 
     <div className="step-1">
       <Highlight className="e4x">
