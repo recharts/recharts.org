@@ -5,7 +5,7 @@ const Installation = () => (
   <div className="mod-installation" id="Installation">
     <h3>Installation</h3>
     <h4>NPM</h4>
-    <p>NPM is the recommended installation method when building SPA. It pairs nicely with a CommonJS module bundler such as <a href="http://webpack.github.io/" target="_blank" rel="external">Webpack</a>. </p>
+    <p>NPM is the easiest and fastest way to get started using Recharts. It is also the recommended installation method when building single-page applications (SPAs). It pairs nicely with a CommonJS module bundler such as <a href="http://webpack.github.io/" target="_blank" rel="external">Webpack</a>.</p>
     <Highlight className="sh">
     {
       `  # latest stable

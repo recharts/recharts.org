@@ -4,6 +4,7 @@ import { LineChart, Line, XAxis, YAxis, Tooltip, CartesianGrid } from 'recharts'
 import Highlight from 'utils/Highlight';
 import pureRender from 'pure-render-decorator';
 import './IndexView.scss';
+import 'simple-line-icons/scss/simple-line-icons.scss';
 
 const data = [
   { name: 'A', uv: 400, pv: 240, amt: 2400 },
@@ -31,8 +32,9 @@ class IndexView extends Component {
       <div className="page page-index">
         <div className="desc">
           <p className="title">Recharts</p>
-          <p className="subtitle">Redefined chart library built with React</p>
-          <p><a href="/guide#installation" className="button install-btn">Install v0.12.5</a></p>
+          <p className="subtitle">A composable charting library built on React components</p>
+          <p><a href="/guide#installation" className="button install-btn"><i className="icon-energy"></i> Install v0.12.5</a></p>
+          <a className="github-button" href="https://github.com/recharts/recharts" data-style="mega" data-count-href="/recharts/recharts/stargazers" data-count-api="/repos/recharts/recharts#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star Recharts on GitHub">Star</a>
         </div>
         <div className="examples">
           <div className="ex-code">
@@ -49,25 +51,26 @@ class IndexView extends Component {
         <div className="features">
           <ul className="feat">
             <li>
-              <strong>Componentized</strong>
-              <p className="text">Compose your application with decoupled, reusable React components.
-              Depend by React Virtual DOM, you will use it more assured.</p>
+              <i className="icon-puzzle"></i>
+              <strong>Composable</strong>
+              <p className="text">Quickly build your charts with decoupled, reusable React components.</p>
             </li>
             <li>
-              <strong>Comfortable</strong>
-              <p className="text">Simplely deploy with configuration of props. Native SVG elements supported,
-              and lightweight depend on the D3 submodules, but you don't write D3 code any more.</p>
+              <i className="icon-layers"></i>
+              <strong>Reliable</strong>
+              <p className="text">Built on top of SVG elements with a lightweight dependency on D3 submodules.</p>
             </li>
             <li>
-              <strong>Customizable</strong>
-              <p className="text">Separated components of each chart kind,
-              so you can redefine the sub components to realize your mind or use sub components to define new charts.</p>
+              <i className="icon-energy"></i>
+              <strong>Powerful</strong>
+              <p className="text">Customize your chart by tweaking component props and passing in custom components.</p>
             </li>
           </ul>
         </div>
         <div className="like">
-          <p className="text">Recharts enables deeper integration of charts into your React application</p>
-          <p className="btn"><a href="/guide#getting-started" className="button getting-started-btn">Getting Started</a></p>
+          <i className="icon-rocket"></i>
+          <p className="text">Recharts makes it easy to integrate charts into your React application</p>
+          <p className="btn"><a href="/guide#getting-started" className="button getting-started-btn">Get Started</a></p>
         </div>
       </div>
     );

@@ -61,6 +61,7 @@
     "babel-plugin-recharts": "1.0.2"
   },
   "dependencies": {
+    "file-loader": "^0.9.0",
     "highlight.js": "~9.3.0",
     "pure-render-decorator": "~1.1.1",
     "react": "~15.0.2",
@@ -70,7 +71,9 @@
     "react-router-redux": "~4.0.4",
     "react-router-scroll": "~0.2.0",
     "recharts": "~0.12.0",
-    "redux": "~3.5.2"
+    "redux": "~3.5.2",
+    "simple-line-icons": "^2.3.2",
+    "url-loader": "^0.5.7"
   },
   "license": "MIT"
 }

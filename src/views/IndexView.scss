@@ -23,6 +23,15 @@
       color: $gray-light;
     }
 
+    .github-button {
+      visibility: hidden;
+    }
+
+    iframe {
+      display: block;
+      margin: 16px auto 0;
+    }
+
     .install-btn {
       width: 280px;
       margin: 0 auto;
@@ -32,7 +41,7 @@
   .examples {
     width: 1000px;
     margin: 0 auto;
-    margin-top: 60px;
+    margin-top: 30px;
 
     > .ex-code {
       width: 540px;
@@ -52,14 +61,19 @@
 
       > li {
         float: left;
-        text-align: left;
         vertical-align: top;
         width: 250px;
         margin: 40px;
 
+        i {
+          font-size: 48px;
+        }
+
         strong {
           font-size: $font-size-xxl;
           font-weight: 700;
+          display: block;
+          margin: 8px auto;
         }
 
         .text {
@@ -71,12 +85,18 @@
   }
 
   .like {
+    padding-top: 42px;
     margin-bottom: 20px;
     text-align: center;
-    background-color: #eee;
+    background-color: #22b5bf;
+    color: white;
+
+    i {
+      font-size: 48px;
+    }
 
     .text {
-      padding-top: 40px;
+      padding-top: 20px;
       font-size: $font-size-xxxl;
     }
 
