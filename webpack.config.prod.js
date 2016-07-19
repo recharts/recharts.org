@@ -20,17 +20,19 @@ module.exports = {
   },
 
   module: {
-    loaders: [{
-      test: /\.jsx?$/,
-      include: [
-        path.resolve(__dirname, 'src'),
-        path.resolve(__dirname, './node_modules/remaps'),
-      ],
-      loaders: ['babel'],
-    }, {
-      test: /\.scss$/,
-      loader: ExtractTextPlugin.extract('style-loader', sassLoaderBuild),
-    }],
+    loaders: [
+      {
+        test: /\.jsx?$/,
+        include: [
+          path.resolve(__dirname, 'src'),
+          path.resolve(__dirname, './node_modules/remaps'),
+        ],
+        loaders: ['babel'],
+      },
+      { test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: 'url-loader?limit=10000&mimetype=application/font-woff' },
+      { test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: 'file-loader' },
+      { test: /\.scss$/, loader: ExtractTextPlugin.extract('style-loader', sassLoaderBuild) },
+    ],
   },
 
   postcss: [

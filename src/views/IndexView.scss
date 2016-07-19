@@ -52,16 +52,19 @@
 
       > li {
         float: left;
-        // text-align: left;
         vertical-align: top;
         width: 250px;
         margin: 40px;
+
+        i {
+          font-size: 48px;
+        }
 
         strong {
           font-size: $font-size-xxl;
           font-weight: 700;
           display: block;
-          margin-bottom: 12px;
+          margin: 8px auto;
         }
 
         .text {

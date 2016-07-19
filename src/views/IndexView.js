@@ -4,6 +4,7 @@ import { LineChart, Line, XAxis, YAxis, Tooltip, CartesianGrid } from 'recharts'
 import Highlight from 'utils/Highlight';
 import pureRender from 'pure-render-decorator';
 import './IndexView.scss';
+import 'simple-line-icons/scss/simple-line-icons.scss';
 
 const data = [
   { name: 'A', uv: 400, pv: 240, amt: 2400 },
@@ -32,7 +33,7 @@ class IndexView extends Component {
         <div className="desc">
           <p className="title">Recharts</p>
           <p className="subtitle">A powerful composable charting library built on React</p>
-          <p><a href="/guide#installation" className="button install-btn">Install v0.12.5</a></p>
+          <p><a href="/guide#installation" className="button install-btn"><i className="icon-energy"></i> Install v0.12.5</a></p>
         </div>
         <div className="examples">
           <div className="ex-code">
@@ -49,14 +50,17 @@ class IndexView extends Component {
         <div className="features">
           <ul className="feat">
             <li>
+              <i className="icon-puzzle"></i>
               <strong>Composable</strong>
               <p className="text">Quickly build your charts with decoupled, reusable React components.</p>
             </li>
             <li>
+              <i className="icon-layers"></i>
               <strong>Reliable</strong>
               <p className="text">Built on top of SVG elements with a lightweight dependency on D3 submodules.</p>
             </li>
             <li>
+              <i className="icon-energy"></i>
               <strong>Powerful</strong>
               <p className="text">Customize your chart by tweaking component props and passing in custom components.</p>
             </li>
