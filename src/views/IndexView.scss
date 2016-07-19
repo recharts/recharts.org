@@ -85,12 +85,18 @@
   }
 
   .like {
+    padding-top: 42px;
     margin-bottom: 20px;
     text-align: center;
-    background-color: #eee;
+    background-color: #22b5bf;
+    color: white;
+
+    i {
+      font-size: 48px;
+    }
 
     .text {
-      padding-top: 40px;
+      padding-top: 20px;
       font-size: $font-size-xxxl;
     }
 

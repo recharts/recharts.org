@@ -68,6 +68,7 @@ class IndexView extends Component {
           </ul>
         </div>
         <div className="like">
+          <i className="icon-rocket"></i>
           <p className="text">Recharts makes it easy to integrate charts into your React application</p>
           <p className="btn"><a href="/guide#getting-started" className="button getting-started-btn">Get Started</a></p>
         </div>
