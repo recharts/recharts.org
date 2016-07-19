@@ -31,7 +31,7 @@ class IndexView extends Component {
       <div className="page page-index">
         <div className="desc">
           <p className="title">Recharts</p>
-          <p className="subtitle">Redefined chart library built with React</p>
+          <p className="subtitle">A next-generation chart library Redefined with React</p>
           <p><a href="/guide#installation" className="button install-btn">Install v0.12.5</a></p>
         </div>
         <div className="examples">
@@ -49,19 +49,16 @@ class IndexView extends Component {
         <div className="features">
           <ul className="feat">
             <li>
-              <strong>Componentized</strong>
-              <p className="text">Compose your application with decoupled, reusable React components.
-              Depend by React Virtual DOM, you will use it more assured.</p>
+              <strong>Composable</strong>
+              <p className="text">Quickly build your charts with decoupled, reusable React components.</p>
             </li>
             <li>
-              <strong>Comfortable</strong>
-              <p className="text">Simplely deploy with configuration of props. Native SVG elements supported,
-              and lightweight depend on the D3 submodules, but you don't write D3 code any more.</p>
+              <strong>Powerful</strong>
+              <p className="text">Built on top of SVG elements with a lightweight dependency on D3 submodules.</p>
             </li>
             <li>
               <strong>Customizable</strong>
-              <p className="text">Separated components of each chart kind,
-              so you can redefine the sub components to realize your mind or use sub components to define new charts.</p>
+              <p className="text">Configure your chart by simply tweaking your props and passing in your own custom components.</p>
             </li>
           </ul>
         </div>
