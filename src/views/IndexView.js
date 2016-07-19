@@ -31,7 +31,7 @@ class IndexView extends Component {
       <div className="page page-index">
         <div className="desc">
           <p className="title">Recharts</p>
-          <p className="subtitle">A next-generation chart library Redefined with React</p>
+          <p className="subtitle">A powerful composable charting library built on React</p>
           <p><a href="/guide#installation" className="button install-btn">Install v0.12.5</a></p>
         </div>
         <div className="examples">
@@ -53,18 +53,18 @@ class IndexView extends Component {
               <p className="text">Quickly build your charts with decoupled, reusable React components.</p>
             </li>
             <li>
-              <strong>Powerful</strong>
+              <strong>Reliable</strong>
               <p className="text">Built on top of SVG elements with a lightweight dependency on D3 submodules.</p>
             </li>
             <li>
-              <strong>Customizable</strong>
-              <p className="text">Configure your chart by simply tweaking your props and passing in your own custom components.</p>
+              <strong>Powerful</strong>
+              <p className="text">Customize your chart by tweaking component props and passing in custom components.</p>
             </li>
           </ul>
         </div>
         <div className="like">
-          <p className="text">Recharts enables deeper integration of charts into your React application</p>
-          <p className="btn"><a href="/guide#getting-started" className="button getting-started-btn">Getting Started</a></p>
+          <p className="text">Recharts makes it easy to integrate charts into your React application</p>
+          <p className="btn"><a href="/guide#getting-started" className="button getting-started-btn">Get Started</a></p>
         </div>
       </div>
     );
