@@ -23,6 +23,15 @@
       color: $gray-light;
     }
 
+    .github-button {
+      visibility: hidden;
+    }
+
+    iframe {
+      display: block;
+      margin: 16px auto 0;
+    }
+
     .install-btn {
       width: 280px;
       margin: 0 auto;
@@ -32,7 +41,7 @@
   .examples {
     width: 1000px;
     margin: 0 auto;
-    margin-top: 60px;
+    margin-top: 30px;
 
     > .ex-code {
       width: 540px;

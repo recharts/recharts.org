@@ -34,6 +34,7 @@ class IndexView extends Component {
           <p className="title">Recharts</p>
           <p className="subtitle">A powerful composable charting library built on React</p>
           <p><a href="/guide#installation" className="button install-btn"><i className="icon-energy"></i> Install v0.12.5</a></p>
+          <a className="github-button" href="https://github.com/recharts/recharts" data-style="mega" data-count-href="/recharts/recharts/stargazers" data-count-api="/repos/recharts/recharts#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star Recharts on GitHub">Star</a>
         </div>
         <div className="examples">
           <div className="ex-code">
