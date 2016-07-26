@@ -33,7 +33,7 @@ class IndexView extends Component {
         <div className="desc">
           <p className="title">Recharts</p>
           <p className="subtitle">A composable charting library built on React components</p>
-          <p><a href="/guide#installation" className="button install-btn"><i className="icon-energy"></i> Install v0.12.5</a></p>
+          <p><a href="/guide#installation" className="button install-btn"><i className="icon-energy"></i> Install v0.12.7</a></p>
           <iframe src="https://ghbtns.com/github-btn.html?user=recharts&repo=recharts&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe>
         </div>
         <div className="examples">

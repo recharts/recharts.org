@@ -45,6 +45,12 @@ export default {
       isOptional: false,
       desc: 'The type of axis.',
     }, {
+      name: 'allowDecimals',
+      type: 'Boolean',
+      defaultVal: 'true',
+      isOptional: false,
+      desc: 'Allow the ticks of XAxis to be decimals or not.',
+    }, {
       name: 'tickCount',
       type: 'Number',
       defaultVal: '5',

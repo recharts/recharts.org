@@ -95,6 +95,12 @@ export default {
       isOptional: false,
       desc: 'The minimum gab between two adjacent labels.',
     }, {
+      name: 'allowDecimals',
+      type: 'Boolean',
+      defaultVal: 'true',
+      isOptional: false,
+      desc: 'Allow the ticks of YAxis to be decimals or not.',
+    }, {
       name: 'axisLine',
       type: 'Boolean | Object',
       defaultVal: 'true',
