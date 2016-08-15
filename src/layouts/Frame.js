@@ -1,6 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import { browserHistory } from 'react-router';
+import Helmet from 'react-helmet';
 import Link from 'utils/Link';
 import 'styles/app.scss';
 
@@ -20,6 +21,7 @@ class Frame extends Component {
 
     return (
       <div className="container">
+        <Helmet titleTemplate={'%s | Recharts'} />
         <header>
           <div className="header-wrapper">
             <h1 className="logo">

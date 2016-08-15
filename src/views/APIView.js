@@ -1,5 +1,6 @@
 import React, { PropTypes, cloneElement, Component } from 'react';
 import { connect } from 'react-redux';
+import Helmet from 'react-helmet';
 import API from 'docs/api';
 import Highlight from 'utils/Highlight';
 import pureRender from 'pure-render-decorator';
@@ -92,6 +93,7 @@ class APIView extends Component {
 
     return (
       <div className="page page-api">
+        <Helmet title={page} />
         <div className="sidebar">
           <h2>API</h2>
           <h4>Charts</h4>
