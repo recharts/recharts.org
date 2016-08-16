@@ -45,7 +45,7 @@ export default {
       type: 'Boolean | Object | ReactElement | Function',
       defaultVal: 'false',
       isOptional: false,
-      desc: 'If false set, dots will not be drawed. If true set, dots will be drawed which have the props calculated internally. If object set, dots will be drawed which have the props mergered by the internal calculated props and the option. If ReactElement set, the option can be the custom dot element. If set a function, the function will be called to render customized dot.',
+      desc: 'If false set, dots will not be drawn. If true set, dots will be drawn which have the props calculated internally. If object set, dots will be drawn which have the props mergered by the internal calculated props and the option. If ReactElement set, the option can be the custom dot element. If set a function, the function will be called to render customized dot.',
       format: [
         `<Area dataKey="value" dot={false} />`,
         `<Area dataKey="value" dot={{ stroke: 'red', strokeWidth: 2 }} />`,
@@ -57,7 +57,7 @@ export default {
       type: 'Boolean | Object | ReactElement | Function',
       defaultVal: 'true',
       isOptional: false,
-      desc: 'The dot is shown when muser enter a area chart and this chart has tooltip. If false set, no active dot will not be drawed. If true set, active dot will be drawed which have the props calculated internally. If object set, active dot will be drawed which have the props mergered by the internal calculated props and the option. If ReactElement set, the option can be the custom active dot element.If set a function, the function will be called to render customized active dot.',
+      desc: 'The dot is shown when muser enter a area chart and this chart has tooltip. If false set, no active dot will not be drawn. If true set, active dot will be drawn which have the props calculated internally. If object set, active dot will be drawn which have the props mergered by the internal calculated props and the option. If ReactElement set, the option can be the custom active dot element.If set a function, the function will be called to render customized active dot.',
       format: [
         `<Area dataKey="value" activeDot={false} />`,
         `<Area dataKey="value" activeDot={{ stroke: 'red', strokeWidth: 2, r: 10 }} />`,
@@ -69,7 +69,7 @@ export default {
       type: 'Boolean | Object | ReactElement | Function',
       defaultVal: 'false',
       isOptional: false,
-      desc: 'If false set, labels will not be drawed. If true set, labels will be drawed which have the props calculated internally. If object set, labels will be drawed which have the props mergered by the internal calculated props and the option. If ReactElement set, the option can be the custom label element. If set a function, the function will be called to render customized label.',
+      desc: 'If false set, labels will not be drawn. If true set, labels will be drawn which have the props calculated internally. If object set, labels will be drawn which have the props mergered by the internal calculated props and the option. If ReactElement set, the option can be the custom label element. If set a function, the function will be called to render customized label.',
       format: [
         `<Area dataKey="value" label />`,
         `<Area dataKey="value" label={{ fill: 'red', fontSize: 20 }} />`,
@@ -81,7 +81,7 @@ export default {
       type: 'Boolean',
       defaultVal: 'true',
       isOptional: false,
-      desc: 'If false set, curve will not be drawed.',
+      desc: 'If false set, curve will not be drawn.',
     }, {
       name: 'layout',
       type: `'horizontal', 'vertical'`,

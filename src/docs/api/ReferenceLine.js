@@ -103,7 +103,7 @@ export default {
       type: 'String | Number | ReactElement | Function',
       defaultVal: 'null',
       isOptional: true,
-      desc: 'If set a string or a number, default label will be drawed, and the option is content. If set a React element, the option is the custom react element of drawing label. If set a function, the function will be called to render customized label.',
+      desc: 'If set a string or a number, default label will be drawn, and the option is content. If set a React element, the option is the custom react element of drawing label. If set a function, the function will be called to render customized label.',
       format: [
         `<ReferenceLine type="horizontal" value={400} label="MAX"/>`,
         `<ReferenceLine type="horizontal" value={400} label={<CustomizedLabel />}/>`,

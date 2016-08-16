@@ -49,7 +49,7 @@ export default {
       type: 'Boolean | Object | ReactElement',
       defaultVal: 'true',
       isOptional: false,
-      desc: 'If set false, no cursor will be drawed when tooltip is active. If set a object, the option is the configuration of cursor. If set a React element, the option is the custom react element of drawing cursor.',
+      desc: 'If set false, no cursor will be drawn when tooltip is active. If set a object, the option is the configuration of cursor. If set a React element, the option is the custom react element of drawing cursor.',
       format: [
         `<Tooltip cursor={false} />`,
         `<Tooltip cursor={{ stroke: 'red', strokeWidth: 2 }} />`,

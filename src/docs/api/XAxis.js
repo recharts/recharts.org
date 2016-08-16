@@ -105,13 +105,13 @@ export default {
       type: 'Boolean | Object',
       defaultVal: 'true',
       isOptional: false,
-      desc: 'If set false, no axis line will be drawed. If set a object, the option is the configuration of axis line.',
+      desc: 'If set false, no axis line will be drawn. If set a object, the option is the configuration of axis line.',
     }, {
       name: 'tickLine',
       type: 'Boolean | Object',
       defaultVal: 'true',
       isOptional: false,
-      desc: 'If set false, no axis tick lines will be drawed. If set a object, the option is the configuration of tick lines.',
+      desc: 'If set false, no axis tick lines will be drawn. If set a object, the option is the configuration of tick lines.',
     }, {
       name: 'tickSize',
       type: 'Number',
@@ -135,7 +135,7 @@ export default {
       type: 'Boolean | Object | ReactElement',
       defaultVal: 'null',
       isOptional: true,
-      desc: 'If set false, no ticks will be drawed. If set a object, the option is the configuration of ticks. If set a React element, the option is the custom react element of drawing ticks.',
+      desc: 'If set false, no ticks will be drawn. If set a object, the option is the configuration of ticks. If set a React element, the option is the custom react element of drawing ticks.',
       format: [
         `<XAxis tick={false} />`,
         `<XAxis tick={{stroke: 'red', strokeWidth: 2}} />`,
@@ -150,7 +150,7 @@ export default {
       type: 'String | Number | ReactElement',
       defaultVal: 'null',
       isOptional: true,
-      desc: 'If set a string or a number, default label will be drawed, and the option is content. If set a React element, the option is the custom react element of drawing label.',
+      desc: 'If set a string or a number, default label will be drawn, and the option is content. If set a React element, the option is the custom react element of drawing label.',
       format: [
         `<XAxis label="Height" />`,
         `<XAxis label={<CustomizedLabel />} />`,

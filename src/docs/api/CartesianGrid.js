@@ -31,13 +31,13 @@ export default {
       type: 'Boolean',
       defaultVal: 'true',
       isOptional: false,
-      desc: 'If set false, no horizontal grid lines will be drawed.',
+      desc: 'If set false, no horizontal grid lines will be drawn.',
     }, {
       name: 'vertical',
       type: 'Boolean',
       defaultVal: 'true',
       isOptional: false,
-      desc: 'If set false, no vertical grid lines will be drawed.',
+      desc: 'If set false, no vertical grid lines will be drawn.',
     }, {
       name: 'horizontalPoints',
       type: 'Array',

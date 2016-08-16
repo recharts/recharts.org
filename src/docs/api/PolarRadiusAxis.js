@@ -35,7 +35,7 @@ export default {
       type: 'String | Number | ReactElement | Function',
       defaultVal: 'null',
       isOptional: true,
-      desc: 'If set a string or a number, default label will be drawed, and the option is content. If set a React element, the option is the custom react element of drawing label. If set a function, the function will be called to render customized label.',
+      desc: 'If set a string or a number, default label will be drawn, and the option is content. If set a React element, the option is the custom react element of drawing label. If set a function, the function will be called to render customized label.',
     }, {
       name: 'orientation',
       type: 'String',
@@ -47,13 +47,13 @@ export default {
       type: 'Bool | Object',
       defaultVal: 'true',
       isOptional: false,
-      desc: 'If false set, axis line will not be drawed. If true set, axis line will be drawed which have the props calculated internally. If object set, axis line will be drawed which have the props mergered by the internal calculated props and the option.',
+      desc: 'If false set, axis line will not be drawn. If true set, axis line will be drawn which have the props calculated internally. If object set, axis line will be drawn which have the props mergered by the internal calculated props and the option.',
     }, {
       name: 'tick',
       type: 'Bool | Object | Element | Function',
       defaultVal: 'true',
       isOptional: false,
-      desc: 'If false set, ticks will not be drawed. If true set, ticks will be drawed which have the props calculated internally. If object set, ticks will be drawed which have the props mergered by the internal calculated props and the option. If ReactElement set, the option can be the custom tick element. If set a function, the function will be called to render customized ticks.',
+      desc: 'If false set, ticks will not be drawn. If true set, ticks will be drawn which have the props calculated internally. If object set, ticks will be drawn which have the props mergered by the internal calculated props and the option. If ReactElement set, the option can be the custom tick element. If set a function, the function will be called to render customized ticks.',
     }, {
       name: 'tickFormatter',
       type: 'Function',
