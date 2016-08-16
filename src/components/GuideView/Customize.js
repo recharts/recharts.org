@@ -86,7 +86,7 @@ function Customize() {
       </div>
 
       <h4>4. The style of each chart element can be customized</h4>
-      <p>Except tooltip and legend, all the element in a chart is drawed by svg element. So you can change the attributes of each chart element conveniently.</p>
+      <p>Except tooltip and legend, all the element in a chart is drawn by svg element. So you can change the attributes of each chart element conveniently.</p>
       <div className="demo">
         <Highlight className="e4x">
         {
@@ -110,7 +110,7 @@ function Customize() {
       </div>
 
       <h4>5. The style of tooltip, legend can be customized</h4>
-      <p>Though tooltip, legend are drawed by svg elements, you may change the style of tooltip, legend by the apis wo offer. of cource, you can change the style in css too.</p>
+      <p>Though tooltip, legend are drawn by svg elements, you may change the style of tooltip, legend by the apis wo offer. of cource, you can change the style in css too.</p>
       <div className="demo">
         <Highlight className="e4x">
         {
