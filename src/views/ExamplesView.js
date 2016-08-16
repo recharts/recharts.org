@@ -1,5 +1,6 @@
 import React, { PropTypes, Component } from 'react';
 import { connect } from 'react-redux';
+import Helmet from 'react-helmet';
 import pureRender from 'pure-render-decorator';
 import Examples from 'docs/examples';
 
@@ -38,6 +39,7 @@ class ExamplesView extends Component {
 
     return (
       <div className="page page-examples">
+        <Helmet title={page} />
         <div className="sidebar">
           <h2>Examples</h2>
 
