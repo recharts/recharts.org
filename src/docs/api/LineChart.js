@@ -50,6 +50,15 @@ export default {
       isOptional: false,
       desc: 'The layout of lines in the chart.',
     }, {
+      name: 'syncId',
+      type: 'String',
+      isOptional: true,
+      desc: 'If any two categorical charts(LineChart, AreaChart, BarChart, ComposedChart) have the same syncId, these two charts can sync the position tooltip, and the startIndex, endIndex of Brush.',
+      examples: [{
+        name: "Two synchronized LineChart and an AreaChart",
+        url: '/examples#SynchronizedLineChart',
+      }]
+    }, {
       name: 'width',
       type: 'Number',
       defaultVal: 'undefined',
