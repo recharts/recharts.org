@@ -10,7 +10,7 @@ export default {
   LineChartWithXAxisPading: '//jsfiddle.net/1uz4kg7f/embedded/result,js,css,html,resources/',
   VerticalLineChartWithSpecifiedDomain: '//jsfiddle.net/ancpedz4/embedded/result,js,css,html,resources/',
   LineChartConnectNulls: '//jsfiddle.net/tqv821tz/embedded/result,js,css,html,resources/',
-  SynchronizedLineChart: '//jsfiddle.net/6bpe0c4k/embedded/result,js,css,html,resources/',
+  SynchronizedLineChart: '//jsfiddle.net/6bpe0c4k/2/embedded/result,js,css,html,resources/',
 
   SimpleAreaChart: '//jsfiddle.net/5p61t9qp/3/embedded/result,js,css,html,resources/',
   StackedAreaChart: '//jsfiddle.net/ze8c333g/9/embedded/result,js,css,html,resources/',
