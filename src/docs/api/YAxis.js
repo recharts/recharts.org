@@ -27,7 +27,7 @@ export default {
       isOptional: false,
       desc: 'The width of axis, which can be setted by user.',
     }, {
-      name: 'hight',
+      name: 'height',
       type: 'Number',
       defaultVal: '0',
       isOptional: false,
