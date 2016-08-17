@@ -28,7 +28,7 @@ export default {
       desc: 'The id of y-axis which is corresponding to the data.',
     }, {
       name: 'legendType',
-      type: '\'line\', \'scatter\', \'square\', \'rect\'',
+      type: `'line' | 'square' | 'rect'| 'circle' | 'cross' | 'diamond' | 'square' | 'star' | 'triangle' | 'wye'`,
       defaultVal: '\'rect\'',
       isOptional: false,
       desc: 'The type of icon in legend, which can be \'line\', \'scatter\', \'square\', \'rect\'.',

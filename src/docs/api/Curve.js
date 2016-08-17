@@ -34,6 +34,19 @@ export default {
       isOptional: true,
       desc: 'The value which can describle the line.',
     }, {
+      name: 'connectNulls',
+      type: 'Boolean',
+      defaultVal: 'false',
+      isOptional: false,
+      desc: 'Whether to connect a curve across null points.',
+      examples: [{
+        name: 'A lineChart connect nulls and a lineChart disconnect nulls',
+        url: '/examples#LineChartConnectNulls',
+      }, {
+        name: 'An areaChart connect nulls and an areaChart disconnect nulls',
+        url: '/examples#AreaChartConnectNulls',
+      }]
+    }, {
       name: 'onMouseEnter',
       type: 'Function',
       defaultVal: 'null',

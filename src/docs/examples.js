@@ -9,12 +9,14 @@ export default {
   DashedLineChart: '//jsfiddle.net/tqar2v5x/3/embedded/result,js,css,html,resources/',
   LineChartWithXAxisPading: '//jsfiddle.net/1uz4kg7f/embedded/result,js,css,html,resources/',
   VerticalLineChartWithSpecifiedDomain: '//jsfiddle.net/ancpedz4/embedded/result,js,css,html,resources/',
+  LineChartConnectNulls: '//jsfiddle.net/tqv821tz/embedded/result,js,css,html,resources/',
 
   SimpleAreaChart: '//jsfiddle.net/5p61t9qp/3/embedded/result,js,css,html,resources/',
   StackedAreaChart: '//jsfiddle.net/ze8c333g/9/embedded/result,js,css,html,resources/',
   TinyAreaChart: '//jsfiddle.net/kfyyjvqx/1/embedded/result,js,css,html,resources/',
   PercentAreaChart: '//jsfiddle.net/ty4cn9p8/1/embedded/result,js,css,html,resources/',
   CardinalAreaChart: '//jsfiddle.net/hbj2u8d3/embedded/result,js,css,html,resources/',
+  AreaChartConnectNulls: '//jsfiddle.net/h17oL3ev/embedded/result,js,css,html,resources/',
 
   TinyBarChart: '//jsfiddle.net/576yk9so/3/embedded/result,js,css,html,resources/',
   SimpleBarChart: '//jsfiddle.net/u8udorvy/4/embedded/result,js,css,html,resources/',
@@ -25,6 +27,7 @@ export default {
   BrushBarChart: '//jsfiddle.net/xtdssj96/2/embedded/result,js,css,html,resources/',
   BarChartWithCustomizedEvent: '//jsfiddle.net/o72mj9br/1/embedded/result,js,css,html,resources/',
   BarChartWithMinHeight: '//jsfiddle.net/5ea9r58j/embedded/result,js,css,html,resources/',
+  BarChartStackedBySign: '//jsfiddle.net/xx835b1o/embedded/result,js,css,html,resources/',
 
   LineBarAreaComposedChart: '//jsfiddle.net/vfnmdp53/5/embedded/result,js,css,html,resources/',
   VerticalComposedChart: '//jsfiddle.net/t4t5rx16/6/embedded/result,js,css,html,resources/',

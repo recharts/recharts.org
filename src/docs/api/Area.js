@@ -36,7 +36,7 @@ export default {
       desc: 'The id of y-axis which is corresponding to the data.',
     }, {
       name: 'legendType',
-      type: '\'line\', \'scatter\', \'square\', \'rect\'',
+      type: `'line' | 'square' | 'rect'| 'circle' | 'cross' | 'diamond' | 'square' | 'star' | 'triangle' | 'wye'`,
       defaultVal: '\'line\'',
       isOptional: false,
       desc: 'The type of icon in legend.',
@@ -124,6 +124,16 @@ export default {
         name: 'A stacked area chart',
         url: '/examples#StackedAreaChart'
       }],
+    }, {
+      name: 'connectNulls',
+      type: 'Boolean',
+      defaultVal: 'false',
+      isOptional: false,
+      desc: 'Whether to connect a graph area across null points.',
+      examples: [{
+        name: 'An areaChart connect nulls and an areaChart disconnect nulls',
+        url: '/examples#AreaChartConnectNulls',
+      }]
     }, {
       name: 'unit',
       type: 'String | Number',

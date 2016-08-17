@@ -36,7 +36,7 @@ export default {
       desc: 'The id of y-axis which is corresponding to the data.',
     }, {
       name: 'legendType',
-      type: '\'line\', \'scatter\', \'square\', \'rect\'',
+      type: `'line' | 'square' | 'rect'| 'circle' | 'cross' | 'diamond' | 'square' | 'star' | 'triangle' | 'wye'`,
       defaultVal: '\'line\'',
       isOptional: false,
       desc: 'The type of icon in legend.',
@@ -107,6 +107,16 @@ export default {
       defaultVal: 'null',
       isOptional: true,
       desc: 'The formatter function of data.',
+    }, {
+      name: 'connectNulls',
+      type: 'Boolean',
+      defaultVal: 'false',
+      isOptional: false,
+      desc: 'Whether to connect a graph line across null points.',
+      examples: [{
+        name: 'A lineChart connect nulls and a lineChart disconnect nulls',
+        url: '/examples#LineChartConnectNulls',
+      }]
     }, {
       name: 'unit',
       type: 'String | Number',

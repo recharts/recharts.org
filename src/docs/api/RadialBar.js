@@ -40,7 +40,7 @@ export default {
       desc: 'The minimum angle of each bar.',
     }, {
       name: 'legendType',
-      type: 'String',
+      type: `'line' | 'square' | 'rect'| 'circle' | 'cross' | 'diamond' | 'square' | 'star' | 'triangle' | 'wye'`,
       defaultVal: '\'rect\'',
       isOptional: false,
       desc: 'The type of icon in legend, which can be \'line\', \'scatter\', \'square\', \'rect\'.',

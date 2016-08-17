@@ -46,17 +46,23 @@ export default {
       isOptional: false,
       desc: 'The width of each traveller.',
     }, {
-      name: 'defaultStartIndex',
+      name: 'startIndex',
       type: 'Number',
       defaultVal: 'null',
       isOptional: true,
       desc: 'The default start index of brush. If the option is not setted, the start index will be 0.',
     }, {
-      name: 'defaultEndIndex',
+      name: 'endIndex',
       type: 'Number',
       defaultVal: 'null',
       isOptional: true,
       desc: 'The default end index of brush. If the option is not setted, the end index will be calculated by the length of data.',
+    }, {
+      name: 'tickFormatter',
+      type: 'Function',
+      defaultVal: 'null',
+      isOptional: true,
+      desc: 'The formatter function of ticks.'
     }, {
       name: 'onChange',
       type: 'Function',

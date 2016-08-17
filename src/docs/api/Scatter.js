@@ -4,8 +4,8 @@ export default {
   props: [
     {
       name: 'legendType',
-      type: '\'line\', \'scatter\', \'square\', \'rect\'',
-      defaultVal: '\'scatter\'',
+      type: `'line' | 'square' | 'rect'| 'circle' | 'cross' | 'diamond' | 'square' | 'star' | 'triangle' | 'wye'`,
+      defaultVal: `'circle'`,
       isOptional: false,
       desc: 'The type of icon in legend.',
     }, {

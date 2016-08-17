@@ -103,10 +103,14 @@ export default {
       ],
     }, {
       name: 'stackOffset',
-      type: `'expand', 'none', 'wiggle', 'silhouette'`,
+      type: `'expand', 'none', 'wiggle', 'silhouette', 'sign'`,
       defaultVal: `'none'`,
       isOptional: false,
       desc: 'The type of offset function used to generate the lower and upper values in the series array. The four types are built-in offsets in d3-shape.',
+      examples: [{
+        name: 'A barChart stacked by sign of value',
+        value: '/examples/#BarChartStackedBySign',
+      }],
     }, {
       name: 'onClick',
       type: 'Function',
