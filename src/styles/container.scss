@@ -19,11 +19,12 @@ header {
 
   .logo {
     float: left;
-    width: 130px;
+    width: 132px;
     margin-right: 60px;
     font-family: $font-family-code;
     font-weight: 300;
     font-size: $font-size-xl;
+    white-space: nowrap;
 
     > a {
       color: $brand-info;
