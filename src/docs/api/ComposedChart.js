@@ -32,15 +32,15 @@ export default {
       name: 'Composed Chart',
       demo: example,
       code: `<ComposedChart width={730} height={250} data={data}>
-  <XAxis dataKey="name" />
-  <YAxis />
-  <Tooltip />
-  <Legend />
-  <CartesianGrid stroke="#f5f5f5" />
-  <Area type="monotone" dataKey="amt" fill="#8884d8" stroke="#8884d8" />
-  <Bar dataKey="pv" barSize={20} fill="#413ea0" />
-  <Line type="monotone" dataKey="uv" stroke="#ff7300" />
-</ComposedChart>`
+    <XAxis dataKey="name" />
+    <YAxis />
+    <Tooltip />
+    <Legend />
+    <CartesianGrid stroke="#f5f5f5" />
+    <Area type="monotone" dataKey="amt" fill="#8884d8" stroke="#8884d8" />
+    <Bar dataKey="pv" barSize={20} fill="#413ea0" />
+    <Line type="monotone" dataKey="uv" stroke="#ff7300" />
+  </ComposedChart>`
     },
   ],
   props: [
@@ -103,6 +103,20 @@ export default {
       defaultVal: 'undefined',
       isOptional: true,
       desc: 'The width or height of each bar. If the barSize is not specified, the size of the bar will be calculated by the barCategoryGap, barGap and the quantity of bar groups.',
+    },
+    {
+      name: 'cursorFill',
+      type: 'String',
+      defaultVal: '#f1f1f1',
+      isOptional: true,
+      desc: 'Bar hover fill color',
+    },
+    {
+      name: 'cursorStroke',
+      type: 'String',
+      defaultVal: '',
+      isOptional: true,
+      desc: 'Bar hover stroke color, the default is no stroke color',
     },
   ],
 };
