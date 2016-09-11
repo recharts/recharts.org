@@ -13,10 +13,10 @@ const Installation = () => (
     }
     </Highlight>
     <h4>UMD</h4>
-    <p>The UMD build is also available on <a href="https://npmcdn.com/" target="_blank">npmcdn</a>:</p>
+    <p>The UMD build is also available on <a href="https://unpkg.com/" target="_blank">unpkg</a>:</p>
     <Highlight className="html">
     {
-`  <script src="https://npmcdn.com/recharts/umd/Recharts.min.js"></script>`
+`  <script src="https://unpkg.com/recharts/umd/Recharts.min.js"></script>`
     }
     </Highlight>
     <p>You can find the library on <code>window.Recharts</code></p>
