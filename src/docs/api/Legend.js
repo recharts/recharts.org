@@ -112,7 +112,7 @@ export default {
       type: 'ReactElement | Function',
       defaultVal: 'null',
       isOptional: true,
-      desc: 'If set a React element, the option is the custom react element of rendering tooltip. If set a function, the function will be called to render tooltip content.',
+      desc: 'If set to a React element, the option will be used to render the legend. If set to a function, the function will be called to render the legend\'s content.',
       format: [
         `<Legend content={<CustomizedLegend external={external} />} />`,
         `
