@@ -39,12 +39,6 @@ export default {
       isOptional: false,
       desc: 'The array of every circle grid\'s radius.',
     }, {
-      name: 'gridCount',
-      type: 'Number',
-      defaultVal: '2',
-      isOptional: false,
-      desc: 'The count of polar grids.',
-    }, {
       name: 'gridType',
       type: `'polygon', 'circle'`,
       defaultVal: 'polygon',
