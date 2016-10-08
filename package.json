@@ -71,7 +71,7 @@
     "react-router": "~2.3.0",
     "react-router-redux": "~4.0.5",
     "react-router-scroll": "~0.2.0",
-    "recharts": "~0.13.0",
+    "recharts": "~0.15.0",
     "redux": "~3.5.2",
     "scroll-behavior": "^0.8.1",
     "simple-line-icons": "^2.3.2",
