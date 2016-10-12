@@ -56,6 +56,12 @@ export default {
       isOptional: true,
       desc: 'The width or height of each bar. If the barSize is not specified, the size of bar will be caculated by the barCategoryGap, barGap and the quantity of bar groups.'
     }, {
+      name: 'maxBarSize',
+      type: 'Number',
+      defaultVal: '',
+      defaultVal: false,
+      desc: 'The maximum width of bar in a horizontal BarChart, or maximum height in a vertical BarChart.'
+    }, {
       name: 'minPointSize',
       type: 'Number',
       defaultVal: 0,

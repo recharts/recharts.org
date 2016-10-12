@@ -87,17 +87,17 @@ export default {
       isOptional: false,
       desc: 'The box of viewing area, which has the shape of {x: someVal, y: someVal, width: someVal, height: someVal}, usually calculated internally.',
     }, {
-      name: 'xAxisMap',
+      name: 'xAxis',
       type: 'Object',
       defaultVal: 'null',
       isOptional: false,
-      desc: 'The configurations of all the x-axes in the chart, usually calculated internally.',
+      desc: 'The configuration of the corresponding x-axis, usually calculated internally.',
     }, {
-      name: 'yAxisMap',
+      name: 'yAxis',
       type: 'Object',
       defaultVal: 'null',
       isOptional: false,
-      desc: 'The configurations of all the y-axes in the chart, usually calculated internally.',
+      desc: 'The configuration of the corresponding y-axis, usually calculated internally.',
     }, {
       name: 'label',
       type: 'String | Number | ReactElement | Function',
@@ -105,8 +105,8 @@ export default {
       isOptional: true,
       desc: 'If set a string or a number, default label will be drawn, and the option is content. If set a React element, the option is the custom react element of drawing label. If set a function, the function will be called to render customized label.',
       format: [
-        `<ReferenceLine type="horizontal" value={400} label="MAX"/>`,
-        `<ReferenceLine type="horizontal" value={400} label={<CustomizedLabel />}/>`,
+        `<ReferenceLine x="05" label="Middle"/>`,
+        `<ReferenceLine y={400} yAxisId="left" label={<CustomizedLabel />}/>`,
       ],
       examples: [{
         name: 'ReferenceLines with label',

@@ -1,5 +1,6 @@
 import React from 'react';
-import { ScatterChart, Scatter, XAxis, YAxis, ZAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
+import { ScatterChart, Scatter, XAxis, YAxis, ZAxis, CartesianGrid, Tooltip,
+  Legend } from 'recharts';
 
 const data01 = [
   { x: 100, y: 200, z: 200 }, { x: 120, y: 100, z: 260 },

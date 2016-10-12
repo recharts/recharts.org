@@ -80,17 +80,17 @@ export default {
       isOptional: false,
       desc: 'If set true, the value of reference dot will be take into account when calculate the domain of corresponding axis, so that the reference dot will always show.',
     }, {
-      name: 'xAxisMap',
+      name: 'xAxis',
       type: 'Object',
       defaultVal: 'null',
       isOptional: false,
-      desc: 'The configurations of all the x-axes in the chart, usually calculated internally.',
+      desc: 'The configuration of the corresponding x-axis, usually calculated internally.',
     }, {
-      name: 'yAxisMap',
+      name: 'yAxis',
       type: 'Object',
       defaultVal: 'null',
       isOptional: false,
-      desc: 'The configurations of all the y-axes in the chart, usually calculated internally.',
+      desc: 'The configuration of the corresponding y-axis, usually calculated internally.',
     }, {
       name: 'label',
       type: 'String | Number | ReactElement | Function',

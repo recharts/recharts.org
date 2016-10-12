@@ -17,6 +17,7 @@ import YAxis from './YAxis';
 import ZAxis from './ZAxis';
 import ReferenceLine from './ReferenceLine';
 import ReferenceDot from './ReferenceDot';
+import ReferenceArea from './ReferenceArea';
 import Brush from './Brush';
 import CartesianAxis from './CartesianAxis';
 import CartesianGrid from './CartesianGrid';
@@ -25,6 +26,7 @@ import ResponsiveContainer from './ResponsiveContainer';
 import Legend from './Legend';
 import Tooltip from './Tooltip';
 import Cell from './Cell';
+import Text from './Text';
 
 import Pie from './Pie';
 import Radar from './Radar';
@@ -67,6 +69,7 @@ export default {
   Legend,
   Tooltip,
   Cell,
+  Text,
 
   Pie,
   RadialBar,
@@ -76,6 +79,7 @@ export default {
   PolarRadiusAxis,
   ReferenceLine,
   ReferenceDot,
+  ReferenceArea,
 
   Cross,
   Curve,

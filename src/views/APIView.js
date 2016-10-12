@@ -141,6 +141,9 @@ class APIView extends Component {
             <li>
               <a href="/api#Cell" className={page === 'Cell' ? 'active' : ''}>Cell</a>
             </li>
+            <li>
+              <a href="/api#Text" className={page === 'Text' ? 'active' : ''}>Text</a>
+            </li>
           </ul>
 
           <h4>Cartesian Components</h4>
@@ -180,6 +183,9 @@ class APIView extends Component {
             </li>
             <li>
               <a href="/api#ReferenceDot" className={page === 'ReferenceDot' ? 'active' : ''}>ReferenceDot</a>
+            </li>
+            <li>
+              <a href="/api#ReferenceArea" className={page === 'ReferenceArea' ? 'active' : ''}>ReferenceArea</a>
             </li>
           </ul>
 

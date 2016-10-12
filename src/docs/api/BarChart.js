@@ -111,6 +111,12 @@ export default {
         },
       ],
     }, {
+      name: 'maxBarSize',
+      type: 'Number',
+      defaultVal: '',
+      defaultVal: false,
+      desc: 'The maximum width of all the bars in a horizontal BarChart, or maximum height in a vertical BarChart.'
+    }, {
       name: 'stackOffset',
       type: `'expand', 'none', 'wiggle', 'silhouette', 'sign'`,
       defaultVal: `'none'`,
