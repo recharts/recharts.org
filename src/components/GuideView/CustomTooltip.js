@@ -17,14 +17,12 @@ function getIntroOfPage(label) {
   }
 }
 
-function CustomTooltip({ payload, label }) {
-  const { active } = this.props;
-
+function CustomTooltip({ payload, label, active }) {
   if (active) {
     return (
       <div className="custom-tooltip">
         <p className="label">{`${label} : ${payload[0].value}`}</p>
-        <p className="intro">{this.getIntroOfPage(label)}</p>
+        <p className="intro">{getIntroOfPage(label)}</p>
         <p className="desc">Anything you want can be displayed here.</p>
       </div>
     );
