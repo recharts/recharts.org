@@ -9,9 +9,10 @@ module.exports = {
   entry: {
     app: [
       'webpack-hot-middleware/client',   // Automatic Refresh
+      'react', 'react-dom', 'react-router', 'redux', 'react-redux', 'react-router-redux',
       './src/app',
     ],
-    vendors: ['react', 'react-dom', 'react-router', 'redux', 'react-redux', 'react-router-redux'],
+    // vendor: ['react', 'react-dom', 'react-router', 'redux', 'react-redux', 'react-router-redux'],
   },
 
   output: {
@@ -20,13 +21,16 @@ module.exports = {
     publicPath: '/static/',
   },
 
+  devServer: {
+    contentBase: __dirname + '/src',
+  },
+
   module: {
     loaders: [
       {
         test: /\.jsx?$/,
         include: [
           path.resolve(__dirname, 'src'),
-          path.resolve(__dirname, './node_modules/remaps'),
         ],
         loaders: ['react-hot', 'babel'],
       },
@@ -46,12 +50,15 @@ module.exports = {
       'styles': path.join(__dirname, './src/styles'),
       'docs': path.join(__dirname, './src/docs'),
     },
-    extensions: ['', '.js', '.jsx', '.scss', '.css'],
+    // enforceExtension: true,
+    // extensions: ['', '.js', '.jsx', '.scss', '.css'],
   },
 
   plugins: [
-    new webpack.optimize.CommonsChunkPlugin('vendors', 'vendors.js'),
-    new webpack.optimize.DedupePlugin(),
+    // new webpack.optimize.CommonsChunkPlugin({
+    //   name: 'vendor',
+    //   fileName: 'vendor.js',
+    // }),
     new webpack.DefinePlugin({
       __DEV__: true,
       __DEVTOOLS__: true,

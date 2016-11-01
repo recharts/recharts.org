@@ -66,6 +66,7 @@ class Frame extends Component {
         </header>
         { children }
         <footer>
+          <p>Contact us by <a href="https://demo.rocket.chat/channel/recharts" target="_blank">Rocket.Chat</a></p>
           <p>Released under the <a href="http://opensource.org/licenses/MIT" target="_blank">MIT License</a></p>
           <p>Copyright (c) 2016 Recharts Group</p>
         </footer>
