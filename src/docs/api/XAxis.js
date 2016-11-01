@@ -27,7 +27,7 @@ export default {
       isOptional: false,
       desc: 'The width of axis which is usually calculated internally.',
     }, {
-      name: 'hight',
+      name: 'height',
       type: 'Number',
       defaultVal: '30',
       isOptional: false,
