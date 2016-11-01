@@ -56,7 +56,7 @@ export default {
       type: 'Number',
       defaultVal: 'null',
       isOptional: true,
-      desc: 'The width of legend.',
+      desc: 'The height of legend.',
     }, {
       name: 'layout',
       type: '\'horizontal\', \'vertical\'',
