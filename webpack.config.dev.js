@@ -2,8 +2,6 @@ var path = require('path');
 var fs = require('fs');
 var webpack = require('webpack');
 
-var sassLoader = 'style!css!sass?sourceMap=true&sourceMapContents=true&includePaths[]=' + encodeURIComponent(path.resolve(__dirname, './src/styles'));
-
 module.exports = {
   devtool: 'cheap-module-eval-source-map',
   entry: {
@@ -26,17 +24,40 @@ module.exports = {
   },
 
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.jsx?$/,
         include: [
           path.resolve(__dirname, 'src'),
         ],
-        loaders: ['react-hot', 'babel'],
+        use: ['react-hot', 'babel'],
       },
-      { test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: 'url-loader?limit=10000&mimetype=application/font-woff' },
-      { test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: 'file-loader' },
-      { test: /\.scss$/, loader: sassLoader },
+      {
+        test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+        use: 'url-loader?limit=10000&mimetype=application/font-woff'
+      },
+      {
+        test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+        use: 'file-loader',
+      },
+      {
+        test: /\.scss$/,
+        use: [
+          'style',
+          'css',
+          {
+            loader: 'sass',
+            query: {
+              includePaths: [
+                path.resolve(__dirname, './src/styles'),
+                path.resolve(__dirname, './node_module/simple-line-icons/sass'),
+              ],
+              sourceMap: true,
+              sourceMapContents: true,
+            }
+          }
+        ]
+      },
     ],
   },
 
@@ -50,8 +71,6 @@ module.exports = {
       'styles': path.join(__dirname, './src/styles'),
       'docs': path.join(__dirname, './src/docs'),
     },
-    // enforceExtension: true,
-    // extensions: ['', '.js', '.jsx', '.scss', '.css'],
   },
 
   plugins: [
