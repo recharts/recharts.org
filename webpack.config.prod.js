@@ -7,7 +7,7 @@ var cssnano = require('cssnano');
 module.exports = {
   devtool: 'source-map',
   entry: {
-    app: ['react', 'react-dom', 'react-router', 'redux', 'react-redux', 'react-router-redux', './src/app'],
+    app: ['./src/app'],
     // vendor: ['react', 'react-dom', 'react-router', 'redux', 'react-redux', 'react-router-redux'],
   },
 

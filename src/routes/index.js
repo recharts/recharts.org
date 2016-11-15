@@ -3,7 +3,7 @@ import { Route, IndexRoute, Redirect } from 'react-router';
 import { IndexView, GuideView, APIView, ExamplesView, BlogView } from 'views';
 import Frame from 'layouts/Frame';
 
-export default (
+export default (store) => (
   <Route path="/" component={Frame}>
     <IndexRoute component={IndexView} />
     <Route path="/guide(/:name)" component={GuideView} />

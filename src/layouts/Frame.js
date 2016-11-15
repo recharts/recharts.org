@@ -1,8 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
-import { browserHistory } from 'react-router';
+import { Link } from 'react-router';
 import Helmet from 'react-helmet';
-import Link from 'utils/Link';
 import 'styles/app.scss';
 
 @connect((state, ownProps) => {
@@ -27,33 +26,21 @@ class Frame extends Component {
             <h1 className="logo">
               <Link
                 className="nav-logo"
-                route={() => browserHistory.push("/")}>&lt;Recharts /&gt;</Link>
+                to="/">&lt;Recharts /&gt;</Link>
             </h1>
             <nav>
               <ul className="nav" id="nav">
                 <li>
-                  <Link
-                    className="nav-link"
-                    activeCondition={page === 'guide'}
-                    route={() => browserHistory.push("/guide")}>Guide</Link>
+                  <Link activeClassName="active" className="nav-link" to="/guide">Guide</Link>
                 </li>
                 <li>
-                  <Link
-                    className="nav-link"
-                    activeCondition={page === 'api'}
-                    route={() => browserHistory.push("/api")}>API</Link>
+                  <Link activeClassName="active" className="nav-api" to="/api">API</Link>
                 </li>
                 <li>
-                  <Link
-                    className="nav-link"
-                    activeCondition={page === 'examples'}
-                    route={() => browserHistory.push("/examples")}>Examples</Link>
+                  <Link activeClassName="active" className="nav-examples" to="/examples">Examples</Link>
                 </li>
                 <li>
-                  <Link
-                    className="nav-link"
-                    activeCondition={page === 'blog'}
-                    route={() => browserHistory.push("/blog")}>Blog</Link>
+                  <Link activeClassName="active" className="nav-link" to="/blog">Blog</Link>
                 </li>
                 <li>
                   <a href="https://github.com/recharts/recharts"

@@ -1,12 +1,10 @@
 import React, { PropTypes, Component } from 'react';
 import { connect } from 'react-redux';
 import Helmet from 'react-helmet';
-import pureRender from 'pure-render-decorator';
 import Examples from 'docs/examples';
 
 const firstChartName = Object.keys(Examples)[0];
 
-@pureRender
 @connect((state, ownProps) => ({
   page: ownProps.location.hash ? ownProps.location.hash.slice(1) : firstChartName,
 }))
@@ -79,15 +77,7 @@ class ExamplesView extends Component {
         </div>
         <div className="content">
           <h3>{page}</h3>
-          <iframe
-            src={examples}
-            allow-modals
-            allow-forms
-            allow-popups
-            allow-scripts
-            allow-same-origin
-          >
-          </iframe>
+          <iframe src={examples}></iframe>
         </div>
       </div>
     );

@@ -7,7 +7,6 @@ module.exports = {
   entry: {
     app: [
       'webpack-hot-middleware/client',   // Automatic Refresh
-      'react', 'react-dom', 'react-router', 'redux', 'react-redux', 'react-router-redux',
       './src/app',
     ],
     // vendor: ['react', 'react-dom', 'react-router', 'redux', 'react-redux', 'react-router-redux'],

@@ -1,8 +1,7 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import { connect } from 'react-redux';
 import { LineChart, Line, XAxis, YAxis, Tooltip, CartesianGrid } from 'recharts';
 import Highlight from 'utils/Highlight';
-import pureRender from 'pure-render-decorator';
 import './IndexView.scss';
 import 'simple-line-icons/scss/simple-line-icons.scss';
 
@@ -15,8 +14,7 @@ const data = [
   { name: 'F', uv: 189, pv: 480, amt: 2400 },
 ];
 
-@pureRender
-class IndexView extends Component {
+class IndexView extends PureComponent {
   render() {
     const exCode = `
   <LineChart width={500} height={300} data={data}>
@@ -34,7 +32,7 @@ class IndexView extends Component {
           <p className="title">Recharts</p>
           <p className="subtitle">A composable charting library built on React components</p>
           <p><a href="/guide#installation" className="button install-btn"><i className="icon-energy"></i> Install v0.17.1</a></p>
-          <iframe src="https://ghbtns.com/github-btn.html?user=recharts&repo=recharts&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe>
+          <iframe src="https://ghbtns.com/github-btn.html?user=recharts&repo=recharts&type=star&count=true&size=large" frameBorder="0" scrolling="0" width="160px" height="30px"></iframe>
         </div>
         <div className="examples">
           <div className="ex-code">

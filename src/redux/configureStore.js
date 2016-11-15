@@ -1,5 +1,31 @@
-if (__DEVTOOLS__) {
-  module.exports = require('./configureStore.dev');
-} else {
-  module.exports = require('./configureStore.prod');
+import { applyMiddleware, compose, createStore } from 'redux'
+import thunk from 'redux-thunk'
+import rootReducer from './rootReducer'
+import { routerMiddleware } from 'react-router-redux'
+
+export default function configureStore (initialState = {}, history) {
+  const middleware = [thunk, routerMiddleware(history)]
+
+  const enhancers = [];
+  if (__DEV__) {
+    const devToolsExtension = window.devToolsExtension;
+    if (typeof devToolsExtension === 'function') {
+      enhancers.push(devToolsExtension());
+    }
+  }
+
+  const store = createStore(rootReducer, initialState,
+    compose(
+      applyMiddleware(...middleware),
+      ...enhancers
+    )
+  );
+
+  if (module.hot) {
+    module.hot.accept('./rootReducer', () => {
+      store.replaceReducer(rootReducer);
+    })
+  }
+
+  return store;
 }

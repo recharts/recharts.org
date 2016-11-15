@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Installation, GettingStarted, Customize } from 'components/GuideView';
-import pureRender from 'pure-render-decorator';
 
-@pureRender
 @connect((state, ownProps) => ({
   page: ownProps.location.hash ? ownProps.location.hash.slice(1) : 'installation',
 }))

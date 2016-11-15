@@ -1,16 +1,24 @@
-import 'babel-polyfill';
 import React from 'react';
-import { render } from 'react-dom';
-import { applyRouterMiddleware, browserHistory } from 'react-router';
-import useScroll from 'react-router-scroll';
+import ReactDOM from 'react-dom';
+import createBrowserHistory from 'history/lib/createBrowserHistory';
+import { applyRouterMiddleware, useRouterHistory } from 'react-router';
 import { syncHistoryWithStore } from 'react-router-redux';
-import configureStore from './redux/configureStore';
+import { useScroll } from 'react-router-scroll';
+import makeRoutes from './routes';
 import Root from './containers/Root';
-import routes from './routes';
+import configureStore from './redux/configureStore';
 
-const store = configureStore();
-const history = syncHistoryWithStore(browserHistory, store);
+const browserHistory = useRouterHistory(createBrowserHistory)();
 
-render(
-  <Root store={store} history={history} routes={routes} render={applyRouterMiddleware(useScroll)} />,
-  document.getElementById('app'));
+const initialState = window.__INITIAL_STATE__
+const store = configureStore(initialState, browserHistory)
+const history = syncHistoryWithStore(browserHistory, store, {
+  selectLocationState: (state) => state.router,
+});
+
+const routes = makeRoutes(store);
+
+ReactDOM.render(
+  <Root history={history} routes={routes} store={store} render={applyRouterMiddleware(useScroll())} />,
+  document.getElementById('app')
+);

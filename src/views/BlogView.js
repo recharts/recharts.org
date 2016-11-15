@@ -1,10 +1,8 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import { connect } from 'react-redux';
-import pureRender from 'pure-render-decorator';
 import './BlogView.scss';
 
-@pureRender
-class BlogView extends Component {
+class BlogView extends PureComponent {
   render() {
     return (
       <div className="page page-blog">

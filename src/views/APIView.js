@@ -3,10 +3,8 @@ import { connect } from 'react-redux';
 import Helmet from 'react-helmet';
 import API from 'docs/api';
 import Highlight from 'utils/Highlight';
-import pureRender from 'pure-render-decorator';
 import './APIView.scss';
 
-@pureRender
 @connect((state, ownProps) => ({
   page: ownProps.location.hash ? ownProps.location.hash.slice(1) : 'AreaChart',
 }))
