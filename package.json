@@ -74,6 +74,7 @@
     "recharts": "~0.18.0",
     "redux": "~3.6.0",
     "redux-thunk": "^2.1.0",
+    "rimraf": "^2.5.4",
     "scroll-behavior": "^0.9.1",
     "simple-line-icons": "^2.3.2"
   },
