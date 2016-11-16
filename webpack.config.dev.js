@@ -29,7 +29,7 @@ module.exports = {
         include: [
           path.resolve(__dirname, 'src'),
         ],
-        use: ['react-hot', 'babel'],
+        use: ['react-hot-loader', 'babel-loader'],
       },
       {
         test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
@@ -42,10 +42,10 @@ module.exports = {
       {
         test: /\.scss$/,
         use: [
-          'style',
-          'css',
+          'style-loader',
+          'css-loader',
           {
-            loader: 'sass',
+            loader: 'sass-loader',
             query: {
               includePaths: [
                 path.resolve(__dirname, './src/styles'),
