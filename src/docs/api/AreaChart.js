@@ -114,6 +114,26 @@ export default {
         name: `An AreaChart with stackOffset specified to 'expand'`,
         url: '/examples#PercentAreaChart',
       }],
+    }, {
+      name: 'onClick',
+      type: 'Function',
+      isOptional: true,
+      desc: 'The customized event handler of click in this chart.',
+    }, {
+      name: 'onMouseEnter',
+      type: 'Function',
+      isOptional: true,
+      desc: 'The customized event handler of mouseenter in this chart.',
+    }, {
+      name: 'onMouseMove',
+      type: 'Function',
+      isOptional: true,
+      desc: 'The customized event handler of mousemove in this chart.',
+    }, {
+      name: 'onMouseLeave',
+      type: 'Function',
+      isOptional: true,
+      desc: 'The customized event handler of mouseleave in this chart.',
     },
   ],
 };

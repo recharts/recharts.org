@@ -92,6 +92,24 @@ export default {
       defaultVal: 'true',
       isOptional: false,
       desc: 'The direction of clockwise.',
+    }, {
+      name: 'onMouseEnter',
+      type: 'Function',
+      defaultVal: 'null',
+      isOptional: true,
+      desc: `The function will be called when mouse enter the 'Radar'.`
+    }, {
+      name: 'onMouseLeave',
+      type: 'Function',
+      defaultVal: 'null',
+      isOptional: true,
+      desc: `The function will be called when mouse leave the 'Radar'.`
+    }, {
+      name: 'onClick',
+      type: 'Function',
+      defaultVal: 'null',
+      isOptional: true,
+      desc: `The function will be called when click the 'Radar'.`
     },
   ],
 };

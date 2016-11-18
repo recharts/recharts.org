@@ -84,6 +84,26 @@ export default {
       isOptional: false,
       desc: 'The sizes of whitespace around the container.',
       format: ['{ top: 5, right: 5, bottom: 5, left: 5 }'],
+    }, {
+      name: 'onClick',
+      type: 'Function',
+      isOptional: true,
+      desc: 'The customized event handler of click in this chart.',
+    }, {
+      name: 'onMouseEnter',
+      type: 'Function',
+      isOptional: true,
+      desc: 'The customized event handler of mouseenter in this chart.',
+    }, {
+      name: 'onMouseMove',
+      type: 'Function',
+      isOptional: true,
+      desc: 'The customized event handler of mousemove in this chart.',
+    }, {
+      name: 'onMouseLeave',
+      type: 'Function',
+      isOptional: true,
+      desc: 'The customized event handler of mouseleave in this chart.',
     },
   ],
 };

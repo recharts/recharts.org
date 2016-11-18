@@ -32,6 +32,25 @@ export default {
       defaultVal: 'null',
       isOptional: true,
       desc: 'The name of data displayed in the axis. This option will be used to represent an index in a scatter chart.',
+    }, {
+      name: 'scale',
+      type: `'auto' | 'linear' | 'pow' | 'sqrt' | 'log' | 'identity' | 'time' |
+        'band' | 'point' | 'ordinal' | 'quantile' | 'quantize' | 'utcTime' | 'sequential' |
+        'threshold' | Function`,
+      defaultVal: 'auto',
+      isOptional: false,
+      desc: `If 'auto' set, the scale funtion is linear scale.`,
+      format: [
+        '<ZAxis scale="log" />',
+        `
+import { scaleLog } from 'd3-scale';
+const scale = scaleLog().base(Math.E);
+
+...
+  <ZAxis scale={scale} />
+...
+`
+      ],
     },
   ],
 };

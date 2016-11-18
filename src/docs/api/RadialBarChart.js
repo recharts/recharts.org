@@ -105,6 +105,24 @@ export default {
       defaultVal: 'undefined',
       isOptional: true,
       desc: 'The width or height of each bar. If the barSize is not specified, the size of bar will be calculated by the barCategoryGap, barGap and the quantity of bar groups.',
+    }, {
+      name: 'onMouseEnter',
+      type: 'Function',
+      defaultVal: 'null',
+      isOptional: true,
+      desc: 'The function will be called when mouse enter bars.'
+    }, {
+      name: 'onMouseLeave',
+      type: 'Function',
+      defaultVal: 'null',
+      isOptional: true,
+      desc: 'The function will be called when mouse leave bars.'
+    }, {
+      name: 'onClick',
+      type: 'Function',
+      defaultVal: 'null',
+      isOptional: true,
+      desc: 'The function will be called when click bars.'
     },
   ],
 };

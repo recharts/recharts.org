@@ -130,42 +130,22 @@ export default {
       name: 'onClick',
       type: 'Function',
       isOptional: true,
-      desc: 'The customized event handler of click on all the bars.',
-    }, {
-      name: 'onMouseDown',
-      type: 'Function',
-      isOptional: true,
-      desc: 'The customized event handler of mousedown on all the bars.',
-    }, {
-      name: 'onMouseUp',
-      type: 'Function',
-      isOptional: true,
-      desc: 'The customized event handler of mouseup on all the bars.',
-    }, {
-      name: 'onMouseMove',
-      type: 'Function',
-      isOptional: true,
-      desc: 'The customized event handler of mousemove on all the bars.',
-    }, {
-      name: 'onMouseOver',
-      type: 'Function',
-      isOptional: true,
-      desc: 'The customized event handler of mouseover on all the bars.',
-    }, {
-      name: 'onMouseOut',
-      type: 'Function',
-      isOptional: true,
-      desc: 'The customized event handler of mouseout on all the bars.',
+      desc: 'The customized event handler of click in this chart.',
     }, {
       name: 'onMouseEnter',
       type: 'Function',
       isOptional: true,
-      desc: 'The customized event handler of moustenter on all the bars.',
+      desc: 'The customized event handler of mouseenter in this chart.',
+    }, {
+      name: 'onMouseMove',
+      type: 'Function',
+      isOptional: true,
+      desc: 'The customized event handler of mousemove in this chart.',
     }, {
       name: 'onMouseLeave',
       type: 'Function',
       isOptional: true,
-      desc: 'The customized event handler of mouseleave on all the bars.',
+      desc: 'The customized event handler of mouseleave in this chart.',
     },
   ],
 };

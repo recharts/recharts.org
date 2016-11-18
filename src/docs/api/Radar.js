@@ -35,7 +35,7 @@ export default {
     }, {
       name: 'isAnimationActive',
       type: 'Boolean',
-      defaultVal: 'true',
+      defaultVal: 'true in CSR, and false in SSR',
       isOptional: false,
       desc: 'If set false, animation of polygon will be disabled.',
     }, {

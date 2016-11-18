@@ -66,6 +66,25 @@ export default {
       defaultVal: 5,
       isOptional: false,
       desc: 'The number of axis ticks.',
+    }, {
+      name: 'scale',
+      type: `'auto' | 'linear' | 'pow' | 'sqrt' | 'log' | 'identity' | 'time' |
+        'band' | 'point' | 'ordinal' | 'quantile' | 'quantize' | 'utcTime' | 'sequential' |
+        'threshold' | Function`,
+      defaultVal: 'auto',
+      isOptional: false,
+      desc: `If 'auto' set, the scale funtion is linear scale.`,
+      format: [
+        '<PolarRadiusAxis scale="log" />',
+        `
+import { scaleLog } from 'd3-scale';
+const scale = scaleLog().base(Math.E);
+
+...
+  <PolarRadiusAxis scale={scale} />
+...
+`
+      ],
     },
   ],
   examples: [

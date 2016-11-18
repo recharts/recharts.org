@@ -116,6 +116,36 @@ export default {
       defaultVal: 'null',
       isOptional: true,
       desc: 'The formatter function of label in tooltip.',
+    }, {
+      name: 'itemSorter',
+      type: 'Function',
+      defaultVal: `() => -1`,
+      isOptional: false,
+      desc: 'Sort function of payload',
+    }, {
+      name: 'isAnimationActive',
+      type: 'Boolean',
+      defaultVal: 'true in CSR, and false in SSR',
+      isOptional: false,
+      desc: 'If set false, animation of tooltip will be disabled.',
+    }, {
+      name: 'animationBegin',
+      type: 'Number',
+      defaultVal: 0,
+      isOptional: false,
+      desc: 'Specify when the animation should begin.',
+    }, {
+      name: 'animationDuration',
+      type: 'Number',
+      defaultVal: 1500,
+      isOptional: false,
+      desc: 'Specify the duration of animation, the unit of this option is ms.',
+    }, {
+      name: 'animationEasing',
+      type: `'ease', 'ease-in', 'ease-out', 'ease-in-out', 'linear'`,
+      defaultVal: `'ease'`,
+      isOptional: false,
+      desc: 'The type of easing function.',
     },
   ],
 };

@@ -103,6 +103,26 @@ export default {
       defaultVal: 'undefined',
       isOptional: true,
       desc: 'The width or height of each bar. If the barSize is not specified, the size of the bar will be calculated by the barCategoryGap, barGap and the quantity of bar groups.',
+    }, {
+      name: 'onClick',
+      type: 'Function',
+      isOptional: true,
+      desc: 'The customized event handler of click in this chart.',
+    }, {
+      name: 'onMouseEnter',
+      type: 'Function',
+      isOptional: true,
+      desc: 'The customized event handler of mouseenter in this chart.',
+    }, {
+      name: 'onMouseMove',
+      type: 'Function',
+      isOptional: true,
+      desc: 'The customized event handler of mousemove in this chart.',
+    }, {
+      name: 'onMouseLeave',
+      type: 'Function',
+      isOptional: true,
+      desc: 'The customized event handler of mouseleave in this chart.',
     },
   ],
 };

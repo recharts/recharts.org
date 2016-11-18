@@ -162,6 +162,25 @@ export default {
         },
       ],
     }, {
+      name: 'scale',
+      type: `'auto' | 'linear' | 'pow' | 'sqrt' | 'log' | 'identity' | 'time' |
+        'band' | 'point' | 'ordinal' | 'quantile' | 'quantize' | 'utcTime' | 'sequential' |
+        'threshold' | Function`,
+      defaultVal: 'auto',
+      isOptional: false,
+      desc: `If 'auto' set, the scale funtion is descided by the type of chart, and the props type.`,
+      format: [
+        '<XAxis scale="log" />',
+        `
+import { scaleLog } from 'd3-scale';
+const scale = scaleLog().base(Math.E);
+
+...
+  <XAxis scale={scale} />
+...
+`
+      ],
+    }, {
       name: 'unit',
       type: 'String | Number',
       defaultVal: 'null',
