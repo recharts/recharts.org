@@ -18,6 +18,7 @@ import ZAxis from './ZAxis';
 import ReferenceLine from './ReferenceLine';
 import ReferenceDot from './ReferenceDot';
 import ReferenceArea from './ReferenceArea';
+import ErrorBar from './ErrorBar';
 import Brush from './Brush';
 import CartesianAxis from './CartesianAxis';
 import CartesianGrid from './CartesianGrid';
@@ -80,6 +81,7 @@ export default {
   ReferenceLine,
   ReferenceDot,
   ReferenceArea,
+  ErrorBar,
 
   Cross,
   Curve,
