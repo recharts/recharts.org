@@ -2,6 +2,7 @@ import React, { PropTypes, cloneElement, Component } from 'react';
 import { connect } from 'react-redux';
 import Helmet from 'react-helmet';
 import API from 'docs/api';
+import APIExamples from 'docs/apiExamples';
 import Highlight from 'utils/Highlight';
 import './APIView.scss';
 
@@ -88,6 +89,7 @@ class APIView extends Component {
   render() {
     const { page } = this.props;
     const api = API[page];
+    const apiExamples = APIExamples[page];
 
     return (
       <div className="page page-api">
@@ -241,7 +243,7 @@ class APIView extends Component {
         <div className="content">
           <h3>{api.name}</h3>
           {api.desc && <p className="survey">{api.desc}</p>}
-          {this.renderExamples(api && api.examples)}
+          {this.renderExamples(apiExamples)}
 
           <h4 className="sub-title">Properties</h4>
           <ul className="props-list">

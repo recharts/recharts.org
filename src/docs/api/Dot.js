@@ -1,6 +1,5 @@
 export default {
   name: 'Dot',
-  examples: [],
   props: [
     {
       name: 'cx',

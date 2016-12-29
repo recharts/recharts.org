@@ -1,6 +1,5 @@
 export default {
   name: 'Sector',
-  examples: [],
   props: [
     {
       name: 'cx',

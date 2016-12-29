@@ -1,6 +1,5 @@
 export default {
   name: 'Line',
-  examples: [],
   props: [
     {
       name: 'type',

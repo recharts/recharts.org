@@ -1,6 +1,5 @@
 export default {
   name: 'Cross',
-  examples: [],
   props: [
     {
       name: 'x',

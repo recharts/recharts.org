@@ -1,6 +1,5 @@
 export default {
   name: 'Rectangle',
-  examples: [],
   props: [
     {
       name: 'x',

@@ -1,6 +1,5 @@
 export default {
   name: 'Brush',
-  examples: [],
   props: [
     {
       name: 'dataKey',

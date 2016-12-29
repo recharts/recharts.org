@@ -1,6 +1,5 @@
 export default {
   name: 'CartesianAxis',
-  examples: [],
   props: [
     {
       name: 'x',

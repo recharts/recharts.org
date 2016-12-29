@@ -1,6 +1,5 @@
 export default {
   name: 'RadialBar',
-  examples: [],
   props: [
     {
       name: 'cx',

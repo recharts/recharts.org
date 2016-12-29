@@ -1,6 +1,5 @@
 export default {
   name: 'Polygon',
-  examples: [],
   props: [
     {
       name: 'points',

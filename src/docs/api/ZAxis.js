@@ -1,6 +1,5 @@
 export default {
   name: 'ZAxis',
-  examples: [],
   props: [
     {
       name: 'dataKey',

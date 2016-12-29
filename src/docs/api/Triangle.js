@@ -1,6 +1,5 @@
 export default {
   name: 'Triangle',
-  examples: [],
   props: [
     {
       name: 'points',

@@ -1,6 +1,5 @@
 export default {
   name: 'XAxis',
-  examples: [],
   props: [
     {
       name: 'hide',

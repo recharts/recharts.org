@@ -1,6 +1,5 @@
 export default {
   name: 'Scatter',
-  examples: [],
   props: [
     {
       name: 'legendType',

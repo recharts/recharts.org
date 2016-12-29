@@ -1,6 +1,5 @@
 export default {
   name: 'Bar',
-  examples: [],
   props: [
     {
       name: 'layout',

@@ -1,6 +1,5 @@
 export default {
   name: 'Curve',
-  examples: [],
   props: [
     {
       name: 'type',

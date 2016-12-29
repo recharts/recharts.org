@@ -1,6 +1,5 @@
 export default {
   name: 'CartesianGrid',
-  examples: [],
   props: [
     {
       name: 'x',

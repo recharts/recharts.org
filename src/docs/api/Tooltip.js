@@ -1,6 +1,5 @@
 export default {
   name: 'Tooltip',
-  examples: [],
   props: [
     {
       name: 'separator',

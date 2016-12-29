@@ -1,6 +1,5 @@
 export default {
   name: 'Text',
-  examples: [],
   props: [
     {
       name: 'scaleToFit',

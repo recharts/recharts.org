@@ -1,6 +1,5 @@
 export default {
   name: 'Radar',
-  examples: [],
   props: [
     {
       name: 'dataKey',

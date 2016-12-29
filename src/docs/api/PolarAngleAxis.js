@@ -1,6 +1,5 @@
 export default {
   name: 'PolarAngleAxis',
-  examples: [],
   props: [
     {
       name: 'dataKey',

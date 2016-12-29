@@ -1,6 +1,5 @@
 export default {
   name: 'PolarGrid',
-  examples: [],
   props: [
     {
       name: 'cx',
