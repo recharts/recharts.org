@@ -185,6 +185,9 @@ class APIView extends Component {
             <li>
               <a href="/api#ReferenceArea" className={page === 'ReferenceArea' ? 'active' : ''}>ReferenceArea</a>
             </li>
+            <li>
+              <a href="/api#ErrorBar" className={page === 'ErrorBar' ? 'active' : ''}>ErrorBar</a>
+            </li>
           </ul>
 
           <h4>Polar Components</h4>
