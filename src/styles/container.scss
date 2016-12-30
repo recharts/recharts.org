@@ -55,8 +55,19 @@ header {
       }
     }
 
-    > li:last-child {
+    > .github-wrapper,
+    > .language-sitch-wrapper {
       float: right;
+    }
+
+    .language-sitch {
+      .switch-item {
+        cursor: pointer;
+        &.active {
+          cursor: default;
+          color: $brand-primary;
+        }
+      }
     }
   }
 }

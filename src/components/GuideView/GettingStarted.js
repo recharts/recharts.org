@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Highlight from 'utils/Highlight';
 import CustomAxisTick from './CustomAxisTick';
 import { LineChart, Line, XAxis, YAxis, Tooltip, CartesianGrid } from 'recharts';
+import { localeGet } from '../../utils/LocaleUtils';
 
 const data = [
   { name: 'Page A', uv: 400, pv: 2400, amt: 2400 },
@@ -13,11 +14,11 @@ const data = [
 ];
 
 
-const GettingStarted = () => (
+const GettingStarted = ({ locale }) => (
   <div className="mod-getting-started" id="Getting_Started">
-    <h3>Getting Started</h3>
-    <h4>1. Choose the type of chart you need</h4>
-    <p>Generate a simple chart by using plain javascript data (usually an array of objects).</p>
+    <h3>{localeGet(locale, 'getting-started', 'getting-started')}</h3>
+    <h4>{localeGet(locale, 'getting-started', 'step-1-title')}</h4>
+    <p>{localeGet(locale, 'getting-started', 'step-1-desc')}</p>
 
     <div className="step-1">
       <Highlight className="e4x">
@@ -33,8 +34,8 @@ const GettingStarted = () => (
       </LineChart>
     </div>
 
-    <h4>2. Add components that you want to be drawn</h4>
-    <p>LineChart can have XAxis, YAxis, Legend, CartesianGrid and so on.</p>
+    <h4>{localeGet(locale, 'getting-started', 'step-2-title')}</h4>
+    <p>{localeGet(locale, 'getting-started', 'step-2-desc')}</p>
     <div className="step-2">
       <Highlight className="e4x">
       {
@@ -55,8 +56,8 @@ const GettingStarted = () => (
       </LineChart>
     </div>
 
-    <h4>3. Adjust the props of some components</h4>
-    <p>For example, margin-right should be bigger in order to display the right-most x-axis label and the stroke style of the cartesian grid can be dashed for better readability.</p>
+    <h4>{localeGet(locale, 'getting-started', 'step-3-title')}</h4>
+    <p>{localeGet(locale, 'getting-started', 'step-3-desc')}</p>
     <div className="step-3">
       <Highlight className="e4x">
       {
@@ -77,8 +78,8 @@ const GettingStarted = () => (
       </LineChart>
     </div>
 
-    <h4>4. Add interactions</h4>
-    <p>We can easily drop-in a Tooltip component and have rich hovering tooltip functionality.</p>
+    <h4>{localeGet(locale, 'getting-started', 'step-4-title')}</h4>
+    <p>{localeGet(locale, 'getting-started', 'step-4-desc')}</p>
     <div className="step-4">
       <Highlight className="e4x">
       {
@@ -101,8 +102,8 @@ const GettingStarted = () => (
       </LineChart>
     </div>
 
-    <h4>5. Customize your components</h4>
-    <p>For example, you can edit your x-axis label very easily by passing in a custom axis tick component. You can do similar things with other graphs as well, such as custom shapes for bar charts and much more!</p>
+    <h4>{localeGet(locale, 'getting-started', 'step-5-title')}</h4>
+    <p>{localeGet(locale, 'getting-started', 'step-5-desc')}</p>
     <div className="step-5">
       <Highlight className="e4x">
       {

@@ -1,11 +1,16 @@
 import React, { Component } from 'react';
 import Highlight from 'utils/Highlight';
+import { localeGet } from '../../utils/LocaleUtils';
 
-const Installation = () => (
+const Installation = ({ locale }) => (
   <div className="mod-installation" id="Installation">
-    <h3>Installation</h3>
+    <h3>{localeGet(locale, 'installation', 'installation')}</h3>
     <h4>NPM</h4>
-    <p>NPM is the easiest and fastest way to get started using Recharts. It is also the recommended installation method when building single-page applications (SPAs). It pairs nicely with a CommonJS module bundler such as <a href="http://webpack.github.io/" target="_blank" rel="external">Webpack</a>.</p>
+    <p>
+      {localeGet(locale, 'installation', 'npm-desc')}
+      <a href="http://webpack.github.io/" target="_blank" rel="external">Webpack</a>
+      {localeGet(locale, 'installation', 'dot')}
+    </p>
     <Highlight className="sh">
     {
       `  # latest stable
@@ -13,14 +18,18 @@ const Installation = () => (
     }
     </Highlight>
     <h4>UMD</h4>
-    <p>The UMD build is also available on <a href="https://unpkg.com/" target="_blank">unpkg</a>:</p>
+    <p>
+      {localeGet(locale, 'installation', 'umd-desc')}
+      &nbsp;(&nbsp;<a href="https://unpkg.com/" target="_blank">unpkg</a>&nbsp;)&nbsp;
+      &nbsp;:
+    </p>
     <Highlight className="html">
     {
 `  <script src="https://unpkg.com/recharts/umd/Recharts.min.js"></script>`
     }
     </Highlight>
-    <p>You can find the library on <code>window.Recharts</code></p>
-    <h4>Dev Build</h4>
+    <p>{localeGet(locale, 'installation', 'umd-use')}<code>window.Recharts</code></p>
+    <h4>{localeGet(locale, 'installation', 'dev-build')}</h4>
     <Highlight className="sh">
     {`  $ git clone https://github.com/recharts/recharts.git
   $ cd recharts
