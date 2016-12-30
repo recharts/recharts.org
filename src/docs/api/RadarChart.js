@@ -64,7 +64,10 @@ export default {
       type: 'Bool',
       defaultVal: 'true',
       isOptional: false,
-      desc: 'The direction of clockwise.',
+      desc: {
+        'en-US': 'The direction of clockwise.',
+        'zh-CN': '是否顺时针',
+      },
     }, {
       name: 'onMouseEnter',
       type: 'Function',
