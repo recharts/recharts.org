@@ -4,6 +4,8 @@ import Helmet from 'react-helmet';
 import API from 'docs/api';
 import APIExamples from 'docs/apiExamples';
 import Highlight from 'utils/Highlight';
+import { getLocaleType, localeGet, parseLocalObj } from 'utils/LocaleUtils';
+import apiCates from 'docs/apiCates';
 import './APIView.scss';
 
 @connect((state, ownProps) => ({
@@ -49,7 +51,7 @@ class APIView extends Component {
     ));
   }
 
-  renderProps(props) {
+  renderProps(props, locale) {
     if (!props || !props.length) {return null;}
 
     return props.map((entry, i) => (
@@ -59,16 +61,16 @@ class APIView extends Component {
           <span className="type">{entry.type}</span>
           {entry.isOptional ? <em className="optional">optional</em> : null}
         </p>
-        <p className="desc">{entry.desc}</p>
+        <p className="desc">{parseLocalObj(locale, entry.desc)}</p>
         {entry.defaultVal && (entry.defaultVal !== 'null' && entry.defaultVal !== 'undefined') ? (
           <p className="default">
-            <span className="title">DEFAULT:</span>
+            <span className="title">{localeGet(locale, 'api', 'default')}</span>
             <span>{entry.defaultVal}</span>
           </p>
         ) : null}
         {entry.format && entry.format.length ? (
           <div className="format">
-            <p className="title">Format:</p>
+            <p className="title">{localeGet(locale, 'api', 'format')}</p>
             <Highlight className="jsx">
               {this.renderFormat(entry.format)}
             </Highlight>
@@ -76,7 +78,7 @@ class APIView extends Component {
         ) : null}
         {entry.examples && entry.examples.length ? (
           <div className="examples">
-            <p className="title">Examples:</p>
+            <p className="title">{localeGet(locale, 'api', 'examples')}</p>
             <ul className="list">
               {this.renderPropsExamples(entry.examples)}
             </ul>
@@ -90,164 +92,45 @@ class APIView extends Component {
     const { page } = this.props;
     const api = API[page];
     const apiExamples = APIExamples[page];
+    const locale = getLocaleType(this.props);
 
     return (
       <div className="page page-api">
         <Helmet title={page} />
         <div className="sidebar">
           <h2>API</h2>
-          <h4>Charts</h4>
-          <ul className="menu">
-            <li>
-              <a href="/api#AreaChart" className={page === 'AreaChart' ? 'active' : ''}>AreaChart</a>
-            </li>
-            <li>
-              <a href="/api#BarChart" className={page === 'BarChart' ? 'active' : ''}>BarChart</a>
-            </li>
-            <li>
-              <a href="/api#LineChart" className={page === 'LineChart' ? 'active' : ''}>LineChart</a>
-            </li>
-            <li>
-              <a href="/api#ComposedChart" className={page === 'ComposedChart' ? 'active' : ''}>ComposedChart</a>
-            </li>
-            <li>
-              <a href="/api#PieChart" className={page === 'PieChart' ? 'active' : ''}>PieChart</a>
-            </li>
-            <li>
-              <a href="/api#RadarChart" className={page === 'RadarChart' ? 'active' : ''}>RadarChart</a>
-            </li>
-            <li>
-              <a href="/api#RadialBarChart" className={page === 'RadialBarChart' ? 'active' : ''}>RadialBarChart</a>
-            </li>
-            <li>
-              <a href="/api#ScatterChart" className={page === 'ScatterChart' ? 'active' : ''}>ScatterChart</a>
-            </li>
-            <li>
-              <a href="/api#Treemap" className={page === 'Treemap' ? 'active' : ''}>Treemap</a>
-            </li>
-          </ul>
-
-          <h4>General Components</h4>
-          <ul className="menu">
-            <li>
-              <a href="/api#ResponsiveContainer" className={page === 'ResponsiveContainer' ? 'active' : ''}>ResponsiveContainer</a>
-            </li>
-            <li>
-              <a href="/api#Legend" className={page === 'Legend' ? 'active' : ''}>Legend</a>
-            </li>
-            <li>
-              <a href="/api#Tooltip" className={page === 'Tooltip' ? 'active' : ''}>Tooltip</a>
-            </li>
-            <li>
-              <a href="/api#Cell" className={page === 'Cell' ? 'active' : ''}>Cell</a>
-            </li>
-            <li>
-              <a href="/api#Text" className={page === 'Text' ? 'active' : ''}>Text</a>
-            </li>
-          </ul>
-
-          <h4>Cartesian Components</h4>
-          <ul className="menu">
-            <li>
-              <a href="/api#Area" className={page === 'Area' ? 'active' : ''}>Area</a>
-            </li>
-            <li>
-              <a href="/api#Bar" className={page === 'Bar' ? 'active' : ''}>Bar</a>
-            </li>
-            <li>
-              <a href="/api#Line" className={page === 'Line' ? 'active' : ''}>Line</a>
-            </li>
-            <li>
-              <a href="/api#Scatter" className={page === 'Scatter' ? 'active' : ''}>Scatter</a>
-            </li>
-            <li>
-              <a href="/api#XAxis" className={page === 'XAxis' ? 'active' : ''}>XAxis</a>
-            </li>
-            <li>
-              <a href="/api#YAxis" className={page === 'YAxis' ? 'active' : ''}>YAxis</a>
-            </li>
-            <li>
-              <a href="/api#ZAxis" className={page === 'ZAxis' ? 'active' : ''}>ZAxis</a>
-            </li>
-            <li>
-              <a href="/api#Brush" className={page === 'Brush' ? 'active' : ''}>Brush</a>
-            </li>
-            <li>
-              <a href="/api#CartesianAxis" className={page === 'CartesianAxis' ? 'active' : ''}>CartesianAxis</a>
-            </li>
-            <li>
-              <a href="/api#CartesianGrid" className={page === 'CartesianGrid' ? 'active' : ''}>CartesianGrid</a>
-            </li>
-            <li>
-              <a href="/api#ReferenceLine" className={page === 'ReferenceLine' ? 'active' : ''}>ReferenceLine</a>
-            </li>
-            <li>
-              <a href="/api#ReferenceDot" className={page === 'ReferenceDot' ? 'active' : ''}>ReferenceDot</a>
-            </li>
-            <li>
-              <a href="/api#ReferenceArea" className={page === 'ReferenceArea' ? 'active' : ''}>ReferenceArea</a>
-            </li>
-            <li>
-              <a href="/api#ErrorBar" className={page === 'ErrorBar' ? 'active' : ''}>ErrorBar</a>
-            </li>
-          </ul>
-
-          <h4>Polar Components</h4>
-          <ul className="menu">
-            <li>
-              <a href="/api#Pie" className={page === 'Pie' ? 'active' : ''}>Pie</a>
-            </li>
-            <li>
-              <a href="/api#Radar" className={page === 'Radar' ? 'active' : ''}>Radar</a>
-            </li>
-            <li>
-              <a href="/api#RadialBar" className={page === 'RadialBar' ? 'active' : ''}>RadialBar</a>
-            </li>
-            <li>
-              <a href="/api#PolarAngleAxis" className={page === 'PolarAngleAxis' ? 'active' : ''}>PolarAngleAxis</a>
-            </li>
-            <li>
-              <a href="/api#PolarGrid" className={page === 'PolarGrid' ? 'active' : ''}>PolarGrid</a>
-            </li>
-            <li>
-              <a href="/api#PolarRadiusAxis" className={page === 'PolarRadiusAxis' ? 'active' : ''}>PolarRadiusAxis</a>
-            </li>
-          </ul>
-
-          <h4>Shapes</h4>
-          <ul className="menu">
-            <li>
-              <a href="/api#Cross" className={page === 'Cross' ? 'active' : ''}>Cross</a>
-            </li>
-            <li>
-              <a href="/api#Curve" className={page === 'Curve' ? 'active' : ''}>Curve</a>
-            </li>
-            <li>
-              <a href="/api#Dot" className={page === 'Dot' ? 'active' : ''}>Dot</a>
-            </li>
-            <li>
-              <a href="/api#Polygon" className={page === 'Polygon' ? 'active' : ''}>Polygon</a>
-            </li>
-            <li>
-              <a href="/api#Rectangle" className={page === 'Rectangle' ? 'active' : ''}>Rectangle</a>
-            </li>
-            <li>
-              <a href="/api#Sector" className={page === 'Sector' ? 'active' : ''}>Sector</a>
-            </li>
-            <li>
-              <a href="/api#Triangle" className={page === 'Triangle' ? 'active' : ''}>Triangle</a>
-            </li>
-          </ul>
-
+          {
+            apiCates.map(({ name, items }, index) => {
+              return (
+                <div className="sidebar-cate" key={`cate-${index}`}>
+                  <h4>{localeGet(locale, 'api', name)}</h4>
+                  <ul className="menu">
+                    {
+                      items.map((compName, j) => {
+                        return (
+                          <li key={`item-${j}`}>
+                            <a
+                              href={`/${locale}/api#${compName}`}
+                              className={page === compName ? 'active' : ''}
+                            >{compName}</a>
+                          </li>
+                        );
+                      })
+                    }
+                  </ul>
+                </div>
+              );
+            })
+          }
         </div>
         <div className="content">
           <h3>{api.name}</h3>
-          {api.desc && <p className="survey">{api.desc}</p>}
+          {api.desc && <p className="survey">{parseLocalObj(locale, api.desc)}</p>}
           {this.renderExamples(apiExamples)}
 
           <h4 className="sub-title">Properties</h4>
           <ul className="props-list">
-            {this.renderProps(api && api.props)}
+            {this.renderProps(api && api.props, locale)}
           </ul>
         </div>
       </div>

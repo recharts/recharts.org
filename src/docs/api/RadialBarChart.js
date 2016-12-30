@@ -6,13 +6,19 @@ export default {
       type: 'Number',
       defaultVal: 'undefined',
       isOptional: false,
-      desc: 'The width of chart container.',
+      desc: {
+        'en-US': 'The width of chart container.',
+        'zh-CN': '图表的宽度',
+      },
     }, {
       name: 'height',
       type: 'Number',
       defaultVal: 'undefined',
       isOptional: false,
-      desc: 'The width of chart container.',
+      desc: {
+        'en-US': 'The height of chart container.',
+        'zh-CN': '图表的高度',
+      },
     }, {
       name: 'data',
       type: 'Array',
@@ -25,7 +31,10 @@ export default {
       type: 'Object',
       defaultVal: '{ top: 5, right: 5, bottom: 5, left: 5 }',
       isOptional: false,
-      desc: 'The sizes of whitespace around the container.',
+      desc: {
+        'en-US': 'The sizes of whitespace around the container.',
+        'zh-CN': '图表四周的留白大小，支持传入部分值（ 如： { top: 5 }）',
+      },
       format: ['{ top: 5, right: 5, bottom: 5, left: 5 }'],
     }, {
       name: 'barCategoryGap',

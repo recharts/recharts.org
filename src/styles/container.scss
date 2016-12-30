@@ -95,27 +95,30 @@ footer {
     overflow: auto;
     padding-bottom: 100px;
 
-    > h2 {
-      margin-bottom: 20px;
-      font-size: 24px;
-    }
+    .sidebar-cate {
+      > h2 {
+        margin-bottom: 20px;
+        font-size: 24px;
+      }
 
-    > h4 {
-      margin: 16px 0;
-      font-size: 18px;
-    }
+      > h4 {
+        margin: 16px 0;
+        font-size: 18px;
+      }
 
-    > .menu {
-      > li {
-        padding-left: 10px;
-        line-height: 1.5;
-        font-size: $font-size-lg;
+      > .menu {
+        > li {
+          padding-left: 10px;
+          line-height: 1.5;
+          font-size: $font-size-lg;
 
-        a.active {
-          color: $brand-primary;
+          a.active {
+            color: $brand-primary;
+          }
         }
       }
     }
+
   }
 
   > .content {

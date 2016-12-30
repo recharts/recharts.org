@@ -2,8 +2,12 @@ import React, { PropTypes, Component } from 'react';
 import { connect } from 'react-redux';
 import Helmet from 'react-helmet';
 import Examples from 'docs/examples';
+import { getLocaleType, localeGet } from 'utils/LocaleUtils';
 
 const firstChartName = Object.keys(Examples)[0];
+const cates = ['LineChart', 'BarChart', 'AreaChart', 'ComposedChart', 'ScatterChart',
+  'PieChart', 'RadarChart', 'RadialBarChart', 'Treemap', 'Tooltip', 'ResponsiveContainer',
+];
 
 @connect((state, ownProps) => ({
   page: ownProps.location.hash ? ownProps.location.hash.slice(1) : firstChartName,
@@ -13,7 +17,7 @@ class ExamplesView extends Component {
     page: PropTypes.string,
   };
 
-  renderMenuList(type) {
+  renderMenuList(type, locale) {
     const { page } = this.props;
     const typeNameList = Object.keys(Examples).filter(name => {
       if (type === 'BarChart') {
@@ -24,7 +28,7 @@ class ExamplesView extends Component {
 
     const items = typeNameList.map(name => (
       <li key={name}>
-        <a href={`/examples#${name}`} className={page === name ? 'active' : ''}>{name}</a>
+        <a href={`/${locale}/examples#${name}`} className={page === name ? 'active' : ''}>{name}</a>
       </li>
     ));
 
@@ -34,6 +38,7 @@ class ExamplesView extends Component {
   render() {
     const { page } = this.props;
     const examples = Examples[page];
+    const locale = getLocaleType(this.props);
 
     return (
       <div className="page page-examples">
@@ -41,38 +46,16 @@ class ExamplesView extends Component {
         <div className="sidebar">
           <h2>Examples</h2>
 
-          <h4>LineChart</h4>
-          {this.renderMenuList('LineChart')}
-
-          <h4>BarChart</h4>
-          {this.renderMenuList('BarChart')}
-
-          <h4>AreaChart</h4>
-          {this.renderMenuList('AreaChart')}
-
-          <h4>ComposedChart</h4>
-          {this.renderMenuList('ComposedChart')}
-
-          <h4>ScatterChart</h4>
-          {this.renderMenuList('ScatterChart')}
-
-          <h4>PieChart</h4>
-          {this.renderMenuList('PieChart')}
-
-          <h4>RadarChart</h4>
-          {this.renderMenuList('RadarChart')}
-
-          <h4>RadialBarChart</h4>
-          {this.renderMenuList('RadialBarChart')}
-
-          <h4>Treemap</h4>
-          {this.renderMenuList('Treemap')}
-
-          <h4>Tooltip</h4>
-          {this.renderMenuList('Tooltip')}
-
-          <h4>ResponsiveContainer</h4>
-          {this.renderMenuList('ResponsiveContainer')}
+          {
+            cates.map((cate, index) => {
+              return (
+                <div className="sidebar-cate" key={`cate-${index}`}>
+                  <h4>LineChart</h4>
+                  {this.renderMenuList(cate, locale)}
+                </div>
+              );
+            })
+          }
 
         </div>
         <div className="content">

@@ -5,6 +5,7 @@ import CustomBarLabel from './CustomBarLabel';
 import CustomAxisTick from './CustomAxisTick';
 import TriangleBar from './TriangleBar';
 import CustomTooltip from './CustomTooltip';
+import { localeGet } from '../../utils/LocaleUtils';
 
 const data = [
   { name: 'Page A', uv: 400, pv: 2400, amt: 2400 },
@@ -15,13 +16,13 @@ const data = [
   { name: 'Page F', uv: 189, pv: 4800, amt: 2400 },
 ];
 
-function Customize() {
+function Customize({ locale }) {
   return (
     <div className="mod-customize" id="Customize">
-      <h3>Customize</h3>
+      <h3>{localeGet(locale, 'customize', 'customize')}</h3>
 
-      <h4>1. Labels of line, area, bar, axis can be customized</h4>
-      <p>For example, we can create a bar with customized label and customized axis tick.</p>
+      <h4>{localeGet(locale, 'customize', 'step-1-title')}</h4>
+      <p>{localeGet(locale, 'customize', 'step-1-desc')}</p>
       <div className="demo">
         <Highlight className="e4x">
         {
@@ -41,8 +42,8 @@ function Customize() {
         </BarChart>
       </div>
 
-      <h4>2. The shape of bar can be customized</h4>
-      <p>Generates a simple chart by the data.</p>
+      <h4>{localeGet(locale, 'customize', 'step-2-title')}</h4>
+      <p>{localeGet(locale, 'customize', 'step-2-desc')}</p>
       <div className="demo">
         <Highlight className="e4x">
         {
@@ -62,8 +63,8 @@ function Customize() {
         </BarChart>
       </div>
 
-      <h4>3. The content of tooltip can be customized</h4>
-      <p>Sometime we may want tooltip to display much more information.</p>
+      <h4>{localeGet(locale, 'customize', 'step-3-title')}</h4>
+      <p>{localeGet(locale, 'customize', 'step-3-desc')}</p>
       <div className="demo">
         <Highlight className="e4x">
         {
@@ -85,8 +86,8 @@ function Customize() {
         </BarChart>
       </div>
 
-      <h4>4. The style of each chart element can be customized</h4>
-      <p>Except tooltip and legend, all the element in a chart is drawn by svg element. So you can change the attributes of each chart element conveniently.</p>
+      <h4>{localeGet(locale, 'customize', 'step-4-title')}</h4>
+      <p>{localeGet(locale, 'customize', 'step-4-desc')}</p>
       <div className="demo">
         <Highlight className="e4x">
         {
@@ -109,8 +110,8 @@ function Customize() {
         </BarChart>
       </div>
 
-      <h4>5. The style of tooltip, legend can be customized</h4>
-      <p>Though tooltip, legend are drawn by svg elements, you may change the style of tooltip, legend by the apis wo offer. of cource, you can change the style in css too.</p>
+      <h4>{localeGet(locale, 'customize', 'step-5-title')}</h4>
+      <p>{localeGet(locale, 'customize', 'step-5-desc')}</p>
       <div className="demo">
         <Highlight className="e4x">
         {

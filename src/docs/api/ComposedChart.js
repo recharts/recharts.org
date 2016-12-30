@@ -7,12 +7,18 @@ export default {
       type: '\'horizontal\' , \'vertical\'',
       defaultVal: '\'horizontal\'',
       isOptional: false,
-      desc: 'The layout of areas, lines, or bars in the chart.',
+      desc: {
+        'en-US': 'The layout of areas, bars, lines in the chart.',
+        'zh-CN': '布局类型，是横向的还是纵向的。',
+      },
     }, {
       name: 'syncId',
       type: 'String',
       isOptional: true,
-      desc: 'If any two categorical charts(LineChart, AreaChart, BarChart, ComposedChart) have the same syncId, these two charts can sync the position tooltip, and the startIndex, endIndex of Brush.',
+      desc: {
+        'en-US': 'If any two categorical charts(LineChart, AreaChart, BarChart, ComposedChart) have the same syncId, these two charts can sync the position tooltip, and the startIndex, endIndex of Brush.',
+        'zh-CN': '如果任何两个或者多个类目型图表（LineChart, AreaChart, BarChart, ComposedChart）具有相同的 syncId，这两个图表可以联动，包括 Tooltip 以及 Brush 的联动。'
+      },
       examples: [{
         name: "Two synchronized AreaChart",
         url: '/examples#SynchronizedAreaChart',
@@ -22,65 +28,98 @@ export default {
       type: 'Number',
       defaultVal: 'undefined',
       isOptional: false,
-      desc: 'The width of chart container.',
+      desc: {
+        'en-US': 'The width of chart container.',
+        'zh-CN': '图表的宽度',
+      },
     }, {
       name: 'height',
       type: 'Number',
       defaultVal: 'undefined',
       isOptional: false,
-      desc: 'The height of chart container.',
+      desc: {
+        'en-US': 'The height of chart container.',
+        'zh-CN': '图表的高度',
+      },
     }, {
       name: 'data',
       type: 'Array',
       defaultVal: 'undefined',
       isOptional: false,
-      desc: 'The source data, in which each element is an object.',
+      desc: {
+        'en-US': 'The source data, in which each element is an object.',
+        'zh-CN': '输入数据，现在支持的类型是对象数组。'
+      },
       format: ['[{name: \'a\', value: 12}]']
     }, {
       name: 'margin',
       type: 'Object',
       defaultVal: '{ top: 5, right: 5, bottom: 5, left: 5 }',
       isOptional: false,
-      desc: 'The sizes of whitespace around the container.',
+      desc: {
+        'en-US': 'The sizes of whitespace around the container.',
+        'zh-CN': '图表四周的留白大小，支持传入部分值（ 如： { top: 5 }）',
+      },
       format: ['{ top: 5, right: 5, bottom: 5, left: 5 }'],
     }, {
       name: 'barCategoryGap',
       type: 'Percentage | Number',
       defaultVal: '\'10%\'',
       isOptional: false,
-      desc: 'The gap between two bar categories, which can be a percent value or a fixed value.',
+      desc: {
+        'en-US': 'The gap between two bar categories, which can be a percent value or a fixed value.',
+        'zh-CN': '两个类目之间的间隔大小，如果值为百分比，会根据类目宽度来计算实际值。'
+      },
     }, {
       name: 'barGap',
       type: 'Number',
       defaultVal: 4,
       isOptional: false,
-      desc: 'The gap between two bars in the same category.',
+      desc: {
+        'en-US': 'The gap between two bars in the same category.',
+        'zh-CN': '某一个类目下，相邻的两个柱条的间隔大小。如果值为百分比，会根据类目宽度来计算实际值。'
+      },
     }, {
       name: 'barSize',
       type: 'Number',
       defaultVal: 'undefined',
       isOptional: true,
-      desc: 'The width or height of each bar. If the barSize is not specified, the size of the bar will be calculated by the barCategoryGap, barGap and the quantity of bar groups.',
+      desc: {
+        'en-US': 'The width or height of each bar. If the barSize is not specified, the size of the bar will be calculated by the barCategoryGap, barGap and the quantity of bar groups.',
+        'zh-CN': '柱条的宽度。如果指定这个值，会根据 barCategoryGap 和 barGap 来计算柱条的宽度，每组柱条的宽度是一样的。'
+      },
     }, {
       name: 'onClick',
       type: 'Function',
       isOptional: true,
-      desc: 'The customized event handler of click in this chart.',
+      desc: {
+         'en-US': 'The customized event handler of click in this chart.',
+         'zh-CN': '自定义的点击事件的回调函数。',
+      },
     }, {
       name: 'onMouseEnter',
       type: 'Function',
       isOptional: true,
-      desc: 'The customized event handler of mouseenter in this chart.',
+      desc: {
+        'en-US': 'The customized event handler of mouseenter in this chart.',
+        'zh-CN': '自定义的 mouseenter 事件的回调函数。',
+      },
     }, {
       name: 'onMouseMove',
       type: 'Function',
       isOptional: true,
-      desc: 'The customized event handler of mousemove in this chart.',
+      desc: {
+        'en-US': 'The customized event handler of mousemove in this chart.',
+        'zh-CN': '自定义的 mousemove 事件的回调函数。',
+      },
     }, {
       name: 'onMouseLeave',
       type: 'Function',
       isOptional: true,
-      desc: 'The customized event handler of mouseleave in this chart.',
+      desc: {
+        'en-US': 'The customized event handler of mouseleave in this chart.',
+        'zh-CN': '自定义的 mouseleave 事件的回调函数。',
+      },
     },
   ],
 };
