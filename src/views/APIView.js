@@ -39,10 +39,6 @@ class APIView extends Component {
     );
   }
 
-  renderFormat(format) {
-    return format.join('\n');
-  }
-
   renderPropsExamples(examples) {
     return examples.map((entry, i) => (
       <li key={`example-${i}`}>
@@ -72,7 +68,7 @@ class APIView extends Component {
           <div className="format">
             <p className="title">{localeGet(locale, 'api', 'format')}</p>
             <Highlight className="jsx">
-              {this.renderFormat(entry.format)}
+              {entry.format.join('\n')}
             </Highlight>
           </div>
         ) : null}
@@ -124,7 +120,7 @@ class APIView extends Component {
           }
         </div>
         <div className="content">
-          <h3>{api.name}</h3>
+          <h3>{page}</h3>
           {api.desc && <p className="survey">{parseLocalObj(locale, api.desc)}</p>}
           {this.renderExamples(apiExamples)}
 

@@ -2,6 +2,7 @@ import React, { PureComponent } from 'react';
 import { connect } from 'react-redux';
 import { LineChart, Line, XAxis, YAxis, Tooltip, CartesianGrid } from 'recharts';
 import Highlight from 'utils/Highlight';
+import { getLocaleType, localeGet } from '../utils/LocaleUtils';
 import './IndexView.scss';
 import 'simple-line-icons/scss/simple-line-icons.scss';
 
@@ -16,8 +17,7 @@ const data = [
 
 class IndexView extends PureComponent {
   render() {
-
-    console.log(this.props);
+    const locale = getLocaleType(this.props);
 
     const exCode = `
   <LineChart width={500} height={300} data={data}>
@@ -33,8 +33,8 @@ class IndexView extends PureComponent {
       <div className="page page-index">
         <div className="desc">
           <p className="title">Recharts</p>
-          <p className="subtitle">A composable charting library built on React components</p>
-          <p><a href="/guide#installation" className="button install-btn"><i className="icon-energy"></i> Install v0.20.1</a></p>
+          <p className="subtitle">{localeGet(locale, 'home', 'solgan')}</p>
+          <p><a href="/guide#installation" className="button install-btn"><i className="icon-energy"></i> {localeGet(locale, 'home', 'install')} v0.20.1</a></p>
           <iframe src="https://ghbtns.com/github-btn.html?user=recharts&repo=recharts&type=star&count=true&size=large" frameBorder="0" scrolling="0" width="160px" height="30px"></iframe>
         </div>
         <div className="examples">
@@ -53,25 +53,25 @@ class IndexView extends PureComponent {
           <ul className="feat">
             <li>
               <i className="icon-puzzle"></i>
-              <strong>Composable</strong>
-              <p className="text">Quickly build your charts with decoupled, reusable React components.</p>
+              <strong>{localeGet(locale, 'home', 'composable')}</strong>
+              <p className="text">{localeGet(locale, 'home', 'composableContent')}</p>
             </li>
             <li>
               <i className="icon-layers"></i>
-              <strong>Reliable</strong>
-              <p className="text">Built on top of SVG elements with a lightweight dependency on D3 submodules.</p>
+              <strong>{localeGet(locale, 'home', 'reliable')}</strong>
+              <p className="text">{localeGet(locale, 'home', 'reliableContent')}</p>
             </li>
             <li>
               <i className="icon-energy"></i>
-              <strong>Powerful</strong>
-              <p className="text">Customize your chart by tweaking component props and passing in custom components.</p>
+              <strong>{localeGet(locale, 'home', 'powerful')}</strong>
+              <p className="text">{localeGet(locale, 'home', 'powerfulContent')}</p>
             </li>
           </ul>
         </div>
         <div className="like">
           <i className="icon-rocket"></i>
-          <p className="text">Recharts makes it easy to integrate charts into your React application</p>
-          <p className="btn"><a href="/guide#getting-started" className="button getting-started-btn">Get Started</a></p>
+          <p className="text">{localeGet(locale, 'home', 'like')}</p>
+          <p className="btn"><a href="/guide#getting-started" className="button getting-started-btn">{localeGet(locale, 'home', 'get-started')}</a></p>
         </div>
       </div>
     );

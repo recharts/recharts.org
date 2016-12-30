@@ -5,6 +5,18 @@ const map = {
     error: 'Error',
     empty: 'Empty',
   },
+  home: {
+    solgan: 'A composable charting library built on React components',
+    install: 'Install',
+    composable: 'Composable',
+    composableContent: 'Quickly build your charts with decoupled, reusable React components.',
+    reliable: 'Reliable',
+    reliableContent: 'Built on top of SVG elements with a lightweight dependency on D3 submodules.',
+    powerful: 'Powerful',
+    powerfulContent: 'Customize your chart by tweaking component props and passing in custom components.',
+    like: 'Recharts makes it easy to integrate charts into your React application',
+    'get-started': 'Get Started',
+  },
   api: {
     placeholder: 'Search',
   },
