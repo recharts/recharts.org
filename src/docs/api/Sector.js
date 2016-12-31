@@ -6,55 +6,128 @@ export default {
       type: 'Number',
       defaultVal: '0',
       isOptional: false,
-      desc: 'The x-coordinate of center.',
+      desc: {
+        'en-US': 'The x-coordinate of center.',
+        'zh-CN': '圆心的 x 坐标。',
+      },
     }, {
       name: 'cy',
       type: 'Number',
       defaultVal: '0',
       isOptional: false,
-      desc: 'The y-coordinate of center.',
+      desc: {
+        'en-US': 'The y-coordinate of center.',
+        'zh-CN': '圆心的 y 坐标。',
+      },
     }, {
       name: 'innerRadius',
       type: 'Number',
       defaultVal: '0',
       isOptional: false,
-      desc: 'The inner radius of the sector.',
+      desc: {
+        'en-US': 'The inner radius of the sector.',
+        'zh-CN': '楔子的内径。',
+      },
     }, {
       name: 'outerRadius',
       type: 'Number',
       defaultVal: '0',
       isOptional: false,
-      desc: 'The outer radius of the sector.',
+      desc: {
+        'en-US': 'The outer radius of the sector.',
+        'zh-CN': '楔子的外径。',
+      },
     }, {
       name: 'startAngle',
       type: 'Number',
       defaultVal: '0',
       isOptional: false,
-      desc: 'The start angle of the sector.',
+      desc: {
+        'en-US': 'The start angle of the sector.',
+        'zh-CN': '楔子的起始角度。',
+      },
     }, {
       name: 'endAngle',
       type: 'Number',
       defaultVal: '0',
       isOptional: false,
-      desc: 'The end angle of the sector.',
+      desc: {
+        'en-US': 'The end angle of the sector.',
+        'zh-CN': '楔子的结束角度。',
+      },
     }, {
-      name: 'onMouseEnter',
-      type: 'Function',
-      defaultVal: 'null',
-      isOptional: true,
-      desc: 'The function will be called when mouse enter the pies.'
-    }, {
-      name: 'onMouseLeave',
-      type: 'Function',
-      defaultVal: 'null',
-      isOptional: true,
-      desc: 'The function will be called when mouse leave the pies.'
+      name: 'cornerRadius',
+      type: 'Number',
+      defaultVal: '0',
+      isOptional: false,
+      desc: {
+        'en-US': 'The radius of corners.',
+        'zh-CN': '拐角圆的半径。如果值为0，不绘制拐角的圆角。',
+      },
     }, {
       name: 'onClick',
       type: 'Function',
-      defaultVal: 'null',
       isOptional: true,
-      desc: 'The function will be called when mouse click the pies.'
+      desc: {
+        'en-US': 'The customized event handler of click on the sector',
+        'zh-CN': '楔子 click 事件的回调函数。',
+      },
+    }, {
+      name: 'onMouseDown',
+      type: 'Function',
+      isOptional: true,
+      desc: {
+        'en-US': 'The customized event handler of mousedown on the sector',
+        'zh-CN': '楔子 mousedown 事件的回调函数。',
+      },
+    }, {
+      name: 'onMouseUp',
+      type: 'Function',
+      isOptional: true,
+      desc: {
+        'en-US': 'The customized event handler of mouseup on the sector',
+        'zh-CN': '楔子 mouseup 事件的回调函数。',
+      },
+    }, {
+      name: 'onMouseMove',
+      type: 'Function',
+      isOptional: true,
+      desc: {
+        'en-US': 'The customized event handler of mousemove on the sector',
+        'zh-CN': '楔子 mousemove 事件的回调函数。',
+      },
+    }, {
+      name: 'onMouseOver',
+      type: 'Function',
+      isOptional: true,
+      desc: {
+        'en-US': 'The customized event handler of mouseover on the sector',
+        'zh-CN': '楔子 mouseover 事件的回调函数。',
+      },
+    }, {
+      name: 'onMouseOut',
+      type: 'Function',
+      isOptional: true,
+      desc: {
+        'en-US': 'The customized event handler of mouseout on the sector',
+        'zh-CN': '楔子 mouseout 事件的回调函数。',
+      },
+    }, {
+      name: 'onMouseEnter',
+      type: 'Function',
+      isOptional: true,
+      desc: {
+        'en-US': 'The customized event handler of moustenter on the sector',
+        'zh-CN': '楔子 moustenter 事件的回调函数。',
+      },
+    }, {
+      name: 'onMouseLeave',
+      type: 'Function',
+      isOptional: true,
+      desc: {
+        'en-US': 'The customized event handler of mouseleave on the sector',
+        'zh-CN': '楔子 mouseleave 事件的回调函数。',
+      },
     },
   ],
 };

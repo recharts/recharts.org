@@ -41,61 +41,91 @@ export default {
       type: 'Percentage| Number',
       defaultVal: '\'10%\'',
       isOptional: false,
-      desc: 'The gab between two bar categorys which can be percent value and a fixed value.',
+      desc: {
+        'en-US': 'The gap between two bar categories, which can be a percent value or a fixed value.',
+        'zh-CN': '两个类目之间的间隔距离，如果值为百分比，会根据类目宽度来计算实际值。',
+      },
     }, {
       name: 'barGap',
       type: 'Number',
       defaultVal: 4,
       isOptional: false,
-      desc: 'The gab between two bar in the same category.',
+      desc: {
+        'en-US': 'The gap between two bars in the same category.',
+        'zh-CN': '某一个类目下，相邻的两个柱条的间隔大小。如果值为百分比，会根据类目宽度来计算实际值。',
+      },
     }, {
       name: 'cx',
       type: 'Percentage | Number',
       defaultVal: '\'50%\'',
       isOptional: false,
-      desc: 'The x-coordinate of center. If set a percentage, the final value is obtained by multiplying the percentage of width.',
+      desc: {
+        'en-US': 'The x-coordinate of center. If set a percentage, the final value is obtained by multiplying the percentage of width.',
+        'zh-CN': '圆心的x坐标，如果值为百分比，会根据图表的宽度来计算最后的值。'
+      },
     }, {
       name: 'cy',
       type: 'Percentage | Number',
       defaultVal: '\'50%\'',
       isOptional: false,
-      desc: 'The y-coordinate of center. If set a percentage, the final value is obtained by multiplying the percentage of width.',
+      desc: {
+        'en-US': 'The y-coordinate of center. If set a percentage, the final value is obtained by multiplying the percentage of height.',
+        'zh-CN': '圆心的y坐标，如果值为百分比，会根据图表的高度来计算最后的值。',
+      },
     }, {
       name: 'innerRadius',
       type: 'Percentage | Number',
       defaultVal: '\'30%\'',
       isOptional: false,
-      desc: 'The innerRadius of the radial bar which is most close to the center. If set a percentage, the final value is obtained by multiplying the percentage of maxRadius which is calculated by the width, height, cx, cy.',
+      desc: {
+        'en-US': 'The innerRadius of the radial bar which is most close to the center. If set a percentage, the final value is obtained by multiplying the percentage of maxRadius which is calculated by the width, height, cx, cy.',
+        'zh-CN': '径向柱图最内侧柱条的内径。如果值为百分比，我们首先会根据圆心的坐标、图表的宽度、图表的高度计算一个最大半径，然后根据这个最大半径来计算真实的半径。',
+      },
     }, {
       name: 'outerRadius',
       type: 'Percentage | Number',
       defaultVal: '\'100%\'',
       isOptional: false,
-      desc: 'The outerRadius of the radial bar which is most far away from the center. If set a percentage, the final value is obtained by multiplying the percentage of maxRadius which is calculated by the width, height, cx, cy.',
+      desc: {
+        'en-US': 'The outerRadius of the radial bar which is most far away from the center. If set a percentage, the final value is obtained by multiplying the percentage of maxRadius which is calculated by the width, height, cx, cy.',
+        'zh-CN': '径向柱图最外侧柱条的外径。如果值为百分比，我们首先会根据圆心的坐标、图表的宽度、图表的高度计算一个最大半径，然后根据这个最大半径来计算真实的半径。',
+      },
     }, {
       name: 'barSize',
       type: 'Number',
       defaultVal: 'undefined',
       isOptional: true,
-      desc: 'The width or height of each bar. If the barSize is not specified, the size of bar will be calculated by the barCategoryGap, barGap and the quantity of bar groups.',
+      desc: {
+        'en-US': 'The size of each bar. If the barSize is not specified, the size of bar will be calculated by the barCategoryGap, barGap and the quantity of bar groups.',
+        'zh-CN': '柱条的宽度。如果指定这个值，会根据 barCategoryGap 和 barGap 来计算柱条的宽度，每组柱条的宽度是一样的。'
+      },
     }, {
       name: 'onMouseEnter',
       type: 'Function',
       defaultVal: 'null',
       isOptional: true,
-      desc: 'The function will be called when mouse enter bars.'
+      desc: {
+        'en-US': 'The function will be called when mouse enter bars.',
+        'zh-CN': '每个柱条的 mouseenter 事件的回调函数，如果当子组件 RadialBar 上也绑定了同样的事件，子组件的事件回调函数才会被绑定。',
+      },
     }, {
       name: 'onMouseLeave',
       type: 'Function',
       defaultVal: 'null',
       isOptional: true,
-      desc: 'The function will be called when mouse leave bars.'
+      desc: {
+        'en-US': 'The function will be called when mouse leave bars.',
+        'zh-CN': '每个柱条的 mouseleave 事件的回调函数，如果当子组件 RadialBar 上也绑定了同样的事件，子组件的事件回调函数才会被绑定。',
+      },
     }, {
       name: 'onClick',
       type: 'Function',
       defaultVal: 'null',
       isOptional: true,
-      desc: 'The function will be called when click bars.'
+      desc: {
+        'en-US': 'The function will be called when click bars.',
+        'zh-CN': '每个柱条的 click 事件的回调函数，如果当子组件 RadialBar 上也绑定了同样的事件，子组件的事件回调函数才会被绑定。',
+      },
     },
   ],
 };

@@ -6,19 +6,28 @@ export default {
       type: 'Number',
       defaultVal: 'null',
       isOptional: false,
-      desc: 'The x-coordinate of center.',
+      desc: {
+        'en-US': 'The x-coordinate of center.',
+        'zh-CN': '圆心的 x 坐标。',
+      },
     }, {
       name: 'cy',
       type: 'Number',
       defaultVal: 'null',
       isOptional: false,
-      desc: 'The y-coordinate of center.',
+      desc: {
+        'en-US': 'The y-coordinate of center.',
+        'zh-CN': '圆心的 y 坐标。',
+      },
     }, {
       name: 'r',
       type: 'Number',
       defaultVal: 'null',
       isOptional: false,
-      desc: 'The radius of dot.',
+      desc: {
+        'en-US': 'The radius of dot.',
+        'zh-CN': '半径。',
+      },
     },
   ],
 };

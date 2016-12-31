@@ -13,6 +13,7 @@ import Legend from './Legend';
 import ReferenceArea from './ReferenceArea';
 import ReferenceDot from './ReferenceDot';
 import ReferenceLine from './ReferenceLine';
+import ErrorBar from './ErrorBar';
 
 export default {
   AreaChart,
@@ -30,4 +31,5 @@ export default {
   ReferenceLine,
   ReferenceDot,
   ReferenceArea,
+  ErrorBar,
 };

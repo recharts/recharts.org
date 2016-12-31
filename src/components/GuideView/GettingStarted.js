@@ -18,12 +18,19 @@ const GettingStarted = ({ locale }) => (
   <div className="mod-getting-started" id="Getting_Started">
     <h3>{localeGet(locale, 'getting-started', 'getting-started')}</h3>
     <h4>{localeGet(locale, 'getting-started', 'step-1-title')}</h4>
+    <p>
+      {localeGet(locale, 'getting-started', 'with-help')}
+      <a href="https://github.com/recharts/babel-plugin-recharts" target="_blank">babel-plugin-recharts</a>
+      {localeGet(locale, 'getting-started', 'plugin-desc')}
+    </p>
     <p>{localeGet(locale, 'getting-started', 'step-1-desc')}</p>
 
     <div className="step-1">
       <Highlight className="e4x">
       {
-`<LineChart width={400} height={400} data={data}>
+`import { LineChart, Line } from 'recharts';
+
+<LineChart width={400} height={400} data={data}>
   <Line type="monotone" dataKey="uv" stroke="#8884d8" />
 </LineChart>`
       }

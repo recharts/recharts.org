@@ -48,7 +48,9 @@ const map = {
     dot: '。',
   },
   'getting-started': {
-    'getting-started': '快速上手',
+    'getting-started': '起步',
+    'with-help': '借助于',
+    'plugin-desc': '，我们可以只引入需要的组件，以达到减小项目体积的目的。',
     'step-1-title': '1. 选择图表类型',
     'step-1-desc': '传入简单的js对象（通常是一个数组）生成简单的图表。',
     'step-2-title': '2. 添加需要的组件',
@@ -82,6 +84,9 @@ const map = {
     default: '默认值：',
     format: '格式：',
     examples: '示例：',
+  },
+  'design-disciplines': {
+    'design-disciplines': '设计原则',
   },
 };
 

@@ -14,6 +14,7 @@ export default {
       examples: [{
         name: 'd3-shape interpolation',
         url: 'https://github.com/d3/d3-shape#curves',
+        isExternal: true,
       }, {
         name: 'An AreaChart which has two area with different interpolation.',
         url: '/examples#CardinalAreaChart',
@@ -52,7 +53,7 @@ export default {
       isOptional: false,
       desc: {
         'en-US': 'The type of icon in legend.',
-        'zh-CN': '图例中图标的类型。',
+        'zh-CN': '对应的图例 icon 的类型。',
       },
     }, {
       name: 'dot',
@@ -91,7 +92,7 @@ export default {
       isOptional: false,
       desc: {
         'en-US': 'If false set, labels will not be drawn. If true set, labels will be drawn which have the props calculated internally. If object set, labels will be drawn which have the props mergered by the internal calculated props and the option. If ReactElement set, the option can be the custom label element. If set a function, the function will be called to render customized label.',
-        'zh-CN': '图形上的文本标签。当值为 false ，不展示文本标签。当值为 true，会根据 Area 的属性配置来展示文本标签。当值为一个对象的时候，会把这个对象解析为 文本标签 的属性，来覆盖默认属性。当值是一个 React Element ，会克隆这个 React Element 来渲染“文本标签”。当值是一个 函数 时，会调用这个函数去渲染自定义的“文本标签”。'
+        'zh-CN': '图形上的文本标签。当值为 false ，不展示文本标签。当值为 true，会根据 Area 的属性配置来展示文本标签。当值为一个对象的时候，会把这个对象解析为 文本标签 的属性，来覆盖默认属性。当值是一个 React Element ，会克隆这个 React Element 来渲染“文本标签”。当值是一个 函数 时，会调用这个函数去渲染自定义的“文本标签”。',
       },
       format: [
         `<Area dataKey="value" label />`,
@@ -209,7 +210,7 @@ export default {
       isOptional: false,
       desc: {
         'en-US': 'Specifies when the animation should begin, the unit of this option is ms.',
-        'zh-CN': '声明组件 mount 后，开始运行动画的间隔时长，单位为毫秒。',
+        'zh-CN': '声明组件 mount 或者 更新 后，开始运行动画的间隔时长，单位为毫秒。',
       },
     }, {
       name: 'animationDuration',
@@ -228,6 +229,74 @@ export default {
       desc: {
         'en-US': 'The type of easing function.',
         'zh-CN': '动画缓动函数的类型。',
+      },
+    }, {
+      name: 'onClick',
+      type: 'Function',
+      isOptional: true,
+      desc: {
+        'en-US': 'The customized event handler of click on the area in this group',
+        'zh-CN': '区域图 click 事件的回调函数。',
+      },
+      examples: [{
+        name: 'A BarChart with customized click event handler',
+        url: '/examples#BarChartWithCustomizedEvent',
+      }],
+    }, {
+      name: 'onMouseDown',
+      type: 'Function',
+      isOptional: true,
+      desc: {
+        'en-US': 'The customized event handler of mousedown on the area in this group',
+        'zh-CN': '区域图 mousedown 事件的回调函数。',
+      },
+    }, {
+      name: 'onMouseUp',
+      type: 'Function',
+      isOptional: true,
+      desc: {
+        'en-US': 'The customized event handler of mouseup on the area in this group',
+        'zh-CN': '区域图 mouseup 事件的回调函数。',
+      },
+    }, {
+      name: 'onMouseMove',
+      type: 'Function',
+      isOptional: true,
+      desc: {
+        'en-US': 'The customized event handler of mousemove on the area in this group',
+        'zh-CN': '区域图 mousemove 事件的回调函数。',
+      },
+    }, {
+      name: 'onMouseOver',
+      type: 'Function',
+      isOptional: true,
+      desc: {
+        'en-US': 'The customized event handler of mouseover on the area in this group',
+        'zh-CN': '区域图 mouseover 事件的回调函数。',
+      },
+    }, {
+      name: 'onMouseOut',
+      type: 'Function',
+      isOptional: true,
+      desc: {
+        'en-US': 'The customized event handler of mouseout on the area in this group',
+        'zh-CN': '区域图 mouseout 事件的回调函数。',
+      },
+    }, {
+      name: 'onMouseEnter',
+      type: 'Function',
+      isOptional: true,
+      desc: {
+        'en-US': 'The customized event handler of moustenter on the area in this group',
+        'zh-CN': '区域图 moustenter 事件的回调函数。',
+      },
+    }, {
+      name: 'onMouseLeave',
+      type: 'Function',
+      isOptional: true,
+      desc: {
+        'en-US': 'The customized event handler of mouseleave on the area in this group',
+        'zh-CN': '区域图 mouseleave 事件的回调函数。',
       },
     },
   ],

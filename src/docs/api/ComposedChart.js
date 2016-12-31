@@ -68,7 +68,7 @@ export default {
       isOptional: false,
       desc: {
         'en-US': 'The gap between two bar categories, which can be a percent value or a fixed value.',
-        'zh-CN': '两个类目之间的间隔大小，如果值为百分比，会根据类目宽度来计算实际值。'
+        'zh-CN': '两个类目之间的间隔距离，如果值为百分比，会根据类目宽度来计算实际值。',
       },
     }, {
       name: 'barGap',
@@ -94,7 +94,7 @@ export default {
       isOptional: true,
       desc: {
          'en-US': 'The customized event handler of click in this chart.',
-         'zh-CN': '自定义的点击事件的回调函数。',
+         'zh-CN': '鼠标在图表图形区域 点击 事件的回调函数。',
       },
     }, {
       name: 'onMouseEnter',
@@ -102,7 +102,7 @@ export default {
       isOptional: true,
       desc: {
         'en-US': 'The customized event handler of mouseenter in this chart.',
-        'zh-CN': '自定义的 mouseenter 事件的回调函数。',
+        'zh-CN': '鼠标在图表图形区域 mouseenter 事件的回调函数。',
       },
     }, {
       name: 'onMouseMove',
@@ -110,7 +110,7 @@ export default {
       isOptional: true,
       desc: {
         'en-US': 'The customized event handler of mousemove in this chart.',
-        'zh-CN': '自定义的 mousemove 事件的回调函数。',
+        'zh-CN': '鼠标在图表图形区域 mousemove 事件的回调函数。',
       },
     }, {
       name: 'onMouseLeave',
@@ -118,7 +118,7 @@ export default {
       isOptional: true,
       desc: {
         'en-US': 'The customized event handler of mouseleave in this chart.',
-        'zh-CN': '自定义的 mouseleave 事件的回调函数。',
+        'zh-CN': '鼠标在图表图形区域 mouseleave 事件的回调函数。',
       },
     },
   ],

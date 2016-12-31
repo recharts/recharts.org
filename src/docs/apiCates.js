@@ -28,7 +28,7 @@ export default [
   {
     name: 'shapes',
     items: [
-      'Cross', 'Curve', 'Dot', 'Polygon', 'Rectangle', 'Sector', 'Triangle',
+      'Cross', 'Curve', 'Dot', 'Polygon', 'Rectangle', 'Sector',
     ],
   },
 ];

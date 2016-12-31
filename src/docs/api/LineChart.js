@@ -66,7 +66,7 @@ export default {
       isOptional: true,
       desc: {
          'en-US': 'The customized event handler of click in this chart.',
-         'zh-CN': '自定义的点击事件的回调函数。',
+         'zh-CN': '鼠标在图表图形区域 点击 事件的回调函数。',
       },
     }, {
       name: 'onMouseEnter',
@@ -74,7 +74,7 @@ export default {
       isOptional: true,
       desc: {
         'en-US': 'The customized event handler of mouseenter in this chart.',
-        'zh-CN': '自定义的 mouseenter 事件的回调函数。',
+        'zh-CN': '鼠标在图表图形区域 mouseenter 事件的回调函数。',
       },
     }, {
       name: 'onMouseMove',
@@ -82,7 +82,7 @@ export default {
       isOptional: true,
       desc: {
         'en-US': 'The customized event handler of mousemove in this chart.',
-        'zh-CN': '自定义的 mousemove 事件的回调函数。',
+        'zh-CN': '鼠标在图表图形区域 mousemove 事件的回调函数。',
       },
     }, {
       name: 'onMouseLeave',
@@ -90,7 +90,7 @@ export default {
       isOptional: true,
       desc: {
         'en-US': 'The customized event handler of mouseleave in this chart.',
-        'zh-CN': '自定义的 mouseleave 事件的回调函数。',
+        'zh-CN': '鼠标在图表图形区域 mouseleave 事件的回调函数。',
       },
     },
   ],

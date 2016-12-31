@@ -6,31 +6,46 @@ export default {
       type: 'String | Number',
       defaultVal: 'null',
       isOptional: false,
-      desc: 'The key of data displayed in the axis.',
+      desc: {
+        'en-US': 'The key of data displayed in the axis.',
+        'zh-CN': '指定展示的数据维度。',
+      },
     }, {
       name: 'zAxisId',
       type: 'String | Number',
       defaultVal: '0',
       isOptional: false,
-      desc: 'The unique id of z-axis.',
+      desc: {
+        'en-US': 'The unique id of z-axis.',
+        'zh-CN': 'z 轴的唯一id。',
+      },
     }, {
       name: 'range',
       type: 'Array',
       defaultVal: '[10, 10]',
       isOptional: false,
-      desc: 'The range of axis.',
+      desc: {
+        'en-US': 'The range of axis.',
+        'zh-CN': 'z轴 scale 函数的值域。'
+      },
     }, {
       name: 'unit',
       type: 'String | Number',
       defaultVal: 'null',
       isOptional: true,
-      desc: 'The unit of data displayed in the axis. This option will be used to represent an index unit in a scatter chart.',
+      desc: {
+        'en-US': 'The unit of data displayed in the axis. This option will be used to represent an index unit in a scatter chart.',
+        'zh-CN': 'z 轴展示数据的单位。这个单位会展示在 Tooltip 的数值后面。'
+      },
     }, {
       name: 'name',
       type: 'String | Number',
       defaultVal: 'null',
       isOptional: true,
-      desc: 'The name of data displayed in the axis. This option will be used to represent an index in a scatter chart.',
+      desc: {
+        'en-US': 'The name of data displayed in the axis. This option will be used to represent an index in a scatter chart.',
+        'zh-CN': 'z 轴展示数据的名称。这个单位会展示在 Tooltip 内容中。'
+      },
     }, {
       name: 'scale',
       type: `'auto' | 'linear' | 'pow' | 'sqrt' | 'log' | 'identity' | 'time' |
@@ -38,7 +53,10 @@ export default {
         'threshold' | Function`,
       defaultVal: 'auto',
       isOptional: false,
-      desc: `If 'auto' set, the scale funtion is linear scale.`,
+      desc: {
+        'en-US': `If 'auto' set, the scale funtion is descided by the type of chart, and the props type.`,
+        'zh-CN': '当值为 "auto" 时，会根据图表类型来生成 scale 函数，也可以传入自定义的函数作为 scale 函数。',
+      },
       format: [
         '<ZAxis scale="log" />',
         `

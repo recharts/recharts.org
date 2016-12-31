@@ -42,7 +42,6 @@ import Dot from './Dot';
 import Polygon from './Polygon';
 import Rectangle from './Rectangle';
 import Sector from './Sector';
-import Triangle from './Triangle';
 
 export default {
   AreaChart,
@@ -89,5 +88,4 @@ export default {
   Polygon,
   Rectangle,
   Sector,
-  Triangle,
 };

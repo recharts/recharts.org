@@ -39,10 +39,10 @@ class APIView extends Component {
     );
   }
 
-  renderPropsExamples(examples) {
+  renderPropsExamples(examples, locale) {
     return examples.map((entry, i) => (
       <li key={`example-${i}`}>
-         <a href={entry.url} target="_blank">{entry.name}</a>
+         <a href={entry.isExternal ? entry.url : `/${locale}${entry.url}`} target="_blank">{entry.name}</a>
       </li>
     ));
   }
@@ -76,7 +76,7 @@ class APIView extends Component {
           <div className="examples">
             <p className="title">{localeGet(locale, 'api', 'examples')}</p>
             <ul className="list">
-              {this.renderPropsExamples(entry.examples)}
+              {this.renderPropsExamples(entry.examples, locale)}
             </ul>
           </div>
         ) : null}
