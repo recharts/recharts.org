@@ -26,7 +26,7 @@ class Frame extends Component {
     const pathName = location.pathname || '/';
 
     return (
-      <span className="language-sitch">
+      <span className="language-switch">
         {
           locales.map(({ locale, text }, index) => {
             const isActive = locale === curLocale;
