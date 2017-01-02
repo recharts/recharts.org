@@ -8,7 +8,7 @@ export default {
       isOptional: false,
       desc: {
         'en-US': 'The id of x-axis which is corresponding to the data.',
-        'zh-CN': '参考点对应的 x 轴的id。',
+        'zh-CN': '参考点对应的 x 轴的 id。',
       },
     }, {
       name: 'yAxisId',
@@ -17,7 +17,7 @@ export default {
       isOptional: false,
       desc: {
         'en-US': 'The id of y-axis which is corresponding to the data.',
-        'zh-CN': '参考点对应的 y 轴的id。',
+        'zh-CN': '参考点对应的 y 轴的 id。',
       },
     }, {
       name: 'x',
@@ -76,7 +76,7 @@ export default {
       format: [
         `<ReferenceDot x="a" y={400} label="MAX"/>`,
         `<ReferenceDot x="a" y={400} label={<CustomizedLabel />}/>`,
-        `<ReferenceDot x="a" y={400} label={renderLabel}/>`,
+        `<ReferenceDot x="a" y={400} label={renderLabel} />`,
       ],
     }, {
       name: 'isFront',

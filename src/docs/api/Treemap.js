@@ -8,7 +8,7 @@ export default {
       isOptional: false,
       desc: {
         'en-US': 'The width of chart container.',
-        'zh-CN': '图表的宽度',
+        'zh-CN': '图表的宽度。',
       },
     }, {
       name: 'height',
@@ -17,7 +17,7 @@ export default {
       isOptional: false,
       desc: {
         'en-US': 'The height of chart container.',
-        'zh-CN': '图表的高度',
+        'zh-CN': '图表的高度。',
       },
     }, {
       name: 'dataKey',
@@ -26,7 +26,7 @@ export default {
       isOptional: false,
       desc: {
         'en-US': 'The key of a group of data which should be unique in a treemap.',
-        'zh-CN': '指定 Treemap 展示的数值所对应的key。',
+        'zh-CN': '指定 Treemap 展示的数值所对应的 key。',
       },
     }, {
       name: 'aspectRatio',
@@ -53,7 +53,7 @@ export default {
       isOptional: false,
       desc: {
         'en-US': 'Specifies when the animation should begin, the unit of this option is ms.',
-        'zh-CN': '声明组件 mount 后，开始运行动画的间隔时长，单位为毫秒。',
+        'zh-CN': '声明组件挂载后，开始运行动画的间隔时长，单位为毫秒。',
       },
     }, {
       name: 'animationDuration',

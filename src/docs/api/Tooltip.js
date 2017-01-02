@@ -2,7 +2,7 @@ export default {
   name: 'Tooltip',
   desc: {
     'en-US': 'Tooltip is rendered by html nodes.',
-    'zh-CN': 'Tooltip是基于 html 实现的。',
+    'zh-CN': 'Tooltip 是基于 HTML 实现的。',
   },
   props: [
     {
@@ -21,7 +21,7 @@ export default {
       isOptional: false,
       desc: {
         'en-US': 'The offset size between the position of tooltip and the active position.',
-        'zh-CN': 'Tooltip与当前“游标”的偏移量。',
+        'zh-CN': 'Tooltip 与当前“游标”的偏移量。',
       },
     }, {
       name: 'itemStyle',
@@ -83,7 +83,7 @@ export default {
       isOptional: false,
       desc: {
         'en-US': 'The box of viewing area, which has the shape of {x: someVal, y: someVal, width: someVal, height: someVal}, usually calculated internally.',
-        'zh-CN': '图表的可视区域。通常通过x, y, width, height 来描述。'
+        'zh-CN': '图表的可视区域。通常通过 x、y、width、height 来描述。'
       },
       format: [`{ x: 0, y: 0, width: 400, height: 400 }`],
     }, {
@@ -168,7 +168,7 @@ export default {
       isOptional: false,
       desc: {
         'en-US': 'Sort function of payload',
-        'zh-CN': '项目排序函数',
+        'zh-CN': '项目排序函数。',
       },
     }, {
       name: 'isAnimationActive',

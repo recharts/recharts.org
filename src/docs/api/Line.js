@@ -138,7 +138,7 @@ export default {
       isOptional: false,
       desc: {
         'en-US': 'Whether to connect a graph line across null points.',
-        'zh-CN': '当遇到 null, undefined 等非法输入的时候，是否跳过这个值，让前后连接起来。',
+        'zh-CN': '当遇到 null、undefined 等非法输入的时候，是否跳过这个值，让前后连接起来。',
       },
       examples: [{
         name: 'A lineChart connect nulls and a lineChart disconnect nulls',
@@ -178,7 +178,7 @@ export default {
       isOptional: false,
       desc: {
         'en-US': 'Specifies when the animation should begin, the unit of this option is ms.',
-        'zh-CN': '声明组件 mount 后，开始运行动画的间隔时长，单位为毫秒。',
+        'zh-CN': '声明组件挂载后，开始运行动画的间隔时长，单位为毫秒。',
       },
     }, {
       name: 'animationDuration',

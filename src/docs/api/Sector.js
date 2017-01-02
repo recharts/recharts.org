@@ -62,7 +62,7 @@ export default {
       isOptional: false,
       desc: {
         'en-US': 'The radius of corners.',
-        'zh-CN': '拐角圆的半径。如果值为0，不绘制拐角的圆角。',
+        'zh-CN': '拐角圆的半径。如果值为 0，不绘制拐角的圆角。',
       },
     }, {
       name: 'onClick',

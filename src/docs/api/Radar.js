@@ -35,7 +35,7 @@ export default {
       isOptional: false,
       desc: {
         'en-US': 'If false set, dots will not be drawn. If true set, dots will be drawn which have the props calculated internally. If object set, dots will be drawn which have the props mergered by the internal calculated props and the option. If ReactElement set, the option can be the custom dot element. If set a function, the function will be called to render customized dot.',
-        'zh-CN': '“雷达”多边形上的点，接收多种配置。当值为 false ，不渲染点。当值为 true ，点会继承 Radar 的属性配置，例如配置了 Radar 的 stroke 为 "red"， 点会继承这个属性。当值为一个对象的时候，会把这个对象解析为点的属性，来覆盖默认属性。当值是一个 React Element ，会克隆这个 React Element 来渲染“点”。当值是一个 函数 时，会调用这个函数去渲染自定义的“点”。',
+        'zh-CN': '“雷达”多边形上的点，接收多种配置。当值为 false，不渲染点。当值为 true，点会继承 Radar 的属性配置，例如配置了 Radar 的 stroke 为 "red"， 点会继承这个属性。当值为一个对象的时候，会把这个对象解析为点的属性，来覆盖默认属性。当值是一个 React Element ，会克隆这个 React Element 来渲染“点”。当值是函数时，会调用这个函数去渲染自定义的“点”。',
       },
     }, {
       name: 'label',
@@ -44,7 +44,7 @@ export default {
       isOptional: false,
       desc: {
         'en-US': 'If false set, labels will not be drawn. If true set, labels will be drawn which have the props calculated internally. If object set, labels will be drawn which have the props mergered by the internal calculated props and the option. If ReactElement set, the option can be the custom label element. If set a function, the function will be called to render customized label.',
-        'zh-CN': '图形上的文本标签。当值为 false ，不展示文本标签。当值为 true，会根据 Bar 的属性配置来展示文本标签。当值为一个对象的时候，会把这个对象解析为 文本标签 的属性，来覆盖默认属性。当值是一个 React Element ，会克隆这个 React Element 来渲染“文本标签”。当值是一个 函数 时，会调用这个函数去渲染自定义的“文本标签”。',
+        'zh-CN': '图形上的文本标签。当值为 false，不展示文本标签。当值为 true，会根据 Bar 的属性配置来展示文本标签。当值为一个对象的时候，会把这个对象解析为文本标签的属性，来覆盖默认属性。当值是一个 React Element ，会克隆这个 React Element 来渲染“文本标签”。当值是函数时，会调用这个函数去渲染自定义的“文本标签”。',
       },
     }, {
       name: 'isAnimationActive',
@@ -62,7 +62,7 @@ export default {
       isOptional: false,
       desc: {
         'en-US': 'Specifies when the animation should begin, the unit of this option is ms.',
-        'zh-CN': '声明组件 mount 或者 更新 后，开始运行动画的间隔时长，单位为毫秒。',
+        'zh-CN': '声明组件挂载或更新后，开始运行动画的间隔时长，单位为毫秒。',
       },
     }, {
       name: 'animationDuration',

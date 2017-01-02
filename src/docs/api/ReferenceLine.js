@@ -8,7 +8,7 @@ export default {
       isOptional: false,
       desc: {
         'en-US': 'The id of x-axis which is corresponding to the data.',
-        'zh-CN': '参考线对应的 x 轴的id。',
+        'zh-CN': '参考线对应的 x 轴的 id。',
       },
     }, {
       name: 'yAxisId',
@@ -17,7 +17,7 @@ export default {
       isOptional: false,
       desc: {
         'en-US': 'The id of y-axis which is corresponding to the data.',
-        'zh-CN': '参考线对应的 y 轴的id。',
+        'zh-CN': '参考线对应的 y 轴的 id。',
       },
     }, {
       name: 'x',
@@ -66,7 +66,7 @@ export default {
       isOptional: false,
       desc: {
         'en-US': 'The configuration of the corresponding x-axis, usually calculated internally.',
-        'zh-CN': 'x轴配置。',
+        'zh-CN': 'x 轴配置。',
       },
     }, {
       name: 'yAxis',
@@ -75,7 +75,7 @@ export default {
       isOptional: false,
       desc: {
         'en-US': 'The configuration of the corresponding y-axis, usually calculated internally.',
-        'zh-CN': 'y轴配置。',
+        'zh-CN': 'y 轴配置。',
       },
     }, {
       name: 'label',
@@ -87,8 +87,8 @@ export default {
         'zh-CN': '当值为简单类型的数值或者字符串时，这个值会被渲染成文字标签。当值为 React element，会克隆这个元素来渲染文字标签。',
       },
       format: [
-        `<ReferenceLine x="05" label="Middle"/>`,
-        `<ReferenceLine y={400} yAxisId="left" label={<CustomizedLabel />}/>`,
+        `<ReferenceLine x="05" label="Middle" />`,
+        `<ReferenceLine y={400} yAxisId="left" label={<CustomizedLabel />} />`,
       ],
       examples: [{
         name: 'ReferenceLines with label',

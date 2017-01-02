@@ -9,7 +9,7 @@ export default {
         'en-US': `The key of a group of error values in data. The error values can be a single value for
           symmetric error bars or an array of a lower and upper error value for asymmetric error
           bars.`,
-        'zh-CN': '展示 误差线 对应的数据的key。当对应的元素是一个数值时，会用来展示对称的误差线。当对应的元素是一个二元数组时，可以用来设置非对称的误差线。',
+        'zh-CN': '展示误差线对应的数据的 key。当对应的元素是一个数值时，会用来展示对称的误差线。当对应的元素是一个二元数组时，可以用来设置非对称的误差线。',
       }
     }, {
       name: 'width',
@@ -18,7 +18,7 @@ export default {
       isOptional: true,
       desc: {
         'en-US': 'The width of the error bar ends.',
-        'zh-CN': '误差线的“宽度”。',
+        'zh-CN': '误差线的宽度。',
       },
     }, {
       name: 'strokeWidth',

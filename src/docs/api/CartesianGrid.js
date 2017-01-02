@@ -8,7 +8,7 @@ export default {
       isOptional: false,
       desc: {
         'en-US': 'The x-coordinate of grid.',
-        'zh-CN': 'x坐标'
+        'zh-CN': 'x 坐标'
       },
     }, {
       name: 'y',
@@ -17,7 +17,7 @@ export default {
       isOptional: false,
       desc: {
         'en-US': 'The y-coordinate of grid.',
-        'zh-CN': 'y坐标'
+        'zh-CN': 'y 坐标'
       },
     }, {
       name: 'width',
@@ -62,7 +62,7 @@ export default {
       isOptional: false,
       desc: {
         'en-US': 'The y-coordinates of all horizontal lines.',
-        'zh-CN': '所有水平网格线的y坐标。',
+        'zh-CN': '所有水平网格线的 y 坐标。',
       },
     }, {
       name: 'verticalPoints',
@@ -71,7 +71,7 @@ export default {
       isOptional: false,
       desc: {
         'en-US': 'The x-coordinates of all vertical lines.',
-        'zh-CN': '所有竖直网格线的x坐标。',
+        'zh-CN': '所有竖直网格线的 x 坐标。',
       },
     },
   ],

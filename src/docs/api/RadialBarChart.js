@@ -8,7 +8,7 @@ export default {
       isOptional: false,
       desc: {
         'en-US': 'The width of chart container.',
-        'zh-CN': '图表的宽度',
+        'zh-CN': '图表的宽度。',
       },
     }, {
       name: 'height',
@@ -17,7 +17,7 @@ export default {
       isOptional: false,
       desc: {
         'en-US': 'The height of chart container.',
-        'zh-CN': '图表的高度',
+        'zh-CN': '图表的高度。',
       },
     }, {
       name: 'data',
@@ -33,7 +33,7 @@ export default {
       isOptional: false,
       desc: {
         'en-US': 'The sizes of whitespace around the container.',
-        'zh-CN': '图表四周的留白大小，支持传入部分值（ 如： { top: 5 }）',
+        'zh-CN': '图表四周的留白大小，支持传入部分值（如： { top: 5 }）。',
       },
       format: ['{ top: 5, right: 5, bottom: 5, left: 5 }'],
     }, {
@@ -61,7 +61,7 @@ export default {
       isOptional: false,
       desc: {
         'en-US': 'The x-coordinate of center. If set a percentage, the final value is obtained by multiplying the percentage of width.',
-        'zh-CN': '圆心的x坐标，如果值为百分比，会根据图表的宽度来计算最后的值。'
+        'zh-CN': '圆心的 x 坐标，如果值为百分比，会根据图表的宽度来计算最后的值。'
       },
     }, {
       name: 'cy',
@@ -70,7 +70,7 @@ export default {
       isOptional: false,
       desc: {
         'en-US': 'The y-coordinate of center. If set a percentage, the final value is obtained by multiplying the percentage of height.',
-        'zh-CN': '圆心的y坐标，如果值为百分比，会根据图表的高度来计算最后的值。',
+        'zh-CN': '圆心的 y 坐标，如果值为百分比，会根据图表的高度来计算最后的值。',
       },
     }, {
       name: 'innerRadius',

@@ -53,7 +53,7 @@ export default {
       isOptional: false,
       desc: {
         'en-US': 'The type of axis line.',
-        'zh-CN': '轴线的类型：圆，多边形。',
+        'zh-CN': '轴线的类型：圆、多边形。',
       },
     }, {
       name: 'tickLine',

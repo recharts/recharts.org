@@ -8,7 +8,7 @@ export default {
       isOptional: false,
       desc: {
         'en-US': 'If set true, the axis do not display in the chart.',
-        'zh-CN': '是否隐藏y轴。',
+        'zh-CN': '是否隐藏 y 轴。',
       },
     }, {
       name: 'dataKey',
@@ -35,7 +35,7 @@ export default {
       isOptional: false,
       desc: {
         'en-US': 'The width of axis, which can be setted by user.',
-        'zh-CN': 'y轴的宽度，这个可以根据需要进行配置。',
+        'zh-CN': 'y 轴的宽度，这个可以根据需要进行配置。',
       },
     }, {
       name: 'height',
@@ -44,7 +44,7 @@ export default {
       isOptional: false,
       desc: {
         'en-US': 'The height of axis which is usually calculated internally.',
-        'zh-CN': 'y轴的高度，一般在图表内部计算。'
+        'zh-CN': 'y 轴的高度，一般在图表内部计算。'
       },
     }, {
       name: 'orientation',
@@ -53,7 +53,7 @@ export default {
       isOptional: false,
       desc: {
         'en-US': 'The orientation of axis.',
-        'zh-CN': 'y轴的位置。',
+        'zh-CN': 'y 轴的位置。',
       },
     }, {
       name: 'type',
@@ -62,7 +62,7 @@ export default {
       isOptional: false,
       desc: {
         'en-US': 'The type of axis.',
-        'zh-CN': 'y轴的类型： 数值轴、类目轴。',
+        'zh-CN': 'y 轴的类型： 数值轴、类目轴。',
       },
     }, {
       name: 'tickCount',
@@ -108,7 +108,7 @@ export default {
       isOptional: false,
       desc: {
         'en-US': `Specify the padding of y-axis. It's similar to padding of XAxis.`,
-        'zh-CN': '指定内边距',
+        'zh-CN': '指定内边距。',
       },
       format: [
         `<YAxis padding={{ top: 10 }} />`,
@@ -144,7 +144,7 @@ export default {
       isOptional: false,
       desc: {
         'en-US': 'If set false, no axis line will be drawn. If set a object, the option is the configuration of axis line.',
-        'zh-CN': '轴线配置。当值为 false 时，不绘制轴线。当值为对象类型时，会把这个对象解析成 轴线 的属性配置。',
+        'zh-CN': '轴线配置。当值为 false 时，不绘制轴线。当值为对象类型时，会把这个对象解析成轴线的属性配置。',
       },
     }, {
       name: 'tickLine',
@@ -153,7 +153,7 @@ export default {
       isOptional: false,
       desc: {
         'en-US': 'If set false, no axis tick lines will be drawn. If set a object, the option is the configuration of tick lines.',
-        'zh-CN': '刻度线配置。当值为 false 时，不绘制刻度线。当值为对象类型时，会把这个对象解析成 刻度线 的属性配置。',
+        'zh-CN': '刻度线配置。当值为 false 时，不绘制刻度线。当值为对象类型时，会把这个对象解析成刻度线的属性配置。',
       },
     }, {
       name: 'tickSize',
@@ -189,7 +189,7 @@ export default {
       isOptional: true,
       desc: {
         'en-US': 'If set false, no ticks will be drawn. If set a object, the option is the configuration of ticks. If set a React element, the option is the custom react element of drawing ticks.',
-        'zh-CN': '刻度配置。当值为 false 时，不绘制刻度。当值为对象类型时，会把这个对象解析成 刻度 的属性配置。当值为 React element，会克隆这个元素来渲染刻度。'
+        'zh-CN': '刻度配置。当值为 false 时，不绘制刻度。当值为对象类型时，会把这个对象解析成刻度的属性配置。当值为 React element，会克隆这个元素来渲染刻度。'
       },
       format: [
         `<YAxis tick={false} />`,

@@ -26,7 +26,7 @@ export default {
       isOptional: false,
       desc: {
         'en-US': 'The x-coordinate of center. If set a percentage, the final value is obtained by multiplying the percentage of width.',
-        'zh-CN': '圆心的x坐标，如果值为百分比，会根据图表的宽度来计算最后的值。'
+        'zh-CN': '圆心的 x 坐标，如果值为百分比，会根据图表的宽度来计算最后的值。'
       },
     }, {
       name: 'cy',
@@ -35,7 +35,7 @@ export default {
       isOptional: false,
       desc: {
         'en-US': 'The y-coordinate of center. If set a percentage, the final value is obtained by multiplying the percentage of height.',
-        'zh-CN': '圆心的y坐标，如果值为百分比，会根据图表的高度来计算最后的值。',
+        'zh-CN': '圆心的 y 坐标，如果值为百分比，会根据图表的高度来计算最后的值。',
       },
     }, {
       name: 'startAngle',
@@ -53,7 +53,7 @@ export default {
       isOptional: false,
       desc: {
         'en-US': 'The inner radius of first circle grid. If set a percentage, the final value is obtained by multiplying the percentage of maxRadius which is calculated by the width, height, cx, cy.',
-        'zh-CN': '雷达图最内侧网格的半径，一般为0。如果值为百分比，我们首先会根据圆心的坐标、图表的宽度、图表的高度计算一个最大半径，然后根据这个最大半径来计算真实的半径。',
+        'zh-CN': '雷达图最内侧网格的半径，一般为 0。如果值为百分比，我们首先会根据圆心的坐标、图表的宽度、图表的高度计算一个最大半径，然后根据这个最大半径来计算真实的半径。',
       },
     }, {
       name: 'outerRadius',
@@ -62,7 +62,7 @@ export default {
       isOptional: false,
       desc: {
         'en-US': 'The outer radius of last circle grid. If set a percentage, the final value is obtained by multiplying the percentage of maxRadius which is calculated by the width, height, cx, cy.',
-        'zh-CN': '雷达图最外侧网格的半径，一般为0。如果值为百分比，我们首先会根据圆心的坐标、图表的宽度、图表的高度计算一个最大半径，然后根据这个最大半径来计算真实的半径。',
+        'zh-CN': '雷达图最外侧网格的半径，一般为 0。如果值为百分比，我们首先会根据圆心的坐标、图表的宽度、图表的高度计算一个最大半径，然后根据这个最大半径来计算真实的半径。',
       },
     }, {
       name: 'margin',
@@ -71,7 +71,7 @@ export default {
       isOptional: false,
       desc: {
         'en-US': 'The sizes of whitespace around the container.',
-        'zh-CN': '图表四周的留白大小，支持传入部分值（ 如： { top: 5 }）',
+        'zh-CN': '图表四周的留白大小，支持传入部分值（如： { top: 5 }）',
       },
       format: ['{ top: 5, right: 5, bottom: 5, left: 5 }'],
     }, {

@@ -18,7 +18,7 @@ export default {
       isOptional: false,
       desc: {
         'en-US': 'The x-coordinate of brush.',
-        'zh-CN': 'x坐标',
+        'zh-CN': 'x 坐标',
       },
     }, {
       name: 'y',
@@ -27,7 +27,7 @@ export default {
       isOptional: false,
       desc: {
         'en-US': 'The y-coordinate of brush.',
-        'zh-CN': 'y坐标',
+        'zh-CN': 'y 坐标',
       },
     }, {
       name: 'width',

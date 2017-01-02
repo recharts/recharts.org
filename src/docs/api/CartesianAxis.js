@@ -8,7 +8,7 @@ export default {
       isOptional: false,
       desc: {
         'en-US': 'The x-coordinate of axis.',
-        'zh-CN': 'x坐标',
+        'zh-CN': 'x 坐标',
       },
     }, {
       name: 'y',
@@ -17,7 +17,7 @@ export default {
       isOptional: false,
       desc: {
         'en-US': 'The y-coordinate of axis.',
-        'zh-CN': 'y坐标',
+        'zh-CN': 'y 坐标',
       },
     }, {
       name: 'width',
@@ -71,7 +71,7 @@ export default {
       isOptional: false,
       desc: {
         'en-US': 'If set false, no axis tick lines will be drawn. If set a object, the option is the configuration of tick lines.',
-        'zh-CN': '刻度线配置。当值为 false 时，不绘制刻度线。当值为对象类型时，会把这个对象解析成 刻度线 的属性配置。',
+        'zh-CN': '刻度线配置。当值为 false 时，不绘制刻度线。当值为对象类型时，会把这个对象解析成刻度线的属性配置。',
       },
     }, {
       name: 'minTickGap',

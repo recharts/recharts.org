@@ -8,7 +8,7 @@ export default {
       isOptional: false,
       desc: {
         'en-US': 'The id of x-axis which is corresponding to the data.',
-        'zh-CN': '参考区域对应的 x 轴的id。',
+        'zh-CN': '参考区域对应的 x 轴的 id。',
       },
     }, {
       name: 'yAxisId',
@@ -17,7 +17,7 @@ export default {
       isOptional: false,
       desc: {
         'en-US': 'The id of y-axis which is corresponding to the data.',
-        'zh-CN': '参考区域对应的 y 轴的id。',
+        'zh-CN': '参考区域对应的 y 轴的 id。',
       },
     }, {
       name: 'x1',
@@ -84,7 +84,7 @@ export default {
       isOptional: false,
       desc: {
         'en-US': 'The configuration of the corresponding x-axis, usually calculated internally.',
-        'zh-CN': 'x轴配置。',
+        'zh-CN': 'x 轴配置。',
       },
     }, {
       name: 'yAxis',
@@ -93,7 +93,7 @@ export default {
       isOptional: false,
       desc: {
         'en-US': 'The configuration of the corresponding y-axis, usually calculated internally.',
-        'zh-CN': 'y轴配置。',
+        'zh-CN': 'y 轴配置。',
       },
     }, {
       name: 'label',

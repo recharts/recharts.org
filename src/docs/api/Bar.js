@@ -109,7 +109,7 @@ export default {
       isOptional: true,
       desc: {
         'en-US': 'If set a ReactElement, the shape of bar can be customized. If set a function, the function will be called to render customized shape.',
-        'zh-CN': '柱条的图形配置，接收多种配置。当值是一个 React Element ，会克隆这个 React Element 来渲染“柱条”。当值是一个 函数 时，会调用这个函数去渲染自定义的“柱条”。',
+        'zh-CN': '柱条的图形配置，接收多种配置。当值是一个 React Element ，会克隆这个 React Element 来渲染“柱条”。当值是一个函数时，会调用这个函数去渲染自定义的“柱条”。',
       },
       format: [
         `<Bar dataKey="value" shape={<CustomizedShape/>}/>`,

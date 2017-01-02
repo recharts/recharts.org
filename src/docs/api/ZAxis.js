@@ -26,7 +26,7 @@ export default {
       isOptional: false,
       desc: {
         'en-US': 'The range of axis.',
-        'zh-CN': 'z轴 scale 函数的值域。'
+        'zh-CN': 'z 轴 scale 函数的值域。'
       },
     }, {
       name: 'unit',

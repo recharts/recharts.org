@@ -8,7 +8,7 @@ export default {
       isOptional: false,
       desc: {
         'en-US': 'The x-coordinate of the vertical line of the cross.',
-        'zh-CN': '竖直线的x坐标。',
+        'zh-CN': '竖直线的 x 坐标。',
       },
     }, {
       name: 'y',
