@@ -1,4 +1,5 @@
 import React, { PropTypes, cloneElement, Component } from 'react';
+import { Link } from 'react-router';
 import { connect } from 'react-redux';
 import Helmet from 'react-helmet';
 import API from 'docs/api';
@@ -8,9 +9,14 @@ import { getLocaleType, localeGet, parseLocalObj } from 'utils/LocaleUtils';
 import apiCates from 'docs/apiCates';
 import './APIView.scss';
 
-@connect((state, ownProps) => ({
-  page: ownProps.location.hash ? ownProps.location.hash.slice(1) : 'AreaChart',
-}))
+@connect((state, ownProps) => {
+  const pathname = ownProps.location.pathname || '';
+  const paths = pathname.split('/');
+
+  return {
+    page: (paths && paths.length === 4) ? paths[3] : 'AreaChart',
+  };
+})
 class APIView extends Component {
   static propTypes = {
     page: PropTypes.string,
@@ -42,7 +48,11 @@ class APIView extends Component {
   renderPropsExamples(examples, locale) {
     return examples.map((entry, i) => (
       <li key={`example-${i}`}>
-         <a href={entry.isExternal ? entry.url : `/${locale}${entry.url}`} target="_blank">{entry.name}</a>
+        {
+          entry.isExternal ?
+          <a href={entry.url} target="_blank">{entry.name}</a> :
+          <Link to={`/${locale}${entry.url}`}>{entry.name}</Link>
+        }
       </li>
     ));
   }
@@ -105,10 +115,9 @@ class APIView extends Component {
                       items.map((compName, j) => {
                         return (
                           <li key={`item-${j}`}>
-                            <a
-                              href={`/${locale}/api#${compName}`}
-                              className={page === compName ? 'active' : ''}
-                            >{compName}</a>
+                            <Link className={page === compName ? 'active' : ''} to={`/${locale}/api/${compName}`}>
+                              {compName}
+                            </Link>
                           </li>
                         );
                       })

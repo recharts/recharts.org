@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Route, IndexRoute, Redirect, IndexRedirect, hashHistory } from 'react-router';
+import { Route, IndexRoute, Redirect, IndexRedirect } from 'react-router';
 import { IndexView, GuideView, APIView, ExamplesView, BlogView } from 'views';
 import Frame from 'layouts/Frame';
 import _ from 'lodash';
@@ -28,10 +28,8 @@ const onEnter = (nextState, replace) => {
   }
 };
 
-console.log(hashHistory);
-
 export default (store) => (
-  <Route path="/" component={Frame} onEnter={onEnter} history={hashHistory}>
+  <Route path="/" component={Frame} onEnter={onEnter}>
     <IndexRedirect to="/en-US" />
     <Route path="/*/guide(/:name)" component={GuideView} />
     <Route path="/*/api(/:name)" component={APIView} />

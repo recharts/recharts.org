@@ -3,15 +3,21 @@ import { connect } from 'react-redux';
 import Helmet from 'react-helmet';
 import Examples from 'docs/examples';
 import { getLocaleType, localeGet } from 'utils/LocaleUtils';
+import { Link } from 'react-router';
 
 const firstChartName = Object.keys(Examples)[0];
 const cates = ['LineChart', 'BarChart', 'AreaChart', 'ComposedChart', 'ScatterChart',
   'PieChart', 'RadarChart', 'RadialBarChart', 'Treemap', 'Tooltip', 'ResponsiveContainer',
 ];
 
-@connect((state, ownProps) => ({
-  page: ownProps.location.hash ? ownProps.location.hash.slice(1) : firstChartName,
-}))
+@connect((state, ownProps) => {
+  const pathname = ownProps.location.pathname || '';
+  const paths = pathname.split('/');
+
+  return {
+    page: (paths && paths.length === 4) ? paths[3] : 'SimpleLineChart',
+  };
+})
 class ExamplesView extends Component {
   static propTypes = {
     page: PropTypes.string,
@@ -28,7 +34,9 @@ class ExamplesView extends Component {
 
     const items = typeNameList.map(name => (
       <li key={name}>
-        <a href={`/${locale}/examples#${name}`} className={page === name ? 'active' : ''}>{name}</a>
+        <Link to={`/${locale}/examples/${name}`} className={page === name ? 'active' : ''}>
+          {name}
+        </Link>
       </li>
     ));
 

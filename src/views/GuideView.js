@@ -2,10 +2,18 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Installation, GettingStarted, Customize } from 'components/GuideView';
 import { getLocaleType, localeGet } from '../utils/LocaleUtils';
+import { Link } from 'react-router';
 
-@connect((state, ownProps) => ({
-  page: ownProps.location.hash ? ownProps.location.hash.slice(1) : 'installation',
-}))
+const modules = ['installation', 'getting-started', 'customize'];
+
+@connect((state, ownProps) => {
+  const pathname = ownProps.location.pathname || '';
+  const paths = pathname.split('/');
+
+  return {
+    page: (paths && paths.length === 4) ? paths[3] : modules[0],
+  };
+})
 class GuideView extends Component {
   renderGuide(locale) {
     const { page } = this.props;
@@ -26,24 +34,22 @@ class GuideView extends Component {
     return (
       <div className="page page-guide">
         <div className="sidebar">
-          <h2>{localeGet(locale, 'guide', 'guide')}</h2>
-          <ul className="menu">
-            <li>
-              <a href={`/${locale}/guide#installation`} className={page === 'installation' ? 'active' : ''}>
-                {localeGet(locale, 'guide', 'installation')}
-              </a>
-            </li>
-            <li>
-              <a href={`/${locale}/guide#getting-started`} className={page === 'getting-started' ? 'active' : ''}>
-                {localeGet(locale, 'guide', 'getting-started')}
-              </a>
-            </li>
-            <li>
-              <a href={`/${locale}/guide#customize`} className={page === 'customize' ? 'active' : ''}>
-                {localeGet(locale, 'guide', 'customize')}
-              </a>
-            </li>
-          </ul>
+          <div className="sidebar-cate">
+            <h2>{localeGet(locale, 'guide', 'guide')}</h2>
+            <ul className="menu">
+              {
+                modules.map((entry, index) => {
+                  return (
+                    <li key={`item-${index}`}>
+                      <Link to={`/${locale}/guide/${entry}`} className={entry === page ? 'active': ''}>
+                        {localeGet(locale, 'guide', entry)}
+                      </Link>
+                    </li>
+                  );
+                })
+              }
+            </ul>
+          </div>
         </div>
         <div className="content">
           {this.renderGuide(locale)}

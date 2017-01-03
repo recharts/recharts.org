@@ -1,5 +1,6 @@
 import React, { PureComponent } from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router';
 import { LineChart, Line, XAxis, YAxis, Tooltip, CartesianGrid } from 'recharts';
 import Highlight from 'utils/Highlight';
 import { getLocaleType, localeGet } from '../utils/LocaleUtils';
@@ -34,7 +35,7 @@ class IndexView extends PureComponent {
         <div className="desc">
           <p className="title">Recharts</p>
           <p className="subtitle">{localeGet(locale, 'home', 'solgan')}</p>
-          <p><a href="/guide#installation" className="button install-btn"><i className="icon-energy"></i> {localeGet(locale, 'home', 'install')} v0.20.1</a></p>
+          <p><Link to={`/${locale}/guide/installation`} className="button install-btn"><i className="icon-energy"></i> {localeGet(locale, 'home', 'install')} v0.20.1</Link></p>
           <iframe src="https://ghbtns.com/github-btn.html?user=recharts&repo=recharts&type=star&count=true&size=large" frameBorder="0" scrolling="0" width="160px" height="30px"></iframe>
         </div>
         <div className="examples">
@@ -71,7 +72,7 @@ class IndexView extends PureComponent {
         <div className="like">
           <i className="icon-rocket"></i>
           <p className="text">{localeGet(locale, 'home', 'like')}</p>
-          <p className="btn"><a href="/guide#getting-started" className="button getting-started-btn">{localeGet(locale, 'home', 'get-started')}</a></p>
+          <p className="btn"><Link to={`/${locale}/guide/getting-started`} className="button getting-started-btn">{localeGet(locale, 'home', 'get-started')}</Link></p>
         </div>
       </div>
     );

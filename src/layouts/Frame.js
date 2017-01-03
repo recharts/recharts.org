@@ -5,6 +5,8 @@ import Helmet from 'react-helmet';
 import { getLocaleType, localeGet } from '../utils/LocaleUtils';
 import 'styles/app.scss';
 
+const modules = ['guide', 'api', 'examples', 'blog'];
+
 const locales = [
   { locale: 'en-US', text: 'En' },
   { locale: 'zh-CN', text: '中文' },
@@ -66,26 +68,17 @@ class Frame extends Component {
             </h1>
             <nav>
               <ul className="nav" id="nav">
-                <li>
-                  <Link activeClassName="active" className="nav-link" to={`/${locale}/guide`}>
-                    {localeGet(locale, 'frame', 'guide')}
-                  </Link>
-                </li>
-                <li>
-                  <Link activeClassName="active" className="nav-api" to={`/${locale}/api`}>
-                    {localeGet(locale, 'frame', 'api')}
-                  </Link>
-                </li>
-                <li>
-                  <Link activeClassName="active" className="nav-examples" to={`/${locale}/examples`}>
-                    {localeGet(locale, 'frame', 'examples')}
-                  </Link>
-                </li>
-                <li>
-                  <Link activeClassName="active" className="nav-link" to={`/${locale}/blog`}>
-                    {localeGet(locale, 'frame', 'blog')}
-                  </Link>
-                </li>
+                {
+                  modules.map((entry, index) => {
+                    return (
+                      <li key={`item-${index}`}>
+                        <Link className={`nav-link ${entry === page ? 'active' : ''}`} to={`/${locale}/${entry}`}>
+                          {localeGet(locale, 'frame', entry)}
+                        </Link>
+                      </li>
+                    );
+                  })
+                }
                 <li className="github-wrapper">
                   <a href="https://github.com/recharts/recharts"
                     target="_blank"
