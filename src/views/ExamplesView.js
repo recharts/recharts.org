@@ -50,7 +50,7 @@ class ExamplesView extends Component {
             cates.map((cate, index) => {
               return (
                 <div className="sidebar-cate" key={`cate-${index}`}>
-                  <h4>LineChart</h4>
+                  <h4>{cate}</h4>
                   {this.renderMenuList(cate, locale)}
                 </div>
               );

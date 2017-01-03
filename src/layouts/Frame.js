@@ -91,7 +91,7 @@ class Frame extends Component {
                     target="_blank"
                     className="nav-github">Github</a>
                 </li>
-                <li className="language-sitch-wrapper">
+                <li className="language-switch-wrapper">
                   {this.renderLocaleSwitch(locale)}
                 </li>
               </ul>
