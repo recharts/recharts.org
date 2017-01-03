@@ -17,7 +17,7 @@ export default {
       isOptional: false,
       desc: {
         'en-US': 'The unique id of z-axis.',
-        'zh-CN': 'z 轴的唯一id。',
+        'zh-CN': 'z 轴的唯一 id。',
       },
     }, {
       name: 'range',

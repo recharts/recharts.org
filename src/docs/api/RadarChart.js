@@ -8,7 +8,7 @@ export default {
       isOptional: false,
       desc: {
         'en-US': 'The width of chart container.',
-        'zh-CN': '图表的宽度',
+        'zh-CN': '图表的宽度。',
       },
     }, {
       name: 'height',
@@ -17,7 +17,7 @@ export default {
       isOptional: false,
       desc: {
         'en-US': 'The height of chart container.',
-        'zh-CN': '图表的高度',
+        'zh-CN': '图表的高度。',
       },
     }, {
       name: 'cx',
@@ -90,7 +90,7 @@ export default {
       isOptional: true,
       desc: {
         'en-US': `The function will be called when mouse enter the 'Radar'.`,
-        'zh-CN': '“雷达” mouseenter 事件的回调函数。',
+        'zh-CN': '雷达图 mouseenter 事件的回调函数。',
       },
     }, {
       name: 'onMouseLeave',
@@ -99,7 +99,7 @@ export default {
       isOptional: true,
       desc: {
         'en-US': `The function will be called when mouse leave the 'Radar'.`,
-        'zh-CN': '“雷达” mouseleave 事件的回调函数。',
+        'zh-CN': '雷达图 mouseleave 事件的回调函数。',
       },
     }, {
       name: 'onClick',
@@ -108,7 +108,7 @@ export default {
       isOptional: true,
       desc: {
         'en-US': `The function will be called when click the 'Radar'.`,
-        'zh-CN': '“雷达” click 事件的回调函数。',
+        'zh-CN': '雷达图 click 事件的回调函数。',
       },
     },
   ],

@@ -2,7 +2,7 @@ export default {
   name: 'AreaChart',
   desc: {
     'en-US': 'All svg elements can be added into the AreaChart component, such as defs, linearGradient, etc.',
-    'zh-CN': 'AreaChart 支持添加任何类型的 svg 元素作为子节点，包括 defs， linearGradient 等等。',
+    'zh-CN': 'AreaChart 支持添加任何类型的 svg 元素作为子节点，包括 defs、linearGradient 等等。',
   },
   props: [
     {
@@ -33,7 +33,7 @@ export default {
       isOptional: false,
       desc: {
         'en-US': 'The width of chart container.',
-        'zh-CN': '图表的宽度',
+        'zh-CN': '图表的宽度。',
       },
     }, {
       name: 'height',
@@ -42,7 +42,7 @@ export default {
       isOptional: false,
       desc: {
         'en-US': 'The height of chart container.',
-        'zh-CN': '图表的高度',
+        'zh-CN': '图表的高度。',
       },
     }, {
       name: 'data',
@@ -61,7 +61,7 @@ export default {
       isOptional: false,
       desc: {
         'en-US': 'The sizes of whitespace around the container.',
-        'zh-CN': '图表四周的留白大小，支持传入部分值（ 如： { top: 5 }）',
+        'zh-CN': '图表四周的留白大小，支持传入部分值（如： { top: 5 }）',
       },
       format: ['{ top: 5, right: 5, bottom: 5, left: 5 }'],
     }, {
@@ -87,7 +87,7 @@ export default {
       isOptional: true,
       desc: {
          'en-US': 'The customized event handler of click in this chart.',
-         'zh-CN': '鼠标在图表图形区域 点击事件的回调函数。',
+         'zh-CN': '鼠标在图表图形区域 click 事件的回调函数。',
       },
     }, {
       name: 'onMouseEnter',

@@ -26,7 +26,7 @@ export default {
       isOptional: false,
       desc: {
         'en-US': 'The unique id of x-axis.',
-        'zh-CN': 'x 轴的唯一id。',
+        'zh-CN': 'x 轴的唯一 id。',
       },
     }, {
       name: 'width',
@@ -62,7 +62,7 @@ export default {
       isOptional: false,
       desc: {
         'en-US': 'The type of axis.',
-        'zh-CN': 'x 轴的类型： 数值轴、类目轴。',
+        'zh-CN': 'x 轴的类型：数值轴、类目轴。',
       },
     }, {
       name: 'allowDecimals',
@@ -195,7 +195,7 @@ export default {
       format: [
         `<XAxis tick={false} />`,
         `<XAxis tick={{stroke: 'red', strokeWidth: 2}} />`,
-        `<XAxis tick={<CustomizedTick/>} />`,
+        `<XAxis tick={<CustomizedTick />} />`,
       ],
       examples: [{
         name: 'A line chart with customized x-axis tick',

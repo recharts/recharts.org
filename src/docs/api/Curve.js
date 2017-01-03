@@ -34,7 +34,7 @@ export default {
       isOptional: true,
       desc: {
         'en-US': `The option can effect the interpolation algorithm when the props type is set to be 'monotone'. Meanwhile, this option will specified the type of baseline when the curve is colsed.`,
-        'zh-CN': '布局类型。当值为 “horizontal” 时，如果插值类型为 "monotone"，我们会使用 "monotoneX" 的插值算法。',
+        'zh-CN': '布局类型。当值为 "horizontal" 时，如果插值类型为 "monotone"，我们会使用 "monotoneX" 的插值算法。',
       },
     }, {
       name: 'baseLine',
@@ -52,7 +52,7 @@ export default {
       isOptional: false,
       desc: {
         'en-US': 'Whether to connect a curve across null points.',
-        'zh-CN': '当遇到 null, undefined 等非法输入的时候，是否跳过这个值，让前后连接起来。',
+        'zh-CN': '当遇到 null、undefined 等非法输入的时候，是否跳过这个值，让前后连接起来。',
       },
       examples: [{
         name: 'A lineChart connect nulls and a lineChart disconnect nulls',

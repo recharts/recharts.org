@@ -67,7 +67,7 @@ export default {
       isOptional: false,
       desc: {
         'en-US': 'If false set, axis line will not be drawn. If true set, axis line will be drawn which have the props calculated internally. If object set, axis line will be drawn which have the props mergered by the internal calculated props and the option.',
-        'zh-CN': '刻度线配置。当值为 false 时，不绘制刻度线。当值为对象类型时，会把这个对象解析成 刻度线 的属性配置。',
+        'zh-CN': '刻度线配置。当值为 false 时，不绘制刻度线。当值为对象类型时，会把这个对象解析成刻度线的属性配置。',
       },
     }, {
       name: 'tick',
@@ -76,7 +76,7 @@ export default {
       isOptional: false,
       desc: {
         'en-US': 'If false set, ticks will not be drawn. If true set, ticks will be drawn which have the props calculated internally. If object set, ticks will be drawn which have the props mergered by the internal calculated props and the option. If ReactElement set, the option can be the custom tick element. If set a function, the function will be called to render customized ticks.',
-        'zh-CN': '刻度配置。当值为 false 时，不绘制刻度。当值为对象类型时，会把这个对象解析成 刻度 的属性配置。当值为 React element，会克隆这个元素来渲染刻度。',
+        'zh-CN': '刻度配置。当值为 false 时，不绘制刻度。当值为对象类型时，会把这个对象解析成刻度的属性配置。当值为 React element，会克隆这个元素来渲染刻度。',
       },
     }, {
       name: 'tickFormatter',

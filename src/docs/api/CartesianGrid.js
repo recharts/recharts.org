@@ -8,7 +8,7 @@ export default {
       isOptional: false,
       desc: {
         'en-US': 'The x-coordinate of grid.',
-        'zh-CN': 'x 坐标'
+        'zh-CN': 'x 坐标。',
       },
     }, {
       name: 'y',
@@ -17,7 +17,7 @@ export default {
       isOptional: false,
       desc: {
         'en-US': 'The y-coordinate of grid.',
-        'zh-CN': 'y 坐标'
+        'zh-CN': 'y 坐标。',
       },
     }, {
       name: 'width',
@@ -26,7 +26,7 @@ export default {
       isOptional: false,
       desc: {
         'en-US': 'The width of grid.',
-        'zh-CN': '宽度',
+        'zh-CN': '宽度。',
       },
     }, {
       name: 'height',
@@ -35,7 +35,7 @@ export default {
       isOptional: false,
       desc: {
         'en-US': 'The height of grid.',
-        'zh-CN': '高度',
+        'zh-CN': '高度。',
       },
     }, {
       name: 'horizontal',

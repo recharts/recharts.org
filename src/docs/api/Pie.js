@@ -93,7 +93,7 @@ export default {
       isOptional: false,
       desc: {
         'en-US': "The key of each sector's value.",
-        'zh-CN': '"value" 属性对应的 key 。',
+        'zh-CN': '"value" 属性对应的 key。',
       },
     }, {
       name: 'legendType',
@@ -181,7 +181,7 @@ export default {
       isOptional: false,
       desc: {
         'en-US': 'Specifies when the animation should begin, the unit of this option is ms.',
-        'zh-CN': '声明组件 mount 或者 更新 后，开始运行动画的间隔时长，单位为毫秒。',
+        'zh-CN': '声明组件挂载或更新后，开始运行动画的间隔时长，单位为毫秒。',
       },
     }, {
       name: 'animationDuration',

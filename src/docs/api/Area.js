@@ -9,7 +9,7 @@ export default {
       isOptional: false,
       desc: {
         'en-US': 'The interpolation type of area. And customized interpolation function can be set to type.',
-        'zh-CN': '曲线的插值类型，可以接收自定义的函数。折线对应的 type 为 “linear” 。',
+        'zh-CN': '曲线的插值类型，可以接收自定义的函数。折线对应的 type 为 "linear"。',
       },
       examples: [{
         name: 'd3-shape interpolation',
@@ -62,7 +62,7 @@ export default {
       isOptional: false,
       desc: {
         'en-US': 'If false set, dots will not be drawn. If true set, dots will be drawn which have the props calculated internally. If object set, dots will be drawn which have the props mergered by the internal calculated props and the option. If ReactElement set, the option can be the custom dot element. If set a function, the function will be called to render customized dot.',
-        'zh-CN': '曲线上的点，接收多种配置。当值为 false ，不渲染点。当值为 true ，点会继承 Area 的属性配置，例如配置了 Area 的 stroke 为 "red"， 点会继承这个属性。当值为一个对象的时候，会把这个对象解析为点的属性，来覆盖默认属性。当值是一个 React Element ，会克隆这个 React Element 来渲染“点”。当值是一个 函数 时，会调用这个函数去渲染自定义的“点”。',
+        'zh-CN': '曲线上的点，接收多种配置。当值为 false ，不渲染点。当值为 true ，点会继承 Area 的属性配置，例如配置了 Area 的 stroke 为 "red"， 点会继承这个属性。当值为一个对象的时候，会把这个对象解析为点的属性，来覆盖默认属性。当值是一个 React Element ，会克隆这个 React Element 来渲染“点”。当值是函数时，会调用这个函数去渲染自定义的“点”。',
       },
       format: [
         `<Area dataKey="value" dot={false} />`,
@@ -77,7 +77,7 @@ export default {
       isOptional: false,
       desc: {
         'en-US': 'The dot is shown when muser enter a area chart and this chart has tooltip. If false set, no active dot will not be drawn. If true set, active dot will be drawn which have the props calculated internally. If object set, active dot will be drawn which have the props mergered by the internal calculated props and the option. If ReactElement set, the option can be the custom active dot element.If set a function, the function will be called to render customized active dot.',
-        'zh-CN': '当图表触发mouseenter事件，并且需要展示 Tooltip 的时候，会展示一个“激活状态的点”。当值为 false ，不渲染“激活状态的点”。当值为 true ，点会继承 Area 的属性配置，例如配置了 Area 的 stroke 为 "red"， 点会继承这个属性。当值为一个对象的时候，会把这个对象解析为点的属性，来覆盖默认属性。当值是一个 React Element ，会克隆这个 React Element 来渲染“点”。当值是一个 函数 时，会调用这个函数去渲染自定义的“点”。'
+        'zh-CN': '当图表触发 mouseenter 事件，并且需要展示 Tooltip 的时候，会展示一个“激活状态的点”。当值为 false ，不渲染“激活状态的点”。当值为 true ，点会继承 Area 的属性配置，例如配置了 Area 的 stroke 为 "red"， 点会继承这个属性。当值为一个对象的时候，会把这个对象解析为点的属性，来覆盖默认属性。当值是一个 React Element ，会克隆这个 React Element 来渲染“点”。当值是一个 函数 时，会调用这个函数去渲染自定义的“点”。'
       },
       format: [
         `<Area dataKey="value" activeDot={false} />`,
@@ -92,7 +92,7 @@ export default {
       isOptional: false,
       desc: {
         'en-US': 'If false set, labels will not be drawn. If true set, labels will be drawn which have the props calculated internally. If object set, labels will be drawn which have the props mergered by the internal calculated props and the option. If ReactElement set, the option can be the custom label element. If set a function, the function will be called to render customized label.',
-        'zh-CN': '图形上的文本标签。当值为 false ，不展示文本标签。当值为 true，会根据 Area 的属性配置来展示文本标签。当值为一个对象的时候，会把这个对象解析为 文本标签 的属性，来覆盖默认属性。当值是一个 React Element ，会克隆这个 React Element 来渲染“文本标签”。当值是一个 函数 时，会调用这个函数去渲染自定义的“文本标签”。',
+        'zh-CN': '图形上的文本标签。当值为 false ，不展示文本标签。当值为 true，会根据 Area 的属性配置来展示文本标签。当值为对象的时候，会把这个对象解析为文本标签的属性，来覆盖默认属性。当值是一个 React Element ，会克隆这个 React Element 来渲染“文本标签”。当值是一个 函数 时，会调用这个函数去渲染自定义的“文本标签”。',
       },
       format: [
         `<Area dataKey="value" label />`,
@@ -150,8 +150,8 @@ export default {
         'en-US': 'The stack id of area, when two areas have the same value axis and same stackId, then the two areas area stacked in order.',
         'zh-CN': '堆积id，当两组及以上的区域图有相同的数值轴以及相同的 stackId 时，这些区域图会按照顺序堆积展示。',
       },
-      format: [
-        `<AreaChart data={data} width={400} height={300}>
+      format: [`
+<AreaChart data={data} width={400} height={300}>
   <Area stackId="pv" dataKey="pv01" />
   <Area stackId="pv" dataKey="pv02" />
   <Area stackId="uv" dataKey="uv01" />
@@ -170,7 +170,7 @@ export default {
       isOptional: false,
       desc: {
         'en-US': 'Whether to connect a graph area across null points.',
-        'zh-CN': '当遇到 null, undefined 等非法输入的时候，是否跳过这个值，让前后连接起来。',
+        'zh-CN': '当遇到 null、undefined 等非法输入的时候，是否跳过这个值，让前后连接起来。',
       },
       examples: [{
         name: 'An areaChart connect nulls and an areaChart disconnect nulls',
@@ -210,7 +210,7 @@ export default {
       isOptional: false,
       desc: {
         'en-US': 'Specifies when the animation should begin, the unit of this option is ms.',
-        'zh-CN': '声明组件 mount 或者更新后，开始运行动画的间隔时长，单位为毫秒。',
+        'zh-CN': '声明组件挂载或更新后，开始运行动画的间隔时长，单位为毫秒。',
       },
     }, {
       name: 'animationDuration',

@@ -143,7 +143,7 @@ const renderLegend = (props) => {
       isOptional: true,
       desc: {
         'en-US': 'The customized event handler of click on the items in this group',
-        'zh-CN': '图例每个项目点击事件的回调函数。',
+        'zh-CN': '图例每个项目 click 事件的回调函数。',
       },
     }, {
       name: 'onMouseDown',

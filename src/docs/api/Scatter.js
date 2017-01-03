@@ -49,7 +49,7 @@ export default {
       format: [
         `<Scatter data={data} line />`,
         `<Scatter data={data} line={{stroke: 'red', strokeWidth: 2}} />`,
-        `<Scatter data={data} line={<CustomizedLine/>} />`,
+        `<Scatter data={data} line={<CustomizedLine />} />`,
       ],
       examples: [{
         name: 'A scatter chart with joint line',

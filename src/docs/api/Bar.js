@@ -109,7 +109,7 @@ export default {
       isOptional: true,
       desc: {
         'en-US': 'If set a ReactElement, the shape of bar can be customized. If set a function, the function will be called to render customized shape.',
-        'zh-CN': '柱条的图形配置，接收多种配置。当值是一个 React Element ，会克隆这个 React Element 来渲染“柱条”。当值是一个函数时，会调用这个函数去渲染自定义的“柱条”。',
+        'zh-CN': '柱条的图形配置，接收多种配置。当值是一个 React Element ，会克隆这个 React Element 来渲染“柱条”。当值是函数时，会调用这个函数去渲染自定义的“柱条”。',
       },
       format: [
         `<Bar dataKey="value" shape={<CustomizedShape/>}/>`,
@@ -177,7 +177,7 @@ export default {
       isOptional: false,
       desc: {
         'en-US': 'Specifies when the animation should begin, the unit of this option is ms.',
-        'zh-CN': '声明组件 mount 或者 更新 后，开始运行动画的间隔时长，单位为毫秒。',
+        'zh-CN': '声明组件挂载或更新后，开始运行动画的间隔时长，单位为毫秒。',
       },
     }, {
       name: 'animationDuration',

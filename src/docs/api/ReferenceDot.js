@@ -53,7 +53,7 @@ export default {
       isOptional: false,
       desc: {
         'en-US': 'The configuration of the corresponding x-axis, usually calculated internally.',
-        'zh-CN': 'x轴配置。',
+        'zh-CN': 'x 轴配置。',
       },
     }, {
       name: 'yAxis',
@@ -62,7 +62,7 @@ export default {
       isOptional: false,
       desc: {
         'en-US': 'The configuration of the corresponding y-axis, usually calculated internally.',
-        'zh-CN': 'y轴配置。',
+        'zh-CN': 'y 轴配置。',
       },
     }, {
       name: 'label',

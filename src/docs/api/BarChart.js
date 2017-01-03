@@ -29,7 +29,7 @@ export default {
       isOptional: false,
       desc: {
         'en-US': 'The width of chart container.',
-        'zh-CN': '图表的宽度',
+        'zh-CN': '图表的宽度。',
       },
     }, {
       name: 'height',
@@ -38,7 +38,7 @@ export default {
       isOptional: false,
       desc: {
         'en-US': 'The height of chart container.',
-        'zh-CN': '图表的高度',
+        'zh-CN': '图表的高度。',
       },
     }, {
       name: 'data',
@@ -57,7 +57,7 @@ export default {
       isOptional: false,
       desc: {
         'en-US': 'The sizes of whitespace around the container.',
-        'zh-CN': '图表四周的留白大小，支持传入部分值（ 如： { top: 5 }）',
+        'zh-CN': '图表四周的留白大小，支持传入部分值（如： { top: 5 }）',
       },
       format: ['{ top: 5, right: 5, bottom: 5, left: 5 }'],
     }, {
@@ -104,7 +104,7 @@ export default {
       defaultVal: false,
       desc: {
         'en-US': 'The maximum width of all the bars in a horizontal BarChart, or maximum height in a vertical BarChart.',
-        'zh-CN': '当柱图的 layout 是 "horizontal" 时，表示柱子的最大宽度。当柱图的 layout 是 "vertical" 时，表示柱子的最大高度。',
+        'zh-CN': '当柱图的 layout 是 horizontal 时，表示柱子的最大宽度。当柱图的 layout 是 vertical 时，表示柱子的最大高度。',
       },
     }, {
       name: 'stackOffset',
@@ -129,7 +129,7 @@ export default {
       isOptional: true,
       desc: {
          'en-US': 'The customized event handler of click in this chart.',
-         'zh-CN': '鼠标在图表图形区域点击事件的回调函数。',
+         'zh-CN': '鼠标在图表图形区域 click 事件的回调函数。',
       },
     }, {
       name: 'onMouseEnter',

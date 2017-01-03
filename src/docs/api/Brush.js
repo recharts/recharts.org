@@ -18,7 +18,7 @@ export default {
       isOptional: false,
       desc: {
         'en-US': 'The x-coordinate of brush.',
-        'zh-CN': 'x 坐标',
+        'zh-CN': 'x 坐标。',
       },
     }, {
       name: 'y',
@@ -27,7 +27,7 @@ export default {
       isOptional: false,
       desc: {
         'en-US': 'The y-coordinate of brush.',
-        'zh-CN': 'y 坐标',
+        'zh-CN': 'y 坐标。',
       },
     }, {
       name: 'width',
@@ -45,7 +45,7 @@ export default {
       isOptional: false,
       desc: {
         'en-US': 'The height of brush.',
-        'zh-CN': '指定高度'
+        'zh-CN': '指定高度。'
       },
     }, {
       name: 'data',
@@ -63,7 +63,7 @@ export default {
       isOptional: false,
       desc: {
         'en-US': 'The width of each traveller.',
-        'zh-CN': '游标的宽度',
+        'zh-CN': '游标的宽度。',
       },
     }, {
       name: 'startIndex',
