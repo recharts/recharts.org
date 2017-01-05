@@ -90,7 +90,7 @@ export default {
       ],
       examples: [{
         name: 'Numeric XAxis with specified domain',
-        url: '/examples#VerticalLineChartWithSpecifiedDomain',
+        url: '/examples/VerticalLineChartWithSpecifiedDomain',
       }],
     }, {
       name: 'interval',
@@ -117,7 +117,7 @@ export default {
       ],
       examples: [{
         name: 'XAxis with non-zero padding',
-        url: '/examples#LineChartWithXAxisPading'
+        url: '/examples/LineChartWithXAxisPading'
       }]
     }, {
       name: 'minTickGap',
@@ -212,7 +212,7 @@ export default {
       examples: [
         {
           name: 'A composed chart with axis labels',
-          url: '/examples#ComposedChartWithAxisLabels',
+          url: '/examples/ComposedChartWithAxisLabels',
         },
       ],
     }, {

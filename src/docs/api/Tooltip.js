@@ -35,6 +35,7 @@ export default {
       examples: [{
         name: 'React Inline style',
         url: 'https://facebook.github.io/react/tips/inline-styles.html',
+        isExternal: true,
       }],
     },  {
       name: 'wrapperStyle',
@@ -48,6 +49,7 @@ export default {
       examples: [{
         name: 'React Inline style',
         url: 'https://facebook.github.io/react/tips/inline-styles.html',
+        isExternal: true,
       }],
     },  {
       name: 'labelStyle',
@@ -61,6 +63,7 @@ export default {
       examples: [{
         name: 'React Inline style',
         url: 'https://facebook.github.io/react/tips/inline-styles.html',
+        isExternal: true,
       }],
     }, {
       name: 'cursor',
@@ -140,7 +143,7 @@ export default {
       examples: [
         {
           name: 'Customize tooltip content',
-          url: '/examples#CustomContentOfTooltip',
+          url: '/examples/CustomContentOfTooltip',
         }
       ],
     }, {

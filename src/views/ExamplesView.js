@@ -8,6 +8,7 @@ import { Link } from 'react-router';
 const firstChartName = Object.keys(Examples)[0];
 const cates = ['LineChart', 'BarChart', 'AreaChart', 'ComposedChart', 'ScatterChart',
   'PieChart', 'RadarChart', 'RadialBarChart', 'Treemap', 'Tooltip', 'ResponsiveContainer',
+  'Legend',
 ];
 
 @connect((state, ownProps) => {

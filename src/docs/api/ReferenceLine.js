@@ -92,7 +92,7 @@ export default {
       ],
       examples: [{
         name: 'ReferenceLines with label',
-        url: '/examples#LineChartWithReferenceLines',
+        url: '/examples/LineChartWithReferenceLines',
       }]
     }, {
       name: 'isFront',

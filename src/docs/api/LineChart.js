@@ -20,7 +20,7 @@ export default {
       },
       examples: [{
         name: "Two synchronized LineChart and an AreaChart",
-        url: '/examples#SynchronizedLineChart',
+        url: '/examples/SynchronizedLineChart',
       }]
     }, {
       name: 'width',

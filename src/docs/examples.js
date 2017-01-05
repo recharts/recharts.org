@@ -60,4 +60,6 @@ export default {
   AreaResponsiveContainer: '//jsfiddle.net/znqLLdev/1/embedded/result,js,css,html,resources/',
   ComposedResponsiveContainer: '//jsfiddle.net/64eoc63w/5/embedded/result,js,css,html,resources/',
   PieResponsiveContainer: '//jsfiddle.net/cfL5fez0/1/embedded/result,js,css,html,resources/',
+
+  LegendEffectOpacity: '//jsfiddle.net/g6ksud11/1/embedded/result,js,css,html,resources/',
 };

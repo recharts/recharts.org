@@ -17,7 +17,7 @@ export default {
         isExternal: true,
       }, {
         name: 'An AreaChart which has two area with different interpolation.',
-        url: '/examples#CardinalAreaChart',
+        url: '/examples/CardinalAreaChart',
       }],
     }, {
       name: 'dataKey',
@@ -161,7 +161,7 @@ export default {
       ],
       examples: [{
         name: 'A stacked area chart',
-        url: '/examples#StackedAreaChart'
+        url: '/examples/StackedAreaChart'
       }],
     }, {
       name: 'connectNulls',
@@ -174,7 +174,7 @@ export default {
       },
       examples: [{
         name: 'An areaChart connect nulls and an areaChart disconnect nulls',
-        url: '/examples#AreaChartConnectNulls',
+        url: '/examples/AreaChartConnectNulls',
       }]
     }, {
       name: 'unit',
@@ -240,7 +240,7 @@ export default {
       },
       examples: [{
         name: 'A BarChart with customized click event handler',
-        url: '/examples#BarChartWithCustomizedEvent',
+        url: '/examples/BarChartWithCustomizedEvent',
       }],
     }, {
       name: 'onMouseDown',

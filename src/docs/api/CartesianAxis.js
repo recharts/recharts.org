@@ -111,7 +111,7 @@ export default {
       },
       examples: [{
         name: 'A line chart with customized x-axis tick',
-        url: '/examples#CustomizedLabelLineChart',
+        url: '/examples/CustomizedLabelLineChart',
       }],
     }, {
       name: 'label',

@@ -16,7 +16,7 @@ export default {
         isExternal: true,
       }, {
         name: 'An AreaChart which has two area with different interpolation.',
-        url: '/examples#CardinalAreaChart',
+        url: '/examples/CardinalAreaChart',
       }],
     }, {
       name: 'points',
@@ -56,10 +56,10 @@ export default {
       },
       examples: [{
         name: 'A lineChart connect nulls and a lineChart disconnect nulls',
-        url: '/examples#LineChartConnectNulls',
+        url: '/examples/LineChartConnectNulls',
       }, {
         name: 'An areaChart connect nulls and an areaChart disconnect nulls',
-        url: '/examples#AreaChartConnectNulls',
+        url: '/examples/AreaChartConnectNulls',
       }]
     }, {
       name: 'onClick',

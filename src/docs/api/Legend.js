@@ -136,6 +136,7 @@ const renderLegend = (props) => {
       examples: [{
         name: 'React Inline style',
         url: 'https://facebook.github.io/react/tips/inline-styles.html',
+        isExternal: true,
       }],
     }, {
       name: 'onClick',
@@ -193,6 +194,10 @@ const renderLegend = (props) => {
         'en-US': 'The customized event handler of moustenter on the items in this group',
         'zh-CN': '图例每个项目 moustenter 事件的回调函数。',
       },
+      examples: [{
+        name: 'Legend customized event to effect the opacity of Line',
+        url: '/examples/LegendEffectOpacity',
+      }],
     }, {
       name: 'onMouseLeave',
       type: 'Function',
@@ -201,6 +206,10 @@ const renderLegend = (props) => {
         'en-US': 'The customized event handler of mouseleave on the items in this group',
         'zh-CN': '图例每个项目 mouseleave 事件的回调函数。',
       },
+      examples: [{
+        name: 'Legend customized event to effect the opacity of Line',
+        url: '/examples/LegendEffectOpacity',
+      }],
     },
   ],
 };

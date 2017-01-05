@@ -53,7 +53,7 @@ export default {
       ],
       examples: [{
         name: 'A scatter chart with joint line',
-        url: '/examples#JointLineScatterChart',
+        url: '/examples/JointLineScatterChart',
       }],
     }, {
       name: 'shape',
@@ -71,7 +71,7 @@ export default {
       ],
       examples: [{
         name: 'A scatter chart with joint line',
-        url: '/examples#JointLineScatterChart',
+        url: '/examples/JointLineScatterChart',
       }],
     }, {
       name: 'lineType',

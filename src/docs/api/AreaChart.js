@@ -24,7 +24,7 @@ export default {
       },
       examples: [{
         name: "Two synchronized AreaChart",
-        url: '/examples#SynchronizedAreaChart',
+        url: '/examples/SynchronizedAreaChart',
       }]
     }, {
       name: 'width',
@@ -75,12 +75,22 @@ export default {
       },
       examples: [{
         name: `An AreaChart with stackOffset specified to 'expand'`,
-        url: '/examples#PercentAreaChart',
+        url: '/examples/PercentAreaChart',
       }, {
         name: 'D3 stackOffset',
         url: 'https://github.com/d3/d3-shape#stack_offset',
         isExternal: true,
       }],
+    }, {
+      name: 'baseValue',
+      type: `Number | 'dataMin' | 'dataMax' | 'auto'`,
+      defaultVal: 'auto',
+      isOptional: false,
+      desc: {
+        'en-US': 'The base value of area.',
+        'zh-CN': '区域图的基准值。',
+      },
+      format: ['{ top: 5, right: 5, bottom: 5, left: 5 }'],
     }, {
       name: 'onClick',
       type: 'Function',

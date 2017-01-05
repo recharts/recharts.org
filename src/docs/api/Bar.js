@@ -138,10 +138,10 @@ export default {
       ],
       examples: [{
         name: 'A stacked bar chart',
-        url: '/examples#StackedBarChart',
+        url: '/examples/StackedBarChart',
       }, {
         name: 'A bar chart with stacked bars and unstacked bars',
-        url: '/examples#MixBarChart',
+        url: '/examples/MixBarChart',
       }],
     }, {
       name: 'unit',
@@ -207,7 +207,7 @@ export default {
       },
       examples: [{
         name: 'A BarChart with customized click event handler',
-        url: '/examples#BarChartWithCustomizedEvent',
+        url: '/examples/BarChartWithCustomizedEvent',
       }],
     }, {
       name: 'onMouseDown',

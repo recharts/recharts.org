@@ -21,7 +21,7 @@ export default {
       },
       examples: [{
         name: "Two synchronized AreaChart",
-        url: '/examples#SynchronizedAreaChart',
+        url: '/examples/SynchronizedAreaChart',
       }]
     }, {
       name: 'width',

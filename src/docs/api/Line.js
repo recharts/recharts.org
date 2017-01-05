@@ -17,7 +17,7 @@ export default {
         isExternal: true,
       }, {
         name: 'An AreaChart which has two area with different interpolation.',
-        url: '/examples#CardinalAreaChart',
+        url: '/examples/CardinalAreaChart',
       }],
     }, {
       name: 'dataKey',
@@ -72,7 +72,7 @@ export default {
       ],
       examples: [{
         name: 'A line chart with customized dot',
-        url: '/examples#CustomizedDotLineChart',
+        url: '/examples/CustomizedDotLineChart',
       }],
     }, {
       name: 'activeDot',
@@ -91,7 +91,7 @@ export default {
       ],
       examples: [{
         name: 'A simple line chart',
-        url: '/examples#SimpleLineChart',
+        url: '/examples/SimpleLineChart',
       }],
     },  {
       name: 'label',
@@ -110,7 +110,7 @@ export default {
       ],
       examples: [{
         name: 'A line chart with customized label',
-        url: '/examples#CustomizedLabelLineChart',
+        url: '/examples/CustomizedLabelLineChart',
       }],
     }, {
       name: 'points',
@@ -142,7 +142,7 @@ export default {
       },
       examples: [{
         name: 'A lineChart connect nulls and a lineChart disconnect nulls',
-        url: '/examples#LineChartConnectNulls',
+        url: '/examples/LineChartConnectNulls',
       }]
     }, {
       name: 'unit',
@@ -208,7 +208,7 @@ export default {
       },
       examples: [{
         name: 'A BarChart with customized click event handler',
-        url: '/examples#BarChartWithCustomizedEvent',
+        url: '/examples/BarChartWithCustomizedEvent',
       }],
     }, {
       name: 'onMouseDown',

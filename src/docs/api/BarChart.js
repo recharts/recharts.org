@@ -20,7 +20,7 @@ export default {
       },
       examples: [{
         name: "Two synchronized AreaChart",
-        url: '/examples#SynchronizedAreaChart',
+        url: '/examples/SynchronizedAreaChart',
       }]
     }, {
       name: 'width',
@@ -90,11 +90,11 @@ export default {
       examples: [
         {
           name: 'Tiny BarChart',
-          url: '/examples#TinyBarChart',
+          url: '/examples/TinyBarChart',
         },
         {
           name: 'Mix BarChart with stacked bars and unstacked bars ',
-          url: '/examples#MixBarChart',
+          url: '/examples/MixBarChart',
         },
       ],
     }, {
