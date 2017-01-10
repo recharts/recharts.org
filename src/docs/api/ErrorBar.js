@@ -10,7 +10,7 @@ export default {
           symmetric error bars or an array of a lower and upper error value for asymmetric error
           bars.`,
         'zh-CN': '展示误差线对应的数据的 key。当对应的元素是一个数值时，会用来展示对称的误差线。当对应的元素是一个二元数组时，可以用来设置非对称的误差线。',
-      }
+      },
     }, {
       name: 'width',
       type: 'Number',
