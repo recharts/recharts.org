@@ -138,6 +138,15 @@ export default {
         'zh-CN': '是否允许小数类型的刻度。',
       },
     }, {
+      name: 'allowDataOverflow',
+      type: 'Boolean',
+      defaultVal: 'false',
+      isOptional: false,
+      desc: {
+        'en-US': `When specify the domain of axis and the type of axis is number, if allowDataOverflow is set to be false, we'll adjust the domain when the minimum value of data is smaller than domain[0] or the maximum value of data is greater than domain[1]. If set true, the graphic elements (line, area, bars) will be clipped to fix the specified domain.`,
+        'zh-CN': '当轴是数值轴时，指定轴的定义域（domain）的时候，如果 allowDataOverflow 的值为 false，我们会根据数据的最大值和最小值来调整 domain，确保所有的数据能够展示。如果 allowDataOverflow 的值为 true，不会调整 domain ，而是将相应的图形元素会直接裁剪掉。',
+      },
+    }, {
       name: 'axisLine',
       type: 'Boolean | Object',
       defaultVal: 'true',
