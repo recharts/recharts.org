@@ -202,6 +202,14 @@ export default {
         'zh-CN': '动画缓动函数的类型。',
       },
     }, {
+      name: 'clipPathId',
+      type: 'String',
+      defaultVal: '\'pie + Date.now()\'',
+      isOptional: true,
+      desc: {
+        'en-US': "Date.now() will always lead to invalid checksum in case of isomorphic/universal applications. Use this property to override the <clipPath> id with your app specific logic.",
+      },
+    }, {
       name: 'onClick',
       type: 'Function',
       isOptional: true,
