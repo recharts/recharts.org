@@ -100,7 +100,7 @@ export default {
       },
       examples: [{
         name: 'A BarChart with non-zero minPointSize',
-        url: 'examples/#BarChartWithMinHeight',
+        url: '/examples/BarChartWithMinHeight',
       }]
     }, {
       name: 'shape',
@@ -117,7 +117,7 @@ export default {
       ],
       examples: [{
         name: 'A bar chart with customized shape',
-        url: 'examples#CustomShapeBarChart',
+        url: '/examples/CustomShapeBarChart',
       }],
     }, {
       name: 'stackId',
