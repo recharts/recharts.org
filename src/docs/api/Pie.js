@@ -75,7 +75,7 @@ export default {
       },
       examples: [{
         name: 'Pie with nozero padding angle',
-        url: 'examples#PieChartWithPaddingAngle',
+        url: '/examples/PieChartWithPaddingAngle',
       }]
     }, {
       name: 'nameKey',
@@ -115,7 +115,7 @@ export default {
       },
       examples: [{
         name: 'A pie chart with customized label',
-        url: 'examples#PieChartWithCustomizedLabel',
+        url: '/examples/PieChartWithCustomizedLabel',
       }],
     }, {
       name: 'labelLine',
@@ -128,7 +128,7 @@ export default {
       },
       examples: [{
         name: 'A pie chart with customized label',
-        url: 'examples#PieChartWithCustomizedLabel',
+        url: '/examples/PieChartWithCustomizedLabel',
       }],
     }, {
       name: 'data',
@@ -150,7 +150,7 @@ export default {
       },
       examples: [{
         name: 'A pie chart with customized active shape',
-        url: 'examples#CustomActiveShapePieChart',
+        url: '/examples/CustomActiveShapePieChart',
       }],
     }, {
       name: 'activeShape',
@@ -163,7 +163,7 @@ export default {
       },
       examples: [{
         name: 'A pie chart with customized active shape',
-        url: 'examples#CustomActiveShapePieChart',
+        url: '/examples/CustomActiveShapePieChart',
       }],
     }, {
       name: 'isAnimationActive',
