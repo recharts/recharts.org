@@ -60,6 +60,15 @@ export default {
         'zh-CN': '图例中图标的大小。',
       },
     }, {
+      name: 'iconType',
+      type: `'line' | 'square' | 'rect' | 'circle' | 'cross' | 'diamond' |
+      'star' | 'triangle' | 'wye'`,
+      isOptional: false,
+      desc: {
+        'en-US': 'The type of icon in each legend item.',
+        'zh-CN': '图例中图标的类型。',
+      },
+    }, {
       name: 'payload',
       type: 'Array',
       defaultVal: '[]',

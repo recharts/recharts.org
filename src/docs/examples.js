@@ -4,7 +4,7 @@ export default {
   VerticalLineChart: '//jsfiddle.net/r5n3fkwr/2/embedded/result,js,css,html,resources/',
   BiaxialLineChart: '//jsfiddle.net/ragrbruL/6/embedded/result,js,css,html,resources/',
   CustomizedDotLineChart: '//jsfiddle.net/p0zwLx5z/1/embedded/result,js,css,html,resources/',
-  CustomizedLabelLineChart: '//jsfiddle.net/344uh0ax/2/embedded/result,js,css,html,resources/',
+  CustomizedLabelLineChart: '//jsfiddle.net/344uh0ax/62/embedded/result,js,css,html,resources/',
   LineChartWithReferenceLines: '//jsfiddle.net/njnqef9y/2/embedded/result,js,css,html,resources/',
   DashedLineChart: '//jsfiddle.net/tqar2v5x/3/embedded/result,js,css,html,resources/',
   LineChartWithXAxisPading: '//jsfiddle.net/1uz4kg7f/embedded/result,js,css,html,resources/',
