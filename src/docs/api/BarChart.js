@@ -49,7 +49,10 @@ export default {
         'en-US': 'The source data, in which each element is an object.',
         'zh-CN': '输入数据，现在支持的类型是对象数组。'
       },
-      format: ['[{ name: \'a\', value: 12 }]']
+      format: [
+        '[{ name: \'a\', value: 12 }]',
+        '[{ name: \'a\', value: [5, 12] }]'
+      ]
     }, {
       name: 'margin',
       type: 'Object',

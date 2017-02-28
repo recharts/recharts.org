@@ -101,13 +101,13 @@ export default {
         `<Area dataKey="value" label={renderLabel} />`,
       ],
     }, {
-      name: 'curve',
-      type: 'Boolean',
-      defaultVal: 'true',
+      name: 'stroke',
+      type: 'String',
+      defaultVal: '#3182bd',
       isOptional: false,
       desc: {
-        'en-US': 'If false set, curve will not be drawn.',
-        'zh-CN': '区域图中的曲线，如果值为 false，不绘制曲线，只绘制区域填充部分。'
+        'en-US': 'If false "none", not stroke curve will be drawn.',
+        'zh-CN': '描边的颜色。当值为"none"时，不描边'
       },
     }, {
       name: 'layout',
