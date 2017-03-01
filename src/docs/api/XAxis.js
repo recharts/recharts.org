@@ -211,6 +211,15 @@ export default {
         url: '/examples/CustomizedLabelLineChart',
       }],
     }, {
+      name: 'mirror',
+      type: 'Boolean',
+      defaultVal: 'false',
+      isOptional: false,
+      desc: {
+        'en-US': 'If set true, flips ticks around the axis line, displaying the labels inside the chart instead of outside.',
+        'zh-CN': '如果值为 true , 将刻度展示在轴的内部，而不是外部。',
+      }
+    }, {
       name: 'label',
       type: 'String | Number | ReactElement',
       defaultVal: 'null',

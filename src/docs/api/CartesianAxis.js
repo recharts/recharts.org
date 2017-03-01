@@ -122,6 +122,15 @@ export default {
         'en-US': 'If set a string or a number, default label will be drawn, and the option is content. If set a React element, the option is the custom react element of drawing label. If set a function, the function will be called to render customized label.',
         'zh-CN': '当值为简单类型的数值或者字符串时，这个值会被渲染成文字标签。当值为 React element，会克隆这个元素来渲染文字标签。',
       },
+    }, {
+      name: 'mirror',
+      type: 'Boolean',
+      defaultVal: 'false',
+      isOptional: false,
+      desc: {
+        'en-US': 'If set true, flips ticks around the axis line, displaying the labels inside the chart instead of outside.',
+        'zh-CN': '如果值为 true , 将刻度展示在轴的内部，而不是外部。',
+      }
     },
   ],
 };
