@@ -30,6 +30,7 @@ export default {
   BarChartWithCustomizedEvent: '//jsfiddle.net/o72mj9br/1/embedded/result,js,css,html,resources/',
   BarChartWithMinHeight: '//jsfiddle.net/5ea9r58j/embedded/result,js,css,html,resources/',
   BarChartStackedBySign: '//jsfiddle.net/xx835b1o/embedded/result,js,css,html,resources/',
+  BiaxialBarChart: '//jsfiddle.net/9dtnpLL7/embedded/result,js,css,html,resources/',
 
   LineBarAreaComposedChart: '//jsfiddle.net/vfnmdp53/5/embedded/result,js,css,html,resources/',
   VerticalComposedChart: '//jsfiddle.net/t4t5rx16/6/embedded/result,js,css,html,resources/',
