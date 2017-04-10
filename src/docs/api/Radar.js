@@ -38,6 +38,15 @@ export default {
         'zh-CN': '“雷达”多边形上的点，接收多种配置。当值为 false，不渲染点。当值为 true，点会继承 Radar 的属性配置，例如配置了 Radar 的 stroke 为 "red"， 点会继承这个属性。当值为一个对象的时候，会把这个对象解析为点的属性，来覆盖默认属性。当值是一个 React Element ，会克隆这个 React Element 来渲染“点”。当值是函数时，会调用这个函数去渲染自定义的“点”。',
       },
     }, {
+      name: 'legendType',
+      type: `'line' | 'square' | 'rect'| 'circle' | 'cross' | 'diamond' | 'square' | 'star' | 'triangle' | 'wye' | 'none'`,
+      defaultVal: '\'rect\'',
+      isOptional: false,
+      desc: {
+        'en-US': 'The type of icon in legend.  If set to \'none\', no legend item will be rendered.',
+        'zh-CN': '对应的图例 icon 的类型。',
+      },
+    }, {
       name: 'label',
       type: 'Bool | Object | Element | Function',
       defaultVal: 'true',
