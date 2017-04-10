@@ -124,7 +124,7 @@ export default {
       format: [`[{x: 12, y: 12, value: 240}]`],
     }, {
       name: 'layout',
-      type: `'horizontal', 'vertical'`,
+      type: `'horizontal' | 'vertical'`,
       defaultVal: 'undefined',
       isOptional: true,
       desc: {
@@ -191,7 +191,7 @@ export default {
       },
     }, {
       name: 'animationEasing',
-      type: `'ease', 'ease-in', 'ease-out', 'ease-in-out', 'linear'`,
+      type: `'ease' | 'ease-in' | 'ease-out' | 'ease-in-out' | 'linear'`,
       defaultVal: `'ease'`,
       isOptional: false,
       desc: {

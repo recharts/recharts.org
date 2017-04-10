@@ -69,7 +69,7 @@ export default {
       format: ['{ top: 5, right: 5, bottom: 5, left: 5 }'],
     }, {
       name: 'stackOffset',
-      type: `'expand', 'none', 'wiggle', 'silhouette'`,
+      type: `'expand' | 'none' | 'wiggle' | 'silhouette'`,
       defaultVal: `'none'`,
       isOptional: false,
       desc: {

@@ -202,7 +202,7 @@ export default {
       },
     }, {
       name: 'animationEasing',
-      type: `'ease', 'ease-in', 'ease-out', 'ease-in-out', 'linear'`,
+      type: `'ease' | 'ease-in' | 'ease-out' | 'ease-in-out' | 'linear'`,
       defaultVal: `'ease'`,
       isOptional: false,
       desc: {
