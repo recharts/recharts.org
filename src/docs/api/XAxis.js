@@ -57,7 +57,7 @@ export default {
       },
     }, {
       name: 'type',
-      type: '\'number\' , \'category\'',
+      type: '\'number\' | \'category\'',
       defaultVal: '\'category\'',
       isOptional: false,
       desc: {

@@ -7,7 +7,7 @@ export default {
   props: [
     {
       name: 'layout',
-      type: '\'horizontal\' , \'vertical\'',
+      type: '\'horizontal\' | \'vertical\'',
       defaultVal: '\'horizontal\'',
       isOptional: false,
       desc: {

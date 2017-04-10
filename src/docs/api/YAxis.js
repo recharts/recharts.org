@@ -48,7 +48,7 @@ export default {
       },
     }, {
       name: 'orientation',
-      type: '\'left\' , \'right\'',
+      type: '\'left\' | \'right\'',
       defaultVal: '\'left\'',
       isOptional: false,
       desc: {
@@ -57,7 +57,7 @@ export default {
       },
     }, {
       name: 'type',
-      type: '\'number\' , \'category\'',
+      type: '\'number\' | \'category\'',
       defaultVal: '\'number\'',
       isOptional: false,
       desc: {
