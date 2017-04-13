@@ -57,11 +57,11 @@ export default {
       },
     }, {
       name: 'legendType',
-      type: `'line' | 'square' | 'rect'| 'circle' | 'cross' | 'diamond' | 'square' | 'star' | 'triangle' | 'wye'`,
+      type: `'line' | 'square' | 'rect'| 'circle' | 'cross' | 'diamond' | 'square' | 'star' | 'triangle' | 'wye' | 'none'`,
       defaultVal: '\'rect\'',
-      isOptional: false,
+      isOptional: true,
       desc: {
-        'en-US': 'The type of icon in legend, which can be \'line\', \'scatter\', \'square\', \'rect\'.',
+        'en-US': 'The type of icon in legend.  If set to \'none\', no legend item will be rendered.',
         'zh-CN': '对应的图例 icon 的类型。',
       },
     }, {

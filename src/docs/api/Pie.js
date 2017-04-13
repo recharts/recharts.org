@@ -97,18 +97,18 @@ export default {
       },
     }, {
       name: 'legendType',
-      type: `'line' | 'square' | 'rect'| 'circle' | 'cross' | 'diamond' | 'square' | 'star' | 'triangle' | 'wye'`,
+      type: `'line' | 'square' | 'rect'| 'circle' | 'cross' | 'diamond' | 'square' | 'star' | 'triangle' | 'wye' | 'none'`,
       defaultVal: '\'rect\'',
       isOptional: false,
       desc: {
-        'en-US': 'The type of icon in legend, which can be \'line\', \'scatter\', \'square\', \'rect\'.',
+        'en-US': 'The type of icon in legend.  If set to \'none\', no legend item will be rendered.',
         'zh-CN': '对应的图例 icon 的类型。',
       },
     }, {
       name: 'label',
       type: 'Boolean | Object | ReactElement | Function',
       defaultVal: 'false',
-      isOptional: false,
+      isOptional: true,
       desc: {
         'en-US': 'If false set, labels will not be drawn. If true set, labels will be drawn which have the props calculated internally. If object set, labels will be drawn which have the props mergered by the internal calculated props and the option. If ReactElement set, the option can be the custom label element. If set a function, the function will be called to render customized label.',
         'zh-CN': '图形上的文本标签。当值为 false ，不展示文本标签。当值为 true，会根据 Bar 的属性配置来展示文本标签。当值为一个对象的时候，会把这个对象解析为 文本标签 的属性，来覆盖默认属性。当值是一个 React Element ，会克隆这个 React Element 来渲染“文本标签”。当值是一个 函数 时，会调用这个函数去渲染自定义的“文本标签”。',
