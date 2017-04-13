@@ -111,7 +111,7 @@ export default {
       },
     }, {
       name: 'layout',
-      type: `'horizontal', 'vertical'`,
+      type: `'horizontal' | 'vertical'`,
       defaultVal: 'undefined',
       isOptional: true,
       desc: {
@@ -223,7 +223,7 @@ export default {
       },
     }, {
       name: 'animationEasing',
-      type: `'ease', 'ease-in', 'ease-out', 'ease-in-out', 'linear'`,
+      type: `'ease' | 'ease-in' | 'ease-out' | 'ease-in-out' | 'linear'`,
       defaultVal: `'ease'`,
       isOptional: false,
       desc: {

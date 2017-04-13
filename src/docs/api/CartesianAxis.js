@@ -39,7 +39,7 @@ export default {
       },
     }, {
       name: 'orientation',
-      type: '\'top\', \'bottom\', \'left\' or \'right\'',
+      type: '\'top\' | \'bottom\' | \'left\' | \'right\'',
       defaultVal: '\'bottom\'',
       isOptional: false,
       desc: {

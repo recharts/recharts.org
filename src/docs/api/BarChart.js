@@ -3,7 +3,7 @@ export default {
   props: [
     {
       name: 'layout',
-      type: '\'horizontal\' , \'vertical\'',
+      type: '\'horizontal\' | \'vertical\'',
       defaultVal: '\'horizontal\'',
       isOptional: false,
       desc: {
@@ -111,7 +111,7 @@ export default {
       },
     }, {
       name: 'stackOffset',
-      type: `'expand', 'none', 'wiggle', 'silhouette', 'sign'`,
+      type: `'expand' | 'none' | 'wiggle' | 'silhouette' | 'sign'`,
       defaultVal: `'none'`,
       isOptional: false,
       desc: {

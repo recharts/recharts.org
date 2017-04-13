@@ -57,7 +57,7 @@ export default {
       },
     }, {
       name: 'gridType',
-      type: `'polygon', 'circle'`,
+      type: `'polygon' | 'circle'`,
       defaultVal: 'polygon',
       isOptional: false,
       desc: {

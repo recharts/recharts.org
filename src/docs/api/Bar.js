@@ -3,7 +3,7 @@ export default {
   props: [
     {
       name: 'layout',
-      type: '\'horizontal\' , \'vertical\'',
+      type: '\'horizontal\' | \'vertical\'',
       defaultVal: 'undefined',
       isOptional: true,
       desc: {
@@ -177,7 +177,7 @@ export default {
       isOptional: false,
       desc: {
         'en-US': 'Specifies when the animation should begin, the unit of this option is ms.',
-        'zh-CN': '声明组件挂载或更新后，开始运行动画的间隔时长，单位为毫秒。',
+        'zh-CN': '声明组件挂载或更新���，开始运行动画的间隔时长，单位为毫秒。',
       },
     }, {
       name: 'animationDuration',
@@ -190,7 +190,7 @@ export default {
       },
     }, {
       name: 'animationEasing',
-      type: `'ease', 'ease-in', 'ease-out', 'ease-in-out', 'linear'`,
+      type: `'ease' | 'ease-in' | 'ease-out' | 'ease-in-out' | 'linear'`,
       defaultVal: `'ease'`,
       isOptional: false,
       desc: {

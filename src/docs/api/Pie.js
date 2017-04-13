@@ -194,7 +194,7 @@ export default {
       },
     }, {
       name: 'animationEasing',
-      type: `'ease', 'ease-in', 'ease-out', 'ease-in-out', 'linear' | Function`,
+      type: `'ease' | 'ease-in' | 'ease-out' | 'ease-in-out' | 'linear' | Function`,
       defaultVal: `'ease'`,
       isOptional: false,
       desc: {

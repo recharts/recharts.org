@@ -30,12 +30,12 @@ export default {
       },
     }, {
       name: 'textAnchor',
-      type: `'start', 'middle', 'end', 'inherit'`,
+      type: `'start' | 'middle' | 'end' | 'inherit'`,
       defaultVal: 'start',
       isOptional: false,
     }, {
       name: 'verticalAnchor',
-      type: `'start', 'middle', 'end'`,
+      type: `'start' | 'middle' | 'end'`,
       defaultVal: 'end',
       isOptional: false,
     },

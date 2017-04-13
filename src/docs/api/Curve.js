@@ -29,7 +29,7 @@ export default {
       },
     }, {
       name: 'layout',
-      type: `'horizontal', 'vertical'`,
+      type: `'horizontal' | 'vertical'`,
       defaultVal: 'null',
       isOptional: true,
       desc: {
