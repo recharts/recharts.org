@@ -220,6 +220,15 @@ export default {
         'zh-CN': '如果值为 true , 将刻度展示在轴的内侧，而不是外侧。',
       }
     }, {
+      name: 'reversed',
+      type: 'Boolean',
+      defaultVal: 'false',
+      isOptional: false,
+      desc: {
+        'en-US': 'Reverse the ticks or not.',
+        'zh-CN': '是否反转刻度的顺序',
+      }
+    }, {
       name: 'label',
       type: 'String | Number | ReactElement',
       defaultVal: 'null',
