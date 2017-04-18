@@ -16,6 +16,12 @@ const map = {
     powerfulContent: 'Customize your chart by tweaking component props and passing in custom components.',
     like: 'Recharts makes it easy to integrate charts into your React application',
     'get-started': 'Get Started',
+    whoUse: "Who's using recharts ?",
+    feature: 'features',
+    logoDesc: 'Logos are submitted by company and project representatives.',
+    addUser: 'To add your company or project to this page, please',
+    edit: 'edit the wiki!',
+    logoSize: 'For your logo, please submit a 300x100 (3:1) img.',
   },
   api: {
     placeholder: 'Search',

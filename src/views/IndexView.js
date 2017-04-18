@@ -6,6 +6,7 @@ import Highlight from 'utils/Highlight';
 import { getLocaleType, localeGet } from '../utils/LocaleUtils';
 import './IndexView.scss';
 import 'simple-line-icons/scss/simple-line-icons.scss';
+import users from '../docs/users/users';
 
 const data = [
   { name: 'A', uv: 400, pv: 240, amt: 2400 },
@@ -38,6 +39,7 @@ class IndexView extends PureComponent {
           <p><Link to={`/${locale}/guide/installation`} className="button install-btn"><i className="icon-energy"></i> {localeGet(locale, 'home', 'install')} v0.22.1</Link></p>
           <iframe src="https://ghbtns.com/github-btn.html?user=recharts&repo=recharts&type=star&count=true&size=large" frameBorder="0" scrolling="0" width="160px" height="30px"></iframe>
         </div>
+
         <div className="examples">
           <div className="ex-code">
             <LineChart width={500} height={300} data={data} margin={{ top: 5, right: 5, bottom: 5, left: 0 }}>
@@ -50,7 +52,9 @@ class IndexView extends PureComponent {
             <Highlight className="e4x">{exCode}</Highlight>
           </div>
         </div>
-        <div className="features">
+
+        <div className="features block">
+          <h2 className="block-title">{localeGet(locale, 'home', 'feature')}</h2>
           <ul className="feat">
             <li>
               <i className="icon-puzzle"></i>
@@ -69,11 +73,44 @@ class IndexView extends PureComponent {
             </li>
           </ul>
         </div>
-        <div className="like">
+
+        <div className="who block">
+          <h2 className="block-title">{localeGet(locale, 'home', 'whoUse')}</h2>
+
+          <ul className="users">
+          {
+            users.map((entry, index) => {
+
+              return (
+                <li className="user">
+                  <a href={entry.url} target="_blank" title={entry.anme}>
+                    <img src={entry.logoImgUrl} title={entry.anme} />
+                  </a>
+                </li>
+              );
+            })
+          }
+          </ul>
+
+          <div className="users-desc">
+            <p>{localeGet(locale, 'home', 'logoDesc')}</p>
+            <p>
+              {localeGet(locale, 'home', 'addUser')}
+              &nbsp;
+              <a target="_self" href="https://github.com/recharts/recharts/wiki/Who-use-recharts/_edit">
+                {localeGet(locale, 'home', 'edit')}
+              </a>
+            </p>
+            <p>{localeGet(locale, 'home', 'logoSize')}</p>
+          </div>
+        </div>
+
+        <div className="like block">
           <i className="icon-rocket"></i>
           <p className="text">{localeGet(locale, 'home', 'like')}</p>
           <p className="btn"><Link to={`/${locale}/guide/getting-started`} className="button getting-started-btn">{localeGet(locale, 'home', 'get-started')}</Link></p>
         </div>
+
       </div>
     );
   }

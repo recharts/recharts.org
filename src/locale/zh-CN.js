@@ -16,6 +16,12 @@ const map = {
     powerfulContent: '调整组件的属性与传递组件自定义你的图表。',
     like: 'Recharts 让你更简单地组合图表通过 React 应用',
     'get-started': '起步',
+    whoUse: '谁在使用 recharts ?',
+    feature: '特性',
+    logoDesc: '这里的 logo 是有公司或者项目分别提交的。',
+    addUser: '想要添加您的公司或者项目请',
+    edit: '编辑 wiki!',
+    logoSize: '您需要提供 300x100 (3:1) 的图片作为 logo 。',
   },
   api: {
     placeholder: 'Search',
