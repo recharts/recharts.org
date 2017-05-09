@@ -82,7 +82,7 @@ class Frame extends Component {
                 <li className="github-wrapper">
                   <a href="https://github.com/recharts/recharts"
                     target="_blank"
-                    className="nav-github">Github</a>
+                    className="nav-github">GitHub</a>
                 </li>
                 <li className="language-switch-wrapper">
                   {this.renderLocaleSwitch(locale)}
