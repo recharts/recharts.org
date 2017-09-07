@@ -127,6 +127,15 @@ export default {
         isExternal: true,
       }],
     }, {
+      name: 'reverseGroupOrder',
+      type: 'Boolean',
+      defaultVal: 'false',
+      isOptional: true,
+      desc: {
+        'en-US': 'If false set, grouped items will be rendered left to right. If true set, grouped items will be rendered right to left. (Render direction affects SVG layering, not x position.)',
+        'zh-CN': '如果设置为false，则分组的项目将从左到右呈现。如果设置为true，则分组的项目将从右到左呈现。 （渲染方向影响SVG分层，而不影响x位置。）',
+      },
+    }, {
       name: 'onClick',
       type: 'Function',
       isOptional: true,
