@@ -89,13 +89,13 @@ export default {
         'zh-CN': '柱条的宽度。如果指定这个值，会根据 barCategoryGap 和 barGap 来计算柱条的宽度，每组柱条的宽度是一样的。'
       },
     }, {
-      name: 'reverseGroupOrder',
+      name: 'reverseStackOrder',
       type: 'Boolean',
       defaultVal: 'false',
       isOptional: true,
       desc: {
-        'en-US': 'If false set, grouped items will be rendered left to right. If true set, grouped items will be rendered right to left. (Render direction affects SVG layering, not x position.)',
-        'zh-CN': '如果设置为false，则分组的项目将从左到右呈现。如果设置为true，则分组的项目将从右到左呈现。 （渲染方向影响SVG分层，而不影响x位置。）',
+        'en-US': 'If false set, stacked items will be rendered left to right. If true set, stacked items will be rendered right to left. (Render direction affects SVG layering, not x position.)',
+        'zh-CN': '如果设置为false，堆叠的项目将从左到右呈现。如果真正设置，堆叠的项目将从右到左呈现。 （渲染方向影响SVG分层，而不影响x位置。）',
       },
     }, {
       name: 'onClick',
