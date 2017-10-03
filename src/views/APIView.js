@@ -5,8 +5,9 @@ import Helmet from 'react-helmet';
 import API from 'docs/api';
 import APIExamples from 'docs/apiExamples';
 import Highlight from 'utils/Highlight';
+import NewMenuTag from 'components/Shared/NewMenuTag';
 import { getLocaleType, localeGet, parseLocalObj } from 'utils/LocaleUtils';
-import apiCates from 'docs/apiCates';
+import apiCates, { NEW_APIS } from 'docs/apiCates';
 import './APIView.scss';
 
 @connect((state, ownProps) => {
@@ -116,7 +117,7 @@ class APIView extends Component {
                         return (
                           <li key={`item-${j}`}>
                             <Link className={page === compName ? 'active' : ''} to={`/${locale}/api/${compName}`}>
-                              {compName}
+                              <NewMenuTag name={compName} isNew={NEW_APIS.indexOf(compName) >= 0} />
                             </Link>
                           </li>
                         );

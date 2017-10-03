@@ -28,6 +28,8 @@ import Legend from './Legend';
 import Tooltip from './Tooltip';
 import Cell from './Cell';
 import Text from './Text';
+import Label from './Label';
+import LabelList from './LabelList';
 
 import Pie from './Pie';
 import Radar from './Radar';
@@ -70,6 +72,8 @@ export default {
   Tooltip,
   Cell,
   Text,
+  Label,
+  LabelList,
 
   Pie,
   RadialBar,

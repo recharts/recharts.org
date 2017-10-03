@@ -89,7 +89,8 @@ footer {
   > .sidebar {
     position: fixed;
     top: 60px;
-    width: 250px;
+    width: 310px;
+    padding-left: 50px;
     padding-top: 30px;
     height: 100%;
     overflow: auto;
@@ -122,10 +123,10 @@ footer {
   }
 
   > .content {
-    width: 1000px;
+    width: 1100px;
     margin-top: 60px;
     margin-bottom: 60px;
-    padding: 0 0 0 270px;
+    padding: 0 50px 0 320px;
 
     h3 {
       padding-top: 30px;
@@ -150,7 +151,7 @@ footer {
 }
 
 .page-guide, .page-api, .page-examples {
-  width: 1000px;
+  width: 1100px;
   margin: 0 auto;
 }
 

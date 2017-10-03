@@ -9,7 +9,7 @@ export default [
   {
     name: 'general-components',
     items: [
-      'ResponsiveContainer', 'Legend', 'Tooltip', 'Cell', 'Text',
+      'ResponsiveContainer', 'Legend', 'Tooltip', 'Cell', 'Text', 'Label', 'LabelList',
     ],
   },
   {
@@ -32,3 +32,5 @@ export default [
     ],
   },
 ];
+
+export const NEW_APIS = ['Label', 'LabelList'];

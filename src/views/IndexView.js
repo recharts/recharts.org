@@ -43,9 +43,9 @@ class IndexView extends PureComponent {
         <div className="examples">
           <div className="ex-code">
             <LineChart width={500} height={300} data={data} margin={{ top: 5, right: 5, bottom: 5, left: 0 }}>
+              <CartesianGrid stroke="#eee" strokeDasharray="5 5" />
               <XAxis dataKey="name" />
               <YAxis />
-              <CartesianGrid stroke="#eee" strokeDasharray="5 5" />
               <Line type="monotone" dataKey="uv" stroke="#8884d8" />
               <Line type="monotone" dataKey="pv" stroke="#82ca9d" />
             </LineChart>
@@ -82,7 +82,7 @@ class IndexView extends PureComponent {
             users.map((entry, index) => {
 
               return (
-                <li className="user">
+                <li className="user" key={`user-${index}`}>
                   <a href={entry.url} target="_blank" title={entry.anme}>
                     <img src={entry.logoImgUrl} title={entry.anme} />
                   </a>
