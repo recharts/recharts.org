@@ -44,7 +44,7 @@ export default {
   TwoLevelPieChart: '//jsfiddle.net/zrL61ho3/embedded/result,js,css,html,resources/',
   StraightAnglePieChart: '//jsfiddle.net/ahppaxdn/embedded/result,js,css,html,resources/',
   TwoSimplePieChart: '//jsfiddle.net/av7eavdg/embedded/result,js,css,html,resources/',
-  CustomActiveShapePieChart: '//jsfiddle.net/uyg5f2t7/49/embedded/result,js,css,html,resources/',
+  CustomActiveShapePieChart: '//jsfiddle.net/ro31mjuf/embedded/result,js,css,html,resources/',
   PieChartWithCustomizedLabel: '//jsfiddle.net/x5em3hdp/embedded/result,js,css,html,resources/',
   PieChartWithPaddingAngle: '//jsfiddle.net/1d1mmu3e/embedded/result,js,css,html,resources/',
 
