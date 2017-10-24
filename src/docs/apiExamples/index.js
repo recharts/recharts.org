@@ -14,6 +14,7 @@ import ReferenceArea from './ReferenceArea';
 import ReferenceDot from './ReferenceDot';
 import ReferenceLine from './ReferenceLine';
 import ErrorBar from './ErrorBar';
+import Label from './Label';
 
 export default {
   AreaChart,
@@ -32,4 +33,5 @@ export default {
   ReferenceDot,
   ReferenceArea,
   ErrorBar,
+  Label,
 };

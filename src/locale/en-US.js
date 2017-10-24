@@ -94,6 +94,10 @@ const map = {
   'design-disciplines': {
     'design-disciplines': 'Design Disciplines',
   },
+  label: {
+    'cartesian-title': 'The "position" in view box of Cartesian Coordinates',
+    'polar-title': 'The "position" in view box of Polar Coordinates',
+  },
 };
 
 

@@ -14,14 +14,14 @@ const data = [
 
 const example = () =>
   <ScatterChart width={730} height={250} margin={{ top: 20, right: 20, bottom: 0, left: 20 }}>
-    <XAxis dataKey="x" name="stature" unit="cm" />
-    <YAxis dataKey="y" name="weight" unit="kg" />
+    <CartesianGrid />
+    <XAxis dataKey="x" type="number" name="stature" unit="cm" />
+    <YAxis dataKey="y" type="number" name="weight" unit="kg" />
+    <Tooltip />
     <Scatter name="A school" data={data} fill="#ff7300">
       <ErrorBar dataKey="errorY" width={4} strokeWidth={2} stroke="green" direction="y" />
       <ErrorBar dataKey="errorX" width={0} strokeWidth={1} stroke="blue" opacity={0.8} direction="x" />
     </Scatter>
-    <CartesianGrid />
-    <Tooltip />
     <Legend />
   </ScatterChart>;
 
@@ -38,14 +38,14 @@ const data = [
 
 <ScatterChart width={730} height={250}
   margin={{ top: 20, right: 20, bottom: 0, left: 20 }}>
-  <XAxis dataKey="x" name="stature" unit="cm" />
-  <YAxis dataKey="y" name="weight" unit="kg" />
+  <CartesianGrid />
+  <XAxis dataKey="x" type="number" name="stature" unit="cm" />
+  <YAxis dataKey="y" type="number" name="weight" unit="kg" />
+  <Tooltip />
   <Scatter name="A school" data={data} fill="#ff7300">
     <ErrorBar dataKey="errorY" width={4} strokeWidth={2} stroke="green" direction="y" />
     <ErrorBar dataKey="errorX" width={0} strokeWidth={1} stroke="blue" opacity={0.8} direction="x" />
   </Scatter>
-  <CartesianGrid />
-  <Tooltip />
   <Legend/>
 </ScatterChart>
 `;

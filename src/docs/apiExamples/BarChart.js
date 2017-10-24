@@ -13,9 +13,9 @@ const data = [
 
 const example = () => (
   <BarChart width={730} height={250} data={data}>
+    <CartesianGrid strokeDasharray="3 3" />
     <XAxis dataKey="name" />
     <YAxis />
-    <CartesianGrid strokeDasharray="3 3" />
     <Tooltip />
     <Legend />
     <Bar dataKey="pv" fill="#8884d8" />
@@ -25,9 +25,9 @@ const example = () => (
 
 const exampleCode = `
 <BarChart width={730} height={250} data={data}>
+  <CartesianGrid strokeDasharray="3 3" />
   <XAxis dataKey="name" />
   <YAxis />
-  <CartesianGrid strokeDasharray="3 3" />
   <Tooltip />
   <Legend />
   <Bar dataKey="pv" fill="#8884d8" />
@@ -56,8 +56,8 @@ const rangeExample = () => (
   >
     <XAxis dataKey="day" />
     <YAxis />
-    <Bar dataKey="temperature" fill="#8884d8" />
     <Tooltip />
+    <Bar dataKey="temperature" fill="#8884d8" />
   </BarChart>
 );
 

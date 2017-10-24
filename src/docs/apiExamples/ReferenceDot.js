@@ -25,10 +25,10 @@ const example = () => {
 
   return (
     <ScatterChart width={730} height={250} margin={{ top: 20, right: 20, bottom: 20, left: 20 }}>
-      <XAxis dataKey={'x'} name="stature" unit="cm" />
-      <YAxis dataKey={'y'} name="weight" unit="kg" />
-      <Scatter name="A school" data={data} fill="#8884d8" />
       <CartesianGrid />
+      <XAxis dataKey={'x'} type="number" name="stature" unit="cm" />
+      <YAxis dataKey={'y'} type="number" name="weight" unit="kg" />
+      <Scatter name="A school" data={data} fill="#8884d8" />
       { mean && <ReferenceDot {...mean} r={20} fill="red" stroke="none" /> }
       <Tooltip cursor={{strokeDasharray: '3 3'}} />
     </ScatterChart>
@@ -37,10 +37,10 @@ const example = () => {
 
 const exampleCode = `
   <ScatterChart width={730} height={250} margin={{ top: 20, right: 20, bottom: 20, left: 20 }}>
-    <XAxis dataKey={'x'} name="stature" unit="cm" />
-    <YAxis dataKey={'y'} name="weight" unit="kg" />
-    <Scatter name="A school" data={data} fill="#8884d8" />
     <CartesianGrid />
+    <XAxis dataKey="x" type="number" name="stature" unit="cm" />
+    <YAxis dataKey="y" type="number" name="weight" unit="kg" />
+    <Scatter name="A school" data={data} fill="#8884d8" />
     { mean && <ReferenceDot {...mean} r={20} fill="red" stroke="none" /> }
     <Tooltip cursor={{strokeDasharray: '3 3'}} />
   </ScatterChart>

@@ -28,7 +28,7 @@ const barExample = () => (
     <Bar dataKey="value">
       {
         data.map((entry, index) => (
-          <Cell key={`cell-${index}`} stroke={colors[index]}  strokeWidth={index === 2 ? 4 : 1} />
+          <Cell key={`cell-${index}`} fill="none" stroke={colors[index]}  strokeWidth={index === 2 ? 4 : 1} />
         ))
       }
     </Bar>

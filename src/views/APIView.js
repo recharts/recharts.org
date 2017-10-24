@@ -23,7 +23,7 @@ class APIView extends Component {
     page: PropTypes.string,
   };
 
-  renderExamples(examples) {
+  renderExamples(examples, locale) {
     if (!examples || !examples.length) { return null; }
 
     return (
@@ -33,7 +33,7 @@ class APIView extends Component {
             examples.map((item, i) => (
               <li key={`example-${i}`}>
                 <div className="iframe-wrapper">
-                  {item.demo()}
+                  {item.demo(locale)}
                 </div>
                 <div className="code">
                   <Highlight className="e4x">{item.code}</Highlight>
@@ -132,7 +132,7 @@ class APIView extends Component {
         <div className="content">
           <h3>{page}</h3>
           {api.desc && <p className="survey">{parseLocalObj(locale, api.desc)}</p>}
-          {this.renderExamples(apiExamples)}
+          {this.renderExamples(apiExamples, locale)}
 
           <h4 className="sub-title">Properties</h4>
           <ul className="props-list">

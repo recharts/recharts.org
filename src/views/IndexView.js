@@ -36,7 +36,7 @@ class IndexView extends PureComponent {
         <div className="desc">
           <p className="title">Recharts</p>
           <p className="subtitle">{localeGet(locale, 'home', 'solgan')}</p>
-          <p><Link to={`/${locale}/guide/installation`} className="button install-btn"><i className="icon-energy"></i> {localeGet(locale, 'home', 'install')} v1.0.0-alpha.4</Link></p>
+          <p><Link to={`/${locale}/guide/installation`} className="button install-btn"><i className="icon-energy"></i> {localeGet(locale, 'home', 'install')} v1.0.0-beta.0</Link></p>
           <iframe src="https://ghbtns.com/github-btn.html?user=recharts&repo=recharts&type=star&count=true&size=large" frameBorder="0" scrolling="0" width="160px" height="30px"></iframe>
         </div>
 

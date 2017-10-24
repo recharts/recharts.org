@@ -94,6 +94,10 @@ const map = {
   'design-disciplines': {
     'design-disciplines': '设计原则',
   },
+  label: {
+    'cartesian-title': '笛卡尔坐标系中 "position" 的参数含义',
+    'polar-title': '极坐标系中 "position" 的参数含义',
+  },
 };
 
 export default map;
