@@ -19,7 +19,7 @@ export default {
   CardinalAreaChart: '//jsfiddle.net/7pbn6pm3/embedded/result,js,css,html,resources/',
   AreaChartConnectNulls: '//jsfiddle.net/8y0updxx/embedded/result,js,css,html,resources/',
   SynchronizedAreaChart: '//jsfiddle.net/r6cuu12k/embedded/result,js,css,html,resources/',
-  DoubleAreaChart: '//jsfiddle.net/fpm003na/embedded/result,js,css,html,resources/',
+  DoubleAreaChart: '//jsfiddle.net/fpm003na/3/embedded/result,js,css,html,resources/',
 
   TinyBarChart: '//jsfiddle.net/9y2k55e1/embedded/result,js,css,html,resources/',
   SimpleBarChart: '//jsfiddle.net/v8gxrbyu/embedded/result,js,css,html,resources/',
