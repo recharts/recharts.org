@@ -87,12 +87,21 @@ export default {
         'zh-CN': '"name" 属性对应的 key 。',
       },
     }, {
+      name: 'dataKey',
+      type: 'String',
+      isOptional: false,
+      desc: {
+        'en-US': "The key of each sector's value.",
+        'zh-CN': '"value" 属性对应的 key。',
+      },
+    }, {
       name: 'valueKey',
       type: 'String',
       defaultVal: '\'value\'',
       isOptional: false,
+      deprecated: true,
       desc: {
-        'en-US': "The key of each sector's value.",
+        'en-US': "Use 'dataKey' alternatively, The key of each sector's value.",
         'zh-CN': '"value" 属性对应的 key。',
       },
     }, {

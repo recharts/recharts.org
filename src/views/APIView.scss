@@ -28,6 +28,16 @@
           font-size: 20px;
         }
 
+        &.deprecated {
+          .title {
+            color: #999;
+            text-decoration: line-through;
+          }
+          .deprecated-label {
+            margin-left: 10px;
+          }
+        }
+
         .type {
           padding-left: 20px;
           color: #bf2a5c;

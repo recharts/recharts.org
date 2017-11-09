@@ -16,14 +16,14 @@ const data = [
 
 const GettingStarted = ({ locale }) => (
   <div className="mod-getting-started" id="Getting_Started">
-    <h3>{localeGet(locale, 'getting-started', 'getting-started')}</h3>
-    <h4>{localeGet(locale, 'getting-started', 'step-1-title')}</h4>
-    <p>
+    <h3 className="page-title">{localeGet(locale, 'getting-started', 'getting-started')}</h3>
+    <h4 className="sub-title">{localeGet(locale, 'getting-started', 'step-1-title')}</h4>
+    <p className="paragraph-title">
       {localeGet(locale, 'getting-started', 'with-help')}
       <a href="https://github.com/recharts/babel-plugin-recharts" target="_blank">babel-plugin-recharts</a>
       {localeGet(locale, 'getting-started', 'plugin-desc')}
     </p>
-    <p>{localeGet(locale, 'getting-started', 'step-1-desc')}</p>
+    <p className="paragraph-title">{localeGet(locale, 'getting-started', 'step-1-desc')}</p>
 
     <div className="step-1">
       <Highlight className="e4x">
@@ -41,8 +41,8 @@ const GettingStarted = ({ locale }) => (
       </LineChart>
     </div>
 
-    <h4>{localeGet(locale, 'getting-started', 'step-2-title')}</h4>
-    <p>{localeGet(locale, 'getting-started', 'step-2-desc')}</p>
+    <h4 className="sub-title">{localeGet(locale, 'getting-started', 'step-2-title')}</h4>
+    <p className="paragraph-title">{localeGet(locale, 'getting-started', 'step-2-desc')}</p>
     <div className="step-2">
       <Highlight className="e4x">
       {
@@ -63,8 +63,8 @@ const GettingStarted = ({ locale }) => (
       </LineChart>
     </div>
 
-    <h4>{localeGet(locale, 'getting-started', 'step-3-title')}</h4>
-    <p>{localeGet(locale, 'getting-started', 'step-3-desc')}</p>
+    <h4 className="sub-title">{localeGet(locale, 'getting-started', 'step-3-title')}</h4>
+    <p className="paragraph-title">{localeGet(locale, 'getting-started', 'step-3-desc')}</p>
     <div className="step-3">
       <Highlight className="e4x">
       {
@@ -85,8 +85,8 @@ const GettingStarted = ({ locale }) => (
       </LineChart>
     </div>
 
-    <h4>{localeGet(locale, 'getting-started', 'step-4-title')}</h4>
-    <p>{localeGet(locale, 'getting-started', 'step-4-desc')}</p>
+    <h4 className="sub-title">{localeGet(locale, 'getting-started', 'step-4-title')}</h4>
+    <p className="paragraph-title">{localeGet(locale, 'getting-started', 'step-4-desc')}</p>
     <div className="step-4">
       <Highlight className="e4x">
       {
@@ -109,8 +109,8 @@ const GettingStarted = ({ locale }) => (
       </LineChart>
     </div>
 
-    <h4>{localeGet(locale, 'getting-started', 'step-5-title')}</h4>
-    <p>{localeGet(locale, 'getting-started', 'step-5-desc')}</p>
+    <h4 className="sub-title">{localeGet(locale, 'getting-started', 'step-5-title')}</h4>
+    <p className="paragraph-title">{localeGet(locale, 'getting-started', 'step-5-desc')}</p>
     <div className="step-5">
       <Highlight className="e4x">
       {

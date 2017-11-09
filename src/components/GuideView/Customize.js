@@ -19,10 +19,10 @@ const data = [
 function Customize({ locale }) {
   return (
     <div className="mod-customize" id="Customize">
-      <h3>{localeGet(locale, 'customize', 'customize')}</h3>
+      <h3 className="page-title">{localeGet(locale, 'customize', 'customize')}</h3>
 
-      <h4>{localeGet(locale, 'customize', 'step-1-title')}</h4>
-      <p>{localeGet(locale, 'customize', 'step-1-desc')}</p>
+      <h4 className="sub-title">{localeGet(locale, 'customize', 'step-1-title')}</h4>
+      <p className="paragraph-title">{localeGet(locale, 'customize', 'step-1-desc')}</p>
       <div className="demo">
         <Highlight className="e4x">
         {
@@ -42,8 +42,8 @@ function Customize({ locale }) {
         </BarChart>
       </div>
 
-      <h4>{localeGet(locale, 'customize', 'step-2-title')}</h4>
-      <p>{localeGet(locale, 'customize', 'step-2-desc')}</p>
+      <h4 className="sub-title">{localeGet(locale, 'customize', 'step-2-title')}</h4>
+      <p className="paragraph-title">{localeGet(locale, 'customize', 'step-2-desc')}</p>
       <div className="demo">
         <Highlight className="e4x">
         {
@@ -63,8 +63,8 @@ function Customize({ locale }) {
         </BarChart>
       </div>
 
-      <h4>{localeGet(locale, 'customize', 'step-3-title')}</h4>
-      <p>{localeGet(locale, 'customize', 'step-3-desc')}</p>
+      <h4 className="sub-title">{localeGet(locale, 'customize', 'step-3-title')}</h4>
+      <p className="paragraph-title">{localeGet(locale, 'customize', 'step-3-desc')}</p>
       <div className="demo">
         <Highlight className="e4x">
         {
@@ -86,8 +86,8 @@ function Customize({ locale }) {
         </BarChart>
       </div>
 
-      <h4>{localeGet(locale, 'customize', 'step-4-title')}</h4>
-      <p>{localeGet(locale, 'customize', 'step-4-desc')}</p>
+      <h4 className="sub-title">{localeGet(locale, 'customize', 'step-4-title')}</h4>
+      <p className="paragraph-title">{localeGet(locale, 'customize', 'step-4-desc')}</p>
       <div className="demo">
         <Highlight className="e4x">
         {
@@ -110,8 +110,8 @@ function Customize({ locale }) {
         </BarChart>
       </div>
 
-      <h4>{localeGet(locale, 'customize', 'step-5-title')}</h4>
-      <p>{localeGet(locale, 'customize', 'step-5-desc')}</p>
+      <h4 className="sub-title">{localeGet(locale, 'customize', 'step-5-title')}</h4>
+      <p className="paragraph-title">{localeGet(locale, 'customize', 'step-5-desc')}</p>
       <div className="demo">
         <Highlight className="e4x">
         {

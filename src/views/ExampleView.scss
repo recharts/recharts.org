@@ -1,0 +1,20 @@
+@import '../styles/variables';
+
+.page.page-examples {
+  .example-wrapper {
+    .example-chart-wrapper {
+      margin: 30px 0;
+    }
+
+    .example-link-wrapper {
+      text-align: center;
+      margin: 0;
+
+      .example-jsfiddle-link {
+        color: $brand-primary;
+        font-weight: 700;
+        font-size: 14px;
+      }
+    }
+  }
+}

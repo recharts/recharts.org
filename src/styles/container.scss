@@ -128,7 +128,7 @@ footer {
     margin-bottom: 60px;
     padding: 0 50px 0 320px;
 
-    h3 {
+    .page-title {
       padding-top: 30px;
       margin-bottom: 30px;
       margin: 0;
@@ -136,7 +136,7 @@ footer {
       color: $gray-dark;
     }
 
-    h4 {
+    .sub-title {
       height: 40px;
       line-height: 40px;
       margin: 20px 0;
@@ -144,7 +144,7 @@ footer {
       border-bottom: 1px solid $gray-lighter;
     }
 
-    p {
+    .paragraph-title {
       margin: 20px 0;
     }
   }

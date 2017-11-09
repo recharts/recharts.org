@@ -4,9 +4,9 @@ import { localeGet } from '../../utils/LocaleUtils';
 
 const Installation = ({ locale }) => (
   <div className="mod-installation" id="Installation">
-    <h3>{localeGet(locale, 'installation', 'installation')}</h3>
-    <h4>NPM</h4>
-    <p>
+    <h3 className="page-title">{localeGet(locale, 'installation', 'installation')}</h3>
+    <h4 className="sub-title">NPM</h4>
+    <p className="paragraph-title">
       {localeGet(locale, 'installation', 'npm-desc')}
       <a href="http://webpack.github.io/" target="_blank" rel="external">Webpack</a>
       {localeGet(locale, 'installation', 'dot')}
@@ -17,8 +17,8 @@ const Installation = ({ locale }) => (
   $ npm install recharts`
     }
     </Highlight>
-    <h4>UMD</h4>
-    <p>
+    <h4 className="sub-title">UMD</h4>
+    <p className="paragraph-title">
       {localeGet(locale, 'installation', 'umd-desc')}
       &nbsp;(&nbsp;<a href="https://unpkg.com/" target="_blank">unpkg</a>&nbsp;)&nbsp;
       &nbsp;:
@@ -28,8 +28,8 @@ const Installation = ({ locale }) => (
 `  <script src="https://unpkg.com/recharts/umd/Recharts.min.js"></script>`
     }
     </Highlight>
-    <p>{localeGet(locale, 'installation', 'umd-use')}<code>window.Recharts</code></p>
-    <h4>{localeGet(locale, 'installation', 'dev-build')}</h4>
+    <p className="paragraph-title">{localeGet(locale, 'installation', 'umd-use')}<code>window.Recharts</code></p>
+    <h4 className="sub-title">{localeGet(locale, 'installation', 'dev-build')}</h4>
     <Highlight className="sh">
     {`  $ git clone https://github.com/recharts/recharts.git
   $ cd recharts

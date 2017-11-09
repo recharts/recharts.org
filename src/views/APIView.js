@@ -32,12 +32,20 @@ class APIView extends Component {
           {
             examples.map((item, i) => (
               <li key={`example-${i}`}>
-                <div className="iframe-wrapper">
-                  {item.demo(locale)}
-                </div>
-                <div className="code">
-                  <Highlight className="e4x">{item.code}</Highlight>
-                </div>
+                {
+                  item.demo ? (
+                    <div className="iframe-wrapper">
+                      {item.demo(locale)}
+                    </div>
+                  ) : null
+                }
+                {
+                  item.code ? (
+                    <div className="code">
+                      <Highlight className="e4x">{item.code}</Highlight>
+                    </div>
+                  ) : null
+                }
               </li>
             ))
           }
@@ -63,10 +71,11 @@ class APIView extends Component {
 
     return props.map((entry, i) => (
       <li className="props-item" key={`props-${i}`}>
-        <p className="header">
+        <p className={`header ${entry.deprecated ? 'deprecated' : ''}`}>
           <span className="title">{entry.name}</span>
           <span className="type">{entry.type}</span>
           {entry.isOptional ? <em className="optional">optional</em> : null}
+          {entry.deprecated ? <em className="deprecated-label">@deprecated</em> : null}
         </p>
         <p className="desc">{parseLocalObj(locale, entry.desc)}</p>
         {entry.defaultVal && (entry.defaultVal !== 'null' && entry.defaultVal !== 'undefined') ? (
@@ -130,7 +139,7 @@ class APIView extends Component {
           }
         </div>
         <div className="content">
-          <h3>{page}</h3>
+          <h3 className="page-title">{page}</h3>
           {api.desc && <p className="survey">{parseLocalObj(locale, api.desc)}</p>}
           {this.renderExamples(apiExamples, locale)}
 

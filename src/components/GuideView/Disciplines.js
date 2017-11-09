@@ -7,7 +7,7 @@ import { localeGet } from '../../utils/LocaleUtils';
 
 const GettingStarted = ({ locale }) => (
   <div className="mod-design-disciplines" id="Design_Disciplines">
-    <h3></h3>
+    <h3 className="page-title"></h3>
   </div>
 );
 

@@ -1,15 +1,29 @@
 import React, { PropTypes, Component } from 'react';
 import { connect } from 'react-redux';
 import Helmet from 'react-helmet';
-import Examples from 'docs/examples';
+import Examples from 'docs/exampleComponents';
 import { getLocaleType, localeGet } from 'utils/LocaleUtils';
 import { Link } from 'react-router';
+import './ExampleView.scss';
 
 const firstChartName = Object.keys(Examples)[0];
-const cates = ['LineChart', 'BarChart', 'AreaChart', 'ComposedChart', 'ScatterChart',
-  'PieChart', 'RadarChart', 'RadialBarChart', 'Treemap', 'Tooltip', 'ResponsiveContainer',
-  'Legend',
-];
+const cates = Object.keys(Examples).sort((a, b) => {
+  return Examples[a].order - Examples[b].order;
+});
+const parseExampleComponent = (compName) => {
+  const typeList = Object.keys(Examples);
+  const res = typeList.filter(key => {
+    const entry = Examples[key];
+
+    return !!entry.examples[compName];
+  });
+
+  if (res && res.length) {
+    return Examples[res[0]].examples[compName];
+  }
+  return null;
+};
+
 
 @connect((state, ownProps) => {
   const pathname = ownProps.location.pathname || '';
@@ -26,12 +40,8 @@ class ExamplesView extends Component {
 
   renderMenuList(type, locale) {
     const { page } = this.props;
-    const typeNameList = Object.keys(Examples).filter(name => {
-      if (type === 'BarChart') {
-        return name.indexOf(type) >= 0 && name.indexOf('RadialBarChart') === -1;
-      }
-      return name.indexOf(type) >= 0;
-    });
+    const examples = Examples[type].examples;
+    const typeNameList = Object.keys(examples);
 
     const items = typeNameList.map(name => (
       <li key={name}>
@@ -46,7 +56,7 @@ class ExamplesView extends Component {
 
   render() {
     const { page } = this.props;
-    const examples = Examples[page];
+    const ExampleComponent = parseExampleComponent(page);
     const locale = getLocaleType(this.props);
 
     return (
@@ -68,8 +78,27 @@ class ExamplesView extends Component {
 
         </div>
         <div className="content">
-          <h3>{page}</h3>
-          <iframe src={examples}></iframe>
+          <h3 className="page-title">{page}</h3>
+          {
+            ExampleComponent ? (
+              <div className="example-wrapper">
+                <div className="example-chart-wrapper">
+                  <ExampleComponent />
+                </div>
+                {
+                  ExampleComponent.jsfiddleUrl ? (
+                    <p className="example-link-wrapper">
+                      <a
+                        className="example-jsfiddle-link"
+                        target="_blank"
+                        href={ExampleComponent.jsfiddleUrl}
+                      >Try the demo in jsfiddle &gt;&gt;</a>
+                    </p>
+                  ) : null
+                }
+              </div>
+            ) : null
+          }
         </div>
       </div>
     );
