@@ -73,6 +73,24 @@ export default {
         'zh-CN': '圆心的 y 坐标，如果值为百分比，会根据图表的高度来计算最后的值。',
       },
     }, {
+      name: 'startAngle',
+      type: 'Number',
+      defaultVal: 180,
+      isOptional: false,
+      desc: {
+        'en-US': 'The start angle of all the bars.',
+        'zh-CN': '柱条的起始角度。',
+      },
+    }, {
+      name: 'endAngle',
+      type: 'Number',
+      defaultVal: 0,
+      isOptional: false,
+      desc: {
+        'en-US': 'The end angle of all the bars.',
+        'zh-CN': '柱条的结束角度。',
+      },
+    }, {
       name: 'innerRadius',
       type: 'Percentage | Number',
       defaultVal: '\'30%\'',
