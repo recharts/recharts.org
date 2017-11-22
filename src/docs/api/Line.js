@@ -21,11 +21,11 @@ export default {
       }],
     }, {
       name: 'dataKey',
-      type: 'String | Number',
+      type: 'String | Number | Function',
       defaultVal: 'null',
       isOptional: false,
       desc: {
-        'en-US': 'The key of a group of data which should be unique in a LineChart.',
+        'en-US': 'The key or getter of a group of data which should be unique in a LineChart.',
         'zh-CN': '每个区域图对应一个唯一的 key，需要在 LineChart 中保证唯一。',
       },
     }, {
