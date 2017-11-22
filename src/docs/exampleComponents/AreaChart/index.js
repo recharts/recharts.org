@@ -5,6 +5,7 @@ import CardinalAreaChart from './CardinalAreaChart';
 import PercentAreaChart from './PercentAreaChart';
 import SynchronizedAreaChart from './SynchronizedAreaChart';
 import TinyAreaChart from './TinyAreaChart';
+import AreaChartFillByValue from './DoubleAreaChart';
 
 export default {
   SimpleAreaChart,
@@ -14,4 +15,5 @@ export default {
   CardinalAreaChart,
   AreaChartConnectNulls,
   SynchronizedAreaChart,
+  AreaChartFillByValue,
 };
