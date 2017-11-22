@@ -20,6 +20,18 @@ export default [
   {
     name: 'Fyndiq',
     url: 'https://fyndiq.se',
-    logoImgUrl: '//camo.githubusercontent.com/45831f3ecfd071adf02a402d9f1e0da1aa28a718/68747470733a2f2f6d656469612e66796e6469712e73652f75706c6f61642f70726573732f6c6f676f2d66796e6469712d332d312e706e67'
+    logoImgUrl: '//media.fyndiq.se/upload/press/logo-fyndiq-3-1.png'
+  },
+
+  {
+    name: 'chayns®',
+    url: 'https://de.tobit.software/mostwanted',
+    logoImgUrl: '//tobit.com/graphic/chayns/chayns_logo.png'
+  },
+
+  {
+    name: 'Tracktl',
+    url: 'https://www.tracktl.com/',
+    logoImgUrl: '//res.cloudinary.com/jukeo-net/image/upload/c_pad,h_100,q_100,w_300/v1509094068/logo-w_copie_tiweid.png'
   },
 ]
