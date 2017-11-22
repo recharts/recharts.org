@@ -10,7 +10,7 @@ import SynchronizedLineChart from './SynchronizedLineChart';
 import TinyLineChart from './Tiny';
 import VerticalLineChart from './Vertical';
 import VerticalLineChartWithSpecifiedDomain from './VerticalLineChartWithSpecifiedDomain';
-
+import HighlightAndZoomLineChart from './HighlightAndZoomLineChart';
 
 export default {
   SimpleLineChart,
@@ -25,4 +25,5 @@ export default {
   CustomizedDotLineChart,
   CustomizedLableLineChart,
   SynchronizedLineChart,
+  HighlightAndZoomLineChart
 };
