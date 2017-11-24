@@ -14,7 +14,7 @@ const data = [
 ];
 
 export default class Example extends Component {
-  static jsfiddleUrl = '//jsfiddle.net/8ueLrpya/20';
+  static jsfiddleUrl = '//jsfiddle.net/x8jLev9e/';
 
   render () {
     return (
