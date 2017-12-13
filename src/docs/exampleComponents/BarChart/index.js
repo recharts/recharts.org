@@ -9,6 +9,7 @@ import BarChartWithCustomizedEvent from './BarChartWithCustomizedEvent';
 import BarChartWithMinHeight from './BarChartWithMinHeight';
 import BarChartStackedBySign from './BarChartStackedBySign';
 import BiaxialBarChart from './BiaxialBarChart';
+import BarChartHasBackground from './BarChartHasBackground';
 
 export default {
   TinyBarChart,
@@ -22,4 +23,5 @@ export default {
   BarChartWithMinHeight,
   BarChartStackedBySign,
   BiaxialBarChart,
+  BarChartHasBackground,
 };

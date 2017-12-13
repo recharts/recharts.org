@@ -25,7 +25,7 @@ const renderCustomizedLabel = (props) => {
 };
 
 export default class Example extends Component {
-  static jsfiddleUrl = '//jsfiddle.net/naq3k4op';
+  static jsfiddleUrl = '//jsfiddle.net/naq3k4op/38';
 
   render () {
     return (

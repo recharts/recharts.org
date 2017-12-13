@@ -131,6 +131,14 @@ export default {
         'en-US': 'If set true, flips ticks around the axis line, displaying the labels inside the chart instead of outside.',
         'zh-CN': '如果值为 true , 将刻度展示在轴的内侧，而不是外侧。',
       }
-    },
+    }, {
+      name: 'tickMargin',
+      type: 'Number',
+      isOptional: true,
+      desc: {
+        'en-US': 'The margin between tick line and tick.',
+        'zh-CN': '刻度线和刻度之间的间隔。',
+      },
+    }
   ],
 };

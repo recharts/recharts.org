@@ -103,6 +103,21 @@ export default {
         url: '/examples/BarChartWithMinHeight',
       }]
     }, {
+      name: 'background',
+      type: 'Boolean | Object | ReactElement | Function',
+      defaultVal: 'false',
+      isOptional: false,
+      desc: {
+        'en-US': 'If false set, background of bars will not be drawn. If true set, background of bars will be drawn which have the props calculated internally. If object set, background of bars will be drawn which have the props mergered by the internal calculated props and the option. If ReactElement set, the option can be the custom background element. If set a function, the function will be called to render customized background.',
+        'zh-CN': '是否显示背景柱条。当值为 false ，不展示背景柱条。当值为 true，会根据 RadialBar 的属性配置来展示背景柱条。当值为一个对象的时候，会把这个对象解析为 背景柱条 的属性，来覆盖默认属性。当值是一个 React Element ，会克隆这个 React Element 来渲染“背景柱条”。当值是一个 函数 时，会调用这个函数去渲染自定义的“背景柱条”。'
+      },
+      examples: [
+        {
+          name: 'BarChart has background',
+          url: '/examples/BarChartHasBackground',
+        }
+      ],
+    }, {
       name: 'shape',
       type: 'ReactElement | Function',
       defaultVal: 'undefined',

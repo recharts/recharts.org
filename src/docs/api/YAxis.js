@@ -347,6 +347,14 @@ const scale = scaleLog().base(Math.E);
         'en-US': 'The customized event handler of mouseleave on the ticks of this axis',
         'zh-CN': '刻度 mouseleave 事件的回调函数。',
       },
+    }, {
+      name: 'tickMargin',
+      type: 'Number',
+      isOptional: true,
+      desc: {
+        'en-US': 'The margin between tick line and tick.',
+        'zh-CN': '刻度线和刻度之间的间隔。',
+      },
     },
   ],
 };
