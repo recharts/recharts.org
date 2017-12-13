@@ -28,7 +28,7 @@ export default class Example extends Component {
 
   render () {
     return (
-      <PieChart width={800} height={400} onMouseEnter={this.onPieEnter}>
+      <PieChart width={800} height={400}>
         <Pie
           data={data}
           cx={300}
