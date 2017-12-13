@@ -106,7 +106,7 @@ export default {
         `<XAxis type="number" domain={['auto', 'auto']} />`,
         `<XAxis type="number" domain={[0, 'dataMax + 1000']} />`,
         `<XAxis type="number" domain={['dataMin - 100', 'dataMax + 100']} />`,
-        `<YAxis type="number" domain={[dataMin => (0 - Math.abs(dataMin)), dataMax => (dataMax * 2)]} />`,        
+        `<YAxis type="number" domain={[dataMin => (0 - Math.abs(dataMin)), dataMax => (dataMax * 2)]} />`,
       ],
       examples: [{
         name: 'Numeric XAxis with specified domain',
@@ -351,6 +351,14 @@ const scale = scaleLog().base(Math.E);
       desc: {
         'en-US': 'The customized event handler of mouseleave on the ticks of this axis',
         'zh-CN': '刻度 mouseleave 事件的回调函数。',
+      },
+    }, {
+      name: 'tickMargin',
+      type: 'Number',
+      isOptional: true,
+      desc: {
+        'en-US': 'The margin between tick line and tick.',
+        'zh-CN': '刻度线和刻度之间的间隔。',
       },
     },
   ],
