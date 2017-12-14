@@ -84,4 +84,7 @@ export default {
       // ],
     },
   ],
+  parentComponents: [
+    'XAxis', 'YAxis', 'ReferenceArea', 'ReferenceDot', 'ReferenceLine', 'Pie', 'PolarRadiusAxis',
+  ],
 };

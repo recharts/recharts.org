@@ -50,4 +50,7 @@ export default {
       },
     },
   ],
+  parentComponents: [
+    'Bar', 'Line', 'Scatter',
+  ],
 };

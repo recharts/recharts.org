@@ -221,4 +221,8 @@ const renderLegend = (props) => {
       }],
     },
   ],
+  parentComponents: [
+    'AreaChart', 'BarChart', 'LineChart', 'ComposedChart', 'PieChart', 'RadarChart', 'RadialBarChart',
+    'ScatterChart',
+  ],
 };

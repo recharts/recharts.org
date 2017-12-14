@@ -72,7 +72,7 @@ class APIView extends Component {
     return props.map((entry, i) => (
       <li className="props-item" key={`props-${i}`}>
         <p className={`header ${entry.deprecated ? 'deprecated' : ''}`}>
-          <span className="title">{entry.name}</span>
+          <a href={`#${entry.name}`}><span className="title">{entry.name}</span></a>
           <span className="type">{entry.type}</span>
           {entry.isOptional ? <em className="optional">optional</em> : null}
           {entry.deprecated ? <em className="deprecated-label">@deprecated</em> : null}
@@ -102,6 +102,56 @@ class APIView extends Component {
         ) : null}
       </li>
     ));
+  }
+
+  renderParent(components, locale) {
+    return (
+      <div>
+        <h4 className="sub-title">{localeGet(locale, 'api', 'parent')}</h4>
+        <ul className="props-list">
+          {
+            components.map((entry, index) => {
+              return (
+                <li key={`item-${index}`} className="api-component-item">
+                  {
+                    entry.indexOf('svg') < 0 ? (
+                      <code>
+                        <Link to={`/${locale}/api/${entry}`}>{`<${entry} />`}</Link>
+                      </code>
+                    ) : <span>{entry}</span>
+                  }
+                </li>
+              );
+            })
+          }
+        </ul>
+      </div>
+    );
+  }
+
+  renderChildren(components, locale) {
+    return (
+      <div>
+        <h4 className="sub-title">{localeGet(locale, 'api', 'children')}</h4>
+          <ul className="props-list">
+            {
+              components.map((entry, index) => {
+                return (
+                  <li key={`item-${index}`} className="api-component-item">
+                    {
+                      entry.indexOf('svg') < 0 ? (
+                        <code>
+                          <Link to={`/${locale}/api/${entry}`}>{`<${entry} />`}</Link>
+                        </code>
+                      ) : <span>{entry}</span>
+                    }
+                  </li>
+                );
+              })
+            }
+          </ul>
+      </div>
+    );
   }
 
   render() {
@@ -142,6 +192,13 @@ class APIView extends Component {
           <h3 className="page-title">{page}</h3>
           {api.desc && <p className="survey">{parseLocalObj(locale, api.desc)}</p>}
           {this.renderExamples(apiExamples, locale)}
+
+          {api.parentComponents && api.parentComponents.length ?
+            this.renderParent(api.parentComponents, locale) : null
+          }
+          {api.childrenComponents && api.childrenComponents.length ?
+            this.renderChildren(api.childrenComponents, locale) : null
+          }
 
           <h4 className="sub-title">Properties</h4>
           <ul className="props-list">

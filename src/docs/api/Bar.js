@@ -282,4 +282,10 @@ export default {
       },
     },
   ],
+  parentComponents: [
+    'BarChart', 'ComposedChart',
+  ],
+  childrenComponents: [
+    'Cell', 'LabelList', 'ErrorBar',
+  ],
 };

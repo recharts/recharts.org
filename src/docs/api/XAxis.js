@@ -362,4 +362,11 @@ const scale = scaleLog().base(Math.E);
       },
     },
   ],
+  parentComponents: [
+    'AreaChart', 'BarChart', 'LineChart', 'ComposedChart',
+    'ScatterChart',
+  ],
+  childrenComponents: [
+    'Label'
+  ],
 };

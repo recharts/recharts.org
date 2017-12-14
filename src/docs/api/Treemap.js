@@ -75,4 +75,7 @@ export default {
       },
     },
   ],
+  parentComponents: [
+    'ResponsiveContainer',
+  ],
 };

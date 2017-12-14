@@ -94,4 +94,11 @@ export default {
       },
     },
   ],
+  parentComponents: [
+    'ResponsiveContainer',
+  ],
+  childrenComponents: [
+    'XAxis', 'YAxis', 'ReferenceArea', 'ReferenceDot', 'ReferenceLine', 'Brush',
+    'CartesianGrid', 'Legend', 'Tooltip',  'Line', 'validate svg elements...'
+  ],
 };

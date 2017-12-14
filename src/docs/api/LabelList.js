@@ -1,5 +1,5 @@
 export default {
-  name: 'ErrorBar',
+  name: 'LabelList',
   props: [
     {
       name: 'dataKey',
@@ -84,5 +84,8 @@ export default {
         'zh-CN': '用于极坐标系图表中判断 label 可视区域的参数',
       },
     },
+  ],
+  parentComponents: [
+    'Area', 'Bar', 'Line', 'Scatter', 'Pie', 'Radar', 'RadialBar',
   ],
 };

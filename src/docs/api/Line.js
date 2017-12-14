@@ -268,4 +268,10 @@ export default {
       },
     },
   ],
+  parentComponents: [
+    'LineChart', 'ComposedChart',
+  ],
+  childrenComponents: [
+    'LabelList', 'ErrorBar',
+  ],
 };

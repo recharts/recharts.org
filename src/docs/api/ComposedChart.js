@@ -131,4 +131,11 @@ export default {
       },
     },
   ],
+  parentComponents: [
+    'ResponsiveContainer',
+  ],
+  childrenComponents: [
+    'XAxis', 'YAxis', 'ReferenceArea', 'ReferenceDot', 'ReferenceLine', 'Brush', 'CartesianGrid',
+    'Legend', 'Tooltip', 'Area', 'Line', 'Bar',  'validate svg elements...'
+  ],
 };

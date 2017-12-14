@@ -184,4 +184,10 @@ const scale = scaleLog().base(Math.E);
       },
     },
   ],
+  parentComponents: [
+    'RadarChart', 'RadialBarChart',
+  ],
+  childrenComponents: [
+    'Label',
+  ],
 };

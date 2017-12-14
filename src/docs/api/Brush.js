@@ -103,4 +103,12 @@ export default {
       },
     }
   ],
+  parentComponents: [
+    'AreaChart', 'BarChart', 'LineChart', 'ComposedChart',
+    'ScatterChart',
+  ],
+  childrenComponents: [
+    'AreaChart', 'BarChart', 'LineChart', 'ComposedChart',
+    'ScatterChart',
+  ],
 };
