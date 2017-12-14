@@ -26,4 +26,7 @@ export default {
       },
     },
   ],
+  parentComponents: [
+    'Bar', 'Scatter', 'Pie', 'RadialBar',
+  ],
 };

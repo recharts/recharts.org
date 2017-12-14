@@ -70,4 +70,7 @@ const scale = scaleLog().base(Math.E);
       ],
     },
   ],
+  parentComponents: [
+    'ScatterChart',
+  ],
 };

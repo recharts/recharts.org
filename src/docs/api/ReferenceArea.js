@@ -123,4 +123,11 @@ export default {
       },
     },
   ],
+  parentComponents: [
+    'AreaChart', 'BarChart', 'LineChart', 'ComposedChart',
+    'ScatterChart',
+  ],
+  childrenComponents: [
+    'Label',
+  ],
 };

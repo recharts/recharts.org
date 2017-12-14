@@ -90,6 +90,8 @@ const map = {
     default: '默认值：',
     format: '格式：',
     examples: '示例：',
+    parent: '父组件',
+    children: '子组件',
   },
   'design-disciplines': {
     'design-disciplines': '设计原则',

@@ -128,4 +128,11 @@ export default {
       },
     },
   ],
+  parentComponents: [
+    'ResponsiveContainer',
+  ],
+  childrenComponents: [
+    'XAxis', 'YAxis', 'ReferenceArea', 'ReferenceDot', 'ReferenceLine', 'Brush',
+    'CartesianGrid', 'Legend', 'Tooltip', 'Area', 'validate svg elements...'
+  ],
 };

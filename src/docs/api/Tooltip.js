@@ -211,4 +211,8 @@ export default {
       },
     },
   ],
+  parentComponents: [
+    'AreaChart', 'BarChart', 'LineChart', 'ComposedChart', 'PieChart', 'RadarChart', 'RadialBarChart',
+    'ScatterChart', 'Treemap',
+  ],
 };

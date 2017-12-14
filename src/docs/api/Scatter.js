@@ -194,4 +194,10 @@ export default {
       },
     },
   ],
+  parentComponents: [
+    'ScatterChart'
+  ],
+  childrenComponents: [
+    'Cell', 'LabelList', 'ErrorBar',
+  ],
 };

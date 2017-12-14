@@ -62,4 +62,8 @@ export default {
       },
     },
   ],
+  childrenComponents: [
+    'AreaChart', 'BarChart', 'LineChart', 'ComposedChart', 'PieChart', 'RadarChart', 'RadialBarChart',
+    'ScatterChart', 'Treemap',
+  ],
 };

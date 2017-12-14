@@ -90,6 +90,8 @@ const map = {
     default: 'DEFAULT: ',
     format: 'FORMAT: ',
     examples: 'Examples: ',
+    parent: 'Parent Components',
+    children: 'Child Components',
   },
   'design-disciplines': {
     'design-disciplines': 'Design Disciplines',

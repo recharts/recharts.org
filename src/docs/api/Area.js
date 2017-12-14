@@ -300,4 +300,10 @@ export default {
       },
     },
   ],
+  parentComponents: [
+    'AreaChart', 'ComposedChart',
+  ],
+  childrenComponents: [
+    'LabelList',
+  ],
 };

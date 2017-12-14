@@ -193,4 +193,10 @@ export default {
       },
     },
   ],
+  parentComponents: [
+    'RadialBarChart'
+  ],
+  childrenComponents: [
+    'Cell', 'LabelList',
+  ],
 };

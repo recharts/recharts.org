@@ -276,4 +276,10 @@ export default {
       },
     },
   ],
+  parentComponents: [
+    'PieChart'
+  ],
+  childrenComponents: [
+    'Cell', 'LabelList',
+  ],
 };

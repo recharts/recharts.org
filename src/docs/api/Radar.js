@@ -93,4 +93,10 @@ export default {
       },
     },
   ],
+  parentComponents: [
+    'RadarChart'
+  ],
+  childrenComponents: [
+    'LabelList',
+  ],
 };

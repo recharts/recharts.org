@@ -66,4 +66,7 @@ export default {
       },
     },
   ],
+  parentComponents: [
+    'RadarChart', 'RadialBarChart',
+  ],
 };
