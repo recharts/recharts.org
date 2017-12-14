@@ -6,6 +6,7 @@ export default {
       type: 'Number',
       defaultVal: '0',
       isOptional: false,
+      deprecated: true,
       desc: {
         'en-US': 'The x-coordinate of center.',
         'zh-CN': '圆心的 x 坐标。',
@@ -15,6 +16,7 @@ export default {
       type: 'Number',
       defaultVal: '0',
       isOptional: false,
+      deprecated: true,
       desc: {
         'en-US': 'The y-coordinate of center.',
         'zh-CN': '圆心的 y 坐标。'
@@ -24,6 +26,7 @@ export default {
       type: 'Number',
       defaultVal: 180,
       isOptional: false,
+      deprecated: true,
       desc: {
         'en-US': 'The start angle of all the bars.',
         'zh-CN': '柱条的起始角度。',
@@ -33,6 +36,7 @@ export default {
       type: 'Number',
       defaultVal: 0,
       isOptional: false,
+      deprecated: true,
       desc: {
         'en-US': 'The end angle of all the bars.',
         'zh-CN': '柱条的结束角度。',
@@ -42,6 +46,7 @@ export default {
       type: 'Number',
       defaultVal: '135',
       isOptional: false,
+      deprecated: true,
       desc: {
         'en-US': 'The angle of the value which has the max absolute value, which should be a positive number and less than Math.abs(endAngle - startAngle).',
         'zh-CN': '柱条对应的最大的角度。这个值必须小于 Math.abs(endAngle - startAngle)。',
