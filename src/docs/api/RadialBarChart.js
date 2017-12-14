@@ -75,7 +75,7 @@ export default {
     }, {
       name: 'startAngle',
       type: 'Number',
-      defaultVal: 180,
+      defaultVal: 0,
       isOptional: false,
       desc: {
         'en-US': 'The start angle of all the bars.',
@@ -84,7 +84,7 @@ export default {
     }, {
       name: 'endAngle',
       type: 'Number',
-      defaultVal: 0,
+      defaultVal: 360,
       isOptional: false,
       desc: {
         'en-US': 'The end angle of all the bars.',

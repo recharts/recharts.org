@@ -72,13 +72,14 @@ class APIView extends Component {
     return props.map((entry, i) => (
       <li className="props-item" key={`props-${i}`}>
         <p className={`header ${entry.deprecated ? 'deprecated' : ''}`}>
-          <a href={`#${entry.name}`}><span className="title">{entry.name}</span></a>
+          <span className="title">{entry.name}</span>
           <span className="type">{entry.type}</span>
           {entry.isOptional ? <em className="optional">optional</em> : null}
           {entry.deprecated ? <em className="deprecated-label">@deprecated</em> : null}
         </p>
         <p className="desc">{parseLocalObj(locale, entry.desc)}</p>
-        {entry.defaultVal && (entry.defaultVal !== 'null' && entry.defaultVal !== 'undefined') ? (
+        {entry.defaultVal !== null && entry.defaultVal !== undefined && entry.defaultVal !== 'null'
+          && entry.defaultVal !== 'undefined' ? (
           <p className="default">
             <span className="title">{localeGet(locale, 'api', 'default')}</span>
             <span>{entry.defaultVal}</span>
