@@ -47,6 +47,15 @@ export default {
         'zh-CN': '起始刻度的角度，默认为 90 度，即圆心的正上方。0 度为圆心的正右方。',
       },
     }, {
+      name: 'endAngle',
+      type: 'Number',
+      defaultVal: '-270',
+      isOptional: false,
+      desc: {
+        'en-US': "The angle of last point in the circle, we'll calculate the direction of chart by 'startAngle' and 'endAngle'.",
+        'zh-CN': '圆周最后一个点的角度，默认为 -270 度，即圆心的正上方。0 度为圆心的正右方。',
+      },
+    }, {
       name: 'innerRadius',
       type: 'Percentage | Number',
       defaultVal: '0',
@@ -77,6 +86,7 @@ export default {
     }, {
       name: 'clockWise',
       type: 'Bool',
+      deprecated: true,
       defaultVal: 'true',
       isOptional: false,
       desc: {
