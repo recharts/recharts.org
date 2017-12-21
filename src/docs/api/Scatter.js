@@ -192,6 +192,15 @@ export default {
         'en-US': 'The customized event handler of mouseleave on the symbols in this group',
         'zh-CN': '散点 mouseleave 事件的回调函数。',
       },
+    }, {
+      name: 'id',
+      type: 'String',
+      defaultVal: 'null',
+      isOptional: true,
+      desc: {
+        'en-US': 'The unique id of this component, which will be used to generate unique clip path id internally. This props is suggested to be set in SSR.',
+        'zh-CN': '唯一的id，会用于生成内部的clip path id 等，建议使用SSR的时候设置这个属性。',
+      },
     },
   ],
   parentComponents: [

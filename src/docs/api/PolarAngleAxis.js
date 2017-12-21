@@ -101,6 +101,24 @@ export default {
         'zh-CN': '刻度格式化函数。',
       },
     }, {
+      name: 'type',
+      type: '\'number\' | \'category\'',
+      defaultVal: '\'category\'',
+      isOptional: false,
+      desc: {
+        'en-US': 'The type of axis.',
+        'zh-CN': '角度轴的类型：数值轴、类目轴。',
+      },
+    }, {
+      name: 'allowDuplicatedCategory',
+      type: 'Boolean',
+      defaultVal: 'true',
+      isOptional: false,
+      desc: {
+        'en-US': `Allow the axis has duplicated categorys or not when the type of axis is "category".`,
+        'zh-CN': '是否允许类目轴有重复的类目。',
+      },
+    }, {
       name: 'onClick',
       type: 'Function',
       isOptional: true,
