@@ -83,6 +83,15 @@ export default {
         'zh-CN': '当轴是数值轴时，指定轴的定义域（domain）的时候，如果 allowDataOverflow 的值为 false，我们会根据数据的最大值和最小值来调整 domain，确保所有的数据能够展示。如果 allowDataOverflow 的值为 true，不会调整 domain ，而是将相应的图形元素会直接裁剪掉。',
       },
     }, {
+      name: 'allowDuplicatedCategory',
+      type: 'Boolean',
+      defaultVal: 'true',
+      isOptional: false,
+      desc: {
+        'en-US': `Allow the axis has duplicated categorys or not when the type of axis is "category".`,
+        'zh-CN': '是否允许类目轴有重复的类目。',
+      },
+    }, {
       name: 'tickCount',
       type: 'Number',
       defaultVal: '5',

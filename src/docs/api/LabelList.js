@@ -83,6 +83,15 @@ export default {
         'en-US': 'The parameter to calculate the view box of label in radial charts.',
         'zh-CN': '用于极坐标系图表中判断 label 可视区域的参数',
       },
+    }, {
+      name: 'id',
+      type: 'String',
+      defaultVal: 'null',
+      isOptional: true,
+      desc: {
+        'en-US': 'The unique id of this component, which will be used to generate unique clip path id internally. This props is suggested to be set in SSR.',
+        'zh-CN': '唯一的id，会用于生成内部的clip path id 等，建议使用SSR的时候设置这个属性。',
+      },
     },
   ],
   parentComponents: [

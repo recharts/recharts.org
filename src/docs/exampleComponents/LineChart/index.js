@@ -11,6 +11,7 @@ import TinyLineChart from './Tiny';
 import VerticalLineChart from './Vertical';
 import VerticalLineChartWithSpecifiedDomain from './VerticalLineChartWithSpecifiedDomain';
 import HighlightAndZoomLineChart from './HighlightAndZoomLineChart';
+import LineChartHasMultiSeries from './LineChartHasMultiSeries';
 
 export default {
   SimpleLineChart,
@@ -25,5 +26,6 @@ export default {
   CustomizedDotLineChart,
   CustomizedLableLineChart,
   SynchronizedLineChart,
-  HighlightAndZoomLineChart
+  HighlightAndZoomLineChart,
+  LineChartHasMultiSeries
 };

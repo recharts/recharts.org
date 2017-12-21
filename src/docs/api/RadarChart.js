@@ -52,8 +52,8 @@ export default {
       defaultVal: '-270',
       isOptional: false,
       desc: {
-        'en-US': "The angle of last point in the circle, we'll calculate the direction of chart by 'startAngle' and 'endAngle'.",
-        'zh-CN': '圆周最后一个点的角度，默认为 -270 度，即圆心的正上方。0 度为圆心的正右方。',
+        'en-US': "The angle of last point in the circle which should be startAngle - 360 or startAngle + 360. We'll calculate the direction of chart by 'startAngle' and 'endAngle'.",
+        'zh-CN': '圆周最后一个点的角度，默认为 -270 度，必须为 startAngle - 360 或者 startAngle + 360。0 度为圆心的正右方。',
       },
     }, {
       name: 'innerRadius',
