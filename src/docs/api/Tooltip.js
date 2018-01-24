@@ -117,7 +117,7 @@ export default {
         'en-US': 'The source data of the content to be displayed in the tooltip, usually calculated internally.',
         'zh-CN': 'Tooltip 展示内容的源数据，通常是图表内部计算的。',
       },
-      format: [`[{ name: '05-01', value: 12, unit: 'kg' }]`],
+      format: [`[{ name: '05-01', value: 12, unit: 'kg', color: '#ff0000', dataKey: 'pv', formatter: (data) => {} }]`],
     }, {
       name: 'label',
       type: 'String | Number',
