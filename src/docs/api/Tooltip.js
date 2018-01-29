@@ -155,6 +155,9 @@ export default {
         'en-US': 'The formatter function of value in tooltip.',
         'zh-CN': '每个项目中“数值”的格式化函数。',
       },
+      format: [
+        `(value, name, props) => ()`,
+      ],
     }, {
       name: 'labelFormatter',
       type: 'Function',
