@@ -60,7 +60,7 @@ export default {
       format: [
         `<Label>
   any string or number
-</Lable>
+</Label>
         `,
       ],
     }, {
