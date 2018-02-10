@@ -56,15 +56,6 @@ export default {
         'en-US': 'The original data of a LineChart, a BarChart or an AreaChart.',
         'zh-CN': '类目图表的输入数据。',
       },
-	 }, {
-      name: 'gap',
-      type: 'Number',
-      defaultVal: '1',
-      isOptional: true,
-      desc: {
-        'en-US': 'The data with gap of refreshing chart. If the option is not set, the chart will be refreshed every time ',
-        'zh-CN': '数据刷新间隔，如果没有指定，则取 1 ，每次刷新',
-      },
     }, {
       name: 'travellerWidth',
       type: 'Number',
@@ -73,6 +64,15 @@ export default {
       desc: {
         'en-US': 'The width of each traveller.',
         'zh-CN': '游标的宽度。',
+      },
+	 }, {
+      name: 'gap',
+      type: 'Number',
+      defaultVal: '1',
+      isOptional: true,
+      desc: {
+        'en-US': 'The data with gap of refreshing chart. If the option is not set, the chart will be refreshed every time ',
+        'zh-CN': '数据刷新间隔，如果没有指定，则取 1 ，每次刷新',
       },
     }, {
       name: 'startIndex',
