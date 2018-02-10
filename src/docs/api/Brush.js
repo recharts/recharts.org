@@ -65,7 +65,7 @@ export default {
         'en-US': 'The width of each traveller.',
         'zh-CN': '游标的宽度。',
       },
-	 }, {
+    }, {
       name: 'gap',
       type: 'Number',
       defaultVal: '1',
