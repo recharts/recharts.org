@@ -66,12 +66,21 @@ export default {
         'zh-CN': '游标的宽度。',
       },
     }, {
+      name: 'gap',
+      type: 'Number',
+      defaultVal: '1',
+      isOptional: true,
+      desc: {
+        'en-US': 'The data with gap of refreshing chart. If the option is not set, the chart will be refreshed every time ',
+        'zh-CN': '数据刷新间隔，如果没有指定，则取 1 ，每次刷新',
+      },
+    }, {
       name: 'startIndex',
       type: 'Number',
       defaultVal: 'null',
       isOptional: true,
       desc: {
-        'en-US': 'The default start index of brush. If the option is not setted, the start index will be 0.',
+        'en-US': 'The default start index of brush. If the option is not set, the start index will be 0.',
         'zh-CN': '默认的起始序号，如果没有指定，则取 0 。',
       },
     }, {
@@ -80,7 +89,7 @@ export default {
       defaultVal: 'null',
       isOptional: true,
       desc: {
-        'en-US': 'The default end index of brush. If the option is not setted, the end index will be calculated by the length of data.',
+        'en-US': 'The default end index of brush. If the option is not set, the end index will be calculated by the length of data.',
         'zh-CN': '默认的结束序号，如果没有指定，则取 data.length - 1。',
       },
     }, {
