@@ -115,7 +115,7 @@ export default {
         `<XAxis type="number" domain={['auto', 'auto']} />`,
         `<XAxis type="number" domain={[0, 'dataMax + 1000']} />`,
         `<XAxis type="number" domain={['dataMin - 100', 'dataMax + 100']} />`,
-        `<YAxis type="number" domain={[dataMin => (0 - Math.abs(dataMin)), dataMax => (dataMax * 2)]} />`,
+        `<XAxis type="number" domain={[dataMin => (0 - Math.abs(dataMin)), dataMax => (dataMax * 2)]} />`,
       ],
       examples: [{
         name: 'Numeric XAxis with specified domain',
