@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router';
 import Helmet from 'react-helmet';
 import { getLocaleType, localeGet } from '../utils/LocaleUtils';
+import Affix from '../components/Affix';
 import 'styles/app.scss';
 
 const modules = ['guide', 'api', 'examples', 'blog'];
@@ -59,38 +60,40 @@ class Frame extends Component {
     return (
       <div className="container">
         <Helmet titleTemplate={'%s | Recharts'} />
-        <header>
-          <div className="header-wrapper">
-            <h1 className="logo">
-              <Link
-                className="nav-logo"
-                to={`/${locale}`}>&lt;Recharts /&gt;</Link>
-            </h1>
-            <nav>
-              <ul className="nav" id="nav">
-                {
-                  modules.map((entry, index) => {
-                    return (
-                      <li key={`item-${index}`}>
-                        <Link className={`nav-link ${entry === page ? 'active' : ''}`} to={`/${locale}/${entry}`}>
-                          {localeGet(locale, 'frame', entry)}
-                        </Link>
-                      </li>
-                    );
-                  })
-                }
-                <li className="github-wrapper">
-                  <a href="https://github.com/recharts/recharts"
-                    target="_blank"
-                    className="nav-github">Github</a>
-                </li>
-                <li className="language-switch-wrapper">
-                  {this.renderLocaleSwitch(locale)}
-                </li>
-              </ul>
-            </nav>
-          </div>
-        </header>
+          <Affix>
+            <header>
+              <div className="header-wrapper">
+                <h1 className="logo">
+                  <Link
+                    className="nav-logo"
+                    to={`/${locale}`}>&lt;Recharts /&gt;</Link>
+                </h1>
+                <nav>
+                  <ul className="nav" id="nav">
+                    {
+                      modules.map((entry, index) => {
+                        return (
+                          <li key={`item-${index}`}>
+                            <Link className={`nav-link ${entry === page ? 'active' : ''}`} to={`/${locale}/${entry}`}>
+                              {localeGet(locale, 'frame', entry)}
+                            </Link>
+                          </li>
+                        );
+                      })
+                    }
+                    <li className="github-wrapper">
+                      <a href="https://github.com/recharts/recharts"
+                        target="_blank"
+                        className="nav-github">Github</a>
+                    </li>
+                    <li className="language-switch-wrapper">
+                      {this.renderLocaleSwitch(locale)}
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+          </header>
+        </Affix>
         { children }
         <footer>
           <p>Contact us by <a href="https://demo.rocket.chat/channel/recharts" target="_blank">Rocket.Chat</a></p>

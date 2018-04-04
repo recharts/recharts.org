@@ -143,16 +143,24 @@
         float: left;
         width: 20%;
         text-align: center;
+        height: 90px;
 
         > a {
-          display: inline-block;
+          position: relative;
+          display: block;
           max-width: 150px;
           width: 80%;
-          margin: 20px 0;
+          height: 100%;
+          padding: 20px 0;
+          margin: 0 auto;
 
           img {
+            position: absolute;
             width: 100%;
             height: auto;
+            left: 0;
+            top: 50%;
+            transform: translate(0, -50%);
           }
         }
       }

@@ -70,9 +70,9 @@ class APIView extends Component {
     if (!props || !props.length) {return null;}
 
     return props.map((entry, i) => (
-      <li className="props-item" key={`props-${i}`}>
+      <li className="props-item" key={`props-${i}`} id={entry.name}>
         <p className={`header ${entry.deprecated ? 'deprecated' : ''}`}>
-          <span className="title">{entry.name}</span>
+          <span className="title"><a href={`#${entry.name}`}>{entry.name}</a></span>
           <span className="type">{entry.type}</span>
           {entry.isOptional ? <em className="optional">optional</em> : null}
           {entry.deprecated ? <em className="deprecated-label">@deprecated</em> : null}
