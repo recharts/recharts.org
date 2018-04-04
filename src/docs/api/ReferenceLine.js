@@ -48,7 +48,7 @@ export default {
       },
       examples: [{
         name: 'A LineChart with alwaysShow ReferenceLine',
-        url: 'http://jsfiddle.net/qsokf7jn/',
+        url: 'https://jsfiddle.net/alidingling/uqtuc1mp/',
         isExternal: true,
       }],
     }, {

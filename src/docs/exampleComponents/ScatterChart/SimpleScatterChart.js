@@ -11,14 +11,14 @@ const data = [
 ];
 
 export default class Example extends Component {
-  static jsfiddleUrl = '//jsfiddle.net/8ueLrpya/20';
+  static jsfiddleUrl = 'https://jsfiddle.net/alidingling/uLysj0u2/';
 
   render () {
     return (
       <ScatterChart width={400} height={400} margin={{top: 20, right: 20, bottom: 20, left: 20}}>
+      	<CartesianGrid />
       	<XAxis type="number" dataKey={'x'} name='stature' unit='cm'/>
       	<YAxis type="number" dataKey={'y'} name='weight' unit='kg'/>
-      	<CartesianGrid />
       	<Tooltip cursor={{strokeDasharray: '3 3'}}/>
         <Scatter name='A school' data={data} fill='#8884d8'/>
       </ScatterChart>

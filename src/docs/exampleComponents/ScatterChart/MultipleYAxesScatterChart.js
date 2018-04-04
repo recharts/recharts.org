@@ -25,13 +25,13 @@ const data02 = [
 ];
 
 export default class Example extends Component {
-  static jsfiddleUrl = '//jsfiddle.net/t427425s/';
+  static jsfiddleUrl = 'https://jsfiddle.net/alidingling/scas8xds/';
 
   render () {
     return (
       <ScatterChart width={600} height={400} margin={{top: 20, right: 20, bottom: 20, left: 20}}>
-      	<XAxis type="number" dataKey={'x'} name='stature' unit='cm'/>
       	<CartesianGrid />
+      	<XAxis type="number" dataKey={'x'} name='stature' unit='cm'/>
       	<YAxis yAxisId="left" type="number" dataKey="y" name='weight' unit='kg' stroke="#8884d8" />
         <YAxis yAxisId="right" type="number" dataKey="y" name='weight' unit='kg' orientation="right" stroke="#82ca9d"/>
       	<Tooltip cursor={{strokeDasharray: '3 3'}}/>

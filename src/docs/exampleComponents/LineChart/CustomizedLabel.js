@@ -31,15 +31,15 @@ const CustomizedAxisTick = React.createClass({
 });
 
 export default class SimpleLineChart extends Component {
-  static jsfiddleUrl = '//jsfiddle.net/vxb1u6og';
+  static jsfiddleUrl = 'https://jsfiddle.net/alidingling/9y9zrpjp/';
 
   render () {
     return (
       <LineChart width={600} height={300} data={data}
             margin={{top: 20, right: 30, left: 20, bottom: 10}}>
+       <CartesianGrid strokeDasharray="3 3"/>
        <XAxis dataKey="name" height={60} tick={<CustomizedAxisTick/>}/>
        <YAxis/>
-       <CartesianGrid strokeDasharray="3 3"/>
        <Tooltip/>
        <Legend />
        <Line type="monotone" dataKey="pv" stroke="#8884d8" label={<CustomizedLabel />}/>

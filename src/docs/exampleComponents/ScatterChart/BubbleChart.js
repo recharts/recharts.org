@@ -68,7 +68,7 @@ const parseDomain = () => {
 };
 
 export default class Example extends Component {
-  static jsfiddleUrl = '//jsfiddle.net/Lg5myu33';
+  static jsfiddleUrl = 'https://jsfiddle.net/alidingling/9kvhed7a/';
 
   renderTooltip = (props) => {
     const { active, payload } = props;

@@ -24,7 +24,7 @@ const renderCustomizedLabel = ({ cx, cy, midAngle, innerRadius, outerRadius, per
 };
 
 export default class Example extends Component {
-  static jsfiddleUrl = '//jsfiddle.net/x5em3hdp';
+  static jsfiddleUrl = 'https://jsfiddle.net/alidingling/c9pL8k61/';
 
   render () {
     return (

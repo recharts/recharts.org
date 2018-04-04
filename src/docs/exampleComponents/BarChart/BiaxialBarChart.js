@@ -12,16 +12,16 @@ const data = [
 ];
 
 export default class Example extends Component {
-  static jsfiddleUrl = '//jsfiddle.net/xcguom0L';
+  static jsfiddleUrl = 'https://jsfiddle.net/alidingling/31s5e83y/';
 
   render () {
     return (
       <BarChart width={600} height={300} data={data}
             margin={{top: 20, right: 30, left: 20, bottom: 5}}>
+       <CartesianGrid strokeDasharray="3 3"/>
        <XAxis dataKey="name"/>
        <YAxis yAxisId="left" orientation="left" stroke="#8884d8"/>
        <YAxis yAxisId="right" orientation="right" stroke="#82ca9d"/>
-       <CartesianGrid strokeDasharray="3 3"/>
        <Tooltip/>
        <Legend />
        <Bar yAxisId="left" dataKey="pv" fill="#8884d8" />

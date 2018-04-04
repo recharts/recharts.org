@@ -31,7 +31,7 @@ const getAxisYDomain = (from, to, ref, offset) => {
 		if ( d[ref] > top ) top = d[ref];
 		if ( d[ref] < bottom ) bottom = d[ref];
 	});
-	
+
 	return [ (bottom|0) - offset, (top|0) + offset ]
 };
 
@@ -49,17 +49,17 @@ const initialState = {
 };
 
 export default class HighlightAndZoomDemo extends Component {
-	
-	static jsfiddleUrl = '//jsfiddle.net/v1hjL7L0/';
-	
+
+	static jsfiddleUrl = 'https://jsfiddle.net/alidingling/nhpemhgs/';
+
 	constructor(props) {
 		super(props);
 		this.state = initialState;
 	}
-	
+
 	zoom(){
 		let { refAreaLeft, refAreaRight, data } = this.state;
-		
+
 		if ( refAreaLeft === refAreaRight || refAreaRight === '' ) {
 			this.setState( () => ({
 				refAreaLeft : '',
@@ -67,15 +67,15 @@ export default class HighlightAndZoomDemo extends Component {
 			}) );
 			return;
 		}
-		
+
 		// xAxis domain
 		if ( refAreaLeft > refAreaRight )
 		[ refAreaLeft, refAreaRight ] = [ refAreaRight, refAreaLeft ];
-		
+
 		// yAxis domain
 		const [ bottom, top ] = getAxisYDomain( refAreaLeft, refAreaRight, 'cost', 1 );
 		const [ bottom2, top2 ] = getAxisYDomain( refAreaLeft, refAreaRight, 'impression', 50 );
-		
+
 		this.setState( () => ({
 			refAreaLeft : '',
 			refAreaRight : '',
@@ -85,7 +85,7 @@ export default class HighlightAndZoomDemo extends Component {
 			bottom, top, bottom2, top2
 		} ) );
 	};
-	
+
 	zoomOut() {
 		const { data } = this.state;
 		this.setState( () => ({
@@ -100,10 +100,10 @@ export default class HighlightAndZoomDemo extends Component {
 			bottom: 'dataMin+50'
 		}) );
 	}
-	
+
 	render() {
 		const { data, barIndex, left, right, refAreaLeft, refAreaRight, top, bottom, top2, bottom2 } = this.state;
-		
+
 		return (
 			<div className="highlight-bar-charts" style={{userSelect:'none'}}>
 			<button
@@ -113,7 +113,7 @@ export default class HighlightAndZoomDemo extends Component {
 			>
 			Zoom Out
 			</button>
-			
+
 			<LineChart
 			width={800}
 			height={400}
@@ -145,13 +145,13 @@ export default class HighlightAndZoomDemo extends Component {
 			<Tooltip/>
 			<Line yAxisId="1" type='natural' dataKey='cost' stroke='#8884d8' animationDuration={300}/>
 			<Line yAxisId="2" type='natural' dataKey='impression' stroke='#82ca9d' animationDuration={300}/>
-			
+
 			{
 				(refAreaLeft && refAreaRight) ? (
 					<ReferenceArea yAxisId="1" x1={refAreaLeft} x2={refAreaRight}  strokeOpacity={0.3} /> ) : null
 				}
 				</LineChart>
-				
+
 				</div>
 			);
 		}

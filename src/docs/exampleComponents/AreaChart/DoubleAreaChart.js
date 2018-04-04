@@ -30,7 +30,7 @@ const gradientOffset = () => {
 const off = gradientOffset();
 
 export default class Example extends Component {
-  static jsfiddleUrl = '//jsfiddle.net/b9pjzn9t';
+  static jsfiddleUrl = 'https://jsfiddle.net/alidingling/64v6ocdx/';
 
   render () {
     return (
@@ -40,9 +40,9 @@ export default class Example extends Component {
         data={data}
         margin={{top: 10, right: 30, left: 0, bottom: 0}}
       >
+        <CartesianGrid strokeDasharray="3 3"/>
         <XAxis dataKey="name"/>
         <YAxis/>
-        <CartesianGrid strokeDasharray="3 3"/>
         <Tooltip/>
         <defs>
           <linearGradient id="splitColor" x1="0" y1="0" x2="0" y2="1">

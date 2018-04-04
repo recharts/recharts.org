@@ -12,7 +12,7 @@ const data = [
 ];
 
 export default class Example extends Component {
-  static jsfiddleUrl = '//jsfiddle.net/yyen40b0/';
+  static jsfiddleUrl = 'https://jsfiddle.net/alidingling/7j5bbbum/';
 
   render () {
     return (
@@ -20,9 +20,9 @@ export default class Example extends Component {
         <ResponsiveContainer>
           <AreaChart data={data}
                 margin={{top: 10, right: 30, left: 0, bottom: 0}}>
+            <CartesianGrid strokeDasharray="3 3"/>
             <XAxis dataKey="name"/>
             <YAxis/>
-            <CartesianGrid strokeDasharray="3 3"/>
             <Tooltip/>
             <Area type='monotone' dataKey='uv' stroke='#8884d8' fill='#8884d8' />
           </AreaChart>

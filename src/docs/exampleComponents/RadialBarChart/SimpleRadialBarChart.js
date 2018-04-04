@@ -19,7 +19,7 @@ const style = {
 
 
 export default class Example extends Component {
-  static jsfiddleUrl = '//jsfiddle.net/4qo7ba5L/';
+  static jsfiddleUrl = 'https://jsfiddle.net/alidingling/9km41z5z/';
 
   render () {
     return (

@@ -35,15 +35,15 @@ TriangleBar.propTypes = {
 };
 
 export default class Example extends Component {
-  static jsfiddleUrl = '//jsfiddle.net/43to7n0x';
+  static jsfiddleUrl = 'https://jsfiddle.net/alidingling/rnywhbu8/';
 
   render () {
     return (
       <BarChart width={600} height={300} data={data}
             margin={{top: 20, right: 30, left: 20, bottom: 5}}>
+        <CartesianGrid strokeDasharray="3 3"/>
         <XAxis dataKey="name"/>
         <YAxis/>
-        <CartesianGrid strokeDasharray="3 3"/>
         <Bar dataKey="female" fill="#8884d8" shape={<TriangleBar/>} label={{ position: 'top' }}>
           {
             data.map((entry, index) => (

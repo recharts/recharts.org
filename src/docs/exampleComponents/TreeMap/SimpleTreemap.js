@@ -135,7 +135,7 @@ const data = [
 ];
 
 export default class Example extends Component {
-  static jsfiddleUrl = '//jsfiddle.net/98t0a9sg';
+  static jsfiddleUrl = 'https://jsfiddle.net/alidingling/u702a3Lx/';
 
   render () {
     return (

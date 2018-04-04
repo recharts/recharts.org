@@ -44,15 +44,15 @@ const data = [
 ];
 
 export default class Example extends Component {
-  static jsfiddleUrl = '//jsfiddle.net/xb6hnevm';
+  static jsfiddleUrl = 'https://jsfiddle.net/alidingling/mc8r7e6p/';
 
   render () {
     return (
       <BarChart width={600} height={300} data={data}
             margin={{top: 5, right: 30, left: 20, bottom: 5}}>
+       <CartesianGrid strokeDasharray="3 3"/>
        <XAxis dataKey="name"/>
        <YAxis/>
-       <CartesianGrid strokeDasharray="3 3"/>
        <Tooltip/>
        <Legend verticalAlign="top" wrapperStyle={{lineHeight: '40px'}}/>
        <ReferenceLine y={0} stroke='#000'/>
