@@ -6,6 +6,7 @@ import { getLocaleType, localeGet } from 'utils/LocaleUtils';
 import { Link } from 'react-router';
 import './ExampleView.scss';
 
+
 const firstChartName = Object.keys(Examples)[0];
 const cates = Object.keys(Examples).sort((a, b) => {
   return Examples[a].order - Examples[b].order;
