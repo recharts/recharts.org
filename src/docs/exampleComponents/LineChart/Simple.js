@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
+import JSONstringify from '../../../utils/JsonStringfy';
 
 const data = [
   {name: 'Page A', uv: 4000, pv: 2400, amt: 2400},
@@ -13,6 +14,7 @@ const data = [
 
 export default class SimpleLineChart extends Component {
   static jsfiddleUrl = 'https://jsfiddle.net/alidingling/xqjtetw0/';
+  static dataFormat = JSONstringify(data);
 
   render () {
     return (
