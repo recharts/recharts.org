@@ -63,7 +63,10 @@
     "webpack-hot-middleware": "^2.13.0"
   },
   "dependencies": {
+    "classnames": "^2.2.5",
     "highlight.js": "~9.8.0",
+    "oui-dom-events": "^0.2.2",
+    "oui-dom-utils": "^0.3.8",
     "react": "15.6.1",
     "react-dom": "15.6.1",
     "react-helmet": "^3.2.0",
