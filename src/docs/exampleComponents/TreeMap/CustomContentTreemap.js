@@ -187,7 +187,7 @@ const CustomizedContent = React.createClass({
 
 
 export default class Example extends Component {
-  static jsfiddleUrl = '//jsfiddle.net/dytmutpk';
+  static jsfiddleUrl = 'https://jsfiddle.net/alidingling/Ldvvz2ak/';
 
   render () {
     return (

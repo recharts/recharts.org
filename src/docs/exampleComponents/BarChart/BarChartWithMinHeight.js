@@ -25,15 +25,15 @@ const renderCustomizedLabel = (props) => {
 };
 
 export default class Example extends Component {
-  static jsfiddleUrl = '//jsfiddle.net/naq3k4op/38';
+  static jsfiddleUrl = 'https://jsfiddle.net/alidingling/a5Leskck/';
 
   render () {
     return (
       <BarChart width={600} height={300} data={data}
             margin={{top: 5, right: 30, left: 20, bottom: 5}}>
+        <CartesianGrid strokeDasharray="3 3"/>
         <XAxis dataKey="name"/>
         <YAxis/>
-        <CartesianGrid strokeDasharray="3 3"/>
         <Tooltip/>
         <Legend />
         <Bar dataKey="pv" fill="#8884d8" minPointSize={5}>

@@ -12,15 +12,15 @@ const data = [
 ];
 
 export default class SimpleLineChart extends Component {
-  static jsfiddleUrl = '//jsfiddle.net/cbscx45c';
+  static jsfiddleUrl = 'https://jsfiddle.net/alidingling/wpfnfmh7/';
 
   render () {
     return (
       <LineChart width={600} height={300} data={data}
             margin={{top: 20, right: 50, left: 20, bottom: 5}}>
+       <CartesianGrid strokeDasharray="3 3"/>
        <XAxis dataKey="name"/>
        <YAxis/>
-       <CartesianGrid strokeDasharray="3 3"/>
        <Tooltip/>
        <Legend />
        <ReferenceLine x="Page C" stroke="red" label="Max PV PAGE"/>

@@ -13,15 +13,15 @@ const data02 = [
 ];
 
 export default class Example extends Component {
-  static jsfiddleUrl = '//jsfiddle.net/gmetyhhj/17';
+  static jsfiddleUrl = 'https://jsfiddle.net/alidingling/3mw50Lc9/';
 
   render () {
     return (
       <ScatterChart width={400} height={400} margin={{top: 20, right: 20, bottom: 20, left: 20}}>
+        <CartesianGrid />
       	<XAxis type="number" dataKey={'x'} name='stature' unit='cm'/>
       	<YAxis type="number" dataKey={'y'} name='weight' unit='kg'/>
         <ZAxis type="number" dataKey={'z'} range={[60, 400]} name='score' unit='km'/>
-        <CartesianGrid />
       	<Tooltip cursor={{strokeDasharray: '3 3'}}/>
         <Legend/>
       	<Scatter name='A school' data={data01} fill='#8884d8' shape="star"/>

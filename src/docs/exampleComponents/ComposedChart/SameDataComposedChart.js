@@ -12,17 +12,17 @@ const data = [
 ];
 
 export default class Example extends Component {
-  static jsfiddleUrl = '//jsfiddle.net/jbu2zs91';
+  static jsfiddleUrl = 'https://jsfiddle.net/alidingling/94sebfL8/';
 
   render () {
     return (
       <ComposedChart width={600} height={400} data={data}
           margin={{top: 20, right: 20, bottom: 20, left: 20}}>
+        <CartesianGrid stroke='#f5f5f5'/>
         <XAxis dataKey="name"/>
         <YAxis />
         <Tooltip/>
         <Legend/>
-        <CartesianGrid stroke='#f5f5f5'/>
         <Bar dataKey='uv' barSize={20} fill='#413ea0'/>
         <Line type='monotone' dataKey='uv' stroke='#ff7300'/>
       </ComposedChart>

@@ -43,15 +43,15 @@ const CustomTooltip  = ({ active, payload, label }) => {
 };
 
 export default class Example extends Component {
-  static jsfiddleUrl = '//jsfiddle.net/d7dch92m';
+  static jsfiddleUrl = 'https://jsfiddle.net/alidingling/vxq4ep63/';
 
   render () {
     return (
       <BarChart width={600} height={300} data={data}
             margin={{top: 5, right: 30, left: 20, bottom: 5}}>
+        <CartesianGrid strokeDasharray="3 3"/>
         <XAxis dataKey="name"/>
         <YAxis/>
-        <CartesianGrid strokeDasharray="3 3"/>
         <Tooltip content={<CustomTooltip />}/>
         <Legend />
         <Bar dataKey="pv" barSize={20} fill="#8884d8" />

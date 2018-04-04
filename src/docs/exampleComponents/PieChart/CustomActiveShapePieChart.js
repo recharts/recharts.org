@@ -55,7 +55,7 @@ const renderActiveShape = (props) => {
 
 
 export default class Example extends Component {
-  static jsfiddleUrl = '//jsfiddle.net/ro31mjuf';
+  static jsfiddleUrl = 'https://jsfiddle.net/alidingling/hqnrgxpj/';
 
   state = {
     activeIndex: 0,

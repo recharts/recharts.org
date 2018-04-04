@@ -7,7 +7,7 @@ const data = [
 ];
 
 export default class Example extends Component {
-  static jsfiddleUrl = '//jsfiddle.net/c0dzgn0s/';
+  static jsfiddleUrl = '//jsfiddle.net/alidingling/6okmehja/';
 
   render () {
     return (

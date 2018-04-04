@@ -12,15 +12,15 @@ const data = [
 ];
 
 export default class Example extends Component {
-  static jsfiddleUrl = '//jsfiddle.net/2j1hpc4a';
+  static jsfiddleUrl = 'https://jsfiddle.net/alidingling/c1rLyqj1/';
 
   render () {
     return (
       <AreaChart width={600} height={400} data={data}
             margin={{top: 10, right: 30, left: 0, bottom: 0}}>
+        <CartesianGrid strokeDasharray="3 3"/>
         <XAxis dataKey="name"/>
         <YAxis/>
-        <CartesianGrid strokeDasharray="3 3"/>
         <Tooltip/>
         <Area type='monotone' dataKey='uv' stackId="1" stroke='#8884d8' fill='#8884d8' />
         <Area type='monotone' dataKey='pv' stackId="1" stroke='#82ca9d' fill='#82ca9d' />

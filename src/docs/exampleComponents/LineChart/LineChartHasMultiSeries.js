@@ -20,7 +20,7 @@ const series = [
 ];
 
 export default class SimpleLineChart extends Component {
-  static jsfiddleUrl = '//jsfiddle.net/07zmu0kz';
+  static jsfiddleUrl = 'https://jsfiddle.net/alidingling/ewcqxbwo/';
 
   render () {
     return (

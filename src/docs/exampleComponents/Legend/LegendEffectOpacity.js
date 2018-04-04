@@ -12,7 +12,7 @@ const data = [
 ];
 
 export default class Example extends Component {
-  static jsfiddleUrl = '//jsfiddle.net/2an6obn0';
+  static jsfiddleUrl = 'https://jsfiddle.net/alidingling/1p40zzfe/';
 
   state = {
     opacity: {
@@ -46,9 +46,9 @@ export default class Example extends Component {
     	<div>
         <LineChart width={600} height={300} data={data}
               margin={{top: 5, right: 30, left: 20, bottom: 5}}>
+         <CartesianGrid strokeDasharray="3 3"/>
          <XAxis dataKey="name"/>
          <YAxis/>
-         <CartesianGrid strokeDasharray="3 3"/>
          <Tooltip/>
          <Legend onMouseEnter={this.handleMouseEnter} onMouseLeave={this.handleMouseLeave} />
          <Line type="monotone" dataKey="pv" strokeOpacity={opacity.pv} stroke="#8884d8" activeDot={{r: 8}}/>

@@ -12,7 +12,7 @@ const data = [
 ];
 
 export default class SimpleLineChart extends Component {
-  static jsfiddleUrl = '//jsfiddle.net/gw7v4br8';
+  static jsfiddleUrl = 'https://jsfiddle.net/alidingling/exh283uh/';
 
   render () {
     return (
