@@ -2,7 +2,7 @@ import "babel-polyfill";
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { applyRouterMiddleware, browserHistory } from 'react-router';
+import { applyRouterMiddleware, hashHistory } from 'react-router';
 import { syncHistoryWithStore } from 'react-router-redux';
 import { useScroll } from 'react-router-scroll';
 import makeRoutes from './routes';
@@ -10,8 +10,8 @@ import Root from './containers/Root';
 import configureStore from './redux/configureStore';
 
 const initialState = window.__INITIAL_STATE__
-const store = configureStore(initialState, browserHistory)
-const history = syncHistoryWithStore(browserHistory, store, {
+const store = configureStore(initialState, hashHistory)
+const history = syncHistoryWithStore(hashHistory, store, {
   selectLocationState: (state) => state.router,
 });
 
