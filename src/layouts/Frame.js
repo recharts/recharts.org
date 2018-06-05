@@ -98,7 +98,7 @@ class Frame extends Component {
         <footer>
           <p>Contact us by <a href="https://demo.rocket.chat/channel/recharts" target="_blank">Rocket.Chat</a></p>
           <p>Released under the <a href="http://opensource.org/licenses/MIT" target="_blank">MIT License</a></p>
-          <p>Copyright (c) 2017 Recharts Group</p>
+          <p>Copyright (c) 2017-2018 Recharts Group</p>
         </footer>
       </div>
     );
