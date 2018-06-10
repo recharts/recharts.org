@@ -97,8 +97,8 @@ export default {
       defaultVal: '5',
       isOptional: false,
       desc: {
-        'en-US': 'The count of axis ticks.',
-        'zh-CN': '刻度数。',
+        'en-US': `The count of axis ticks. Not used if 'type' is 'category'.`,
+        'zh-CN': `刻度数。如果'type'是'category'，则不使用。`,
       },
     }, {
       name: 'domain',
