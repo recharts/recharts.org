@@ -265,7 +265,7 @@ export default {
       defaultVal: 'auto',
       isOptional: false,
       desc: {
-        'en-US': `If 'auto' set, the scale funtion is descided by the type of chart, and the props type.`,
+        'en-US': `If set to 'auto', the scale funtion is descided by the type of chart, and the props type.`,
         'zh-CN': '当值为 "auto" 时，会根据图表类型来生成 scale 函数，也可以传入自定义的函数作为 scale 函数。',
       },
       format: [
