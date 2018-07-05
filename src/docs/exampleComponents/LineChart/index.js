@@ -1,6 +1,6 @@
 import BiaxialLineChart from './Biaxial';
 import CustomizedDotLineChart from './CustomizedDot';
-import CustomizedLableLineChart from './CustomizedLabel';
+import CustomizedLabelLineChart from './CustomizedLabel';
 import DashedLineChart from './DashedLineChart';
 import LineChartConnectNulls from './LineChartConnectNulls';
 import LineChartWithReferenceLines from './LineChartWithReferenceLines';
@@ -24,7 +24,7 @@ export default {
   LineChartWithXAxisPading,
   LineChartWithReferenceLines,
   CustomizedDotLineChart,
-  CustomizedLableLineChart,
+  CustomizedLabelLineChart,
   SynchronizedLineChart,
   HighlightAndZoomLineChart,
   LineChartHasMultiSeries

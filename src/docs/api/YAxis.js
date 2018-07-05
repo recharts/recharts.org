@@ -70,8 +70,8 @@ export default {
       defaultVal: '5',
       isOptional: false,
       desc: {
-        'en-US': 'The count of axis ticks.',
-        'zh-CN': '刻度数。',
+        'en-US': `The count of axis ticks. Not used if 'type' is 'category'.`,
+        'zh-CN': `刻度数。如果'type'是'category'，则不使用。`,
       },
       name: 'domain',
       type: 'Array',
@@ -126,7 +126,7 @@ export default {
       defaultVal: '5',
       isOptional: false,
       desc: {
-        'en-US': 'The minimum gab between two adjacent labels.',
+        'en-US': 'The minimum gap between two adjacent labels.',
         'zh-CN': '两个刻度之前最小间隔宽度。',
       },
     }, {
@@ -235,16 +235,17 @@ export default {
       }
     }, {
       name: 'label',
-      type: 'String | Number | ReactElement',
+      type: 'String | Number | ReactElement | Object',
       defaultVal: 'null',
       isOptional: true,
       desc: {
-        'en-US': 'If set a string or a number, default label will be drawn, and the option is content. If set a React element, the option is the custom react element of drawing label.',
-        'zh-CN': '当值为简单类型的数值或者字符串时，这个值会被渲染成文字标签。当值为 React element，会克隆这个元素来渲染文字标签。',
+        'en-US': 'If set a string or a number, default label will be drawn, and the option is content. If set a React element, the option is the custom react element of drawing label. If an object, the option is the props of a new Label instance.',
+        'zh-CN': '当值为简单类型的数值或者字符串时，这个值会被渲染成文字标签。当值为 React element，会克隆这个元素来渲染文字标签。如果一个对象，该选项是一个新的Label实例的道具。',
       },
       format: [
         `<YAxis label="Height" />`,
         `<YAxis label={<CustomizedLabel />} />`,
+        `<YAxis label={{ value: "YAxis Label" }} />`,
       ],
       examples: [
         {
