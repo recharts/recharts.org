@@ -31,7 +31,7 @@ const CustomizedAxisTick = React.createClass({
 });
 
 export default class SimpleLineChart extends Component {
-  static jsfiddleUrl = 'https://jsfiddle.net/alidingling/9y9zrpjp/';
+  static jsfiddleUrl = 'https://jsfiddle.net/alidingling/5br7g9d6/';
 
   render () {
     return (
