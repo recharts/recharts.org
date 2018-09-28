@@ -1,13 +1,12 @@
-var path = require('path');
-var fs = require('fs');
-var webpack = require('webpack');
+const path = require('path');
+const webpack = require('webpack');
 
 module.exports = {
   mode: 'development',
   devtool: 'cheap-module-eval-source-map',
   entry: {
     app: [
-      'webpack-hot-middleware/client',   // Automatic Refresh
+      'webpack-hot-middleware/client',
       './src/app',
     ],
   },
@@ -19,7 +18,7 @@ module.exports = {
   },
 
   devServer: {
-    contentBase: __dirname + '/src',
+    contentBase: path.resolve(__dirname, 'src'),
   },
 
   module: {
@@ -53,22 +52,22 @@ module.exports = {
               ],
               sourceMap: true,
               sourceMapContents: true,
-            }
-          }
-        ]
+            },
+          },
+        ],
       },
     ],
   },
 
   resolve: {
     alias: {
-      'react': path.join(__dirname, 'node_modules', 'react'),
-      'components': path.join(__dirname, './src/components'),
-      'layouts': path.join(__dirname, './src/layouts'),
-      'views': path.join(__dirname, './src/views'),
-      'utils': path.join(__dirname, './src/utils'),
-      'styles': path.join(__dirname, './src/styles'),
-      'docs': path.join(__dirname, './src/docs'),
+      react: path.join(__dirname, 'node_modules', 'react'),
+      components: path.join(__dirname, './src/components'),
+      layouts: path.join(__dirname, './src/layouts'),
+      views: path.join(__dirname, './src/views'),
+      utils: path.join(__dirname, './src/utils'),
+      styles: path.join(__dirname, './src/styles'),
+      docs: path.join(__dirname, './src/docs'),
     },
   },
 

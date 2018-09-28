@@ -1,8 +1,8 @@
 const path = require('path');
 const webpack = require('webpack');
-const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const cssnano = require('cssnano');
 
 module.exports = {
@@ -50,22 +50,22 @@ module.exports = {
               ],
               sourceMap: true,
               sourceMapContents: true,
-            }
-          }
-        ]
+            },
+          },
+        ],
       },
     ],
   },
 
   resolve: {
     alias: {
-      'react': path.join(__dirname, 'node_modules', 'react'),
-      'components': path.join(__dirname, './src/components'),
-      'layouts': path.join(__dirname, './src/layouts'),
-      'views': path.join(__dirname, './src/views'),
-      'utils': path.join(__dirname, './src/utils'),
-      'styles': path.join(__dirname, './src/styles'),
-      'docs': path.join(__dirname, './src/docs'),
+      react: path.join(__dirname, 'node_modules', 'react'),
+      components: path.join(__dirname, './src/components'),
+      layouts: path.join(__dirname, './src/layouts'),
+      views: path.join(__dirname, './src/views'),
+      utils: path.join(__dirname, './src/utils'),
+      styles: path.join(__dirname, './src/styles'),
+      docs: path.join(__dirname, './src/docs'),
     },
   },
 
@@ -76,8 +76,7 @@ module.exports = {
         parallel: true,
         sourceMap: true,
       }),
-      new OptimizeCSSAssetsPlugin({}),
-    ]
+    ],
   },
 
   plugins: [
@@ -87,28 +86,22 @@ module.exports = {
       __DEVTOOLS__: false,
     }),
     new MiniCssExtractPlugin({
-      filename: 'style.css'
+      filename: 'style.css',
     }),
-    new webpack.LoaderOptionsPlugin({
-      options: {
-        context: '/',
-        sassLoader: {
-          includePaths: [path.resolve(__dirname, './src/styles')]
+    new OptimizeCSSAssetsPlugin({
+      assetNameRegExp: /style\.css$/g,
+      cssProcessor: cssnano,
+      cssProcessorPluginOptions: {
+        sourcemap: true,
+        autoprefixer: {
+          add: true,
+          remove: true,
+          browsers: ['last 2 version'],
         },
-        postcss: [
-          cssnano({
-            sourcemap: true,
-            autoprefixer: {
-              add: true,
-              remove: true,
-              browsers: ['last 2 version'],
-            },
-            discardComments: {
-              removeAll: true,
-            },
-          }),
-        ],
-      }
+        discardComments: {
+          removeAll: true,
+        },
+      },
     }),
   ],
 };
