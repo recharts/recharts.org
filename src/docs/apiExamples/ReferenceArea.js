@@ -1,6 +1,8 @@
 import React from 'react';
-import { ScatterChart, Scatter, XAxis, YAxis, ZAxis, CartesianGrid, Tooltip,
-  Legend, ReferenceArea } from 'recharts';
+import {
+  ScatterChart, Scatter, XAxis, YAxis, ZAxis, CartesianGrid, Tooltip,
+  Legend, ReferenceArea,
+} from 'recharts';
 
 const data01 = [
   { x: 100, y: 200, z: 200 }, { x: 120, y: 100, z: 260 },
@@ -15,8 +17,13 @@ const data02 = [
 ];
 
 const example = () => (
-  <ScatterChart width={730} height={250}
-    margin={{ top: 20, right: 20, bottom: 10, left: 10 }}>
+  <ScatterChart
+    width={730}
+    height={250}
+    margin={{
+      top: 20, right: 20, bottom: 10, left: 10,
+    }}
+  >
     <CartesianGrid strokeDasharray="3 3" />
     <XAxis dataKey="x" type="number" name="stature" unit="cm" />
     <YAxis dataKey="y" type="number" name="weight" unit="kg" />
@@ -48,5 +55,5 @@ export default [
   {
     demo: example,
     code: exampleCode,
-  }
+  },
 ];

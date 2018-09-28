@@ -34,8 +34,8 @@ export default {
       defaultVal: '0',
       isOptional: false,
       desc: {
-         'en-US': 'The id of x-axis which is corresponding to the data.',
-         'zh-CN': '区域图对应的 x 轴的 id 。',
+        'en-US': 'The id of x-axis which is corresponding to the data.',
+        'zh-CN': '区域图对应的 x 轴的 id 。',
       },
     }, {
       name: 'yAxisId',
@@ -48,7 +48,7 @@ export default {
       },
     }, {
       name: 'legendType',
-      type: `'line' | 'square' | 'rect'| 'circle' | 'cross' | 'diamond' | 'square' | 'star' | 'triangle' | 'wye' | 'none'`,
+      type: '\'line\' | \'square\' | \'rect\'| \'circle\' | \'cross\' | \'diamond\' | \'square\' | \'star\' | \'triangle\' | \'wye\' | \'none\'',
       defaultVal: '\'line\'',
       isOptional: true,
       desc: {
@@ -65,10 +65,10 @@ export default {
         'zh-CN': '曲线上的点，接收多种配置。当值为 false ，不渲染点。当值为 true ，点会继承 Area 的属性配置，例如配置了 Area 的 stroke 为 "red"， 点会继承这个属性。当值为一个对象的时候，会把这个对象解析为点的属性，来覆盖默认属性。当值是一个 React Element ，会克隆这个 React Element 来渲染“点”。当值是函数时，会调用这个函数去渲染自定义的“点”。',
       },
       format: [
-        `<Area dataKey="value" dot={false} />`,
-        `<Area dataKey="value" dot={{ stroke: 'red', strokeWidth: 2 }} />`,
-        `<Area dataKey="value" dot={<CustomizedDot />} />`,
-        `<Area dataKey="value" dot={renderDot}/>`,
+        '<Area dataKey="value" dot={false} />',
+        '<Area dataKey="value" dot={{ stroke: \'red\', strokeWidth: 2 }} />',
+        '<Area dataKey="value" dot={<CustomizedDot />} />',
+        '<Area dataKey="value" dot={renderDot}/>',
       ],
     }, {
       name: 'activeDot',
@@ -77,13 +77,13 @@ export default {
       isOptional: false,
       desc: {
         'en-US': 'The dot is shown when muser enter a area chart and this chart has tooltip. If false set, no active dot will not be drawn. If true set, active dot will be drawn which have the props calculated internally. If object set, active dot will be drawn which have the props mergered by the internal calculated props and the option. If ReactElement set, the option can be the custom active dot element.If set a function, the function will be called to render customized active dot.',
-        'zh-CN': '当图表触发 mouseenter 事件，并且需要展示 Tooltip 的时候，会展示一个“激活状态的点”。当值为 false ，不渲染“激活状态的点”。当值为 true ，点会继承 Area 的属性配置，例如配置了 Area 的 stroke 为 "red"， 点会继承这个属性。当值为一个对象的时候，会把这个对象解析为点的属性，来覆盖默认属性。当值是一个 React Element ，会克隆这个 React Element 来渲染“点”。当值是一个 函数 时，会调用这个函数去渲染自定义的“点”。'
+        'zh-CN': '当图表触发 mouseenter 事件，并且需要展示 Tooltip 的时候，会展示一个“激活状态的点”。当值为 false ，不渲染“激活状态的点”。当值为 true ，点会继承 Area 的属性配置，例如配置了 Area 的 stroke 为 "red"， 点会继承这个属性。当值为一个对象的时候，会把这个对象解析为点的属性，来覆盖默认属性。当值是一个 React Element ，会克隆这个 React Element 来渲染“点”。当值是一个 函数 时，会调用这个函数去渲染自定义的“点”。',
       },
       format: [
-        `<Area dataKey="value" activeDot={false} />`,
-        `<Area dataKey="value" activeDot={{ stroke: 'red', strokeWidth: 2, r: 10 }} />`,
-        `<Area dataKey="value" activeDot={<CustomizedActiveDot />} />`,
-        `<Area dataKey="value" activeDot={renderDot} />`,
+        '<Area dataKey="value" activeDot={false} />',
+        '<Area dataKey="value" activeDot={{ stroke: \'red\', strokeWidth: 2, r: 10 }} />',
+        '<Area dataKey="value" activeDot={<CustomizedActiveDot />} />',
+        '<Area dataKey="value" activeDot={renderDot} />',
       ],
     }, {
       name: 'label',
@@ -95,10 +95,10 @@ export default {
         'zh-CN': '图形上的文本标签。当值为 false ，不展示文本标签。当值为 true，会根据 Area 的属性配置来展示文本标签。当值为对象的时候，会把这个对象解析为文本标签的属性，来覆盖默认属性。当值是一个 React Element ，会克隆这个 React Element 来渲染“文本标签”。当值是一个 函数 时，会调用这个函数去渲染自定义的“文本标签”。',
       },
       format: [
-        `<Area dataKey="value" label />`,
-        `<Area dataKey="value" label={{ fill: 'red', fontSize: 20 }} />`,
-        `<Area dataKey="value" label={<CustomizedLabel />} />`,
-        `<Area dataKey="value" label={renderLabel} />`,
+        '<Area dataKey="value" label />',
+        '<Area dataKey="value" label={{ fill: \'red\', fontSize: 20 }} />',
+        '<Area dataKey="value" label={<CustomizedLabel />} />',
+        '<Area dataKey="value" label={renderLabel} />',
       ],
     }, {
       name: 'stroke',
@@ -107,11 +107,11 @@ export default {
       isOptional: false,
       desc: {
         'en-US': 'If false "none", not stroke curve will be drawn.',
-        'zh-CN': '描边的颜色。当值为"none"时，不描边'
+        'zh-CN': '描边的颜色。当值为"none"时，不描边',
       },
     }, {
       name: 'layout',
-      type: `'horizontal' | 'vertical'`,
+      type: '\'horizontal\' | \'vertical\'',
       defaultVal: 'undefined',
       isOptional: true,
       desc: {
@@ -128,8 +128,8 @@ export default {
         'zh-CN': '基准线，可以是一个数值，这种情况会根据 layout 解析成 x = ${baseLine} 或者 y = ${baseLine}。当使用 AreaChart 或者 ComposedChart 作为父组件的时候，不需要自己计算，父组件会计算好。',
       },
       format: [
-        `<Area dataKey="value" baseLine={8} />`,
-        `<Area dataKey="value" baseLine={[{ x: 12, y: 15 }]} />`,
+        '<Area dataKey="value" baseLine={8} />',
+        '<Area dataKey="value" baseLine={[{ x: 12, y: 15 }]} />',
       ],
     }, {
       name: 'points',
@@ -138,9 +138,9 @@ export default {
       isOptional: false,
       desc: {
         'en-US': 'The coordinates of all the points in the area, usually calculated internally.',
-        'zh-CN': '曲线上点的坐标。当使用 AreaChart 或者 ComposedChart 作为父组件的时候，不需要自己计算，父组件会计算好。'
+        'zh-CN': '曲线上点的坐标。当使用 AreaChart 或者 ComposedChart 作为父组件的时候，不需要自己计算，父组件会计算好。',
       },
-      format: [`[{ x: 12, y: 12, value: 240 }]`],
+      format: ['[{ x: 12, y: 12, value: 240 }]'],
     }, {
       name: 'stackId',
       type: 'String | Number',
@@ -157,11 +157,11 @@ export default {
   <Area stackId="uv" dataKey="uv01" />
   <Area stackId="uv" dataKey="uv02" />
 </AreaChart>
-`
+`,
       ],
       examples: [{
         name: 'A stacked area chart',
-        url: '/examples/StackedAreaChart'
+        url: '/examples/StackedAreaChart',
       }],
     }, {
       name: 'connectNulls',
@@ -175,7 +175,7 @@ export default {
       examples: [{
         name: 'An areaChart connect nulls and an areaChart disconnect nulls',
         url: '/examples/AreaChartConnectNulls',
-      }]
+      }],
     }, {
       name: 'unit',
       type: 'String | Number',
@@ -223,8 +223,8 @@ export default {
       },
     }, {
       name: 'animationEasing',
-      type: `'ease' | 'ease-in' | 'ease-out' | 'ease-in-out' | 'linear'`,
-      defaultVal: `'ease'`,
+      type: '\'ease\' | \'ease-in\' | \'ease-out\' | \'ease-in-out\' | \'linear\'',
+      defaultVal: '\'ease\'',
       isOptional: false,
       desc: {
         'en-US': 'The type of easing function.',
@@ -239,7 +239,7 @@ export default {
         'en-US': 'The unique id of this component, which will be used to generate unique clip path id internally. This props is suggested to be set in SSR.',
         'zh-CN': '唯一的id，会用于生成内部的clip path id 等，建议使用SSR的时候设置这个属性。',
       },
-    },  {
+    }, {
       name: 'onClick',
       type: 'Function',
       isOptional: true,

@@ -6,7 +6,7 @@ import ReactDOM from 'react-dom';
 import _ from 'lodash';
 import Events from 'oui-dom-events';
 import DOMUtils from 'oui-dom-utils';
-import classNames from 'classNames';
+import classnames from 'classnames';
 import './Affix.scss';
 
 class Affix extends Component {
@@ -93,10 +93,12 @@ class Affix extends Component {
   }
 
   render() {
-    const { prefixCls, className, ...other } = this.props;
+    const {
+      prefixCls, className, offsetTop, ...other
+    } = this.props;
     const { isFixed } = this.state;
     const componentClasses = isFixed ? `${prefixCls}-active` : `${prefixCls}-inactive`;
-    const classes = classNames(
+    const classes = classnames(
       `${prefixCls}`,
       className,
       componentClasses,

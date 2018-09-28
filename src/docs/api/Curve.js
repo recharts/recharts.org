@@ -3,7 +3,7 @@ export default {
   props: [
     {
       name: 'type',
-      type: `'basis' | 'basisClosed' | 'basisOpen' | 'linear' | 'linearClosed' | 'natural' | 'monotoneX' | 'monotoneY' | 'monotone' | 'step' | 'stepBefore' | 'stepAfter' | Function`,
+      type: '\'basis\' | \'basisClosed\' | \'basisOpen\' | \'linear\' | \'linearClosed\' | \'natural\' | \'monotoneX\' | \'monotoneY\' | \'monotone\' | \'step\' | \'stepBefore\' | \'stepAfter\' | Function',
       defaultVal: '\'linear\'',
       isOptional: false,
       desc: {
@@ -29,11 +29,11 @@ export default {
       },
     }, {
       name: 'layout',
-      type: `'horizontal' | 'vertical'`,
+      type: '\'horizontal\' | \'vertical\'',
       defaultVal: 'null',
       isOptional: true,
       desc: {
-        'en-US': `The option can effect the interpolation algorithm when the props type is set to be 'monotone'. Meanwhile, this option will specified the type of baseline when the curve is colsed.`,
+        'en-US': 'The option can effect the interpolation algorithm when the props type is set to be \'monotone\'. Meanwhile, this option will specified the type of baseline when the curve is colsed.',
         'zh-CN': '布局类型。当值为 "horizontal" 时，如果插值类型为 "monotone"，我们会使用 "monotoneX" 的插值算法。',
       },
     }, {
@@ -60,7 +60,7 @@ export default {
       }, {
         name: 'An areaChart connect nulls and an areaChart disconnect nulls',
         url: '/examples/AreaChartConnectNulls',
-      }]
+      }],
     }, {
       name: 'onClick',
       type: 'Function',

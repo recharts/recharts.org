@@ -1,9 +1,9 @@
-function syntaxHighlight(json, className = "highlight-json") {
-  if (typeof json != 'string') {
+function syntaxHighlight(json, className = 'highlight-json') {
+  if (typeof json !== 'string') {
     json = JSON.stringify(json, undefined, 2);
   }
   json = json.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
-  const formatStr = json.replace(/("(\\u[a-zA-Z0-9]{4}|\\[^u]|[^\\"])*"(\s*:)?|\b(true|false|null)\b|-?\d+(?:\.\d*)?(?:[eE][+\-]?\d+)?)/g, function (match) {
+  const formatStr = json.replace(/("(\\u[a-zA-Z0-9]{4}|\\[^u]|[^\\"])*"(\s*:)?|\b(true|false|null)\b|-?\d+(?:\.\d*)?(?:[eE][+\-]?\d+)?)/g, (match) => {
     let cls = 'number';
     if (/^"/.test(match)) {
       if (/:$/.test(match)) {
@@ -17,7 +17,7 @@ function syntaxHighlight(json, className = "highlight-json") {
       cls = 'null';
     }
 
-    return '<span class="' + cls + '">' + match + '</span>';
+    return `<span class="${cls}">${match}</span>`;
   });
 
   let startIndex = 0;

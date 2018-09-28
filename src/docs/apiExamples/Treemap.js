@@ -162,5 +162,5 @@ export default [
   {
     demo: example,
     code: exampleCode,
-  }
+  },
 ];

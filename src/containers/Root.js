@@ -10,12 +10,14 @@ class Root extends Component {
     render: PropTypes.func.isRequired,
   };
 
-  shouldComponentUpdate () {
+  shouldComponentUpdate() {
     return false;
   }
 
   render() {
-    const { store, history, routes, render } = this.props;
+    const {
+      store, history, routes, render,
+    } = this.props;
 
     return (
       <Provider store={store}>

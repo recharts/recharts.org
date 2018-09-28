@@ -1,5 +1,7 @@
 import React from 'react';
-import { PieChart, Pie, Cell, BarChart, Bar } from 'recharts';
+import {
+  PieChart, Pie, Cell, BarChart, Bar,
+} from 'recharts';
 
 const data = [
   { name: 'Group A', value: 400 },
@@ -28,7 +30,7 @@ const barExample = () => (
     <Bar dataKey="value">
       {
         data.map((entry, index) => (
-          <Cell key={`cell-${index}`} fill="none" stroke={colors[index]}  strokeWidth={index === 2 ? 4 : 1} />
+          <Cell key={`cell-${index}`} fill="none" stroke={colors[index]} strokeWidth={index === 2 ? 4 : 1} />
         ))
       }
     </Bar>
@@ -40,7 +42,7 @@ const exampleCode = `
   <Pie data={data} cx="50%" cy="50%" outerRadius={80} label>
     {
       data.map((entry, index) => (
-        <Cell key={\`cell-\$\{index\}\`} fill={colors[index]}/>
+        <Cell key={\`cell-\${index}\`} fill={colors[index]}/>
       ))
     }
   </Pie>
@@ -67,5 +69,5 @@ export default [
   {
     demo: barExample,
     code: barExampleCode,
-  }
+  },
 ];

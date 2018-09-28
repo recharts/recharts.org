@@ -16,12 +16,12 @@ export default {
       isOptional: true,
       desc: {
         'en-US': 'If any two categorical charts(LineChart, AreaChart, BarChart, ComposedChart) have the same syncId, these two charts can sync the position tooltip, and the startIndex, endIndex of Brush.',
-        'zh-CN': '如果任何两个或者多个类目型图表（LineChart, AreaChart, BarChart, ComposedChart）具有相同的 syncId，这两个图表可以联动，包括 Tooltip 以及 Brush 的联动。'
+        'zh-CN': '如果任何两个或者多个类目型图表（LineChart, AreaChart, BarChart, ComposedChart）具有相同的 syncId，这两个图表可以联动，包括 Tooltip 以及 Brush 的联动。',
       },
       examples: [{
-        name: "Two synchronized LineChart and an AreaChart",
+        name: 'Two synchronized LineChart and an AreaChart',
         url: '/examples/SynchronizedLineChart',
-      }]
+      }],
     }, {
       name: 'width',
       type: 'Number',
@@ -47,9 +47,9 @@ export default {
       isOptional: false,
       desc: {
         'en-US': 'The source data, in which each element is an object.',
-        'zh-CN': '输入数据，现在支持的类型是对象数组。'
+        'zh-CN': '输入数据，现在支持的类型是对象数组。',
       },
-      format: ['[{name: \'a\', value: 12}]']
+      format: ['[{name: \'a\', value: 12}]'],
     }, {
       name: 'margin',
       type: 'Object',
@@ -65,8 +65,8 @@ export default {
       type: 'Function',
       isOptional: true,
       desc: {
-         'en-US': 'The customized event handler of click in this chart.',
-         'zh-CN': '鼠标在图表图形区域点击事件的回调函数。',
+        'en-US': 'The customized event handler of click in this chart.',
+        'zh-CN': '鼠标在图表图形区域点击事件的回调函数。',
       },
     }, {
       name: 'onMouseEnter',
@@ -99,6 +99,6 @@ export default {
   ],
   childrenComponents: [
     'XAxis', 'YAxis', 'ReferenceArea', 'ReferenceDot', 'ReferenceLine', 'Brush',
-    'CartesianGrid', 'Legend', 'Tooltip',  'Line', 'validate svg elements...'
+    'CartesianGrid', 'Legend', 'Tooltip', 'Line', 'validate svg elements...',
   ],
 };

@@ -1,25 +1,33 @@
 {
   "plugins": ["recharts"],
-  "presets": ["react", "es2015", "stage-0"],
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "modules": false
+      }
+    ],
+    "@babel/preset-react"
+  ],
   "env": {
     "development": {
       "plugins": [
-        ["react-transform", {
-          "transforms": [{
-            "transform": "react-transform-hmr",
-            "imports": ["react"],
-            "locals": ["module"]
-          }, {
-            "transform": "react-transform-catch-errors",
-            "imports": ["react", "redbox-react"]
-          }]
-        }],
-        ["transform-decorators-legacy"],
-        ["import-asserts"]
+        "react-hot-loader/babel",
+        "@babel/plugin-proposal-export-default-from",
+        "@babel/plugin-proposal-export-namespace-from",
+        [ "@babel/plugin-proposal-decorators", { "legacy": true } ],
+        ["@babel/plugin-proposal-class-properties", { "loose": true }],
+        "@babel/plugin-proposal-function-bind"
       ]
     },
     "production": {
-      "plugins": ["transform-decorators-legacy"]
+      "plugins": [
+        "@babel/plugin-proposal-export-default-from",
+        "@babel/plugin-proposal-export-namespace-from",
+        [ "@babel/plugin-proposal-decorators", { "legacy": true } ],
+        ["@babel/plugin-proposal-class-properties", { "loose": true }],
+        "@babel/plugin-proposal-function-bind"
+      ]
     }
   }
 }

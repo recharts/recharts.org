@@ -39,7 +39,7 @@ export default {
       },
     }, {
       name: 'legendType',
-      type: `'line' | 'square' | 'rect'| 'circle' | 'cross' | 'diamond' | 'square' | 'star' | 'triangle' | 'wye' | 'none'`,
+      type: '\'line\' | \'square\' | \'rect\'| \'circle\' | \'cross\' | \'diamond\' | \'square\' | \'star\' | \'triangle\' | \'wye\' | \'none\'',
       defaultVal: '\'rect\'',
       isOptional: true,
       desc: {
@@ -56,9 +56,9 @@ export default {
         'zh-CN': '图形上的文本标签。当值为 false ，不展示文本标签。当值为 true，会根据 Bar 的属性配置来展示文本标签。当值为一个对象的时候，会把这个对象解析为 文本标签 的属性，来覆盖默认属性。当值是一个 React Element ，会克隆这个 React Element 来渲染“文本标签”。当值是一个 函数 时，会调用这个函数去渲染自定义的“文本标签”。',
       },
       format: [
-        `<Bar dataKey="value" label />`,
-        `<Bar dataKey="value" label={{ fill: 'red', fontSize: 20 }} />`,
-        `<Bar dataKey="value" label={<CustomizedLabel />} />`,
+        '<Bar dataKey="value" label />',
+        '<Bar dataKey="value" label={{ fill: \'red\', fontSize: 20 }} />',
+        '<Bar dataKey="value" label={<CustomizedLabel />} />',
       ],
     }, {
       name: 'data',
@@ -67,7 +67,7 @@ export default {
       isOptional: false,
       desc: {
         'en-US': 'The position information of all the rectangles, usually calculated internally.',
-        'zh-CN': '描述所有柱条的坐标、尺寸数据。'
+        'zh-CN': '描述所有柱条的坐标、尺寸数据。',
       },
     }, {
       name: 'barSize',
@@ -96,12 +96,12 @@ export default {
         'en-US': `The minimal height of a bar in a horizontal BarChart, or the minimal width of a bar in a vertical BarChart.
         By default, 0 values are not shown. To visualize a 0 (or close to zero) point, set the minimal point size to a pixel
         value like 3. In stacked bar charts, minPointSize might not be respected for tightly packed values. So we strongly recommend not using this props in stacked BarChart.`,
-        'zh-CN': '当柱图的 layout 是 "horizontal" 时，表示柱子的最小高度。当柱图的 layout 是 "vertical" 时，表示柱子的最小高度。默认情况下，如果数值为 0，那么相应的柱条的高度（宽度）也会为0，为了让这种高度（宽度）为0或者高度（宽度）非常小的柱条能够展示更加明显，我们会设置一个最小高度（宽度），比如说 3。在堆积柱图中，不推荐设置这个值。'
+        'zh-CN': '当柱图的 layout 是 "horizontal" 时，表示柱子的最小高度。当柱图的 layout 是 "vertical" 时，表示柱子的最小高度。默认情况下，如果数值为 0，那么相应的柱条的高度（宽度）也会为0，为了让这种高度（宽度）为0或者高度（宽度）非常小的柱条能够展示更加明显，我们会设置一个最小高度（宽度），比如说 3。在堆积柱图中，不推荐设置这个值。',
       },
       examples: [{
         name: 'A BarChart with non-zero minPointSize',
         url: '/examples/BarChartWithMinHeight',
-      }]
+      }],
     }, {
       name: 'background',
       type: 'Boolean | Object | ReactElement | Function',
@@ -109,13 +109,13 @@ export default {
       isOptional: false,
       desc: {
         'en-US': 'If false set, background of bars will not be drawn. If true set, background of bars will be drawn which have the props calculated internally. If object set, background of bars will be drawn which have the props mergered by the internal calculated props and the option. If ReactElement set, the option can be the custom background element. If set a function, the function will be called to render customized background.',
-        'zh-CN': '是否显示背景柱条。当值为 false ，不展示背景柱条。当值为 true，会根据 RadialBar 的属性配置来展示背景柱条。当值为一个对象的时候，会把这个对象解析为 背景柱条 的属性，来覆盖默认属性。当值是一个 React Element ，会克隆这个 React Element 来渲染“背景柱条”。当值是一个 函数 时，会调用这个函数去渲染自定义的“背景柱条”。'
+        'zh-CN': '是否显示背景柱条。当值为 false ，不展示背景柱条。当值为 true，会根据 RadialBar 的属性配置来展示背景柱条。当值为一个对象的时候，会把这个对象解析为 背景柱条 的属性，来覆盖默认属性。当值是一个 React Element ，会克隆这个 React Element 来渲染“背景柱条”。当值是一个 函数 时，会调用这个函数去渲染自定义的“背景柱条”。',
       },
       examples: [
         {
           name: 'BarChart has background',
           url: '/examples/BarChartHasBackground',
-        }
+        },
       ],
     }, {
       name: 'shape',
@@ -127,8 +127,8 @@ export default {
         'zh-CN': '柱条的图形配置，接收多种配置。当值是一个 React Element ，会克隆这个 React Element 来渲染“柱条”。当值是函数时，会调用这个函数去渲染自定义的“柱条”。',
       },
       format: [
-        `<Bar dataKey="value" shape={<CustomizedShape/>}/>`,
-        `<Bar dataKey="value" shape={renderShape}/>`,
+        '<Bar dataKey="value" shape={<CustomizedShape/>}/>',
+        '<Bar dataKey="value" shape={renderShape}/>',
       ],
       examples: [{
         name: 'A bar chart with customized shape',
@@ -144,12 +144,12 @@ export default {
         'zh-CN': '堆积id，当两组及以上的柱图有相同的数值轴以及相同的 stackId 时，这些柱图会按照顺序堆积展示。',
       },
       format: [
-`<BarChart data={data} width={400} height={300}>
+        `<BarChart data={data} width={400} height={300}>
   <Bar stackId="pv" dataKey="pv01" />
   <Bar stackId="pv" dataKey="pv02" />
   <Bar stackId="uv" dataKey="uv01" />
   <Bar stackId="uv" dataKey="uv02" />
-</BarChart>`
+</BarChart>`,
       ],
       examples: [{
         name: 'A stacked bar chart',
@@ -205,8 +205,8 @@ export default {
       },
     }, {
       name: 'animationEasing',
-      type: `'ease' | 'ease-in' | 'ease-out' | 'ease-in-out' | 'linear'`,
-      defaultVal: `'ease'`,
+      type: '\'ease\' | \'ease-in\' | \'ease-out\' | \'ease-in-out\' | \'linear\'',
+      defaultVal: '\'ease\'',
       isOptional: false,
       desc: {
         'en-US': 'The type of easing function.',

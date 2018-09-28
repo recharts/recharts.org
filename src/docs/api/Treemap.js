@@ -35,7 +35,7 @@ export default {
       isOptional: false,
       desc: {
         'en-US': 'The treemap will try to keep every single rectangle\'s aspect ratio near the aspectRatio given.',
-        'zh-CN': '宽高比。在生成 Treemap 的过程中，每个矩形都会尽量按照这个宽高比来生成。'
+        'zh-CN': '宽高比。在生成 Treemap 的过程中，每个矩形都会尽量按照这个宽高比来生成。',
       },
     }, {
       name: 'isAnimationActive',
@@ -66,8 +66,8 @@ export default {
       },
     }, {
       name: 'animationEasing',
-      type: `'ease' | 'ease-in' | 'ease-out' | 'ease-in-out' | 'linear'`,
-      defaultVal: `'ease'`,
+      type: '\'ease\' | \'ease-in\' | \'ease-out\' | \'ease-in-out\' | \'linear\'',
+      defaultVal: '\'ease\'',
       isOptional: false,
       desc: {
         'en-US': 'The type of easing function.',

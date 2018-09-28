@@ -26,7 +26,7 @@ export default {
       isOptional: false,
       desc: {
         'en-US': 'The x-coordinate of center. If set a percentage, the final value is obtained by multiplying the percentage of width.',
-        'zh-CN': '圆心的 x 坐标，如果值为百分比，会根据图表的宽度来计算最后的值。'
+        'zh-CN': '圆心的 x 坐标，如果值为百分比，会根据图表的宽度来计算最后的值。',
       },
     }, {
       name: 'cy',
@@ -99,7 +99,7 @@ export default {
       defaultVal: 'null',
       isOptional: true,
       desc: {
-        'en-US': `The function will be called when mouse enter the 'Radar'.`,
+        'en-US': 'The function will be called when mouse enter the \'Radar\'.',
         'zh-CN': '雷达图 mouseenter 事件的回调函数。',
       },
     }, {
@@ -108,7 +108,7 @@ export default {
       defaultVal: 'null',
       isOptional: true,
       desc: {
-        'en-US': `The function will be called when mouse leave the 'Radar'.`,
+        'en-US': 'The function will be called when mouse leave the \'Radar\'.',
         'zh-CN': '雷达图 mouseleave 事件的回调函数。',
       },
     }, {
@@ -117,7 +117,7 @@ export default {
       defaultVal: 'null',
       isOptional: true,
       desc: {
-        'en-US': `The function will be called when click the 'Radar'.`,
+        'en-US': 'The function will be called when click the \'Radar\'.',
         'zh-CN': '雷达图 click 事件的回调函数。',
       },
     },
@@ -126,6 +126,6 @@ export default {
     'ResponsiveContainer',
   ],
   childrenComponents: [
-    'PolarAngleAxis', 'PolarRadiusAxis', 'PolarGrid', 'Legend', 'Tooltip', 'Radar', 'validate svg elements...'
+    'PolarAngleAxis', 'PolarRadiusAxis', 'PolarGrid', 'Legend', 'Tooltip', 'Radar', 'validate svg elements...',
   ],
 };

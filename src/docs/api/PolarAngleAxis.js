@@ -71,7 +71,7 @@ export default {
       isOptional: false,
       desc: {
         'en-US': 'If false set, ticks will not be drawn. If true set, ticks will be drawn which have the props calculated internally. If object set, ticks will be drawn which have the props mergered by the internal calculated props and the option. If ReactElement set, the option can be the custom tick element. If set a function, the function will be called to render customized ticks.',
-        'zh-CN': '刻度配置。当值为 false 时，不绘制刻度。当值为对象类型时，会把这个对象解析成 刻度 的属性配置。当值为 React element，会克隆这个元素来渲染刻度。'
+        'zh-CN': '刻度配置。当值为 false 时，不绘制刻度。当值为对象类型时，会把这个对象解析成 刻度 的属性配置。当值为 React element，会克隆这个元素来渲染刻度。',
       },
     }, {
       name: 'ticks',
@@ -115,7 +115,7 @@ export default {
       defaultVal: 'true',
       isOptional: false,
       desc: {
-        'en-US': `Allow the axis has duplicated categorys or not when the type of axis is "category".`,
+        'en-US': 'Allow the axis has duplicated categorys or not when the type of axis is "category".',
         'zh-CN': '是否允许类目轴有重复的类目。',
       },
     }, {

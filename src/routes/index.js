@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
-import { Route, IndexRoute, Redirect, IndexRedirect } from 'react-router';
-import { IndexView, GuideView, APIView, ExamplesView, BlogView } from 'views';
+import {
+  Route, IndexRoute, Redirect, IndexRedirect,
+} from 'react-router';
+import {
+  IndexView, GuideView, APIView, ExamplesView, BlogView,
+} from 'views';
 import Frame from 'layouts/Frame';
 import _ from 'lodash';
 import Locale from '../locale';
@@ -22,13 +26,13 @@ const onEnter = (nextState, replace) => {
 
   if (!hasLocale(pathname)) {
     replace({
-      pathname: '/en-US' + pathname,
+      pathname: `/en-US${pathname}`,
       query: _.get(nextState, 'location.query', {}),
     });
   }
 };
 
-export default (store) => (
+export default store => (
   <Route path="/" component={Frame} onEnter={onEnter}>
     <IndexRedirect to="/en-US" />
     <Route path="/*/guide(/:name)" component={GuideView} />

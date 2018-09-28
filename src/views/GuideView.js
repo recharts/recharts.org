@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Installation, GettingStarted, Customize } from 'components/GuideView';
-import { getLocaleType, localeGet } from '../utils/LocaleUtils';
 import { Link } from 'react-router';
+import { getLocaleType, localeGet } from '../utils/LocaleUtils';
 
 const modules = ['installation', 'getting-started', 'customize'];
 
@@ -20,9 +20,9 @@ class GuideView extends Component {
 
     if (page === 'installation') {
       return <Installation locale={locale} />;
-    } else if (page === 'getting-started') {
+    } if (page === 'getting-started') {
       return <GettingStarted locale={locale} />;
-    } else if (page === 'customize') {
+    } if (page === 'customize') {
       return <Customize locale={locale} />;
     }
   }
@@ -38,15 +38,13 @@ class GuideView extends Component {
             <h2>{localeGet(locale, 'guide', 'guide')}</h2>
             <ul className="menu">
               {
-                modules.map((entry, index) => {
-                  return (
-                    <li key={`item-${index}`}>
-                      <Link to={`/${locale}/guide/${entry}`} className={entry === page ? 'active': ''}>
-                        {localeGet(locale, 'guide', entry)}
-                      </Link>
-                    </li>
-                  );
-                })
+                modules.map((entry, index) => (
+                  <li key={`item-${index}`}>
+                    <Link to={`/${locale}/guide/${entry}`} className={entry === page ? 'active' : ''}>
+                      {localeGet(locale, 'guide', entry)}
+                    </Link>
+                  </li>
+                ))
               }
             </ul>
           </div>

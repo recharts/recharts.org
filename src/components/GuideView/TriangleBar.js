@@ -8,7 +8,9 @@ const getPath = (x, y, width, height) => (
 );
 
 const TriangleBar = (props) => {
-  const { fill, x, y, width, height } = props;
+  const {
+    fill, x, y, width, height,
+  } = props;
 
   return <path d={getPath(x, y, width, height)} stroke="none" fill={fill} />;
 };

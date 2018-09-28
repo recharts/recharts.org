@@ -44,7 +44,7 @@ export default {
       isOptional: false,
       desc: {
         'en-US': 'If set a value, the option is the radius of all the rounderd corners. If set a array, the option are in turn the radiuses of top-left corner, top-right corner, bottom-right corner, bottom-left corner.',
-        'zh-CN': '圆角半径配置。当值为数值类型时，表示四个圆角的半径。当值为数组时，可以分别设置左上、右上、右下、左下四个圆角的半径。'
+        'zh-CN': '圆角半径配置。当值为数值类型时，表示四个圆角的半径。当值为数组时，可以分别设置左上、右上、右下、左下四个圆角的半径。',
       },
     }, {
       name: 'onClick',

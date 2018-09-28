@@ -1,5 +1,5 @@
 export default [
- {
+  {
     name: 'charts',
     items: [
       'AreaChart', 'BarChart', 'LineChart', 'ComposedChart', 'PieChart', 'RadarChart',

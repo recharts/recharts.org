@@ -8,7 +8,7 @@ export default {
       isOptional: false,
       desc: {
         'en-US': 'The x-coordinate of center. If set a percentage, the final value is obtained by multiplying the percentage of container width.',
-        'zh-CN': '圆心的x坐标，如果值为百分比，会根据图表的宽度来计算最后的值。'
+        'zh-CN': '圆心的x坐标，如果值为百分比，会根据图表的宽度来计算最后的值。',
       },
     }, {
       name: 'cy',
@@ -76,7 +76,7 @@ export default {
       examples: [{
         name: 'Pie with nozero padding angle',
         url: '/examples/PieChartWithPaddingAngle',
-      }]
+      }],
     }, {
       name: 'nameKey',
       type: 'String',
@@ -106,7 +106,7 @@ export default {
       },
     }, {
       name: 'legendType',
-      type: `'line' | 'square' | 'rect'| 'circle' | 'cross' | 'diamond' | 'square' | 'star' | 'triangle' | 'wye' | 'none'`,
+      type: '\'line\' | \'square\' | \'rect\'| \'circle\' | \'cross\' | \'diamond\' | \'square\' | \'star\' | \'triangle\' | \'wye\' | \'none\'',
       defaultVal: '\'rect\'',
       isOptional: false,
       desc: {
@@ -203,8 +203,8 @@ export default {
       },
     }, {
       name: 'animationEasing',
-      type: `'ease' | 'ease-in' | 'ease-out' | 'ease-in-out' | 'linear' | Function`,
-      defaultVal: `'ease'`,
+      type: '\'ease\' | \'ease-in\' | \'ease-out\' | \'ease-in-out\' | \'linear\' | Function',
+      defaultVal: '\'ease\'',
       isOptional: false,
       desc: {
         'en-US': 'The type of easing function.',
@@ -241,7 +241,7 @@ export default {
       desc: {
         'en-US': 'The customized event handler of mousemove on the sectors in this group',
         'zh-CN': '楔子 mousemove 事件的回调函数。',
-      }
+      },
     }, {
       name: 'onMouseOver',
       type: 'Function',
@@ -277,7 +277,7 @@ export default {
     },
   ],
   parentComponents: [
-    'PieChart'
+    'PieChart',
   ],
   childrenComponents: [
     'Cell', 'LabelList',

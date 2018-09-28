@@ -4,7 +4,7 @@ import CustomizedLabelLineChart from './CustomizedLabel';
 import DashedLineChart from './DashedLineChart';
 import LineChartConnectNulls from './LineChartConnectNulls';
 import LineChartWithReferenceLines from './LineChartWithReferenceLines';
-import LineChartWithXAxisPading from './LineChartWithXAxisPading'
+import LineChartWithXAxisPading from './LineChartWithXAxisPading';
 import SimpleLineChart from './Simple';
 import SynchronizedLineChart from './SynchronizedLineChart';
 import TinyLineChart from './Tiny';
@@ -27,5 +27,5 @@ export default {
   CustomizedLabelLineChart,
   SynchronizedLineChart,
   HighlightAndZoomLineChart,
-  LineChartHasMultiSeries
+  LineChartHasMultiSeries,
 };

@@ -28,7 +28,7 @@ export default {
         'zh-CN': '标注值',
       },
       format: [
-        `<Label value="any" />`,
+        '<Label value="any" />',
       ],
     }, {
       name: 'position',
@@ -73,8 +73,8 @@ export default {
         'zh-CN': '定制 Label 展示的内容。如果值为 React element，会克隆这个元素来渲染 Label 的内容。如果值为函数，会调用这个函数来生成 Label 的内容。',
       },
       format: [
-        `<Label content={<CustomizedLabel external={external} />} />`,
-        `<Label content={renderLabel} />`,
+        '<Label content={<CustomizedLabel external={external} />} />',
+        '<Label content={renderLabel} />',
       ],
       // examples: [
       //   {

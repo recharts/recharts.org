@@ -1,5 +1,4 @@
 import React, { PureComponent } from 'react';
-import { connect } from 'react-redux';
 import './BlogView.scss';
 
 class BlogView extends PureComponent {

@@ -19,7 +19,7 @@ export default {
       deprecated: true,
       desc: {
         'en-US': 'The y-coordinate of center.',
-        'zh-CN': '圆心的 y 坐标。'
+        'zh-CN': '圆心的 y 坐标。',
       },
     }, {
       name: 'startAngle',
@@ -62,7 +62,7 @@ export default {
       },
     }, {
       name: 'legendType',
-      type: `'line' | 'square' | 'rect'| 'circle' | 'cross' | 'diamond' | 'square' | 'star' | 'triangle' | 'wye' | 'none'`,
+      type: '\'line\' | \'square\' | \'rect\'| \'circle\' | \'cross\' | \'diamond\' | \'square\' | \'star\' | \'triangle\' | \'wye\' | \'none\'',
       defaultVal: '\'rect\'',
       isOptional: true,
       desc: {
@@ -85,7 +85,7 @@ export default {
       isOptional: false,
       desc: {
         'en-US': 'If false set, background of bars will not be drawn. If true set, background of bars will be drawn which have the props calculated internally. If object set, background of bars will be drawn which have the props mergered by the internal calculated props and the option. If ReactElement set, the option can be the custom background element. If set a function, the function will be called to render customized background.',
-        'zh-CN': '是否显示背景柱条。当值为 false ，不展示背景柱条。当值为 true，会根据 RadialBar 的属性配置来展示背景柱条。当值为一个对象的时候，会把这个对象解析为 背景柱条 的属性，来覆盖默认属性。当值是一个 React Element ，会克隆这个 React Element 来渲染“背景柱条”。当值是一个 函数 时，会调用这个函数去渲染自定义的“背景柱条”。'
+        'zh-CN': '是否显示背景柱条。当值为 false ，不展示背景柱条。当值为 true，会根据 RadialBar 的属性配置来展示背景柱条。当值为一个对象的时候，会把这个对象解析为 背景柱条 的属性，来覆盖默认属性。当值是一个 React Element ，会克隆这个 React Element 来渲染“背景柱条”。当值是一个 函数 时，会调用这个函数去渲染自定义的“背景柱条”。',
       },
     }, {
       name: 'data',
@@ -125,8 +125,8 @@ export default {
       },
     }, {
       name: 'animationEasing',
-      type: `'ease' | 'ease-in' | 'ease-out' | 'ease-in-out' | 'linear'`,
-      defaultVal: `'ease'`,
+      type: '\'ease\' | \'ease-in\' | \'ease-out\' | \'ease-in-out\' | \'linear\'',
+      defaultVal: '\'ease\'',
       isOptional: false,
       desc: {
         'en-US': 'The type of easing function.',
@@ -199,7 +199,7 @@ export default {
     },
   ],
   parentComponents: [
-    'RadialBarChart'
+    'RadialBarChart',
   ],
   childrenComponents: [
     'Cell', 'LabelList',

@@ -61,7 +61,7 @@ export default {
       isOptional: false,
       desc: {
         'en-US': 'The x-coordinate of center. If set a percentage, the final value is obtained by multiplying the percentage of width.',
-        'zh-CN': '圆心的 x 坐标，如果值为百分比，会根据图表的宽度来计算最后的值。'
+        'zh-CN': '圆心的 x 坐标，如果值为百分比，会根据图表的宽度来计算最后的值。',
       },
     }, {
       name: 'cy',
@@ -115,7 +115,7 @@ export default {
       isOptional: true,
       desc: {
         'en-US': 'The size of each bar. If the barSize is not specified, the size of bar will be calculated by the barCategoryGap, barGap and the quantity of bar groups.',
-        'zh-CN': '柱条的宽度。如果指定这个值，会根据 barCategoryGap 和 barGap 来计算柱条的宽度，每组柱条的宽度是一样的。'
+        'zh-CN': '柱条的宽度。如果指定这个值，会根据 barCategoryGap 和 barGap 来计算柱条的宽度，每组柱条的宽度是一样的。',
       },
     }, {
       name: 'onMouseEnter',
@@ -150,6 +150,6 @@ export default {
     'ResponsiveContainer',
   ],
   childrenComponents: [
-    'PolarAngleAxis', 'PolarRadiusAxis', 'PolarGrid', 'Legend', 'Tooltip', 'RadialBar', 'validate svg elements...'
+    'PolarAngleAxis', 'PolarRadiusAxis', 'PolarGrid', 'Legend', 'Tooltip', 'RadialBar', 'validate svg elements...',
   ],
 };

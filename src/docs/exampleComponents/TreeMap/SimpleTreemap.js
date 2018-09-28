@@ -131,23 +131,23 @@ const data = [
       { name: 'OperatorSwitch', size: 2581 },
       { name: 'SortOperator', size: 2023 },
     ],
-  }
+  },
 ];
 
 export default class Example extends Component {
   static jsfiddleUrl = 'https://jsfiddle.net/alidingling/u702a3Lx/';
 
-  render () {
+  render() {
     return (
       <Treemap
-      	width={400}
+        width={400}
         height={200}
         data={data}
         dataKey="size"
-        ratio={4/3}
+        ratio={4 / 3}
         stroke="#fff"
         fill="#8884d8"
       />
     );
   }
-};
+}

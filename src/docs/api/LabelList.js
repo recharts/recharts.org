@@ -6,7 +6,7 @@ export default {
       type: 'String | Number',
       isOptional: false,
       desc: {
-        'en-US': `The key of a group of label values in data.`,
+        'en-US': 'The key of a group of label values in data.',
         'zh-CN': '展示 label 值对应的数据的 key。',
       },
     }, {
@@ -28,14 +28,14 @@ export default {
         'zh-CN': '定制每个 label 展示的内容。如果值为 React element，会克隆这个元素来渲染每个 label 的内容。如果值为函数，会调用这个函数来生成每个 label 的内容。',
       },
       format: [
-        `<LabelList content={<CustomizedLabel external={external} />} />`,
-        `<LabelList content={renderLabel} />`,
+        '<LabelList content={<CustomizedLabel external={external} />} />',
+        '<LabelList content={renderLabel} />',
       ],
       examples: [
         {
           name: 'Customized content of LabelList',
           url: '/examples/BarChartWithMinHeight',
-        }
+        },
       ],
     },
     {

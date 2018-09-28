@@ -36,7 +36,7 @@ export default {
       isOptional: true,
       desc: {
         'en-US': 'The function will be called when click sectors of a pie chart.',
-        'zh-CN': '饼图每个楔子的 click 事件的回调函数，如果当子组件 Pie 上也绑定了同样的事件，子组件的事件回调函数才会被绑定。'
+        'zh-CN': '饼图每个楔子的 click 事件的回调函数，如果当子组件 Pie 上也绑定了同样的事件，子组件的事件回调函数才会被绑定。',
       },
     }, {
       name: 'onMouseEnter',
@@ -45,7 +45,7 @@ export default {
       isOptional: true,
       desc: {
         'en-US': 'The function will be called when mouse enter sectors of a pie chart.',
-        'zh-CN': '饼图每个楔子的 mouseenter 事件的回调函数，如果当子组件 Pie 上也绑定了同样的事件，子组件的事件回调函数才会被绑定。'
+        'zh-CN': '饼图每个楔子的 mouseenter 事件的回调函数，如果当子组件 Pie 上也绑定了同样的事件，子组件的事件回调函数才会被绑定。',
       },
     }, {
       name: 'onMouseLeave',
@@ -54,7 +54,7 @@ export default {
       isOptional: true,
       desc: {
         'en-US': 'The function will be called when mouse leave sectors of a pie chart.',
-        'zh-CN': '饼图每个楔子的 mouseleave 事件的回调函数，如果当子组件 Pie 上也绑定了同样的事件，子组件的事件回调函数才会被绑定。'
+        'zh-CN': '饼图每个楔子的 mouseleave 事件的回调函数，如果当子组件 Pie 上也绑定了同样的事件，子组件的事件回调函数才会被绑定。',
       },
     },
   ],
@@ -62,6 +62,6 @@ export default {
     'ResponsiveContainer',
   ],
   childrenComponents: [
-    'PolarAngleAxis', 'PolarRadiusAxis', 'PolarGrid', 'Legend', 'Tooltip', 'Pie', 'validate svg elements...'
+    'PolarAngleAxis', 'PolarRadiusAxis', 'PolarGrid', 'Legend', 'Tooltip', 'Pie', 'validate svg elements...',
   ],
 };

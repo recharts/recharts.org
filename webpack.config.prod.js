@@ -5,6 +5,7 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var cssnano = require('cssnano');
 
 module.exports = {
+  mode: 'production',
   devtool: 'source-map',
   entry: {
     app: ['./src/app'],
@@ -24,7 +25,7 @@ module.exports = {
         include: [
           path.resolve(__dirname, 'src'),
         ],
-        use: ['react-hot-loader', 'babel-loader'],
+        use: ['babel-loader'],
       },
       {
         test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
@@ -68,10 +69,6 @@ module.exports = {
   },
 
   plugins: [
-    // new webpack.optimize.CommonsChunkPlugin({
-    //   name: 'vendor',
-    //   fileName: 'vendor.js',
-    // }),
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify('production'),
       __DEV__: false,
@@ -81,12 +78,6 @@ module.exports = {
       filename: 'style.css',
       disable: false,
       allChunks: true,
-    }),
-    new webpack.optimize.UglifyJsPlugin({
-      compress: {
-        unused: true,
-        dead_code: true,
-      },
     }),
     new webpack.LoaderOptionsPlugin({
       options: {

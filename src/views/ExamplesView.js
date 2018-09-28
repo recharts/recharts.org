@@ -8,12 +8,10 @@ import './ExampleView.scss';
 
 
 const firstChartName = Object.keys(Examples)[0];
-const cates = Object.keys(Examples).sort((a, b) => {
-  return Examples[a].order - Examples[b].order;
-});
+const cates = Object.keys(Examples).sort((a, b) => Examples[a].order - Examples[b].order);
 const parseExampleComponent = (compName) => {
   const typeList = Object.keys(Examples);
-  const res = typeList.filter(key => {
+  const res = typeList.filter((key) => {
     const entry = Examples[key];
 
     return !!entry.examples[compName];
@@ -67,14 +65,12 @@ class ExamplesView extends Component {
           <h2>Examples</h2>
 
           {
-            cates.map((cate, index) => {
-              return (
-                <div className="sidebar-cate" key={`cate-${index}`}>
-                  <h4>{cate}</h4>
-                  {this.renderMenuList(cate, locale)}
-                </div>
-              );
-            })
+            cates.map((cate, index) => (
+              <div className="sidebar-cate" key={`cate-${index}`}>
+                <h4>{cate}</h4>
+                {this.renderMenuList(cate, locale)}
+              </div>
+            ))
           }
 
         </div>
@@ -93,7 +89,9 @@ class ExamplesView extends Component {
                         className="example-jsfiddle-link"
                         target="_blank"
                         href={ExampleComponent.jsfiddleUrl}
-                      >Try the demo in jsfiddle &gt;&gt;</a>
+                      >
+Try the demo in jsfiddle &gt;&gt;
+                      </a>
                     </p>
                   ) : null
                 }

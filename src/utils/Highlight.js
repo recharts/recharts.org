@@ -41,7 +41,7 @@ class Highlight extends Component {
         <div
           dangerouslySetInnerHTML={{ __html: children }}
           className={className || null}
-        ></div>);
+        />);
     }
 
     return (

@@ -88,13 +88,13 @@ export default {
         'zh-CN': '当值为简单类型的数值或者字符串时，这个值会被渲染成文字标签。当值为 React element，会克隆这个元素来渲染文字标签。',
       },
       format: [
-        `<ReferenceLine x="05" label="Middle" />`,
-        `<ReferenceLine y={400} yAxisId="left" label={<CustomizedLabel />} />`,
+        '<ReferenceLine x="05" label="Middle" />',
+        '<ReferenceLine y={400} yAxisId="left" label={<CustomizedLabel />} />',
       ],
       examples: [{
         name: 'ReferenceLines with label',
         url: '/examples/LineChartWithReferenceLines',
-      }]
+      }],
     }, {
       name: 'isFront',
       type: 'Boolean',

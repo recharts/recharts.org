@@ -16,12 +16,12 @@ export default {
       isOptional: true,
       desc: {
         'en-US': 'If any two categorical charts(LineChart, AreaChart, BarChart, ComposedChart) have the same syncId, these two charts can sync the position tooltip, and the startIndex, endIndex of Brush.',
-        'zh-CN': '如果任何两个或者多个类目型图表（LineChart, AreaChart, BarChart, ComposedChart）具有相同的 syncId，这两个图表可以联动，包括 Tooltip 以及 Brush 的联动。'
+        'zh-CN': '如果任何两个或者多个类目型图表（LineChart, AreaChart, BarChart, ComposedChart）具有相同的 syncId，这两个图表可以联动，包括 Tooltip 以及 Brush 的联动。',
       },
       examples: [{
-        name: "Two synchronized AreaChart",
+        name: 'Two synchronized AreaChart',
         url: '/examples/SynchronizedAreaChart',
-      }]
+      }],
     }, {
       name: 'width',
       type: 'Number',
@@ -47,12 +47,12 @@ export default {
       isOptional: false,
       desc: {
         'en-US': 'The source data, in which each element is an object.',
-        'zh-CN': '输入数据，现在支持的类型是对象数组。'
+        'zh-CN': '输入数据，现在支持的类型是对象数组。',
       },
       format: [
         '[{ name: \'a\', value: 12 }]',
-        '[{ name: \'a\', value: [5, 12] }]'
-      ]
+        '[{ name: \'a\', value: [5, 12] }]',
+      ],
     }, {
       name: 'margin',
       type: 'Object',
@@ -70,7 +70,7 @@ export default {
       isOptional: false,
       desc: {
         'en-US': 'The gap between two bar categories, which can be a percent value or a fixed value.',
-        'zh-CN': '两个类目之间的间隔距离，如果值为百分比，会根据类目宽度来计算实际值。'
+        'zh-CN': '两个类目之间的间隔距离，如果值为百分比，会根据类目宽度来计算实际值。',
       },
     }, {
       name: 'barGap',
@@ -111,8 +111,8 @@ export default {
       },
     }, {
       name: 'stackOffset',
-      type: `'expand' | 'none' | 'wiggle' | 'silhouette' | 'sign'`,
-      defaultVal: `'none'`,
+      type: '\'expand\' | \'none\' | \'wiggle\' | \'silhouette\' | \'sign\'',
+      defaultVal: '\'none\'',
       isOptional: false,
       desc: {
         'en-US': 'The type of offset function used to generate the lower and upper values in the series array. The four types are built-in offsets in d3-shape.',
@@ -140,8 +140,8 @@ export default {
       type: 'Function',
       isOptional: true,
       desc: {
-         'en-US': 'The customized event handler of click in this chart.',
-         'zh-CN': '鼠标在图表图形区域 click 事件的回调函数。',
+        'en-US': 'The customized event handler of click in this chart.',
+        'zh-CN': '鼠标在图表图形区域 click 事件的回调函数。',
       },
     }, {
       name: 'onMouseEnter',
@@ -174,6 +174,6 @@ export default {
   ],
   childrenComponents: [
     'XAxis', 'YAxis', 'ReferenceArea', 'ReferenceDot', 'ReferenceLine', 'Brush',
-    'CartesianGrid', 'Legend', 'Tooltip', 'Bar', 'validate svg elements...'
+    'CartesianGrid', 'Legend', 'Tooltip', 'Bar', 'validate svg elements...',
   ],
 };

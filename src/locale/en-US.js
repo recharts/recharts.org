@@ -68,8 +68,8 @@ const map = {
     'step-5-title': '5. Customize your components',
     'step-5-desc': 'For example, you can edit your x-axis label very easily by passing in a custom axis tick component. You can do similar things with other graphs as well, such as custom shapes for bar charts and much more!',
   },
-  'customize': {
-    'customize': 'Customize',
+  customize: {
+    customize: 'Customize',
     'step-1-title': '1. Labels of line, area, bar, axis can be customized',
     'step-1-desc': 'For example, we can create a bar with customized label and customized axis tick.',
     'step-2-title': '2. The shape of bar can be customized',
@@ -82,11 +82,11 @@ const map = {
     'step-5-desc': 'Though tooltip, legend are drawn by svg elements, you may change the style of tooltip, legend by the apis wo offer. of cource, you can change the style in css too.',
   },
   api: {
-    'charts': 'Charts',
+    charts: 'Charts',
     'general-components': 'General Components',
     'cartesian-components': 'Cartesian Components',
     'polar-components': 'Polar Components',
-    'shapes': 'Shapes',
+    shapes: 'Shapes',
     default: 'DEFAULT: ',
     format: 'FORMAT: ',
     examples: 'Examples: ',

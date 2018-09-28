@@ -17,12 +17,12 @@ export default {
       isOptional: true,
       desc: {
         'en-US': 'If any two categorical charts(LineChart, AreaChart, BarChart, ComposedChart) have the same syncId, these two charts can sync the position tooltip, and the startIndex, endIndex of Brush.',
-        'zh-CN': '如果任何两个或者多个类目型图表（LineChart, AreaChart, BarChart, ComposedChart）具有相同的 syncId，这两个图表可以联动，包括 Tooltip 以及 Brush 的联动。'
+        'zh-CN': '如果任何两个或者多个类目型图表（LineChart, AreaChart, BarChart, ComposedChart）具有相同的 syncId，这两个图表可以联动，包括 Tooltip 以及 Brush 的联动。',
       },
       examples: [{
-        name: "Two synchronized AreaChart",
+        name: 'Two synchronized AreaChart',
         url: '/examples/SynchronizedAreaChart',
-      }]
+      }],
     }, {
       name: 'width',
       type: 'Number',
@@ -48,9 +48,9 @@ export default {
       isOptional: false,
       desc: {
         'en-US': 'The source data, in which each element is an object.',
-        'zh-CN': '输入数据，现在支持的类型是对象数组。'
+        'zh-CN': '输入数据，现在支持的类型是对象数组。',
       },
-      format: ['[{name: \'a\', value: 12}]']
+      format: ['[{name: \'a\', value: 12}]'],
     }, {
       name: 'margin',
       type: 'Object',
@@ -77,7 +77,7 @@ export default {
       isOptional: false,
       desc: {
         'en-US': 'The gap between two bars in the same category.',
-        'zh-CN': '某一个类目下，相邻的两个柱条的间隔大小。如果值为百分比，会根据类目宽度来计算实际值。'
+        'zh-CN': '某一个类目下，相邻的两个柱条的间隔大小。如果值为百分比，会根据类目宽度来计算实际值。',
       },
     }, {
       name: 'barSize',
@@ -86,7 +86,7 @@ export default {
       isOptional: true,
       desc: {
         'en-US': 'The width or height of each bar. If the barSize is not specified, the size of the bar will be calculated by the barCategoryGap, barGap and the quantity of bar groups.',
-        'zh-CN': '柱条的宽度。如果指定这个值，会根据 barCategoryGap 和 barGap 来计算柱条的宽度，每组柱条的宽度是一样的。'
+        'zh-CN': '柱条的宽度。如果指定这个值，会根据 barCategoryGap 和 barGap 来计算柱条的宽度，每组柱条的宽度是一样的。',
       },
     }, {
       name: 'reverseStackOrder',
@@ -102,8 +102,8 @@ export default {
       type: 'Function',
       isOptional: true,
       desc: {
-         'en-US': 'The customized event handler of click in this chart.',
-         'zh-CN': '鼠标在图表图形区域 click 事件的回调函数。',
+        'en-US': 'The customized event handler of click in this chart.',
+        'zh-CN': '鼠标在图表图形区域 click 事件的回调函数。',
       },
     }, {
       name: 'onMouseEnter',
@@ -136,6 +136,6 @@ export default {
   ],
   childrenComponents: [
     'XAxis', 'YAxis', 'ReferenceArea', 'ReferenceDot', 'ReferenceLine', 'Brush', 'CartesianGrid',
-    'Legend', 'Tooltip', 'Area', 'Line', 'Bar',  'validate svg elements...'
+    'Legend', 'Tooltip', 'Area', 'Line', 'Bar', 'validate svg elements...',
   ],
 };

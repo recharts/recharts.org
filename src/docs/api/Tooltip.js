@@ -37,7 +37,7 @@ export default {
         url: 'https://facebook.github.io/react/tips/inline-styles.html',
         isExternal: true,
       }],
-    },  {
+    }, {
       name: 'wrapperStyle',
       type: 'Object',
       defaultVal: '{}',
@@ -51,7 +51,7 @@ export default {
         url: 'https://facebook.github.io/react/tips/inline-styles.html',
         isExternal: true,
       }],
-    },  {
+    }, {
       name: 'labelStyle',
       type: 'Object',
       defaultVal: '{}',
@@ -75,9 +75,9 @@ export default {
         'zh-CN': '游标相关配置，一般在类目图表展示 Tooltip 的时候，会渲染游标来标识相应的类目。如果值为 false，不渲染游标。当值为对象类型，会被解析为游标的属性，注意游标也是用 svg 元素渲染的。如果值为 React element，会克隆这个元素来展示自定义的游标。',
       },
       format: [
-        `<Tooltip cursor={false} />`,
-        `<Tooltip cursor={{ stroke: 'red', strokeWidth: 2 }} />`,
-        `<Tooltip cursor={<CustomizedCursor />} />`,
+        '<Tooltip cursor={false} />',
+        '<Tooltip cursor={{ stroke: \'red\', strokeWidth: 2 }} />',
+        '<Tooltip cursor={<CustomizedCursor />} />',
       ],
     }, {
       name: 'viewBox',
@@ -86,9 +86,9 @@ export default {
       isOptional: false,
       desc: {
         'en-US': 'The box of viewing area, which has the shape of {x: someVal, y: someVal, width: someVal, height: someVal}, usually calculated internally.',
-        'zh-CN': '图表的可视区域。通常通过 x、y、width、height 来描述。'
+        'zh-CN': '图表的可视区域。通常通过 x、y、width、height 来描述。',
       },
-      format: [`{ x: 0, y: 0, width: 400, height: 400 }`],
+      format: ['{ x: 0, y: 0, width: 400, height: 400 }'],
     }, {
       name: 'active',
       type: 'Boolean',
@@ -105,9 +105,9 @@ export default {
       isOptional: false,
       desc: {
         'en-US': 'The coordinate of tooltip position, usually calculated internally.',
-        'zh-CN': '用来描述位置的坐标，也是图表内部计算的值。'
+        'zh-CN': '用来描述位置的坐标，也是图表内部计算的值。',
       },
-      format: [`{ x: 100, y: 140 }`],
+      format: ['{ x: 100, y: 140 }'],
     }, {
       name: 'payload',
       type: 'Array',
@@ -117,7 +117,7 @@ export default {
         'en-US': 'The source data of the content to be displayed in the tooltip, usually calculated internally.',
         'zh-CN': 'Tooltip 展示内容的源数据，通常是图表内部计算的。',
       },
-      format: [`[{ name: '05-01', value: 12, unit: 'kg' }]`],
+      format: ['[{ name: \'05-01\', value: 12, unit: \'kg\' }]'],
     }, {
       name: 'label',
       type: 'String | Number',
@@ -137,14 +137,14 @@ export default {
         'zh-CN': '定制 Tooltip 展示的内容。如果值为 React element，会克隆这个元素来渲染 Tooltip 的内容。如果值为函数，会调用这个函数来生成 Tooltip 的内容。',
       },
       format: [
-        `<Tooltip content={<CustomizedTooltip external={external} />} />`,
-        `<Tooltip content={renderTooltip} />`,
+        '<Tooltip content={<CustomizedTooltip external={external} />} />',
+        '<Tooltip content={renderTooltip} />',
       ],
       examples: [
         {
           name: 'Customize tooltip content',
           url: '/examples/CustomContentOfTooltip',
-        }
+        },
       ],
     }, {
       name: 'formatter',
@@ -156,7 +156,7 @@ export default {
         'zh-CN': '每个项目中“数值”的格式化函数。',
       },
       format: [
-        `(value, name, props) => ()`,
+        '(value, name, props) => ()',
       ],
     }, {
       name: 'labelFormatter',
@@ -170,7 +170,7 @@ export default {
     }, {
       name: 'itemSorter',
       type: 'Function',
-      defaultVal: `() => -1`,
+      defaultVal: '() => -1',
       isOptional: false,
       desc: {
         'en-US': 'Sort function of payload',
@@ -205,8 +205,8 @@ export default {
       },
     }, {
       name: 'animationEasing',
-      type: `'ease' | 'ease-in' | 'ease-out' | 'ease-in-out' | 'linear'`,
-      defaultVal: `'ease'`,
+      type: '\'ease\' | \'ease-in\' | \'ease-out\' | \'ease-in-out\' | \'linear\'',
+      defaultVal: '\'ease\'',
       isOptional: false,
       desc: {
         'en-US': 'The type of easing function.',

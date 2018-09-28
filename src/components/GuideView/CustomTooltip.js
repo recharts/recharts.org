@@ -4,15 +4,15 @@ import './CustomTooltip.scss';
 function getIntroOfPage(label) {
   if (label === 'Page A') {
     return 'Page A is about men\'s clothing';
-  } else if (label === 'Page B') {
+  } if (label === 'Page B') {
     return 'Page B is about women\'s dress';
-  } else if (label === 'Page C') {
+  } if (label === 'Page C') {
     return 'Page C is about women\'s bag';
-  } else if (label === 'Page D') {
+  } if (label === 'Page D') {
     return 'Page D is about household goods';
-  } else if (label === 'Page E') {
+  } if (label === 'Page E') {
     return 'Page E is about food';
-  } else if (label === 'Page F') {
+  } if (label === 'Page F') {
     return 'Page F is about baby food';
   }
 }

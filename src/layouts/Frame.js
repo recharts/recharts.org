@@ -13,11 +13,9 @@ const locales = [
   { locale: 'zh-CN', text: '中文' },
 ];
 
-@connect((state, ownProps) => {
-  return {
-    page: ownProps.location.pathname.split('/').filter(item => !!item)[1] || 'index',
-  };
-})
+@connect((state, ownProps) => ({
+  page: ownProps.location.pathname.split('/').filter(item => !!item)[1] || 'index',
+}))
 class Frame extends Component {
   static propTypes = {
     page: PropTypes.string,
@@ -42,8 +40,8 @@ class Frame extends Component {
                 {index ? (<span>&nbsp;&nbsp;|&nbsp;&nbsp;</span>) : null}
                 {
                   isActive ?
-                  <span className="switch-item active">{text}</span> :
-                  <Link className="switch-item" to={linkPath}>{text}</Link>
+                    <span className="switch-item active">{text}</span> :
+                    <Link className="switch-item" to={linkPath}>{text}</Link>
                 }
               </span>
             );
@@ -59,45 +57,56 @@ class Frame extends Component {
 
     return (
       <div className="container">
-        <Helmet titleTemplate={'%s | Recharts'} />
-          <Affix>
-            <header>
-              <div className="header-wrapper">
-                <h1 className="logo">
-                  <Link
-                    className="nav-logo"
-                    to={`/${locale}`}>&lt;Recharts /&gt;</Link>
-                </h1>
-                <nav>
-                  <ul className="nav" id="nav">
-                    {
-                      modules.map((entry, index) => {
-                        return (
-                          <li key={`item-${index}`}>
-                            <Link className={`nav-link ${entry === page ? 'active' : ''}`} to={`/${locale}/${entry}`}>
-                              {localeGet(locale, 'frame', entry)}
-                            </Link>
-                          </li>
-                        );
-                      })
+        <Helmet titleTemplate="%s | Recharts" />
+        <Affix>
+          <header>
+            <div className="header-wrapper">
+              <h1 className="logo">
+                <Link
+                  className="nav-logo"
+                  to={`/${locale}`}
+                >
+&lt;Recharts /&gt;
+                </Link>
+              </h1>
+              <nav>
+                <ul className="nav" id="nav">
+                  {
+                      modules.map((entry, index) => (
+                        <li key={`item-${index}`}>
+                          <Link className={`nav-link ${entry === page ? 'active' : ''}`} to={`/${locale}/${entry}`}>
+                            {localeGet(locale, 'frame', entry)}
+                          </Link>
+                        </li>
+                      ))
                     }
-                    <li className="github-wrapper">
-                      <a href="https://github.com/recharts/recharts"
-                        target="_blank"
-                        className="nav-github">Github</a>
-                    </li>
-                    <li className="language-switch-wrapper">
-                      {this.renderLocaleSwitch(locale)}
-                    </li>
-                  </ul>
-                </nav>
-              </div>
+                  <li className="github-wrapper">
+                    <a
+                      href="https://github.com/recharts/recharts"
+                      target="_blank"
+                      className="nav-github"
+                    >
+Github
+                    </a>
+                  </li>
+                  <li className="language-switch-wrapper">
+                    {this.renderLocaleSwitch(locale)}
+                  </li>
+                </ul>
+              </nav>
+            </div>
           </header>
         </Affix>
         { children }
         <footer>
-          <p>Contact us by <a href="https://demo.rocket.chat/channel/recharts" target="_blank">Rocket.Chat</a></p>
-          <p>Released under the <a href="http://opensource.org/licenses/MIT" target="_blank">MIT License</a></p>
+          <p>
+Contact us by
+            <a href="https://demo.rocket.chat/channel/recharts" target="_blank">Rocket.Chat</a>
+          </p>
+          <p>
+Released under the
+            <a href="http://opensource.org/licenses/MIT" target="_blank">MIT License</a>
+          </p>
           <p>Copyright (c) 2017-2018 Recharts Group</p>
         </footer>
       </div>

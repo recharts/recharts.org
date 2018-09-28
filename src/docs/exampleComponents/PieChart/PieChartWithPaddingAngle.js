@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
-import { PieChart, Pie, Sector, Cell } from 'recharts';
+import {
+  PieChart, Pie, Sector, Cell,
+} from 'recharts';
 
 const data = [
-  {name: 'Group A', value: 400},
-  {name: 'Group B', value: 300},
-  {name: 'Group C', value: 300},
-  {name: 'Group D', value: 200},
+  { name: 'Group A', value: 400 },
+  { name: 'Group B', value: 300 },
+  { name: 'Group C', value: 300 },
+  { name: 'Group D', value: 200 },
 ];
 const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042'];
 
@@ -13,7 +15,7 @@ const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042'];
 export default class Example extends Component {
   static jsfiddleUrl = 'https://jsfiddle.net/alidingling/3Leoa7f4/';
 
-  render () {
+  render() {
     return (
       <PieChart width={800} height={400} onMouseEnter={this.onPieEnter}>
         <Pie
@@ -27,7 +29,7 @@ export default class Example extends Component {
           dataKey="value"
         >
           {
-            data.map((entry, index) => <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]}/>)
+            data.map((entry, index) => <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />)
           }
         </Pie>
         <Pie
@@ -43,10 +45,10 @@ export default class Example extends Component {
           dataKey="value"
         >
           {
-            data.map((entry, index) => <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]}/>)
+            data.map((entry, index) => <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />)
           }
         </Pie>
       </PieChart>
     );
   }
-};
+}

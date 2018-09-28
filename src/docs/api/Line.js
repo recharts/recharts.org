@@ -8,7 +8,7 @@ export default {
       defaultVal: '\'linear\'',
       isOptional: false,
       desc: {
-        'en-US': `The interpolation type of line. And customized interpolation function can be set to type. It's the same as type in Area.`,
+        'en-US': 'The interpolation type of line. And customized interpolation function can be set to type. It\'s the same as type in Area.',
         'zh-CN': '曲线的插值类型，可以接收自定义的函数。折线对应的 type 为 “linear” 。',
       },
       examples: [{
@@ -34,8 +34,8 @@ export default {
       defaultVal: '0',
       isOptional: false,
       desc: {
-         'en-US': 'The id of x-axis which is corresponding to the data.',
-         'zh-CN': '区域图对应的 x 轴的 id 。',
+        'en-US': 'The id of x-axis which is corresponding to the data.',
+        'zh-CN': '区域图对应的 x 轴的 id 。',
       },
     }, {
       name: 'yAxisId',
@@ -48,7 +48,7 @@ export default {
       },
     }, {
       name: 'legendType',
-      type: `'line' | 'square' | 'rect'| 'circle' | 'cross' | 'diamond' | 'square' | 'star' | 'triangle' | 'wye' | 'none'`,
+      type: '\'line\' | \'square\' | \'rect\'| \'circle\' | \'cross\' | \'diamond\' | \'square\' | \'star\' | \'triangle\' | \'wye\' | \'none\'',
       defaultVal: '\'line\'',
       isOptional: true,
       desc: {
@@ -65,10 +65,10 @@ export default {
         'zh-CN': '曲线上的点，接收多种配置。当值为 false ，不渲染点。当值为 true ，点会继承 Line 的属性配置，例如配置了 Area 的 stroke 为 "red"， 点会继承这个属性。当值为一个对象的时候，会把这个对象解析为点的属性，来覆盖默认属性。当值是一个 React Element ，会克隆这个 React Element 来渲染“点”。当值是一个 函数 时，会调用这个函数去渲染自定义的“点”。',
       },
       format: [
-        `<Line dataKey="value" dot={false} />`,
-        `<Line dataKey="value" dot={{ stroke: 'red', strokeWidth: 2 }} />`,
-        `<Line dataKey="value" dot={<CustomizedDot />} />`,
-        `<Line dataKey="value" dot={renderDot} />`,
+        '<Line dataKey="value" dot={false} />',
+        '<Line dataKey="value" dot={{ stroke: \'red\', strokeWidth: 2 }} />',
+        '<Line dataKey="value" dot={<CustomizedDot />} />',
+        '<Line dataKey="value" dot={renderDot} />',
       ],
       examples: [{
         name: 'A line chart with customized dot',
@@ -84,29 +84,29 @@ export default {
         'zh-CN': '当图表触发mouseenter事件，并且需要展示 Tooltip 的时候，会展示一个“激活状态的点”。当值为 false ，不渲染“激活状态的点”。当值为 true ，点会继承 Line 的属性配置，例如配置了 Line 的 stroke 为 "red"， 点会继承这个属性。当值为一个对象的时候，会把这个对象解析为点的属性，来覆盖默认属性。当值是一个 React Element ，会克隆这个 React Element 来渲染“点”。当值是一个 函数 时，会调用这个函数去渲染自定义的“点”。',
       },
       format: [
-        `<Line dataKey="value" activeDot={false} />`,
-        `<Line dataKey="value" activeDot={{ stroke: 'red', strokeWidth: 2, r: 10 }} />`,
-        `<Line dataKey="value" activeDot={<CustomizedActiveDot />} />`,
-        `<Line dataKey="value" activeDot={renderDot} />`,
+        '<Line dataKey="value" activeDot={false} />',
+        '<Line dataKey="value" activeDot={{ stroke: \'red\', strokeWidth: 2, r: 10 }} />',
+        '<Line dataKey="value" activeDot={<CustomizedActiveDot />} />',
+        '<Line dataKey="value" activeDot={renderDot} />',
       ],
       examples: [{
         name: 'A simple line chart',
         url: '/examples/SimpleLineChart',
       }],
-    },  {
+    }, {
       name: 'label',
       type: 'Boolean | Object | ReactElement | Function',
       defaultVal: 'false',
       isOptional: false,
       desc: {
         'en-US': 'If false set, labels will not be drawn. If true set, labels will be drawn which have the props calculated internally. If object set, labels will be drawn which have the props mergered by the internal calculated props and the option. If ReactElement set, the option can be the custom label element. If set a function, the function will be called to render customized label.',
-        'zh-CN': '图形上的文本标签。当值为 false ，不展示文本标签。当值为 true，会根据 Line 的属性配置来展示文本标签。当值为一个对象的时候，会把这个对象解析为 文本标签 的属性，来覆盖默认属性。当值是一个 React Element ，会克隆这个 React Element 来渲染“文本标签”。当值是一个 函数 时，会调用这个函数去渲染自定义的“文本标签”。'
+        'zh-CN': '图形上的文本标签。当值为 false ，不展示文本标签。当值为 true，会根据 Line 的属性配置来展示文本标签。当值为一个对象的时候，会把这个对象解析为 文本标签 的属性，来覆盖默认属性。当值是一个 React Element ，会克隆这个 React Element 来渲染“文本标签”。当值是一个 函数 时，会调用这个函数去渲染自定义的“文本标签”。',
       },
       format: [
-        `<Line dataKey="value" label />`,
-        `<Line dataKey="value" label={{ fill: 'red', fontSize: 20 }} />`,
-        `<Line dataKey="value" label={<CustomizedLabel />} />`,
-        `<Line dataKey="value" label={renderLabel} />`,
+        '<Line dataKey="value" label />',
+        '<Line dataKey="value" label={{ fill: \'red\', fontSize: 20 }} />',
+        '<Line dataKey="value" label={<CustomizedLabel />} />',
+        '<Line dataKey="value" label={renderLabel} />',
       ],
       examples: [{
         name: 'A line chart with customized label',
@@ -119,12 +119,12 @@ export default {
       isOptional: false,
       desc: {
         'en-US': 'The coordinates of all the points in the line, usually calculated internally.',
-        'zh-CN': '曲线上点的坐标。当使用 LineChart 或者 ComposedChart 作为父组件的时候，不需要自己计算，父组件会计算好。'
+        'zh-CN': '曲线上点的坐标。当使用 LineChart 或者 ComposedChart 作为父组件的时候，不需要自己计算，父组件会计算好。',
       },
-      format: [`[{x: 12, y: 12, value: 240}]`],
+      format: ['[{x: 12, y: 12, value: 240}]'],
     }, {
       name: 'layout',
-      type: `'horizontal' | 'vertical'`,
+      type: '\'horizontal\' | \'vertical\'',
       defaultVal: 'undefined',
       isOptional: true,
       desc: {
@@ -143,7 +143,7 @@ export default {
       examples: [{
         name: 'A lineChart connect nulls and a lineChart disconnect nulls',
         url: '/examples/LineChartConnectNulls',
-      }]
+      }],
     }, {
       name: 'unit',
       type: 'String | Number',
@@ -191,8 +191,8 @@ export default {
       },
     }, {
       name: 'animationEasing',
-      type: `'ease' | 'ease-in' | 'ease-out' | 'ease-in-out' | 'linear'`,
-      defaultVal: `'ease'`,
+      type: '\'ease\' | \'ease-in\' | \'ease-out\' | \'ease-in-out\' | \'linear\'',
+      defaultVal: '\'ease\'',
       isOptional: false,
       desc: {
         'en-US': 'The type of easing function.',

@@ -20,12 +20,12 @@ export default {
       isOptional: true,
       desc: {
         'en-US': 'If any two categorical charts(LineChart, AreaChart, BarChart, ComposedChart) have the same syncId, these two charts can sync the position tooltip, and the startIndex, endIndex of Brush.',
-        'zh-CN': '如果任何两个或者多个类目型图表（LineChart, AreaChart, BarChart, ComposedChart）具有相同的 syncId，这两个图表可以联动，包括 Tooltip 以及 Brush 的联动。'
+        'zh-CN': '如果任何两个或者多个类目型图表（LineChart, AreaChart, BarChart, ComposedChart）具有相同的 syncId，这两个图表可以联动，包括 Tooltip 以及 Brush 的联动。',
       },
       examples: [{
-        name: "Two synchronized AreaChart",
+        name: 'Two synchronized AreaChart',
         url: '/examples/SynchronizedAreaChart',
-      }]
+      }],
     }, {
       name: 'width',
       type: 'Number',
@@ -51,12 +51,12 @@ export default {
       isOptional: false,
       desc: {
         'en-US': 'The source data, in which each element is an object.',
-        'zh-CN': '输入数据，现在支持的类型是对象数组。'
+        'zh-CN': '输入数据，现在支持的类型是对象数组。',
       },
       format: [
         '[{ name: \'a\', value: 12 }]',
-        '[{ name: \'a\', value: [5, 12] }]'
-      ]
+        '[{ name: \'a\', value: [5, 12] }]',
+      ],
     }, {
       name: 'margin',
       type: 'Object',
@@ -69,15 +69,15 @@ export default {
       format: ['{ top: 5, right: 5, bottom: 5, left: 5 }'],
     }, {
       name: 'stackOffset',
-      type: `'expand' | 'none' | 'wiggle' | 'silhouette'`,
-      defaultVal: `'none'`,
+      type: '\'expand\' | \'none\' | \'wiggle\' | \'silhouette\'',
+      defaultVal: '\'none\'',
       isOptional: false,
       desc: {
         'en-US': 'The type of offset function used to generate the lower and upper values in the series array. The four types are built-in offsets in d3-shape.',
         'zh-CN': '堆积区域图的偏移类型，这里提供的配置是 d3 支持的四种类型。',
       },
       examples: [{
-        name: `An AreaChart with stackOffset specified to 'expand'`,
+        name: 'An AreaChart with stackOffset specified to \'expand\'',
         url: '/examples/PercentAreaChart',
       }, {
         name: 'D3 stackOffset',
@@ -86,7 +86,7 @@ export default {
       }],
     }, {
       name: 'baseValue',
-      type: `Number | 'dataMin' | 'dataMax' | 'auto'`,
+      type: 'Number | \'dataMin\' | \'dataMax\' | \'auto\'',
       defaultVal: 'auto',
       isOptional: false,
       desc: {
@@ -99,8 +99,8 @@ export default {
       type: 'Function',
       isOptional: true,
       desc: {
-         'en-US': 'The customized event handler of click in this chart.',
-         'zh-CN': '鼠标在图表图形区域 click 事件的回调函数。',
+        'en-US': 'The customized event handler of click in this chart.',
+        'zh-CN': '鼠标在图表图形区域 click 事件的回调函数。',
       },
     }, {
       name: 'onMouseEnter',
@@ -133,6 +133,6 @@ export default {
   ],
   childrenComponents: [
     'XAxis', 'YAxis', 'ReferenceArea', 'ReferenceDot', 'ReferenceLine', 'Brush',
-    'CartesianGrid', 'Legend', 'Tooltip', 'Area', 'validate svg elements...'
+    'CartesianGrid', 'Legend', 'Tooltip', 'Area', 'validate svg elements...',
   ],
 };

@@ -17,7 +17,7 @@ export default {
       isOptional: false,
       desc: {
         'en-US': 'The y-coordinate of the horizontal line of the cross.',
-        'zh-CN': '水平线的 y 坐标。'
+        'zh-CN': '水平线的 y 坐标。',
       },
     }, {
       name: 'top',

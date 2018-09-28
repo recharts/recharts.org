@@ -26,7 +26,7 @@ export default {
       isOptional: false,
       desc: {
         'en-US': 'The range of axis.',
-        'zh-CN': 'z 轴 scale 函数的值域。'
+        'zh-CN': 'z 轴 scale 函数的值域。',
       },
     }, {
       name: 'unit',
@@ -35,7 +35,7 @@ export default {
       isOptional: true,
       desc: {
         'en-US': 'The unit of data displayed in the axis. This option will be used to represent an index unit in a scatter chart.',
-        'zh-CN': 'z 轴展示数据的单位。这个单位会展示在 Tooltip 的数值后面。'
+        'zh-CN': 'z 轴展示数据的单位。这个单位会展示在 Tooltip 的数值后面。',
       },
     }, {
       name: 'name',
@@ -44,7 +44,7 @@ export default {
       isOptional: true,
       desc: {
         'en-US': 'The name of data displayed in the axis. This option will be used to represent an index in a scatter chart.',
-        'zh-CN': 'z 轴展示数据的名称。这个单位会展示在 Tooltip 内容中。'
+        'zh-CN': 'z 轴展示数据的名称。这个单位会展示在 Tooltip 内容中。',
       },
     }, {
       name: 'scale',
@@ -54,7 +54,7 @@ export default {
       defaultVal: 'auto',
       isOptional: false,
       desc: {
-        'en-US': `If 'auto' set, the scale funtion is descided by the type of chart, and the props type.`,
+        'en-US': 'If \'auto\' set, the scale funtion is descided by the type of chart, and the props type.',
         'zh-CN': '当值为 "auto" 时，会根据图表类型来生成 scale 函数，也可以传入自定义的函数作为 scale 函数。',
       },
       format: [
@@ -66,7 +66,7 @@ const scale = scaleLog().base(Math.E);
 ...
   <ZAxis scale={scale} />
 ...
-`
+`,
       ],
     },
   ],

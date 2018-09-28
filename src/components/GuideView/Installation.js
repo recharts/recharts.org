@@ -12,7 +12,7 @@ const Installation = ({ locale }) => (
       {localeGet(locale, 'installation', 'dot')}
     </p>
     <Highlight className="sh">
-    {
+      {
       `  # latest stable
   $ npm install recharts`
     }
@@ -20,18 +20,23 @@ const Installation = ({ locale }) => (
     <h4 className="sub-title">UMD</h4>
     <p className="paragraph-title">
       {localeGet(locale, 'installation', 'umd-desc')}
-      &nbsp;(&nbsp;<a href="https://unpkg.com/" target="_blank">unpkg</a>&nbsp;)&nbsp;
+      &nbsp;(&nbsp;
+      <a href="https://unpkg.com/" target="_blank">unpkg</a>
+&nbsp;)&nbsp;
       &nbsp;:
     </p>
     <Highlight className="html">
-    {
-`  <script src="https://unpkg.com/recharts/umd/Recharts.min.js"></script>`
+      {
+'  <script src="https://unpkg.com/recharts/umd/Recharts.min.js"></script>'
     }
     </Highlight>
-    <p className="paragraph-title">{localeGet(locale, 'installation', 'umd-use')}<code>window.Recharts</code></p>
+    <p className="paragraph-title">
+      {localeGet(locale, 'installation', 'umd-use')}
+      <code>window.Recharts</code>
+    </p>
     <h4 className="sub-title">{localeGet(locale, 'installation', 'dev-build')}</h4>
     <Highlight className="sh">
-    {`  $ git clone https://github.com/recharts/recharts.git
+      {`  $ git clone https://github.com/recharts/recharts.git
   $ cd recharts
   $ npm install
   $ npm run build`}

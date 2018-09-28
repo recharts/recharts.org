@@ -105,7 +105,7 @@ export default {
         'en-US': 'The margin of chart container, usually calculated internally.',
         'zh-CN': '父组件的 marign 值。',
       },
-      format: [`{ top: 0, left: 0, right: 0, bottom: 0 }`],
+      format: ['{ top: 0, left: 0, right: 0, bottom: 0 }'],
     }, {
       name: 'content',
       type: 'ReactElement | Function',
@@ -116,7 +116,7 @@ export default {
         'zh-CN': '定制图例展示的内容。如果值为 React element，会克隆这个元素来渲染图例的内容。如果值为函数，会调用这个函数来生成图例的内容。',
       },
       format: [
-        `<Legend content={<CustomizedLegend external={external} />} />`,
+        '<Legend content={<CustomizedLegend external={external} />} />',
         `
 const renderLegend = (props) => {
   const { payload } = props;
@@ -131,7 +131,7 @@ const renderLegend = (props) => {
     </ul>
   );
 }
-<Legend content={renderLegend} />`
+<Legend content={renderLegend} />`,
       ],
     }, {
       name: 'wrapperStyle',
@@ -140,7 +140,7 @@ const renderLegend = (props) => {
       isOptional: true,
       desc: {
         'en-US': 'The style of legend container which is a "position: absolute;" div element. Because the position of legend is quite flexible, so you can change the position by the value of top, left, right, bottom in this option. And the format of wrapperStyle is the same as React inline style.',
-        'zh-CN': '图例是使用 HTML 渲染的，最外层的节点是一个绝对定位的 div ，所以你可以通过 top、left 来指定图例的位置，当然也可以指定其他的样式。 '
+        'zh-CN': '图例是使用 HTML 渲染的，最外层的节点是一个绝对定位的 div ，所以你可以通过 top、left 来指定图例的位置，当然也可以指定其他的样式。 ',
       },
       examples: [{
         name: 'React Inline style',

@@ -66,7 +66,7 @@ export default {
       },
       examples: [{
         name: 'A LineChart with alwaysShow ReferenceLine',
-        url: 'https://jsfiddle.net/alidingling/uqtuc1mp/'
+        url: 'https://jsfiddle.net/alidingling/uqtuc1mp/',
       }],
     }, {
       name: 'viewBox',
@@ -105,13 +105,13 @@ export default {
         'zh-CN': '当值为简单类型的数值或者字符串时，这个值会被渲染成文字标签。当值为 React element，会克隆这个元素来渲染文字标签。',
       },
       format: [
-        `<ReferenceArea x1="01" x2="08" label="MAX"/>`,
-        `<ReferenceArea y1={100} y2={500} label={<CustomizedLabel />}/>`,
+        '<ReferenceArea x1="01" x2="08" label="MAX"/>',
+        '<ReferenceArea y1={100} y2={500} label={<CustomizedLabel />}/>',
       ],
       examples: [{
         name: 'ReferenceLines with label',
         url: '/examples/LineChartWithReferenceLines',
-      }]
+      }],
     }, {
       name: 'isFront',
       type: 'Boolean',

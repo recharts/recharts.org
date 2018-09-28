@@ -44,7 +44,7 @@ export default {
       isOptional: false,
       desc: {
         'en-US': 'If set true, the value of reference dot will be take into account when calculate the domain of corresponding axis, so that the reference dot will always show.',
-        'zh-CN': '是否根据整参考点的值调整相应的坐标轴 domain，来保证参考点一定在可视区域内。'
+        'zh-CN': '是否根据整参考点的值调整相应的坐标轴 domain，来保证参考点一定在可视区域内。',
       },
     }, {
       name: 'xAxis',
@@ -74,9 +74,9 @@ export default {
         'zh-CN': '当值为简单类型的数值或者字符串时，这个值会被渲染成文字标签。当值为 React element，会克隆这个元素来渲染文字标签。',
       },
       format: [
-        `<ReferenceDot x="a" y={400} label="MAX"/>`,
-        `<ReferenceDot x="a" y={400} label={<CustomizedLabel />}/>`,
-        `<ReferenceDot x="a" y={400} label={renderLabel} />`,
+        '<ReferenceDot x="a" y={400} label="MAX"/>',
+        '<ReferenceDot x="a" y={400} label={<CustomizedLabel />}/>',
+        '<ReferenceDot x="a" y={400} label={renderLabel} />',
       ],
     }, {
       name: 'isFront',
@@ -88,70 +88,70 @@ export default {
         'zh-CN': '是否展示在图表的最上层。',
       },
     }, {
-     name: 'onClick',
-     type: 'Function',
-     isOptional: true,
-     desc: {
+      name: 'onClick',
+      type: 'Function',
+      isOptional: true,
+      desc: {
         'en-US': 'The customized event handler of click in this chart.',
         'zh-CN': '鼠标在图表图形区域 click 事件的回调函数。',
-     },
-   }, {
-     name: 'onMouseDown',
-     type: 'Function',
-     isOptional: true,
-     desc: {
-       'en-US': 'The customized event handler of mousedown in this chart.',
-       'zh-CN': '鼠标在图表图形区域 mousedown 事件的回调函数。',
-     },
-   }, {
-     name: 'onMouseUp',
-     type: 'Function',
-     isOptional: true,
-     desc: {
-       'en-US': 'The customized event handler of mouseup in this chart.',
-       'zh-CN': '鼠标在图表图形区域 mouseup 事件的回调函数。',
-     },
-   }, {
-     name: 'onMouseOver',
-     type: 'Function',
-     isOptional: true,
-     desc: {
-       'en-US': 'The customized event handler of mouseover in this chart.',
-       'zh-CN': '鼠标在图表图形区域 mouseover 事件的回调函数。',
-     },
-   }, {
-     name: 'onMouseOut',
-     type: 'Function',
-     isOptional: true,
-     desc: {
-       'en-US': 'The customized event handler of mouseout in this chart.',
-       'zh-CN': '鼠标在图表图形区域 mouseout 事件的回调函数。',
-     },
-   }, {
-     name: 'onMouseEnter',
-     type: 'Function',
-     isOptional: true,
-     desc: {
-       'en-US': 'The customized event handler of mouseenter in this chart.',
-       'zh-CN': '鼠标在图表图形区域 mouseenter 事件的回调函数。',
-     },
-   }, {
-     name: 'onMouseMove',
-     type: 'Function',
-     isOptional: true,
-     desc: {
-       'en-US': 'The customized event handler of mousemove in this chart.',
-       'zh-CN': '鼠标在图表图形区域 mousemove 事件的回调函数。',
-     },
-   }, {
-     name: 'onMouseLeave',
-     type: 'Function',
-     isOptional: true,
-     desc: {
-       'en-US': 'The customized event handler of mouseleave in this chart.',
-       'zh-CN': '鼠标在图表图形区域 mouseleave 事件的回调函数。',
-     },
-   },
+      },
+    }, {
+      name: 'onMouseDown',
+      type: 'Function',
+      isOptional: true,
+      desc: {
+        'en-US': 'The customized event handler of mousedown in this chart.',
+        'zh-CN': '鼠标在图表图形区域 mousedown 事件的回调函数。',
+      },
+    }, {
+      name: 'onMouseUp',
+      type: 'Function',
+      isOptional: true,
+      desc: {
+        'en-US': 'The customized event handler of mouseup in this chart.',
+        'zh-CN': '鼠标在图表图形区域 mouseup 事件的回调函数。',
+      },
+    }, {
+      name: 'onMouseOver',
+      type: 'Function',
+      isOptional: true,
+      desc: {
+        'en-US': 'The customized event handler of mouseover in this chart.',
+        'zh-CN': '鼠标在图表图形区域 mouseover 事件的回调函数。',
+      },
+    }, {
+      name: 'onMouseOut',
+      type: 'Function',
+      isOptional: true,
+      desc: {
+        'en-US': 'The customized event handler of mouseout in this chart.',
+        'zh-CN': '鼠标在图表图形区域 mouseout 事件的回调函数。',
+      },
+    }, {
+      name: 'onMouseEnter',
+      type: 'Function',
+      isOptional: true,
+      desc: {
+        'en-US': 'The customized event handler of mouseenter in this chart.',
+        'zh-CN': '鼠标在图表图形区域 mouseenter 事件的回调函数。',
+      },
+    }, {
+      name: 'onMouseMove',
+      type: 'Function',
+      isOptional: true,
+      desc: {
+        'en-US': 'The customized event handler of mousemove in this chart.',
+        'zh-CN': '鼠标在图表图形区域 mousemove 事件的回调函数。',
+      },
+    }, {
+      name: 'onMouseLeave',
+      type: 'Function',
+      isOptional: true,
+      desc: {
+        'en-US': 'The customized event handler of mouseleave in this chart.',
+        'zh-CN': '鼠标在图表图形区域 mouseleave 事件的回调函数。',
+      },
+    },
   ],
   parentComponents: [
     'AreaChart', 'BarChart', 'LineChart', 'ComposedChart',

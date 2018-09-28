@@ -1,10 +1,10 @@
-import { applyMiddleware, compose, createStore } from 'redux'
-import thunk from 'redux-thunk'
-import rootReducer from './rootReducer'
-import { routerMiddleware } from 'react-router-redux'
+import { applyMiddleware, compose, createStore } from 'redux';
+import thunk from 'redux-thunk';
+import { routerMiddleware } from 'react-router-redux';
+import rootReducer from './rootReducer';
 
-export default function configureStore (initialState = {}, history) {
-  const middleware = [thunk, routerMiddleware(history)]
+export default function configureStore(initialState = {}, history) {
+  const middleware = [thunk, routerMiddleware(history)];
 
   const enhancers = [];
   if (__DEV__) {
@@ -17,14 +17,13 @@ export default function configureStore (initialState = {}, history) {
   const store = createStore(rootReducer, initialState,
     compose(
       applyMiddleware(...middleware),
-      ...enhancers
-    )
-  );
+      ...enhancers,
+    ));
 
   if (module.hot) {
     module.hot.accept('./rootReducer', () => {
       store.replaceReducer(rootReducer);
-    })
+    });
   }
 
   return store;

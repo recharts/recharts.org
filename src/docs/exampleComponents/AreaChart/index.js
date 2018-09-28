@@ -1,5 +1,5 @@
-import SimpleAreaChart from './SimpleAreaChart'
-import StackedAreaChart from './StackedAreaChart'
+import SimpleAreaChart from './SimpleAreaChart';
+import StackedAreaChart from './StackedAreaChart';
 import AreaChartConnectNulls from './AreaChartConnectNulls';
 import CardinalAreaChart from './CardinalAreaChart';
 import PercentAreaChart from './PercentAreaChart';

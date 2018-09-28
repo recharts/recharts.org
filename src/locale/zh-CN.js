@@ -69,7 +69,7 @@ const map = {
     'step-5-desc': '例如，你可以通过传入自定义的刻度组件来实现定制化的功能，当然其他的组件也支持类似的功能，比如 Bar 组件也能接收自定义的 shape 组件或者 shape 函数。',
   },
   customize: {
-    'customize': '组件自定义',
+    customize: '组件自定义',
     'step-1-title': '1. 组件 Line , Area , Bar , XAxis, YAxis 的 labels 支持自定义',
     'step-1-desc': '例如，我们可以创建具有自定义label的<Bar />，以及自定义<XAxis /> 的刻度。',
     'step-2-title': '2. 组件的形状可以自定义',
@@ -82,11 +82,11 @@ const map = {
     'step-5-desc': 'Tooltip 和 Legend 是使用 html 实现的，开放了 style 相关的 api ，当然也可以通过 css 来改变样式。',
   },
   api: {
-    'charts': '图表类型',
+    charts: '图表类型',
     'general-components': '通用组件',
     'cartesian-components': '笛卡尔坐标系组件',
     'polar-components': '极坐标系组件',
-    'shapes': '图形',
+    shapes: '图形',
     default: '默认值：',
     format: '格式：',
     examples: '示例：',

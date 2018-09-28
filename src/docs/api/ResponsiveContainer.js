@@ -11,7 +11,7 @@ export default {
       defaultVal: 'null',
       isOptional: true,
       desc: {
-        'en-US': `width / height. If specified, the height will be calculated by width / aspect.`,
+        'en-US': 'width / height. If specified, the height will be calculated by width / aspect.',
         'zh-CN': '宽高比。如果指定了这个值，我们会根据 heihgt = width / aspect 来计算高度。',
       },
     },

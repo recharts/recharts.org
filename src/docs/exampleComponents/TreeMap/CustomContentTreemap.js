@@ -131,14 +131,16 @@ const data = [
       { name: 'OperatorSwitch', size: 2581 },
       { name: 'SortOperator', size: 2023 },
     ],
-  }
+  },
 ];
 
 const COLORS = ['#8889DD', '#9597E4', '#8DC77B', '#A5D297', '#E2CF45', '#F8C12D'];
 
 const CustomizedContent = React.createClass({
   render() {
-    const { root, depth, x, y, width, height, index, payload, colors, rank, name } = this.props;
+    const {
+      root, depth, x, y, width, height, index, payload, colors, rank, name,
+    } = this.props;
 
     return (
       <g>
@@ -182,25 +184,25 @@ const CustomizedContent = React.createClass({
         }
       </g>
     );
-  }
+  },
 });
 
 
 export default class Example extends Component {
   static jsfiddleUrl = 'https://jsfiddle.net/alidingling/Ldvvz2ak/';
 
-  render () {
+  render() {
     return (
       <Treemap
-      	width={400}
+        width={400}
         height={200}
         data={data}
         dataKey="size"
-        ratio={4/3}
+        ratio={4 / 3}
         stroke="#fff"
         fill="#8884d8"
-        content={<CustomizedContent colors={COLORS}/>}
+        content={<CustomizedContent colors={COLORS} />}
       />
     );
   }
-};
+}

@@ -14,25 +14,25 @@ export default [
   {
     name: 'HoopHubs篮圈',
     url: 'http://www.hoophubs.com/',
-    logoImgUrl: '//camo.githubusercontent.com/14f4e6843fd1c12788c150c74927576a60d0312c/687474703a2f2f636f6d6d756e6974792e686f6f70687562732e636f6d2f75706c6f6164732f64656661756c742f6f726967696e616c2f31582f323232633134363735643439633362386132353836616339663538666335386133613961383464322e6a706567'
+    logoImgUrl: '//camo.githubusercontent.com/14f4e6843fd1c12788c150c74927576a60d0312c/687474703a2f2f636f6d6d756e6974792e686f6f70687562732e636f6d2f75706c6f6164732f64656661756c742f6f726967696e616c2f31582f323232633134363735643439633362386132353836616339663538666335386133613961383464322e6a706567',
   },
 
   {
     name: 'Fyndiq',
     url: 'https://fyndiq.se',
-    logoImgUrl: '//media.fyndiq.se/upload/press/logo-fyndiq-3-1.png'
+    logoImgUrl: '//media.fyndiq.se/upload/press/logo-fyndiq-3-1.png',
   },
 
   {
     name: 'chayns®',
     url: 'https://de.tobit.software/mostwanted',
-    logoImgUrl: '//tobit.com/graphic/chayns/chayns_logo.png'
+    logoImgUrl: '//tobit.com/graphic/chayns/chayns_logo.png',
   },
 
   {
     name: 'Tracktl',
     url: 'https://www.tracktl.com/',
-    logoImgUrl: '//res.cloudinary.com/jukeo-net/image/upload/c_pad,h_100,q_100,w_300/v1509094068/logo-w_copie_tiweid.png'
+    logoImgUrl: '//res.cloudinary.com/jukeo-net/image/upload/c_pad,h_100,q_100,w_300/v1509094068/logo-w_copie_tiweid.png',
   },
   {
     name: 'CineSend',
@@ -69,4 +69,4 @@ export default [
     url: 'https://www.metric.ai',
     logoImgUrl: 'https://camo.githubusercontent.com/d99b8679214e490052509042808bbe14630ed432/68747470733a2f2f7777772e6d65747269632e61692f66696c65732f6272616e642f6c6f676f2f6d65747269632d61692d333030783130302d6c696768742e706e67',
   },
-]
+];

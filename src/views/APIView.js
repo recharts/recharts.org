@@ -59,15 +59,15 @@ class APIView extends Component {
       <li key={`example-${i}`}>
         {
           entry.isExternal ?
-          <a href={entry.url} target="_blank">{entry.name}</a> :
-          <Link to={`/${locale}${entry.url}`}>{entry.name}</Link>
+            <a href={entry.url} target="_blank">{entry.name}</a> :
+            <Link to={`/${locale}${entry.url}`}>{entry.name}</Link>
         }
       </li>
     ));
   }
 
   renderProps(props, locale) {
-    if (!props || !props.length) {return null;}
+    if (!props || !props.length) { return null; }
 
     return props.map((entry, i) => (
       <li className="props-item" key={`props-${i}`} id={entry.name}>
@@ -78,13 +78,13 @@ class APIView extends Component {
           {entry.deprecated ? <em className="deprecated-label">@deprecated</em> : null}
         </p>
         <p className="desc">{parseLocalObj(locale, entry.desc)}</p>
-        {entry.defaultVal !== null && entry.defaultVal !== undefined && entry.defaultVal !== 'null'
-          && entry.defaultVal !== 'undefined' ? (
-          <p className="default">
-            <span className="title">{localeGet(locale, 'api', 'default')}</span>
-            <span>{entry.defaultVal}</span>
-          </p>
-        ) : null}
+        {entry.defaultVal !== null && entry.defaultVal !== undefined && entry.defaultVal !== 'null' &&
+          entry.defaultVal !== 'undefined' ? (
+            <p className="default">
+              <span className="title">{localeGet(locale, 'api', 'default')}</span>
+              <span>{entry.defaultVal}</span>
+            </p>
+          ) : null}
         {entry.format && entry.format.length ? (
           <div className="format">
             <p className="title">{localeGet(locale, 'api', 'format')}</p>
@@ -111,19 +111,17 @@ class APIView extends Component {
         <h4 className="sub-title">{localeGet(locale, 'api', 'parent')}</h4>
         <ul className="props-list">
           {
-            components.map((entry, index) => {
-              return (
-                <li key={`item-${index}`} className="api-component-item">
-                  {
+            components.map((entry, index) => (
+              <li key={`item-${index}`} className="api-component-item">
+                {
                     entry.indexOf('svg') < 0 ? (
                       <code>
                         <Link to={`/${locale}/api/${entry}`}>{`<${entry} />`}</Link>
                       </code>
                     ) : <span>{entry}</span>
                   }
-                </li>
-              );
-            })
+              </li>
+            ))
           }
         </ul>
       </div>
@@ -134,23 +132,21 @@ class APIView extends Component {
     return (
       <div>
         <h4 className="sub-title">{localeGet(locale, 'api', 'children')}</h4>
-          <ul className="props-list">
-            {
-              components.map((entry, index) => {
-                return (
-                  <li key={`item-${index}`} className="api-component-item">
-                    {
+        <ul className="props-list">
+          {
+              components.map((entry, index) => (
+                <li key={`item-${index}`} className="api-component-item">
+                  {
                       entry.indexOf('svg') < 0 ? (
                         <code>
                           <Link to={`/${locale}/api/${entry}`}>{`<${entry} />`}</Link>
                         </code>
                       ) : <span>{entry}</span>
                     }
-                  </li>
-                );
-              })
+                </li>
+              ))
             }
-          </ul>
+        </ul>
       </div>
     );
   }
@@ -167,26 +163,22 @@ class APIView extends Component {
         <div className="sidebar">
           <h2>API</h2>
           {
-            apiCates.map(({ name, items }, index) => {
-              return (
-                <div className="sidebar-cate" key={`cate-${index}`}>
-                  <h4>{localeGet(locale, 'api', name)}</h4>
-                  <ul className="menu">
-                    {
-                      items.map((compName, j) => {
-                        return (
-                          <li key={`item-${j}`}>
-                            <Link className={page === compName ? 'active' : ''} to={`/${locale}/api/${compName}`}>
-                              <NewMenuTag name={compName} isNew={NEW_APIS.indexOf(compName) >= 0} />
-                            </Link>
-                          </li>
-                        );
-                      })
+            apiCates.map(({ name, items }, index) => (
+              <div className="sidebar-cate" key={`cate-${index}`}>
+                <h4>{localeGet(locale, 'api', name)}</h4>
+                <ul className="menu">
+                  {
+                      items.map((compName, j) => (
+                        <li key={`item-${j}`}>
+                          <Link className={page === compName ? 'active' : ''} to={`/${locale}/api/${compName}`}>
+                            <NewMenuTag name={compName} isNew={NEW_APIS.indexOf(compName) >= 0} />
+                          </Link>
+                        </li>
+                      ))
                     }
-                  </ul>
-                </div>
-              );
-            })
+                </ul>
+              </div>
+            ))
           }
         </div>
         <div className="content">

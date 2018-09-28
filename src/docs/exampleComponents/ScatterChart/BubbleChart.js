@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import _ from 'lodash';
-import { ScatterChart, Scatter, XAxis, YAxis, ZAxis, CartesianGrid, Tooltip,
-  Legend } from 'recharts';
+import {
+  ScatterChart, Scatter, XAxis, YAxis, ZAxis, CartesianGrid, Tooltip,
+  Legend,
+} from 'recharts';
 
 const data01 = [
   { hour: '12a', index: 1, value: 170 },
@@ -57,15 +59,13 @@ const data02 = [
   { hour: '11p', index: 1, value: 180 },
 ];
 
-const parseDomain = () => {
-  return [
-    0,
-    _.max([
-      _.max(data01.map(entry => entry.value)),
-      _.max(data02.map(entry => entry.value))
-    ])
-  ];
-};
+const parseDomain = () => [
+  0,
+  _.max([
+    _.max(data01.map(entry => entry.value)),
+    _.max(data02.map(entry => entry.value)),
+  ]),
+];
 
 export default class Example extends Component {
   static jsfiddleUrl = 'https://jsfiddle.net/alidingling/9kvhed7a/';
@@ -77,9 +77,15 @@ export default class Example extends Component {
       const data = _.get(payload, '[0].payload');
 
       return (
-        <div style={{ backgroundColor: '#fff', border: '1px solid #999', margin: 0, padding: 10 }}>
+        <div style={{
+          backgroundColor: '#fff', border: '1px solid #999', margin: 0, padding: 10,
+        }}
+        >
           <p>{data.hour}</p>
-          <p><span>value: </span>{data.value}</p>
+          <p>
+            <span>value: </span>
+            {data.value}
+          </p>
         </div>
       );
     }
@@ -87,68 +93,110 @@ export default class Example extends Component {
     return null;
   }
 
-  render () {
+  render() {
     const domain = parseDomain();
     const range = [16, 225];
 
     return (
       <div>
-        <ScatterChart width={800} height={60} margin={{top: 10, right: 0, bottom: 0, left: 0}}>
+        <ScatterChart
+          width={800}
+          height={60}
+          margin={{
+            top: 10, right: 0, bottom: 0, left: 0,
+          }}
+        >
           <XAxis type="category" dataKey="hour" interval={0} tick={{ fontSize: 0 }} tickLine={{ transform: 'translate(0, -6)' }} />
-          <YAxis type="number" dataKey="index" name="sunday" height={10} width={80} tick={false} tickLine={false} axisLine={false} label={{ value: 'Sunday', position: 'insideRight' }}/>
+          <YAxis type="number" dataKey="index" name="sunday" height={10} width={80} tick={false} tickLine={false} axisLine={false} label={{ value: 'Sunday', position: 'insideRight' }} />
           <ZAxis type="number" dataKey="value" domain={domain} range={range} />
-          <Tooltip cursor={{strokeDasharray: '3 3'}} wrapperStyle={{ zIndex: 100 }} content={this.renderTooltip} />
-          <Scatter data={data01} fill='#8884d8'/>
+          <Tooltip cursor={{ strokeDasharray: '3 3' }} wrapperStyle={{ zIndex: 100 }} content={this.renderTooltip} />
+          <Scatter data={data01} fill="#8884d8" />
         </ScatterChart>
 
-        <ScatterChart width={800} height={60} margin={{top: 10, right: 0, bottom: 0, left: 0}}>
+        <ScatterChart
+          width={800}
+          height={60}
+          margin={{
+            top: 10, right: 0, bottom: 0, left: 0,
+          }}
+        >
           <XAxis type="category" dataKey="hour" name="hour" interval={0} tick={{ fontSize: 0 }} tickLine={{ transform: 'translate(0, -6)' }} />
-          <YAxis type="number" dataKey="index" height={10} width={80} tick={false} tickLine={false} axisLine={false} label={{ value: 'Monday', position: 'insideRight' }}/>
+          <YAxis type="number" dataKey="index" height={10} width={80} tick={false} tickLine={false} axisLine={false} label={{ value: 'Monday', position: 'insideRight' }} />
           <ZAxis type="number" dataKey="value" domain={domain} range={range} />
-          <Tooltip cursor={{strokeDasharray: '3 3'}} wrapperStyle={{ zIndex: 100 }} content={this.renderTooltip} />
-          <Scatter data={data02} fill='#8884d8'/>
+          <Tooltip cursor={{ strokeDasharray: '3 3' }} wrapperStyle={{ zIndex: 100 }} content={this.renderTooltip} />
+          <Scatter data={data02} fill="#8884d8" />
         </ScatterChart>
 
-        <ScatterChart width={800} height={60} margin={{top: 10, right: 0, bottom: 0, left: 0}}>
+        <ScatterChart
+          width={800}
+          height={60}
+          margin={{
+            top: 10, right: 0, bottom: 0, left: 0,
+          }}
+        >
           <XAxis type="category" dataKey="hour" name="hour" interval={0} tick={{ fontSize: 0 }} tickLine={{ transform: 'translate(0, -6)' }} />
-          <YAxis type="number" dataKey="index" height={10} width={80} tick={false} tickLine={false} axisLine={false} label={{ value: 'Tuesday', position: 'insideRight' }}/>
+          <YAxis type="number" dataKey="index" height={10} width={80} tick={false} tickLine={false} axisLine={false} label={{ value: 'Tuesday', position: 'insideRight' }} />
           <ZAxis type="number" dataKey="value" domain={domain} range={range} />
-          <Tooltip cursor={{strokeDasharray: '3 3'}} wrapperStyle={{ zIndex: 100 }} content={this.renderTooltip} />
-          <Scatter data={data01} fill='#8884d8'/>
+          <Tooltip cursor={{ strokeDasharray: '3 3' }} wrapperStyle={{ zIndex: 100 }} content={this.renderTooltip} />
+          <Scatter data={data01} fill="#8884d8" />
         </ScatterChart>
 
-        <ScatterChart width={800} height={60} margin={{top: 10, right: 0, bottom: 0, left: 0}}>
+        <ScatterChart
+          width={800}
+          height={60}
+          margin={{
+            top: 10, right: 0, bottom: 0, left: 0,
+          }}
+        >
           <XAxis type="category" dataKey="hour" name="hour" interval={0} tick={{ fontSize: 0 }} tickLine={{ transform: 'translate(0, -6)' }} />
-          <YAxis type="number" dataKey="index" height={10} width={80} tick={false} tickLine={false} axisLine={false} label={{ value: 'Wednesday', position: 'insideRight' }}/>
+          <YAxis type="number" dataKey="index" height={10} width={80} tick={false} tickLine={false} axisLine={false} label={{ value: 'Wednesday', position: 'insideRight' }} />
           <ZAxis type="number" dataKey="value" domain={domain} range={range} />
-          <Tooltip cursor={{strokeDasharray: '3 3'}} wrapperStyle={{ zIndex: 100 }} content={this.renderTooltip} />
-          <Scatter data={data02} fill='#8884d8'/>
+          <Tooltip cursor={{ strokeDasharray: '3 3' }} wrapperStyle={{ zIndex: 100 }} content={this.renderTooltip} />
+          <Scatter data={data02} fill="#8884d8" />
         </ScatterChart>
 
-        <ScatterChart width={800} height={60} margin={{top: 10, right: 0, bottom: 0, left: 0}}>
+        <ScatterChart
+          width={800}
+          height={60}
+          margin={{
+            top: 10, right: 0, bottom: 0, left: 0,
+          }}
+        >
           <XAxis type="category" dataKey="hour" name="hour" interval={0} tick={{ fontSize: 0 }} tickLine={{ transform: 'translate(0, -6)' }} />
-          <YAxis type="number" dataKey="index" height={10} width={80} tick={false} tickLine={false} axisLine={false} label={{ value: 'Thursday', position: 'insideRight' }}/>
+          <YAxis type="number" dataKey="index" height={10} width={80} tick={false} tickLine={false} axisLine={false} label={{ value: 'Thursday', position: 'insideRight' }} />
           <ZAxis type="number" dataKey="value" domain={domain} range={range} />
-          <Tooltip cursor={{strokeDasharray: '3 3'}} wrapperStyle={{ zIndex: 100 }} content={this.renderTooltip} />
-          <Scatter data={data01} fill='#8884d8'/>
+          <Tooltip cursor={{ strokeDasharray: '3 3' }} wrapperStyle={{ zIndex: 100 }} content={this.renderTooltip} />
+          <Scatter data={data01} fill="#8884d8" />
         </ScatterChart>
 
-        <ScatterChart width={800} height={60} margin={{top: 10, right: 0, bottom: 0, left: 0}}>
+        <ScatterChart
+          width={800}
+          height={60}
+          margin={{
+            top: 10, right: 0, bottom: 0, left: 0,
+          }}
+        >
           <XAxis type="category" dataKey="hour" name="hour" interval={0} tick={{ fontSize: 0 }} tickLine={{ transform: 'translate(0, -6)' }} />
-          <YAxis type="number" dataKey="index" height={10} width={80} tick={false} tickLine={false} axisLine={false} label={{ value: 'Friday', position: 'insideRight' }}/>
+          <YAxis type="number" dataKey="index" height={10} width={80} tick={false} tickLine={false} axisLine={false} label={{ value: 'Friday', position: 'insideRight' }} />
           <ZAxis type="number" dataKey="value" domain={domain} range={range} />
-          <Tooltip cursor={{strokeDasharray: '3 3'}} wrapperStyle={{ zIndex: 100 }} content={this.renderTooltip} />
-          <Scatter data={data02} fill='#8884d8'/>
+          <Tooltip cursor={{ strokeDasharray: '3 3' }} wrapperStyle={{ zIndex: 100 }} content={this.renderTooltip} />
+          <Scatter data={data02} fill="#8884d8" />
         </ScatterChart>
 
-        <ScatterChart width={800} height={60} margin={{top: 10, right: 0, bottom: 0, left: 0}}>
+        <ScatterChart
+          width={800}
+          height={60}
+          margin={{
+            top: 10, right: 0, bottom: 0, left: 0,
+          }}
+        >
           <XAxis type="category" dataKey="hour" name="hour" interval={0} tickLine={{ transform: 'translate(0, -6)' }} />
-          <YAxis type="number" dataKey="index" height={10} width={80} tick={false} tickLine={false} axisLine={false} label={{ value: 'Saturday', position: 'insideRight' }}/>
+          <YAxis type="number" dataKey="index" height={10} width={80} tick={false} tickLine={false} axisLine={false} label={{ value: 'Saturday', position: 'insideRight' }} />
           <ZAxis type="number" dataKey="value" domain={domain} range={range} />
-          <Tooltip cursor={{strokeDasharray: '3 3'}} wrapperStyle={{ zIndex: 100 }} content={this.renderTooltip} />
-          <Scatter data={data01} fill='#8884d8'/>
+          <Tooltip cursor={{ strokeDasharray: '3 3' }} wrapperStyle={{ zIndex: 100 }} content={this.renderTooltip} />
+          <Scatter data={data01} fill="#8884d8" />
         </ScatterChart>
       </div>
     );
   }
-};
+}

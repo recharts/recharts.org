@@ -3,13 +3,13 @@ var fs = require('fs');
 var webpack = require('webpack');
 
 module.exports = {
+  mode: 'development',
   devtool: 'cheap-module-eval-source-map',
   entry: {
     app: [
       'webpack-hot-middleware/client',   // Automatic Refresh
       './src/app',
     ],
-    // vendor: ['react', 'react-dom', 'react-router', 'redux', 'react-redux', 'react-router-redux'],
   },
 
   output: {
@@ -29,7 +29,7 @@ module.exports = {
         include: [
           path.resolve(__dirname, 'src'),
         ],
-        use: ['react-hot-loader', 'babel-loader'],
+        use: ['babel-loader'],
       },
       {
         test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
@@ -73,15 +73,10 @@ module.exports = {
   },
 
   plugins: [
-    // new webpack.optimize.CommonsChunkPlugin({
-    //   name: 'vendor',
-    //   fileName: 'vendor.js',
-    // }),
     new webpack.DefinePlugin({
       __DEV__: true,
       __DEVTOOLS__: true,
     }),
-    new webpack.NoErrorsPlugin(),
     new webpack.HotModuleReplacementPlugin(),
   ],
 };

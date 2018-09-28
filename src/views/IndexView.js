@@ -1,7 +1,8 @@
 import React, { PureComponent } from 'react';
-import { connect } from 'react-redux';
 import { Link } from 'react-router';
-import { LineChart, Line, XAxis, YAxis, Tooltip, CartesianGrid } from 'recharts';
+import {
+  LineChart, Line, XAxis, YAxis, Tooltip, CartesianGrid,
+} from 'recharts';
 import Highlight from 'utils/Highlight';
 import { getLocaleType, localeGet } from '../utils/LocaleUtils';
 import './IndexView.scss';
@@ -9,12 +10,24 @@ import 'simple-line-icons/scss/simple-line-icons.scss';
 import users from '../docs/users/users';
 
 const data = [
-  { name: 'A', uv: 400, pv: 240, amt: 2400 },
-  { name: 'B', uv: 300, pv: 456, amt: 2400 },
-  { name: 'C', uv: 300, pv: 139, amt: 2400 },
-  { name: 'D', uv: 200, pv: 980, amt: 2400 },
-  { name: 'E', uv: 278, pv: 390, amt: 2400 },
-  { name: 'F', uv: 189, pv: 480, amt: 2400 },
+  {
+    name: 'A', uv: 400, pv: 240, amt: 2400,
+  },
+  {
+    name: 'B', uv: 300, pv: 456, amt: 2400,
+  },
+  {
+    name: 'C', uv: 300, pv: 139, amt: 2400,
+  },
+  {
+    name: 'D', uv: 200, pv: 980, amt: 2400,
+  },
+  {
+    name: 'E', uv: 278, pv: 390, amt: 2400,
+  },
+  {
+    name: 'F', uv: 189, pv: 480, amt: 2400,
+  },
 ];
 
 class IndexView extends PureComponent {
@@ -36,13 +49,28 @@ class IndexView extends PureComponent {
         <div className="desc">
           <p className="title">Recharts</p>
           <p className="subtitle">{localeGet(locale, 'home', 'solgan')}</p>
-          <p><Link to={`/${locale}/guide/installation`} className="button install-btn"><i className="icon-energy"></i> {localeGet(locale, 'home', 'install')} v1.0.0</Link></p>
-          <iframe src="https://ghbtns.com/github-btn.html?user=recharts&repo=recharts&type=star&count=true&size=large" frameBorder="0" scrolling="0" width="160px" height="30px"></iframe>
+          <p>
+            <Link to={`/${locale}/guide/installation`} className="button install-btn">
+              <i className="icon-energy" />
+              {' '}
+              {localeGet(locale, 'home', 'install')}
+              {' '}
+v1.2.0
+            </Link>
+          </p>
+          <iframe src="https://ghbtns.com/github-btn.html?user=recharts&repo=recharts&type=star&count=true&size=large" frameBorder="0" scrolling="0" width="160px" height="30px" />
         </div>
 
         <div className="examples">
           <div className="ex-code">
-            <LineChart width={500} height={300} data={data} margin={{ top: 5, right: 5, bottom: 5, left: 0 }}>
+            <LineChart
+              width={500}
+              height={300}
+              data={data}
+              margin={{
+                top: 5, right: 5, bottom: 5, left: 0,
+              }}
+            >
               <CartesianGrid stroke="#eee" strokeDasharray="5 5" />
               <XAxis dataKey="name" />
               <YAxis />
@@ -57,17 +85,17 @@ class IndexView extends PureComponent {
           <h2 className="block-title">{localeGet(locale, 'home', 'feature')}</h2>
           <ul className="feat">
             <li>
-              <i className="icon-puzzle"></i>
+              <i className="icon-puzzle" />
               <strong>{localeGet(locale, 'home', 'composable')}</strong>
               <p className="text">{localeGet(locale, 'home', 'composableContent')}</p>
             </li>
             <li>
-              <i className="icon-layers"></i>
+              <i className="icon-layers" />
               <strong>{localeGet(locale, 'home', 'reliable')}</strong>
               <p className="text">{localeGet(locale, 'home', 'reliableContent')}</p>
             </li>
             <li>
-              <i className="icon-energy"></i>
+              <i className="icon-energy" />
               <strong>{localeGet(locale, 'home', 'powerful')}</strong>
               <p className="text">{localeGet(locale, 'home', 'powerfulContent')}</p>
             </li>
@@ -78,17 +106,14 @@ class IndexView extends PureComponent {
           <h2 className="block-title">{localeGet(locale, 'home', 'whoUse')}</h2>
 
           <ul className="users">
-          {
-            users.map((entry, index) => {
-
-              return (
-                <li className="user" key={`user-${index}`}>
-                  <a href={entry.url} target="_blank" title={entry.anme}>
-                    <img src={entry.logoImgUrl} title={entry.anme} />
-                  </a>
-                </li>
-              );
-            })
+            {
+            users.map((entry, index) => (
+              <li className="user" key={`user-${index}`}>
+                <a href={entry.url} target="_blank" title={entry.anme}>
+                  <img src={entry.logoImgUrl} title={entry.anme} />
+                </a>
+              </li>
+            ))
           }
           </ul>
 
@@ -106,7 +131,7 @@ class IndexView extends PureComponent {
         </div>
 
         <div className="like block">
-          <i className="icon-rocket"></i>
+          <i className="icon-rocket" />
           <p className="text">{localeGet(locale, 'home', 'like')}</p>
           <p className="btn"><Link to={`/${locale}/guide/getting-started`} className="button getting-started-btn">{localeGet(locale, 'home', 'get-started')}</Link></p>
         </div>
