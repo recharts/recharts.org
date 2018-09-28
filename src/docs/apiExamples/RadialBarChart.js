@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-  ResponsiveContainer, RadialBarChart, RadialBar, Legend, Tooltip,
+  RadialBarChart, RadialBar, Legend, Tooltip,
 } from 'recharts';
 
 const data = [

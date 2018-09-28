@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import {
   ResponsiveContainer, ComposedChart, Line, Area, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend,
 } from 'recharts';
@@ -24,7 +24,7 @@ const data = [
   },
 ];
 
-export default class Example extends Component {
+export default class Example extends PureComponent {
   static jsfiddleUrl = '//jsfiddle.net/alidingling/9wnuL90w/';
 
   render() {

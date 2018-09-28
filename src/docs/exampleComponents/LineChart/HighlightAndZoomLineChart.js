@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import {
   Label, LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip, ReferenceArea,
 } from 'recharts';
@@ -50,7 +50,7 @@ const initialState = {
   animation: true,
 };
 
-export default class HighlightAndZoomDemo extends Component {
+export default class HighlightAndZoomDemo extends PureComponent {
   static jsfiddleUrl = 'https://jsfiddle.net/alidingling/nhpemhgs/';
 
   constructor(props) {

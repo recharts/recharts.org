@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import {
   LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend,
 } from 'recharts';
@@ -47,7 +47,7 @@ const CustomizedDot = (props) => {
   );
 };
 
-export default class SimpleLineChart extends Component {
+export default class SimpleLineChart extends PureComponent {
   static jsfiddleUrl = 'https://jsfiddle.net/alidingling/9y9zrpjp/';
 
   render() {

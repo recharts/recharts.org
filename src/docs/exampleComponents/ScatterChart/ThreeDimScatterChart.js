@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import {
   ScatterChart, Scatter, XAxis, YAxis, ZAxis, CartesianGrid, Tooltip, Legend,
 } from 'recharts';
@@ -14,7 +14,7 @@ const data02 = [
   { x: 180, y: 280, z: 260 }, { x: 210, y: 220, z: 230 },
 ];
 
-export default class Example extends Component {
+export default class Example extends PureComponent {
   static jsfiddleUrl = 'https://jsfiddle.net/alidingling/3mw50Lc9/';
 
   render() {

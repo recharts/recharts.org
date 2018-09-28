@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import {
   LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend,
 } from 'recharts';
@@ -27,16 +27,17 @@ const data = [
   },
 ];
 
-const CustomizedLabel = React.createClass({
+class CustomizedLabel extends PureComponent {
   render() {
     const {
       x, y, stroke, value,
     } = this.props;
 
     return <text x={x} y={y} dy={-4} fill={stroke} fontSize={10} textAnchor="middle">{value}</text>;
-  },
-});
-const CustomizedAxisTick = React.createClass({
+  }
+}
+
+class CustomizedAxisTick extends PureComponent {
   render() {
     const {
       x, y, stroke, payload,
@@ -47,10 +48,10 @@ const CustomizedAxisTick = React.createClass({
        <text x={0} y={0} dy={16} textAnchor="end" fill="#666" transform="rotate(-35)">{payload.value}</text>
      </g>
     );
-  },
-});
+  }
+}
 
-export default class SimpleLineChart extends Component {
+export default class SimpleLineChart extends PureComponent {
   static jsfiddleUrl = 'https://jsfiddle.net/alidingling/5br7g9d6/';
 
   render() {

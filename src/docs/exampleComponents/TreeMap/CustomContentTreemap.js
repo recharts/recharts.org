@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import { Treemap } from 'recharts';
 
 const data = [
@@ -136,7 +136,7 @@ const data = [
 
 const COLORS = ['#8889DD', '#9597E4', '#8DC77B', '#A5D297', '#E2CF45', '#F8C12D'];
 
-const CustomizedContent = React.createClass({
+class CustomizedContent extends PureComponent {
   render() {
     const {
       root, depth, x, y, width, height, index, payload, colors, rank, name,
@@ -184,11 +184,10 @@ const CustomizedContent = React.createClass({
         }
       </g>
     );
-  },
-});
+  }
+}
 
-
-export default class Example extends Component {
+export default class Example extends PureComponent {
   static jsfiddleUrl = 'https://jsfiddle.net/alidingling/Ldvvz2ak/';
 
   render() {

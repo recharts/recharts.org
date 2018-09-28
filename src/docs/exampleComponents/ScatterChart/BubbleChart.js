@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import _ from 'lodash';
 import {
-  ScatterChart, Scatter, XAxis, YAxis, ZAxis, CartesianGrid, Tooltip,
+  ScatterChart, Scatter, XAxis, YAxis, ZAxis, Tooltip,
   Legend,
 } from 'recharts';
 
@@ -67,7 +67,7 @@ const parseDomain = () => [
   ]),
 ];
 
-export default class Example extends Component {
+export default class Example extends PureComponent {
   static jsfiddleUrl = 'https://jsfiddle.net/alidingling/9kvhed7a/';
 
   renderTooltip = (props) => {

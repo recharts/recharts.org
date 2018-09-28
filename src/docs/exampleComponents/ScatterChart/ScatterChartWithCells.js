@@ -1,7 +1,6 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import {
-  ScatterChart, Scatter, XAxis, YAxis, ZAxis, CartesianGrid, Tooltip,
-  Legend, Cell,
+  ScatterChart, Scatter, XAxis, YAxis, CartesianGrid, Tooltip, Cell
 } from 'recharts';
 import { scaleOrdinal } from 'd3-scale';
 import { schemeCategory10 } from 'd3-scale-chromatic';
@@ -17,7 +16,7 @@ const data = [
   { x: 110, y: 280, z: 200 },
 ];
 
-export default class Example extends Component {
+export default class Example extends PureComponent {
   static jsfiddleUrl = 'https://jsfiddle.net/alidingling/9Lfxjjty/';
 
   render() {

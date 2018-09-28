@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import {
   ResponsiveContainer, PieChart, Pie, Legend,
 } from 'recharts';
@@ -8,7 +8,7 @@ const data = [
   { name: 'Group C', value: 300 }, { name: 'Group D', value: 200 },
 ];
 
-export default class Example extends Component {
+export default class Example extends PureComponent {
   static jsfiddleUrl = '//jsfiddle.net/alidingling/6okmehja/';
 
   render() {

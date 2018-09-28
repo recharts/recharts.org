@@ -1,4 +1,5 @@
-import React, { PropTypes, cloneElement, Component } from 'react';
+import React, { PureComponent } from 'react';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router';
 import { connect } from 'react-redux';
 import Helmet from 'react-helmet';
@@ -18,7 +19,7 @@ import './APIView.scss';
     page: (paths && paths.length === 4) ? paths[3] : 'AreaChart',
   };
 })
-class APIView extends Component {
+class APIView extends PureComponent {
   static propTypes = {
     page: PropTypes.string,
   };

@@ -1,8 +1,9 @@
-import React, { Component, PropTypes } from 'react';
+import React, { PureComponent } from 'react';
+import PropTypes from 'prop-types';
 import { Provider } from 'react-redux';
 import { Router } from 'react-router';
 
-class Root extends Component {
+class Root extends PureComponent {
   static propTypes = {
     routes: PropTypes.object.isRequired,
     store: PropTypes.object.isRequired,

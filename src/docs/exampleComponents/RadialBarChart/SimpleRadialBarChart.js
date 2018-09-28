@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import { RadialBarChart, RadialBar, Legend } from 'recharts';
 
 const data = [
@@ -32,7 +32,7 @@ const style = {
 };
 
 
-export default class Example extends Component {
+export default class Example extends PureComponent {
   static jsfiddleUrl = 'https://jsfiddle.net/alidingling/9km41z5z/';
 
   render() {

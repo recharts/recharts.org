@@ -1,4 +1,5 @@
-import React, { PropTypes, Component } from 'react';
+import React, { PureComponent } from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import Helmet from 'react-helmet';
 import Examples from 'docs/exampleComponents';
@@ -32,7 +33,7 @@ const parseExampleComponent = (compName) => {
     page: (paths && paths.length === 4) ? paths[3] : 'SimpleLineChart',
   };
 })
-class ExamplesView extends Component {
+class ExamplesView extends PureComponent {
   static propTypes = {
     page: PropTypes.string,
   };

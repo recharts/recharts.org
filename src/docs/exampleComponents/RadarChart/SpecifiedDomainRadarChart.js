@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import {
   Radar, RadarChart, PolarGrid, Legend,
   PolarAngleAxis, PolarRadiusAxis,
@@ -25,7 +25,7 @@ const data = [
   },
 ];
 
-export default class Example extends Component {
+export default class Example extends PureComponent {
   static jsfiddleUrl = 'https://jsfiddle.net/alidingling/dpgb3xjq/';
 
   render() {

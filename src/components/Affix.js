@@ -1,7 +1,5 @@
-/**
- * @file 固钉
- */
-import React, { PropTypes, Component } from 'react';
+import React, { PureComponent } from 'react';
+import PropTypes from 'prop-types';
 import ReactDOM from 'react-dom';
 import _ from 'lodash';
 import Events from 'oui-dom-events';
@@ -9,12 +7,10 @@ import DOMUtils from 'oui-dom-utils';
 import classnames from 'classnames';
 import './Affix.scss';
 
-class Affix extends Component {
+class Affix extends PureComponent {
   static propTypes = {
-    // default
     prefixCls: PropTypes.string,
     className: PropTypes.string,
-    //
     children: PropTypes.node.isRequired,
     offsetTop: PropTypes.number,
   };

@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import {
   PieChart, Pie, Sector, Cell,
 } from 'recharts';
@@ -9,7 +9,7 @@ const data = [
   { name: 'Group E', value: 278 }, { name: 'Group F', value: 189 },
 ];
 
-export default class Example extends Component {
+export default class Example extends PureComponent {
   static jsfiddleUrl = 'https://jsfiddle.net/alidingling/pb1jwdt1/';
 
   render() {

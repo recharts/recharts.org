@@ -1,5 +1,4 @@
 import _ from 'lodash';
-import invariant from 'invariant';
 import Locale from '../locale';
 
 export const localeGet = (locale, component, path) => _.get(Locale, `${locale}.${component}.${path}`);

@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-  ResponsiveContainer, ScatterChart, XAxis, YAxis, Scatter, CartesianGrid, Tooltip, ReferenceDot,
+  ScatterChart, XAxis, YAxis, Scatter, CartesianGrid, Tooltip, ReferenceDot,
 } from 'recharts';
 
 const data = [

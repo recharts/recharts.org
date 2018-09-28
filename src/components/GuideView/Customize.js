@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Highlight from 'utils/Highlight';
 import {
   BarChart, Bar, LineChart, Legend, Line, XAxis, YAxis, Tooltip, CartesianGrid,

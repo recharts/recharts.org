@@ -1,9 +1,7 @@
 import React from 'react';
 import {
-  PieChart, Pie, Cell, BarChart, Bar, XAxis, YAxis, CartesianGrid, Label,
-  LabelList,
+  BarChart, Bar, XAxis, YAxis, CartesianGrid, Label, LabelList,
 } from 'recharts';
-import { localeGet } from '../../utils/LocaleUtils';
 
 const data = [
   {

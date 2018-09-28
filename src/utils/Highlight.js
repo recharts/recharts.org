@@ -1,8 +1,9 @@
-import React, { PropTypes, Component } from 'react';
+import React, { PureComponent } from 'react';
+import PropTypes from 'prop-types';
 import ReactDOM from 'react-dom';
 import hljs from 'highlight.js';
 
-class Highlight extends Component {
+class Highlight extends PureComponent {
   static propTypes = {
     innerHTML: PropTypes.bool,
     className: PropTypes.string,

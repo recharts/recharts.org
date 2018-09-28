@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import {
   AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip,
 } from 'recharts';
@@ -27,7 +27,6 @@ const data = [
   },
 ];
 
-
 const gradientOffset = () => {
   const dataMax = Math.max(...data.map(i => i.uv));
   const dataMin = Math.min(...data.map(i => i.uv));
@@ -44,7 +43,7 @@ const gradientOffset = () => {
 
 const off = gradientOffset();
 
-export default class Example extends Component {
+export default class Example extends PureComponent {
   static jsfiddleUrl = 'https://jsfiddle.net/alidingling/64v6ocdx/';
 
   render() {

@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import { connect } from 'react-redux';
 import { Installation, GettingStarted, Customize } from 'components/GuideView';
 import { Link } from 'react-router';
@@ -14,7 +14,7 @@ const modules = ['installation', 'getting-started', 'customize'];
     page: (paths && paths.length === 4) ? paths[3] : modules[0],
   };
 })
-class GuideView extends Component {
+class GuideView extends PureComponent {
   renderGuide(locale) {
     const { page } = this.props;
 
