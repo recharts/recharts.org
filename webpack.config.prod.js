@@ -1,8 +1,9 @@
-var path = require('path');
-var fs = require('fs');
-var webpack = require('webpack');
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
-var cssnano = require('cssnano');
+const path = require('path');
+const webpack = require('webpack');
+const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
+const cssnano = require('cssnano');
 
 module.exports = {
   mode: 'production',
@@ -38,7 +39,7 @@ module.exports = {
       {
         test: /\.scss$/,
         use: [
-          'style-loader',
+          MiniCssExtractPlugin.loader,
           'css-loader',
           {
             loader: 'sass-loader',
@@ -68,16 +69,25 @@ module.exports = {
     },
   },
 
+  optimization: {
+    minimizer: [
+      new UglifyJsPlugin({
+        cache: true,
+        parallel: true,
+        sourceMap: true,
+      }),
+      new OptimizeCSSAssetsPlugin({}),
+    ]
+  },
+
   plugins: [
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify('production'),
       __DEV__: false,
       __DEVTOOLS__: false,
     }),
-    new ExtractTextPlugin({
-      filename: 'style.css',
-      disable: false,
-      allChunks: true,
+    new MiniCssExtractPlugin({
+      filename: 'style.css'
     }),
     new webpack.LoaderOptionsPlugin({
       options: {
