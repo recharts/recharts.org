@@ -154,7 +154,7 @@ export default {
       defaultVal: '5',
       isOptional: false,
       desc: {
-        'en-US': 'The minimum gab between two adjacent labels.',
+        'en-US': 'The minimum gap between two adjacent labels.',
         'zh-CN': '两个刻度之前最小间隔宽度。',
       },
     }, {
