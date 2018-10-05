@@ -85,12 +85,11 @@ footer {
   > .sidebar {
     position: fixed;
     top: 60px;
+    bottom: 0;
     width: 310px;
     padding-left: 50px;
     padding-top: 30px;
-    height: 100%;
     overflow: auto;
-    padding-bottom: 100px;
 
     .sidebar-cate {
       > h2 {
@@ -113,6 +112,10 @@ footer {
             color: $brand-primary;
           }
         }
+      }
+
+      &:last-child {
+        margin-bottom: 30px;
       }
     }
 
