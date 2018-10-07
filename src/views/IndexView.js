@@ -55,10 +55,10 @@ class IndexView extends PureComponent {
               {' '}
               {localeGet(locale, 'home', 'install')}
               {' '}
-v1.3.1
+v1.3.2
             </Link>
           </p>
-          <iframe src="https://ghbtns.com/github-btn.html?user=recharts&repo=recharts&type=star&count=true&size=large" frameBorder="0" scrolling="0" width="160px" height="30px" />
+          <iframe title="star" src="https://ghbtns.com/github-btn.html?user=recharts&repo=recharts&type=star&count=true&size=median" frameBorder="0" scrolling="0" width="120px" height="22px" />
         </div>
 
         <div className="examples">

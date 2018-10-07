@@ -11,10 +11,6 @@ class Root extends PureComponent {
     render: PropTypes.func.isRequired,
   };
 
-  shouldComponentUpdate() {
-    return false;
-  }
-
   render() {
     const {
       store, history, routes, render,
