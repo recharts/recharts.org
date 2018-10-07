@@ -154,7 +154,7 @@ export default {
       defaultVal: '5',
       isOptional: false,
       desc: {
-        'en-US': 'The minimum gab between two adjacent labels.',
+        'en-US': 'The minimum gap between two adjacent labels.',
         'zh-CN': '两个刻度之前最小间隔宽度。',
       },
     }, {
@@ -267,7 +267,7 @@ export default {
       isOptional: false,
       desc: {
         'en-US': `If set to 'auto', the scale function is decided by the type of chart, and the props type.
-When set to 'time', make sure to also set type to 'number' and to innclude a domain.`,
+When set to 'time', make sure to also set type to 'number' and to include a domain.`,
         'zh-CN': '当值为 "auto" 时，会根据图表类型来生成 scale 函数，也可以传入自定义的函数作为 scale 函数。',
       },
       format: [
