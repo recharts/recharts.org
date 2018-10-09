@@ -12,12 +12,6 @@ export default [
   },
 
   {
-    name: 'HoopHubs篮圈',
-    url: 'http://www.hoophubs.com/',
-    logoImgUrl: '//camo.githubusercontent.com/14f4e6843fd1c12788c150c74927576a60d0312c/687474703a2f2f636f6d6d756e6974792e686f6f70687562732e636f6d2f75706c6f6164732f64656661756c742f6f726967696e616c2f31582f323232633134363735643439633362386132353836616339663538666335386133613961383464322e6a706567',
-  },
-
-  {
     name: 'Fyndiq',
     url: 'https://fyndiq.se',
     logoImgUrl: '//media.fyndiq.se/upload/press/logo-fyndiq-3-1.png',
