@@ -27,7 +27,10 @@ const Installation = ({ locale }) => (
     </p>
     <Highlight className="html">
       {
-'  <script src="https://unpkg.com/recharts/umd/Recharts.min.js"></script>'
+`<script src="https://unpkg.com/react/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/react-dom/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/prop-types/prop-types.min.js"></script>
+<script src="https://unpkg.com/recharts/umd/Recharts.min.js"></script>`
     }
     </Highlight>
     <p className="paragraph-title">
