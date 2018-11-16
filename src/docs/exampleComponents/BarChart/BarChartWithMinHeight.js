@@ -46,6 +46,8 @@ const renderCustomizedLabel = (props) => {
 export default class Example extends PureComponent {
   static jsfiddleUrl = 'https://jsfiddle.net/alidingling/a5Leskck/';
 
+  static codesandboxUrl = 'https://codesandbox.io/s/k3wlj13wlo';
+
   render() {
     return (
       <BarChart
