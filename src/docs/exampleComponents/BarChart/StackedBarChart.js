@@ -30,6 +30,8 @@ const data = [
 export default class Example extends PureComponent {
   static jsfiddleUrl = 'https://jsfiddle.net/alidingling/90v76x08/';
 
+  static codesandboxUrl = 'https://codesandbox.io/s/xl591k88jp';
+
   render() {
     return (
       <BarChart
