@@ -61,6 +61,8 @@ const CustomTooltip = ({ active, payload, label }) => {
 export default class Example extends PureComponent {
   static jsfiddleUrl = 'https://jsfiddle.net/alidingling/vxq4ep63/';
 
+  static codesandboxUrl = 'https://codesandbox.io/s/1z0wz012p3';
+
   render() {
     return (
       <BarChart
