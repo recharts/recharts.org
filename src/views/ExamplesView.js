@@ -96,6 +96,19 @@ Try the demo in jsfiddle &gt;&gt;
                     </p>
                   ) : null
                 }
+                {
+                  ExampleComponent.codesandboxUrl ? (
+                    <p className="example-link-wrapper">
+                      <a
+                        className="example-codesandbox-link"
+                        target="_blank"
+                        href={ExampleComponent.codesandboxUrl}
+                      >
+Try the demo in codesandbox &gt;&gt;
+                      </a>
+                    </p>
+                  ) : null
+                }
               </div>
             ) : null
           }
