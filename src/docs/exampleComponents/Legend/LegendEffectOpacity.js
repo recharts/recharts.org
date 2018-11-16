@@ -30,6 +30,8 @@ const data = [
 export default class Example extends PureComponent {
   static jsfiddleUrl = 'https://jsfiddle.net/alidingling/1p40zzfe/';
 
+  static codesandboxUrl = 'https://codesandbox.io/s/p91y04j61j';
+
   state = {
     opacity: {
       uv: 1,
