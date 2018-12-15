@@ -52,6 +52,20 @@ export default {
         isExternal: true,
       }],
     }, {
+      name: 'contentStyle',
+      type: 'Object',
+      defaultVal: '{}',
+      isOptional: false,
+      desc: {
+        'en-US': 'The style of tooltip content which is a dom element.',
+        'zh-CN': 'Tooltip 内部展示的内容 (div) 的样式。',
+      },
+      examples: [{
+        name: 'React Inline style',
+        url: 'https://facebook.github.io/react/tips/inline-styles.html',
+        isExternal: true,
+      }],
+    }, {
       name: 'labelStyle',
       type: 'Object',
       defaultVal: '{}',
