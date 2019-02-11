@@ -134,6 +134,23 @@ const renderLegend = (props) => {
 <Legend content={renderLegend} />`,
       ],
     }, {
+      name: 'formatter',
+      type: 'Function',
+      defaultVal: 'null',
+      isOptional: true,
+      desc: {
+        'en-US': 'The formatter function of each text in legend.',
+        'zh-CN': '每个项目中“文本”的格式化函数。',
+      },
+      format: [
+        '(value, entry, index) => ()',
+      ],
+      examples: [{
+        name: 'Render colorful legend texts',
+        url: 'https://jsfiddle.net/alidingling/32zbsx71/1/',
+        isExternal: true,
+      }],
+    }, {
       name: 'wrapperStyle',
       type: 'Object',
       defaultVal: 'null',
