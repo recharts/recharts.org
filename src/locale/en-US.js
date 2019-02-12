@@ -23,9 +23,6 @@ const map = {
     edit: 'edit the wiki!',
     logoSize: 'For your logo, please submit a 300x100 (3:1) img.',
   },
-  api: {
-    placeholder: 'Search',
-  },
   examples: {
     placeholder: 'Search',
   },
@@ -66,7 +63,7 @@ const map = {
     'step-4-title': '4. Add interactions',
     'step-4-desc': 'We can easily drop-in a Tooltip component and have rich hovering tooltip functionality.',
     'step-5-title': '5. Customize your components',
-    'step-5-desc': 'For example, you can edit your x-axis label very easily by passing in a custom axis tick component. You can do similar things with other graphs as well, such as custom shapes for bar charts and much more!',
+    'step-5-desc': 'For example, you can edit your x-axis label very easily by passing in a custom axis tick render function. You can do similar things with other graphs as well, such as custom shapes for bar charts and much more!',
   },
   customize: {
     customize: 'Customize',
@@ -92,6 +89,9 @@ const map = {
     examples: 'Examples: ',
     parent: 'Parent Components',
     children: 'Child Components',
+    placeholder: 'Search',
+    showData: 'Show data format',
+    hideData: 'Hide data format',
   },
   'design-disciplines': {
     'design-disciplines': 'Design Disciplines',

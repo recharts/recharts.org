@@ -42,7 +42,11 @@ const example = () => {
 };
 
 const exampleCode = `
-  <ScatterChart width={730} height={250} margin={{ top: 20, right: 20, bottom: 20, left: 20 }}>
+<ScatterChart 
+  width={730} 
+  height={250} 
+  margin={{ top: 20, right: 20, bottom: 20, left: 20 }}
+>
     <CartesianGrid />
     <XAxis dataKey="x" type="number" name="stature" unit="cm" />
     <YAxis dataKey="y" type="number" name="weight" unit="kg" />
@@ -56,5 +60,6 @@ export default [
   {
     demo: example,
     code: exampleCode,
+    dataCode: `const data = ${JSON.stringify(data, null, 2)}`,
   },
 ];

@@ -23,9 +23,6 @@ const map = {
     edit: '编辑 wiki!',
     logoSize: '您需要提供 300x100 (3:1) 的图片作为 logo 。',
   },
-  api: {
-    placeholder: 'Search',
-  },
   examples: {
     placeholder: 'Search',
   },
@@ -66,7 +63,7 @@ const map = {
     'step-4-title': '4. 丰富交互',
     'step-4-desc': '添加 Tooltip 组件就能很简单的实现浮窗展示提示信息的功能。',
     'step-5-title': '5. 实现自定义功能',
-    'step-5-desc': '例如，你可以通过传入自定义的刻度组件来实现定制化的功能，当然其他的组件也支持类似的功能，比如 Bar 组件也能接收自定义的 shape 组件或者 shape 函数。',
+    'step-5-desc': '例如，你可以通过传入自定义的刻度函数来实现定制化的功能，当然其他的组件也支持类似的功能，比如 Bar 组件也能接收自定义的 shape 组件或者 shape 函数。',
   },
   customize: {
     customize: '组件自定义',
@@ -92,6 +89,9 @@ const map = {
     examples: '示例：',
     parent: '父组件',
     children: '子组件',
+    placeholder: 'Search',
+    showData: '显示数据格式',
+    hideData: '隐藏数据格式',
   },
   'design-disciplines': {
     'design-disciplines': '设计原则',

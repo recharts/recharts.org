@@ -67,5 +67,6 @@ export default [
   </Bar>
 </BarChart>
 `,
+    dataCode: `const data = ${JSON.stringify(data, null, 2)}`,
   },
 ];

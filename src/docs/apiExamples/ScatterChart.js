@@ -53,5 +53,9 @@ export default [
   {
     demo: example,
     code: exampleCode,
+    dataCode: `
+    const data01 = ${JSON.stringify(data01, null, 2)};
+const data02 = ${JSON.stringify(data02, null, 2)};
+    `,
   },
 ];

@@ -5,6 +5,24 @@
     .example-list {
       > li {
         padding: 10px 0;
+
+        .code {
+          position: relative;
+          .view-data-button {
+            position: absolute;
+            right: 0;
+            top: 0;
+            display: block;
+            padding: 0 10px;
+            line-height: 28px;
+            background-color: #e5e5e5;
+            border: none;
+
+            &:hover {
+              background-color: #e0e0e0;
+            }
+          }
+        }
       }
     }
   }

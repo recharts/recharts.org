@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const CustomAxisTick = ({ x, y, payload }) => {
+const renderCustomAxisTick = ({ x, y, payload }) => {
   let path = '';
 
   switch (payload.value) {
@@ -34,10 +34,10 @@ const CustomAxisTick = ({ x, y, payload }) => {
   );
 };
 
-CustomAxisTick.propTypes = {
-  x: PropTypes.number,
-  y: PropTypes.number,
-  payload: PropTypes.object,
-};
+// CustomAxisTick.propTypes = {
+//   x: PropTypes.number,
+//   y: PropTypes.number,
+//   payload: PropTypes.object,
+// };
 
-export default CustomAxisTick;
+export default renderCustomAxisTick;

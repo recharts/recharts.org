@@ -162,5 +162,6 @@ export default [
   {
     demo: example,
     code: exampleCode,
+    dataCode: `const data = ${JSON.stringify(data, null, 2)}`,
   },
 ];

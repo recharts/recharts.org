@@ -138,7 +138,12 @@ export default [
   {
     demo: chartExample,
     code: `
-<BarChart width={730} height={250} data={data} margin={{ top: 15, right: 30, left: 20, bottom: 5 }}>
+<BarChart 
+  width={730} 
+  height={250} 
+  data={data} 
+  margin={{ top: 15, right: 30, left: 20, bottom: 5 }}
+>
   <CartesianGrid strokeDasharray="3 3" />
   <XAxis dataKey="name">
     <Label value="Pages of my website" offset={0} position="insideBottom" />
@@ -148,6 +153,7 @@ export default [
     <LabelList dataKey="name" position="top" />
   </Bar>
 </BarChart>
-`,
+    `,
+    dataCode: `const data = ${JSON.stringify(data, null, 2)}`,
   },
 ];

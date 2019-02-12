@@ -1,4 +1,6 @@
+/* eslint-disable class-methods-use-this */
 import React, { PureComponent } from 'react';
+import _ from 'lodash';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router';
 import { connect } from 'react-redux';
@@ -24,31 +26,74 @@ class APIView extends PureComponent {
     page: PropTypes.string,
   };
 
+  state = {
+    indexesPage: '',
+    activeDataCodeIndexes: [],
+  };
+
+  handleSwitchDataCode = (index, e) => {
+    const { page } = this.props;
+    const { activeDataCodeIndexes, indexesPage } = this.state;
+    const indexes = page === indexesPage ? activeDataCodeIndexes : [];
+    const i = indexes.indexOf(index);
+
+    if (i >= 0) {
+      this.setState({
+        indexesPage: page,
+        activeDataCodeIndexes: [...indexes.slice(0, i - 1), ...indexes.slice(i + 1)],
+      });
+    } else {
+      this.setState({
+        indexesPage: page,
+        activeDataCodeIndexes: [...indexes, index],
+      });
+    }
+  }
+
   renderExamples(examples, locale) {
     if (!examples || !examples.length) { return null; }
+
+    const { page } = this.props;
+    const { activeDataCodeIndexes, indexesPage } = this.state;
+
 
     return (
       <div className="examples">
         <ul className="example-list">
           {
-            examples.map((item, i) => (
-              <li key={`example-${i}`}>
-                {
-                  item.demo ? (
-                    <div className="iframe-wrapper">
-                      {item.demo(locale)}
-                    </div>
-                  ) : null
-                }
-                {
-                  item.code ? (
-                    <div className="code">
-                      <Highlight className="e4x">{item.code}</Highlight>
-                    </div>
-                  ) : null
-                }
-              </li>
-            ))
+            examples.map((item, i) => {
+              const isDataCodeActive = page === indexesPage && activeDataCodeIndexes.indexOf(i) >= 0;
+
+              return (
+                <li key={`example-${i}`}>
+                  {
+                    item.demo ? (
+                      <div className="iframe-wrapper">
+                        {item.demo(locale)}
+                      </div>
+                    ) : null
+                  }
+                  {
+                    item.code ? (
+                      <div className="code">
+                        {item.dataCode ? (
+                          <button type="button" className="view-data-button" onClick={this.handleSwitchDataCode.bind(this, i)} onKeyPress={this.handleSwitchDataCode.bind(this, i)}>
+                            {localeGet(locale, 'api', isDataCodeActive ? 'hideData' : 'showData')}
+                          </button>
+                        ) : null}
+                        <Highlight className="e4x">
+                          {_.trim(item.dataCode && isDataCodeActive ? `
+                            ${item.dataCode}
+  
+                            ${item.code}
+                          ` : item.code)}
+                        </Highlight>
+                      </div>
+                    ) : null
+                  }
+                </li>
+              );
+            })
           }
         </ul>
       </div>
