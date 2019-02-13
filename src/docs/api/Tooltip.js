@@ -166,11 +166,12 @@ export default {
       defaultVal: 'null',
       isOptional: true,
       desc: {
-        'en-US': 'The formatter function of value in tooltip.',
-        'zh-CN': '每个项目中“数值”的格式化函数。',
+        'en-US': 'The formatter function of value in tooltip. If you return an array, the first entry will be the formatted "value", and the second entry will be the formatted "name"',
+        'zh-CN': '每个项目中“数值”的格式化函数。 如果函数返回值为数组格式，第一个元素是格式化后的“数值”，第二个元素是格式化后的“名称”',
       },
       format: [
-        '(value, name, props) => ()',
+        '(value, name, props) => ( return "formatted value" )',
+        '(value, name, props) => ( return ["formatted value", "formatted name"， ] )',
       ],
     }, {
       name: 'labelFormatter',
