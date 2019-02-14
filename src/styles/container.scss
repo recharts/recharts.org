@@ -7,7 +7,7 @@ header {
   box-shadow: 0 0 4px rgba(0,0,0,0.25);
 
   .header-wrapper {
-    width: 1000px;
+    width: 1200px;
     height: 60px;
     line-height: 60px;
     margin: 0 auto;
@@ -86,8 +86,7 @@ footer {
     position: fixed;
     top: 60px;
     bottom: 0;
-    width: 310px;
-    padding-left: 50px;
+    width: 260px;
     padding-top: 30px;
     overflow: auto;
 
@@ -122,8 +121,8 @@ footer {
   }
 
   > .content {
-    width: 1100px;
-    padding: 0 50px 0 320px;
+    width: 1200px;
+    padding-left: 260px;
 
     .page-title {
       padding-top: 30px;
@@ -148,7 +147,7 @@ footer {
 }
 
 .page-guide, .page-api, .page-examples {
-  width: 1100px;
+  width: 1200px;
   margin: 0 auto;
 }
 

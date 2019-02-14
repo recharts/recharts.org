@@ -27,13 +27,13 @@ const data = [
   },
 ];
 
-export default class SimpleLineChart extends PureComponent {
+export default class Example extends PureComponent {
   static jsfiddleUrl = 'https://jsfiddle.net/alidingling/nptzh7ez/';
 
   render() {
     return (
       <LineChart
-        width={600}
+        width={500}
         height={300}
         data={data}
         margin={{

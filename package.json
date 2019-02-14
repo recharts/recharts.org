@@ -18,7 +18,7 @@
   "devDependencies": {
     "@babel/cli": "^7.1.0",
     "@babel/core": "^7.0.0",
-    "@babel/plugin-proposal-class-properties": "^7.1.0",
+    "@babel/plugin-proposal-class-properties": "^7.3.0",
     "@babel/plugin-proposal-decorators": "^7.0.0",
     "@babel/plugin-proposal-export-default-from": "^7.0.0",
     "@babel/plugin-proposal-export-namespace-from": "^7.0.0",
@@ -43,6 +43,7 @@
     "express": "^4.16.0",
     "file-loader": "^2.0.0",
     "mini-css-extract-plugin": "^0.4.3",
+    "monaco-editor-webpack-plugin": "^1.7.0",
     "node-sass": "^4.9.0",
     "optimize-css-assets-webpack-plugin": "^5.0.1",
     "react-hot-loader": "^4.3.0",
@@ -71,6 +72,7 @@
     "react-codemirror": "^1.0.0",
     "react-dom": "^16.5.0",
     "react-helmet": "^5.2.0",
+    "react-monaco-editor": "^0.23.0",
     "react-redux": "^5.0.0",
     "react-router": "~3.0.0",
     "react-router-redux": "~4.0.7",
@@ -80,7 +82,8 @@
     "redux-thunk": "^2.3.0",
     "rimraf": "^2.5.4",
     "scroll-behavior": "^0.9.1",
-    "simple-line-icons": "^2.3.2"
+    "simple-line-icons": "^2.3.2",
+    "cross-fetch": "3.0.1"
   },
   "license": "MIT"
 }

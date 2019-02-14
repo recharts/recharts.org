@@ -1,5 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
+const MonacoWebpackPlugin = require('monaco-editor-webpack-plugin');
 
 module.exports = {
   mode: 'development',
@@ -27,6 +28,7 @@ module.exports = {
         test: /\.jsx?$/,
         include: [
           path.resolve(__dirname, 'src'),
+          path.resolve(__dirname, 'node_modules/react-monaco-editor/src'),
         ],
         use: ['babel-loader'],
       },
@@ -37,6 +39,13 @@ module.exports = {
       {
         test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
         use: 'file-loader',
+      },
+      {
+        test: /\.css/,
+        use: ['style-loader', 'css-loader'],
+        include: [
+          path.resolve(__dirname, 'node_modules/monaco-editor'),
+        ],
       },
       {
         test: /\.scss$/,
@@ -77,5 +86,6 @@ module.exports = {
       __DEVTOOLS__: true,
     }),
     new webpack.HotModuleReplacementPlugin(),
+    new MonacoWebpackPlugin(),
   ],
 };

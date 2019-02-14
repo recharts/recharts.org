@@ -35,7 +35,7 @@ export default class Example extends PureComponent {
       <div>
         <h4>A demo of synchronized AreaCharts</h4>
         <AreaChart
-          width={600}
+          width={500}
           height={200}
           data={data}
           syncId="anyId"
@@ -51,7 +51,7 @@ export default class Example extends PureComponent {
         </AreaChart>
         <p>Maybe some other content</p>
         <AreaChart
-          width={600}
+          width={500}
           height={200}
           data={data}
           syncId="anyId"

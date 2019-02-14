@@ -32,7 +32,7 @@ export default class Example extends PureComponent {
     return (
       <ComposedChart
         layout="vertical"
-        width={600}
+        width={500}
         height={400}
         data={data}
         margin={{

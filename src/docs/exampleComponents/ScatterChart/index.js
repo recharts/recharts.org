@@ -14,5 +14,4 @@ export default {
   ScatterChartWithLabels,
   MultipleYAxesScatterChart,
   ScatterChartWithCells,
-  ScatterChartWithLabels,
 };

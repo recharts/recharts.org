@@ -2,7 +2,6 @@ import React, { PureComponent } from 'react';
 import {
   LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend,
 } from 'recharts';
-import JSONstringify from '../../../utils/JsonStringfy';
 
 const data = [
   {
@@ -28,15 +27,13 @@ const data = [
   },
 ];
 
-export default class SimpleLineChart extends PureComponent {
+export default class Example extends PureComponent {
   static jsfiddleUrl = 'https://jsfiddle.net/alidingling/xqjtetw0/';
-
-  static dataFormat = JSONstringify(data);
 
   render() {
     return (
       <LineChart
-        width={600}
+        width={500}
         height={300}
         data={data}
         margin={{

@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/interactive-supports-focus */
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
@@ -6,7 +7,10 @@ import Examples from 'docs/exampleComponents';
 import { getLocaleType, localeGet } from 'utils/LocaleUtils';
 import { Link } from 'react-router';
 import './ExampleView.scss';
-
+import MonacoEditor from 'react-monaco-editor/lib';
+import fetchFile from '../utils/fetchUtils';
+import 'simple-line-icons/scss/simple-line-icons.scss';
+import { combineFrameContent } from '../utils/iframeUtils';
 
 const firstChartName = Object.keys(Examples)[0];
 const cates = Object.keys(Examples).sort((a, b) => Examples[a].order - Examples[b].order);
@@ -19,10 +23,16 @@ const parseExampleComponent = (compName) => {
   });
 
   if (res && res.length) {
-    return Examples[res[0]].examples[compName];
+    return {
+      cateName: res[0],
+      exampleName: compName,
+      exampleComponent: Examples[res[0]].examples[compName],
+    };
   }
   return null;
 };
+
+const EXAMPLE_CODE_CACHE = {};
 
 
 @connect((state, ownProps) => {
@@ -37,6 +47,100 @@ class ExamplesView extends PureComponent {
   static propTypes = {
     page: PropTypes.string,
   };
+
+  state = {
+    isLoading: null,
+    hasError: null,
+    exampleCode: null,
+    iframeCode: null,
+  }
+
+  componentDidMount() {
+    const { page } = this.props;
+    const exampleResult = parseExampleComponent(page);
+
+    if (exampleResult) {
+      this.fetchExampleCode(exampleResult.cateName, exampleResult.exampleName);
+    }
+  }
+
+  componentWillReceiveProps(nextProps) {
+    const { page } = this.props;
+
+    if (nextProps.page !== page) {
+      const exampleResult = parseExampleComponent(nextProps.page);
+
+      if (exampleResult) {
+        this.fetchExampleCode(exampleResult.cateName, exampleResult.exampleName);
+      }
+    }
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    const { iframeCode } = this.state;
+
+    if (iframeCode && iframeCode !== prevState.iframeCode) {
+      this.updateIframe(iframeCode);
+    }
+  }
+
+  fetchExampleCode = (cateName, exampleName) => {
+    // read code from cache
+    if (EXAMPLE_CODE_CACHE[exampleName]) {
+      this.setState({
+        isLoading: false,
+        hasError: false,
+        exampleCode: EXAMPLE_CODE_CACHE[exampleName],
+        iframeCode: null,
+      });
+      
+      return;
+    }
+    
+    this.setState({
+      isLoading: true,
+    });
+    const url = `/examples/${cateName}/${exampleName}.js`;
+
+    fetchFile(url)
+      .then((res) => {
+        EXAMPLE_CODE_CACHE[exampleName] = res;
+
+        this.setState({
+          isLoading: false,
+          hasError: false,
+          exampleCode: res,
+          iframeCode: null,
+        });
+      }, () => {
+        this.setState({
+          isLoading: false,
+          hasError: true,
+          exampleCode: null,
+          iframeCode: null,
+        });
+      });
+  }
+
+  handleRunCode = () => {
+    if (this.editor) {
+      const newCode = this.editor.getValue();
+
+      this.setState({
+        iframeCode: combineFrameContent(newCode),
+      });
+    }
+  }
+
+  updateIframe(iframeCode) {
+    if (this.iframeNode) {
+      const iframeDoc = this.iframeNode.contentDocument || this.iframeNode.contentWindow.document;
+
+      iframeDoc.open();
+      iframeDoc.write(iframeCode);
+      iframeDoc.close();
+    }
+  }
 
   renderMenuList(type, locale) {
     const { page } = this.props;
@@ -54,9 +158,60 @@ class ExamplesView extends PureComponent {
     return <ul className="menu">{items}</ul>;
   }
 
+  renderEditor(exampleResult) {
+    const { isLoading, hasError, exampleCode } = this.state;
+    let editorValue = '';
+
+    if (isLoading === true) {
+      editorValue = 'loading code ....';
+    } else if (isLoading === false && hasError === true) {
+      editorValue = 'loading code error';
+    } else if (isLoading === false && hasError === false && exampleCode) {
+      editorValue = exampleCode;
+    }
+
+    return exampleResult && isLoading !== null ? (
+      <div className="monaco-editor-wrapper">
+        <div className="monaco-editor-toolbar">
+          <span role="button" className="monaco-editor-toolbar-item" onClick={this.handleRunCode} onKeyPress={this.handleRunCode}>
+            <i className="icon-control-play" />
+            <span>&nbsp;</span>
+            <span>Run</span>
+          </span>
+          {/* <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+          <option className="monaco-editor-toolbar-item" onClick={this.handleRunCopy} onKeyPress={this.handleRunCopy}>
+            <i className="icon-pencil" />
+            <span>&nbsp;</span>
+            <span>Copy</span>
+          </option> */}
+        </div>
+        <div id="monaco-editor-container">
+          <MonacoEditor
+            ref={(el) => { this.editor = el && el.editor; }}
+            key={`editor-${exampleResult.exampleName}`}
+            value={editorValue}
+            language="javascript"
+            lineNumbers
+            scrollBeyondLastLine
+            automaticLayout
+            renderLineHighlight="none"
+            readOnly={false}
+            theme="vs"
+            minimap={{ enabled: false }}
+          />
+        </div>
+      </div>
+    ) : null;
+  }
+
+  renderIframe() {
+    return <iframe title="demoIframe" height={500} ref={(node) => { this.iframeNode = node; }} />;
+  }
+
   render() {
+    const { iframeCode } = this.state;
     const { page } = this.props;
-    const ExampleComponent = parseExampleComponent(page);
+    const exampleResult = parseExampleComponent(page);
     const locale = getLocaleType(this.props);
 
     return (
@@ -78,20 +233,24 @@ class ExamplesView extends PureComponent {
         <div className="content">
           <h3 className="page-title">{page}</h3>
           {
-            ExampleComponent ? (
+            exampleResult ? (
               <div className="example-wrapper">
-                <div className="example-chart-wrapper">
-                  <ExampleComponent />
+                <div className="example-inner-wrapper">
+                  <div className="example-chart-wrapper">
+                    { iframeCode ? this.renderIframe() : <exampleResult.exampleComponent /> }
+                  </div>
+                  {this.renderEditor(exampleResult)}
                 </div>
                 {
-                  ExampleComponent.jsfiddleUrl ? (
+                  exampleResult.exampleComponent.jsfiddleUrl ? (
                     <p className="example-link-wrapper">
                       <a
                         className="example-jsfiddle-link"
                         target="_blank"
-                        href={ExampleComponent.jsfiddleUrl}
+                        rel="noopener noreferrer"
+                        href={exampleResult.exampleComponent.jsfiddleUrl}
                       >
-Try the demo in jsfiddle &gt;&gt;
+                        Try the demo in jsfiddle &gt;&gt;
                       </a>
                     </p>
                   ) : null

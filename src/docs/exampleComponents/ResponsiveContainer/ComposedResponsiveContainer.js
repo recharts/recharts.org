@@ -32,7 +32,7 @@ export default class Example extends PureComponent {
       <div style={{ width: '100%', height: 300 }}>
         <ResponsiveContainer>
           <ComposedChart
-            width={600}
+            width={500}
             height={400}
             data={data}
             margin={{

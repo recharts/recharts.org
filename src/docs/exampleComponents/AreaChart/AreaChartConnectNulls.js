@@ -34,7 +34,7 @@ export default class Example extends PureComponent {
     return (
       <div>
         <AreaChart
-          width={600}
+          width={500}
           height={200}
           data={this.data}
           margin={{
@@ -48,7 +48,7 @@ export default class Example extends PureComponent {
           <Area type="monotone" dataKey="uv" stroke="#8884d8" fill="#8884d8" />
         </AreaChart>
         <AreaChart
-          width={600}
+          width={500}
           height={200}
           data={this.data}
           margin={{

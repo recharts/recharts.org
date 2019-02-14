@@ -47,13 +47,13 @@ const CustomizedDot = (props) => {
   );
 };
 
-export default class SimpleLineChart extends PureComponent {
+export default class Example extends PureComponent {
   static jsfiddleUrl = 'https://jsfiddle.net/alidingling/9y9zrpjp/';
 
   render() {
     return (
       <LineChart
-        width={600}
+        width={500}
         height={300}
         data={data}
         margin={{
