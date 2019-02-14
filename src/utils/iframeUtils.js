@@ -71,7 +71,5 @@ export const covertImportExport = (originCode) => {
 export const combineFrameContent = (code) => {
   const realCode = covertImportExport(code);
 
-  console.log(template.replace(CODE_PLACEHOLDER, realCode));
-
   return template.replace(CODE_PLACEHOLDER, realCode);
 };
