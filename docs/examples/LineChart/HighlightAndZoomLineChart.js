@@ -50,7 +50,7 @@ const initialState = {
   animation: true,
 };
 
-export default class HighlightAndZoomDemo extends PureComponent {
+export default class Example extends PureComponent {
   static jsfiddleUrl = 'https://jsfiddle.net/alidingling/nhpemhgs/';
 
   constructor(props) {
@@ -154,7 +154,7 @@ export default class HighlightAndZoomDemo extends PureComponent {
 
           {
             (refAreaLeft && refAreaRight) ? (
-      <ReferenceArea yAxisId="1" x1={refAreaLeft} x2={refAreaRight} strokeOpacity={0.3} />) : null
+              <ReferenceArea yAxisId="1" x1={refAreaLeft} x2={refAreaRight} strokeOpacity={0.3} />) : null
             }
         </LineChart>
 

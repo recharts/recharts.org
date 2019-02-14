@@ -1,5 +1,4 @@
 import React, { PureComponent } from 'react';
-import _ from 'lodash';
 import {
   ScatterChart, Scatter, XAxis, YAxis, ZAxis, Tooltip,
   Legend,
@@ -61,10 +60,10 @@ const data02 = [
 
 const parseDomain = () => [
   0,
-  _.max([
-    _.max(data01.map(entry => entry.value)),
-    _.max(data02.map(entry => entry.value)),
-  ]),
+  Math.max(
+    Math.max.apply(null, data01.map(entry => entry.value)),
+    Math.max.apply(null, data02.map(entry => entry.value))
+  ),
 ];
 
 export default class Example extends PureComponent {
@@ -74,7 +73,7 @@ export default class Example extends PureComponent {
     const { active, payload } = props;
 
     if (active && payload && payload.length) {
-      const data = _.get(payload, '[0].payload');
+      const data = payload[0] && payload[0].payload;
 
       return (
         <div style={{

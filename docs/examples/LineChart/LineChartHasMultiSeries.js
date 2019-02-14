@@ -30,12 +30,12 @@ const series = [
   },
 ];
 
-export default class SimpleLineChart extends PureComponent {
+export default class Example extends PureComponent {
   static jsfiddleUrl = 'https://jsfiddle.net/alidingling/ewcqxbwo/';
 
   render() {
     return (
-      <LineChart width={600} height={300}>
+      <LineChart width={500} height={300}>
         <CartesianGrid strokeDasharray="3 3" />
         <XAxis dataKey="category" type="category" allowDuplicatedCategory={false} />
         <YAxis dataKey="value" />

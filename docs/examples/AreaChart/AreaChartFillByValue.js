@@ -49,7 +49,7 @@ export default class Example extends PureComponent {
   render() {
     return (
       <AreaChart
-        width={600}
+        width={500}
         height={400}
         data={data}
         margin={{

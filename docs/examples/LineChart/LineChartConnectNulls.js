@@ -13,14 +13,14 @@ const data = [
   { name: 'Page G', uv: 3490 },
 ];
 
-export default class SimpleLineChart extends PureComponent {
+export default class Example extends PureComponent {
   static jsfiddleUrl = 'https://jsfiddle.net/alidingling/hbqxcu35/';
 
   render() {
     return (
       <div>
         <LineChart
-          width={600}
+          width={500}
           height={200}
           data={data}
           margin={{
@@ -34,7 +34,7 @@ export default class SimpleLineChart extends PureComponent {
           <Line type="monotone" dataKey="uv" stroke="#8884d8" fill="#8884d8" />
         </LineChart>
         <LineChart
-          width={600}
+          width={500}
           height={200}
           data={data}
           margin={{

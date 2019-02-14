@@ -27,27 +27,27 @@ const data = [
   },
 ];
 
-export default class SimpleLineChart extends PureComponent {
-  static jsfiddleUrl = 'https://jsfiddle.net/alidingling/zjb47e83/';
+export default class Example extends PureComponent {
+  static jsfiddleUrl = 'https://jsfiddle.net/alidingling/rrr9q7x5/';
 
   render() {
     return (
       <LineChart
-        width={600}
+        layout="vertical"
+        width={500}
         height={300}
         data={data}
         margin={{
-          top: 5, right: 30, left: 20, bottom: 5,
+          top: 20, right: 30, left: 20, bottom: 5,
         }}
       >
         <CartesianGrid strokeDasharray="3 3" />
-        <XAxis dataKey="name" />
-        <YAxis yAxisId="left" />
-        <YAxis yAxisId="right" orientation="right" />
+        <XAxis type="number" />
+        <YAxis dataKey="name" type="category" />
         <Tooltip />
         <Legend />
-        <Line yAxisId="left" type="monotone" dataKey="pv" stroke="#8884d8" activeDot={{ r: 8 }} />
-        <Line yAxisId="right" type="monotone" dataKey="uv" stroke="#82ca9d" />
+        <Line dataKey="pv" stroke="#8884d8" />
+        <Line dataKey="uv" stroke="#82ca9d" />
       </LineChart>
     );
   }

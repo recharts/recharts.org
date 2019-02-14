@@ -1,3 +1,4 @@
+/* eslint-disable react/no-multi-comp */
 import React, { PureComponent } from 'react';
 import {
   LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend,
@@ -44,20 +45,20 @@ class CustomizedAxisTick extends PureComponent {
     } = this.props;
 
     return (
-     <g transform={`translate(${x},${y})`}>
-       <text x={0} y={0} dy={16} textAnchor="end" fill="#666" transform="rotate(-35)">{payload.value}</text>
-     </g>
+      <g transform={`translate(${x},${y})`}>
+        <text x={0} y={0} dy={16} textAnchor="end" fill="#666" transform="rotate(-35)">{payload.value}</text>
+      </g>
     );
   }
 }
 
-export default class SimpleLineChart extends PureComponent {
+export default class Example extends PureComponent {
   static jsfiddleUrl = 'https://jsfiddle.net/alidingling/5br7g9d6/';
 
   render() {
     return (
       <LineChart
-        width={600}
+        width={500}
         height={300}
         data={data}
         margin={{

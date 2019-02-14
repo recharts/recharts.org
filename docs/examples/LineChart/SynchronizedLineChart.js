@@ -28,7 +28,7 @@ const data = [
   },
 ];
 
-export default class SimpleLineChart extends PureComponent {
+export default class Example extends PureComponent {
   static jsfiddleUrl = 'https://jsfiddle.net/alidingling/nskpgcrz/';
 
   render() {
@@ -36,7 +36,7 @@ export default class SimpleLineChart extends PureComponent {
       <div>
         <h4>A demo of synchronized AreaCharts</h4>
         <LineChart
-          width={600}
+          width={500}
           height={200}
           data={data}
           syncId="anyId"
@@ -52,7 +52,7 @@ export default class SimpleLineChart extends PureComponent {
         </LineChart>
         <p>Maybe some other content</p>
         <LineChart
-          width={600}
+          width={500}
           height={200}
           data={data}
           syncId="anyId"
@@ -68,7 +68,7 @@ export default class SimpleLineChart extends PureComponent {
           <Brush />
         </LineChart>
         <AreaChart
-          width={600}
+          width={500}
           height={200}
           data={data}
           syncId="anyId"
