@@ -4,6 +4,7 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const cssnano = require('cssnano');
+const MonacoWebpackPlugin = require('monaco-editor-webpack-plugin');
 
 module.exports = {
   mode: 'production',
@@ -25,6 +26,7 @@ module.exports = {
         test: /\.jsx?$/,
         include: [
           path.resolve(__dirname, 'src'),
+          path.resolve(__dirname, 'node_modules/react-monaco-editor/src'),
         ],
         use: ['babel-loader'],
       },
@@ -35,6 +37,13 @@ module.exports = {
       {
         test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
         use: 'file-loader',
+      },
+      {
+        test: /\.css/,
+        use: ['style-loader', 'css-loader'],
+        include: [
+          path.resolve(__dirname, 'node_modules/monaco-editor'),
+        ],
       },
       {
         test: /\.scss$/,
@@ -80,6 +89,9 @@ module.exports = {
   },
 
   plugins: [
+    new MonacoWebpackPlugin({
+      languages: ['javascript'],
+    }),
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify('production'),
       __DEV__: false,
