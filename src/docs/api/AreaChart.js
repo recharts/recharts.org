@@ -93,7 +93,6 @@ export default {
         'en-US': 'The base value of area.',
         'zh-CN': '区域图的基准值。',
       },
-      format: ['{ top: 5, right: 5, bottom: 5, left: 5 }'],
     }, {
       name: 'onClick',
       type: 'Function',

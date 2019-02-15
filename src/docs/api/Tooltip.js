@@ -24,6 +24,16 @@ export default {
         'zh-CN': 'Tooltip 与当前“游标”的偏移量。',
       },
     }, {
+      name: 'filterNull',
+      type: 'Boolean',
+      defaultVal: 'true',
+      isOptional: false,
+      desc: {
+        'en-US': 'When an item of the payload has value null or undefined, this item won\'t be displayed.',
+        'zh-CN': '当tooltip内容中的某条数据的值为 null 或者 undefined 时，不展示该条数据',
+      },
+    },
+    {
       name: 'itemStyle',
       type: 'Object',
       defaultVal: '{}',
