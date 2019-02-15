@@ -102,6 +102,10 @@ export default {
         'en-US': 'If set 0, all the ticks will be shown. If set preserveStart", "preserveEnd" or "preserveStartEnd", the ticks which is to be shown or hidden will be calculated automatically.',
         'zh-CN': '当值为0时，所有的刻度都会展示。如果值为1，则会间隔1个刻度来展示相应的刻度。当值为 "preserveStart" 时，根据刻度的宽度自动计算间隔，在有足够的空间的情况下，会从头部的刻度开始计算。当值为 "preserveEnd" 时，会从尾部的刻度开始计算是否展示。当值为"preserveStartEnd"，会从头部、尾部的刻度开始计算向中间计算是否展示。',
       },
+      examples: [{
+        name: 'the meaning of different interval',
+        url: '/examples/LineChartAxisInterval',
+      }],
     }, {
       name: 'padding',
       type: 'Object',

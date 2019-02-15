@@ -12,6 +12,7 @@ import VerticalLineChart from './VerticalLineChart';
 import VerticalLineChartWithSpecifiedDomain from './VerticalLineChartWithSpecifiedDomain';
 import HighlightAndZoomLineChart from './HighlightAndZoomLineChart';
 import LineChartHasMultiSeries from './LineChartHasMultiSeries';
+import LineChartAxisInterval from './LineChartAxisInterval';
 
 export default {
   SimpleLineChart,
@@ -28,4 +29,5 @@ export default {
   SynchronizedLineChart,
   HighlightAndZoomLineChart,
   LineChartHasMultiSeries,
+  LineChartAxisInterval,
 };
