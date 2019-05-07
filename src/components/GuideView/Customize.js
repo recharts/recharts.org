@@ -40,7 +40,7 @@ function Customize({ locale }) {
       <div className="demo">
         <Highlight className="e4x">
           {
-`import { BarChart, Bar, XAxis, XAxis } from 'recharts';
+`import { BarChart, Bar, XAxis, YAxis } from 'recharts';
 const data = [{name: 'Page A', uv: 400, pv: 2400, amt: 2400}, ...];
 const renderCustomAxisTick = ({ x, y, payload }) => {
   let path = '';
@@ -94,7 +94,7 @@ const renderCustomBarLabel = ({ payload, x, y, width, height, value }) => {
       <div className="demo">
         <Highlight className="e4x">
           {
-`import { BarChart, Bar, XAxis, XAxis } from 'recharts';
+`import { BarChart, Bar, XAxis, YAxis } from 'recharts';
 const data = [{name: 'Page A', uv: 400, pv: 2400, amt: 2400}, ...];
 ...
 const getPath = (x, y, width, height) => (
@@ -139,7 +139,7 @@ const TriangleBar = (props) => {
       <div className="demo">
         <Highlight className="e4x">
           {
-`import { BarChart, Bar, XAxis, XAxis, Tooltip } from 'recharts';
+`import { BarChart, Bar, XAxis, YAxis, Tooltip } from 'recharts';
 const data = [{name: 'Page A', uv: 400, pv: 2400, amt: 2400}, ...];
 ...
 function getIntroOfPage(label) {
@@ -201,7 +201,7 @@ function CustomTooltip({ payload, label, active }) {
       <div className="demo">
         <Highlight className="e4x">
           {
-`import { BarChart, Bar, XAxis, XAxis, Tooltip, CartesianGrid } from 'recharts';
+`import { BarChart, Bar, XAxis, YAxis, Tooltip, CartesianGrid } from 'recharts';
 const data = [{name: 'Page A', uv: 400, pv: 2400, amt: 2400}, ...];
 
 const renderBarChart = (
@@ -230,7 +230,7 @@ const renderBarChart = (
       <div className="demo">
         <Highlight className="e4x">
           {
-`import { BarChart, Bar, XAxis, XAxis, Tooltip, Legend, CartesianGrid } from 'recharts';
+`import { BarChart, Bar, XAxis, YAxis, Tooltip, Legend, CartesianGrid } from 'recharts';
 const data = [{name: 'Page A', uv: 400, pv: 2400, amt: 2400}, ...];
 
 const renderBarChart = (
