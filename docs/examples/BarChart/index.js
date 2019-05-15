@@ -10,6 +10,7 @@ import BarChartWithMinHeight from './BarChartWithMinHeight';
 import BarChartStackedBySign from './BarChartStackedBySign';
 import BiaxialBarChart from './BiaxialBarChart';
 import BarChartHasBackground from './BarChartHasBackground';
+import BarChartWithMultiXAxis from './BarChartWithMultiXAxis';
 
 export default {
   TinyBarChart,
@@ -24,4 +25,5 @@ export default {
   BarChartStackedBySign,
   BiaxialBarChart,
   BarChartHasBackground,
+  BarChartWithMultiXAxis,
 };
