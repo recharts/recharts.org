@@ -65,6 +65,15 @@ export default {
         'zh-CN': '拐角圆的半径。如果值为 0，不绘制拐角的圆角。',
       },
     }, {
+      name: 'forceCornerRadius',
+      type: 'Boolean',
+      defaultVal: 'false',
+      isOptional: false,
+      desc: {
+        'en-US': 'Whether or not force to render round corner when the angle of sector is very small',
+        'zh-CN': '当角度非常小的时候，是否强制设置拐角的圆角。',
+      },
+    }, {
       name: 'onClick',
       type: 'Function',
       isOptional: true,
