@@ -16,6 +16,7 @@ import ReferenceLine from './ReferenceLine';
 import ErrorBar from './ErrorBar';
 import Label from './Label';
 import LabelList from './LabelList';
+import FunnelChart from './FunnelChart';
 
 export default {
   AreaChart,
@@ -36,4 +37,5 @@ export default {
   ErrorBar,
   Label,
   LabelList,
+  FunnelChart,
 };

@@ -6,6 +6,7 @@ import PieChart from './PieChart';
 import ScatterChart from './ScatterChart';
 import RadarChart from './RadarChart';
 import RadialBarChart from './RadialBarChart';
+import FunnelChart from './FunnelChart';
 import Treemap from './Treemap';
 
 import Area from './Area';
@@ -22,6 +23,7 @@ import ErrorBar from './ErrorBar';
 import Brush from './Brush';
 import CartesianAxis from './CartesianAxis';
 import CartesianGrid from './CartesianGrid';
+import Funnel from './Funnel';
 
 import ResponsiveContainer from './ResponsiveContainer';
 import Legend from './Legend';
@@ -30,6 +32,7 @@ import Cell from './Cell';
 import Text from './Text';
 import Label from './Label';
 import LabelList from './LabelList';
+import Customized from './Customized';
 
 import Pie from './Pie';
 import Radar from './Radar';
@@ -54,6 +57,7 @@ export default {
   RadarChart,
   ScatterChart,
   RadialBarChart,
+  FunnelChart,
   Treemap,
 
   Area,
@@ -66,6 +70,7 @@ export default {
   Brush,
   CartesianAxis,
   CartesianGrid,
+  Funnel,
 
   ResponsiveContainer,
   Legend,

@@ -62,6 +62,6 @@ export default {
     'ResponsiveContainer',
   ],
   childrenComponents: [
-    'PolarAngleAxis', 'PolarRadiusAxis', 'PolarGrid', 'Legend', 'Tooltip', 'Pie', 'validate svg elements...',
+    'PolarAngleAxis', 'PolarRadiusAxis', 'PolarGrid', 'Legend', 'Tooltip', 'Pie', 'Customized', 'validate svg elements...',
   ],
 };

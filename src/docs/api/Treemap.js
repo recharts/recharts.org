@@ -73,6 +73,22 @@ export default {
         'en-US': 'The type of easing function.',
         'zh-CN': '动画缓动函数的类型。',
       },
+    }, {
+      name: 'onAnimationStart',
+      type: 'Function',
+      isOptional: true,
+      desc: {
+        'en-US': 'The customized event handler of animtion start',
+        'zh-CN': '区域图动画 start 事件的回调函数。',
+      },
+    }, {
+      name: 'onAnimationEnd',
+      type: 'Function',
+      isOptional: true,
+      desc: {
+        'en-US': 'The customized event handler of animtion end',
+        'zh-CN': '区域图动画 end 事件的回调函数。',
+      },
     },
   ],
   parentComponents: [

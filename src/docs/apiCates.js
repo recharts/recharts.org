@@ -3,20 +3,20 @@ export default [
     name: 'charts',
     items: [
       'AreaChart', 'BarChart', 'LineChart', 'ComposedChart', 'PieChart', 'RadarChart',
-      'RadialBarChart', 'ScatterChart', 'Treemap',
+      'RadialBarChart', 'ScatterChart', 'FunnelChart', 'Treemap',
     ],
   },
   {
     name: 'general-components',
     items: [
-      'ResponsiveContainer', 'Legend', 'Tooltip', 'Cell', 'Text', 'Label', 'LabelList',
+      'ResponsiveContainer', 'Legend', 'Tooltip', 'Cell', 'Text', 'Label', 'LabelList', 'Customized',
     ],
   },
   {
     name: 'cartesian-components',
     items: [
       'Area', 'Bar', 'Line', 'Scatter', 'XAxis', 'YAxis', 'ZAxis', 'Brush', 'CartesianAxis',
-      'CartesianGrid', 'ReferenceLine', 'ReferenceDot', 'ReferenceArea', 'ErrorBar',
+      'CartesianGrid', 'ReferenceLine', 'ReferenceDot', 'ReferenceArea', 'ErrorBar', 'Funnel',
     ],
   },
   {

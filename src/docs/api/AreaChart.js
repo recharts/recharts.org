@@ -132,6 +132,6 @@ export default {
   ],
   childrenComponents: [
     'XAxis', 'YAxis', 'ReferenceArea', 'ReferenceDot', 'ReferenceLine', 'Brush',
-    'CartesianGrid', 'Legend', 'Tooltip', 'Area', 'validate svg elements...',
+    'CartesianGrid', 'Legend', 'Tooltip', 'Area', 'Customized', 'validate svg elements...',
   ],
 };

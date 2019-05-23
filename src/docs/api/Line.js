@@ -208,6 +208,22 @@ export default {
         'zh-CN': '唯一的id，会用于生成内部的clip path id 等，建议使用SSR的时候设置这个属性。',
       },
     }, {
+      name: 'onAnimationStart',
+      type: 'Function',
+      isOptional: true,
+      desc: {
+        'en-US': 'The customized event handler of animtion start',
+        'zh-CN': '区域图动画 start 事件的回调函数。',
+      },
+    }, {
+      name: 'onAnimationEnd',
+      type: 'Function',
+      isOptional: true,
+      desc: {
+        'en-US': 'The customized event handler of animtion end',
+        'zh-CN': '区域图动画 end 事件的回调函数。',
+      },
+    }, {
       name: 'onClick',
       type: 'Function',
       isOptional: true,
