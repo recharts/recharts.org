@@ -67,6 +67,7 @@ export default {
       examples: [{
         name: 'A LineChart with alwaysShow ReferenceLine',
         url: 'https://jsfiddle.net/alidingling/uqtuc1mp/',
+        isExternal: true
       }],
     }, {
       name: 'viewBox',
