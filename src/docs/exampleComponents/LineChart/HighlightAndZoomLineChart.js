@@ -100,7 +100,7 @@ export default class Example extends PureComponent {
       top: 'dataMax+1',
       bottom: 'dataMin',
       top2: 'dataMax+50',
-      bottom: 'dataMin+50',
+      bottom2: 'dataMin+50',
     }));
   }
 
@@ -112,7 +112,7 @@ export default class Example extends PureComponent {
     return (
       <div className="highlight-bar-charts" style={{ userSelect: 'none' }}>
         <button
-          href="javascript: void(0);"
+          // href="javascript: void(0);"
           className="btn update"
           onClick={this.zoomOut.bind(this)}
         >
