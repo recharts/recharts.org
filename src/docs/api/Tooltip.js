@@ -44,7 +44,7 @@ export default {
       },
       examples: [{
         name: 'React Inline style',
-        url: 'https://facebook.github.io/react/tips/inline-styles.html',
+        url: 'https://reactjs.org/docs/dom-elements.html#style',
         isExternal: true,
       }],
     }, {
@@ -58,7 +58,7 @@ export default {
       },
       examples: [{
         name: 'React Inline style',
-        url: 'https://facebook.github.io/react/tips/inline-styles.html',
+        url: 'https://reactjs.org/docs/dom-elements.html#style',
         isExternal: true,
       }],
     }, {
@@ -72,7 +72,7 @@ export default {
       },
       examples: [{
         name: 'React Inline style',
-        url: 'https://facebook.github.io/react/tips/inline-styles.html',
+        url: 'https://reactjs.org/docs/dom-elements.html#style',
         isExternal: true,
       }],
     }, {
@@ -86,7 +86,7 @@ export default {
       },
       examples: [{
         name: 'React Inline style',
-        url: 'https://facebook.github.io/react/tips/inline-styles.html',
+        url: 'https://reactjs.org/docs/dom-elements.html#style',
         isExternal: true,
       }],
     }, {
