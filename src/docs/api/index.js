@@ -79,6 +79,7 @@ export default {
   Text,
   Label,
   LabelList,
+  Customized,
 
   Pie,
   RadialBar,
