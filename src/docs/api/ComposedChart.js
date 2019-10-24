@@ -98,6 +98,15 @@ export default {
         'zh-CN': '如果设置为false，堆叠的项目将从左到右呈现。如果真正设置，堆叠的项目将从右到左呈现。 （渲染方向影响SVG分层，而不影响x位置。）',
       },
     }, {
+      name: 'baseValue',
+      type: 'Number | \'dataMin\' | \'dataMax\' | \'auto\'',
+      defaultVal: 'auto',
+      isOptional: true,
+      desc: {
+        'en-US': 'The base value of area.',
+        'zh-CN': '区域图的基准值。',
+      },
+    }, {
       name: 'onClick',
       type: 'Function',
       isOptional: true,
