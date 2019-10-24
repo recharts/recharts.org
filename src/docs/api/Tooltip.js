@@ -114,6 +114,20 @@ export default {
       },
       format: ['{ x: 0, y: 0, width: 400, height: 400 }'],
     }, {
+      name: 'allowEscapeViewBox',
+      type: 'Object',
+      defaultVal: '{ x: false, y: false }',
+      isOptional: true,
+      desc: {
+        'en-US': 'This option allows the tooltip to extend beyond the viewBox of the chart itself.',
+        'zh-CN': '此选项允许工具提示扩展到图表本身的viewBox之外。',
+      },
+      format: [
+        { x: true },
+        { y: true },
+        { x: true, y: true }
+      ]
+    }, {
       name: 'active',
       type: 'Boolean',
       defaultVal: 'false',
