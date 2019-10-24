@@ -87,7 +87,7 @@ class Frame extends Component {
                       target="_blank"
                       className="nav-github"
                     >
-Github
+GitHub
                     </a>
                   </li>
                   <li className="language-switch-wrapper">
