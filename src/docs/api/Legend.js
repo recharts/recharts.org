@@ -38,7 +38,7 @@ export default {
       defaultVal: '\'center\'',
       isOptional: false,
       desc: {
-        'en-US': 'The alignment of legend items in \'horizontal\' direction, which cen be \'left\', \'center\', \'right\'.',
+        'en-US': 'The alignment of legend items in \'horizontal\' direction, which can be \'left\', \'center\', \'right\'.',
         'zh-CN': '水平方向的对齐方式。',
       },
     }, {
