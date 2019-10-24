@@ -40,7 +40,7 @@ function Customize({ locale }) {
       <div className="demo">
         <Highlight className="e4x">
           {
-`import { BarChart, Bar, XAxis, XAxis } from 'recharts';
+`import { BarChart, Bar, XAxis, YAxis } from 'recharts';
 const data = [{name: 'Page A', uv: 400, pv: 2400, amt: 2400}, ...];
 const renderCustomAxisTick = ({ x, y, payload }) => {
   let path = '';
