@@ -226,7 +226,7 @@ export default {
       type: 'Function',
       isOptional: true,
       desc: {
-        'en-US': 'The customized event handler of animtion start',
+        'en-US': 'The customized event handler of animation start',
         'zh-CN': '区域图动画 start 事件的回调函数。',
       },
     }, {
@@ -234,7 +234,7 @@ export default {
       type: 'Function',
       isOptional: true,
       desc: {
-        'en-US': 'The customized event handler of animtion end',
+        'en-US': 'The customized event handler of animation end',
         'zh-CN': '区域图动画 end 事件的回调函数。',
       },
     }, {
