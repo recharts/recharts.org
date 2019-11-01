@@ -38,18 +38,17 @@ export default {
         'zh-CN': '用来描述一条垂直于 y 轴的线，当 y 轴是数值类型的坐标轴时，这个值必须为数值类型。当 y 轴为类目轴时， 这个值必须为 y 轴 domain 中的一个元素。',
       },
     }, {
-      name: 'alwaysShow',
-      type: 'Boolean',
-      defaultVal: 'false',
-      isOptional: false,
+      name: 'ifOverflow',
+      type: 'string',
+      defaultVal: 'discard',
+      isOptional: true,
       desc: {
-        'en-US': 'If the corresponding axis is a number axis and this option is set true, the value of reference line will be take into account when calculate the domain of corresponding axis, so that the reference line will always show.',
-        'zh-CN': '是否根据整参考线的值调整相应的坐标轴 domain，来保证参考线一定在可视区域内。',
+        'en-US': 'Defines how a ReferenceLine is displayed if positioned outside of the visible graph. Available values are: "hidden", "visible", "discard", and "extendDomain". When used with the "extendDomain" option, the domain of the graph is extended to include the ReferenceLine (mirrors the functionality of the deprecated "alwaysShow" prop).',
       },
       examples: [{
-        name: 'A LineChart with alwaysShow ReferenceLine',
-        url: 'https://jsfiddle.net/alidingling/uqtuc1mp/',
-        isExternal: true,
+        name: 'A LineChart with ifOverflow="extendDomain" used to display a ReferenceLine outside of the chart domain',
+        url: 'https://jsfiddle.net/fqt7xw0m/',
+        isExternal: true
       }],
     }, {
       name: 'viewBox',
