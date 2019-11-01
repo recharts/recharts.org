@@ -38,14 +38,18 @@ export default {
         'zh-CN': '用来描述 y 坐标的值，当 y 轴是数值类型的坐标轴时，这个值必须为数值类型。当 y 轴为类目轴时， 这个值必须为 y 轴 domain 中的一个元素。',
       },
     }, {
-      name: 'alwaysShow',
-      type: 'Boolean',
-      defaultVal: 'false',
-      isOptional: false,
+      name: 'ifOverflow',
+      type: 'string',
+      defaultVal: 'discard',
+      isOptional: true,
       desc: {
-        'en-US': 'If set true, the value of reference dot will be take into account when calculate the domain of corresponding axis, so that the reference dot will always show.',
-        'zh-CN': '是否根据整参考点的值调整相应的坐标轴 domain，来保证参考点一定在可视区域内。',
+        'en-US': 'Defines how a ReferenceDot is displayed if positioned outside of the visible graph. Available values are: "hidden", "visible", "discard", and "extendDomain". When used with the "extendDomain" option, the domain of the graph is extended to include the ReferenceDot (mirrors the functionality of the deprecated "alwaysShow" prop).',
       },
+      examples: [{
+        name: 'A LineChart with ifOverflow="extendDomain" used to display a ReferenceLine outside of the chart domain',
+        url: 'https://jsfiddle.net/fqt7xw0m/',
+        isExternal: true
+      }],
     }, {
       name: 'xAxis',
       type: 'Object',
