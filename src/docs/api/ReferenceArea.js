@@ -67,7 +67,7 @@ export default {
       examples: [{
         name: 'A LineChart with alwaysShow ReferenceLine',
         url: 'https://jsfiddle.net/alidingling/uqtuc1mp/',
-        isExternal: true
+        isExternal: true,
       }],
     }, {
       name: 'viewBox',
@@ -114,6 +114,22 @@ export default {
         url: '/examples/LineChartWithReferenceLines',
       }],
     }, {
+      name: 'shape',
+      type: 'ReactElement | Function',
+      isOptional: true,
+      desc: {
+        'en-US': 'Renders a svg returned by the react element or function.',
+      },
+      format: [
+        '<ReferenceArea shape={<CustomSvgShape/>}/>',
+      ],
+      examples: [{
+        name: 'ReferenceArea with shape',
+        url: 'https://jsfiddle.net/jashanbhullar/c0y7hu1f/25/',
+        isExternal: true,
+      }],
+    },
+    {
       name: 'isFront',
       type: 'Boolean',
       defaultVal: 'false',
