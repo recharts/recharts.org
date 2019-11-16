@@ -125,7 +125,7 @@ export default {
       ],
       examples: [{
         name: 'ReferenceArea with shape',
-        url: 'https://jsfiddle.net/jashanbhullar/c0y7hu1f/25/',
+        url: 'https://jsfiddle.net/jashanbhullar/149e8gk5/',
         isExternal: true,
       }],
     },
