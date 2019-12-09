@@ -1,8 +1,5 @@
 export default {
   name: 'SankeyChart',
-  desc: {
-    'en-US': 'A container component to make charts adapt to the size of parent container. One of the props width and height should be a percentage string.',
-  },
   props: [
     {
       name: 'nameKey',
@@ -43,7 +40,7 @@ export default {
       defaultVal: 'undefined',
       isOptional: false,
       desc: {
-        'en-US': 'The source data, in which each element is an object.', // define better
+        'en-US': 'The source data, including the array of nodes, and the relationships, represented by links.',
       },
       format: [
         'nodes: [',
@@ -63,51 +60,66 @@ export default {
     }, {
       name: 'nodePadding',
       type: 'Number',
-      defaultVal: 'null',
+      defaultVal: '10',
       isOptional: true,
       desc: {
-        'en-US': 'Specify the padding between the nodes',
+        'en-US': 'The padding between the nodes',
       },
     }, {
       name: 'nodeWidth',
       type: 'Number',
-      defaultVal: '0',
+      defaultVal: '10',
       isOptional: false,
       desc: {
-        'en-US': 'If specified a positive number, debounced function will be used to handle the resize event.',
+        'en-US': 'The width of node',
+      },
+    }, {
+      name: 'linkWidth',
+      type: 'Number',
+      isOptional: false,
+      desc: {
+        'en-US': 'The width of link',
       },
     }, {
       name: 'linkCurvature',
       type: 'Number',
-      defaultVal: '0',
+      defaultVal: '0.5',
       isOptional: false,
       desc: {
-        'en-US': 'If specified a positive number, debounced function will be used to handle the resize event.',
+        'en-US': 'The curvature of width',
       },
     }, {
       name: 'iterations',
       type: 'Number',
-      defaultVal: '0',
+      defaultVal: '32',
       isOptional: false,
       desc: {
-        'en-US': 'If specified a positive number, debounced function will be used to handle the resize event.',
+        'en-US': 'The number of the iterations between the links',
       },
     }, {
       name: 'node',
-      type: 'Number',
-      defaultVal: '0',
-      isOptional: false,
+      type: 'Object | ReactElement',
+      defaultVal: 'undefined',
+      isOptional: true,
       desc: {
-        'en-US': 'If specified a positive number, debounced function will be used to handle the resize event.',
+        'en-US': 'If set a object, the option is the configuration of nodes. If set a React element, the option is the custom react element of drawing the nodes.',
       },
+      format: [
+        '<Sankey node={<MyCustomComponent />} />',
+        '<Sankey node={{stroke: #77c878, strokeWidth: 2}} />',
+      ],
     }, {
       name: 'link',
-      type: 'Number',
-      defaultVal: '0',
-      isOptional: false,
+      type: 'Object | ReactElement',
+      defaultVal: 'undefined',
+      isOptional: true,
       desc: {
-        'en-US': 'If specified a positive number, debounced function will be used to handle the resize event.',
+        'en-US': 'If set a object, the option is the configuration of links. If set a React element, the option is the custom react element of drawing the links.',
       },
+      format: [
+        '<Sankey link={<MyCustomComponent />} />',
+        '<Sankey link={{fill: #77c878 }} />',
+      ],
     }, {
       name: 'margin',
       type: 'Object',
@@ -143,58 +155,44 @@ export default {
     }, {
       name: 'sourceX',
       type: 'Number',
-      defaultVal: '0',
       isOptional: false,
       desc: {
-        'en-US': 'If specified a positive number, debounced function will be used to handle the resize event.',
+        'en-US': 'The source number of X-axis',
       },
     }, {
       name: 'sourceY',
       type: 'Number',
-      defaultVal: '0',
       isOptional: false,
       desc: {
-        'en-US': 'If specified a positive number, debounced function will be used to handle the resize event.',
+        'en-US': 'The source number of Y-axis',
       },
     }, {
       name: 'sourceControlX',
       type: 'Number',
-      defaultVal: '0',
       isOptional: false,
       desc: {
-        'en-US': 'If specified a positive number, debounced function will be used to handle the resize event.',
-      },
-    }, {
-      name: 'targetX',
-      type: 'Number',
-      defaultVal: '0',
-      isOptional: false,
-      desc: {
-        'en-US': 'If specified a positive number, debounced function will be used to handle the resize event.',
-      },
-    }, {
-      name: 'targetY',
-      type: 'Number',
-      defaultVal: '0',
-      isOptional: false,
-      desc: {
-        'en-US': 'If specified a positive number, debounced function will be used to handle the resize event.',
+        'en-US': 'The source control of X-axis',
       },
     }, {
       name: 'targetControlX',
       type: 'Number',
-      defaultVal: '0',
       isOptional: false,
       desc: {
-        'en-US': 'If specified a positive number, debounced function will be used to handle the resize event.',
+        'en-US': 'The target control of X-axis',
       },
     }, {
-      name: 'linkWidth',
+      name: 'targetX',
       type: 'Number',
-      defaultVal: '0',
       isOptional: false,
       desc: {
-        'en-US': 'If specified a positive number, debounced function will be used to handle the resize event.',
+        'en-US': 'The target of X-axis',
+      },
+    }, {
+      name: 'targetY',
+      type: 'Number',
+      isOptional: false,
+      desc: {
+        'en-US': 'The target of Y-axis',
       },
     },
   ],
