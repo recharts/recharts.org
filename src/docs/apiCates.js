@@ -3,7 +3,7 @@ export default [
     name: 'charts',
     items: [
       'AreaChart', 'BarChart', 'LineChart', 'ComposedChart', 'PieChart', 'RadarChart',
-      'RadialBarChart', 'ScatterChart', 'FunnelChart', 'Treemap',
+      'RadialBarChart', 'ScatterChart', 'FunnelChart', 'Treemap', 'SankeyChart',
     ],
   },
   {

@@ -5,6 +5,7 @@ import LineChart from './LineChart';
 import PieChart from './PieChart';
 import ScatterChart from './ScatterChart';
 import RadarChart from './RadarChart';
+import SankeyChart from './SankeyChart';
 import RadialBarChart from './RadialBarChart';
 import FunnelChart from './FunnelChart';
 import Treemap from './Treemap';
@@ -58,6 +59,7 @@ export default {
   ScatterChart,
   RadialBarChart,
   FunnelChart,
+  SankeyChart,
   Treemap,
 
   Area,

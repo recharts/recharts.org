@@ -6,6 +6,7 @@ import PieChart from './PieChart';
 import ScatterChart from './ScatterChart';
 import RadarChart from './RadarChart';
 import RadialBarChart from './RadialBarChart';
+import SankeyChart from './SankeyChart';
 import Treemap from './Treemap';
 import ResponsiveContainer from './ResponsiveContainer';
 import Cell from './Cell';
@@ -38,4 +39,5 @@ export default {
   Label,
   LabelList,
   FunnelChart,
+  SankeyChart,
 };
