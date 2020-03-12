@@ -61,7 +61,7 @@ export default {
       },
     }, {
       name: 'iconType',
-      type: `'line' | 'square' | 'rect' | 'circle' | 'cross' | 'diamond' |
+      type: `'line' | 'plainline' | 'square' | 'rect' | 'circle' | 'cross' | 'diamond' |
       'star' | 'triangle' | 'wye'`,
       isOptional: false,
       desc: {
