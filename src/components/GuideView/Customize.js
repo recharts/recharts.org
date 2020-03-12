@@ -75,7 +75,7 @@ const renderCustomBarLabel = ({ payload, x, y, width, height, value }) => {
   <BarChart width={600} height={300} data={data}>
     <XAxis dataKey="name" tick={renderCustomAxisTick} />
     <YAxis />
-    <Bar type="monotone" dataKey="uv" barSize={30} fill="#8884d8"
+    <Bar dataKey="uv" barSize={30} fill="#8884d8"
       label={renderCustomBarLabel}/>
   </BarChart>
 );`
@@ -85,7 +85,7 @@ const renderCustomBarLabel = ({ payload, x, y, width, height, value }) => {
         <BarChart width={600} height={300} data={data}>
           <XAxis dataKey="name" tick={renderCustomAxisTick} />
           <YAxis />
-          <Bar type="monotone" dataKey="uv" barSize={30} fill="#8884d8" label={renderCustomBarLabel} />
+          <Bar dataKey="uv" barSize={30} fill="#8884d8" label={renderCustomBarLabel} />
         </BarChart>
       </div>
 
@@ -120,7 +120,7 @@ const TriangleBar = (props) => {
   <BarChart width={600} height={300} data={data}>
     <XAxis dataKey="name" tick={renderCustomAxisTick} />
     <YAxis />
-    <Bar type="monotone" dataKey="uv" fill="#8884d8"
+    <Bar dataKey="uv" fill="#8884d8"
       shape={<TriangleBar />} />
   </BarChart>
 );`
@@ -130,7 +130,7 @@ const TriangleBar = (props) => {
         <BarChart width={600} height={300} data={data}>
           <XAxis dataKey="name" tick={renderCustomAxisTick} />
           <YAxis />
-          <Bar type="monotone" dataKey="uv" fill="#8884d8" shape={<TriangleBar />} />
+          <Bar dataKey="uv" fill="#8884d8" shape={<TriangleBar />} />
         </BarChart>
       </div>
 
@@ -181,7 +181,7 @@ function CustomTooltip({ payload, label, active }) {
     <XAxis dataKey="name" tick={renderCustomAxisTick} />
     <YAxis />
     <Tooltip content={<CustomTooltip />}/>
-    <Bar type="monotone" dataKey="uv" fill="#8884d8"
+    <Bar dataKey="uv" fill="#8884d8"
       shape={<TriangleBar />} />
   </BarChart>
 );`
@@ -192,7 +192,7 @@ function CustomTooltip({ payload, label, active }) {
           <XAxis dataKey="name" tick={renderCustomAxisTick} />
           <YAxis />
           <Tooltip content={<CustomTooltip />} />
-          <Bar type="monotone" dataKey="uv" fill="#8884d8" shape={<TriangleBar />} />
+          <Bar dataKey="uv" fill="#8884d8" shape={<TriangleBar />} />
         </BarChart>
       </div>
 
@@ -210,7 +210,7 @@ const renderBarChart = (
     <YAxis />
     <Tooltip />
     <CartesianGrid stroke="#ccc" strokeDasharray="5 5" />
-    <Bar type="monotone" dataKey="uv" fill="#8884d8" barSize={30} />
+    <Bar dataKey="uv" fill="#8884d8" barSize={30} />
   </BarChart>
 );`
         }
@@ -221,7 +221,7 @@ const renderBarChart = (
           <YAxis stroke="red" />
           <Tooltip />
           <CartesianGrid stroke="#ccc" strokeDasharray="5 5" />
-          <Bar type="monotone" dataKey="uv" fill="green" barSize={30} />
+          <Bar dataKey="uv" fill="green" barSize={30} />
         </BarChart>
       </div>
 
@@ -240,7 +240,7 @@ const renderBarChart = (
     <Tooltip wrapperStyle={{ width: 100, backgroundColor: '#ccc' }} />
     <Legend width={100} wrapperStyle={{ top: 40, right: 20, backgroundColor: '#f5f5f5', border: '1px solid #d5d5d5', borderRadius: 3, lineHeight: '40px' }} />
     <CartesianGrid stroke="#ccc" strokeDasharray="5 5" />
-    <Bar type="monotone" dataKey="uv" fill="#8884d8" barSize={30} />
+    <Bar dataKey="uv" fill="#8884d8" barSize={30} />
   </BarChart>
 );`
         }
@@ -257,7 +257,7 @@ const renderBarChart = (
             }}
           />
           <CartesianGrid stroke="#ccc" strokeDasharray="5 5" />
-          <Bar type="monotone" dataKey="uv" fill="#8884d8" barSize={30} />
+          <Bar dataKey="uv" fill="#8884d8" barSize={30} />
         </BarChart>
       </div>
     </div>
