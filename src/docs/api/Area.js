@@ -106,7 +106,7 @@ export default {
       defaultVal: '#3182bd',
       isOptional: false,
       desc: {
-        'en-US': 'If false "none", not stroke curve will be drawn.',
+        'en-US': 'The stroke color. If "none", no line will be drawn.',
         'zh-CN': '描边的颜色。当值为"none"时，不描边',
       },
     }, {
