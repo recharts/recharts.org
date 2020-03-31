@@ -131,7 +131,8 @@ export default {
         'en-US': 'The width of the stroke',
         'zh-CN': '虚线的宽度',
       },
-      format: ['[{x: 12, y: 12, value: 240}]'],
+      format: ['<Line dataKey="value" strokeWidth={1} />',
+      '<Line dataKey="value" strokeWidth={3} />',],
     },{
       name: 'layout',
       type: '\'horizontal\' | \'vertical\'',
