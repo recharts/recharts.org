@@ -42,6 +42,7 @@ const example = () => (
     <Tooltip />
     <ReferenceLine x="Page C" stroke="green" label="Min PAGE" />
     <ReferenceLine y={4000} label="Max" stroke="red" strokeDasharray="3 3" />
+    <ReferenceLine label="Segment" stroke="green" strokeDasharray="3 3" segment={[{ x: 'Page A', y: 0 }, { x: 'Page C', y: 4000 }]} />
     <Area type="monotone" dataKey="uv" stroke="#8884d8" fill="#8884d8" />
   </AreaChart>
 );
@@ -55,6 +56,7 @@ const exampleCode = `
     <Tooltip />
     <ReferenceLine x="Page C" stroke="green" label="Min PAGE" />
     <ReferenceLine y={4000} label="Max" stroke="red" strokeDasharray="3 3" />
+    <ReferenceLine label="Segment" stroke="green" strokeDasharray="3 3" segment={[{ x: 'Page A', y: 0 }, { x: 'Page C', y: 4000 }]} />
     <Area type="monotone" dataKey="uv" stroke="#8884d8" fill="#8884d8" />
   </AreaChart>
 `;

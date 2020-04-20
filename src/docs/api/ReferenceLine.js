@@ -114,6 +114,16 @@ export default {
         'zh-CN': '虚线的宽度',
       },
     },
+    {
+      name: 'segment',
+      type: 'Array',
+      defaultVal: undefined,
+      isOptional: true,
+      desc: {
+        'en-US': 'Array of endpoints in { x, y } format. These endpoints would be used to draw the ReferenceLine.',
+        'zh-CN': '{x，y}格式的端点数组。这些端点将用于绘制参考线。',
+      },
+    },
   ],
   parentComponents: [
     'AreaChart', 'BarChart', 'LineChart', 'ComposedChart',
