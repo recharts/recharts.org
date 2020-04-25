@@ -132,7 +132,18 @@ export default {
         'zh-CN': '虚线的宽度',
       },
       format: ['[{x: 12, y: 12, value: 240}]'],
-    },{
+    }, {
+      name: 'strokeDasharray',
+      type: 'string',
+      defaultVal: '',
+      isOptional: true,
+      desc: {
+        'en-US': 'An array of stroke dash for line',
+        'zh-CN': 'An array of stroke dash for line',
+      },
+      format: ['<Line dataKey="pv" strokeDasharray="5 5" />', 
+              '<Line dataKey="uv" strokeDasharray="3 4 5 2" />'],
+    }, {
       name: 'layout',
       type: '\'horizontal\' | \'vertical\'',
       defaultVal: 'undefined',
