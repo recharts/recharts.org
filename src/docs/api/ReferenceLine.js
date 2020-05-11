@@ -104,7 +104,7 @@ export default {
         'en-US': 'If set true, the line will be rendered in front of bars in BarChart, etc.',
         'zh-CN': '是否展示在图表的最上层。',
       },
-    },{
+    }, {
       name: 'strokeWidth',
       type: 'Number',
       defaultVal: '1',

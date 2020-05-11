@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import {
-  ScatterChart, Scatter, XAxis, YAxis, CartesianGrid, Tooltip
+  ScatterChart, Scatter, XAxis, YAxis, CartesianGrid, Tooltip,
 } from 'recharts';
 
 const data = [

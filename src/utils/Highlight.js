@@ -42,7 +42,8 @@ class Highlight extends PureComponent {
         <div
           dangerouslySetInnerHTML={{ __html: children }}
           className={className || null}
-        />);
+        />
+      );
     }
 
     return (

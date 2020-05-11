@@ -132,7 +132,7 @@ export default {
         'zh-CN': '虚线的宽度',
       },
       format: ['[{x: 12, y: 12, value: 240}]'],
-    },{
+    }, {
       name: 'layout',
       type: '\'horizontal\' | \'vertical\'',
       defaultVal: 'undefined',

@@ -62,7 +62,7 @@ const parseDomain = () => [
   0,
   Math.max(
     Math.max.apply(null, data01.map(entry => entry.value)),
-    Math.max.apply(null, data02.map(entry => entry.value))
+    Math.max.apply(null, data02.map(entry => entry.value)),
   ),
 ];
 

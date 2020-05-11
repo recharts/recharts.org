@@ -59,8 +59,8 @@ class Affix extends PureComponent {
     const scrollTop = DOMUtils.getDocumentScrollTop();
     // affix
     const affixNode = ReactDOM.findDOMNode(this);
-    const offsetWidth = affixNode.offsetWidth;
-    const offsetHeight = affixNode.offsetHeight;
+    const { offsetWidth } = affixNode;
+    const { offsetHeight } = affixNode;
     const { top, left } = DOMUtils.getOffset(affixNode);
     if (scrollTop > top) {
       // Fixed Top

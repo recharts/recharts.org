@@ -125,8 +125,8 @@ export default {
       format: [
         { x: true },
         { y: true },
-        { x: true, y: true }
-      ]
+        { x: true, y: true },
+      ],
     }, {
       name: 'active',
       type: 'Boolean',

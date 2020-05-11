@@ -8,7 +8,7 @@ export default function configureStore(initialState = {}, history) {
 
   const enhancers = [];
   if (__DEV__) {
-    const devToolsExtension = window.devToolsExtension;
+    const { devToolsExtension } = window;
     if (typeof devToolsExtension === 'function') {
       enhancers.push(devToolsExtension());
     }

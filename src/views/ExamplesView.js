@@ -93,10 +93,10 @@ class ExamplesView extends PureComponent {
         exampleCode: EXAMPLE_CODE_CACHE[exampleName],
         iframeCode: null,
       });
-      
+
       return;
     }
-    
+
     this.setState({
       isLoading: true,
     });
@@ -144,7 +144,7 @@ class ExamplesView extends PureComponent {
 
   renderMenuList(type, locale) {
     const { page } = this.props;
-    const examples = Examples[type].examples;
+    const { examples } = Examples[type];
     const typeNameList = Object.keys(examples);
 
     const items = typeNameList.map(name => (

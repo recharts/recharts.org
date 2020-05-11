@@ -42,7 +42,7 @@ export default class Example extends PureComponent {
         barSize={20}
       >
         <XAxis dataKey="name" scale="point" padding={{ left: 10, right: 10 }} />
-        <YAxis /> 
+        <YAxis />
         <Tooltip />
         <Legend />
         <CartesianGrid strokeDasharray="3 3" />
