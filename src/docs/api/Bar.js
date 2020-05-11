@@ -294,7 +294,7 @@ export default {
       type: 'Function',
       isOptional: true,
       desc: {
-        'en-US': 'The customized event handler of moustenter on the bars in this group',
+        'en-US': 'The customized event handler of mouseenter on the bars in this group',
         'zh-CN': '柱条 moustenter 事件的回调函数。',
       },
     }, {
