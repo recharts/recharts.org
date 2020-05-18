@@ -62,7 +62,7 @@ export default {
       defaultVal: 'null',
       isOptional: true,
       desc: {
-        'en-US': 'The formatter function of label value which has only one parameter - the value pf label.',
+        'en-US': 'The formatter function of label value which has only one parameter - the value of label.',
         'zh-CN': '标注值的格式化方法，只有一个参数：标注值',
       },
     }, {
