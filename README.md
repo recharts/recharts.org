@@ -1,3 +1,5 @@
+[![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/recharts/recharts.org)
+
 # recharts.org
 
 This site is built with react and redux. Pull requests welcome!
