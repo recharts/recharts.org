@@ -1,6 +1,6 @@
 # recharts.org
 
-welcome!
+welcome!\n
 This site is built with react and redux.
 your Pull requests helps alot so,send it.
 
