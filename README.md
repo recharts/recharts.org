@@ -1,6 +1,6 @@
 # recharts.org
 
-This site is built with react and redux. Pull requests welcome!
+This website is built with react and redux. Pull requests welcome!
 
 ## Developing
 
