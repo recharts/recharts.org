@@ -73,6 +73,20 @@ export default {
         'en-US': 'The x-coordinates of all vertical lines.',
         'zh-CN': '所有竖直网格线的 x 坐标。',
       },
+    }, {
+      name: 'strokeDashArray',
+      type: 'String',
+      defaultVal: 'null',
+      isOptional: false,
+      desc: {
+        'en-US': 'The pattern of dashes and gaps used to paint the lines of the grid',
+        'zh-CN': 'The pattern of dashes and gaps used to paint the lines of the grid',
+      },
+      format: [
+        '<CartesianGrid strokeDashArray="4" />',
+        '<CartesianGrid strokeDashArray="4 1" />',
+        '<CartesianGrid strokeDashArray="4 1 2" />',
+      ],
     },
   ],
   parentComponents: [
