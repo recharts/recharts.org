@@ -101,10 +101,6 @@ GitHub
         { children }
         <footer>
           <p>
-            <span>Contact us by </span>
-            <a href="https://demo.rocket.chat/channel/recharts" target="_blank">Rocket.Chat</a>
-          </p>
-          <p>
             <span>Released under the </span>
             <a href="http://opensource.org/licenses/MIT" target="_blank">MIT License</a>
           </p>
