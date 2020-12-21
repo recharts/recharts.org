@@ -92,6 +92,15 @@ export default {
         'zh-CN': '是否允许类目轴有重复的类目。',
       },
     }, {
+      name: 'angle',
+      type: 'Number',
+      defaultVal: '0',
+      isOptional: false,
+      desc: {
+        'en-US': 'The angle of axis ticks.',
+        'zh-CN': '轴刻度的角度。',
+      },
+    }, {
       name: 'tickCount',
       type: 'Number',
       defaultVal: '5',
