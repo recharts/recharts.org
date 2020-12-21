@@ -88,6 +88,15 @@ export default {
         'zh-CN': '是否展示在图表的最上层。',
       },
     }, {
+      name: 'shape',
+      type: 'ReactElement | Function',
+      defaultVal: 'undefined',
+      isOptional: true,
+      desc: {
+        'en-US': 'If set a ReactElement, the shape of dot can be customized. If set a function, the function will be called to render customized shape.',
+        'zh-CN': '如果设置了ReactElement，则可以自定义点的形状。 如果设置了功能，则将调用该功能以呈现自定义形状。',
+      },
+    }, {
       name: 'onClick',
       type: 'Function',
       isOptional: true,
