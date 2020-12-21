@@ -302,6 +302,20 @@ export default {
         'en-US': 'The customized event handler of mouseleave on the area in this group',
         'zh-CN': '曲线 mouseleave 事件的回调函数。',
       },
+    }, {
+      name: 'strokeDashArray',
+      type: 'String',
+      defaultVal: 'null',
+      isOptional: false,
+      desc: {
+        'en-US': 'The pattern of dashes and gaps used to paint the line',
+        'zh-CN': 'The pattern of dashes and gaps used to paint the line',
+      },
+      format: [
+        '<Line strokeDashArray="4" />',
+        '<Line strokeDashArray="4 1" />',
+        '<Line strokeDashArray="4 1 2" />',
+      ],
     },
   ],
   parentComponents: [
