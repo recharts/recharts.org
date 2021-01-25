@@ -59,7 +59,6 @@ module.exports = {
       },
     ],
   },
-
   resolve: {
     alias: {
       react: path.join(__dirname, 'node_modules', 'react'),
@@ -71,13 +70,12 @@ module.exports = {
       docs: path.join(__dirname, './src/docs'),
     },
   },
-
   plugins: [
     new webpack.DefinePlugin({
       __DEV__: true,
       __DEVTOOLS__: true,
     }),
     new webpack.HotModuleReplacementPlugin(),
-    new MonacoWebpackPlugin(),
+    new MonacoWebpackPlugin({ languages: ['javascript', 'typescript'] }),
   ],
 };

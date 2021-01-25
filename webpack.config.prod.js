@@ -1,6 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const cssnano = require('cssnano');
@@ -72,20 +72,21 @@ module.exports = {
       docs: path.join(__dirname, './src/docs'),
     },
   },
-
   optimization: {
+    minimize: true,
     minimizer: [
-      new UglifyJsPlugin({
-        cache: true,
+      new TerserPlugin({
         parallel: true,
-        sourceMap: true,
+        terserOptions: {
+          sourceMap: true,
+        },
       }),
     ],
   },
-
   plugins: [
     new MonacoWebpackPlugin({
-      languages: ['javascript'],
+      languages: ['javascript, typescript'],
+      features: ['!gotoSymbol'],
     }),
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify('production'),
