@@ -1,13 +1,14 @@
+/* eslint-disable camelcase */
 /* eslint-disable jsx-a11y/interactive-supports-focus */
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import Helmet from 'react-helmet';
-import Examples from 'docs/exampleComponents';
-import { getLocaleType, localeGet } from 'utils/LocaleUtils';
 import { Link } from 'react-router';
-import './ExampleView.scss';
 import MonacoEditor from 'react-monaco-editor/lib';
+import Examples from '../docs/exampleComponents';
+import { getLocaleType, localeGet } from '../utils/LocaleUtils';
+import './ExampleView.scss';
 import fetchFile from '../utils/fetchUtils';
 import 'simple-line-icons/scss/simple-line-icons.scss';
 import { combineFrameContent } from '../utils/iframeUtils';
@@ -63,7 +64,7 @@ class ExamplesView extends PureComponent {
     }
   }
 
-  componentWillReceiveProps(nextProps) {
+  UNSAFE_componentWillReceiveProps(nextProps) {
     const { page } = this.props;
 
     if (nextProps.page !== page) {

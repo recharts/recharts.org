@@ -10,7 +10,8 @@ export default {
         'en-US': 'The width of chart container.',
         'zh-CN': '图表的宽度。',
       },
-    }, {
+    },
+    {
       name: 'height',
       type: 'Number',
       defaultVal: 'null',
@@ -19,7 +20,8 @@ export default {
         'en-US': 'The height of chart container.',
         'zh-CN': '图表的高度。',
       },
-    }, {
+    },
+    {
       name: 'margin',
       type: 'Object',
       defaultVal: '{ top: 5, right: 5, bottom: 5, left: 5 }',
@@ -29,7 +31,8 @@ export default {
         'zh-CN': '图表四周的留白大小，支持传入部分值（如：{ top: 5 }）',
       },
       format: ['{ top: 5, right: 5, bottom: 5, left: 5 }'],
-    }, {
+    },
+    {
       name: 'onClick',
       type: 'Function',
       isOptional: true,
@@ -37,7 +40,8 @@ export default {
         'en-US': 'The customized event handler of click in this chart.',
         'zh-CN': '鼠标在图表图形区域 click 事件的回调函数。',
       },
-    }, {
+    },
+    {
       name: 'onMouseDown',
       type: 'Function',
       isOptional: true,
@@ -45,7 +49,8 @@ export default {
         'en-US': 'The customized event handler of mousedown in this chart.',
         'zh-CN': '鼠标在图表图形区域 mousedown 事件的回调函数。',
       },
-    }, {
+    },
+    {
       name: 'onMouseUp',
       type: 'Function',
       isOptional: true,
@@ -53,7 +58,8 @@ export default {
         'en-US': 'The customized event handler of mouseup in this chart.',
         'zh-CN': '鼠标在图表图形区域 mouseup 事件的回调函数。',
       },
-    }, {
+    },
+    {
       name: 'onMouseMove',
       type: 'Function',
       isOptional: true,
@@ -61,7 +67,8 @@ export default {
         'en-US': 'The customized event handler of mousemove in this chart.',
         'zh-CN': '鼠标在图表图形区域 mousemove 事件的回调函数。',
       },
-    }, {
+    },
+    {
       name: 'onMouseOver',
       type: 'Function',
       isOptional: true,
@@ -69,7 +76,8 @@ export default {
         'en-US': 'The customized event handler of mouseover in this chart.',
         'zh-CN': '鼠标在图表图形区域 mouseover 事件的回调函数。',
       },
-    }, {
+    },
+    {
       name: 'onMouseOut',
       type: 'Function',
       isOptional: true,
@@ -77,7 +85,8 @@ export default {
         'en-US': 'The customized event handler of mouseout in this chart.',
         'zh-CN': '鼠标在图表图形区域 mouseout 事件的回调函数。',
       },
-    }, {
+    },
+    {
       name: 'onMouseEnter',
       type: 'Function',
       isOptional: true,
@@ -85,7 +94,8 @@ export default {
         'en-US': 'The customized event handler of moustenter in this chart.',
         'zh-CN': '鼠标在图表图形区域 moustenter 事件的回调函数。',
       },
-    }, {
+    },
+    {
       name: 'onMouseLeave',
       type: 'Function',
       isOptional: true,
@@ -95,11 +105,20 @@ export default {
       },
     },
   ],
-  parentComponents: [
-    'ResponsiveContainer',
-  ],
+  parentComponents: ['ResponsiveContainer'],
   childrenComponents: [
-    'XAxis', 'YAxis', 'ZAxis', 'ReferenceArea', 'ReferenceDot', 'ReferenceLine', 'Brush',
-    'CartesianGrid', 'Legend', 'Tooltip', 'Scatter', 'Customized', 'validate svg elements...',
+    'XAxis',
+    'YAxis',
+    'ZAxis',
+    'ReferenceArea',
+    'ReferenceDot',
+    'ReferenceLine',
+    'Brush',
+    'CartesianGrid',
+    'Legend',
+    'Tooltip',
+    'Scatter',
+    'Customized',
+    'validate svg elements...',
   ],
 };

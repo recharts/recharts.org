@@ -1,7 +1,6 @@
 const CODE_PLACEHOLDER = '{code}';
 const MOUNT_ID = 'mountNode';
 
-
 export const template = `
 <!DOCTYPE html>
 <html lang="en">
@@ -45,12 +44,13 @@ export const covertImportExport = (originCode) => {
     const injects = code.match(reg);
     injects.forEach((item) => {
       const tempVar = item.replace(/(.*?\{|\}.*)/g, '');
-      const tempPkg = pkgToVarMap[
-        item
-          .replace(/^([\s\S]*?['"])/g, '')
-          .replace(/['"][\s\S]*/, '')
-          .trim()
-      ];
+      const tempPkg =
+        pkgToVarMap[
+          item
+            .replace(/^([\s\S]*?['"])/g, '')
+            .replace(/['"][\s\S]*/, '')
+            .trim()
+        ];
       const temp = `const {${tempVar}}=${tempPkg};`;
       code = code.replace(item, temp);
     });

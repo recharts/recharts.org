@@ -1,29 +1,41 @@
 import React from 'react';
-import {
-  BarChart, Legend, XAxis, YAxis, CartesianGrid, Tooltip, Bar,
-} from 'recharts';
+import { BarChart, Legend, XAxis, YAxis, CartesianGrid, Tooltip, Bar } from 'recharts';
 
 const data = [
   {
-    name: 'Page A', uv: 4000, pv: 2400,
+    name: 'Page A',
+    uv: 4000,
+    pv: 2400,
   },
   {
-    name: 'Page B', uv: 3000, pv: 1398,
+    name: 'Page B',
+    uv: 3000,
+    pv: 1398,
   },
   {
-    name: 'Page C', uv: 2000, pv: 9800,
+    name: 'Page C',
+    uv: 2000,
+    pv: 9800,
   },
   {
-    name: 'Page D', uv: 2780, pv: 3908,
+    name: 'Page D',
+    uv: 2780,
+    pv: 3908,
   },
   {
-    name: 'Page E', uv: 1890, pv: 4800,
+    name: 'Page E',
+    uv: 1890,
+    pv: 4800,
   },
   {
-    name: 'Page F', uv: 2390, pv: 3800,
+    name: 'Page F',
+    uv: 2390,
+    pv: 3800,
   },
   {
-    name: 'Page G', uv: 3490, pv: 4300,
+    name: 'Page G',
+    uv: 3490,
+    pv: 4300,
   },
 ];
 
@@ -69,7 +81,10 @@ const rangeExample = () => (
     height={250}
     data={rangeData}
     margin={{
-      top: 20, right: 20, bottom: 20, left: 20,
+      top: 20,
+      right: 20,
+      bottom: 20,
+      left: 20,
     }}
   >
     <XAxis dataKey="day" />
@@ -79,13 +94,13 @@ const rangeExample = () => (
   </BarChart>
 );
 
-
 export default [
   {
     demo: example,
     code: exampleCode,
     dataCode: `const data = ${JSON.stringify(data, null, 2)}`,
-  }, {
+  },
+  {
     demo: rangeExample,
   },
 ];

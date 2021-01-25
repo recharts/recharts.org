@@ -1,9 +1,7 @@
 import React, { PureComponent } from 'react';
-import {
-  Label, LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip, ReferenceArea,
-} from 'recharts';
+import { Label, LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip, ReferenceArea } from 'recharts';
 
-const data = [
+const initialData = [
   { name: 1, cost: 4.11, impression: 100 },
   { name: 2, cost: 2.39, impression: 120 },
   { name: 3, cost: 1.37, impression: 150 },
@@ -27,7 +25,7 @@ const data = [
 ];
 
 const getAxisYDomain = (from, to, ref, offset) => {
-  const refData = data.slice(from - 1, to);
+  const refData = initialData.slice(from - 1, to);
   let [bottom, top] = [refData[0][ref], refData[0][ref]];
   refData.forEach((d) => {
     if (d[ref] > top) top = d[ref];
@@ -38,7 +36,7 @@ const getAxisYDomain = (from, to, ref, offset) => {
 };
 
 const initialState = {
-  data,
+  initialData,
   left: 'dataMin',
   right: 'dataMax',
   refAreaLeft: '',
@@ -59,7 +57,8 @@ export default class Example extends PureComponent {
   }
 
   zoom() {
-    let { refAreaLeft, refAreaRight, data } = this.state;
+    let { refAreaLeft, refAreaRight } = this.state;
+    const { data } = this.state;
 
     if (refAreaLeft === refAreaRight || refAreaRight === '') {
       this.setState(() => ({
@@ -105,59 +104,35 @@ export default class Example extends PureComponent {
   }
 
   render() {
-    const {
-      data, barIndex, left, right, refAreaLeft, refAreaRight, top, bottom, top2, bottom2,
-    } = this.state;
+    const { data, barIndex, left, right, refAreaLeft, refAreaRight, top, bottom, top2, bottom2 } = this.state;
 
     return (
       <div className="highlight-bar-charts" style={{ userSelect: 'none' }}>
-        <button
-          // href="javascript: void(0);"
-          className="btn update"
-          onClick={this.zoomOut.bind(this)}
-        >
+        <button type="button" className="btn update" onClick={this.zoomOut.bind(this)}>
           Zoom Out
-
         </button>
 
         <LineChart
           width={800}
           height={400}
           data={data}
-          onMouseDown={e => this.setState({ refAreaLeft: e.activeLabel })}
-          onMouseMove={e => this.state.refAreaLeft && this.setState({ refAreaRight: e.activeLabel })}
+          onMouseDown={(e) => this.setState({ refAreaLeft: e.activeLabel })}
+          onMouseMove={(e) => this.state.refAreaLeft && this.setState({ refAreaRight: e.activeLabel })}
+          // eslint-disable-next-line react/jsx-no-bind
           onMouseUp={this.zoom.bind(this)}
         >
           <CartesianGrid strokeDasharray="3 3" />
-          <XAxis
-            allowDataOverflow
-            dataKey="name"
-            domain={[left, right]}
-            type="number"
-          />
-          <YAxis
-            allowDataOverflow
-            domain={[bottom, top]}
-            type="number"
-            yAxisId="1"
-          />
-          <YAxis
-            orientation="right"
-            allowDataOverflow
-            domain={[bottom2, top2]}
-            type="number"
-            yAxisId="2"
-          />
+          <XAxis allowDataOverflow dataKey="name" domain={[left, right]} type="number" />
+          <YAxis allowDataOverflow domain={[bottom, top]} type="number" yAxisId="1" />
+          <YAxis orientation="right" allowDataOverflow domain={[bottom2, top2]} type="number" yAxisId="2" />
           <Tooltip />
           <Line yAxisId="1" type="natural" dataKey="cost" stroke="#8884d8" animationDuration={300} />
           <Line yAxisId="2" type="natural" dataKey="impression" stroke="#82ca9d" animationDuration={300} />
 
-          {
-            (refAreaLeft && refAreaRight) ? (
-              <ReferenceArea yAxisId="1" x1={refAreaLeft} x2={refAreaRight} strokeOpacity={0.3} />) : null
-            }
+          {refAreaLeft && refAreaRight ? (
+            <ReferenceArea yAxisId="1" x1={refAreaLeft} x2={refAreaRight} strokeOpacity={0.3} />
+          ) : null}
         </LineChart>
-
       </div>
     );
   }

@@ -12,7 +12,9 @@ export const getLocaleType = (props) => {
 };
 
 export const parseLocalObj = (locale, value) => {
-  if (!value) { return ''; }
+  if (!value) {
+    return '';
+  }
 
   if (_.isObject(value)) {
     return _.get(value, `${locale}`, '') || _.get(value, 'en-US', '');

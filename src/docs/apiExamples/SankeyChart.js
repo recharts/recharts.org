@@ -1,10 +1,5 @@
 import React from 'react';
-import {
-  Sankey,
-  Tooltip,
-  Layer,
-  Rectangle,
-} from 'recharts';
+import { Sankey, Tooltip, Layer, Rectangle } from 'recharts';
 
 const data0 = {
   nodes: [
@@ -22,26 +17,11 @@ const data0 = {
   ],
 };
 
-const MyCustomNode = ({
-  x,
-  y,
-  width,
-  height,
-  index,
-  payload,
-  containerWidth,
-}) => {
+const MyCustomNode = ({ x, y, width, height, index, payload, containerWidth }) => {
   const isOut = x + width + 6 > containerWidth;
   return (
     <Layer key={`CustomNode${index}`}>
-      <Rectangle
-        x={x}
-        y={y}
-        width={width}
-        height={height}
-        fill="#5192ca"
-        fillOpacity="1"
-      />
+      <Rectangle x={x} y={y} width={width} height={height} fill="#5192ca" fillOpacity="1" />
       <text
         textAnchor={isOut ? 'end' : 'start'}
         x={isOut ? x - 6 : x + width + 6}
@@ -49,7 +29,7 @@ const MyCustomNode = ({
         fontSize="14"
         stroke="#333"
       >
-        { payload.name }
+        {payload.name}
       </text>
       <text
         textAnchor={isOut ? 'end' : 'start'}
@@ -59,7 +39,7 @@ const MyCustomNode = ({
         stroke="#333"
         strokeOpacity="0.5"
       >
-        {`${payload.value}k` }
+        {`${payload.value}k`}
       </text>
     </Layer>
   );

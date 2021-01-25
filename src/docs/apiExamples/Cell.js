@@ -1,7 +1,5 @@
 import React from 'react';
-import {
-  PieChart, Pie, Cell, BarChart, Bar,
-} from 'recharts';
+import { PieChart, Pie, Cell, BarChart, Bar } from 'recharts';
 
 const data = [
   { name: 'Group A', value: 400 },
@@ -16,11 +14,9 @@ const colors = ['#8884d8', '#83a6ed', '#8dd1e1', '#82ca9d', '#a4de6c', '#d0ed57'
 const example = () => (
   <PieChart width={730} height={250}>
     <Pie data={data} cx="50%" cy="50%" outerRadius={80} label>
-      {
-        data.map((entry, index) => (
-          <Cell key={`cell-${index}`} fill={colors[index]} />
-        ))
-      }
+      {data.map((entry, index) => (
+        <Cell key={`cell-${index}`} fill={colors[index]} />
+      ))}
     </Pie>
   </PieChart>
 );
@@ -28,11 +24,9 @@ const example = () => (
 const barExample = () => (
   <BarChart width={730} height={250} data={data}>
     <Bar dataKey="value">
-      {
-        data.map((entry, index) => (
-          <Cell key={`cell-${index}`} fill="none" stroke={colors[index]} strokeWidth={index === 2 ? 4 : 1} />
-        ))
-      }
+      {data.map((entry, index) => (
+        <Cell key={`cell-${index}`} fill="none" stroke={colors[index]} strokeWidth={index === 2 ? 4 : 1} />
+      ))}
     </Bar>
   </BarChart>
 );
@@ -54,7 +48,7 @@ const barExampleCode = `
   <Bar dataKey="value">
     {
       data.map((entry, index) => (
-        <Cell key={\`cell-\$\{index\}\`} stroke={colors[index]}  strokeWidth={index === 2 ? 4 : 1}/>
+        <Cell key={\`cell-$\{index}\`} stroke={colors[index]}  strokeWidth={index === 2 ? 4 : 1}/>
       ))
     }
   </Bar>

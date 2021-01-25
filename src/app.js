@@ -1,3 +1,4 @@
+/* eslint-disable no-underscore-dangle */
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { applyRouterMiddleware, browserHistory } from 'react-router';
@@ -10,7 +11,7 @@ import configureStore from './redux/configureStore';
 const initialState = window.__INITIAL_STATE__;
 const store = configureStore(initialState, browserHistory);
 const history = syncHistoryWithStore(browserHistory, store, {
-  selectLocationState: state => state.router,
+  selectLocationState: (state) => state.router,
 });
 
 const routes = makeRoutes(store);

@@ -1,7 +1,5 @@
 import React, { PureComponent } from 'react';
-import {
-  ScatterChart, Scatter, XAxis, YAxis, CartesianGrid, Tooltip, Cell
-} from 'recharts';
+import { ScatterChart, Scatter, XAxis, YAxis, CartesianGrid, Tooltip, Cell } from 'recharts';
 import { scaleOrdinal } from 'd3-scale';
 import { schemeCategory10 } from 'd3-scale-chromatic';
 
@@ -25,7 +23,10 @@ export default class Example extends PureComponent {
         width={400}
         height={400}
         margin={{
-          top: 20, right: 20, bottom: 20, left: 20,
+          top: 20,
+          right: 20,
+          bottom: 20,
+          left: 20,
         }}
       >
         <CartesianGrid />
@@ -33,9 +34,9 @@ export default class Example extends PureComponent {
         <YAxis type="number" dataKey="y" name="weight" unit="kg" />
         <Tooltip cursor={{ strokeDasharray: '3 3' }} />
         <Scatter name="A school" data={data} fill="#8884d8">
-          {
-            data.map((entry, index) => <Cell key={`cell-${index}`} fill={colors[index % colors.length]} />)
-          }
+          {data.map((entry, index) => (
+            <Cell key={`cell-${index}`} fill={colors[index % colors.length]} />
+          ))}
         </Scatter>
       </ScatterChart>
     );

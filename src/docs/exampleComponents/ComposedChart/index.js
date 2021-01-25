@@ -2,7 +2,7 @@ import ComposedChartWithAxisLabels from './ComposedChartWithAxisLabels';
 import LineBarAreaComposedChart from './LineBarAreaComposedChart';
 import SameDataComposedChart from './SameDataComposedChart';
 import VerticalComposedChart from './VerticalComposedChart';
-import ScatterAndLineOfBestFit from "./ScatterAndLineOfBestFit";
+import ScatterAndLineOfBestFit from './ScatterAndLineOfBestFit';
 
 export default {
   LineBarAreaComposedChart,

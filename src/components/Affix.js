@@ -22,6 +22,8 @@ class Affix extends PureComponent {
 
   static displayName = 'Affix';
 
+  static ref = React.createRef(null);
+
   constructor(props) {
     super(props);
     this.state = {
@@ -43,8 +45,8 @@ class Affix extends PureComponent {
   setTargetEventListeners() {
     const { prefixCls } = this.props;
     const { id } = this.state;
-    Events.on(window, `scroll.${prefixCls}.${id}`, ::this.updatePosition);
-    Events.on(window, `resize.${prefixCls}.${id}`, ::this.updatePosition);
+    Events.on(window, `scroll.${prefixCls}.${id}`, this.updatePosition);
+    Events.on(window, `resize.${prefixCls}.${id}`, this.updatePosition);
   }
 
   clearScrollEventListeners() {
@@ -58,9 +60,9 @@ class Affix extends PureComponent {
     const { offsetTop } = this.props;
     const scrollTop = DOMUtils.getDocumentScrollTop();
     // affix
-    const affixNode = ReactDOM.findDOMNode(this);
-    const {offsetWidth} = affixNode;
-    const {offsetHeight} = affixNode;
+    const affixNode = this.ref.current;
+    const { offsetWidth } = affixNode;
+    const { offsetHeight } = affixNode;
     const { top, left } = DOMUtils.getOffset(affixNode);
     if (scrollTop > top) {
       // Fixed Top
@@ -89,20 +91,14 @@ class Affix extends PureComponent {
   }
 
   render() {
-    const {
-      prefixCls, className, offsetTop, ...other
-    } = this.props;
+    const { prefixCls, className, offsetTop, ...other } = this.props;
     const { isFixed } = this.state;
     const componentClasses = isFixed ? `${prefixCls}-active` : `${prefixCls}-inactive`;
-    const classes = classnames(
-      `${prefixCls}`,
-      className,
-      componentClasses,
-    );
+    const classes = classnames(`${prefixCls}`, className, componentClasses);
     const { placeholderStyle, affixStyle } = this.state;
 
     return (
-      <div {...other} style={placeholderStyle}>
+      <div {...other} style={placeholderStyle} ref={this.ref}>
         <div className={classes} style={affixStyle}>
           {this.props.children}
         </div>

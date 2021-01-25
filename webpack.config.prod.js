@@ -24,10 +24,7 @@ module.exports = {
     rules: [
       {
         test: /\.jsx?$/,
-        include: [
-          path.resolve(__dirname, 'src'),
-          path.resolve(__dirname, 'node_modules/react-monaco-editor/src'),
-        ],
+        include: [path.resolve(__dirname, 'src'), path.resolve(__dirname, 'node_modules/react-monaco-editor/src')],
         use: ['babel-loader'],
       },
       {
@@ -41,9 +38,7 @@ module.exports = {
       {
         test: /\.css/,
         use: ['style-loader', 'css-loader'],
-        include: [
-          path.resolve(__dirname, 'node_modules/monaco-editor'),
-        ],
+        include: [path.resolve(__dirname, 'node_modules/monaco-editor')],
       },
       {
         test: /\.scss$/,

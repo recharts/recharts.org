@@ -1,32 +1,47 @@
 import React from 'react';
-import Highlight from 'utils/Highlight';
-import {
-  LineChart, Line, XAxis, YAxis, Tooltip, CartesianGrid,
-} from 'recharts';
+import { LineChart, Line, XAxis, YAxis, Tooltip, CartesianGrid } from 'recharts';
+import Highlight from '../../utils/Highlight';
 import renderCustomAxisTick from './CustomAxisTick';
 import { localeGet } from '../../utils/LocaleUtils';
 
 const data = [
   {
-    name: 'Page A', uv: 400, pv: 2400, amt: 2400,
+    name: 'Page A',
+    uv: 400,
+    pv: 2400,
+    amt: 2400,
   },
   {
-    name: 'Page B', uv: 300, pv: 4567, amt: 2400,
+    name: 'Page B',
+    uv: 300,
+    pv: 4567,
+    amt: 2400,
   },
   {
-    name: 'Page C', uv: 300, pv: 1398, amt: 2400,
+    name: 'Page C',
+    uv: 300,
+    pv: 1398,
+    amt: 2400,
   },
   {
-    name: 'Page D', uv: 200, pv: 9800, amt: 2400,
+    name: 'Page D',
+    uv: 200,
+    pv: 9800,
+    amt: 2400,
   },
   {
-    name: 'Page E', uv: 278, pv: 3908, amt: 2400,
+    name: 'Page E',
+    uv: 278,
+    pv: 3908,
+    amt: 2400,
   },
   {
-    name: 'Page F', uv: 189, pv: 4800, amt: 2400,
+    name: 'Page F',
+    uv: 189,
+    pv: 4800,
+    amt: 2400,
   },
 ];
-
 
 const GettingStarted = ({ locale }) => (
   <div className="mod-getting-started" id="Getting_Started">
@@ -34,23 +49,23 @@ const GettingStarted = ({ locale }) => (
     <h4 className="sub-title">{localeGet(locale, 'getting-started', 'step-1-title')}</h4>
     <p className="paragraph-title">
       {localeGet(locale, 'getting-started', 'with-help')}
-      <a href="https://github.com/recharts/babel-plugin-recharts" target="_blank">babel-plugin-recharts</a>
+      <a href="https://github.com/recharts/babel-plugin-recharts" target="_blank" rel="noreferrer">
+        babel-plugin-recharts
+      </a>
       {localeGet(locale, 'getting-started', 'plugin-desc')}
     </p>
     <p className="paragraph-title">{localeGet(locale, 'getting-started', 'step-1-desc')}</p>
 
     <div className="step-1">
       <Highlight className="e4x">
-        {
-`import { LineChart, Line } from 'recharts';
+        {`import { LineChart, Line } from 'recharts';
 const data = [{name: 'Page A', uv: 400, pv: 2400, amt: 2400}, ...];
 
 const renderLineChart = (
   <LineChart width={400} height={400} data={data}>
     <Line type="monotone" dataKey="uv" stroke="#8884d8" />
   </LineChart>
-);`
-      }
+);`}
       </Highlight>
 
       <LineChart width={600} height={300} data={data}>
@@ -62,8 +77,7 @@ const renderLineChart = (
     <p className="paragraph-title">{localeGet(locale, 'getting-started', 'step-2-desc')}</p>
     <div className="step-2">
       <Highlight className="e4x">
-        {
-`import { LineChart, Line, CartesianGrid, XAxis, YAxis } from 'recharts';
+        {`import { LineChart, Line, CartesianGrid, XAxis, YAxis } from 'recharts';
 const data = [{name: 'Page A', uv: 400, pv: 2400, amt: 2400}, ...];
 
 const renderLineChart = (
@@ -73,8 +87,7 @@ const renderLineChart = (
     <XAxis dataKey="name" />
     <YAxis />
   </LineChart>
-);`
-      }
+);`}
       </Highlight>
 
       <LineChart width={600} height={300} data={data}>
@@ -89,8 +102,7 @@ const renderLineChart = (
     <p className="paragraph-title">{localeGet(locale, 'getting-started', 'step-3-desc')}</p>
     <div className="step-3">
       <Highlight className="e4x">
-        {
-`import { LineChart, Line, CartesianGrid, XAxis, YAxis } from 'recharts';
+        {`import { LineChart, Line, CartesianGrid, XAxis, YAxis } from 'recharts';
 const data = [{name: 'Page A', uv: 400, pv: 2400, amt: 2400}, ...];
 
 const renderLineChart = (
@@ -100,8 +112,7 @@ const renderLineChart = (
     <XAxis dataKey="name" />
     <YAxis />
   </LineChart>
-);`
-      }
+);`}
       </Highlight>
 
       <LineChart
@@ -109,7 +120,10 @@ const renderLineChart = (
         height={300}
         data={data}
         margin={{
-          top: 20, right: 20, bottom: 5, left: 0,
+          top: 20,
+          right: 20,
+          bottom: 5,
+          left: 0,
         }}
       >
         <Line type="monotone" dataKey="uv" stroke="#8884d8" />
@@ -123,8 +137,7 @@ const renderLineChart = (
     <p className="paragraph-title">{localeGet(locale, 'getting-started', 'step-4-desc')}</p>
     <div className="step-4">
       <Highlight className="e4x">
-        {
-`import { LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip } from 'recharts';
+        {`import { LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip } from 'recharts';
 const data = [{name: 'Page A', uv: 400, pv: 2400, amt: 2400}, ...];
 
 const renderLineChart = (
@@ -135,8 +148,7 @@ const renderLineChart = (
     <YAxis />
     <Tooltip />
   </LineChart>
-);`
-      }
+);`}
       </Highlight>
 
       <LineChart
@@ -144,7 +156,10 @@ const renderLineChart = (
         height={300}
         data={data}
         margin={{
-          top: 20, right: 20, bottom: 5, left: 0,
+          top: 20,
+          right: 20,
+          bottom: 5,
+          left: 0,
         }}
       >
         <Line type="monotone" dataKey="uv" stroke="#8884d8" />
@@ -159,8 +174,7 @@ const renderLineChart = (
     <p className="paragraph-title">{localeGet(locale, 'getting-started', 'step-5-desc')}</p>
     <div className="step-5">
       <Highlight className="e4x">
-        {
-`import { LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip } from 'recharts';
+        {`import { LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip } from 'recharts';
 const data = [{name: 'Page A', uv: 400, pv: 2400, amt: 2400}, ...];
 
 const renderCustomAxisTick = ({ x, y, payload }) => {
@@ -183,12 +197,10 @@ const renderCustomAxisTick = ({ x, y, payload }) => {
       <path d={path} />
     </svg>
   );
-};`
-      }
+};`}
       </Highlight>
       <Highlight className="e4x">
-        {
-`const renderLineChart = (
+        {`const renderLineChart = (
   <LineChart width={600} height={300} data={data} margin={{ top: 5, right: 20, bottom: 5, left: 0 }}>
     <Line type="monotone" dataKey="uv" stroke="#8884d8" />
     <CartesianGrid stroke="#ccc" strokeDasharray="5 5" />
@@ -197,8 +209,7 @@ const renderCustomAxisTick = ({ x, y, payload }) => {
     <Tooltip />
   </LineChart>
 );
-`
-        }
+`}
       </Highlight>
 
       <LineChart
@@ -206,7 +217,10 @@ const renderCustomAxisTick = ({ x, y, payload }) => {
         height={300}
         data={data}
         margin={{
-          top: 20, right: 20, bottom: 5, left: 0,
+          top: 20,
+          right: 20,
+          bottom: 5,
+          left: 0,
         }}
       >
         <Line type="monotone" dataKey="uv" stroke="#8884d8" />

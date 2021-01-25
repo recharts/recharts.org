@@ -1,9 +1,7 @@
 import React, { PureComponent } from 'react';
 import { Link } from 'react-router';
-import {
-  LineChart, Line, XAxis, YAxis, Tooltip, CartesianGrid,
-} from 'recharts';
-import Highlight from 'utils/Highlight';
+import { LineChart, Line, XAxis, YAxis, Tooltip, CartesianGrid } from 'recharts';
+import Highlight from '../utils/Highlight';
 import { getLocaleType, localeGet } from '../utils/LocaleUtils';
 import './IndexView.scss';
 import 'simple-line-icons/scss/simple-line-icons.scss';
@@ -11,22 +9,40 @@ import users from '../docs/users/users';
 
 const data = [
   {
-    name: 'A', uv: 400, pv: 240, amt: 2400,
+    name: 'A',
+    uv: 400,
+    pv: 240,
+    amt: 2400,
   },
   {
-    name: 'B', uv: 300, pv: 456, amt: 2400,
+    name: 'B',
+    uv: 300,
+    pv: 456,
+    amt: 2400,
   },
   {
-    name: 'C', uv: 300, pv: 139, amt: 2400,
+    name: 'C',
+    uv: 300,
+    pv: 139,
+    amt: 2400,
   },
   {
-    name: 'D', uv: 200, pv: 980, amt: 2400,
+    name: 'D',
+    uv: 200,
+    pv: 980,
+    amt: 2400,
   },
   {
-    name: 'E', uv: 278, pv: 390, amt: 2400,
+    name: 'E',
+    uv: 278,
+    pv: 390,
+    amt: 2400,
   },
   {
-    name: 'F', uv: 189, pv: 480, amt: 2400,
+    name: 'F',
+    uv: 189,
+    pv: 480,
+    amt: 2400,
   },
 ];
 
@@ -52,13 +68,18 @@ class IndexView extends PureComponent {
           <p>
             <Link to={`/${locale}/guide/installation`} className="button install-btn">
               <i className="icon-energy" />
-              {' '}
               {localeGet(locale, 'home', 'install')}
-              {' '}
               v1.8.5
             </Link>
           </p>
-          <iframe title="star" src="https://ghbtns.com/github-btn.html?user=recharts&repo=recharts&type=star&count=true&size=median" frameBorder="0" scrolling="0" width="120px" height="22px" />
+          <iframe
+            title="star"
+            src="https://ghbtns.com/github-btn.html?user=recharts&repo=recharts&type=star&count=true&size=median"
+            frameBorder="0"
+            scrolling="0"
+            width="120px"
+            height="22px"
+          />
         </div>
 
         <div className="examples">
@@ -68,7 +89,10 @@ class IndexView extends PureComponent {
               height={300}
               data={data}
               margin={{
-                top: 5, right: 5, bottom: 5, left: 0,
+                top: 5,
+                right: 5,
+                bottom: 5,
+                left: 0,
               }}
             >
               <CartesianGrid stroke="#eee" strokeDasharray="5 5" />
@@ -106,15 +130,13 @@ class IndexView extends PureComponent {
           <h2 className="block-title">{localeGet(locale, 'home', 'whoUse')}</h2>
 
           <ul className="users">
-            {
-            users.map((entry, index) => (
+            {users.map((entry, index) => (
               <li className="user" key={`user-${index}`}>
-                <a href={entry.url} target="_blank" title={entry.anme}>
-                  <img src={entry.logoImgUrl} title={entry.anme} />
+                <a href={entry.url} target="_blank" title={entry.anme} rel="noreferrer">
+                  <img src={entry.logoImgUrl} title={entry.anme} alt={entry.anme} />
                 </a>
               </li>
-            ))
-          }
+            ))}
           </ul>
 
           <div className="users-desc">
@@ -133,9 +155,12 @@ class IndexView extends PureComponent {
         <div className="like block">
           <i className="icon-rocket" />
           <p className="text">{localeGet(locale, 'home', 'like')}</p>
-          <p className="btn"><Link to={`/${locale}/guide/getting-started`} className="button getting-started-btn">{localeGet(locale, 'home', 'get-started')}</Link></p>
+          <p className="btn">
+            <Link to={`/${locale}/guide/getting-started`} className="button getting-started-btn">
+              {localeGet(locale, 'home', 'get-started')}
+            </Link>
+          </p>
         </div>
-
       </div>
     );
   }

@@ -9,7 +9,8 @@ export default {
       desc: {
         'en-US': "The key of each sector's name.",
       },
-    }, {
+    },
+    {
       name: 'dataKey',
       type: 'String',
       defaultVal: 'value',
@@ -21,20 +22,22 @@ export default {
     {
       name: 'width',
       type: 'Percentage | Number',
-      defaultVal: '\'100%\'',
+      defaultVal: "'100%'",
       isOptional: false,
       desc: {
-        'en-US': 'The percentage value of the chart\'s width or a fixed width.',
+        'en-US': "The percentage value of the chart's width or a fixed width.",
       },
-    }, {
+    },
+    {
       name: 'height',
       type: 'Percentage | Number',
-      defaultVal: '\'100%\'',
+      defaultVal: "'100%'",
       isOptional: false,
       desc: {
-        'en-US': 'The percentage value of the chart\'s width or a fixed height.',
+        'en-US': "The percentage value of the chart's width or a fixed height.",
       },
-    }, {
+    },
+    {
       name: 'data',
       type: 'Object',
       defaultVal: 'undefined',
@@ -57,7 +60,8 @@ export default {
         '  { source: 2, target: 4, value: 291741 },',
         '],',
       ],
-    }, {
+    },
+    {
       name: 'nodePadding',
       type: 'Number',
       defaultVal: '10',
@@ -65,7 +69,8 @@ export default {
       desc: {
         'en-US': 'The padding between the nodes',
       },
-    }, {
+    },
+    {
       name: 'nodeWidth',
       type: 'Number',
       defaultVal: '10',
@@ -73,14 +78,16 @@ export default {
       desc: {
         'en-US': 'The width of node',
       },
-    }, {
+    },
+    {
       name: 'linkWidth',
       type: 'Number',
       isOptional: false,
       desc: {
         'en-US': 'The width of link',
       },
-    }, {
+    },
+    {
       name: 'linkCurvature',
       type: 'Number',
       defaultVal: '0.5',
@@ -88,7 +95,8 @@ export default {
       desc: {
         'en-US': 'The curvature of width',
       },
-    }, {
+    },
+    {
       name: 'iterations',
       type: 'Number',
       defaultVal: '32',
@@ -96,31 +104,30 @@ export default {
       desc: {
         'en-US': 'The number of the iterations between the links',
       },
-    }, {
+    },
+    {
       name: 'node',
       type: 'Object | ReactElement',
       defaultVal: 'undefined',
       isOptional: true,
       desc: {
-        'en-US': 'If set a object, the option is the configuration of nodes. If set a React element, the option is the custom react element of drawing the nodes.',
+        'en-US':
+          'If set a object, the option is the configuration of nodes. If set a React element, the option is the custom react element of drawing the nodes.',
       },
-      format: [
-        '<Sankey node={<MyCustomComponent />} />',
-        '<Sankey node={{stroke: #77c878, strokeWidth: 2}} />',
-      ],
-    }, {
+      format: ['<Sankey node={<MyCustomComponent />} />', '<Sankey node={{stroke: #77c878, strokeWidth: 2}} />'],
+    },
+    {
       name: 'link',
       type: 'Object | ReactElement',
       defaultVal: 'undefined',
       isOptional: true,
       desc: {
-        'en-US': 'If set a object, the option is the configuration of links. If set a React element, the option is the custom react element of drawing the links.',
+        'en-US':
+          'If set a object, the option is the configuration of links. If set a React element, the option is the custom react element of drawing the links.',
       },
-      format: [
-        '<Sankey link={<MyCustomComponent />} />',
-        '<Sankey link={{fill: #77c878 }} />',
-      ],
-    }, {
+      format: ['<Sankey link={<MyCustomComponent />} />', '<Sankey link={{fill: #77c878 }} />'],
+    },
+    {
       name: 'margin',
       type: 'Object',
       defaultVal: '{ top: 5, right: 5, bottom: 5, left: 5 }',
@@ -128,66 +135,73 @@ export default {
       desc: {
         'en-US': 'The sizes of whitespace around the container.',
       },
-      format: [
-        '{ top: 5, right: 5, bottom: 5, left: 5 }',
-      ],
-    }, {
+      format: ['{ top: 5, right: 5, bottom: 5, left: 5 }'],
+    },
+    {
       name: 'onClick',
       type: 'Function',
       isOptional: true,
       desc: {
         'en-US': 'The customized event handler of click on the area in this group',
       },
-    }, {
+    },
+    {
       name: 'onMouseEnter',
       type: 'Function',
       isOptional: true,
       desc: {
         'en-US': 'The customized event handler of mouseenter on the area in this group',
       },
-    }, {
+    },
+    {
       name: 'onMouseLeave',
       type: 'Function',
       isOptional: true,
       desc: {
         'en-US': 'The customized event handler of mouseleave on the area in this group',
       },
-    }, {
+    },
+    {
       name: 'sourceX',
       type: 'Number',
       isOptional: false,
       desc: {
         'en-US': 'The source number of X-axis',
       },
-    }, {
+    },
+    {
       name: 'sourceY',
       type: 'Number',
       isOptional: false,
       desc: {
         'en-US': 'The source number of Y-axis',
       },
-    }, {
+    },
+    {
       name: 'sourceControlX',
       type: 'Number',
       isOptional: false,
       desc: {
         'en-US': 'The source control of X-axis',
       },
-    }, {
+    },
+    {
       name: 'targetControlX',
       type: 'Number',
       isOptional: false,
       desc: {
         'en-US': 'The target control of X-axis',
       },
-    }, {
+    },
+    {
       name: 'targetX',
       type: 'Number',
       isOptional: false,
       desc: {
         'en-US': 'The target of X-axis',
       },
-    }, {
+    },
+    {
       name: 'targetY',
       type: 'Number',
       isOptional: false,
@@ -196,7 +210,5 @@ export default {
       },
     },
   ],
-  childrenComponents: [
-    'Tooltip',
-  ],
+  childrenComponents: ['Tooltip'],
 };

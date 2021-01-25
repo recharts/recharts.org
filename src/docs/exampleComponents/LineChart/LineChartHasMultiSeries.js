@@ -1,7 +1,5 @@
 import React, { PureComponent } from 'react';
-import {
-  LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend,
-} from 'recharts';
+import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
 
 const series = [
   {
@@ -41,7 +39,7 @@ export default class Example extends PureComponent {
         <YAxis dataKey="value" />
         <Tooltip />
         <Legend />
-        {series.map(s => (
+        {series.map((s) => (
           <Line dataKey="value" data={s.data} name={s.name} key={s.name} />
         ))}
       </LineChart>

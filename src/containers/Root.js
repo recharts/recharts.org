@@ -12,9 +12,7 @@ class Root extends PureComponent {
   };
 
   render() {
-    const {
-      store, history, routes, render,
-    } = this.props;
+    const { store, history, routes, render } = this.props;
 
     return (
       <Provider store={store}>

@@ -1,10 +1,8 @@
 {
   "extends": [
     "eslint:recommended",
-    "plugin:@typescript-eslint/recommended",
     "plugin:react/recommended",
     "eslint-config-airbnb",
-    "prettier/@typescript-eslint",
     "plugin:prettier/recommended",
     "prettier"
   ],
@@ -13,8 +11,13 @@
     "mocha": true,
     "node": true
   },
-  "parser": "@typescript-eslint/parser",
-  "plugins": ["react", "@typescript-eslint"],
+  "parser": "babel-eslint",
+  "plugins": ["react"],
+  "ecmaFeatures": {
+    "classes": true,
+    "jsx": true,
+    "experimentalDecorators": true
+  },
   "rules": {
     "prettier/prettier": [
       "error",
@@ -81,10 +84,8 @@
     "import/no-cycle": "warn",
     "react/jsx-props-no-spreading": "off",
     "react/state-in-constructor": "off",
-    "react/static-property-placement": "off",
-
-    "@typescript-eslint/explicit-function-return-type": "off",
-    "@typescript-eslint/no-explicit-any": "off"
+    "react/prop-types": "off",
+    "react/static-property-placement": "off"
   },
   "settings": {
     "import/resolver": {
