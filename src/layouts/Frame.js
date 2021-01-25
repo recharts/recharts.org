@@ -67,7 +67,7 @@ class Frame extends Component {
                   className="nav-logo"
                   to={`/${locale}`}
                 >
-&lt;Recharts /&gt;
+                  &lt;Recharts /&gt;
                 </Link>
               </h1>
               <nav>
@@ -87,7 +87,7 @@ class Frame extends Component {
                       target="_blank"
                       className="nav-github"
                     >
-GitHub
+                      GitHub
                     </a>
                   </li>
                   <li className="language-switch-wrapper">

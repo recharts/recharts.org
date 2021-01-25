@@ -10,7 +10,7 @@ function BlogView() {
         </p>
         <p className="date">Sep 18, 2019</p>
         <p className="abstract">
-        Heat maps are a great visualisation to start with when exploring sports event data that includes coordinates, allowing viewers to immediately focus on areas of the field that matter most.
+          Heat maps are a great visualisation to start with when exploring sports event data that includes coordinates, allowing viewers to immediately focus on areas of the field that matter most.
         </p>
       </div>
       <div className="blog">

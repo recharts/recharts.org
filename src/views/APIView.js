@@ -233,11 +233,9 @@ class APIView extends PureComponent {
           {this.renderExamples(apiExamples, locale)}
 
           {api.parentComponents && api.parentComponents.length ?
-            this.renderParent(api.parentComponents, locale) : null
-          }
+            this.renderParent(api.parentComponents, locale) : null}
           {api.childrenComponents && api.childrenComponents.length ?
-            this.renderChildren(api.childrenComponents, locale) : null
-          }
+            this.renderChildren(api.childrenComponents, locale) : null}
 
           <h4 className="sub-title">Properties</h4>
           <ul className="props-list">

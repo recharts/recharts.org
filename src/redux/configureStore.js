@@ -14,11 +14,7 @@ export default function configureStore(initialState = {}, history) {
     }
   }
 
-  const store = createStore(rootReducer, initialState,
-    compose(
-      applyMiddleware(...middleware),
-      ...enhancers,
-    ));
+  const store = createStore(rootReducer, initialState, compose(applyMiddleware(...middleware), ...enhancers));
 
   if (module.hot) {
     module.hot.accept('./rootReducer', () => {
