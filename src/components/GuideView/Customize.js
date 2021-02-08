@@ -1,8 +1,6 @@
 import React from 'react';
-import Highlight from 'utils/Highlight';
-import {
-  BarChart, Bar, LineChart, Legend, Line, XAxis, YAxis, Tooltip, CartesianGrid,
-} from 'recharts';
+import { BarChart, Bar, LineChart, Legend, Line, XAxis, YAxis, Tooltip, CartesianGrid } from 'recharts';
+import Highlight from '../../utils/Highlight';
 import renderCustomBarLabel from './CustomBarLabel';
 import renderCustomAxisTick from './CustomAxisTick';
 import TriangleBar from './TriangleBar';
@@ -11,22 +9,40 @@ import { localeGet } from '../../utils/LocaleUtils';
 
 const data = [
   {
-    name: 'Page A', uv: 400, pv: 2400, amt: 2400,
+    name: 'Page A',
+    uv: 400,
+    pv: 2400,
+    amt: 2400,
   },
   {
-    name: 'Page B', uv: 300, pv: 4567, amt: 2400,
+    name: 'Page B',
+    uv: 300,
+    pv: 4567,
+    amt: 2400,
   },
   {
-    name: 'Page C', uv: 300, pv: 1398, amt: 2400,
+    name: 'Page C',
+    uv: 300,
+    pv: 1398,
+    amt: 2400,
   },
   {
-    name: 'Page D', uv: 200, pv: 9800, amt: 2400,
+    name: 'Page D',
+    uv: 200,
+    pv: 9800,
+    amt: 2400,
   },
   {
-    name: 'Page E', uv: 278, pv: 3908, amt: 2400,
+    name: 'Page E',
+    uv: 278,
+    pv: 3908,
+    amt: 2400,
   },
   {
-    name: 'Page F', uv: 189, pv: 4800, amt: 2400,
+    name: 'Page F',
+    uv: 189,
+    pv: 4800,
+    amt: 2400,
   },
 ];
 
@@ -39,8 +55,7 @@ function Customize({ locale }) {
       <p className="paragraph-title">{localeGet(locale, 'customize', 'step-1-desc')}</p>
       <div className="demo">
         <Highlight className="e4x">
-          {
-`import { BarChart, Bar, XAxis, YAxis } from 'recharts';
+          {`import { BarChart, Bar, XAxis, YAxis } from 'recharts';
 const data = [{name: 'Page A', uv: 400, pv: 2400, amt: 2400}, ...];
 const renderCustomAxisTick = ({ x, y, payload }) => {
   let path = '';
@@ -66,20 +81,17 @@ const renderCustomAxisTick = ({ x, y, payload }) => {
 const renderCustomBarLabel = ({ payload, x, y, width, height, value }) => {
   return <text x={x + width / 2} y={y} fill="#666" textAnchor="middle" dy={-6}>{\`value: \${value}\`}</text>;
 };
-`
-        }
+`}
         </Highlight>
         <Highlight className="e4x">
-          {
-`const renderBarChart = (
+          {`const renderBarChart = (
   <BarChart width={600} height={300} data={data}>
     <XAxis dataKey="name" tick={renderCustomAxisTick} />
     <YAxis />
     <Bar dataKey="uv" barSize={30} fill="#8884d8"
       label={renderCustomBarLabel}/>
   </BarChart>
-);`
-        }
+);`}
         </Highlight>
 
         <BarChart width={600} height={300} data={data}>
@@ -93,8 +105,7 @@ const renderCustomBarLabel = ({ payload, x, y, width, height, value }) => {
       <p className="paragraph-title">{localeGet(locale, 'customize', 'step-2-desc')}</p>
       <div className="demo">
         <Highlight className="e4x">
-          {
-`import { BarChart, Bar, XAxis, YAxis } from 'recharts';
+          {`import { BarChart, Bar, XAxis, YAxis } from 'recharts';
 const data = [{name: 'Page A', uv: 400, pv: 2400, amt: 2400}, ...];
 ...
 const getPath = (x, y, width, height) => (
@@ -111,20 +122,17 @@ const TriangleBar = (props) => {
 
   return <path d={getPath(x, y, width, height)} stroke="none" fill={fill} />;
 };
-`
-        }
+`}
         </Highlight>
         <Highlight className="e4x">
-          {
-`const renderBarChart = (
+          {`const renderBarChart = (
   <BarChart width={600} height={300} data={data}>
     <XAxis dataKey="name" tick={renderCustomAxisTick} />
     <YAxis />
     <Bar dataKey="uv" fill="#8884d8"
       shape={<TriangleBar />} />
   </BarChart>
-);`
-          }
+);`}
         </Highlight>
 
         <BarChart width={600} height={300} data={data}>
@@ -138,8 +146,7 @@ const TriangleBar = (props) => {
       <p className="paragraph-title">{localeGet(locale, 'customize', 'step-3-desc')}</p>
       <div className="demo">
         <Highlight className="e4x">
-          {
-`import { BarChart, Bar, XAxis, YAxis, Tooltip } from 'recharts';
+          {`import { BarChart, Bar, XAxis, YAxis, Tooltip } from 'recharts';
 const data = [{name: 'Page A', uv: 400, pv: 2400, amt: 2400}, ...];
 ...
 function getIntroOfPage(label) {
@@ -171,12 +178,10 @@ function CustomTooltip({ payload, label, active }) {
 
   return null;
 }
-`
-        }
+`}
         </Highlight>
         <Highlight className="e4x">
-          {
-`const renderBarChart = (
+          {`const renderBarChart = (
   <BarChart width={600} height={300} data={data}>
     <XAxis dataKey="name" tick={renderCustomAxisTick} />
     <YAxis />
@@ -184,8 +189,7 @@ function CustomTooltip({ payload, label, active }) {
     <Bar dataKey="uv" fill="#8884d8"
       shape={<TriangleBar />} />
   </BarChart>
-);`
-        }
+);`}
         </Highlight>
 
         <BarChart width={600} height={300} data={data}>
@@ -200,8 +204,7 @@ function CustomTooltip({ payload, label, active }) {
       <p className="paragraph-title">{localeGet(locale, 'customize', 'step-4-desc')}</p>
       <div className="demo">
         <Highlight className="e4x">
-          {
-`import { BarChart, Bar, XAxis, YAxis, Tooltip, CartesianGrid } from 'recharts';
+          {`import { BarChart, Bar, XAxis, YAxis, Tooltip, CartesianGrid } from 'recharts';
 const data = [{name: 'Page A', uv: 400, pv: 2400, amt: 2400}, ...];
 
 const renderBarChart = (
@@ -212,8 +215,7 @@ const renderBarChart = (
     <CartesianGrid stroke="#ccc" strokeDasharray="5 5" />
     <Bar dataKey="uv" fill="#8884d8" barSize={30} />
   </BarChart>
-);`
-        }
+);`}
         </Highlight>
 
         <BarChart width={600} height={300} data={data}>
@@ -229,8 +231,7 @@ const renderBarChart = (
       <p className="paragraph-title">{localeGet(locale, 'customize', 'step-5-desc')}</p>
       <div className="demo">
         <Highlight className="e4x">
-          {
-`import { BarChart, Bar, XAxis, YAxis, Tooltip, Legend, CartesianGrid } from 'recharts';
+          {`import { BarChart, Bar, XAxis, YAxis, Tooltip, Legend, CartesianGrid } from 'recharts';
 const data = [{name: 'Page A', uv: 400, pv: 2400, amt: 2400}, ...];
 
 const renderBarChart = (
@@ -242,8 +243,7 @@ const renderBarChart = (
     <CartesianGrid stroke="#ccc" strokeDasharray="5 5" />
     <Bar dataKey="uv" fill="#8884d8" barSize={30} />
   </BarChart>
-);`
-        }
+);`}
         </Highlight>
 
         <BarChart width={600} height={300} data={data}>
@@ -253,7 +253,12 @@ const renderBarChart = (
           <Legend
             width={100}
             wrapperStyle={{
-              top: 40, right: 20, backgroundColor: '#f5f5f5', border: '1px solid #d5d5d5', borderRadius: 3, lineHeight: '40px',
+              top: 40,
+              right: 20,
+              backgroundColor: '#f5f5f5',
+              border: '1px solid #d5d5d5',
+              borderRadius: 3,
+              lineHeight: '40px',
             }}
           />
           <CartesianGrid stroke="#ccc" strokeDasharray="5 5" />

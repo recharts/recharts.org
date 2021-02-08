@@ -1,7 +1,5 @@
 import React, { PureComponent } from 'react';
-import {
-  LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend,
-} from 'recharts';
+import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
 
 const data = [
   { name: 'Page A', uv: 4000 },
@@ -24,7 +22,10 @@ export default class Example extends PureComponent {
           height={200}
           data={data}
           margin={{
-            top: 10, right: 30, left: 0, bottom: 0,
+            top: 10,
+            right: 30,
+            left: 0,
+            bottom: 0,
           }}
         >
           <CartesianGrid strokeDasharray="3 3" />
@@ -38,7 +39,10 @@ export default class Example extends PureComponent {
           height={200}
           data={data}
           margin={{
-            top: 10, right: 30, left: 0, bottom: 0,
+            top: 10,
+            right: 30,
+            left: 0,
+            bottom: 0,
           }}
         >
           <CartesianGrid strokeDasharray="3 3" />

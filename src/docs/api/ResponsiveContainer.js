@@ -1,8 +1,10 @@
 export default {
   name: 'ResponsiveContainer',
   desc: {
-    'en-US': 'A container component to make charts adapt to the size of parent container. One of the props width and height should be a percentage string.',
-    'zh-CN': 'ResponsiveContainer 是一个容器型的组件，用来处理图表的宽高需要适配父节点宽高的问题。建议宽度、高度至少有一个属性是百分比，否则可以直接指定图表的宽度、高度。',
+    'en-US':
+      'A container component to make charts adapt to the size of parent container. One of the props width and height should be a percentage string.',
+    'zh-CN':
+      'ResponsiveContainer 是一个容器型的组件，用来处理图表的宽高需要适配父节点宽高的问题。建议宽度、高度至少有一个属性是百分比，否则可以直接指定图表的宽度、高度。',
   },
   props: [
     {
@@ -18,22 +20,24 @@ export default {
     {
       name: 'width',
       type: 'Percentage | Number',
-      defaultVal: '\'100%\'',
+      defaultVal: "'100%'",
       isOptional: false,
       desc: {
-        'en-US': 'The percentage value of the chart\'s width or a fixed width.',
+        'en-US': "The percentage value of the chart's width or a fixed width.",
         'zh-CN': '指定容器的宽度为一个数值，或者父节点宽度的百分比值。',
       },
-    }, {
+    },
+    {
       name: 'height',
       type: 'Percentage | Number',
-      defaultVal: '\'100%\'',
+      defaultVal: "'100%'",
       isOptional: false,
       desc: {
-        'en-US': 'The percentage value of the chart\'s width or a fixed height.',
+        'en-US': "The percentage value of the chart's width or a fixed height.",
         'zh-CN': '指定容器的高度为一个数值，或者父节点高度的百分比值。',
       },
-    }, {
+    },
+    {
       name: 'minWidth',
       type: 'Number',
       defaultVal: 'null',
@@ -42,7 +46,8 @@ export default {
         'en-US': 'The minimum width of the container.',
         'zh-CN': '指定容器的最小宽度。',
       },
-    }, {
+    },
+    {
       name: 'minHeight',
       type: 'Number',
       defaultVal: 'null',
@@ -51,7 +56,8 @@ export default {
         'en-US': 'The minimum height of the container.',
         'zh-CN': '指定容器的最小高度。',
       },
-    }, {
+    },
+    {
       name: 'debounce',
       type: 'Number',
       defaultVal: '0',
@@ -63,7 +69,14 @@ export default {
     },
   ],
   childrenComponents: [
-    'AreaChart', 'BarChart', 'LineChart', 'ComposedChart', 'PieChart', 'RadarChart', 'RadialBarChart',
-    'ScatterChart', 'Treemap',
+    'AreaChart',
+    'BarChart',
+    'LineChart',
+    'ComposedChart',
+    'PieChart',
+    'RadarChart',
+    'RadialBarChart',
+    'ScatterChart',
+    'Treemap',
   ],
 };

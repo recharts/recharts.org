@@ -6,10 +6,7 @@ module.exports = {
   mode: 'development',
   devtool: 'cheap-module-eval-source-map',
   entry: {
-    app: [
-      'webpack-hot-middleware/client',
-      './src/app',
-    ],
+    app: ['webpack-hot-middleware/client', './src/app'],
   },
 
   output: {
@@ -26,10 +23,7 @@ module.exports = {
     rules: [
       {
         test: /\.jsx?$/,
-        include: [
-          path.resolve(__dirname, 'src'),
-          path.resolve(__dirname, 'node_modules/react-monaco-editor/src'),
-        ],
+        include: [path.resolve(__dirname, 'src'), path.resolve(__dirname, 'node_modules/react-monaco-editor/src')],
         use: ['babel-loader'],
       },
       {
@@ -43,9 +37,7 @@ module.exports = {
       {
         test: /\.css/,
         use: ['style-loader', 'css-loader'],
-        include: [
-          path.resolve(__dirname, 'node_modules/monaco-editor'),
-        ],
+        include: [path.resolve(__dirname, 'node_modules/monaco-editor')],
       },
       {
         test: /\.scss$/,
@@ -67,7 +59,6 @@ module.exports = {
       },
     ],
   },
-
   resolve: {
     alias: {
       react: path.join(__dirname, 'node_modules', 'react'),
@@ -79,13 +70,12 @@ module.exports = {
       docs: path.join(__dirname, './src/docs'),
     },
   },
-
   plugins: [
     new webpack.DefinePlugin({
       __DEV__: true,
       __DEVTOOLS__: true,
     }),
     new webpack.HotModuleReplacementPlugin(),
-    new MonacoWebpackPlugin(),
+    new MonacoWebpackPlugin({ languages: ['javascript', 'typescript'] }),
   ],
 };

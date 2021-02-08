@@ -1,12 +1,8 @@
 import React, { Component } from 'react';
-import {
-  Route, IndexRoute, Redirect, IndexRedirect,
-} from 'react-router';
-import {
-  IndexView, GuideView, APIView, ExamplesView, BlogView,
-} from 'views';
-import Frame from 'layouts/Frame';
+import { Route, IndexRoute, Redirect, IndexRedirect } from 'react-router';
 import _ from 'lodash';
+import { IndexView, GuideView, APIView, ExamplesView, BlogView } from '../views';
+import Frame from '../layouts/Frame';
 import Locale from '../locale';
 
 const locales = Object.keys(Locale);
@@ -32,7 +28,7 @@ const onEnter = (nextState, replace) => {
   }
 };
 
-export default store => (
+export default (store) => (
   <Route path="/" component={Frame} onEnter={onEnter}>
     <IndexRedirect to="/en-US" />
     <Route path="/*/guide(/:name)" component={GuideView} />

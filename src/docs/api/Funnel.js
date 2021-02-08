@@ -10,10 +10,7 @@ export default {
         'en-US': 'The source data, in which each element is an object.',
         'zh-CN': '输入数据，现在支持的类型是对象数组。',
       },
-      format: [
-        '[{ name: \'a\', value: 12 }]',
-        '[{ name: \'a\', value: [5, 12] }]',
-      ],
+      format: ["[{ name: 'a', value: 12 }]", "[{ name: 'a', value: [5, 12] }]"],
     },
     {
       name: 'dataKey',
@@ -24,30 +21,35 @@ export default {
         'en-US': 'The key or getter of a group of data which should be unique in a LineChart.',
         'zh-CN': '每个区域图对应一个唯一的 key，需要在 FunnelChart 中保证唯一。',
       },
-    }, {
+    },
+    {
       name: 'nameKey',
       type: 'String',
-      defaultVal: '\'name\'',
+      defaultVal: "'name'",
       isOptional: false,
       desc: {
         'en-US': "The key of each sector's name.",
         'zh-CN': '"name" 属性对应的 key 。',
       },
-    }, {
+    },
+    {
       name: 'legendType',
-      type: '\'line\' | \'square\' | \'rect\'| \'circle\' | \'cross\' | \'diamond\' | \'square\' | \'star\' | \'triangle\' | \'wye\' | \'none\'',
-      defaultVal: '\'line\'',
+      type:
+        "'line' | 'square' | 'rect'| 'circle' | 'cross' | 'diamond' | 'square' | 'star' | 'triangle' | 'wye' | 'none'",
+      defaultVal: "'line'",
       isOptional: true,
       desc: {
-        'en-US': 'The type of icon in legend.  If set to \'none\', no legend item will be rendered.',
+        'en-US': "The type of icon in legend.  If set to 'none', no legend item will be rendered.",
         'zh-CN': '对应的图例 icon 的类型。',
       },
-    }, {
+    },
+    {
       name: 'activeShape',
       type: 'Object | ReactElement | Function',
       defaultVal: 'true',
       isOptional: false,
-    }, {
+    },
+    {
       name: 'trapezoids',
       type: 'Array',
       defaultVal: 'null',
@@ -57,7 +59,8 @@ export default {
         'zh-CN': '梯形的坐标点。当使用 FunnelChart 作为父组件的时候，不需要自己计算，父组件会计算好。',
       },
       format: ['[{x: 12, y: 12, upperWidth: 240, lowerWidth: 22, height: 80,}]'],
-    }, {
+    },
+    {
       name: 'isAnimationActive',
       type: 'Boolean',
       defaultVal: 'true in CSR, and false in SSR',
@@ -66,7 +69,8 @@ export default {
         'en-US': 'If set false, animation of line will be disabled.',
         'zh-CN': '当值为 false，不开启动画。',
       },
-    }, {
+    },
+    {
       name: 'animationBegin',
       type: 'Number',
       defaultVal: 0,
@@ -75,7 +79,8 @@ export default {
         'en-US': 'Specifies when the animation should begin, the unit of this option is ms.',
         'zh-CN': '声明组件挂载后，开始运行动画的间隔时长，单位为毫秒。',
       },
-    }, {
+    },
+    {
       name: 'animationDuration',
       type: 'Number',
       defaultVal: 1500,
@@ -84,25 +89,29 @@ export default {
         'en-US': 'Specifies the duration of animation, the unit of this option is ms.',
         'zh-CN': '声明动画的运行时长，单位为毫秒。',
       },
-    }, {
+    },
+    {
       name: 'animationEasing',
-      type: '\'ease\' | \'ease-in\' | \'ease-out\' | \'ease-in-out\' | \'linear\'',
-      defaultVal: '\'ease\'',
+      type: "'ease' | 'ease-in' | 'ease-out' | 'ease-in-out' | 'linear'",
+      defaultVal: "'ease'",
       isOptional: false,
       desc: {
         'en-US': 'The type of easing function.',
         'zh-CN': '动画缓动函数的类型。',
       },
-    }, {
+    },
+    {
       name: 'id',
       type: 'String',
       defaultVal: 'null',
       isOptional: true,
       desc: {
-        'en-US': 'The unique id of this component, which will be used to generate unique clip path id internally. This props is suggested to be set in SSR.',
+        'en-US':
+          'The unique id of this component, which will be used to generate unique clip path id internally. This props is suggested to be set in SSR.',
         'zh-CN': '唯一的id，会用于生成内部的clip path id 等，建议使用SSR的时候设置这个属性。',
       },
-    }, {
+    },
+    {
       name: 'onAnimationStart',
       type: 'Function',
       isOptional: true,
@@ -110,7 +119,8 @@ export default {
         'en-US': 'The customized event handler of animation start',
         'zh-CN': '区域图动画 start 事件的回调函数。',
       },
-    }, {
+    },
+    {
       name: 'onAnimationEnd',
       type: 'Function',
       isOptional: true,
@@ -118,7 +128,8 @@ export default {
         'en-US': 'The customized event handler of animation end',
         'zh-CN': '区域图动画 end 事件的回调函数。',
       },
-    }, {
+    },
+    {
       name: 'onClick',
       type: 'Function',
       isOptional: true,
@@ -126,11 +137,14 @@ export default {
         'en-US': 'The customized event handler of click on the area in this group',
         'zh-CN': '曲线 click 事件的回调函数。',
       },
-      examples: [{
-        name: 'A BarChart with customized click event handler',
-        url: '/examples/BarChartWithCustomizedEvent',
-      }],
-    }, {
+      examples: [
+        {
+          name: 'A BarChart with customized click event handler',
+          url: '/examples/BarChartWithCustomizedEvent',
+        },
+      ],
+    },
+    {
       name: 'onMouseDown',
       type: 'Function',
       isOptional: true,
@@ -138,7 +152,8 @@ export default {
         'en-US': 'The customized event handler of mousedown on the area in this group',
         'zh-CN': '曲线 mousedown 事件的回调函数。',
       },
-    }, {
+    },
+    {
       name: 'onMouseUp',
       type: 'Function',
       isOptional: true,
@@ -146,7 +161,8 @@ export default {
         'en-US': 'The customized event handler of mouseup on the area in this group',
         'zh-CN': '曲线 mouseup 事件的回调函数。',
       },
-    }, {
+    },
+    {
       name: 'onMouseMove',
       type: 'Function',
       isOptional: true,
@@ -154,7 +170,8 @@ export default {
         'en-US': 'The customized event handler of mousemove on the area in this group',
         'zh-CN': '曲线 mousemove 事件的回调函数。',
       },
-    }, {
+    },
+    {
       name: 'onMouseOver',
       type: 'Function',
       isOptional: true,
@@ -162,7 +179,8 @@ export default {
         'en-US': 'The customized event handler of mouseover on the area in this group',
         'zh-CN': '曲线 mouseover 事件的回调函数。',
       },
-    }, {
+    },
+    {
       name: 'onMouseOut',
       type: 'Function',
       isOptional: true,
@@ -170,7 +188,8 @@ export default {
         'en-US': 'The customized event handler of mouseout on the area in this group',
         'zh-CN': '曲线 mouseout 事件的回调函数。',
       },
-    }, {
+    },
+    {
       name: 'onMouseEnter',
       type: 'Function',
       isOptional: true,
@@ -178,7 +197,8 @@ export default {
         'en-US': 'The customized event handler of moustenter on the area in this group',
         'zh-CN': '曲线 moustenter 事件的回调函数。',
       },
-    }, {
+    },
+    {
       name: 'onMouseLeave',
       type: 'Function',
       isOptional: true,
@@ -188,10 +208,6 @@ export default {
       },
     },
   ],
-  parentComponents: [
-    'FunnelChart',
-  ],
-  childrenComponents: [
-    'LabelList', 'Cell',
-  ],
+  parentComponents: ['FunnelChart'],
+  childrenComponents: ['LabelList', 'Cell'],
 };

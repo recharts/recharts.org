@@ -1,7 +1,5 @@
 import React, { PureComponent } from 'react';
-import {
-  PieChart, Pie, Sector, Cell,
-} from 'recharts';
+import { PieChart, Pie, Sector, Cell } from 'recharts';
 
 const data = [
   { name: 'Group A', value: 400 },
@@ -10,7 +8,6 @@ const data = [
   { name: 'Group D', value: 200 },
 ];
 const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042'];
-
 
 export default class Example extends PureComponent {
   static jsfiddleUrl = 'https://jsfiddle.net/alidingling/3Leoa7f4/';
@@ -28,9 +25,9 @@ export default class Example extends PureComponent {
           paddingAngle={5}
           dataKey="value"
         >
-          {
-            data.map((entry, index) => <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />)
-          }
+          {data.map((entry, index) => (
+            <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+          ))}
         </Pie>
         <Pie
           data={data}
@@ -44,9 +41,9 @@ export default class Example extends PureComponent {
           paddingAngle={5}
           dataKey="value"
         >
-          {
-            data.map((entry, index) => <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />)
-          }
+          {data.map((entry, index) => (
+            <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+          ))}
         </Pie>
       </PieChart>
     );

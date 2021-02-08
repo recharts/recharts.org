@@ -1,7 +1,5 @@
 import React, { PureComponent } from 'react';
-import {
-  ScatterChart, Scatter, XAxis, YAxis, CartesianGrid, Tooltip, LabelList,
-} from 'recharts';
+import { ScatterChart, Scatter, XAxis, YAxis, CartesianGrid, Tooltip, LabelList } from 'recharts';
 
 const data = [
   { x: 100, y: 200, z: 200 },
@@ -21,7 +19,10 @@ export default class Example extends PureComponent {
         width={400}
         height={400}
         margin={{
-          top: 20, right: 20, bottom: 20, left: 20,
+          top: 20,
+          right: 20,
+          bottom: 20,
+          left: 20,
         }}
       >
         <CartesianGrid />

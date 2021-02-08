@@ -15,6 +15,8 @@ class Highlight extends PureComponent {
     className: null,
   };
 
+  ref = React.createRef();
+
   componentDidMount() {
     this.highlightCode();
   }
@@ -24,7 +26,7 @@ class Highlight extends PureComponent {
   }
 
   highlightCode() {
-    const domNode = ReactDOM.findDOMNode(this);
+    const domNode = this.ref.current;
     const nodes = domNode.querySelectorAll('pre code');
 
     if (nodes.length > 0) {
@@ -38,15 +40,12 @@ class Highlight extends PureComponent {
     const { innerHTML, children, className } = this.props;
 
     if (innerHTML) {
-      return (
-        <div
-          dangerouslySetInnerHTML={{ __html: children }}
-          className={className || null}
-        />);
+      // eslint-disable-next-line react/no-danger
+      return <div ref={this.ref} dangerouslySetInnerHTML={{ __html: children }} className={className || null} />;
     }
 
     return (
-      <pre>
+      <pre ref={this.ref}>
         <code className={className}>{children}</code>
       </pre>
     );

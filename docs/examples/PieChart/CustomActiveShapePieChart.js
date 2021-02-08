@@ -10,10 +10,7 @@ const data = [
 
 const renderActiveShape = (props) => {
   const RADIAN = Math.PI / 180;
-  const {
-    cx, cy, midAngle, innerRadius, outerRadius, startAngle, endAngle,
-    fill, payload, percent, value,
-  } = props;
+  const { cx, cy, midAngle, innerRadius, outerRadius, startAngle, endAngle, fill, payload, percent, value } = props;
   const sin = Math.sin(-RADIAN * midAngle);
   const cos = Math.cos(-RADIAN * midAngle);
   const sx = cx + (outerRadius + 10) * cos;
@@ -26,7 +23,9 @@ const renderActiveShape = (props) => {
 
   return (
     <g>
-      <text x={cx} y={cy} dy={8} textAnchor="middle" fill={fill}>{payload.name}</text>
+      <text x={cx} y={cy} dy={8} textAnchor="middle" fill={fill}>
+        {payload.name}
+      </text>
       <Sector
         cx={cx}
         cy={cy}
@@ -55,7 +54,6 @@ const renderActiveShape = (props) => {
   );
 };
 
-
 export default class Example extends PureComponent {
   static jsfiddleUrl = 'https://jsfiddle.net/alidingling/hqnrgxpj/';
 
@@ -63,7 +61,7 @@ export default class Example extends PureComponent {
     activeIndex: 0,
   };
 
-  onPieEnter = (data, index) => {
+  onPieEnter = (_, index) => {
     this.setState({
       activeIndex: index,
     });

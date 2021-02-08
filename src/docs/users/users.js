@@ -26,7 +26,8 @@ export default [
   {
     name: 'Tracktl',
     url: 'https://www.tracktl.com/',
-    logoImgUrl: '//res.cloudinary.com/jukeo-net/image/upload/c_pad,h_100,q_100,w_300/v1509094068/logo-w_copie_tiweid.png',
+    logoImgUrl:
+      '//res.cloudinary.com/jukeo-net/image/upload/c_pad,h_100,q_100,w_300/v1509094068/logo-w_copie_tiweid.png',
   },
   {
     name: 'Demisto',
@@ -36,12 +37,14 @@ export default [
   {
     name: 'Rebla',
     url: 'http://boka-objekt.se/',
-    logoImgUrl: 'https://camo.githubusercontent.com/3698cb94ed0cff03b8c87cffe4db1399f6931769/68747470733a2f2f73332e65752d63656e7472616c2d312e616d617a6f6e6177732e636f6d2f626f6b612d6f626a656b742f7265626c612f6c6f676f2e706e67',
+    logoImgUrl:
+      'https://camo.githubusercontent.com/3698cb94ed0cff03b8c87cffe4db1399f6931769/68747470733a2f2f73332e65752d63656e7472616c2d312e616d617a6f6e6177732e636f6d2f626f6b612d6f626a656b742f7265626c612f6c6f676f2e706e67',
   },
   {
     name: 'Squadlytics',
     url: 'https://squadlytics.com',
-    logoImgUrl: 'https://camo.githubusercontent.com/232ceeb7bb378384257720e448a449f72ab95c18/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f73717561642d7374617469632f72656368617274732d6c6f676f2e706e67',
+    logoImgUrl:
+      'https://camo.githubusercontent.com/232ceeb7bb378384257720e448a449f72ab95c18/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f73717561642d7374617469632f72656368617274732d6c6f676f2e706e67',
   },
   {
     name: 'ahrefs',
@@ -51,6 +54,7 @@ export default [
   {
     name: 'Yety',
     url: 'http://yety.io',
-    logoImgUrl: 'https://camo.githubusercontent.com/d45641bb2001f297174337a9514f34dfe928cbf8/68747470733a2f2f73332d75732d776573742d322e616d617a6f6e6177732e636f6d2f796574792d6170702f736f6369616c2f796574792d72656368617274732e706e67',
+    logoImgUrl:
+      'https://camo.githubusercontent.com/d45641bb2001f297174337a9514f34dfe928cbf8/68747470733a2f2f73332d75732d776573742d322e616d617a6f6e6177732e636f6d2f796574792d6170702f736f6369616c2f796574792d72656368617274732e706e67',
   },
 ];

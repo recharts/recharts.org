@@ -135,15 +135,7 @@ const data = [
 ];
 
 const example = () => (
-  <Treemap
-    width={730}
-    height={250}
-    data={data}
-    dataKey="size"
-    ratio={4 / 3}
-    stroke="#fff"
-    fill="#8884d8"
-  />
+  <Treemap width={730} height={250} data={data} dataKey="size" ratio={4 / 3} stroke="#fff" fill="#8884d8" />
 );
 
 const exampleCode = `

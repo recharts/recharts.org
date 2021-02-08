@@ -138,16 +138,6 @@ export default class Example extends PureComponent {
   static jsfiddleUrl = 'https://jsfiddle.net/alidingling/u702a3Lx/';
 
   render() {
-    return (
-      <Treemap
-        width={400}
-        height={200}
-        data={data}
-        dataKey="size"
-        ratio={4 / 3}
-        stroke="#fff"
-        fill="#8884d8"
-      />
-    );
+    return <Treemap width={400} height={200} data={data} dataKey="size" ratio={4 / 3} stroke="#fff" fill="#8884d8" />;
   }
 }

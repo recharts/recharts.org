@@ -1,6 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const cssnano = require('cssnano');
@@ -24,10 +24,7 @@ module.exports = {
     rules: [
       {
         test: /\.jsx?$/,
-        include: [
-          path.resolve(__dirname, 'src'),
-          path.resolve(__dirname, 'node_modules/react-monaco-editor/src'),
-        ],
+        include: [path.resolve(__dirname, 'src'), path.resolve(__dirname, 'node_modules/react-monaco-editor/src')],
         use: ['babel-loader'],
       },
       {
@@ -41,9 +38,7 @@ module.exports = {
       {
         test: /\.css/,
         use: ['style-loader', 'css-loader'],
-        include: [
-          path.resolve(__dirname, 'node_modules/monaco-editor'),
-        ],
+        include: [path.resolve(__dirname, 'node_modules/monaco-editor')],
       },
       {
         test: /\.scss$/,
@@ -77,20 +72,21 @@ module.exports = {
       docs: path.join(__dirname, './src/docs'),
     },
   },
-
   optimization: {
+    minimize: true,
     minimizer: [
-      new UglifyJsPlugin({
-        cache: true,
+      new TerserPlugin({
         parallel: true,
-        sourceMap: true,
+        terserOptions: {
+          sourceMap: true,
+        },
       }),
     ],
   },
-
   plugins: [
     new MonacoWebpackPlugin({
-      languages: ['javascript'],
+      languages: ['javascript, typescript'],
+      features: ['!gotoSymbol'],
     }),
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify('production'),
