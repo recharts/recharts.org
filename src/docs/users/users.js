@@ -30,12 +30,6 @@ export default [
       '//res.cloudinary.com/jukeo-net/image/upload/c_pad,h_100,q_100,w_300/v1509094068/logo-w_copie_tiweid.png',
   },
   {
-    name: 'CineSend',
-    url: 'https://cinesend.com/',
-    logoImgUrl:
-      'https://camo.githubusercontent.com/7c700a8cdcabf704107a36854ce02cedad386914/68747470733a2f2f62697463696e6573746f726167656163636f756e742e626c6f622e636f72652e77696e646f77732e6e65742f63696e6573656e642d6173736574732f6c6f676f732f63696e6573656e645f72656368617274735f6c6f676f2e706e67',
-  },
-  {
     name: 'Demisto',
     url: 'https://www.demisto.com/',
     logoImgUrl: 'https://user-images.githubusercontent.com/15967181/32991200-9ce4f902-cd3f-11e7-9e05-a86ebabb151c.jpeg',
@@ -62,11 +56,5 @@ export default [
     url: 'http://yety.io',
     logoImgUrl:
       'https://camo.githubusercontent.com/d45641bb2001f297174337a9514f34dfe928cbf8/68747470733a2f2f73332d75732d776573742d322e616d617a6f6e6177732e636f6d2f796574792d6170702f736f6369616c2f796574792d72656368617274732e706e67',
-  },
-  {
-    name: 'Metric.ai',
-    url: 'https://www.metric.ai',
-    logoImgUrl:
-      'https://camo.githubusercontent.com/d99b8679214e490052509042808bbe14630ed432/68747470733a2f2f7777772e6d65747269632e61692f66696c65732f6272616e642f6c6f676f2f6d65747269632d61692d333030783130302d6c696768742e706e67',
   },
 ];
