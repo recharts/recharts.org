@@ -92,4 +92,6 @@
     "rimraf": "^2.5.4",
     "scroll-behavior": "^0.9.12",
     "simple-line-icons": "^2.5.5"
-0.1"
+  },
+  "license": "MIT"
+}
