@@ -43,7 +43,15 @@ export default class Example extends PureComponent {
           <CartesianGrid />
           <XAxis type="number" dataKey="x" name="stature" unit="cm" />
           <YAxis yAxisId="left" type="number" dataKey="y" name="weight" unit="kg" stroke="#8884d8" />
-          <YAxis yAxisId="right" type="number" dataKey="y" name="weight" unit="kg" orientation="right" stroke="#82ca9d" />
+          <YAxis
+            yAxisId="right"
+            type="number"
+            dataKey="y"
+            name="weight"
+            unit="kg"
+            orientation="right"
+            stroke="#82ca9d"
+          />
           <Tooltip cursor={{ strokeDasharray: '3 3' }} />
           <Scatter yAxisId="left" name="A school" data={data01} fill="#8884d8" />
           <Scatter yAxisId="right" name="A school" data={data02} fill="#82ca9d" />

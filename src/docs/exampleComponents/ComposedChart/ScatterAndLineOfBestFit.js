@@ -1,5 +1,15 @@
 import React, { PureComponent } from 'react';
-import { ComposedChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, Scatter, ResponsiveContainer } from 'recharts';
+import {
+  ComposedChart,
+  Line,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  Tooltip,
+  Legend,
+  Scatter,
+  ResponsiveContainer,
+} from 'recharts';
 
 const data = [
   { index: 10000, red: 1643, blue: 790 },

@@ -140,7 +140,6 @@ export default class Example extends PureComponent {
           </ScatterChart>
         </ResponsiveContainer>
 
-        
         <ResponsiveContainer width="100%" height={60}>
           <ScatterChart
             width={800}
@@ -175,7 +174,6 @@ export default class Example extends PureComponent {
             <Scatter data={data02} fill="#8884d8" />
           </ScatterChart>
         </ResponsiveContainer>
-        
 
         <ResponsiveContainer width="100%" height={60}>
           <ScatterChart
@@ -211,7 +209,6 @@ export default class Example extends PureComponent {
             <Scatter data={data01} fill="#8884d8" />
           </ScatterChart>
         </ResponsiveContainer>
-        
 
         <ResponsiveContainer width="100%" height={60}>
           <ScatterChart
@@ -247,7 +244,6 @@ export default class Example extends PureComponent {
             <Scatter data={data02} fill="#8884d8" />
           </ScatterChart>
         </ResponsiveContainer>
-        
 
         <ResponsiveContainer width="100%" height={60}>
           <ScatterChart
@@ -284,7 +280,6 @@ export default class Example extends PureComponent {
           </ScatterChart>
         </ResponsiveContainer>
 
-        
         <ResponsiveContainer width="100%" height={60}>
           <ScatterChart
             width={800}
@@ -320,7 +315,6 @@ export default class Example extends PureComponent {
           </ScatterChart>
         </ResponsiveContainer>
 
-        
         <ResponsiveContainer width="100%" height={60}>
           <ScatterChart
             width={800}
@@ -332,7 +326,13 @@ export default class Example extends PureComponent {
               left: 0,
             }}
           >
-            <XAxis type="category" dataKey="hour" name="hour" interval={0} tickLine={{ transform: 'translate(0, -6)' }} />
+            <XAxis
+              type="category"
+              dataKey="hour"
+              name="hour"
+              interval={0}
+              tickLine={{ transform: 'translate(0, -6)' }}
+            />
             <YAxis
               type="number"
               dataKey="index"

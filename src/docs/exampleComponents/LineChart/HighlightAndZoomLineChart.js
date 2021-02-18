@@ -1,5 +1,15 @@
 import React, { PureComponent } from 'react';
-import { Label, LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip, ReferenceArea, ResponsiveContainer } from 'recharts';
+import {
+  Label,
+  LineChart,
+  Line,
+  CartesianGrid,
+  XAxis,
+  YAxis,
+  Tooltip,
+  ReferenceArea,
+  ResponsiveContainer,
+} from 'recharts';
 
 const initialData = [
   { name: 1, cost: 4.11, impression: 100 },
@@ -111,7 +121,6 @@ export default class Example extends PureComponent {
         <button type="button" className="btn update" onClick={this.zoomOut.bind(this)}>
           Zoom Out
         </button>
-
 
         <ResponsiveContainer width="100%" height={400}>
           <LineChart

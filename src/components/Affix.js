@@ -97,7 +97,7 @@ class Affix extends PureComponent {
         isFixed: false,
       });
     }
-  }
+  };
 
   render() {
     const { prefixCls, className, offsetTop, ...other } = this.props;
@@ -107,7 +107,13 @@ class Affix extends PureComponent {
     const { placeholderStyle, affixStyle } = this.state;
 
     return (
-      <div {...other} style={placeholderStyle} ref={(node) => { this.placeholderDom = node; }}>
+      <div
+        {...other}
+        style={placeholderStyle}
+        ref={(node) => {
+          this.placeholderDom = node;
+        }}
+      >
         <div className={classes} style={affixStyle}>
           {this.props.children}
         </div>

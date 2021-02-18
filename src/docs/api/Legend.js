@@ -6,7 +6,7 @@ export default {
     'zh-CN': `注意，现在图例是使用 HTML 实现的。对于类目图表（LineChart, BarChart, AreaChart, ComposedChart,
       ScatterChart）以及 RadarChart 我们会根据组件的属性 "name" 来生成图例的内容，如果组件没有指定 "name" 属性，我们会根据组件的属性
       "dataKey" 来生成图例的内容。对于极坐标图表 (PieChart, RadialBarChart) 我们会根据每个子组件的 "name" 属性值生成图例的内容。`,
-},
+  },
   props: [
     {
       name: 'width',
