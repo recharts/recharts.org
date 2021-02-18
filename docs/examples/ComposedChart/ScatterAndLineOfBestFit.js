@@ -1,5 +1,15 @@
 import React, { PureComponent } from 'react';
-import { ComposedChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, Scatter } from 'recharts';
+import {
+  ComposedChart,
+  Line,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  Tooltip,
+  Legend,
+  Scatter,
+  ResponsiveContainer,
+} from 'recharts';
 
 const data = [
   { index: 10000, red: 1643, blue: 790 },
@@ -13,32 +23,34 @@ const data = [
 ];
 
 export default class Example extends PureComponent {
-  static jsfiddleUrl = 'https://jsfiddle.net/28w9fud3/1/';
+  static demoUrl = 'https://codesandbox.io/s/composed-chart-with-best-fit-q7r21';
 
   render() {
     return (
-      <ComposedChart
-        width={500}
-        height={400}
-        data={data}
-        margin={{
-          top: 20,
-          right: 80,
-          bottom: 20,
-          left: 20,
-        }}
-      >
-        <CartesianGrid stroke="#f5f5f5" />
-        <Tooltip />
-        <Legend />
+      <ResponsiveContainer width="100%" height="100%">
+        <ComposedChart
+          width={500}
+          height={400}
+          data={data}
+          margin={{
+            top: 20,
+            right: 80,
+            bottom: 20,
+            left: 20,
+          }}
+        >
+          <CartesianGrid stroke="#f5f5f5" />
+          <Tooltip />
+          <Legend />
 
-        <XAxis dataKey="index" type="number" label={{ value: 'Index', position: 'insideBottomRight', offset: 0 }} />
-        <YAxis unit="ms" type="number" label={{ value: 'Time', angle: -90, position: 'insideLeft' }} />
-        <Scatter name="red" dataKey="red" fill="red" />
-        <Scatter name="blue" dataKey="blue" fill="blue" />
-        <Line dataKey="blueLine" stroke="blue" dot={false} activeDot={false} legendType="none" />
-        <Line dataKey="redLine" stroke="red" dot={false} activeDot={false} legendType="none" />
-      </ComposedChart>
+          <XAxis dataKey="index" type="number" label={{ value: 'Index', position: 'insideBottomRight', offset: 0 }} />
+          <YAxis unit="ms" type="number" label={{ value: 'Time', angle: -90, position: 'insideLeft' }} />
+          <Scatter name="red" dataKey="red" fill="red" />
+          <Scatter name="blue" dataKey="blue" fill="blue" />
+          <Line dataKey="blueLine" stroke="blue" dot={false} activeDot={false} legendType="none" />
+          <Line dataKey="redLine" stroke="red" dot={false} activeDot={false} legendType="none" />
+        </ComposedChart>
+      </ResponsiveContainer>
     );
   }
 }

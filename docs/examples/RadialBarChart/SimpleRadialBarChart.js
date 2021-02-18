@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import { RadialBarChart, RadialBar, Legend } from 'recharts';
+import { RadialBarChart, RadialBar, Legend, ResponsiveContainer } from 'recharts';
 
 const data = [
   {
@@ -47,29 +47,29 @@ const data = [
 ];
 
 const style = {
-  top: 0,
-  left: 350,
+  top: '50%',
+  right: 0,
+  transform: 'translate(0, -50%)',
   lineHeight: '24px',
 };
 
 export default class Example extends PureComponent {
-  static jsfiddleUrl = 'https://jsfiddle.net/alidingling/9km41z5z/';
+  static demoUrl = 'https://codesandbox.io/s/simple-radial-bar-chart-qf8fz';
 
   render() {
     return (
-      <RadialBarChart
-        width={500}
-        height={300}
-        cx={150}
-        cy={150}
-        innerRadius={20}
-        outerRadius={140}
-        barSize={10}
-        data={data}
-      >
-        <RadialBar minAngle={15} label={{ position: 'insideStart', fill: '#fff' }} background clockWise dataKey="uv" />
-        <Legend iconSize={10} width={120} height={140} layout="vertical" verticalAlign="middle" wrapperStyle={style} />
-      </RadialBarChart>
+      <ResponsiveContainer width="100%" height="100%">
+        <RadialBarChart cx="50%" cy="50%" innerRadius="10%" outerRadius="80%" barSize={10} data={data}>
+          <RadialBar
+            minAngle={15}
+            label={{ position: 'insideStart', fill: '#fff' }}
+            background
+            clockWise
+            dataKey="uv"
+          />
+          <Legend iconSize={10} layout="vertical" verticalAlign="middle" wrapperStyle={style} />
+        </RadialBarChart>
+      </ResponsiveContainer>
     );
   }
 }

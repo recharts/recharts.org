@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import { PieChart, Pie, Sector, Cell } from 'recharts';
+import { PieChart, Pie, Sector, Cell, ResponsiveContainer } from 'recharts';
 
 const data = [
   { name: 'Group A', value: 400 },
@@ -11,23 +11,25 @@ const data = [
 ];
 
 export default class Example extends PureComponent {
-  static jsfiddleUrl = 'https://jsfiddle.net/alidingling/pb1jwdt1/';
+  static demoUrl = 'https://codesandbox.io/s/pie-chart-of-straight-angle-oz0th';
 
   render() {
     return (
-      <PieChart width={400} height={400}>
-        <Pie
-          dataKey="value"
-          startAngle={180}
-          endAngle={0}
-          data={data}
-          cx={200}
-          cy={200}
-          outerRadius={80}
-          fill="#8884d8"
-          label
-        />
-      </PieChart>
+      <ResponsiveContainer width="100%" height="100%">
+        <PieChart width={400} height={400}>
+          <Pie
+            dataKey="value"
+            startAngle={180}
+            endAngle={0}
+            data={data}
+            cx="50%"
+            cy="50%"
+            outerRadius={80}
+            fill="#8884d8"
+            label
+          />
+        </PieChart>
+      </ResponsiveContainer>
     );
   }
 }

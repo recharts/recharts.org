@@ -52,7 +52,7 @@ const data = [
 ];
 
 export default class Example extends PureComponent {
-  static jsfiddleUrl = '//jsfiddle.net/alidingling/9wnuL90w/';
+  static demoUrl = 'https://codesandbox.io/s/composed-chart-in-responsive-container-pkqmy';
 
   render() {
     return (
@@ -70,7 +70,7 @@ export default class Example extends PureComponent {
             }}
           >
             <CartesianGrid stroke="#f5f5f5" />
-            <XAxis dataKey="name" />
+            <XAxis dataKey="name" scale="band" />
             <YAxis />
             <Tooltip />
             <Legend />

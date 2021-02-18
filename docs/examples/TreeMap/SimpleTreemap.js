@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import { Treemap } from 'recharts';
+import { Treemap, ResponsiveContainer } from 'recharts';
 
 const data = [
   {
@@ -135,9 +135,13 @@ const data = [
 ];
 
 export default class Example extends PureComponent {
-  static jsfiddleUrl = 'https://jsfiddle.net/alidingling/u702a3Lx/';
+  static demoUrl = 'https://codesandbox.io/s/simple-treemap-r5o4e';
 
   render() {
-    return <Treemap width={400} height={200} data={data} dataKey="size" ratio={4 / 3} stroke="#fff" fill="#8884d8" />;
+    return (
+      <ResponsiveContainer width="100%" height="100%">
+        <Treemap width={400} height={200} data={data} dataKey="size" ratio={4 / 3} stroke="#fff" fill="#8884d8" />
+      </ResponsiveContainer>
+    );
   }
 }

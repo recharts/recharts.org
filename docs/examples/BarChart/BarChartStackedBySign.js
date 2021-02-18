@@ -1,5 +1,16 @@
 import React, { PureComponent } from 'react';
-import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ReferenceLine } from 'recharts';
+import {
+  BarChart,
+  Bar,
+  Cell,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  Tooltip,
+  Legend,
+  ReferenceLine,
+  ResponsiveContainer,
+} from 'recharts';
 
 const data = [
   {
@@ -47,31 +58,33 @@ const data = [
 ];
 
 export default class Example extends PureComponent {
-  static jsfiddleUrl = 'https://jsfiddle.net/alidingling/p82xhe2a/';
+  static demoUrl = 'https://codesandbox.io/s/bar-chart-stacked-by-sign-cbct8';
 
   render() {
     return (
-      <BarChart
-        width={500}
-        height={300}
-        data={data}
-        stackOffset="sign"
-        margin={{
-          top: 5,
-          right: 30,
-          left: 20,
-          bottom: 5,
-        }}
-      >
-        <CartesianGrid strokeDasharray="3 3" />
-        <XAxis dataKey="name" />
-        <YAxis />
-        <Tooltip />
-        <Legend />
-        <ReferenceLine y={0} stroke="#000" />
-        <Bar dataKey="pv" fill="#8884d8" stackId="stack" />
-        <Bar dataKey="uv" fill="#82ca9d" stackId="stack" />
-      </BarChart>
+      <ResponsiveContainer width="100%" height="100%">
+        <BarChart
+          width={500}
+          height={300}
+          data={data}
+          stackOffset="sign"
+          margin={{
+            top: 5,
+            right: 30,
+            left: 20,
+            bottom: 5,
+          }}
+        >
+          <CartesianGrid strokeDasharray="3 3" />
+          <XAxis dataKey="name" />
+          <YAxis />
+          <Tooltip />
+          <Legend />
+          <ReferenceLine y={0} stroke="#000" />
+          <Bar dataKey="pv" fill="#8884d8" stackId="stack" />
+          <Bar dataKey="uv" fill="#82ca9d" stackId="stack" />
+        </BarChart>
+      </ResponsiveContainer>
     );
   }
 }
