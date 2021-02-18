@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import { Label, LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip, ReferenceArea } from 'recharts';
+import { Label, LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip, ReferenceArea, ResponsiveContainer } from 'recharts';
 
 const initialData = [
   { name: 1, cost: 4.11, impression: 100 },
@@ -36,7 +36,7 @@ const getAxisYDomain = (from, to, ref, offset) => {
 };
 
 const initialState = {
-  initialData,
+  data: initialData,
   left: 'dataMin',
   right: 'dataMax',
   refAreaLeft: '',
@@ -49,7 +49,7 @@ const initialState = {
 };
 
 export default class Example extends PureComponent {
-  static jsfiddleUrl = 'https://jsfiddle.net/alidingling/nhpemhgs/';
+  static demoUrl = 'https://codesandbox.io/s/highlight-zomm-line-chart-v77bt';
 
   constructor(props) {
     super(props);
@@ -107,32 +107,35 @@ export default class Example extends PureComponent {
     const { data, barIndex, left, right, refAreaLeft, refAreaRight, top, bottom, top2, bottom2 } = this.state;
 
     return (
-      <div className="highlight-bar-charts" style={{ userSelect: 'none' }}>
+      <div className="highlight-bar-charts" style={{ userSelect: 'none', width: '100%' }}>
         <button type="button" className="btn update" onClick={this.zoomOut.bind(this)}>
           Zoom Out
         </button>
 
-        <LineChart
-          width={800}
-          height={400}
-          data={data}
-          onMouseDown={(e) => this.setState({ refAreaLeft: e.activeLabel })}
-          onMouseMove={(e) => this.state.refAreaLeft && this.setState({ refAreaRight: e.activeLabel })}
-          // eslint-disable-next-line react/jsx-no-bind
-          onMouseUp={this.zoom.bind(this)}
-        >
-          <CartesianGrid strokeDasharray="3 3" />
-          <XAxis allowDataOverflow dataKey="name" domain={[left, right]} type="number" />
-          <YAxis allowDataOverflow domain={[bottom, top]} type="number" yAxisId="1" />
-          <YAxis orientation="right" allowDataOverflow domain={[bottom2, top2]} type="number" yAxisId="2" />
-          <Tooltip />
-          <Line yAxisId="1" type="natural" dataKey="cost" stroke="#8884d8" animationDuration={300} />
-          <Line yAxisId="2" type="natural" dataKey="impression" stroke="#82ca9d" animationDuration={300} />
 
-          {refAreaLeft && refAreaRight ? (
-            <ReferenceArea yAxisId="1" x1={refAreaLeft} x2={refAreaRight} strokeOpacity={0.3} />
-          ) : null}
-        </LineChart>
+        <ResponsiveContainer width="100%" height={400}>
+          <LineChart
+            width={800}
+            height={400}
+            data={data}
+            onMouseDown={(e) => this.setState({ refAreaLeft: e.activeLabel })}
+            onMouseMove={(e) => this.state.refAreaLeft && this.setState({ refAreaRight: e.activeLabel })}
+            // eslint-disable-next-line react/jsx-no-bind
+            onMouseUp={this.zoom.bind(this)}
+          >
+            <CartesianGrid strokeDasharray="3 3" />
+            <XAxis allowDataOverflow dataKey="name" domain={[left, right]} type="number" />
+            <YAxis allowDataOverflow domain={[bottom, top]} type="number" yAxisId="1" />
+            <YAxis orientation="right" allowDataOverflow domain={[bottom2, top2]} type="number" yAxisId="2" />
+            <Tooltip />
+            <Line yAxisId="1" type="natural" dataKey="cost" stroke="#8884d8" animationDuration={300} />
+            <Line yAxisId="2" type="natural" dataKey="impression" stroke="#82ca9d" animationDuration={300} />
+
+            {refAreaLeft && refAreaRight ? (
+              <ReferenceArea yAxisId="1" x1={refAreaLeft} x2={refAreaRight} strokeOpacity={0.3} />
+            ) : null}
+          </LineChart>
+        </ResponsiveContainer>
       </div>
     );
   }

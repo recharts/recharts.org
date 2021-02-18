@@ -1,6 +1,6 @@
 /* eslint-disable max-classes-per-file */
 import React, { PureComponent } from 'react';
-import { Treemap } from 'recharts';
+import { Treemap, ResponsiveContainer } from 'recharts';
 
 const data = [
   {
@@ -171,20 +171,22 @@ class CustomizedContent extends PureComponent {
 }
 
 export default class Example extends PureComponent {
-  static jsfiddleUrl = 'https://jsfiddle.net/alidingling/Ldvvz2ak/';
+  static demoUrl = 'https://codesandbox.io/s/treemap-with-customized-content-7qxfp';
 
   render() {
     return (
-      <Treemap
-        width={400}
-        height={200}
-        data={data}
-        dataKey="size"
-        ratio={4 / 3}
-        stroke="#fff"
-        fill="#8884d8"
-        content={<CustomizedContent colors={COLORS} />}
-      />
+      <ResponsiveContainer width="100%" height="100%">
+        <Treemap
+          width={400}
+          height={200}
+          data={data}
+          dataKey="size"
+          ratio={4 / 3}
+          stroke="#fff"
+          fill="#8884d8"
+          content={<CustomizedContent colors={COLORS} />}
+        />
+      </ResponsiveContainer>
     );
   }
 }

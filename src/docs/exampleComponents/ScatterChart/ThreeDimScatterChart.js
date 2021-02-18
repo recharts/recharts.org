@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import { ScatterChart, Scatter, XAxis, YAxis, ZAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
+import { ScatterChart, Scatter, XAxis, YAxis, ZAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 
 const data01 = [
   { x: 100, y: 200, z: 200 },
@@ -19,29 +19,31 @@ const data02 = [
 ];
 
 export default class Example extends PureComponent {
-  static jsfiddleUrl = 'https://jsfiddle.net/alidingling/3mw50Lc9/';
+  static demoUrl = 'https://codesandbox.io/s/scatter-chart-of-three-dimensions-w2cwd';
 
   render() {
     return (
-      <ScatterChart
-        width={400}
-        height={400}
-        margin={{
-          top: 20,
-          right: 20,
-          bottom: 20,
-          left: 20,
-        }}
-      >
-        <CartesianGrid />
-        <XAxis type="number" dataKey="x" name="stature" unit="cm" />
-        <YAxis type="number" dataKey="y" name="weight" unit="kg" />
-        <ZAxis type="number" dataKey="z" range={[60, 400]} name="score" unit="km" />
-        <Tooltip cursor={{ strokeDasharray: '3 3' }} />
-        <Legend />
-        <Scatter name="A school" data={data01} fill="#8884d8" shape="star" />
-        <Scatter name="B school" data={data02} fill="#82ca9d" shape="triangle" />
-      </ScatterChart>
+      <ResponsiveContainer width="100%" height="100%">
+        <ScatterChart
+          width={400}
+          height={400}
+          margin={{
+            top: 20,
+            right: 20,
+            bottom: 20,
+            left: 20,
+          }}
+        >
+          <CartesianGrid />
+          <XAxis type="number" dataKey="x" name="stature" unit="cm" />
+          <YAxis type="number" dataKey="y" name="weight" unit="kg" />
+          <ZAxis type="number" dataKey="z" range={[60, 400]} name="score" unit="km" />
+          <Tooltip cursor={{ strokeDasharray: '3 3' }} />
+          <Legend />
+          <Scatter name="A school" data={data01} fill="#8884d8" shape="star" />
+          <Scatter name="B school" data={data02} fill="#82ca9d" shape="triangle" />
+        </ScatterChart>
+      </ResponsiveContainer>
     );
   }
 }

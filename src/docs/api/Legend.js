@@ -163,7 +163,7 @@ const renderLegend = (props) => {
       examples: [
         {
           name: 'Render colorful legend texts',
-          url: 'https://jsfiddle.net/alidingling/32zbsx71/1/',
+          url: 'https://codesandbox.io/s/legend-formatter-rmzp9',
           isExternal: true,
         },
       ],

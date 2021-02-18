@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react';
+import * as React from 'react';
 import PropTypes from 'prop-types';
 import ReactDOM from 'react-dom';
 import _ from 'lodash';
@@ -6,6 +6,8 @@ import Events from 'oui-dom-events';
 import DOMUtils from 'oui-dom-utils';
 import classnames from 'classnames';
 import './Affix.scss';
+
+const { PureComponent } = React;
 
 class Affix extends PureComponent {
   static propTypes = {
@@ -21,8 +23,6 @@ class Affix extends PureComponent {
   };
 
   static displayName = 'Affix';
-
-  static ref = React.createRef(null);
 
   constructor(props) {
     super(props);
@@ -56,11 +56,20 @@ class Affix extends PureComponent {
     Events.off(window, `resize.${prefixCls}.${id}`);
   }
 
-  updatePosition() {
+  updatePosition = () => {
     const { offsetTop } = this.props;
     const scrollTop = DOMUtils.getDocumentScrollTop();
     // affix
-    const affixNode = this.ref.current;
+    const affixNode = this.placeholderDom;
+
+    if (!affixNode) {
+      this.setState({
+        affixStyle: null,
+        placeholderStyle: null,
+        isFixed: false,
+      });
+    }
+
     const { offsetWidth } = affixNode;
     const { offsetHeight } = affixNode;
     const { top, left } = DOMUtils.getOffset(affixNode);
@@ -98,7 +107,7 @@ class Affix extends PureComponent {
     const { placeholderStyle, affixStyle } = this.state;
 
     return (
-      <div {...other} style={placeholderStyle} ref={this.ref}>
+      <div {...other} style={placeholderStyle} ref={(node) => { this.placeholderDom = node; }}>
         <div className={classes} style={affixStyle}>
           {this.props.children}
         </div>

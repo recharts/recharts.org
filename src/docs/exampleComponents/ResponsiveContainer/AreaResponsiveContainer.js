@@ -47,7 +47,7 @@ const data = [
 ];
 
 export default class Example extends PureComponent {
-  static jsfiddleUrl = 'https://jsfiddle.net/alidingling/7j5bbbum/';
+  static demoUrl = 'https://codesandbox.io/s/area-chart-in-responsive-container-e6dx0';
 
   render() {
     return (

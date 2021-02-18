@@ -53,7 +53,18 @@ class ExamplesView extends PureComponent {
     hasError: null,
     exampleCode: null,
     iframeCode: null,
+    prevPage: null,
   };
+
+  static getDerivedStateFromProps(nextProps, prevState) {
+    if (nextProps.page !== prevState.prevPage) {
+      return {
+        prevPage: nextProps.page,
+      };
+    }
+
+    return null;
+  }
 
   componentDidMount() {
     const { page } = this.props;
@@ -64,22 +75,18 @@ class ExamplesView extends PureComponent {
     }
   }
 
-  UNSAFE_componentWillReceiveProps(nextProps) {
-    const { page } = this.props;
+  componentDidUpdate(prevProps, prevState) {
+    const { iframeCode, prevPage } = this.state;
 
-    if (nextProps.page !== page) {
-      const exampleResult = parseExampleComponent(nextProps.page);
+    if (prevState.prevPage !== prevPage) {
+      // page change
+      const exampleResult = parseExampleComponent(this.props.page);
 
       if (exampleResult) {
         this.fetchExampleCode(exampleResult.cateName, exampleResult.exampleName);
       }
-    }
-  }
-
-  componentDidUpdate(prevProps, prevState) {
-    const { iframeCode } = this.state;
-
-    if (iframeCode && iframeCode !== prevState.iframeCode) {
+    } else if (iframeCode && iframeCode !== prevState.iframeCode) {
+      // code updated
       this.updateIframe(iframeCode);
     }
   }
@@ -129,6 +136,7 @@ class ExamplesView extends PureComponent {
       const newCode = this.editor.getValue();
 
       this.setState({
+        exampleCode: newCode,
         iframeCode: combineFrameContent(newCode),
       });
     }
@@ -168,9 +176,11 @@ class ExamplesView extends PureComponent {
       editorValue = 'loading code ....';
     } else if (isLoading === false && hasError === true) {
       editorValue = 'loading code error';
-    } else if (isLoading === false && hasError === false && exampleCode) {
+    } else if (isLoading === false && hasError === false) {
       editorValue = exampleCode;
     }
+
+    console.log(exampleCode, this.state.iframeCode);
 
     return exampleResult && isLoading !== null ? (
       <div className="monaco-editor-wrapper">
@@ -254,15 +264,15 @@ class ExamplesView extends PureComponent {
                 </div>
                 {this.renderEditor(exampleResult)}
               </div>
-              {exampleResult.exampleComponent.jsfiddleUrl ? (
+              {exampleResult.exampleComponent.demoUrl ? (
                 <p className="example-link-wrapper">
                   <a
                     className="example-jsfiddle-link"
                     target="_blank"
                     rel="noopener noreferrer"
-                    href={exampleResult.exampleComponent.jsfiddleUrl}
+                    href={exampleResult.exampleComponent.demoUrl}
                   >
-                    Try the demo in jsfiddle &gt;&gt;
+                    Try the demo in codesandbox &gt;&gt;
                   </a>
                 </p>
               ) : null}

@@ -1,8 +1,8 @@
 import React, { PureComponent } from 'react';
-import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
+import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 
 export default class Example extends PureComponent {
-  static jsfiddleUrl = 'https://jsfiddle.net/alidingling/7has60ua/';
+  static demoUrl = 'https://codesandbox.io/s/bar-chart-with-customized-event-4k1bd';
 
   state = {
     data: [
@@ -63,15 +63,17 @@ export default class Example extends PureComponent {
     const activeItem = data[activeIndex];
 
     return (
-      <div>
+      <div style={{ width: '100%' }}>
         <p>Click each rectangle </p>
-        <BarChart width={150} height={40} data={data}>
-          <Bar dataKey="uv" onClick={this.handleClick}>
-            {data.map((entry, index) => (
-              <Cell cursor="pointer" fill={index === activeIndex ? '#82ca9d' : '#8884d8'} key={`cell-${index}`} />
-            ))}
-          </Bar>
-        </BarChart>
+        <ResponsiveContainer width="100%" height={100}>
+          <BarChart width={150} height={40} data={data}>
+            <Bar dataKey="uv" onClick={this.handleClick}>
+              {data.map((entry, index) => (
+                <Cell cursor="pointer" fill={index === activeIndex ? '#82ca9d' : '#8884d8'} key={`cell-${index}`} />
+              ))}
+            </Bar>
+          </BarChart>
+        </ResponsiveContainer>
         <p className="content">{`Uv of "${activeItem.name}": ${activeItem.uv}`}</p>
       </div>
     );

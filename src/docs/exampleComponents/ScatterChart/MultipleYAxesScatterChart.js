@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import { ScatterChart, Scatter, XAxis, YAxis, CartesianGrid, Tooltip } from 'recharts';
+import { ScatterChart, Scatter, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 
 const data01 = [
   { x: 100, y: 200, z: 200 },
@@ -25,28 +25,30 @@ const data02 = [
 ];
 
 export default class Example extends PureComponent {
-  static jsfiddleUrl = 'https://jsfiddle.net/alidingling/scas8xds/';
+  static demoUrl = 'https://codesandbox.io/s/scatter-chart-with-double-yaxes-tiuob';
 
   render() {
     return (
-      <ScatterChart
-        width={500}
-        height={400}
-        margin={{
-          top: 20,
-          right: 20,
-          bottom: 20,
-          left: 20,
-        }}
-      >
-        <CartesianGrid />
-        <XAxis type="number" dataKey="x" name="stature" unit="cm" />
-        <YAxis yAxisId="left" type="number" dataKey="y" name="weight" unit="kg" stroke="#8884d8" />
-        <YAxis yAxisId="right" type="number" dataKey="y" name="weight" unit="kg" orientation="right" stroke="#82ca9d" />
-        <Tooltip cursor={{ strokeDasharray: '3 3' }} />
-        <Scatter yAxisId="left" name="A school" data={data01} fill="#8884d8" />
-        <Scatter yAxisId="right" name="A school" data={data02} fill="#82ca9d" />
-      </ScatterChart>
+      <ResponsiveContainer width="100%" height="100%">
+        <ScatterChart
+          width={500}
+          height={400}
+          margin={{
+            top: 20,
+            right: 20,
+            bottom: 20,
+            left: 20,
+          }}
+        >
+          <CartesianGrid />
+          <XAxis type="number" dataKey="x" name="stature" unit="cm" />
+          <YAxis yAxisId="left" type="number" dataKey="y" name="weight" unit="kg" stroke="#8884d8" />
+          <YAxis yAxisId="right" type="number" dataKey="y" name="weight" unit="kg" orientation="right" stroke="#82ca9d" />
+          <Tooltip cursor={{ strokeDasharray: '3 3' }} />
+          <Scatter yAxisId="left" name="A school" data={data01} fill="#8884d8" />
+          <Scatter yAxisId="right" name="A school" data={data02} fill="#82ca9d" />
+        </ScatterChart>
+      </ResponsiveContainer>
     );
   }
 }

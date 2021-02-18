@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
+import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 
 const series = [
   {
@@ -29,20 +29,22 @@ const series = [
 ];
 
 export default class Example extends PureComponent {
-  static jsfiddleUrl = 'https://jsfiddle.net/alidingling/ewcqxbwo/';
+  static demoUrl = 'https://codesandbox.io/s/line-chart-with-customized-label-hs5b7';
 
   render() {
     return (
-      <LineChart width={500} height={300}>
-        <CartesianGrid strokeDasharray="3 3" />
-        <XAxis dataKey="category" type="category" allowDuplicatedCategory={false} />
-        <YAxis dataKey="value" />
-        <Tooltip />
-        <Legend />
-        {series.map((s) => (
-          <Line dataKey="value" data={s.data} name={s.name} key={s.name} />
-        ))}
-      </LineChart>
+      <ResponsiveContainer width="100%" height="100%">
+        <LineChart width={500} height={300}>
+          <CartesianGrid strokeDasharray="3 3" />
+          <XAxis dataKey="category" type="category" allowDuplicatedCategory={false} />
+          <YAxis dataKey="value" />
+          <Tooltip />
+          <Legend />
+          {series.map((s) => (
+            <Line dataKey="value" data={s.data} name={s.name} key={s.name} />
+          ))}
+        </LineChart>
+      </ResponsiveContainer>
     );
   }
 }

@@ -9,7 +9,7 @@ const data = [
 ];
 
 export default class Example extends PureComponent {
-  static jsfiddleUrl = '//jsfiddle.net/alidingling/6okmehja/';
+  static demoUrl = 'https://codesandbox.io/s/pie-chart-in-responsive-container-qyv6t';
 
   render() {
     return (

@@ -7,7 +7,7 @@ header {
   box-shadow: 0 0 4px rgba(0,0,0,0.25);
 
   .header-wrapper {
-    width: 1200px;
+    min-width: 1200px;
     height: 60px;
     line-height: 60px;
     margin: 0 auto;
@@ -17,7 +17,7 @@ header {
   .logo {
     float: left;
     width: 132px;
-    margin-right: 60px;
+    margin: 0 60px 0 20px;
     font-family: $font-family-code;
     font-weight: 300;
     font-size: $font-size-xl;
@@ -86,8 +86,9 @@ footer {
     position: fixed;
     top: 60px;
     bottom: 0;
-    width: 260px;
+    width: 280px;
     padding-top: 30px;
+    padding-left: 20px;
     overflow: auto;
 
     .sidebar-cate {
@@ -121,7 +122,7 @@ footer {
   }
 
   > .content {
-    width: 1200px;
+    min-width: 1200px;
     padding-left: 260px;
 
     .page-title {
@@ -147,7 +148,7 @@ footer {
 }
 
 .page-guide, .page-api, .page-examples {
-  width: 1200px;
+  min-width: 1200px;
   margin: 0 auto;
 }
 

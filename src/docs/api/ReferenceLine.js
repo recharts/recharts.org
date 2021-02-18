@@ -58,7 +58,7 @@ export default {
       examples: [
         {
           name: 'A LineChart with alwaysShow ReferenceLine',
-          url: 'https://jsfiddle.net/alidingling/uqtuc1mp/',
+          url: 'https://codesandbox.io/s/reference-line-alwaysshow-ybxon',
           isExternal: true,
         },
       ],

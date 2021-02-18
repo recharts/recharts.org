@@ -9,8 +9,8 @@ export const template = `
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta http-equiv="X-UA-Compatible" content="ie=edge">
       <script crossorigin src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-      <script crossorigin src="https://npmcdn.com/react@15.6.2/dist/react-with-addons.min.js"></script>
-      <script crossorigin src="https://npmcdn.com/react-dom@15.6.2/dist/react-dom.min.js"></script>
+      <script crossorigin src="https://npmcdn.com/react@16.14.0/umd/react.production.min.js"></script>
+      <script crossorigin src="https://npmcdn.com/react-dom@16.14.0/umd/react-dom.production.min.js"></script>
       <script crossorigin src="https://npmcdn.com/prop-types/prop-types.min.js"></script>
       <script crossorigin src="https://npmcdn.com/recharts/umd/Recharts.min.js"></script>
       <script crossorigin src="https://d3js.org/d3.v5.min.js"></script>
