@@ -156,6 +156,17 @@ export default {
       },
     },
     {
+      name: 'position',
+      type: 'Object',
+      defaultVal: 'null',
+      isOptional: true,
+      desc: {
+        'en-US': 'If this field is set, the tooltip position will be fixed and will not move anymore.',
+        'zh-CN': '如果设置了此字段，则工具提示位置将固定不变，并且将不再移动。',
+      },
+      format: ['{ x: 100, y: 140 }'],
+    },
+    {
       name: 'coordinate',
       type: 'Object',
       defaultVal: '{ x: 0, y: 0 }',
