@@ -77,6 +77,9 @@ module.exports = {
       new CssMinimizerPlugin(),
       new TerserPlugin(),
     ],
+    splitChunks: {
+      chunks: 'all',
+    },
   },
   plugins: [
     new MonacoWebpackPlugin({
