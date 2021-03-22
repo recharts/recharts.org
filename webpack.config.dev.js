@@ -4,7 +4,8 @@ const MonacoWebpackPlugin = require('monaco-editor-webpack-plugin');
 
 module.exports = {
   mode: 'development',
-  devtool: 'cheap-module-eval-source-map',
+  devtool: 'inline-source-map',
+
   entry: {
     app: ['webpack-hot-middleware/client', './src/app'],
   },
@@ -16,7 +17,9 @@ module.exports = {
   },
 
   devServer: {
-    contentBase: path.resolve(__dirname, 'src'),
+    index: 'index.html',
+    port: 4000,
+    host: '127.0.0.1',
   },
 
   module: {
@@ -46,13 +49,13 @@ module.exports = {
           'css-loader',
           {
             loader: 'sass-loader',
-            query: {
-              includePaths: [
-                path.resolve(__dirname, './src/styles'),
-                path.resolve(__dirname, './node_module/simple-line-icons/sass'),
-              ],
-              sourceMap: true,
-              sourceMapContents: true,
+            options: {
+              sassOptions: {
+                includePaths: [
+                  path.resolve(__dirname, './src/styles'),
+                  path.resolve(__dirname, './node_module/simple-line-icons/sass'),
+                ],
+              },
             },
           },
         ],

@@ -69,7 +69,7 @@ class IndexView extends PureComponent {
             <Link to={`/${locale}/guide/installation`} className="button install-btn">
               <i className="icon-energy" />
               {localeGet(locale, 'home', 'install')}
-              v2.0.6
+              v2.0.8
             </Link>
           </p>
           <iframe

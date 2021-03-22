@@ -1,10 +1,9 @@
 const path = require('path');
 const webpack = require('webpack');
-const TerserPlugin = require('terser-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
-const cssnano = require('cssnano');
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const MonacoWebpackPlugin = require('monaco-editor-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
 
 module.exports = {
   mode: 'production',
@@ -47,13 +46,13 @@ module.exports = {
           'css-loader',
           {
             loader: 'sass-loader',
-            query: {
-              includePaths: [
-                path.resolve(__dirname, './src/styles'),
-                path.resolve(__dirname, './node_module/simple-line-icons/sass'),
-              ],
-              sourceMap: true,
-              sourceMapContents: true,
+            options: {
+              sassOptions: {
+                includePaths: [
+                  path.resolve(__dirname, './src/styles'),
+                  path.resolve(__dirname, './node_module/simple-line-icons/sass'),
+                ],
+              }
             },
           },
         ],
@@ -75,12 +74,8 @@ module.exports = {
   optimization: {
     minimize: true,
     minimizer: [
-      new TerserPlugin({
-        parallel: true,
-        terserOptions: {
-          sourceMap: true,
-        },
-      }),
+      new CssMinimizerPlugin(),
+      new TerserPlugin(),
     ],
   },
   plugins: [
@@ -95,21 +90,6 @@ module.exports = {
     }),
     new MiniCssExtractPlugin({
       filename: 'style.css',
-    }),
-    new OptimizeCSSAssetsPlugin({
-      assetNameRegExp: /style\.css$/g,
-      cssProcessor: cssnano,
-      cssProcessorPluginOptions: {
-        sourcemap: true,
-        autoprefixer: {
-          add: true,
-          remove: true,
-          browsers: ['last 2 version'],
-        },
-        discardComments: {
-          removeAll: true,
-        },
-      },
     }),
   ],
 };
