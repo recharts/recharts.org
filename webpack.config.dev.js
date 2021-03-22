@@ -7,7 +7,7 @@ module.exports = {
   devtool: 'inline-source-map',
 
   entry: {
-    app: ['webpack-hot-middleware/client', './src/app'],
+    app: './src/app',
   },
 
   output: {

@@ -7,16 +7,15 @@ const TerserPlugin = require('terser-webpack-plugin');
 
 module.exports = {
   mode: 'production',
+
   devtool: 'source-map',
   entry: {
-    app: ['./src/app'],
-    // vendor: ['react', 'react-dom', 'react-router', 'redux', 'react-redux', 'react-router-redux'],
+    app: './src/app',
   },
 
   output: {
     path: path.resolve(__dirname, 'docs'),
     filename: '[name].js',
-    publicPath: '/',
   },
 
   module: {
@@ -77,19 +76,16 @@ module.exports = {
       new CssMinimizerPlugin(),
       new TerserPlugin(),
     ],
-    splitChunks: {
-      chunks: 'all',
-    },
   },
   plugins: [
-    new MonacoWebpackPlugin({
-      languages: ['javascript, typescript'],
-      features: ['!gotoSymbol'],
-    }),
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify('production'),
       __DEV__: false,
       __DEVTOOLS__: false,
+    }),
+    new MonacoWebpackPlugin({
+      languages: ['javascript, typescript'],
+      features: ['!gotoSymbol'],
     }),
     new MiniCssExtractPlugin({
       filename: 'style.css',
