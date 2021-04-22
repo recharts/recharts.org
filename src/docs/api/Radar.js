@@ -47,7 +47,7 @@ export default {
     {
       name: 'legendType',
       type:
-        "'line' | 'square' | 'rect'| 'circle' | 'cross' | 'diamond' | 'square' | 'star' | 'triangle' | 'wye' | 'none'",
+      "'line' | 'plainline' | 'square' | 'rect'| 'circle' | 'cross' | 'diamond' | 'square' | 'star' | 'triangle' | 'wye' | 'none'",
       defaultVal: "'rect'",
       isOptional: true,
       desc: {
