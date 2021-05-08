@@ -12,7 +12,7 @@ export const template = `
       <script crossorigin src="https://npmcdn.com/react@16.14.0/umd/react.production.min.js"></script>
       <script crossorigin src="https://npmcdn.com/react-dom@16.14.0/umd/react-dom.production.min.js"></script>
       <script crossorigin src="https://npmcdn.com/prop-types/prop-types.min.js"></script>
-      <script crossorigin src="https://npmcdn.com/recharts/umd/Recharts.min.js"></script>
+      <script crossorigin src="https://npmcdn.com/recharts/umd/Recharts.js"></script>
       <script crossorigin src="https://d3js.org/d3.v5.min.js"></script>
       <title>Document</title>
       <style>*{margin:0;padding:0;}</style>

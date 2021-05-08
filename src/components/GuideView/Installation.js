@@ -30,7 +30,7 @@ const Installation = ({ locale }) => (
       {`<script src="https://unpkg.com/react/umd/react.production.min.js"></script>
 <script src="https://unpkg.com/react-dom/umd/react-dom.production.min.js"></script>
 <script src="https://unpkg.com/prop-types/prop-types.min.js"></script>
-<script src="https://unpkg.com/recharts/umd/Recharts.min.js"></script>`}
+<script src="https://unpkg.com/recharts/umd/Recharts.js"></script>`}
     </Highlight>
     <p className="paragraph-title">
       {localeGet(locale, 'installation', 'umd-use')}
