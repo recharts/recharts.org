@@ -141,7 +141,7 @@ export default {
         'en-US': 'This option allows the tooltip to extend beyond the viewBox of the chart itself.',
         'zh-CN': '此选项允许工具提示扩展到图表本身的viewBox之外。',
       },
-      format: [{ x: true }, { y: true }, { x: true, y: true }],
+      format: ['{ x: true }', '{ y: true }', '{ x: true, y: true }'],
     },
     {
       name: 'active',
