@@ -11,7 +11,7 @@ const data = [
 ];
 
 export default class Example extends PureComponent {
-  static demoUrl = 'https://codesandbox.io/s/simple-line-chart-kec3v';
+  static demoUrl = 'https://codesandbox.io/s/simple-scatter-chart-vj65m';
 
   render() {
     return (
