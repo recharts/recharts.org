@@ -232,8 +232,8 @@ export default {
           '每个项目中“数值”的格式化函数。 如果函数返回值为数组格式，第一个元素是格式化后的“数值”，第二个元素是格式化后的“名称”',
       },
       format: [
-        '(value, name, props) => ( return "formatted value" )',
-        '(value, name, props) => ( return ["formatted value", "formatted name"， ] )',
+        '(value, name, props) => "formatted value"',
+        '(value, name, props) => ["formatted value", "formatted name"]',
       ],
     },
     {
