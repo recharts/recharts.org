@@ -92,7 +92,7 @@ export default class Example extends PureComponent {
         >
           <CartesianGrid strokeDasharray="3 3" />
           <XAxis dataKey="month" />
-          <YAxis tickFormatter={toPercent} />
+          <YAxis tickFormatter={(value, index) => toPercent(value)} />
           <Tooltip content={renderTooltipContent} />
           <Area type="monotone" dataKey="a" stackId="1" stroke="#8884d8" fill="#8884d8" />
           <Area type="monotone" dataKey="b" stackId="1" stroke="#82ca9d" fill="#82ca9d" />
