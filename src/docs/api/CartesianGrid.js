@@ -82,7 +82,7 @@ export default {
       },
     },
     {
-      name: 'strokeDashArray',
+      name: 'strokeDasharray',
       type: 'String',
       defaultVal: 'null',
       isOptional: false,
@@ -91,9 +91,9 @@ export default {
         'zh-CN': 'The pattern of dashes and gaps used to paint the lines of the grid',
       },
       format: [
-        '<CartesianGrid strokeDashArray="4" />',
-        '<CartesianGrid strokeDashArray="4 1" />',
-        '<CartesianGrid strokeDashArray="4 1 2" />',
+        '<CartesianGrid strokeDasharray="4" />',
+        '<CartesianGrid strokeDasharray="4 1" />',
+        '<CartesianGrid strokeDasharray="4 1 2" />',
       ],
     },
   ],
