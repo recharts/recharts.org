@@ -142,7 +142,7 @@ export default {
       examples: [
         {
           name: 'XAxis with non-zero padding',
-          url: '/examples/LineChartWithXAxisPading',
+          url: '/examples/LineChartWithXAxisPadding',
         },
       ],
     },

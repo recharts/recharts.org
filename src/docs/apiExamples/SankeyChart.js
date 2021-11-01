@@ -51,7 +51,7 @@ const example = () => (
     height={500}
     data={data0}
     node={<MyCustomNode />}
-    nodePading={50}
+    nodePadding={50}
     margin={{
       left: 200,
       right: 200,
@@ -70,7 +70,7 @@ const exampleCode = `
   height={500}
   data={data0}
   node={<MyCustomNode />}
-  nodePading={50}
+  nodePadding={50}
   margin={{
    left: 200,
     right: 200,
