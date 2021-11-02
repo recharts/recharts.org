@@ -4,7 +4,7 @@ import CustomizedLabelLineChart from './CustomizedLabelLineChart';
 import DashedLineChart from './DashedLineChart';
 import LineChartConnectNulls from './LineChartConnectNulls';
 import LineChartWithReferenceLines from './LineChartWithReferenceLines';
-import LineChartWithXAxisPading from './LineChartWithXAxisPading';
+import LineChartWithXAxisPadding from './LineChartWithXAxisPadding';
 import SimpleLineChart from './SimpleLineChart';
 import SynchronizedLineChart from './SynchronizedLineChart';
 import TinyLineChart from './TinyLineChart';
@@ -22,7 +22,7 @@ export default {
   BiaxialLineChart,
   VerticalLineChartWithSpecifiedDomain,
   LineChartConnectNulls,
-  LineChartWithXAxisPading,
+  LineChartWithXAxisPadding,
   LineChartWithReferenceLines,
   CustomizedDotLineChart,
   CustomizedLabelLineChart,
