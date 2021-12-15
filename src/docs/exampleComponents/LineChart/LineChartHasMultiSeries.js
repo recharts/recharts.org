@@ -29,7 +29,7 @@ const series = [
 ];
 
 export default class Example extends PureComponent {
-  static demoUrl = 'https://codesandbox.io/s/line-chart-with-customized-label-hs5b7';
+  static demoUrl = 'https://codesandbox.io/s/line-chart-width-multi-series-64tbt';
 
   render() {
     return (
