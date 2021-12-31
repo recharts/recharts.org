@@ -22,6 +22,17 @@ export default {
       },
     },
     {
+      name: 'data',
+      type: 'Array',
+      defaultVal: 'undefined',
+      isOptional: false,
+      desc: {
+        'en-US': 'The source data, in which each element is an object.',
+        'zh-CN': '输入数据，现在支持的类型是对象数组。',
+      },
+      format: ["[{ 'subject': 'a', 'key': 120, 'fullMark': 150 }]", "[{ 'subject': 'a', 'key': 100, 'secondKey': 50, 'fullMark': 150 }]"],
+    },
+    {
       name: 'cx',
       type: 'Percentage | Number',
       defaultVal: "'50%'",
