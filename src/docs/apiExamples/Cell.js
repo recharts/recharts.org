@@ -9,16 +9,26 @@ const data = [
   { name: 'Group E', value: 278 },
   { name: 'Group F', value: 189 },
 ];
-const colors = ['#8884d8', '#83a6ed', '#8dd1e1', '#82ca9d', '#a4de6c', '#d0ed57', '#ffc658'];
+const colors = ['#8884d8', '#83a6ed', '#8dd1e1', '#82ca9d', '#a4de6c', 'url(#pattern-checkers)'];
 
 const example = () => (
-  <PieChart width={730} height={250}>
-    <Pie data={data} cx="50%" cy="50%" outerRadius={80} label>
-      {data.map((entry, index) => (
-        <Cell key={`cell-${index}`} fill={colors[index]} />
-      ))}
-    </Pie>
-  </PieChart>
+  <>
+    <svg>
+      <defs>
+        <pattern id="pattern-checkers" x="0" y="0" width="10" height="10" patternUnits="userSpaceOnUse">
+          <rect className="checker" x="0" width="5" height="5" y="0" />
+          <rect className="checker" x="10" width="5" height="5" y="10" />
+        </pattern>
+      </defs>
+    </svg>
+    <PieChart width={730} height={250}>
+      <Pie data={data} cx="50%" cy="50%" outerRadius={80} label>
+        {data.map((entry, index) => (
+          <Cell key={`cell-${index}`} fill={colors[index]} />
+        ))}
+      </Pie>
+    </PieChart>
+  </>
 );
 
 const barExample = () => (
