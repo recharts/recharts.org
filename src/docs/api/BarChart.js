@@ -136,7 +136,7 @@ export default {
       examples: [
         {
           name: 'A barChart stacked by sign of value',
-          value: '/examples/#BarChartStackedBySign',
+          value: '/examples/BarChartStackedBySign',
         },
         {
           name: 'D3 stackOffset',
