@@ -149,7 +149,7 @@ class CustomizedContent extends PureComponent {
           width={width}
           height={height}
           style={{
-            fill: depth < 2 ? colors[Math.floor((index / root.children.length) * 6)] : 'none',
+            fill: depth < 2 ? colors[Math.floor((index / root.children.length) * 6)] : "#ffffff00",
             stroke: '#fff',
             strokeWidth: 2 / (depth + 1e-10),
             strokeOpacity: 1 / (depth + 1e-10),
