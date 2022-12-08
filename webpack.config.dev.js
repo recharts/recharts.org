@@ -20,6 +20,7 @@ module.exports = {
     index: 'index.html',
     port: 4000,
     host: '127.0.0.1',
+    historyApiFallback: true,
   },
 
   module: {
