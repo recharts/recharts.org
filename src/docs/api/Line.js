@@ -138,6 +138,17 @@ export default {
       ],
     },
     {
+      name: 'hide',
+      type: 'Boolean',
+      defaultVal: 'false',
+      isOptional: true,
+      desc: {
+        'en-US': 'Hides the line when true, useful when toggling visibility state via legend',
+        'zh-CN': '将行隐藏为true,在通过图例切换可见性状态时很有用',
+      },
+      examples: [],
+    },
+    {
       name: 'points',
       type: 'Array',
       defaultVal: 'null',
