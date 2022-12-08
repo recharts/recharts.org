@@ -56,8 +56,7 @@ export default {
     },
     {
       name: 'legendType',
-      type:
-      "'line' | 'plainline' | 'square' | 'rect'| 'circle' | 'cross' | 'diamond' | 'square' | 'star' | 'triangle' | 'wye' | 'none'",
+      type: "'line' | 'plainline' | 'square' | 'rect'| 'circle' | 'cross' | 'diamond' | 'square' | 'star' | 'triangle' | 'wye' | 'none'",
       defaultVal: "'line'",
       isOptional: true,
       desc: {
@@ -367,7 +366,7 @@ export default {
       },
     },
     {
-      name: 'strokeDashArray',
+      name: 'strokeDasharray',
       type: 'String',
       defaultVal: 'null',
       isOptional: false,
@@ -375,7 +374,7 @@ export default {
         'en-US': 'The pattern of dashes and gaps used to paint the line',
         'zh-CN': 'The pattern of dashes and gaps used to paint the line',
       },
-      format: ['<Line strokeDashArray="4" />', '<Line strokeDashArray="4 1" />', '<Line strokeDashArray="4 1 2" />'],
+      format: ['<Line strokeDasharray="4" />', '<Line strokeDasharray="4 1" />', '<Line strokeDasharray="4 1 2" />'],
     },
   ],
   parentComponents: ['LineChart', 'ComposedChart'],
