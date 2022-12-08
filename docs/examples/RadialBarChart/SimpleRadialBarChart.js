@@ -39,7 +39,7 @@ const data = [
     fill: '#d0ed57',
   },
   {
-    name: 'unknown',
+    name: 'unknow',
     uv: 6.67,
     pv: 4800,
     fill: '#ffc658',
