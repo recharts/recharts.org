@@ -214,6 +214,16 @@ export default {
       ],
     },
     {
+      name: 'inactiveShape',
+      type: 'Object | ReactElement | Function',
+      defaultVal: 'null',
+      isOptional: false,
+      desc: {
+        'en-US': 'The shape of inactive sector.',
+        'zh-CN': '未激活楔子的形状。',
+      },
+    },
+    {
       name: 'isAnimationActive',
       type: 'Boolean',
       defaultVal: 'true in CSR, and false in SSR',
