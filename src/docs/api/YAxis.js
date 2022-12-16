@@ -109,6 +109,21 @@ export default {
       ],
     },
     {
+      name: 'includeHidden',
+      type: 'Boolean',
+      defaultVal: "false",
+      isOptional: true,
+      desc: {
+        'en-US':
+          "Ensures that all datapoints within a chart contribute to its domain calculation, even when they are hidden",
+        'zh-CN':
+          '',
+      },
+      format: [
+        "<YAxis type=\"number\" includeHidden />",
+      ],
+    },
+    {
       name: 'interval',
       type: '"preserveStart" | "preserveEnd" | "preserveStartEnd" | Number',
       defaultVal: "'preserveEnd'",
