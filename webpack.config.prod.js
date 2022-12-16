@@ -51,7 +51,7 @@ module.exports = {
                   path.resolve(__dirname, './src/styles'),
                   path.resolve(__dirname, './node_module/simple-line-icons/sass'),
                 ],
-              }
+              },
             },
           },
         ],
@@ -72,10 +72,7 @@ module.exports = {
   },
   optimization: {
     minimize: true,
-    minimizer: [
-      new CssMinimizerPlugin(),
-      new TerserPlugin(),
-    ],
+    minimizer: [new CssMinimizerPlugin(), new TerserPlugin()],
   },
   plugins: [
     new webpack.DefinePlugin({

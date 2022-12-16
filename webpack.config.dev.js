@@ -1,6 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
 const MonacoWebpackPlugin = require('monaco-editor-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   mode: 'development',
@@ -17,10 +18,13 @@ module.exports = {
   },
 
   devServer: {
-    index: 'index.html',
     port: 4000,
     host: '127.0.0.1',
     historyApiFallback: true,
+    devMiddleware: {
+      index: true,
+    },
+    static: true,
   },
 
   module: {
@@ -81,5 +85,6 @@ module.exports = {
     }),
     new webpack.HotModuleReplacementPlugin(),
     new MonacoWebpackPlugin({ languages: ['javascript', 'typescript'] }),
+    new HtmlWebpackPlugin({ template: path.join(__dirname, 'public', 'index.html') }),
   ],
 };
