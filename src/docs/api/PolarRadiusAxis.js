@@ -70,6 +70,16 @@ export default {
       ],
     },
     {
+      name: 'reversed',
+      type: 'Boolean',
+      defaultVal: 'false',
+      isOptional: true,
+      desc: {
+        'en-US': 'If set to true, the ticks of this axis are reversed.',
+        'zh-CN': '是否反转刻度的顺序',
+      },
+    },
+    {
       name: 'label',
       type: 'String | Number | ReactElement | Function',
       defaultVal: 'null',
