@@ -107,8 +107,6 @@ export default class Example extends PureComponent {
       <div style={{ width: '100%' }}>
         <ResponsiveContainer width="100%" height={60}>
           <ScatterChart
-            width={800}
-            height={60}
             margin={{
               top: 10,
               right: 0,
