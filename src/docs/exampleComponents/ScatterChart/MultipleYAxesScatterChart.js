@@ -29,10 +29,8 @@ export default class Example extends PureComponent {
 
   render() {
     return (
-      <ResponsiveContainer width="100%" height="100%">
+      <ResponsiveContainer width="100%" height={400}>
         <ScatterChart
-          width={500}
-          height={400}
           margin={{
             top: 20,
             right: 20,
