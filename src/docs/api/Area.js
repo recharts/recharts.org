@@ -129,6 +129,16 @@ export default {
       },
     },
     {
+      name: 'strokeWidth',
+      type: 'String | Number',
+      defaultVal: '1',
+      isOptional: true,
+      desc: {
+        'en-US': 'The width of the stroke',
+        'zh-CN': '虚线的宽度',
+      },
+    },
+    {
       name: 'layout',
       type: "'horizontal' | 'vertical'",
       defaultVal: 'undefined',
