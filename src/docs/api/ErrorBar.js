@@ -25,7 +25,7 @@ export default {
     },
     {
       name: 'strokeWidth',
-      type: 'String',
+      type: 'String | Number',
       defaultVal: '1.5',
       isOptional: true,
       desc: {
