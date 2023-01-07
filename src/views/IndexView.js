@@ -144,7 +144,7 @@ class IndexView extends PureComponent {
             <p>
               {localeGet(locale, 'home', 'addUser')}
               &nbsp;
-              <a target="_self" href="https://github.com/recharts/recharts/wiki/Who-use-recharts/_edit">
+              <a target="_self" href="https://github.com/recharts/recharts/wiki/Who-uses-recharts%3F">
                 {localeGet(locale, 'home', 'edit')}
               </a>
             </p>

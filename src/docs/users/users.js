@@ -14,7 +14,8 @@ export default [
   {
     name: 'Fyndiq',
     url: 'https://fyndiq.se',
-    logoImgUrl: '//media.fyndiq.se/upload/press/logo-fyndiq-3-1.png',
+    logoImgUrl:
+      'https://cdn.sanity.io/images/q2vrlap6/production/f30a084b66d635cc8f156bd811f8f30ae711e326-1000x600.png?w=500&fit=min&auto=format',
   },
 
   {
@@ -50,11 +51,5 @@ export default [
     name: 'ahrefs',
     url: 'https://ahrefs.com/',
     logoImgUrl: 'https://img.alicdn.com/tfs/TB1zGiTiFmWBuNjSspdXXbugXXa-640-244.png',
-  },
-  {
-    name: 'Yety',
-    url: 'http://yety.io',
-    logoImgUrl:
-      'https://camo.githubusercontent.com/d45641bb2001f297174337a9514f34dfe928cbf8/68747470733a2f2f73332d75732d776573742d322e616d617a6f6e6177732e636f6d2f796574792d6170702f736f6369616c2f796574792d72656368617274732e706e67',
   },
 ];
