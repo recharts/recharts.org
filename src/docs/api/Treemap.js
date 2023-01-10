@@ -23,7 +23,7 @@ export default {
     },
     {
       name: 'dataKey',
-      type: 'String',
+      type: 'String | Number | Function',
       defaultVal: "'value'",
       isOptional: false,
       desc: {

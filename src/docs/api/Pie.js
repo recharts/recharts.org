@@ -106,7 +106,7 @@ export default {
     },
     {
       name: 'dataKey',
-      type: 'String',
+      type: 'String | Number | Function',
       isOptional: false,
       desc: {
         'en-US': "The key of each sector's value.",
