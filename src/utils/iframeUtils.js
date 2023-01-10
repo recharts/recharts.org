@@ -18,7 +18,7 @@ export const template = `
       <style>*{margin:0;padding:0;}</style>
   </head>
   <body>
-  <div id="${MOUNT_ID}">
+  <div style="height: 443px;" id="${MOUNT_ID}">
   </div>
   <script type="text/babel">
     ${CODE_PLACEHOLDER}
