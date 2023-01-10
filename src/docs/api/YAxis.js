@@ -13,7 +13,7 @@ export default {
     },
     {
       name: 'dataKey',
-      type: 'String | Number',
+      type: 'String | Number | Function',
       defaultVal: 'null',
       isOptional: true,
       desc: {

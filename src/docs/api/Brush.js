@@ -3,7 +3,7 @@ export default {
   props: [
     {
       name: 'dataKey',
-      type: 'Number | String',
+      type: 'String | Number | Function',
       defaultVal: 'null',
       isOptional: false,
       desc: {

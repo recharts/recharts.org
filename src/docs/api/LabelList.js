@@ -3,7 +3,7 @@ export default {
   props: [
     {
       name: 'dataKey',
-      type: 'String | Number',
+      type: 'String | Number | Function',
       isOptional: false,
       desc: {
         'en-US': 'The key of a group of label values in data.',
