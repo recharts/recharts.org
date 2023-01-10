@@ -185,12 +185,7 @@ class ExamplesView extends PureComponent {
     return exampleResult && isLoading !== null ? (
       <div className="monaco-editor-wrapper">
         <div className="monaco-editor-toolbar">
-          <span
-            role="button"
-            className="monaco-editor-toolbar-item"
-            onClick={this.handleRunCode}
-            onKeyPress={this.handleRunCode}
-          >
+          <span role="button" className="monaco-editor-toolbar-item" onClick={this.handleRunCode}>
             <i className="icon-control-play" />
             <span>&nbsp;</span>
             <span>Run</span>
