@@ -6,14 +6,15 @@ import { connect } from 'react-redux';
 import Helmet from 'react-helmet';
 import { Link } from 'react-router';
 import MonacoEditor from 'react-monaco-editor/lib';
+import { Runner } from 'react-runner';
+import * as ReactScope from 'react';
+import * as RechartsScope from 'recharts';
 import Examples from '../docs/exampleComponents';
-import { getLocaleType, localeGet } from '../utils/LocaleUtils';
+import { getLocaleType } from '../utils/LocaleUtils';
 import './ExampleView.scss';
 import fetchFile from '../utils/fetchUtils';
 import 'simple-line-icons/scss/simple-line-icons.scss';
-import { combineFrameContent } from '../utils/iframeUtils';
 
-const firstChartName = Object.keys(Examples)[0];
 const cates = Object.keys(Examples).sort((a, b) => Examples[a].order - Examples[b].order);
 const parseExampleComponent = (compName) => {
   const typeList = Object.keys(Examples);
@@ -52,7 +53,6 @@ class ExamplesView extends PureComponent {
     isLoading: null,
     hasError: null,
     exampleCode: null,
-    iframeCode: null,
     prevPage: null,
   };
 
@@ -76,7 +76,7 @@ class ExamplesView extends PureComponent {
   }
 
   componentDidUpdate(prevProps, prevState) {
-    const { iframeCode, prevPage } = this.state;
+    const { prevPage } = this.state;
 
     if (prevState.prevPage !== prevPage) {
       // page change
@@ -85,9 +85,6 @@ class ExamplesView extends PureComponent {
       if (exampleResult) {
         this.fetchExampleCode(exampleResult.cateName, exampleResult.exampleName);
       }
-    } else if (iframeCode && iframeCode !== prevState.iframeCode) {
-      // code updated
-      this.updateIframe(iframeCode);
     }
   }
 
@@ -98,7 +95,6 @@ class ExamplesView extends PureComponent {
         isLoading: false,
         hasError: false,
         exampleCode: EXAMPLE_CODE_CACHE[exampleName],
-        iframeCode: null,
       });
 
       return;
@@ -117,7 +113,6 @@ class ExamplesView extends PureComponent {
           isLoading: false,
           hasError: false,
           exampleCode: res,
-          iframeCode: null,
         });
       },
       () => {
@@ -125,7 +120,6 @@ class ExamplesView extends PureComponent {
           isLoading: false,
           hasError: true,
           exampleCode: null,
-          iframeCode: null,
         });
       },
     );
@@ -137,20 +131,9 @@ class ExamplesView extends PureComponent {
 
       this.setState({
         exampleCode: newCode,
-        iframeCode: combineFrameContent(newCode),
       });
     }
   };
-
-  updateIframe(iframeCode) {
-    if (this.iframeNode) {
-      const iframeDoc = this.iframeNode.contentDocument || this.iframeNode.contentWindow.document;
-
-      iframeDoc.open();
-      iframeDoc.write(iframeCode);
-      iframeDoc.close();
-    }
-  }
 
   renderMenuList(type, locale) {
     const { page } = this.props;
@@ -178,9 +161,10 @@ class ExamplesView extends PureComponent {
       editorValue = 'loading code error';
     } else if (isLoading === false && hasError === false) {
       editorValue = exampleCode;
+      this.setState({
+        exampleCode: editorValue,
+      });
     }
-
-    console.log(exampleCode, this.state.iframeCode);
 
     return exampleResult && isLoading !== null ? (
       <div className="monaco-editor-wrapper">
@@ -190,12 +174,6 @@ class ExamplesView extends PureComponent {
             <span>&nbsp;</span>
             <span>Run</span>
           </span>
-          {/* <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
-          <option className="monaco-editor-toolbar-item" onClick={this.handleRunCopy} onKeyPress={this.handleRunCopy}>
-            <i className="icon-pencil" />
-            <span>&nbsp;</span>
-            <span>Copy</span>
-          </option> */}
         </div>
         <div id="monaco-editor-container">
           <MonacoEditor
@@ -212,26 +190,32 @@ class ExamplesView extends PureComponent {
             readOnly={false}
             theme="vs"
             minimap={{ enabled: false }}
+            options={{ tabSize: 2 }}
           />
         </div>
       </div>
     ) : null;
   }
 
-  renderIframe() {
+  renderResult() {
+    const scope = {
+      // scope used by import statement in editor
+      import: {
+        react: ReactScope,
+        recharts: RechartsScope,
+      },
+    };
+
     return (
-      <iframe
-        title="demoIframe"
-        height={500}
-        ref={(node) => {
-          this.iframeNode = node;
-        }}
-      />
+      <div className="example-chart-wrapper">
+        <div className="example-chart-responsive-container">
+          <Runner code={this.state.exampleCode} scope={scope} />
+        </div>
+      </div>
     );
   }
 
   render() {
-    const { iframeCode } = this.state;
     const { page } = this.props;
     const exampleResult = parseExampleComponent(page);
     const locale = getLocaleType(this.props);
@@ -254,20 +238,18 @@ class ExamplesView extends PureComponent {
           {exampleResult ? (
             <div className="example-wrapper">
               <div className="example-inner-wrapper">
-                <div className="example-chart-wrapper">
-                  {iframeCode ? this.renderIframe() : <exampleResult.exampleComponent />}
-                </div>
+                {this.renderResult()}
                 {this.renderEditor(exampleResult)}
               </div>
               {exampleResult.exampleComponent.demoUrl ? (
                 <p className="example-link-wrapper">
                   <a
-                    className="example-jsfiddle-link"
+                    className="example-code-sandbox-link"
                     target="_blank"
                     rel="noopener noreferrer"
                     href={exampleResult.exampleComponent.demoUrl}
                   >
-                    Try the demo in codesandbox &gt;&gt;
+                    Try the demo in CodeSandbox &gt;&gt;
                   </a>
                 </p>
               ) : null}
