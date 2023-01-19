@@ -18,6 +18,7 @@ module.exports = {
   },
 
   devServer: {
+    hot: true,
     port: 4000,
     host: '127.0.0.1',
     historyApiFallback: true,
@@ -83,7 +84,6 @@ module.exports = {
       __DEV__: true,
       __DEVTOOLS__: true,
     }),
-    new webpack.HotModuleReplacementPlugin(),
     new MonacoWebpackPlugin({ languages: ['javascript', 'typescript'] }),
     new HtmlWebpackPlugin({ template: path.join(__dirname, 'public', 'index.html') }),
   ],
