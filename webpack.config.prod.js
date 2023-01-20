@@ -1,3 +1,4 @@
+/* eslint-disable import/no-extraneous-dependencies */
 const path = require('path');
 const webpack = require('webpack');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
@@ -81,7 +82,7 @@ module.exports = {
       __DEVTOOLS__: false,
     }),
     new MonacoWebpackPlugin({
-      languages: ['javascript, typescript'],
+      languages: ['javascript', 'typescript'],
       features: ['!gotoSymbol'],
     }),
     new MiniCssExtractPlugin({
