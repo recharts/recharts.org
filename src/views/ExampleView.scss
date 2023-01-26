@@ -13,7 +13,7 @@
       border: 1px solid #f5f5f5;
     }
 
-    @media screen and (max-width: 1400px) {
+    @media screen and (max-width: 1300px) {
       .example-inner-wrapper {
         flex-direction: column;
 
@@ -48,7 +48,7 @@
     }
 
     .monaco-editor-wrapper {
-      width: 800px;
+      width: 720px;
       height: 100%;
 
       .monaco-editor-toolbar {
