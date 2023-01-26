@@ -4,7 +4,6 @@ import PieChartWithPaddingAngle from './PieChartWithPaddingAngle';
 import StraightAnglePieChart from './StraightAnglePieChart';
 import TwoLevelPieChart from './TwoLevelPieChart';
 import TwoSimplePieChart from './TwoSimplePieChart';
-import PieChartWithNeedle from './PieChartWithNeedle';
 
 export default {
   TwoLevelPieChart,
@@ -13,5 +12,4 @@ export default {
   CustomActiveShapePieChart,
   PieChartWithCustomizedLabel,
   PieChartWithPaddingAngle,
-  PieChartWithNeedle,
 };
