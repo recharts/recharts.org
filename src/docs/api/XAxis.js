@@ -169,7 +169,7 @@ export default {
     },
     {
       name: 'padding',
-      type: 'Object',
+      type: 'Object | "gap" | "no-gap"',
       defaultVal: '{ left: 0, right: 0 }',
       isOptional: false,
       desc: {
@@ -180,6 +180,8 @@ export default {
         '<XAxis padding={{ left: 10 }} />',
         '<XAxis padding={{ right: 20 }} />',
         '<XAxis padding={{ left: 20, right: 20 }} />',
+        '<XAxis padding="gap"',
+        '<XAxis padding="no-gap"',
       ],
       examples: [
         {
