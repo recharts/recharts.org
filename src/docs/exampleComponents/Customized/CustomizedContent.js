@@ -61,8 +61,6 @@ const data = [
 const CustomizedCross = (props) => {
   const { width, height, stroke, fill, formattedGraphicalItems } = props;
   console.log(props);
-  // access datapoints formatted for the chart
-  console.log(formattedGraphicalItems);
   // get first series in chart
   const firstSeries = formattedGraphicalItems[0];
   // get any point at any index in chart
