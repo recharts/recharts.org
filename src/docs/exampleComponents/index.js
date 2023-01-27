@@ -10,6 +10,7 @@ import TreeMapExamples from './TreeMap';
 import TooltipExamples from './Tooltip';
 import LegendExamples from './Legend';
 import ResponsiveContainerExamples from './ResponsiveContainer';
+import CustomizedExamples from './Customized';
 
 export default {
   LineChart: { examples: LineChartExamples, order: 1 },
@@ -24,4 +25,5 @@ export default {
   Tooltip: { examples: TooltipExamples, order: 9 },
   Legend: { examples: LegendExamples, order: 10 },
   ResponsiveContainer: { examples: ResponsiveContainerExamples, order: 11 },
+  Customized: { examples: CustomizedExamples, order: 12 },
 };
