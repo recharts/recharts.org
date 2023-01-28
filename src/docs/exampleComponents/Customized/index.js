@@ -1,5 +1,5 @@
-import CustomizedCrossContent from './CustomizedContent - Cross';
-import CustomizedRectangleContent from './CustomizedContent - Rectangle';
+import CustomizedCrossContent from './CustomizedCrossContent';
+import CustomizedRectangleContent from './CustomizedRectangleContent';
 
 export default {
   CustomizedCrossContent, 

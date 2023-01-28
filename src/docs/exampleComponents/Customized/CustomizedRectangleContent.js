@@ -65,13 +65,13 @@ const CustomizedRectangle = (props) => {
   const secondSeries = formattedGraphicalItems[1];
 
   // render custom content using points from the graph
-  return firstSeries?.props?.points.map((_, index) => {
-    const firstSeriesPoint = firstSeries?.props?.points[index];
+  return firstSeries?.props?.points.map((firstSeriesPoint, index) => {
     const secondSeriesPoint = secondSeries?.props?.points[index];
     const yDifference = firstSeriesPoint.y - secondSeriesPoint.y
 
     return (
       <Rectangle
+        key={firstSeriesPoint.payload.name}
         width={10}
         height={yDifference}
         x={secondSeriesPoint.x - 5}
