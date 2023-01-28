@@ -60,7 +60,6 @@ const data = [
 // using Customized gives you access to all relevant chart props
 const CustomizedRectangle = (props) => {
   const { formattedGraphicalItems } = props;
-  console.log(props);
   // get first and second series in chart
   const firstSeries = formattedGraphicalItems[0];
   const secondSeries = formattedGraphicalItems[1];
@@ -69,15 +68,15 @@ const CustomizedRectangle = (props) => {
   return firstSeries?.props?.points.map((_, index) => {
     const firstSeriesPoint = firstSeries?.props?.points[index];
     const secondSeriesPoint = secondSeries?.props?.points[index];
-    const yDiff = firstSeriesPoint.y - secondSeriesPoint.y
+    const yDifference = firstSeriesPoint.y - secondSeriesPoint.y
 
     return (
       <Rectangle
         width={10}
-        height={-yDiff}
-        x={firstSeriesPoint.x - 5}
-        y={firstSeriesPoint.y}
-        fill={yDiff > 0 ? 'red' : yDiff < 0 ? 'green' : 'none'}
+        height={yDifference}
+        x={secondSeriesPoint.x - 5}
+        y={secondSeriesPoint.y}
+        fill={yDifference > 0 ? 'red' : yDifference < 0 ? 'green' : 'none'}
       />
     )
   })
