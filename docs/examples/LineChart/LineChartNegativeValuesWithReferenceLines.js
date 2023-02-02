@@ -52,7 +52,7 @@ const minX = Math.min(...data.map((d) => d.x));
 const minY = Math.min(...data.map((d) => d.y));
 
 export default class Example extends PureComponent {
-  static demoUrl = 'https://stackblitz.com/edit/react-ts-ltwtbv?file=Chart.tsx';
+  static demoUrl = 'https://codesandbox.io/s/laughing-firefly-dfmkho?file=/src/Chart.tsx';
 
   render() {
     return (
