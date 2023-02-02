@@ -13,6 +13,7 @@ import VerticalLineChartWithSpecifiedDomain from './VerticalLineChartWithSpecifi
 import HighlightAndZoomLineChart from './HighlightAndZoomLineChart';
 import LineChartHasMultiSeries from './LineChartHasMultiSeries';
 import LineChartAxisInterval from './LineChartAxisInterval';
+import LineChartNegativeValuesWithReferenceLines from './LineChartNegativeValuesWithReferenceLines'
 
 export default {
   SimpleLineChart,
@@ -30,4 +31,6 @@ export default {
   HighlightAndZoomLineChart,
   LineChartHasMultiSeries,
   LineChartAxisInterval,
+  LineChartNegativeValuesWithReferenceLines
+
 };
