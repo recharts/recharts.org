@@ -34,6 +34,7 @@ const map = {
     api: 'API',
     examples: 'Examples',
     blog: 'Blog',
+    storybook: 'Storybook (WIP)',
     contract: 'Contact us by',
   },
   guide: {
