@@ -1,4 +1,6 @@
 iframe.storybook {
   width: 100%;
   height: calc(100vh - 150px);
+  border: 0;
+  overflow: hidden;
 }
