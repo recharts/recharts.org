@@ -25,7 +25,6 @@ export default class Example extends PureComponent {
     },
     {
       name: 'Page D',
-      uv: 2780,
       pv: 3908,
       amt: 2000,
     },
