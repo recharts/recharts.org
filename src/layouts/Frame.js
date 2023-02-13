@@ -98,7 +98,7 @@ class Frame extends Component {
               MIT License
             </a>
           </p>
-          <p>Copyright (c) 2016-2021 Recharts Group</p>
+          <p>Copyright (c) 2016-{new Date().getFullYear()} Recharts Group</p>
         </footer>
       </div>
     );
