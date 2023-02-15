@@ -94,6 +94,15 @@ const rangeExample = () => (
   </BarChart>
 );
 
+const rangeExampleCode = `
+<BarChart width={730} height={250} data={rangeData} margin={{top: 20, right: 20, bottom: 20, left: 20}} >
+  <XAxis dataKey="day" />
+  <YAxis />
+  <Tooltip />
+  <Bar dataKey="temperature" fill="#8884d8" />
+</BarChart>
+`
+
 export default [
   {
     demo: example,
@@ -102,5 +111,7 @@ export default [
   },
   {
     demo: rangeExample,
+    code: rangeExampleCode,
+    dataCode: `const data = ${JSON.stringify(rangeData, null, 2)}`
   },
 ];
