@@ -50,10 +50,23 @@ export default {
       type: 'Boolean',
       defaultVal: 'false',
       isOptional: false,
+      deprecated: true,
+      desc: {
+        'en-US': "Use 'ifOverflow' instead.",
+      },
+    },
+    {
+      name: 'ifOverflow',
+      type: "'discard' | 'hidden' | 'visible' | 'extendDomain'",
+      defaultVal: "'discard'",
+      isOptional: false,
       desc: {
         'en-US':
-          'If set true, the value of reference dot will be take into account when calculate the domain of corresponding axis, so that the reference dot will always show.',
-        'zh-CN': '是否根据整参考点的值调整相应的坐标轴 domain，来保证参考点一定在可视区域内。',
+          `Defines how to draw the reference dot if it falls partly outside the canvas.
+          If set to 'discard', the reference dot will not be drawn at all.
+          If set to 'hidden', the reference dot will be clipped to the canvas.
+          If set to 'visible', the reference dot will be drawn completely.
+          If set to 'extendDomain', the domain of the overflown axis will be extended such that the reference dot fits into the canvas.`,
       },
     },
     {

@@ -50,15 +50,28 @@ export default {
       type: 'Boolean',
       defaultVal: 'false',
       isOptional: false,
+      deprecated: true,
+      desc: {
+        'en-US': "Use 'ifOverflow' instead.",
+      },
+    },
+    {
+      name: 'ifOverflow',
+      type: "'discard' | 'hidden' | 'visible' | 'extendDomain'",
+      defaultVal: "'discard'",
+      isOptional: false,
       desc: {
         'en-US':
-          'If the corresponding axis is a number axis and this option is set true, the value of reference line will be take into account when calculate the domain of corresponding axis, so that the reference line will always show.',
-        'zh-CN': '是否根据整参考线的值调整相应的坐标轴 domain，来保证参考线一定在可视区域内。',
+          `Defines how to draw the reference line if it falls partly outside the canvas.
+          If set to 'discard', the reference line will not be drawn at all.
+          If set to 'hidden', the reference line will be clipped to the canvas.
+          If set to 'visible', the reference line will be drawn completely.
+          If set to 'extendDomain', the domain of the overflown axis will be extended such that the reference line fits into the canvas.`,
       },
       examples: [
         {
-          name: 'A LineChart with alwaysShow ReferenceLine',
-          url: 'https://codesandbox.io/s/reference-line-alwaysshow-ybxon',
+          name: 'A LineChart with domain extending ReferenceLine',
+          url: 'https://codesandbox.io/s/reference-line-ifoverflow-extenddomain-l5tqgi',
           isExternal: true,
         },
       ],
