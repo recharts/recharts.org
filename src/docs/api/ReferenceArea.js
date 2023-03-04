@@ -91,6 +91,12 @@ export default {
           If set to 'hidden', the reference area will be clipped to the canvas.
           If set to 'visible', the reference area will be drawn completely.
           If set to 'extendDomain', the domain of the overflown axis will be extended such that the reference area fits into the canvas.`,
+        'zh-CN': 
+          `定義如果參考區域部分落在畫布之外，如何繪製參考區域
+          如果設置為“discard“，則根本不會繪製參考區域
+          如果設置為“hidden”，參考區域將被裁剪到畫布上
+          如果設置為“visible“，參考區域將被完全繪製
+          如果設置為“extendDomain”，溢出軸的域將被擴展，以便參考區域適合畫布`,
       },
       examples: [
         {
