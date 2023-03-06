@@ -28,7 +28,7 @@ export default [
     name: 'Tracktl',
     url: 'https://www.tracktl.com/',
     logoImgUrl:
-      '//res.cloudinary.com/jukeo-net/image/upload/c_pad,h_100,q_100,w_300/v1509094068/logo-w_copie_tiweid.png',
+      'src\assets\tracktl.png',
   },
   {
     name: 'Demisto',
