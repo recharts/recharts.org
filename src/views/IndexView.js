@@ -130,8 +130,8 @@ class IndexView extends PureComponent {
           <ul className="users">
             {users.map((entry, index) => (
               <li className="user" key={`user-${index}`}>
-                <a href={entry.url} target="_blank" title={entry.anme} rel="noreferrer">
-                  <img src={entry.logoImgUrl} title={entry.anme} alt={entry.anme} />
+                <a href={entry.url} target="_blank" title={entry.name} rel="noreferrer">
+                  <img src={entry.logoImgUrl} title={entry.name} alt={entry.name} />
                 </a>
               </li>
             ))}
