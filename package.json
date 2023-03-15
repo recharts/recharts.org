@@ -4,8 +4,9 @@
   "description": "the website of recharts",
   "private": true,
   "scripts": {
-    "build": "NODE_ENV=production webpack --config webpack.config.prod.js && npm run sync-examples",
+    "build": "NODE_ENV=production webpack --config webpack.config.prod.js && npm run sync-examples && npm run sync-assets",
     "sync-examples": "rm -rf docs/examples/ && cp -r src/docs/exampleComponents/ docs/examples/",
+    "sync-assets": "rm -rf docs/assets/ && cp -r public/assets/ docs/assets/",
     "sync-examples-dev": "rm -rf public/examples/ && cp -r src/docs/exampleComponents/ public/examples/",
     "start": "npm run sync-examples-dev && webpack serve --config webpack.config.dev.js",
     "autofix": "eslint src --fix",
