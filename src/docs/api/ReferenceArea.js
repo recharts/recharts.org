@@ -74,15 +74,34 @@ export default {
       type: 'Boolean',
       defaultVal: 'false',
       isOptional: false,
+      deprecated: true,
+      desc: {
+        'en-US': "Use 'ifOverflow' instead.",
+      },
+    },
+    {
+      name: 'ifOverflow',
+      type: "'discard' | 'hidden' | 'visible' | 'extendDomain'",
+      defaultVal: "'discard'",
+      isOptional: false,
       desc: {
         'en-US':
-          'If the corresponding axis is a number axis and this option is set true, the value of reference line will be take into account when calculate the domain of corresponding axis, so that the reference line will always show.',
-        'zh-CN': '是否根据整参考区域的值调整相应的坐标轴 domain，来保证参考点一定在可视区域内。',
+          `Defines how to draw the reference area if it falls partly outside the canvas.
+          If set to 'discard', the reference area will not be drawn at all.
+          If set to 'hidden', the reference area will be clipped to the canvas.
+          If set to 'visible', the reference area will be drawn completely.
+          If set to 'extendDomain', the domain of the overflown axis will be extended such that the reference area fits into the canvas.`,
+        'zh-CN': 
+          `定義如果參考區域部分落在畫布之外，如何繪製參考區域
+          如果設置為“discard“，則根本不會繪製參考區域
+          如果設置為“hidden”，參考區域將被裁剪到畫布上
+          如果設置為“visible“，參考區域將被完全繪製
+          如果設置為“extendDomain”，溢出軸的域將被擴展，以便參考區域適合畫布`,
       },
       examples: [
         {
-          name: 'A LineChart with alwaysShow ReferenceLine',
-          url: 'https://codesandbox.io/s/reference-line-alwaysshow-ybxon',
+          name: 'A LineChart with domain extending ReferenceArea',
+          url: 'https://codesandbox.io/s/reference-area-ifoverflow-extenddomain-hdo35m',
           isExternal: true,
         },
       ],
