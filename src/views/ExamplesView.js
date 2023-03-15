@@ -9,6 +9,7 @@ import MonacoEditor from 'react-monaco-editor/lib';
 import { Runner } from 'react-runner';
 import * as ReactScope from 'react';
 import * as RechartsScope from 'recharts';
+import * as D3ShapeScope from 'd3-shape';
 import Examples from '../docs/exampleComponents';
 import { getLocaleType } from '../utils/LocaleUtils';
 import './ExampleView.scss';
@@ -203,6 +204,7 @@ class ExamplesView extends PureComponent {
       import: {
         react: ReactScope,
         recharts: RechartsScope,
+        ['d3-shape']: D3ShapeScope,
       },
     };
 
