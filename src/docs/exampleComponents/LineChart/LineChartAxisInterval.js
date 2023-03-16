@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
+import { LineChart, Line, XAxis, YAxis, CartesianGrid, ResponsiveContainer } from 'recharts';
 
 const data = [
   {
@@ -47,47 +47,29 @@ const data = [
 ];
 
 export default class Example extends PureComponent {
-  static demoUrl = 'https://codesandbox.io/s/line-chart-of-different-axis-interval-oxw2p';
+  static demoUrl = 'https://codesandbox.io/s/line-chart-of-different-axis-intervals-er37wm';
+
+  chart = (interval) => (
+    <ResponsiveContainer height={250} width="100%">
+      <LineChart data={data} margin={{ right: 25, top: 10 }}>
+        <CartesianGrid strokeDasharray="3 3" />
+        <XAxis dataKey="name" interval={interval} />
+        <YAxis interval={interval} />
+        <Line type="monotone" dataKey="pv" stroke="#8884d8" activeDot={{ r: 8 }} />
+        <Line type="monotone" dataKey="uv" stroke="#82ca9d" />
+      </LineChart>
+    </ResponsiveContainer>
+  );
 
   render() {
     return (
-      <div>
-        <LineChart width={200} height={100} data={data}>
-          <CartesianGrid strokeDasharray="3 3" />
-          <XAxis dataKey="name" interval="preserveEnd" />
-          <YAxis interval="preserveEnd" />
-          <Legend />
-          <Line type="monotone" dataKey="pv" stroke="#8884d8" activeDot={{ r: 8 }} />
-          <Line type="monotone" dataKey="uv" stroke="#82ca9d" />
-        </LineChart>
-
-        <LineChart width={200} height={100} data={data}>
-          <CartesianGrid strokeDasharray="3 3" />
-          <XAxis dataKey="name" interval="preserveStart" />
-          <YAxis interval="preserveStart" />
-          <Legend />
-          <Line type="monotone" dataKey="pv" stroke="#8884d8" activeDot={{ r: 8 }} />
-          <Line type="monotone" dataKey="uv" stroke="#82ca9d" />
-        </LineChart>
-
-        <LineChart width={200} height={100} data={data}>
-          <CartesianGrid strokeDasharray="3 3" />
-          <XAxis dataKey="name" interval="preserveStartEnd" />
-          <YAxis interval="preserveStartEnd" />
-          <Legend />
-          <Line type="monotone" dataKey="pv" stroke="#8884d8" activeDot={{ r: 8 }} />
-          <Line type="monotone" dataKey="uv" stroke="#82ca9d" />
-        </LineChart>
-
-        <LineChart width={200} height={100} data={data}>
-          <CartesianGrid strokeDasharray="3 3" />
-          <XAxis dataKey="name" interval={0} angle={30} dx={20} />
-          <YAxis />
-          <Legend />
-          <Line type="monotone" dataKey="pv" stroke="#8884d8" activeDot={{ r: 8 }} />
-          <Line type="monotone" dataKey="uv" stroke="#82ca9d" />
-        </LineChart>
-      </div>
+      <>
+        {this.chart('preserveEnd')}
+        {this.chart('preserveStart')}
+        {this.chart('preserveStartEnd')}
+        {this.chart('equidistantPreserveStart')}
+        {this.chart(1)}
+      </>
     );
   }
 }

@@ -67,6 +67,16 @@ export default {
         'zh-CN': '如果该值是一个正数，我们会用 debounce 函数来处理 resize 事件，避免 resize 事件频繁触发的问题。',
       },
     },
+    {
+      name: 'onResize',
+      type: 'Function',
+      defaultVal: 'undefined',
+      isOptional: true,
+      desc: {
+        'en-US': 'If specified provides a callback providing the updated chart width and height values.',
+        'zh-CN': '如果指定，则提供一个回调，提供更新的图表宽度和高度值。',
+      },
+    },
   ],
   childrenComponents: [
     'AreaChart',

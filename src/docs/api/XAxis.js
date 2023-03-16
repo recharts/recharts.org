@@ -167,7 +167,7 @@ export default {
     },
     {
       name: 'interval',
-      type: '"preserveStart" | "preserveEnd" | "preserveStartEnd" | Number',
+      type: '"preserveStart" | "preserveEnd" | "preserveStartEnd" | "equidistantPreserveStart" | Number',
       defaultVal: "'preserveEnd'",
       isOptional: false,
       desc: {
@@ -178,7 +178,7 @@ export default {
       },
       examples: [
         {
-          name: 'the meaning of different interval',
+          name: 'the meaning of different intervals',
           url: '/examples/LineChartAxisInterval',
         },
       ],

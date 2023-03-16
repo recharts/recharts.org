@@ -49,4 +49,4 @@ export default [
   },
 ];
 
-export const NEW_APIS = ['Label', 'LabelList'];
+export const NEW_APIS = [];
