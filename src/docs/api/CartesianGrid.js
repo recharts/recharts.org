@@ -151,7 +151,7 @@ export default {
       isOptional: false,
       desc: {
         'en-US': 'The pattern of dashes and gaps used to paint the lines of the grid',
-        'zh-CN': 'The pattern of dashes and gaps used to paint the lines of the grid',
+        'zh-CN': '用于绘制网格的虚线和间隔的模式',
       },
       format: [
         '<CartesianGrid strokeDasharray="4" />',
