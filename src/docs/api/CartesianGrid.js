@@ -120,13 +120,38 @@ export default {
       ],
     },
     {
+      name: 'fill',
+      type: 'String',
+      isOptional: true,
+      desc: {
+        'en-US': 'The background color used to fill the space between grid lines',
+        'zh-CN': '网格之间用于填充的背景颜色',
+      },
+      format: [
+        '<CartesianGrid strokeDasharray="3 3" fill="red" />',
+        '<CartesianGrid strokeDasharray="3 3" fill="#ccc" />',
+      ],
+    },
+    {
+      name: 'fillOpacity',
+      type: 'Number',
+      isOptional: true,
+      desc: {
+        'en-US': 'The opacity of the background used to fill the space between grid lines',
+        'zh-CN': '网格之间用于填充的背景的透明度',
+      },
+      format: [
+        '<CartesianGrid strokeDasharray="3 3" fill="red" fillOpacity={0.6} />',
+      ],
+    },
+    {
       name: 'strokeDasharray',
       type: 'String',
       defaultVal: 'null',
       isOptional: false,
       desc: {
         'en-US': 'The pattern of dashes and gaps used to paint the lines of the grid',
-        'zh-CN': 'The pattern of dashes and gaps used to paint the lines of the grid',
+        'zh-CN': '用于绘制网格的虚线和间隔的模式',
       },
       format: [
         '<CartesianGrid strokeDasharray="4" />',
