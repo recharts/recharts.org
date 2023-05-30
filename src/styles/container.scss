@@ -90,6 +90,8 @@ footer {
     padding-top: 30px;
     padding-left: 20px;
     overflow: auto;
+    z-index: 1;
+    background: #fff;
 
     .sidebar-cate {
       > h2 {
