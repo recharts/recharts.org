@@ -160,6 +160,17 @@ export default {
       format: ['[{x: 12, y: 12, value: 240}]'],
     },
     {
+      name: 'stroke',
+      type: 'String',
+      defaultVal: '#3182bd',
+      isOptional: true,
+      desc: {
+        'en-US': 'The color of the stroke',
+        'zh-CN': '描边的颜色',
+      },
+      format: ['<Line dataKey="value" stroke="#ff0ff0" />'],
+    },
+    {
       name: 'strokeWidth',
       type: 'String | Number',
       defaultVal: '1',
