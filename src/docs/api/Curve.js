@@ -3,7 +3,7 @@ export default {
   props: [
     {
       name: 'type',
-      type: `'basis' | 'basisClosed' | 'basisOpen' | 'linear' | 'linearClosed' | 'natural' | 'monotoneX'
+      type: `'basis' | 'basisClosed' | 'basisOpen' | 'bumpX' | 'bumpY' | 'bump' | 'linear' | 'linearClosed' | 'natural' | 'monotoneX'
         | 'monotoneY' | 'monotone' | 'step' | 'stepBefore' | 'stepAfter' | Function`,
       defaultVal: "'linear'",
       isOptional: false,
