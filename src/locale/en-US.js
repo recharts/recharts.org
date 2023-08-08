@@ -6,7 +6,7 @@ const map = {
     empty: 'Empty',
   },
   home: {
-    solgan: 'A composable charting library built on React components',
+    slogan: 'A composable charting library built on React components',
     install: 'Install',
     composable: 'Composable',
     composableContent: 'Quickly build your charts with decoupled, reusable React components.',
