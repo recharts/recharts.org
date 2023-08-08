@@ -62,6 +62,15 @@ export default {
       ],
     },
     {
+      name: 'sort',
+      type: 'Boolean',
+      defaultVal: 'true',
+      isOptional: true,
+      desc: {
+        'en-US': 'Whether to sort the nodes on th y axis, or to display them as user-defined.',
+      },
+    },
+    {
       name: 'nodePadding',
       type: 'Number',
       defaultVal: '10',
