@@ -64,7 +64,7 @@ class IndexView extends PureComponent {
       <div className="page page-index">
         <div className="desc">
           <p className="title">Recharts</p>
-          <p className="subtitle">{localeGet(locale, 'home', 'solgan')}</p>
+          <p className="subtitle">{localeGet(locale, 'home', 'slogan')}</p>
           <p>
             <Link to={`/${locale}/guide/installation`} className="button install-btn">
               <i className="icon-energy" />

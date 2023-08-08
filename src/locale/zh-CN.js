@@ -6,7 +6,7 @@ const map = {
     empty: 'Empty',
   },
   home: {
-    solgan: '基于 React 的组合式图表',
+    slogan: '基于 React 的组合式图表',
     install: '安装',
     composable: '组合',
     composableContent: '用解耦的、可重用的 React 组件快速构建你的图表。',
