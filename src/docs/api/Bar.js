@@ -158,6 +158,29 @@ export default {
       ],
     },
     {
+      name: 'activeBar',
+      type: 'Boolean | Object | ReactElement | Function',
+      defaultVal: 'true',
+      isOptional: true,
+      desc: {
+        'en-US':
+          'The active bar is shown when a user enters a bar chart and this chart has tooltip. If set to false, no active bar will be drawn. If set to true, active bar will be drawn with the props calculated internally. If passed an object, active bar will be drawn, and the internally calculated props will be merged with the key value pairs of the passed object. If passed a ReactElement, the option can be the custom active bar element. If passed a function, the function will be called to render a customized active bar.',
+        'zh-CN': '当用户输入柱形图且该图表有工具提示时，将显示活动柱形图。如果设置为 false，则不会绘制活动条形图。如果设置为 true，将使用内部计算的道具绘制活动条形图。如果传递的是一个对象，则将绘制活动条形图，并将内部计算的道具与传递对象的键值对合并。如果传递的是 ReactElement，该选项可以是自定义的活动条元素。如果传递的是函数，则将调用该函数来渲染自定义的活动条。'
+      },
+      format: [
+        '<Bar dataKey="value" activeBar={false} />',
+        '<Bar dataKey="value" activeBar={{ stroke: \'red\', strokeWidth: 2 }} />',
+        '<Bar dataKey="value" activeBar={<CustomizedBar />} />',
+        '<Bar dataKey="value" activeBar={renderBar} />'
+      ],
+      examples: [
+        {
+          name: 'A bar chart with active bar',
+          url: '/examples/SimpleBarChart',
+        },
+      ],
+    },
+    {
       name: 'stackId',
       type: 'String | Number',
       defaultVal: 'undefined',
