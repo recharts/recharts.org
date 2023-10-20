@@ -45,9 +45,23 @@ export default {
     },
     {
       name: 'activeShape',
-      type: 'Object | ReactElement | Function',
-      defaultVal: 'true',
-      isOptional: false,
+      type: 'Object | ReactElement | Function | boolean',
+      defaultVal: 'undefined',
+      isOptional: true,
+      desc: {
+        'en-US': "The customized shape to be rendered if shape is active via Tooltip, or active index prop is set.",
+        'zh-CN': '如果形状通过工具提示处于活动状态，或设置了活动索引道具，则将渲染自定义形状。',
+      },
+    },
+    {
+      name: 'shape',
+      type: 'Object | ReactElement | Function | boolean',
+      defaultVal: 'undefined',
+      isOptional: true,
+      desc: {
+        'en-US': "The customized shape to be rendered.",
+        'zh-CN': '要渲染的自定义形状。',
+      },
     },
     {
       name: 'trapezoids',
