@@ -6,7 +6,6 @@ import { getLocaleType, localeGet } from '../utils/LocaleUtils';
 import './IndexView.scss';
 import 'simple-line-icons/scss/simple-line-icons.scss';
 import users from '../docs/users/users';
-import rechartsPackageJson from 'recharts/package.json';
 
 const data = [
   {
@@ -69,8 +68,9 @@ class IndexView extends PureComponent {
           <p>
             <Link to={`/${locale}/guide/installation`} className="button install-btn">
               <i className="icon-energy" />
+              &nbsp;
               {localeGet(locale, 'home', 'install')}
-              &nbsp;v{rechartsPackageJson.version}
+              {process.env.RECHARTS_LATEST_VERSION ? ` v${process.env.RECHARTS_LATEST_VERSION}` : undefined}
             </Link>
           </p>
           <iframe
