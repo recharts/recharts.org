@@ -4,3 +4,7 @@ Thumbs.db
 node_modules
 build/
 public/examples
+/docs/
+!/docs/index.html
+!/docs/404.html
+!/docs/CNAME
