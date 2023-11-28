@@ -77,7 +77,10 @@ module.exports = {
   },
   plugins: [
     new webpack.DefinePlugin({
-      'process.env.NODE_ENV': JSON.stringify('production'),
+      'process.env': {
+        NODE_ENV: JSON.stringify('production'),
+        RECHARTS_LATEST_VERSION: JSON.stringify(process.env.RECHARTS_LATEST_VERSION),
+      },
       __DEV__: false,
       __DEVTOOLS__: false,
     }),
