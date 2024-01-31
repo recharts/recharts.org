@@ -82,6 +82,9 @@ module.exports = {
   },
   plugins: [
     new webpack.DefinePlugin({
+      'process.env': {
+        RECHARTS_LATEST_VERSION: JSON.stringify(process.env.RECHARTS_LATEST_VERSION),
+      },
       __DEV__: true,
       __DEVTOOLS__: true,
     }),

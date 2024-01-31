@@ -103,13 +103,13 @@ export default {
     },
     {
       name: 'minPointSize',
-      type: 'Number',
+      type: 'Number | Function',
       defaultVal: 0,
       isOptional: false,
       desc: {
         'en-US': `The minimal height of a bar in a horizontal BarChart, or the minimal width of a bar in a vertical BarChart.
         By default, 0 values are not shown. To visualize a 0 (or close to zero) point, set the minimal point size to a pixel
-        value like 3. In stacked bar charts, minPointSize might not be respected for tightly packed values. So we strongly recommend not using this props in stacked BarChart.`,
+        value like 3. In stacked bar charts, minPointSize might not be respected for tightly packed values. So we strongly recommend not using this props in stacked BarChart. You may provide a function to conditionally change this prop based on Bar value.`,
         'zh-CN':
           '当柱图的 layout 是 "horizontal" 时，表示柱子的最小高度。当柱图的 layout 是 "vertical" 时，表示柱子的最小高度。默认情况下，如果数值为 0，那么相应的柱条的高度（宽度）也会为0，为了让这种高度（宽度）为0或者高度（宽度）非常小的柱条能够展示更加明显，我们会设置一个最小高度（宽度），比如说 3。在堆积柱图中，不推荐设置这个值。',
       },
@@ -165,13 +165,14 @@ export default {
       desc: {
         'en-US':
           'The active bar is shown when a user enters a bar chart and this chart has tooltip. If set to false, no active bar will be drawn. If set to true, active bar will be drawn with the props calculated internally. If passed an object, active bar will be drawn, and the internally calculated props will be merged with the key value pairs of the passed object. If passed a ReactElement, the option can be the custom active bar element. If passed a function, the function will be called to render a customized active bar.',
-        'zh-CN': '当用户输入柱形图且该图表有工具提示时，将显示活动柱形图。如果设置为 false，则不会绘制活动条形图。如果设置为 true，将使用内部计算的道具绘制活动条形图。如果传递的是一个对象，则将绘制活动条形图，并将内部计算的道具与传递对象的键值对合并。如果传递的是 ReactElement，该选项可以是自定义的活动条元素。如果传递的是函数，则将调用该函数来渲染自定义的活动条。'
+        'zh-CN':
+          '当用户输入柱形图且该图表有工具提示时，将显示活动柱形图。如果设置为 false，则不会绘制活动条形图。如果设置为 true，将使用内部计算的道具绘制活动条形图。如果传递的是一个对象，则将绘制活动条形图，并将内部计算的道具与传递对象的键值对合并。如果传递的是 ReactElement，该选项可以是自定义的活动条元素。如果传递的是函数，则将调用该函数来渲染自定义的活动条。',
       },
       format: [
         '<Bar dataKey="value" activeBar={false} />',
         '<Bar dataKey="value" activeBar={{ stroke: \'red\', strokeWidth: 2 }} />',
         '<Bar dataKey="value" activeBar={<CustomizedBar />} />',
-        '<Bar dataKey="value" activeBar={renderBar} />'
+        '<Bar dataKey="value" activeBar={renderBar} />',
       ],
       examples: [
         {
