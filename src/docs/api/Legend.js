@@ -44,17 +44,27 @@ export default {
       defaultVal: "'center'",
       isOptional: false,
       desc: {
-        'en-US': "The alignment of legend items in 'horizontal' direction, which can be 'left', 'center', 'right'.",
+        'en-US': `
+        'left' shows the Legend to the left of the chart, and chart width reduces automatically to make space for it.
+        'right' shows the Legend to the right of the chart, and chart width reduces automatically.
+        'center' shows the Legend in the middle of chart, and chart width remains unchanged.
+        The exact behavior changes depending on 'verticalAlign' prop.
+        `,
         'zh-CN': '水平方向的对齐方式。',
       },
     },
     {
       name: 'verticalAlign',
       type: "'top', 'middle', 'bottom'",
-      defaultVal: "'middle'",
+      defaultVal: "'bottom'",
       isOptional: false,
       desc: {
-        'en-US': "The alignment of legend items in 'vertical' direction, which can be 'top', 'middle', 'bottom'.",
+        'en-US': `
+        'bottom' shows the Legend below chart, and chart height reduces automatically to make space for it.
+        'top' shows the Legend above chart, and chart height reduces automatically.
+        'middle' shows the Legend in the middle of chart, covering other content, and chart height remains unchanged.
+        The exact behavior changes depending on 'align' prop.
+        `,
         'zh-CN': '垂直方向的对齐方式。',
       },
     },
