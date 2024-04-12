@@ -92,6 +92,9 @@ export default {
         'zh-CN':
           '当轴是数值轴时，指定轴的定义域（domain）的时候，如果 allowDataOverflow 的值为 false，我们会根据数据的最大值和最小值来调整 domain，确保所有的数据能够展示。如果 allowDataOverflow 的值为 true，不会调整 domain ，而是将相应的图形元素会直接裁剪掉。',
       },
+      format: [
+        '<XAxis type="number" domain={[0, 100]} allowDataOverflow />' 
+      ],
     },
     {
       name: 'allowDuplicatedCategory',
@@ -142,6 +145,7 @@ export default {
         "<XAxis type=\"number\" domain={['dataMin - 100', 'dataMax + 100']} />",
         '<XAxis type="number" domain={[dataMin => (0 - Math.abs(dataMin)), dataMax => (dataMax * 2)]} />',
         '<XAxis type="number" domain={([dataMin, dataMax]) => { const absMax = Math.max(Math.abs(dataMin), Math.abs(dataMax)); return [-absMax, absMax]; }} />',
+        '<XAxis type="number" domain={[0, 100]} allowDataOverflow />',
       ],
       examples: [
         {
