@@ -81,7 +81,7 @@ export default {
     },
     {
       name: 'barSize',
-      type: 'Number',
+      type: 'Number | Percentage',
       defaultVal: 'undefined',
       isOptional: true,
       desc: {

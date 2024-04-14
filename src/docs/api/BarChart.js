@@ -35,7 +35,7 @@ export default {
       isOptional: true,
       desc: {
         'en-US':
-          "When syncId is provided, allows customisation of how the charts will synchronize tooltips and brushes. Using 'index' (default setting), other charts will reuse current datum's index within the data array. In cases where data does not have the same length, this might yield unexpected results. In that case use 'value' which will try to match other charts values, or a fully custom function which will receive tick, data as argument and should return an index."
+          "When syncId is provided, allows customisation of how the charts will synchronize tooltips and brushes. Using 'index' (default setting), other charts will reuse current datum's index within the data array. In cases where data does not have the same length, this might yield unexpected results. In that case use 'value' which will try to match other charts values, or a fully custom function which will receive tick, data as argument and should return an index.",
       },
     },
     {
@@ -102,7 +102,7 @@ export default {
     },
     {
       name: 'barSize',
-      type: 'Number',
+      type: 'Number | Percentage',
       defaultVal: 'undefined',
       isOptional: true,
       desc: {
