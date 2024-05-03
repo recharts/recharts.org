@@ -50,7 +50,7 @@ const data = [
 const cardinal = curveCardinal.tension(0.2);
 
 export default class Example extends PureComponent {
-  static demoUrl = 'https://codesandbox.io/s/area-chart-different-shapes-z94k6';
+  static demoUrl = 'https://codesandbox.io/p/sandbox/area-chart-different-shapes-6lwnhy';
 
   render() {
     return (

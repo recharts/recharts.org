@@ -47,7 +47,7 @@ const data = [
 ];
 
 export default class Example extends PureComponent {
-  static demoUrl = 'https://codesandbox.io/s/tiny-area-chart-uw0k8';
+  static demoUrl = 'https://codesandbox.io/p/sandbox/tiny-area-chart-gq23nh';
 
   render() {
     return (

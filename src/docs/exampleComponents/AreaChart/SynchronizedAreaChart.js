@@ -47,7 +47,7 @@ const data = [
 ];
 
 export default class Example extends PureComponent {
-  static demoUrl = 'https://codesandbox.io/s/synchronized-area-chart-kpg1s';
+  static demoUrl = 'https://codesandbox.io/p/sandbox/synchronized-area-chart-9jj95d';
 
   render() {
     return (
