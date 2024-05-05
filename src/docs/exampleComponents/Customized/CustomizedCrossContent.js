@@ -108,6 +108,6 @@ const Example = () => {
   );
 };
 
-Example.demoUrl = 'https://codesandbox.io/s/customized-line-chart-y5kqvj';
+Example.demoUrl = 'https://codesandbox.io/p/sandbox/recharts-customized-cross-dsp3l5';
 
 export default Example;

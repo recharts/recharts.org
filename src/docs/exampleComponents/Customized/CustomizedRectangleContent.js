@@ -67,7 +67,7 @@ const CustomizedRectangle = (props) => {
   // render custom content using points from the graph
   return firstSeries?.props?.points.map((firstSeriesPoint, index) => {
     const secondSeriesPoint = secondSeries?.props?.points[index];
-    const yDifference = firstSeriesPoint.y - secondSeriesPoint.y
+    const yDifference = firstSeriesPoint.y - secondSeriesPoint.y;
 
     return (
       <Rectangle
@@ -78,8 +78,8 @@ const CustomizedRectangle = (props) => {
         y={secondSeriesPoint.y}
         fill={yDifference > 0 ? 'red' : yDifference < 0 ? 'green' : 'none'}
       />
-    )
-  })
+    );
+  });
 };
 
 const Example = () => {
@@ -109,6 +109,6 @@ const Example = () => {
   );
 };
 
-Example.demoUrl = 'https://codesandbox.io/s/customized-line-chart-cbd9ey';
+Example.demoUrl = 'https://codesandbox.io/p/sandbox/customized-line-chart-76fvmv';
 
 export default Example;
