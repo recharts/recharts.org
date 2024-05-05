@@ -54,7 +54,7 @@ const style = {
 };
 
 export default class Example extends PureComponent {
-  static demoUrl = 'https://codesandbox.io/s/simple-radial-bar-chart-qf8fz';
+  static demoUrl = 'https://codesandbox.io/p/sandbox/simple-radial-bar-chart-gnwjjg';
 
   render() {
     return (
