@@ -83,7 +83,7 @@ const CustomTooltip = ({ active, payload, label }) => {
 };
 
 export default class Example extends PureComponent {
-  static demoUrl = 'https://codesandbox.io/s/tooltip-with-customized-content-lyxvs';
+  static demoUrl = 'https://codesandbox.io/p/sandbox/tooltip-with-customized-content-vgl956';
 
   render() {
     return (
