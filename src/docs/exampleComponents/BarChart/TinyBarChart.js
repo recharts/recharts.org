@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+import { BarChart, Bar, ResponsiveContainer } from 'recharts';
 
 const data = [
   {
@@ -47,7 +47,7 @@ const data = [
 ];
 
 export default class Example extends PureComponent {
-  static demoUrl = 'https://codesandbox.io/s/tiny-bar-chart-35meb';
+  static demoUrl = 'https://codesandbox.io/p/sandbox/tiny-bar-chart-xzyy8g';
 
   render() {
     return (

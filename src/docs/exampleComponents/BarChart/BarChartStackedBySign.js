@@ -58,7 +58,7 @@ const data = [
 ];
 
 export default class Example extends PureComponent {
-  static demoUrl = 'https://codesandbox.io/s/bar-chart-stacked-by-sign-cbct8';
+  static demoUrl = 'https://codesandbox.io/p/sandbox/bar-chart-stacked-by-sign-k39xv3';
 
   render() {
     return (

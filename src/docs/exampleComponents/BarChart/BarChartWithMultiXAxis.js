@@ -104,7 +104,7 @@ const renderQuarterTick = (tickProps) => {
   return null;
 };
 export default class Example extends PureComponent {
-  static demoUrl = 'https://codesandbox.io/s/bar-chart-with-double-xaxis-dfug7';
+  static demoUrl = 'https://codesandbox.io/p/sandbox/bar-chart-with-double-xaxis-zly7wl';
 
   render() {
     return (

@@ -72,7 +72,7 @@ const renderCustomizedLabel = (props) => {
 };
 
 export default class Example extends PureComponent {
-  static demoUrl = 'https://codesandbox.io/s/bar-chart-with-min-height-3ilfq';
+  static demoUrl = 'https://codesandbox.io/p/sandbox/bar-chart-with-min-height-9nmfg9';
 
   render() {
     return (

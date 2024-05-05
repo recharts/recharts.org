@@ -47,7 +47,7 @@ const data = [
 ];
 
 export default class Example extends PureComponent {
-  static demoUrl = 'https://codesandbox.io/s/bar-chart-has-background-62zcd';
+  static demoUrl = 'https://codesandbox.io/p/sandbox/bar-chart-has-background-32n2fm';
 
   render() {
     return (
