@@ -41,7 +41,7 @@ const data = [
 ];
 
 export default class Example extends PureComponent {
-  static demoUrl = 'https://codesandbox.io/s/radar-chart-specified-domain-mfl04';
+  static demoUrl = 'https://codesandbox.io/p/sandbox/radar-chart-specified-domain-l68xry';
 
   render() {
     return (
