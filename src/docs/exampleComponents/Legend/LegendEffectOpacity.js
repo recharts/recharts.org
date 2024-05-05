@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react';
+import React from 'react';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 
 const data = [
@@ -46,62 +46,52 @@ const data = [
   },
 ];
 
-export default class Example extends PureComponent {
-  static demoUrl = 'https://codesandbox.io/s/customized-legend-event-l19fo';
+const Example = () => {
+  const [opacity, setOpacity] = React.useState({
+    uv: 1,
+    pv: 1,
+  });
 
-  state = {
-    opacity: {
-      uv: 1,
-      pv: 1,
-    },
-  };
-
-  handleMouseEnter = (o) => {
+  const handleMouseEnter = (o) => {
     const { dataKey } = o;
-    const { opacity } = this.state;
 
-    this.setState({
-      opacity: { ...opacity, [dataKey]: 0.5 },
-    });
+    setOpacity((op) => ({ ...op, [dataKey]: 0.5 }));
   };
 
-  handleMouseLeave = (o) => {
+  const handleMouseLeave = (o) => {
     const { dataKey } = o;
-    const { opacity } = this.state;
 
-    this.setState({
-      opacity: { ...opacity, [dataKey]: 1 },
-    });
+    setOpacity((op) => ({ ...op, [dataKey]: 1 }));
   };
 
-  render() {
-    const { opacity } = this.state;
+  return (
+    <div style={{ width: '100%' }}>
+      <ResponsiveContainer width="100%" height={300}>
+        <LineChart
+          width={500}
+          height={300}
+          data={data}
+          margin={{
+            top: 5,
+            right: 30,
+            left: 20,
+            bottom: 5,
+          }}
+        >
+          <CartesianGrid strokeDasharray="3 3" />
+          <XAxis dataKey="name" />
+          <YAxis />
+          <Tooltip />
+          <Legend onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} />
+          <Line type="monotone" dataKey="pv" strokeOpacity={opacity.pv} stroke="#8884d8" activeDot={{ r: 8 }} />
+          <Line type="monotone" dataKey="uv" strokeOpacity={opacity.uv} stroke="#82ca9d" />
+        </LineChart>
+      </ResponsiveContainer>
+      <p className="notes">Tips: Hover the legend !</p>
+    </div>
+  );
+};
 
-    return (
-      <div style={{ width: '100%' }}>
-        <ResponsiveContainer width="100%" height={300}>
-          <LineChart
-            width={500}
-            height={300}
-            data={data}
-            margin={{
-              top: 5,
-              right: 30,
-              left: 20,
-              bottom: 5,
-            }}
-          >
-            <CartesianGrid strokeDasharray="3 3" />
-            <XAxis dataKey="name" />
-            <YAxis />
-            <Tooltip />
-            <Legend onMouseEnter={this.handleMouseEnter} onMouseLeave={this.handleMouseLeave} />
-            <Line type="monotone" dataKey="pv" strokeOpacity={opacity.pv} stroke="#8884d8" activeDot={{ r: 8 }} />
-            <Line type="monotone" dataKey="uv" strokeOpacity={opacity.uv} stroke="#82ca9d" />
-          </LineChart>
-        </ResponsiveContainer>
-        <p className="notes">Tips: Hover the legend !</p>
-      </div>
-    );
-  }
-}
+Example.demoUrl = 'https://codesandbox.io/p/sandbox/customized-legend-event-gwscjg';
+
+export default Example;
