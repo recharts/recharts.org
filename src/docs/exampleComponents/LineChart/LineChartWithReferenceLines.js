@@ -57,7 +57,7 @@ const data = [
 ];
 
 export default class Example extends PureComponent {
-  static demoUrl = 'https://codesandbox.io/s/line-chart-width-reference-line-edjv0';
+  static demoUrl = 'https://codesandbox.io/p/sandbox/line-chart-width-reference-line-y6z3n5';
 
   render() {
     return (

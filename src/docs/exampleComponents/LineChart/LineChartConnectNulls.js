@@ -12,7 +12,7 @@ const data = [
 ];
 
 export default class Example extends PureComponent {
-  static demoUrl = 'https://codesandbox.io/s/line-chart-connect-nulls-sqp96';
+  static demoUrl = 'https://codesandbox.io/p/sandbox/line-chart-connect-nulls-mql3pj';
 
   render() {
     return (

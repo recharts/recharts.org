@@ -47,7 +47,7 @@ const data = [
 ];
 
 export default class Example extends PureComponent {
-  static demoUrl = 'https://codesandbox.io/s/line-chart-of-different-axis-intervals-er37wm';
+  static demoUrl = 'https://codesandbox.io/p/sandbox/line-chart-of-different-axis-intervals-d2kjmp';
 
   chart = (interval) => (
     <ResponsiveContainer height={250} width="100%">

@@ -65,7 +65,7 @@ const CustomizedDot = (props) => {
 };
 
 export default class Example extends PureComponent {
-  static demoUrl = 'https://codesandbox.io/s/line-chart-with-customized-dot-7on4t';
+  static demoUrl = 'https://codesandbox.io/p/sandbox/line-chart-with-customized-dot-7lwgnt';
 
   render() {
     return (

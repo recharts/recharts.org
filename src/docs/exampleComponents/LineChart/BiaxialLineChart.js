@@ -47,7 +47,7 @@ const data = [
 ];
 
 export default class Example extends PureComponent {
-  static demoUrl = 'https://codesandbox.io/s/line-chart-double-y-axes-4j73x';
+  static demoUrl = 'https://codesandbox.io/p/sandbox/line-chart-double-y-axes-2stmj2';
 
   render() {
     return (

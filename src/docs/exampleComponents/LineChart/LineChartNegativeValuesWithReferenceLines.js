@@ -52,7 +52,7 @@ const minX = Math.min(...data.map((d) => d.x));
 const minY = Math.min(...data.map((d) => d.y));
 
 export default class Example extends PureComponent {
-  static demoUrl = 'https://codesandbox.io/s/laughing-firefly-dfmkho?file=/src/Chart.tsx';
+  static demoUrl = 'https://codesandbox.io/p/sandbox/line-chart-negative-values-w-ref-lines-rwfwh7';
 
   render() {
     return (
@@ -99,32 +99,10 @@ export default class Example extends PureComponent {
             strokeWidth={minY < 0 ? 0 : 1}
           />
 
-          {minY < 0 && (
-            <ReferenceLine
-              y={0}
-              stroke="gray"
-              strokeWidth={1.5}
-              strokeOpacity={0.65}
-            />
-          )}
-          {minX < 0 && (
-            <ReferenceLine
-              x={0}
-              stroke="gray"
-              strokeWidth={1.5}
-              strokeOpacity={0.65}
-            />
-          )}
+          {minY < 0 && <ReferenceLine y={0} stroke="gray" strokeWidth={1.5} strokeOpacity={0.65} />}
+          {minX < 0 && <ReferenceLine x={0} stroke="gray" strokeWidth={1.5} strokeOpacity={0.65} />}
 
-          <Line
-            strokeWidth={2}
-            data={data}
-            dot={false}
-            type="monotone"
-            dataKey="y"
-            stroke="black"
-            tooltipType="none"
-          />
+          <Line strokeWidth={2} data={data} dot={false} type="monotone" dataKey="y" stroke="black" tooltipType="none" />
         </LineChart>
       </ResponsiveContainer>
     );

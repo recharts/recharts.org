@@ -47,7 +47,7 @@ const data = [
 ];
 
 export default class Example extends PureComponent {
-  static demoUrl = 'https://codesandbox.io/s/dashed-line-chart-dxwzg';
+  static demoUrl = 'https://codesandbox.io/p/sandbox/dashed-line-chart-9rttw2';
 
   render() {
     return (

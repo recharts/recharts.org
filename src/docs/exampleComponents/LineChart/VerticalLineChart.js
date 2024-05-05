@@ -47,7 +47,7 @@ const data = [
 ];
 
 export default class Example extends PureComponent {
-  static demoUrl = 'https://codesandbox.io/s/vertical-line-chart-lvvp9';
+  static demoUrl = 'https://codesandbox.io/p/sandbox/vertical-line-chart-j2qz2d';
 
   render() {
     return (

@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react';
+import React from 'react';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 
 const data = [
@@ -46,16 +46,14 @@ const data = [
   },
 ];
 
-export default class Example extends PureComponent {
-  static demoUrl = 'https://codesandbox.io/s/tiny-line-chart-r5z0f';
+const Example = () => {
+  return (
+    <ResponsiveContainer width="100%" height="100%">
+      <LineChart width={300} height={100} data={data}>
+        <Line type="monotone" dataKey="pv" stroke="#8884d8" strokeWidth={2} />
+      </LineChart>
+    </ResponsiveContainer>
+  );
+};
 
-  render() {
-    return (
-      <ResponsiveContainer width="100%" height="100%">
-        <LineChart width={300} height={100} data={data}>
-          <Line type="monotone" dataKey="pv" stroke="#8884d8" strokeWidth={2} />
-        </LineChart>
-      </ResponsiveContainer>
-    );
-  }
-}
+Example.demoUrl = 'https://codesandbox.io/p/sandbox/tiny-line-chart-5f5vq6';

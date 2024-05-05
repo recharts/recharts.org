@@ -29,7 +29,7 @@ const series = [
 ];
 
 export default class Example extends PureComponent {
-  static demoUrl = 'https://codesandbox.io/s/line-chart-width-multi-series-64tbt';
+  static demoUrl = 'https://codesandbox.io/p/sandbox/line-chart-width-multi-series-yyrhrj';
 
   render() {
     return (
