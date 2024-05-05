@@ -171,7 +171,7 @@ class CustomizedContent extends PureComponent {
 }
 
 export default class Example extends PureComponent {
-  static demoUrl = 'https://codesandbox.io/s/treemap-with-customized-content-7qxfp';
+  static demoUrl = 'https://codesandbox.io/p/sandbox/treemap-with-customized-content-hq44kp';
 
   render() {
     return (
