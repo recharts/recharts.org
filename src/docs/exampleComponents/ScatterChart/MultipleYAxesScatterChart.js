@@ -25,7 +25,7 @@ const data02 = [
 ];
 
 export default class Example extends PureComponent {
-  static demoUrl = 'https://codesandbox.io/s/scatter-chart-with-double-yaxes-tiuob';
+  static demoUrl = 'https://codesandbox.io/p/sandbox/scatter-chart-with-double-yaxes-3yzqtm';
 
   render() {
     return (

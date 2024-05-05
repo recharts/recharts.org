@@ -70,7 +70,7 @@ const parseDomain = () => [
 ];
 
 export default class Example extends PureComponent {
-  static demoUrl = 'https://codesandbox.io/s/multi-bubble-chart-gb82x';
+  static demoUrl = 'https://codesandbox.io/p/sandbox/multi-bubble-chart-tcqkqx';
 
   renderTooltip = (props) => {
     const { active, payload } = props;
