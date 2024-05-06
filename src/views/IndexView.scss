@@ -1,5 +1,5 @@
-@import 'variables';
-@import 'mixins';
+@import '../styles/variables';
+@import '../styles/mixins';
 
 .page-index {
   .block {
@@ -20,7 +20,8 @@
     margin: 0 auto;
     padding-top: 60px;
 
-    > p, > a {
+    > p,
+    > a {
       text-align: center;
     }
 

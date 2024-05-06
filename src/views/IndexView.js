@@ -70,7 +70,9 @@ class IndexView extends PureComponent {
               <i className="icon-energy" />
               &nbsp;
               {localeGet(locale, 'home', 'install')}
-              {process.env.RECHARTS_LATEST_VERSION ? ` v${process.env.RECHARTS_LATEST_VERSION}` : undefined}
+              {import.meta.env.VITE_RECHARTS_LATEST_VERSION
+                ? ` v${import.meta.env.VITE_RECHARTS_LATEST_VERSION}`
+                : undefined}
             </Link>
           </p>
           <iframe
