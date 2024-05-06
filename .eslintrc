@@ -62,7 +62,7 @@
     "import/no-extraneous-dependencies": [
       "error",
       {
-        "devDependencies": ["demo/**", "test/**", "*.config.js", "scripts/**", "**/Spec.js"]
+        "devDependencies": ["demo/**", "test/**", "*.config.js", "scripts/**", "**/Spec.js", "./vite.config.ts"]
       }
     ],
     "max-len": ["warn", 120],

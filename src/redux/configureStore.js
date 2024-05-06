@@ -8,7 +8,7 @@ export default function configureStore(initialState = {}, history) {
 
   const enhancers = [];
   // eslint-disable-next-line no-undef
-  if (__DEV__) {
+  if (import.meta.env.DEV) {
     const { devToolsExtension } = window;
     if (typeof devToolsExtension === 'function') {
       enhancers.push(devToolsExtension());
@@ -16,12 +16,6 @@ export default function configureStore(initialState = {}, history) {
   }
 
   const store = createStore(rootReducer, initialState, compose(applyMiddleware(...middleware), ...enhancers));
-
-  if (module.hot) {
-    module.hot.accept('./rootReducer', () => {
-      store.replaceReducer(rootReducer);
-    });
-  }
 
   return store;
 }

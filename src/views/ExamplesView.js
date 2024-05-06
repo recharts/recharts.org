@@ -5,11 +5,11 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import Helmet from 'react-helmet';
 import { Link } from 'react-router';
-import MonacoEditor from 'react-monaco-editor/lib';
 import { Runner } from 'react-runner';
 import * as ReactScope from 'react';
 import * as RechartsScope from 'recharts';
 import * as D3ShapeScope from 'd3-shape';
+import { Editor } from '@monaco-editor/react';
 import Examples from '../docs/exampleComponents';
 import { getLocaleType } from '../utils/LocaleUtils';
 import './ExampleView.scss';
@@ -56,6 +56,8 @@ class ExamplesView extends PureComponent {
     exampleCode: null,
     prevPage: null,
   };
+
+  editorRef = React.createRef(null);
 
   static getDerivedStateFromProps(nextProps, prevState) {
     if (nextProps.page !== prevState.prevPage) {
@@ -127,13 +129,10 @@ class ExamplesView extends PureComponent {
   };
 
   handleRunCode = () => {
-    if (this.editor) {
-      const newCode = this.editor.getValue();
-
+    if (this.editorRef.current)
       this.setState({
-        exampleCode: newCode,
+        exampleCode: this.editorRef.current.getValue(),
       });
-    }
   };
 
   renderMenuList(type, locale) {
@@ -177,21 +176,14 @@ class ExamplesView extends PureComponent {
           </span>
         </div>
         <div id="monaco-editor-container">
-          <MonacoEditor
-            ref={(el) => {
-              this.editor = el && el.editor;
-            }}
+          <Editor
             key={`editor-${exampleResult.exampleName}`}
             value={editorValue}
-            language="javascript"
-            lineNumbers
-            scrollBeyondLastLine
-            automaticLayout
-            renderLineHighlight="none"
-            readOnly={false}
-            theme="vs"
-            minimap={{ enabled: false }}
+            defaultLanguage="javascript"
             options={{ tabSize: 2 }}
+            onMount={(editor) => {
+              this.editorRef.current = editor;
+            }}
           />
         </div>
       </div>
@@ -204,7 +196,7 @@ class ExamplesView extends PureComponent {
       import: {
         react: ReactScope,
         recharts: RechartsScope,
-        ['d3-shape']: D3ShapeScope,
+        'd3-shape': D3ShapeScope,
       },
     };
 
