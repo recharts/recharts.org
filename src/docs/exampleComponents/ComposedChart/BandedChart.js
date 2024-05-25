@@ -43,7 +43,7 @@ const data = [
   },
 ];
   
-export function Example() {
+export default function Example() {
   const renderTooltipWithoutRange = ({ payload, content, ...rest }) => {
       const newPayload = payload.filter((x) => x.dataKey !== "a");
       return <Tooltip payload={newPayload} {...rest} />;
