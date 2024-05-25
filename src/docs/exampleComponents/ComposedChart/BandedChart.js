@@ -7,6 +7,8 @@ import {
   YAxis,
   CartesianGrid,
   Tooltip,
+  Legend,
+  DefaultLegendContent,
   ResponsiveContainer,
 } from 'recharts';
 
@@ -47,6 +49,11 @@ const data = [
         return <Tooltip payload={newPayload} {...rest} />;
     }
 
+    renderLegendWithoutRange = ({ payload, content, ...rest }) => {
+      const newPayload = payload.filter((x) => x.dataKey !== "a");
+      return <DefaultLegendContent payload={newPayload} {...rest} />;
+    }
+
     render() {
         return (
           <ResponsiveContainer width="100%" height="100%">
@@ -61,20 +68,21 @@ const data = [
                 bottom: 0,
             }}
             >
-            <CartesianGrid strokeDasharray="3 3" />
-            <XAxis dataKey="name" />
-            <YAxis />
-            <Tooltip content={this.renderTooltipWithoutRange} />
-            <Area
-                type="monotone"
-                dataKey="a"
-                stroke="none"
-                fill="#cccccc"
-                connectNulls
-                dot={false}
-                activeDot={false}
-            />
-            <Line type="natural" dataKey="b" stroke="#ff00ff" connectNulls />
+              <CartesianGrid strokeDasharray="3 3" />
+              <XAxis dataKey="name" />
+              <YAxis />
+              <Tooltip content={this.renderTooltipWithoutRange} />
+              <Area
+                  type="monotone"
+                  dataKey="a"
+                  stroke="none"
+                  fill="#cccccc"
+                  connectNulls
+                  dot={false}
+                  activeDot={false}
+              />
+              <Line type="natural" dataKey="b" stroke="#ff00ff" connectNulls />
+              <Legend content={this.renderLegendWithoutRange} />
             </ComposedChart>
           </ResponsiveContainer>
         );
