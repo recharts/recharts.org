@@ -8,6 +8,7 @@ export default {
       isOptional: true,
       desc: {
         'en-US': "The key of each sector's name.",
+        'zh-CN': '"name" 属性对应的 key 。',
       },
     },
     {
