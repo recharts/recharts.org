@@ -32,6 +32,16 @@ export default {
       },
     },
     {
+      name: 'nameKey',
+      type: 'String',
+      defaultVal: "'name'",
+      isOptional: false,
+      desc: {
+        'en-US': "The key of each sector's name.",
+        'zh-CN': '"name" 属性对应的 key 。',
+      },
+    },
+    {
       name: 'aspectRatio',
       type: 'Number',
       defaultVal: 'null',
