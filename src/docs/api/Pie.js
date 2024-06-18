@@ -264,6 +264,16 @@ export default {
       },
     },
     {
+      name: 'rootTabIndex',
+      type: "Number",
+      defaultVal: "0",
+      isOptional: true,
+      desc: {
+        'en-US': 'The tabindex of wrapper surrounding the cells.',
+        'zh-CN': 'soon',
+      },
+    },
+    {
       name: 'onAnimationStart',
       type: 'Function',
       isOptional: true,
