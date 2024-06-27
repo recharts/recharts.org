@@ -98,7 +98,7 @@ export default {
       },
     },
     {
-      name: 'orient',
+      name: 'orientation',
       type: 'String',
       defaultVal: 'outer',
       isOptional: false,
