@@ -76,7 +76,7 @@ export default {
     {
       name: 'data',
       type: 'Number',
-      defaultVal: '5',
+      defaultVal: 'null',
       isOptional: true,
       desc: {
         'en-US': 'The data input to the charts.',
@@ -86,7 +86,7 @@ export default {
     {
       name: 'clockWise',
       type: 'String',
-      defaultVal: '1.5',
+      defaultVal: 'false',
       isOptional: true,
       desc: {
         'en-US': 'The parameter to calculate the view box of label in radial charts.',
