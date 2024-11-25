@@ -70,8 +70,8 @@ export default {
       type: 'Function',
       isOptional: true,
       desc: {
-        'en-US': 'The customized event handler of moustenter on the polygon',
-        'zh-CN': '多边形 moustenter 事件的回调函数。',
+        'en-US': 'The customized event handler of mouseenter on the polygon',
+        'zh-CN': '多边形 mouseenter 事件的回调函数。',
       },
     },
     {

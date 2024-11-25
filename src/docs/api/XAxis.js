@@ -92,9 +92,7 @@ export default {
         'zh-CN':
           '当轴是数值轴时，指定轴的定义域（domain）的时候，如果 allowDataOverflow 的值为 false，我们会根据数据的最大值和最小值来调整 domain，确保所有的数据能够展示。如果 allowDataOverflow 的值为 true，不会调整 domain ，而是将相应的图形元素会直接裁剪掉。',
       },
-      format: [
-        '<XAxis type="number" domain={[0, 100]} allowDataOverflow />' 
-      ],
+      format: ['<XAxis type="number" domain={[0, 100]} allowDataOverflow />'],
     },
     {
       name: 'allowDuplicatedCategory',
@@ -157,17 +155,14 @@ export default {
     {
       name: 'includeHidden',
       type: 'Boolean',
-      defaultVal: "false",
+      defaultVal: 'false',
       isOptional: true,
       desc: {
         'en-US':
-          "Ensures that all datapoints within a chart contribute to its domain calculation, even when they are hidden",
-        'zh-CN':
-          '确保图表中的所有数据点都有助于其域计算，即使它们被隐藏时也是如此',
+          'Ensures that all datapoints within a chart contribute to its domain calculation, even when they are hidden',
+        'zh-CN': '确保图表中的所有数据点都有助于其域计算，即使它们被隐藏时也是如此',
       },
-      format: [
-        "<XAxis type=\"number\" includeHidden />",
-      ],
+      format: ['<XAxis type="number" includeHidden />'],
     },
     {
       name: 'interval',
@@ -444,8 +439,8 @@ const scale = scaleLog().base(Math.E);
       type: 'Function',
       isOptional: true,
       desc: {
-        'en-US': 'The customized event handler of moustenter on the ticks of this axis',
-        'zh-CN': '刻度 moustenter 事件的回调函数。',
+        'en-US': 'The customized event handler of mouseenter on the ticks of this axis',
+        'zh-CN': '刻度 mouseenter 事件的回调函数。',
       },
     },
     {

@@ -56,7 +56,8 @@ export default {
     },
     {
       name: 'legendType',
-      type: "'line' | 'plainline' | 'square' | 'rect'| 'circle' | 'cross' | 'diamond' | 'square' | 'star' | 'triangle' | 'wye' | 'none'",
+      type:
+        "'line' | 'plainline' | 'square' | 'rect'| 'circle' | 'cross' | 'diamond' | 'square' | 'star' | 'triangle' | 'wye' | 'none'",
       defaultVal: "'line'",
       isOptional: true,
       desc: {
@@ -71,7 +72,7 @@ export default {
       isOptional: false,
       desc: {
         'en-US':
-          'If false set, dots will not be drawn. If true set, dots will be drawn which have the props calculated internally. If object set, dots will be drawn which have the props mergered by the internal calculated props and the option. If ReactElement set, the option can be the custom dot element.If set a function, the function will be called to render customized dot.',
+          'If false set, dots will not be drawn. If true set, dots will be drawn which have the props calculated internally. If object set, dots will be drawn which have the props merged by the internal calculated props and the option. If ReactElement set, the option can be the custom dot element.If set a function, the function will be called to render customized dot.',
         'zh-CN':
           '曲线上的点，接收多种配置。当值为 false ，不渲染点。当值为 true ，点会继承 Line 的属性配置，例如配置了 Area 的 stroke 为 "red"， 点会继承这个属性。当值为一个对象的时候，会把这个对象解析为点的属性，来覆盖默认属性。当值是一个 React Element ，会克隆这个 React Element 来渲染“点”。当值是一个 函数 时，会调用这个函数去渲染自定义的“点”。',
       },
@@ -119,7 +120,7 @@ export default {
       isOptional: false,
       desc: {
         'en-US':
-          'If false set, labels will not be drawn. If true set, labels will be drawn which have the props calculated internally. If object set, labels will be drawn which have the props mergered by the internal calculated props and the option. If ReactElement set, the option can be the custom label element. If set a function, the function will be called to render customized label.',
+          'If false set, labels will not be drawn. If true set, labels will be drawn which have the props calculated internally. If object set, labels will be drawn which have the props merged by the internal calculated props and the option. If ReactElement set, the option can be the custom label element. If set a function, the function will be called to render customized label.',
         'zh-CN':
           '图形上的文本标签。当值为 false ，不展示文本标签。当值为 true，会根据 Line 的属性配置来展示文本标签。当值为一个对象的时候，会把这个对象解析为 文本标签 的属性，来覆盖默认属性。当值是一个 React Element ，会克隆这个 React Element 来渲染“文本标签”。当值是一个 函数 时，会调用这个函数去渲染自定义的“文本标签”。',
       },
@@ -363,8 +364,8 @@ export default {
       type: 'Function',
       isOptional: true,
       desc: {
-        'en-US': 'The customized event handler of moustenter on the area in this group',
-        'zh-CN': '曲线 moustenter 事件的回调函数。',
+        'en-US': 'The customized event handler of mouseenter on the area in this group',
+        'zh-CN': '曲线 mouseenter 事件的回调函数。',
       },
     },
     {

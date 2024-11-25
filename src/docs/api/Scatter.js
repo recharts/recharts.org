@@ -4,7 +4,7 @@ export default {
     {
       name: 'legendType',
       type:
-      "'line' | 'plainline' | 'square' | 'rect'| 'circle' | 'cross' | 'diamond' | 'square' | 'star' | 'triangle' | 'wye' | 'none'",
+        "'line' | 'plainline' | 'square' | 'rect'| 'circle' | 'cross' | 'diamond' | 'square' | 'star' | 'triangle' | 'wye' | 'none'",
       defaultVal: "'circle'",
       isOptional: true,
       desc: {
@@ -49,7 +49,7 @@ export default {
       isOptional: false,
       desc: {
         'en-US':
-          'If false set, line will not be drawn. If true set, line will be drawn which have the props calculated internally. If object set, line will be drawn which have the props mergered by the internal calculated props and the option. If ReactElement set, the option can be the custom line element. If set a function, the function will be called to render Customized line.',
+          'If false set, line will not be drawn. If true set, line will be drawn which have the props calculated internally. If object set, line will be drawn which have the props merged by the internal calculated props and the option. If ReactElement set, the option can be the custom line element. If set a function, the function will be called to render Customized line.',
         'zh-CN':
           '如果值为 false，不会渲染相应的曲线。当值为 true，会根据 Scatter 的属性配置来展示曲线。当值为一个对象的时候，会把这个对象解析为 曲线 的属性，来覆盖默认属性。当值是一个 React Element ，会克隆这个 React Element 来渲染“曲线”。当值是一个 函数 时，会调用这个函数去渲染自定义的“曲线”。',
       },
@@ -209,8 +209,8 @@ export default {
       type: 'Function',
       isOptional: true,
       desc: {
-        'en-US': 'The customized event handler of moustenter on the symbols in this group',
-        'zh-CN': '散点 moustenter 事件的回调函数。',
+        'en-US': 'The customized event handler of mouseenter on the symbols in this group',
+        'zh-CN': '散点 mouseenter 事件的回调函数。',
       },
     },
     {
