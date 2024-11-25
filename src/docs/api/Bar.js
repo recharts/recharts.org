@@ -59,7 +59,7 @@ export default {
       isOptional: false,
       desc: {
         'en-US':
-          'If false set, labels will not be drawn. If true set, labels will be drawn which have the props calculated internally. If object set, labels will be drawn which have the props mergered by the internal calculated props and the option. If ReactElement set, the option can be the custom label element. If set a function, the function will be called to render customized label.',
+          'If false set, labels will not be drawn. If true set, labels will be drawn which have the props calculated internally. If object set, labels will be drawn which have the props merged by the internal calculated props and the option. If ReactElement set, the option can be the custom label element. If set a function, the function will be called to render customized label.',
         'zh-CN':
           '图形上的文本标签。当值为 false ，不展示文本标签。当值为 true，会根据 Bar 的属性配置来展示文本标签。当值为一个对象的时候，会把这个对象解析为 文本标签 的属性，来覆盖默认属性。当值是一个 React Element ，会克隆这个 React Element 来渲染“文本标签”。当值是一个 函数 时，会调用这个函数去渲染自定义的“文本标签”。',
       },
@@ -70,23 +70,13 @@ export default {
       ],
     },
     {
-      name: 'data',
-      type: 'Array',
-      defaultVal: 'undefined',
-      isOptional: false,
-      desc: {
-        'en-US': 'The position information of all the rectangles, usually calculated internally.',
-        'zh-CN': '描述所有柱条的坐标、尺寸数据。',
-      },
-    },
-    {
       name: 'barSize',
       type: 'Number | Percentage',
       defaultVal: 'undefined',
       isOptional: true,
       desc: {
         'en-US':
-          'The width or height of each bar. If the barSize is not specified, the size of bar will be caculated by the barCategoryGap, barGap and the quantity of bar groups.',
+          'The width or height of each bar. If the barSize is not specified, the size of bar will be calculated by the barCategoryGap, barGap and the quantity of bar groups.',
         'zh-CN':
           '柱条的宽度。如果指定这个值，会根据 barCategoryGap 和 barGap 来计算柱条的宽度，每组柱条的宽度是一样的。',
       },
@@ -127,7 +117,7 @@ export default {
       isOptional: false,
       desc: {
         'en-US':
-          'If false set, background of bars will not be drawn. If true set, background of bars will be drawn which have the props calculated internally. If object set, background of bars will be drawn which have the props mergered by the internal calculated props and the option. If ReactElement set, the option can be the custom background element. If set a function, the function will be called to render customized background.',
+          'If false set, background of bars will not be drawn. If true set, background of bars will be drawn which have the props calculated internally. If object set, background of bars will be drawn which have the props merged by the internal calculated props and the option. If ReactElement set, the option can be the custom background element. If set a function, the function will be called to render customized background.',
         'zh-CN':
           '是否显示背景柱条。当值为 false ，不展示背景柱条。当值为 true，会根据 RadialBar 的属性配置来展示背景柱条。当值为一个对象的时候，会把这个对象解析为 背景柱条 的属性，来覆盖默认属性。当值是一个 React Element ，会克隆这个 React Element 来渲染“背景柱条”。当值是一个 函数 时，会调用这个函数去渲染自定义的“背景柱条”。',
       },
@@ -367,7 +357,7 @@ export default {
       isOptional: true,
       desc: {
         'en-US': 'The customized event handler of mouseenter on the bars in this group',
-        'zh-CN': '柱条 moustenter 事件的回调函数。',
+        'zh-CN': '柱条 mouseenter 事件的回调函数。',
       },
     },
     {

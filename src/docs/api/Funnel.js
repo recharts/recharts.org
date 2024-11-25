@@ -35,7 +35,7 @@ export default {
     {
       name: 'legendType',
       type:
-      "'line' | 'plainline' | 'square' | 'rect'| 'circle' | 'cross' | 'diamond' | 'square' | 'star' | 'triangle' | 'wye' | 'none'",
+        "'line' | 'plainline' | 'square' | 'rect'| 'circle' | 'cross' | 'diamond' | 'square' | 'star' | 'triangle' | 'wye' | 'none'",
       defaultVal: "'line'",
       isOptional: true,
       desc: {
@@ -49,7 +49,7 @@ export default {
       defaultVal: 'undefined',
       isOptional: true,
       desc: {
-        'en-US': "The customized shape to be rendered if shape is active via Tooltip, or active index prop is set.",
+        'en-US': 'The customized shape to be rendered if shape is active via Tooltip, or active index prop is set.',
         'zh-CN': '如果形状通过工具提示处于活动状态，或设置了活动索引道具，则将渲染自定义形状。',
       },
     },
@@ -59,7 +59,7 @@ export default {
       defaultVal: 'undefined',
       isOptional: true,
       desc: {
-        'en-US': "The customized shape to be rendered.",
+        'en-US': 'The customized shape to be rendered.',
         'zh-CN': '要渲染的自定义形状。',
       },
     },
@@ -208,8 +208,8 @@ export default {
       type: 'Function',
       isOptional: true,
       desc: {
-        'en-US': 'The customized event handler of moustenter on the area in this group',
-        'zh-CN': '曲线 moustenter 事件的回调函数。',
+        'en-US': 'The customized event handler of mouseenter on the area in this group',
+        'zh-CN': '曲线 mouseenter 事件的回调函数。',
       },
     },
     {

@@ -140,8 +140,8 @@ export default {
       type: 'Function',
       isOptional: true,
       desc: {
-        'en-US': 'The customized event handler of moustenter on the sector',
-        'zh-CN': '楔子 moustenter 事件的回调函数。',
+        'en-US': 'The customized event handler of mouseenter on the sector',
+        'zh-CN': '楔子 mouseenter 事件的回调函数。',
       },
     },
     {
