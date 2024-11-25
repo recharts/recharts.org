@@ -70,6 +70,17 @@ export default {
       ],
     },
     {
+      name: 'data',
+      type: 'Array',
+      defaultVal: 'undefined',
+      isOptional: false,
+      desc: {
+        'en-US':
+          'The position information of all the rectangles, usually calculated internally. Will only take effect if `data` is also present on `BarChart`.',
+        'zh-CN': '描述所有柱条的坐标、尺寸数据。',
+      },
+    },
+    {
       name: 'barSize',
       type: 'Number | Percentage',
       defaultVal: 'undefined',
