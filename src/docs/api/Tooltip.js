@@ -183,7 +183,8 @@ export default {
       defaultVal: '[]',
       isOptional: false,
       desc: {
-        'en-US': 'The source data of the content to be displayed in the tooltip, usually calculated internally.',
+        'en-US':
+          'The source data of the content to be displayed in the tooltip, always calculated internally and cannot be user set.',
         'zh-CN': 'Tooltip 展示内容的源数据，通常是图表内部计算的。',
       },
       format: ["[{ name: '05-01', value: 12, unit: 'kg' }]"],
