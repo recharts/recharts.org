@@ -35,7 +35,7 @@ export default {
       isOptional: true,
       desc: {
         'en-US':
-          "When syncId is provided, allows customisation of how the charts will synchronize tooltips and brushes. Using 'index' (default setting), other charts will reuse current datum's index within the data array. In cases where data does not have the same length, this might yield unexpected results. In that case use 'value' which will try to match other charts values, or a fully custom function which will receive tick, data as argument and should return an index."
+          "When syncId is provided, allows customization of how the charts will synchronize tooltips and brushes. Using 'index' (default setting), other charts will reuse current datum's index within the data array. In cases where data does not have the same length, this might yield unexpected results. In that case use 'value' which will try to match other charts values, or a fully custom function which will receive tick, data as argument and should return an index.",
       },
     },
     {
@@ -114,6 +114,22 @@ export default {
       desc: {
         'en-US': 'The customized event handler of mouseleave in this chart.',
         'zh-CN': '鼠标在图表图形区域 mouseleave 事件的回调函数。',
+      },
+    },
+    {
+      name: 'onDoubleClick',
+      type: 'Function',
+      isOptional: true,
+      desc: {
+        'en-US': 'The customized event handler of dblclick in this chart.',
+      },
+    },
+    {
+      name: 'onContextMenu',
+      type: 'Function',
+      isOptional: true,
+      desc: {
+        'en-US': 'The customized event handler of contextmenu in this chart.',
       },
     },
   ],

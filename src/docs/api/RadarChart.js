@@ -30,7 +30,10 @@ export default {
         'en-US': 'The source data, in which each element is an object.',
         'zh-CN': '输入数据，现在支持的类型是对象数组。',
       },
-      format: ["[{ 'subject': 'a', 'key': 120, 'fullMark': 150 }]", "[{ 'subject': 'a', 'key': 100, 'secondKey': 50, 'fullMark': 150 }]"],
+      format: [
+        "[{ 'subject': 'a', 'key': 120, 'fullMark': 150 }]",
+        "[{ 'subject': 'a', 'key': 100, 'secondKey': 50, 'fullMark': 150 }]",
+      ],
     },
     {
       name: 'cx',
@@ -150,6 +153,22 @@ export default {
       desc: {
         'en-US': "The function will be called when click the 'Radar'.",
         'zh-CN': '雷达图 click 事件的回调函数。',
+      },
+    },
+    {
+      name: 'onDoubleClick',
+      type: 'Function',
+      isOptional: true,
+      desc: {
+        'en-US': 'The customized event handler of dblclick in this chart.',
+      },
+    },
+    {
+      name: 'onContextMenu',
+      type: 'Function',
+      isOptional: true,
+      desc: {
+        'en-US': 'The customized event handler of contextmenu in this chart.',
       },
     },
   ],

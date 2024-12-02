@@ -78,6 +78,22 @@ export default {
         'zh-CN': '鼠标在图表图形区域 mouseleave 事件的回调函数。',
       },
     },
+    {
+      name: 'onDoubleClick',
+      type: 'Function',
+      isOptional: true,
+      desc: {
+        'en-US': 'The customized event handler of dblclick in this chart.',
+      },
+    },
+    {
+      name: 'onContextMenu',
+      type: 'Function',
+      isOptional: true,
+      desc: {
+        'en-US': 'The customized event handler of contextmenu in this chart.',
+      },
+    },
   ],
   parentComponents: ['ResponsiveContainer'],
   childrenComponents: ['Funnel', 'Legend', 'Tooltip', 'Customized', 'validate svg elements...'],

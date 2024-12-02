@@ -65,6 +65,22 @@ export default {
           '饼图每个楔子的 mouseleave 事件的回调函数，如果当子组件 Pie 上也绑定了同样的事件，子组件的事件回调函数才会被绑定。',
       },
     },
+    {
+      name: 'onDoubleClick',
+      type: 'Function',
+      isOptional: true,
+      desc: {
+        'en-US': 'The customized event handler of dblclick in this chart.',
+      },
+    },
+    {
+      name: 'onContextMenu',
+      type: 'Function',
+      isOptional: true,
+      desc: {
+        'en-US': 'The customized event handler of contextmenu in this chart.',
+      },
+    },
   ],
   parentComponents: ['ResponsiveContainer'],
   childrenComponents: [
