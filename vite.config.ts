@@ -27,7 +27,7 @@ export default defineConfig({
     outDir: path.resolve(__dirname, 'docs'),
   },
   esbuild: {
-    include: /\.[jt]sx?$/,
+    include: /\.[jt]s[x]?$/,
     exclude: [],
     loader: 'jsx',
   },

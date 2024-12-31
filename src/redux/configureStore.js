@@ -1,10 +1,9 @@
 import { applyMiddleware, compose, createStore } from 'redux';
-import thunk from 'redux-thunk';
 import { routerMiddleware } from 'react-router-redux';
 import rootReducer from './rootReducer';
 
 export default function configureStore(initialState = {}, history) {
-  const middleware = [thunk, routerMiddleware(history)];
+  const middleware = [routerMiddleware(history)];
 
   const enhancers = [];
   // eslint-disable-next-line no-undef
