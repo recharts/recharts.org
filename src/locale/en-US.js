@@ -85,7 +85,7 @@ const map = {
       So you can change the attributes of each chart element conveniently.`,
     'step-5-title': '5. The style of tooltip, legend can be customized',
     'step-5-desc': `Though tooltip, legend are drawn by svg elements, you may change the style of tooltip,
-      legend by the apis wo offer. of cource, you can change the style in css too.`,
+      legend by the apis we offer. of cource, you can change the style in css too.`,
   },
   api: {
     charts: 'Charts',
