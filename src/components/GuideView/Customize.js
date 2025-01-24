@@ -46,6 +46,13 @@ const data = [
   },
 ];
 
+const margin = {
+  top: 20,
+  right: 30,
+  left: 20,
+  bottom: 5,
+};
+
 function Customize({ locale }) {
   return (
     <div className="mod-customize" id="Customize">
@@ -94,7 +101,7 @@ const renderCustomBarLabel = ({ payload, x, y, width, height, value }) => {
 );`}
         </Highlight>
 
-        <BarChart width={600} height={300} data={data}>
+        <BarChart width={600} height={300} data={data} margin={margin}>
           <XAxis dataKey="name" tick={renderCustomAxisTick} />
           <YAxis />
           <Bar dataKey="uv" barSize={30} fill="#8884d8" label={renderCustomBarLabel} />
@@ -135,7 +142,7 @@ const TriangleBar = (props) => {
 );`}
         </Highlight>
 
-        <BarChart width={600} height={300} data={data}>
+        <BarChart width={600} height={300} data={data} margin={margin}>
           <XAxis dataKey="name" tick={renderCustomAxisTick} />
           <YAxis />
           <Bar dataKey="uv" fill="#8884d8" shape={<TriangleBar />} />
@@ -192,7 +199,7 @@ function CustomTooltip({ payload, label, active }) {
 );`}
         </Highlight>
 
-        <BarChart width={600} height={300} data={data}>
+        <BarChart width={600} height={300} data={data} margin={margin}>
           <XAxis dataKey="name" tick={renderCustomAxisTick} />
           <YAxis />
           <Tooltip content={<CustomTooltip />} />
@@ -218,7 +225,7 @@ const renderBarChart = (
 );`}
         </Highlight>
 
-        <BarChart width={600} height={300} data={data}>
+        <BarChart width={600} height={300} data={data} margin={margin}>
           <XAxis dataKey="name" stroke="red" />
           <YAxis stroke="red" />
           <Tooltip />
@@ -246,7 +253,7 @@ const renderBarChart = (
 );`}
         </Highlight>
 
-        <BarChart width={600} height={300} data={data}>
+        <BarChart width={600} height={300} data={data} margin={margin}>
           <XAxis dataKey="name" stroke="#8884d8" />
           <YAxis />
           <Tooltip wrapperStyle={{ width: 100, backgroundColor: '#ccc' }} />
