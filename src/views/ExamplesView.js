@@ -2,9 +2,8 @@
 /* eslint-disable jsx-a11y/interactive-supports-focus */
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
 import Helmet from 'react-helmet';
-import { Link } from 'react-router';
+import { Link, withRouter } from 'react-router-dom';
 import { Runner } from 'react-runner';
 import * as ReactScope from 'react';
 import * as RechartsScope from 'recharts';
@@ -37,19 +36,7 @@ const parseExampleComponent = (compName) => {
 
 const EXAMPLE_CODE_CACHE = {};
 
-@connect((state, ownProps) => {
-  const pathname = ownProps.location.pathname || '';
-  const paths = pathname.split('/');
-
-  return {
-    page: paths && paths.length === 4 ? paths[3] : 'SimpleLineChart',
-  };
-})
 class ExamplesView extends PureComponent {
-  static propTypes = {
-    page: PropTypes.string,
-  };
-
   state = {
     isLoading: null,
     hasError: null,
@@ -60,9 +47,11 @@ class ExamplesView extends PureComponent {
   editorRef = React.createRef(null);
 
   static getDerivedStateFromProps(nextProps, prevState) {
-    if (nextProps.page !== prevState.prevPage) {
+    const { match } = nextProps;
+    const page = match?.params?.name;
+    if (page !== prevState.prevPage) {
       return {
-        prevPage: nextProps.page,
+        prevPage: page,
       };
     }
 
@@ -70,7 +59,7 @@ class ExamplesView extends PureComponent {
   }
 
   componentDidMount() {
-    const { page } = this.props;
+    const page = this.getPage();
     const exampleResult = parseExampleComponent(page);
 
     if (exampleResult) {
@@ -79,11 +68,12 @@ class ExamplesView extends PureComponent {
   }
 
   componentDidUpdate(prevProps, prevState) {
-    const { prevPage } = this.state;
+    const page = this.getPage();
 
-    if (prevState.prevPage !== prevPage) {
+    if (prevState.prevPage !== page) {
       // page change
-      const exampleResult = parseExampleComponent(this.props.page);
+      const exampleResult = parseExampleComponent(page);
+      console.log(page);
 
       if (exampleResult) {
         this.fetchExampleCode(exampleResult.cateName, exampleResult.exampleName);
@@ -136,7 +126,7 @@ class ExamplesView extends PureComponent {
   };
 
   renderMenuList(type, locale) {
-    const { page } = this.props;
+    const page = this.getPage();
     const { examples } = Examples[type];
     const typeNameList = Object.keys(examples);
 
@@ -209,8 +199,15 @@ class ExamplesView extends PureComponent {
     );
   }
 
+  getPage() {
+    const { match } = this.props;
+    const page = match?.params?.name ?? 'SimpleLineChart';
+    return page;
+  }
+
   render() {
-    const { page } = this.props;
+    const page = this.getPage();
+
     const exampleResult = parseExampleComponent(page);
     const locale = getLocaleType(this.props);
 
@@ -255,4 +252,4 @@ class ExamplesView extends PureComponent {
   }
 }
 
-export default ExamplesView;
+export default withRouter(ExamplesView);

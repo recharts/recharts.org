@@ -1,23 +1,12 @@
 import React, { PureComponent } from 'react';
-import { connect } from 'react-redux';
-import { Link } from 'react-router';
+import { Link, withRouter } from 'react-router-dom';
 import { Installation, GettingStarted, Customize } from '../components/GuideView';
 import { getLocaleType, localeGet } from '../utils/LocaleUtils';
 
 const modules = ['installation', 'getting-started', 'customize'];
 
-@connect((state, ownProps) => {
-  const pathname = ownProps.location.pathname || '';
-  const paths = pathname.split('/');
-
-  return {
-    page: paths && paths.length === 4 ? paths[3] : modules[0],
-  };
-})
 class GuideView extends PureComponent {
-  renderGuide(locale) {
-    const { page } = this.props;
-
+  renderGuide(locale, page) {
     if (page === 'installation') {
       return <Installation locale={locale} />;
     }
@@ -31,7 +20,9 @@ class GuideView extends PureComponent {
   }
 
   render() {
-    const { page } = this.props;
+    const { match } = this.props;
+    const page = match?.params?.name ?? modules[0];
+
     const locale = getLocaleType(this.props);
 
     return (
@@ -50,10 +41,10 @@ class GuideView extends PureComponent {
             </ul>
           </div>
         </div>
-        <div className="content">{this.renderGuide(locale)}</div>
+        <div className="content">{this.renderGuide(locale, page)}</div>
       </div>
     );
   }
 }
 
-export default GuideView;
+export default withRouter(GuideView);

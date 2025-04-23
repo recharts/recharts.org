@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
-import { Link } from 'react-router';
+import { Link } from 'react-router-dom';
+import { withRouter } from 'react-router';
 import Helmet from 'react-helmet';
 import { getLocaleType, localeGet } from '../utils/LocaleUtils';
 import Affix from '../components/Affix';
@@ -14,12 +14,8 @@ const locales = [
   { locale: 'zh-CN', text: '中文' },
 ];
 
-@connect((state, ownProps) => ({
-  page: ownProps.location.pathname.split('/').filter((item) => !!item)[1] || 'index',
-}))
 class Frame extends Component {
   static propTypes = {
-    page: PropTypes.string,
     children: PropTypes.node,
   };
 
@@ -51,7 +47,8 @@ class Frame extends Component {
   }
 
   render() {
-    const { page, children } = this.props;
+    const { children, location } = this.props;
+    const page = location.pathname.split('/').filter((item) => !!item)[1] || 'index';
     const locale = getLocaleType(this.props);
 
     return (
@@ -105,4 +102,4 @@ class Frame extends Component {
   }
 }
 
-export default Frame;
+export default withRouter(Frame);

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Route, IndexRoute, Redirect, IndexRedirect } from 'react-router';
+import { Redirect, Route, Switch } from 'react-router-dom';
 import _ from 'lodash';
 import { IndexView, GuideView, APIView, ExamplesView, BlogView, Storybook } from '../views';
 import Frame from '../layouts/Frame';
@@ -28,14 +28,56 @@ const onEnter = (nextState, replace) => {
   }
 };
 
-export default (store) => (
-  <Route path="/" component={Frame} onEnter={onEnter}>
-    <IndexRedirect to="/en-US" />
-    <Route path="/*/guide(/:name)" component={GuideView} />
-    <Route path="/*/api(/:name)" component={APIView} />
-    <Route path="/*/examples(/:name)" component={ExamplesView} />
-    <Route path="/*/blog" component={BlogView} />
-    <Route path="/*/storybook" component={Storybook} />
-    <Route path="*" component={IndexView} />
-  </Route>
+export default () => (
+  <Switch>
+    <Route path="/" exact render={() => <Redirect to="/en-US" />} />
+    <Route
+      path="/*/guide/:name?"
+      render={() => (
+        <Frame>
+          <GuideView />
+        </Frame>
+      )}
+    />
+    <Route
+      path="/*/api/:name?"
+      render={() => (
+        <Frame>
+          <APIView />
+        </Frame>
+      )}
+    />
+    <Route
+      path="/*/examples/:name?"
+      render={() => (
+        <Frame>
+          <ExamplesView />
+        </Frame>
+      )}
+    />
+    <Route
+      path="/*/blog"
+      render={() => (
+        <Frame>
+          <BlogView />
+        </Frame>
+      )}
+    />
+    <Route
+      path="/*/storybook"
+      render={() => (
+        <Frame>
+          <Storybook />
+        </Frame>
+      )}
+    />
+    <Route
+      path="*"
+      render={() => (
+        <Frame>
+          <IndexView />
+        </Frame>
+      )}
+    />
+  </Switch>
 );

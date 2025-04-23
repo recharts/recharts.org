@@ -2,8 +2,7 @@
 import React, { PureComponent } from 'react';
 import _ from 'lodash';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router';
-import { connect } from 'react-redux';
+import { Link, withRouter } from 'react-router-dom';
 import Helmet from 'react-helmet';
 import API from '../docs/api';
 import APIExamples from '../docs/apiExamples';
@@ -13,26 +12,13 @@ import { getLocaleType, localeGet, parseLocalObj } from '../utils/LocaleUtils';
 import apiCates, { NEW_APIS } from '../docs/apiCates';
 import './APIView.scss';
 
-@connect((state, ownProps) => {
-  const pathname = ownProps.location.pathname || '';
-  const paths = pathname.split('/');
-
-  return {
-    page: paths && paths.length === 4 ? paths[3] : 'AreaChart',
-  };
-})
 class APIView extends PureComponent {
-  static propTypes = {
-    page: PropTypes.string,
-  };
-
   state = {
     indexesPage: '',
     activeDataCodeIndexes: [],
   };
 
-  handleSwitchDataCode = (index, e) => {
-    const { page } = this.props;
+  handleSwitchDataCode = (index, page, e) => {
     const { activeDataCodeIndexes, indexesPage } = this.state;
     const indexes = page === indexesPage ? activeDataCodeIndexes : [];
     const i = indexes.indexOf(index);
@@ -50,12 +36,11 @@ class APIView extends PureComponent {
     }
   };
 
-  renderExamples(examples, locale) {
+  renderExamples(examples, locale, page) {
     if (!examples || !examples.length) {
       return null;
     }
 
-    const { page } = this.props;
     const { activeDataCodeIndexes, indexesPage } = this.state;
 
     return (
@@ -73,8 +58,8 @@ class APIView extends PureComponent {
                       <button
                         type="button"
                         className="view-data-button"
-                        onClick={this.handleSwitchDataCode.bind(this, i)}
-                        onKeyPress={this.handleSwitchDataCode.bind(this, i)}
+                        onClick={this.handleSwitchDataCode.bind(this, i, page)}
+                        onKeyPress={this.handleSwitchDataCode.bind(this, i, page)}
                       >
                         {localeGet(locale, 'api', isDataCodeActive ? 'hideData' : 'showData')}
                       </button>
@@ -198,7 +183,9 @@ class APIView extends PureComponent {
   }
 
   render() {
-    const { page } = this.props;
+    const { match } = this.props;
+    const page = match?.params?.name ?? 'AreaChart';
+
     const api = API[page];
     const apiExamples = APIExamples[page];
     const locale = getLocaleType(this.props);
@@ -226,7 +213,7 @@ class APIView extends PureComponent {
         <div className="content">
           <h3 className="page-title">{page}</h3>
           {api.desc && <p className="survey">{parseLocalObj(locale, api.desc)}</p>}
-          {this.renderExamples(apiExamples, locale)}
+          {this.renderExamples(apiExamples, locale, page)}
 
           {api.parentComponents && api.parentComponents.length ? this.renderParent(api.parentComponents, locale) : null}
           {api.childrenComponents && api.childrenComponents.length
@@ -241,4 +228,4 @@ class APIView extends PureComponent {
   }
 }
 
-export default APIView;
+export default withRouter(APIView);
