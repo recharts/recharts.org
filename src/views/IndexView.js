@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid } from 'recharts';
 import Highlight from '../utils/Highlight';
 import { getLocaleType, localeGet } from '../utils/LocaleUtils';
@@ -167,4 +167,4 @@ class IndexView extends PureComponent {
   }
 }
 
-export default IndexView;
+export default withRouter(IndexView);
