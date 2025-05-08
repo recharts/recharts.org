@@ -1,5 +1,5 @@
 export default {
-  name: 'Customized',
+  name: 'Customized - Deprecated, to be removed in 3.0',
   desc: {
     'en-US': '',
     'zh-CN': '',
