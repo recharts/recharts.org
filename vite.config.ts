@@ -4,8 +4,12 @@ import viteTsconfigPaths from 'vite-tsconfig-paths';
 import * as path from 'path';
 
 export default defineConfig({
-  // depending on your application, base can also be "/"
-  base: '/',
+  /*
+   * Base must be relative because usually the app runs from a root of the domain
+   * but sometimes it's deployed to a subdirectory, e.g. for pull request reviews,
+   * or when forking the repo.
+   */
+  base: './',
   plugins: [
     react({
       babel: {
