@@ -1,6 +1,6 @@
 {
   "name": "recharts.org",
-  "version": "0.0.1",
+  "version": "3.0.0",
   "description": "the website of recharts",
   "private": true,
   "scripts": {
@@ -23,6 +23,7 @@
     "@babel/preset-env": "^7.12.11",
     "@babel/preset-react": "^7.12.10",
     "@vitejs/plugin-react": "^4.3.4",
+    "babel-eslint": "^10.1.0",
     "eslint": "^7.18.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-config-prettier": "6.12.0",
