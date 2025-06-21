@@ -1,10 +1,11 @@
 import { Redirect, Route, Switch } from 'react-router-dom';
 import { IndexView, GuideView, APIView, ExamplesView, BlogView, Storybook } from '../views';
 import Frame from '../layouts/Frame';
+import { defaultLocale } from '../utils/LocaleUtils';
 
 export default () => (
   <Switch>
-    <Route path="/" exact render={() => <Redirect to="/en-US" />} />
+    <Route path="/" exact render={() => <Redirect to={`/${defaultLocale}`} />} />
     <Route
       path="/*/guide/:name?"
       render={() => (

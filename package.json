@@ -11,7 +11,8 @@
     "autofix": "eslint src --fix",
     "lint": "eslint src",
     "prettier": "prettier --write src/**/*.js",
-    "check-types": "tsc --noEmit"
+    "check-types": "tsc --noEmit",
+    "test": "vitest run"
   },
   "repository": {
     "type": "git",
@@ -40,7 +41,8 @@
     "sass": "^1.56.2",
     "typescript": "^5.4.5",
     "vite": "^6.3.4",
-    "vite-tsconfig-paths": "^4.3.2"
+    "vite-tsconfig-paths": "^4.3.2",
+    "vitest": "^3.2.4"
   },
   "dependencies": {
     "@monaco-editor/react": "^4.7.0",
