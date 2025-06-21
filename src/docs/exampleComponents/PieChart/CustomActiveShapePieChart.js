@@ -57,22 +57,11 @@ const renderActiveShape = (props) => {
 export default class Example extends PureComponent {
   static demoUrl = 'https://codesandbox.io/s/pie-chart-with-customized-active-shape-y93si';
 
-  state = {
-    activeIndex: 0,
-  };
-
-  onPieEnter = (_, index) => {
-    this.setState({
-      activeIndex: index,
-    });
-  };
-
   render() {
     return (
       <ResponsiveContainer width="100%" height="100%">
         <PieChart width={400} height={400}>
           <Pie
-            activeIndex={this.state.activeIndex}
             activeShape={renderActiveShape}
             data={data}
             cx="50%"
@@ -81,7 +70,6 @@ export default class Example extends PureComponent {
             outerRadius={80}
             fill="#8884d8"
             dataKey="value"
-            onMouseEnter={this.onPieEnter}
           />
         </PieChart>
       </ResponsiveContainer>
