@@ -9,7 +9,7 @@
     "sync-examples-dev": "rm -rf public/examples/ && cp -r src/docs/exampleComponents/ public/examples/",
     "start": "npm run sync-examples-dev && vite",
     "autofix": "eslint src --fix",
-    "lint": "eslint src && prettier",
+    "lint": "eslint src",
     "prettier": "prettier --write src/**/*.js"
   },
   "repository": {

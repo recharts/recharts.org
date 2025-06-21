@@ -5,20 +5,20 @@ import { getLocaleType, localeGet } from '../utils/LocaleUtils';
 
 const modules = ['installation', 'getting-started', 'customize'];
 
-class GuideView extends PureComponent {
-  renderGuide(locale, page) {
-    if (page === 'installation') {
-      return <Installation locale={locale} />;
-    }
-    if (page === 'getting-started') {
-      return <GettingStarted locale={locale} />;
-    }
-    if (page === 'customize') {
-      return <Customize locale={locale} />;
-    }
-    return null;
+function renderGuide(locale, page) {
+  if (page === 'installation') {
+    return <Installation locale={locale} />;
   }
+  if (page === 'getting-started') {
+    return <GettingStarted locale={locale} />;
+  }
+  if (page === 'customize') {
+    return <Customize locale={locale} />;
+  }
+  return null;
+}
 
+class GuideView extends PureComponent {
   render() {
     const { match } = this.props;
     const page = match?.params?.name ?? modules[0];
@@ -41,7 +41,7 @@ class GuideView extends PureComponent {
             </ul>
           </div>
         </div>
-        <div className="content">{this.renderGuide(locale, page)}</div>
+        <div className="content">{renderGuide(locale, page)}</div>
       </div>
     );
   }

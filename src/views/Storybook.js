@@ -3,7 +3,13 @@ import './Storybook.scss';
 
 class Storybook extends PureComponent {
   render() {
-    return <iframe className="storybook" src="https://master--63da8268a0da9970db6992aa.chromatic.com/" />;
+    return (
+      <iframe
+        title="Recharts storybook"
+        className="storybook"
+        src="https://master--63da8268a0da9970db6992aa.chromatic.com/"
+      />
+    );
   }
 }
 
