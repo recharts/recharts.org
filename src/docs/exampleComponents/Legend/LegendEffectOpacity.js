@@ -47,22 +47,26 @@ const data = [
 ];
 
 const Example = () => {
-  const [opacity, setOpacity] = React.useState({
-    uv: 1,
-    pv: 1,
-  });
+  const [hoveringDataKey, setHoveringDataKey] = React.useState(null);
 
-  const handleMouseEnter = (o) => {
-    const { dataKey } = o;
+  let pvOpacity = 1;
+  let uvOpacity = 1;
 
-    setOpacity((op) => ({ ...op, [dataKey]: 0.5 }));
-  };
+  if (hoveringDataKey === 'uv') {
+    pvOpacity = 0.5;
+  }
 
-  const handleMouseLeave = (o) => {
-    const { dataKey } = o;
+  if (hoveringDataKey === 'pv') {
+    uvOpacity = 0.5;
+  }
 
-    setOpacity((op) => ({ ...op, [dataKey]: 1 }));
-  };
+  const handleMouseEnter = (payload/*: LegendPayload */) => {
+    setHoveringDataKey(payload.dataKey);
+  }
+
+  const handleMouseLeave = () => {
+    setHoveringDataKey(null);
+  }
 
   return (
     <div style={{ width: '100%' }}>
@@ -83,8 +87,8 @@ const Example = () => {
           <YAxis />
           <Tooltip />
           <Legend onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} />
-          <Line type="monotone" dataKey="pv" strokeOpacity={opacity.pv} stroke="#8884d8" activeDot={{ r: 8 }} />
-          <Line type="monotone" dataKey="uv" strokeOpacity={opacity.uv} stroke="#82ca9d" />
+          <Line type="monotone" dataKey="pv" strokeOpacity={pvOpacity} stroke="#8884d8" activeDot={{ r: 8 }} />
+          <Line type="monotone" dataKey="uv" strokeOpacity={uvOpacity} stroke="#82ca9d" />
         </LineChart>
       </ResponsiveContainer>
       <p className="notes">Tips: Hover the legend !</p>
