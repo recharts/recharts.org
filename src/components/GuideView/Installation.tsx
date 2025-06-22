@@ -1,8 +1,7 @@
-import React from 'react';
 import Highlight from '../../utils/Highlight';
 import { localeGet } from '../../utils/LocaleUtils';
 
-const Installation = ({ locale }) => (
+const Installation = ({ locale }: { locale: string }) => (
   <div className="mod-installation" id="Installation">
     <h3 className="page-title">{localeGet(locale, 'installation', 'installation')}</h3>
     <h4 className="sub-title">NPM</h4>
