@@ -71,5 +71,17 @@
     "scroll-behavior": "^0.9.12",
     "simple-line-icons": "^2.5.5"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "overrides": {
+    "@reduxjs/toolkit": {
+      ".": "^1.9.7",
+      "dependencies": {
+        "react": "17.0.1"
+      }
+    },
+    "react-redux": {
+      ".": "^8.1.3",
+      "react": "17.0.1"
+    }
+  }
 }
