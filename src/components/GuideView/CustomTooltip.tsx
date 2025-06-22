@@ -1,8 +1,6 @@
-import React from 'react';
-import PropTypes from 'prop-types';
 import './CustomTooltip.scss';
 
-function getIntroOfPage(label) {
+function getIntroOfPage(label: string): string {
   if (label === 'Page A') {
     return "Page A is about men's clothing";
   }
@@ -24,7 +22,13 @@ function getIntroOfPage(label) {
   return '';
 }
 
-function CustomTooltip({ payload, label, active }) {
+type CustomTooltipProps = {
+  payload: ReadonlyArray<{ value: number }>;
+  label: string;
+  active: boolean;
+};
+
+function CustomTooltip({ payload, label, active }: CustomTooltipProps) {
   if (active) {
     return (
       <div className="custom-tooltip">
@@ -37,11 +41,5 @@ function CustomTooltip({ payload, label, active }) {
 
   return null;
 }
-
-CustomTooltip.propTypes = {
-  active: PropTypes.bool,
-  payload: PropTypes.array,
-  label: PropTypes.string,
-};
 
 export default CustomTooltip;
