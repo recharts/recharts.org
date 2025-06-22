@@ -3,6 +3,10 @@ import { IndexView, GuideView, APIView, ExamplesView, BlogView, Storybook } from
 import Frame from '../layouts/Frame';
 import { defaultLocale } from '../utils/LocaleUtils';
 
+export type RouteParams = {
+  name?: string;
+}
+
 export default () => (
   <Switch>
     <Route path="/" exact render={() => <Redirect to={`/${defaultLocale}`} />} />
