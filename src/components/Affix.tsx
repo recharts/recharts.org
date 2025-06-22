@@ -1,22 +1,33 @@
 import * as React from 'react';
-import PropTypes from 'prop-types';
-import ReactDOM from 'react-dom';
 import _ from 'lodash';
+// @ts-ignore
 import Events from 'oui-dom-events';
+// @ts-ignore
 import DOMUtils from 'oui-dom-utils';
 import classnames from 'classnames';
 import './Affix.scss';
 
 const { PureComponent } = React;
 
-class Affix extends PureComponent {
-  static propTypes = {
-    prefixCls: PropTypes.string,
-    className: PropTypes.string,
-    children: PropTypes.node.isRequired,
-    offsetTop: PropTypes.number,
-  };
+interface AffixProps {
+  prefixCls?: string;
+  className?: string;
+  children: React.ReactNode;
+  offsetTop?: number;
+}
 
+interface AffixState {
+  affixStyle: React.CSSProperties | undefined;
+  placeholderStyle: React.CSSProperties | undefined;
+  id: string;
+  isFixed: boolean;
+}
+
+/*
+ * Affix component that allows an element to stick to the top of the viewport when scrolling.
+ * I feel like this component could be replaced with a more modern solution like `position: sticky;`
+ */
+class Affix extends PureComponent<AffixProps, AffixState> {
   static defaultProps = {
     prefixCls: 'rechartsOrg-affix',
     offsetTop: 0,
@@ -24,11 +35,13 @@ class Affix extends PureComponent {
 
   static displayName = 'Affix';
 
-  constructor(props) {
+  placeholderDom: HTMLDivElement | null = null;
+
+  constructor(props: AffixProps) {
     super(props);
     this.state = {
-      affixStyle: null,
-      placeholderStyle: null,
+      affixStyle: undefined,
+      placeholderStyle: undefined,
       id: _.uniqueId(props.prefixCls),
       isFixed: false,
     };
@@ -64,10 +77,11 @@ class Affix extends PureComponent {
 
     if (!affixNode) {
       this.setState({
-        affixStyle: null,
-        placeholderStyle: null,
+        affixStyle: undefined,
+        placeholderStyle: undefined,
         isFixed: false,
       });
+      return;
     }
 
     const { offsetWidth } = affixNode;
@@ -75,7 +89,7 @@ class Affix extends PureComponent {
     const { top, left } = DOMUtils.getOffset(affixNode);
     if (scrollTop > top) {
       // Fixed Top
-      const affixStyle = {
+      const affixStyle: React.CSSProperties = {
         position: 'fixed',
         top: offsetTop,
         left,
@@ -92,8 +106,8 @@ class Affix extends PureComponent {
       });
     } else {
       this.setState({
-        affixStyle: null,
-        placeholderStyle: null,
+        affixStyle: undefined,
+        placeholderStyle: undefined,
         isFixed: false,
       });
     }
