@@ -1,7 +1,6 @@
 /* eslint-disable camelcase */
 /* eslint-disable jsx-a11y/interactive-supports-focus */
-import React, { PureComponent } from 'react';
-import PropTypes from 'prop-types';
+import React, { PureComponent, ReactNode } from 'react';
 import Helmet from 'react-helmet';
 import { Link, withRouter } from 'react-router-dom';
 import { Runner } from 'react-runner';
@@ -9,16 +8,27 @@ import * as ReactScope from 'react';
 import * as RechartsScope from 'recharts';
 import * as D3ShapeScope from 'd3-shape';
 import { Editor } from '@monaco-editor/react';
+import { RouteComponentProps } from 'react-router';
 import Examples from '../docs/exampleComponents';
 import { getLocaleType } from '../utils/LocaleUtils';
 import './ExampleView.scss';
 import fetchFile from '../utils/fetchUtils';
 import 'simple-line-icons/scss/simple-line-icons.scss';
+import { RouteParams } from '../routes';
 
+// @ts-ignore
 const cates = Object.keys(Examples).sort((a, b) => Examples[a].order - Examples[b].order);
-const parseExampleComponent = (compName) => {
+
+type ExampleComponent = {
+  cateName: string;
+  exampleName: string;
+  exampleComponent: any;
+};
+
+const parseExampleComponent = (compName: string): ExampleComponent | null => {
   const typeList = Object.keys(Examples);
   const res = typeList.filter((key) => {
+    // @ts-ignore
     const entry = Examples[key];
 
     return !!entry.examples[compName];
@@ -28,25 +38,37 @@ const parseExampleComponent = (compName) => {
     return {
       cateName: res[0],
       exampleName: compName,
+      // @ts-ignore
       exampleComponent: Examples[res[0]].examples[compName],
     };
   }
   return null;
 };
 
-const EXAMPLE_CODE_CACHE = {};
+const EXAMPLE_CODE_CACHE: Record<string, string> = {};
 
-class ExamplesView extends PureComponent {
-  state = {
+type ExamplesViewProps = RouteComponentProps<RouteParams>;
+
+type ExamplesViewState = {
+  isLoading: boolean | null;
+  hasError: boolean | null;
+  exampleCode: string | null;
+  prevPage: string | null;
+};
+
+class ExamplesView extends PureComponent<ExamplesViewProps, ExamplesViewState> {
+  state: ExamplesViewState = {
     isLoading: null,
     hasError: null,
     exampleCode: null,
     prevPage: null,
   };
 
-  editorRef = React.createRef(null);
+  editorRef = React.createRef();
 
-  static getDerivedStateFromProps(nextProps, prevState) {
+  errorRetryAttempts = 0;
+
+  static getDerivedStateFromProps(nextProps: ExamplesViewProps, prevState: ExamplesViewState) {
     const { match } = nextProps;
     const page = match?.params?.name;
     if (page !== prevState.prevPage) {
@@ -67,13 +89,12 @@ class ExamplesView extends PureComponent {
     }
   }
 
-  componentDidUpdate(prevProps, prevState) {
+  componentDidUpdate(_prevProps: ExamplesViewProps, prevState: ExamplesViewState) {
     const page = this.getPage();
 
     if (prevState.prevPage !== page) {
       // page change
       const exampleResult = parseExampleComponent(page);
-      console.log(page);
 
       if (exampleResult) {
         this.fetchExampleCode(exampleResult.cateName, exampleResult.exampleName);
@@ -81,7 +102,22 @@ class ExamplesView extends PureComponent {
     }
   }
 
-  fetchExampleCode = (cateName, exampleName) => {
+  fetchExampleCode = (cateName: string, exampleName: string) => {
+    /*
+     * This class is structured such that an error in fetching the code will send it toAdd commentMore actions
+     * an infinite loop of retries, which will eventually either crash your browser or
+     * get you banned from GitHub.
+     * So let's limit the number of retries to something reasonable.
+     */
+    if (this.errorRetryAttempts > 3) {
+      this.setState({
+        isLoading: false,
+        hasError: true,
+        exampleCode: null,
+      });
+      return;
+    }
+
     // read code from cache
     if (EXAMPLE_CODE_CACHE[exampleName]) {
       this.setState({
@@ -119,14 +155,17 @@ class ExamplesView extends PureComponent {
   };
 
   handleRunCode = () => {
-    if (this.editorRef.current)
+    if (this.editorRef.current) {
       this.setState({
+        // @ts-ignore
         exampleCode: this.editorRef.current.getValue(),
       });
+    }
   };
 
-  renderMenuList(type, locale) {
+  renderMenuList(type: string, locale: string) {
     const page = this.getPage();
+    // @ts-ignore
     const { examples } = Examples[type];
     const typeNameList = Object.keys(examples);
 
@@ -141,7 +180,7 @@ class ExamplesView extends PureComponent {
     return <ul className="menu">{items}</ul>;
   }
 
-  renderEditor(exampleResult) {
+  renderEditor(exampleResult: ExampleComponent) {
     const { isLoading, hasError, exampleCode } = this.state;
     let editorValue = '';
 
@@ -150,7 +189,9 @@ class ExamplesView extends PureComponent {
     } else if (isLoading === false && hasError === true) {
       editorValue = 'loading code error';
     } else if (isLoading === false && hasError === false) {
+      // @ts-ignore
       editorValue = exampleCode;
+      // Why is this setting state to exampleCode which it read from the state just few lines above?
       this.setState({
         exampleCode: editorValue,
       });
@@ -172,6 +213,8 @@ class ExamplesView extends PureComponent {
             defaultLanguage="javascript"
             options={{ tabSize: 2 }}
             onMount={(editor) => {
+              // @ts-ignore
+              // noinspection JSConstantReassignment
               this.editorRef.current = editor;
             }}
           />
@@ -180,7 +223,7 @@ class ExamplesView extends PureComponent {
     ) : null;
   }
 
-  renderResult() {
+  renderResult(): ReactNode {
     const scope = {
       // scope used by import statement in editor
       import: {
@@ -189,6 +232,10 @@ class ExamplesView extends PureComponent {
         'd3-shape': D3ShapeScope,
       },
     };
+
+    if (this.state.exampleCode == null) {
+      return null;
+    }
 
     return (
       <div className="example-chart-wrapper">
@@ -199,7 +246,7 @@ class ExamplesView extends PureComponent {
     );
   }
 
-  getPage() {
+  getPage(): string {
     const { match } = this.props;
     const page = match?.params?.name ?? 'SimpleLineChart';
     return page;
