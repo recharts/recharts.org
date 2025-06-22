@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import { RouteComponentProps, withRouter } from 'react-router';
 import Helmet from 'react-helmet';
 import { getLocaleType, localeGet } from '../utils/LocaleUtils.ts';
-import Affix from '../components/Affix';
 import '../styles/app.scss';
 
 const modules = ['guide', 'api', 'examples', 'blog', 'storybook'];
@@ -51,39 +50,37 @@ class Frame extends Component<FrameProps> {
     return (
       <div className="container">
         <Helmet titleTemplate="%s | Recharts" />
-        <Affix>
-          <header>
-            <div className="header-wrapper">
-              <h1 className="logo">
-                <Link className="nav-logo" to={`/${locale}`}>
-                  &lt;Recharts /&gt;
-                </Link>
-              </h1>
-              <nav>
-                <ul className="nav" id="nav">
-                  {modules.map((entry, index) => (
-                    <li key={`item-${index}`}>
-                      <Link className={`nav-link ${entry === page ? 'active' : ''}`} to={`/${locale}/${entry}`}>
-                        {localeGet(locale, 'frame', entry)}
-                      </Link>
-                    </li>
-                  ))}
-                  <li className="github-wrapper">
-                    <a
-                      href="https://github.com/recharts/recharts"
-                      target="_blank"
-                      className="nav-github"
-                      rel="noreferrer"
-                    >
-                      GitHub
-                    </a>
+        <header>
+          <div className="header-wrapper">
+            <h1 className="logo">
+              <Link className="nav-logo" to={`/${locale}`}>
+                &lt;Recharts /&gt;
+              </Link>
+            </h1>
+            <nav>
+              <ul className="nav" id="nav">
+                {modules.map((entry, index) => (
+                  <li key={`item-${index}`}>
+                    <Link className={`nav-link ${entry === page ? 'active' : ''}`} to={`/${locale}/${entry}`}>
+                      {localeGet(locale, 'frame', entry)}
+                    </Link>
                   </li>
-                  <li className="language-switch-wrapper">{this.renderLocaleSwitch(locale)}</li>
-                </ul>
-              </nav>
-            </div>
-          </header>
-        </Affix>
+                ))}
+                <li className="github-wrapper">
+                  <a
+                    href="https://github.com/recharts/recharts"
+                    target="_blank"
+                    className="nav-github"
+                    rel="noreferrer"
+                  >
+                    GitHub
+                  </a>
+                </li>
+                <li className="language-switch-wrapper">{this.renderLocaleSwitch(locale)}</li>
+              </ul>
+            </nav>
+          </div>
+        </header>
         {children}
         <footer>
           <p>
