@@ -1,7 +1,12 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+type CustomAxisTickProps = {
+  x: number;
+  y: number;
+  payload: {
+    value: string;
+  };
+};
 
-const renderCustomAxisTick = ({ x, y, payload }) => {
+const renderCustomAxisTick = ({ x, y, payload }: CustomAxisTickProps) => {
   let path = '';
 
   switch (payload.value) {
@@ -39,11 +44,5 @@ const renderCustomAxisTick = ({ x, y, payload }) => {
     </svg>
   );
 };
-
-// CustomAxisTick.propTypes = {
-//   x: PropTypes.number,
-//   y: PropTypes.number,
-//   payload: PropTypes.object,
-// };
 
 export default renderCustomAxisTick;
