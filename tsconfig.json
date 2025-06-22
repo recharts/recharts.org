@@ -12,12 +12,16 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
+    "skipLibCheck": true,
 
     /* Linting */
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+
+    // TODO once we have moved everything to TypeScript, we can turn off the JS extension
+    "allowJs": true
   },
   "include": ["src"]
 }

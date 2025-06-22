@@ -4,6 +4,7 @@
     "plugin:react/recommended",
     "eslint-config-airbnb",
     "plugin:prettier/recommended",
+    "plugin:react/jsx-runtime",
     "prettier"
   ],
   "env": {
@@ -37,7 +38,6 @@
     "react/sort-comp": "off",
     "react/jsx-uses-react": "error",
     "react/jsx-uses-vars": "error",
-    "react/react-in-jsx-scope": "error",
     "react/jsx-filename-extension": ["off", { "extensions": [".ts", ".tsx", ".js", ".jsx"] }],
 
     "no-var": "error",
