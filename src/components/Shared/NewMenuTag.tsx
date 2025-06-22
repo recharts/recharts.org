@@ -1,7 +1,11 @@
-import React from 'react';
 import './NewMenuTag.scss';
 
-function NewMenuTag({ name, isNew }) {
+type NewMenuTagProps = {
+  name: string;
+  isNew: boolean;
+};
+
+function NewMenuTag({ name, isNew }: NewMenuTagProps) {
   return (
     <span className="new-menu-tag-wrapper">
       <span className="new-menu-tag-name">{name}</span>
