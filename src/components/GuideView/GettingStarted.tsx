@@ -1,7 +1,8 @@
 import { LineChart, Line, XAxis, YAxis, Tooltip, CartesianGrid } from 'recharts';
-import Highlight from '../../utils/Highlight';
+import Highlight from '../../utils/Highlight.tsx';
 import renderCustomAxisTick from './CustomAxisTick';
-import { localeGet } from '../../utils/LocaleUtils';
+import { localeGet } from '../../utils/LocaleUtils.ts';
+import { SupportedLocale } from '../../locale';
 
 const data = [
   {
@@ -42,7 +43,7 @@ const data = [
   },
 ];
 
-const GettingStarted = ({ locale }: { locale: string }) => (
+const GettingStarted = ({ locale }: { locale: SupportedLocale }) => (
   <div className="mod-getting-started" id="Getting_Started">
     <h3 className="page-title">{localeGet(locale, 'getting-started', 'getting-started')}</h3>
     <h4 className="sub-title">{localeGet(locale, 'getting-started', 'step-1-title')}</h4>

@@ -1,10 +1,11 @@
 import { BarChart, Bar, Legend, XAxis, YAxis, Tooltip, CartesianGrid } from 'recharts';
-import Highlight from '../../utils/Highlight';
+import Highlight from '../../utils/Highlight.tsx';
 import renderCustomBarLabel from './CustomBarLabel';
 import renderCustomAxisTick from './CustomAxisTick';
 import TriangleBar from './TriangleBar';
 import CustomTooltip from './CustomTooltip';
-import { localeGet } from '../../utils/LocaleUtils';
+import { localeGet } from '../../utils/LocaleUtils.ts';
+import { SupportedLocale } from '../../locale';
 
 const data = [
   {
@@ -52,7 +53,7 @@ const margin = {
   bottom: 5,
 };
 
-function Customize({ locale }: { locale: string }) {
+function Customize({ locale }: { locale: SupportedLocale }) {
   return (
     <div className="mod-customize" id="Customize">
       <h3 className="page-title">{localeGet(locale, 'customize', 'customize')}</h3>

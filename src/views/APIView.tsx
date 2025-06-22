@@ -6,12 +6,13 @@ import Helmet from 'react-helmet';
 import { RouteComponentProps } from 'react-router';
 import API from '../docs/api';
 import APIExamples from '../docs/apiExamples';
-import Highlight from '../utils/Highlight';
+import Highlight from '../utils/Highlight.tsx';
 import NewMenuTag from '../components/Shared/NewMenuTag';
-import { getLocaleType, localeGet, parseLocalObj } from '../utils/LocaleUtils';
-import apiCates, { NEW_APIS } from '../docs/apiCates';
+import { getLocaleType, localeGet, parseLocalObj } from '../utils/LocaleUtils.ts';
+import apiCates, { NEW_APIS } from '../docs/apiCates.ts';
 import './APIView.scss';
 import { RouteParams } from '../routes';
+import { SupportedLocale } from '../locale';
 
 type APIViewState = {
   indexesPage: string;
@@ -42,7 +43,7 @@ class APIView extends PureComponent<RouteComponentProps<RouteParams>, APIViewSta
     }
   };
 
-  renderExamples(examples: ReadonlyArray<any>, locale: string, page: any) {
+  renderExamples(examples: ReadonlyArray<any>, locale: SupportedLocale, page: any) {
     if (!examples || !examples.length) {
       return null;
     }
@@ -105,7 +106,7 @@ class APIView extends PureComponent<RouteComponentProps<RouteParams>, APIViewSta
     ));
   }
 
-  renderProps(props: ReadonlyArray<any>, locale: string) {
+  renderProps(props: ReadonlyArray<any>, locale: SupportedLocale) {
     if (!props || !props.length) {
       return null;
     }
@@ -146,7 +147,7 @@ class APIView extends PureComponent<RouteComponentProps<RouteParams>, APIViewSta
     ));
   }
 
-  renderParent(components: ReadonlyArray<any>, locale: string) {
+  renderParent(components: ReadonlyArray<any>, locale: SupportedLocale) {
     return (
       <div>
         <h4 className="sub-title">{localeGet(locale, 'api', 'parent')}</h4>
@@ -167,7 +168,7 @@ class APIView extends PureComponent<RouteComponentProps<RouteParams>, APIViewSta
     );
   }
 
-  renderChildren(components: any, locale: string) {
+  renderChildren(components: any, locale: SupportedLocale) {
     return (
       <div>
         <h4 className="sub-title">{localeGet(locale, 'api', 'children')}</h4>
@@ -210,6 +211,7 @@ class APIView extends PureComponent<RouteComponentProps<RouteParams>, APIViewSta
                 {items.map((compName, j) => (
                   <li key={`item-${j}`}>
                     <Link className={page === compName ? 'active' : ''} to={`/${locale}/api/${compName}`}>
+                      {/* @ts-ignore */}
                       <NewMenuTag name={compName} isNew={NEW_APIS.indexOf(compName) >= 0} />
                     </Link>
                   </li>

@@ -2,12 +2,13 @@ import { PureComponent } from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import { RouteComponentProps } from 'react-router';
 import { Installation, GettingStarted, Customize } from '../components/GuideView';
-import { getLocaleType, localeGet } from '../utils/LocaleUtils';
+import { getLocaleType, localeGet } from '../utils/LocaleUtils.ts';
 import { RouteParams } from '../routes';
+import { SupportedLocale } from '../locale';
 
 const modules = ['installation', 'getting-started', 'customize'];
 
-function renderGuide(locale: string, page: string) {
+function renderGuide(locale: SupportedLocale, page: string) {
   if (page === 'installation') {
     return <Installation locale={locale} />;
   }

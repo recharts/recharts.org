@@ -1,7 +1,7 @@
 import { Redirect, Route, Switch } from 'react-router-dom';
 import { IndexView, GuideView, APIView, ExamplesView, BlogView, Storybook } from '../views';
 import Frame from '../layouts/Frame';
-import { defaultLocale } from '../utils/LocaleUtils';
+import { defaultLocale } from '../utils/LocaleUtils.ts';
 
 export type RouteParams = {
   name?: string;

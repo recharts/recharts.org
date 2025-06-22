@@ -2,7 +2,7 @@ import { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { RouteComponentProps, withRouter } from 'react-router';
 import Helmet from 'react-helmet';
-import { getLocaleType, localeGet } from '../utils/LocaleUtils';
+import { getLocaleType, localeGet } from '../utils/LocaleUtils.ts';
 import Affix from '../components/Affix';
 import '../styles/app.scss';
 

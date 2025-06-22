@@ -1,21 +1,17 @@
 import React, { PureComponent } from 'react';
-import PropTypes from 'prop-types';
-import ReactDOM from 'react-dom';
+// @ts-ignore
 import hljs from 'highlight.js';
 
-class Highlight extends PureComponent {
-  static propTypes = {
-    innerHTML: PropTypes.bool,
-    className: PropTypes.string,
-    children: PropTypes.node,
-  };
+type HighlightProps = {
+  className?: string;
+};
 
+class Highlight extends PureComponent<HighlightProps> {
   static defaultProps = {
-    innerHTML: false,
     className: null,
   };
 
-  ref = React.createRef();
+  ref = React.createRef<HTMLPreElement>();
 
   componentDidMount() {
     this.highlightCode();
@@ -27,6 +23,9 @@ class Highlight extends PureComponent {
 
   highlightCode() {
     const domNode = this.ref.current;
+    if (domNode == null) {
+      return;
+    }
     const nodes = domNode.querySelectorAll('pre code');
 
     if (nodes.length > 0) {
@@ -37,12 +36,7 @@ class Highlight extends PureComponent {
   }
 
   render() {
-    const { innerHTML, children, className } = this.props;
-
-    if (innerHTML) {
-      // eslint-disable-next-line react/no-danger
-      return <div ref={this.ref} dangerouslySetInnerHTML={{ __html: children }} className={className || null} />;
-    }
+    const { children, className } = this.props;
 
     return (
       <pre ref={this.ref}>

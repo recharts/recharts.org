@@ -1,5 +1,6 @@
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Label, LabelList } from 'recharts';
-import { localeGet } from '../../utils/LocaleUtils';
+import { localeGet } from '../../utils/LocaleUtils.ts';
+import { SupportedLocale } from '../../locale';
 
 const data = [
   {
@@ -46,7 +47,7 @@ const data = [
   },
 ];
 
-const example = (local: string) => (
+const example = (local: SupportedLocale) => (
   <div>
     <p style={{ fontSize: 18 }}>{localeGet(local, 'label', 'cartesian-title')}</p>
     <div className="cartesian-label-position">

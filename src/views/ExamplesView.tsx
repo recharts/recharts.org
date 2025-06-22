@@ -10,9 +10,9 @@ import * as D3ShapeScope from 'd3-shape';
 import { Editor } from '@monaco-editor/react';
 import { RouteComponentProps } from 'react-router';
 import Examples from '../docs/exampleComponents';
-import { getLocaleType } from '../utils/LocaleUtils';
+import { getLocaleType } from '../utils/LocaleUtils.ts';
 import './ExampleView.scss';
-import fetchFile from '../utils/fetchUtils';
+import fetchFile from '../utils/fetchUtils.ts';
 import 'simple-line-icons/scss/simple-line-icons.scss';
 import { RouteParams } from '../routes';
 

@@ -1,7 +1,8 @@
-import Highlight from '../../utils/Highlight';
-import { localeGet } from '../../utils/LocaleUtils';
+import Highlight from '../../utils/Highlight.tsx';
+import { localeGet } from '../../utils/LocaleUtils.ts';
+import { SupportedLocale } from '../../locale';
 
-const Installation = ({ locale }: { locale: string }) => (
+const Installation = ({ locale }: { locale: SupportedLocale }) => (
   <div className="mod-installation" id="Installation">
     <h3 className="page-title">{localeGet(locale, 'installation', 'installation')}</h3>
     <h4 className="sub-title">NPM</h4>
