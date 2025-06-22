@@ -12,7 +12,7 @@ import CssWorker from 'monaco-editor/esm/vs/language/css/css.worker?worker';
 import HtmlWorker from 'monaco-editor/esm/vs/language/html/html.worker?worker';
 // @ts-ignore
 import TsWorker from 'monaco-editor/esm/vs/language/typescript/ts.worker?worker';
-import Root from './containers/Root';
+import Root from './containers/Root.tsx';
 
 // eslint-disable-next-line no-restricted-globals
 self.MonacoEnvironment = {
