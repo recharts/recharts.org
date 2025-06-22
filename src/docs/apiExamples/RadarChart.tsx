@@ -1,4 +1,3 @@
-import React from 'react';
 import { RadarChart, Radar, PolarAngleAxis, PolarRadiusAxis, Legend, PolarGrid } from 'recharts';
 
 const data = [

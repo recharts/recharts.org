@@ -1,5 +1,4 @@
-import React from 'react';
-import { ScatterChart, Scatter, XAxis, YAxis, ZAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
+import { ScatterChart, Scatter, XAxis, YAxis, ZAxis, CartesianGrid, Tooltip, Legend, ReferenceArea } from 'recharts';
 
 const data01 = [
   { x: 100, y: 200, z: 200 },
@@ -33,11 +32,12 @@ const example = () => (
     <CartesianGrid strokeDasharray="3 3" />
     <XAxis dataKey="x" type="number" name="stature" unit="cm" />
     <YAxis dataKey="y" type="number" name="weight" unit="kg" />
-    <ZAxis dataKey="z" type="number" range={[64, 144]} name="score" unit="km" />
+    <ZAxis dataKey="z" type="number" range={[16, 100]} name="score" unit="km" />
     <Tooltip cursor={{ strokeDasharray: '3 3' }} />
     <Legend />
     <Scatter name="A school" data={data01} fill="#8884d8" />
     <Scatter name="B school" data={data02} fill="#82ca9d" />
+    <ReferenceArea x1={150} x2={180} y1={200} y2={300} stroke="red" strokeOpacity={0.3} />
   </ScatterChart>
 );
 
@@ -45,21 +45,17 @@ const exampleCode = `
 <ScatterChart
   width={730}
   height={250}
-  margin={{
-    top: 20,
-    right: 20,
-    bottom: 10,
-    left: 10,
-  }}
+  margin={{ top: 20, right: 20, bottom: 10, left: 10 }}
 >
-  <CartesianGrid strokeDasharray="3 3" />
   <XAxis dataKey="x" type="number" name="stature" unit="cm" />
   <YAxis dataKey="y" type="number" name="weight" unit="kg" />
-  <ZAxis dataKey="z" type="number" range={[64, 144]} name="score" unit="km" />
+  <ZAxis dataKey="z" type="number" range={[4, 20]} name="score" unit="km" />
+  <CartesianGrid strokeDasharray="3 3" />
   <Tooltip cursor={{ strokeDasharray: '3 3' }} />
   <Legend />
   <Scatter name="A school" data={data01} fill="#8884d8" />
   <Scatter name="B school" data={data02} fill="#82ca9d" />
+  <ReferenceArea x1={150} x2={180} y1={200} y2={300} stroke="red" strokeOpacity={0.3} />
 </ScatterChart>
 `;
 

@@ -1,4 +1,3 @@
-import React from 'react';
 import { AreaChart, ReferenceLine, Area, XAxis, YAxis, CartesianGrid, Tooltip } from 'recharts';
 
 const data = [

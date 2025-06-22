@@ -1,5 +1,8 @@
-import React from 'react';
-import { Sankey, Tooltip, Layer, Rectangle } from 'recharts';
+import { Sankey, Tooltip, Layer, Rectangle, useChartWidth } from 'recharts';
+// TODO export this type from recharts
+// eslint-disable-next-line import/no-unresolved
+import { NodeProps } from 'recharts/types/chart/Sankey';
+import { ReactNode } from 'react';
 
 const data0 = {
   nodes: [
@@ -17,7 +20,11 @@ const data0 = {
   ],
 };
 
-const MyCustomNode = ({ x, y, width, height, index, payload, containerWidth }) => {
+const MyCustomNode = ({ x, y, width, height, index, payload }: NodeProps): ReactNode => {
+  const containerWidth = useChartWidth();
+  if (containerWidth == null) {
+    return null; // Return null if used outside of a chart context
+  }
   const isOut = x + width + 6 > containerWidth;
   return (
     <Layer key={`CustomNode${index}`}>
@@ -50,7 +57,8 @@ const example = () => (
     width={960}
     height={500}
     data={data0}
-    node={<MyCustomNode />}
+    // @ts-ignore Recharts type does not allow null but it should! TODO fix
+    node={MyCustomNode}
     nodePadding={50}
     margin={{
       left: 200,
@@ -75,7 +83,7 @@ const exampleCode = `
    left: 200,
     right: 200,
     top: 100,
-    bottom: 100,
+    bottom: 100
   }}
   link={{ stroke: '#77c878' }}
 >

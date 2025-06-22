@@ -1,4 +1,3 @@
-import React from 'react';
 import { PieChart, Pie, Cell, BarChart, Bar } from 'recharts';
 
 const data = [
@@ -22,8 +21,9 @@ const example = () => (
       </defs>
     </svg>
     <PieChart width={730} height={250}>
+      {/* @ts-ignore */}
       <Pie data={data} cx="50%" cy="50%" outerRadius={80} label>
-        {data.map((entry, index) => (
+        {data.map((_entry, index) => (
           <Cell key={`cell-${index}`} fill={colors[index]} />
         ))}
       </Pie>
@@ -34,7 +34,7 @@ const example = () => (
 const barExample = () => (
   <BarChart width={730} height={250} data={data}>
     <Bar dataKey="value">
-      {data.map((entry, index) => (
+      {data.map((_entry, index) => (
         <Cell key={`cell-${index}`} fill="none" stroke={colors[index]} strokeWidth={index === 2 ? 4 : 1} />
       ))}
     </Bar>

@@ -1,5 +1,4 @@
-import React from 'react';
-import { ComposedChart, XAxis, YAxis, CartesianGrid, Tooltip, Legend, Area, Bar, Line } from 'recharts';
+import { LineChart, XAxis, YAxis, CartesianGrid, Tooltip, Legend, Line } from 'recharts';
 
 const data = [
   {
@@ -47,29 +46,38 @@ const data = [
 ];
 
 const example = () => (
-  <ComposedChart width={730} height={250} data={data}>
-    <CartesianGrid stroke="#f5f5f5" />
+  <LineChart
+    width={730}
+    height={250}
+    data={data}
+    margin={{
+      top: 5,
+      right: 30,
+      left: 20,
+      bottom: 5,
+    }}
+  >
+    <CartesianGrid strokeDasharray="3 3" />
     <XAxis dataKey="name" />
     <YAxis />
-    <Legend />
     <Tooltip />
-    <Area type="monotone" dataKey="amt" fill="#8884d8" stroke="#8884d8" />
-    <Bar dataKey="pv" barSize={20} fill="#413ea0" />
-    <Line type="monotone" dataKey="uv" stroke="#ff7300" />
-  </ComposedChart>
+    <Legend />
+    <Line type="monotone" dataKey="pv" stroke="#8884d8" />
+    <Line type="monotone" dataKey="uv" stroke="#82ca9d" />
+  </LineChart>
 );
 
 const exampleCode = `
-<ComposedChart width={730} height={250} data={data}>
+<LineChart width={730} height={250} data={data}
+  margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>
+  <CartesianGrid strokeDasharray="3 3" />
   <XAxis dataKey="name" />
   <YAxis />
   <Tooltip />
   <Legend />
-  <CartesianGrid stroke="#f5f5f5" />
-  <Area type="monotone" dataKey="amt" fill="#8884d8" stroke="#8884d8" />
-  <Bar dataKey="pv" barSize={20} fill="#413ea0" />
-  <Line type="monotone" dataKey="uv" stroke="#ff7300" />
-</ComposedChart>
+  <Line type="monotone" dataKey="pv" stroke="#8884d8" />
+  <Line type="monotone" dataKey="uv" stroke="#82ca9d" />
+</LineChart>
 `;
 
 export default [

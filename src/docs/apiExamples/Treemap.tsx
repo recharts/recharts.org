@@ -1,4 +1,3 @@
-import React from 'react';
 import { Treemap } from 'recharts';
 
 const data = [

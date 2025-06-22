@@ -1,4 +1,3 @@
-import React from 'react';
 import { ScatterChart, XAxis, YAxis, CartesianGrid, Tooltip, Legend, Scatter, ErrorBar } from 'recharts';
 
 const data = [
@@ -77,8 +76,8 @@ const example = () => (
 );
 
 const exampleCode = `
-<ScatterChart 
-  width={730} 
+<ScatterChart
+  width={730}
   height={250}
   margin={{ top: 20, right: 20, bottom: 0, left: 20 }}
 >

@@ -1,4 +1,3 @@
-import React from 'react';
 import { AreaChart, XAxis, YAxis, CartesianGrid, Tooltip, Area } from 'recharts';
 
 const data = [
@@ -136,7 +135,7 @@ const rangeExampleCode = `
   height={250}
   data={rangeData}
   margin={{
-    top: 20, right: 20, bottom: 20, left: 20,
+    top: 20, right: 20, bottom: 20, left: 20
   }}
 >
   <XAxis dataKey="day" />

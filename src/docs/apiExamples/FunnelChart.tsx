@@ -1,5 +1,4 @@
-import React from 'react';
-import { FunnelChart, Funnel, Tooltip, LabelList, Cell } from 'recharts';
+import { FunnelChart, Funnel, Tooltip, LabelList } from 'recharts';
 
 const data = [
   { value: 100, name: '展现', fill: '#8884d8' },

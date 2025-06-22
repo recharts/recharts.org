@@ -1,7 +1,12 @@
-import React from 'react';
 import { ScatterChart, XAxis, YAxis, Scatter, CartesianGrid, Tooltip, ReferenceDot } from 'recharts';
 
-const data = [
+type DataEntry = {
+  x: number;
+  y: number;
+  z?: number;
+}
+
+const data: DataEntry[] = [
   { x: 100, y: 200, z: 200 },
   { x: 120, y: 100, z: 260 },
   { x: 170, y: 300, z: 400 },
@@ -10,7 +15,7 @@ const data = [
   { x: 110, y: 280, z: 200 },
 ];
 
-const getMeanValue = (o) => {
+const getMeanValue = (o: ReadonlyArray<DataEntry>) => {
   const len = o.length;
 
   if (!len) {
@@ -18,7 +23,7 @@ const getMeanValue = (o) => {
   }
 
   return o.reduce(
-    (result, entry) => ({
+    (result: DataEntry, entry: DataEntry) => ({
       x: result.x + (entry.x || 0) / len,
       y: result.y + (entry.y || 0) / len,
     }),
@@ -51,9 +56,9 @@ const example = () => {
 };
 
 const exampleCode = `
-<ScatterChart 
-  width={730} 
-  height={250} 
+<ScatterChart
+  width={730}
+  height={250}
   margin={{ top: 20, right: 20, bottom: 20, left: 20 }}
 >
     <CartesianGrid />

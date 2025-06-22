@@ -1,4 +1,3 @@
-import React from 'react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Label, LabelList } from 'recharts';
 import { localeGet } from '../../utils/LocaleUtils';
 
@@ -47,7 +46,7 @@ const data = [
   },
 ];
 
-const example = (local) => (
+const example = (local: string) => (
   <div>
     <p style={{ fontSize: 18 }}>{localeGet(local, 'label', 'cartesian-title')}</p>
     <div className="cartesian-label-position">
@@ -206,10 +205,10 @@ export default [
   {
     demo: chartExample,
     code: `
-<BarChart 
-  width={730} 
-  height={250} 
-  data={data} 
+<BarChart
+  width={730}
+  height={250}
+  data={data}
   margin={{ top: 15, right: 30, left: 20, bottom: 5 }}
 >
   <CartesianGrid strokeDasharray="3 3" />
