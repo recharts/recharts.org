@@ -20,7 +20,7 @@ const data0 = {
   ],
 };
 
-const MyCustomNode = ({ x, y, width, height, index, payload }: NodeProps): ReactNode => {
+function MyCustomNode({ x, y, width, height, index, payload }: NodeProps): ReactNode {
   const containerWidth = useChartWidth();
   if (containerWidth == null) {
     return null; // Return null if used outside of a chart context
@@ -50,7 +50,7 @@ const MyCustomNode = ({ x, y, width, height, index, payload }: NodeProps): React
       </text>
     </Layer>
   );
-};
+}
 
 const example = () => (
   <Sankey

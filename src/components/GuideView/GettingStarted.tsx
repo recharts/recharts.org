@@ -43,22 +43,23 @@ const data = [
   },
 ];
 
-const GettingStarted = ({ locale }: { locale: SupportedLocale }) => (
-  <div className="mod-getting-started" id="Getting_Started">
-    <h3 className="page-title">{localeGet(locale, 'getting-started', 'getting-started')}</h3>
-    <h4 className="sub-title">{localeGet(locale, 'getting-started', 'step-1-title')}</h4>
-    <p className="paragraph-title">
-      {localeGet(locale, 'getting-started', 'with-help')}
-      <a href="https://github.com/recharts/babel-plugin-recharts" target="_blank" rel="noreferrer">
-        babel-plugin-recharts
-      </a>
-      {localeGet(locale, 'getting-started', 'plugin-desc')}
-    </p>
-    <p className="paragraph-title">{localeGet(locale, 'getting-started', 'step-1-desc')}</p>
+function GettingStarted({ locale }: { locale: SupportedLocale }) {
+  return (
+    <div className="mod-getting-started" id="Getting_Started">
+      <h3 className="page-title">{localeGet(locale, 'getting-started', 'getting-started')}</h3>
+      <h4 className="sub-title">{localeGet(locale, 'getting-started', 'step-1-title')}</h4>
+      <p className="paragraph-title">
+        {localeGet(locale, 'getting-started', 'with-help')}
+        <a href="https://github.com/recharts/babel-plugin-recharts" target="_blank" rel="noreferrer">
+          babel-plugin-recharts
+        </a>
+        {localeGet(locale, 'getting-started', 'plugin-desc')}
+      </p>
+      <p className="paragraph-title">{localeGet(locale, 'getting-started', 'step-1-desc')}</p>
 
-    <div className="step-1">
-      <Highlight className="e4x">
-        {`import { LineChart, Line } from 'recharts';
+      <div className="step-1">
+        <Highlight className="e4x">
+          {`import { LineChart, Line } from 'recharts';
 const data = [{name: 'Page A', uv: 400, pv: 2400, amt: 2400}, ...];
 
 const renderLineChart = (
@@ -66,18 +67,18 @@ const renderLineChart = (
     <Line type="monotone" dataKey="uv" stroke="#8884d8" />
   </LineChart>
 );`}
-      </Highlight>
+        </Highlight>
 
-      <LineChart width={600} height={300} data={data}>
-        <Line type="monotone" dataKey="uv" stroke="#8884d8" />
-      </LineChart>
-    </div>
+        <LineChart width={600} height={300} data={data}>
+          <Line type="monotone" dataKey="uv" stroke="#8884d8" />
+        </LineChart>
+      </div>
 
-    <h4 className="sub-title">{localeGet(locale, 'getting-started', 'step-2-title')}</h4>
-    <p className="paragraph-title">{localeGet(locale, 'getting-started', 'step-2-desc')}</p>
-    <div className="step-2">
-      <Highlight className="e4x">
-        {`import { LineChart, Line, CartesianGrid, XAxis, YAxis } from 'recharts';
+      <h4 className="sub-title">{localeGet(locale, 'getting-started', 'step-2-title')}</h4>
+      <p className="paragraph-title">{localeGet(locale, 'getting-started', 'step-2-desc')}</p>
+      <div className="step-2">
+        <Highlight className="e4x">
+          {`import { LineChart, Line, CartesianGrid, XAxis, YAxis } from 'recharts';
 const data = [{name: 'Page A', uv: 400, pv: 2400, amt: 2400}, ...];
 
 const renderLineChart = (
@@ -88,21 +89,21 @@ const renderLineChart = (
     <YAxis />
   </LineChart>
 );`}
-      </Highlight>
+        </Highlight>
 
-      <LineChart width={600} height={300} data={data}>
-        <Line type="monotone" dataKey="uv" stroke="#8884d8" />
-        <CartesianGrid stroke="#ccc" />
-        <XAxis dataKey="name" />
-        <YAxis />
-      </LineChart>
-    </div>
+        <LineChart width={600} height={300} data={data}>
+          <Line type="monotone" dataKey="uv" stroke="#8884d8" />
+          <CartesianGrid stroke="#ccc" />
+          <XAxis dataKey="name" />
+          <YAxis />
+        </LineChart>
+      </div>
 
-    <h4 className="sub-title">{localeGet(locale, 'getting-started', 'step-3-title')}</h4>
-    <p className="paragraph-title">{localeGet(locale, 'getting-started', 'step-3-desc')}</p>
-    <div className="step-3">
-      <Highlight className="e4x">
-        {`import { LineChart, Line, CartesianGrid, XAxis, YAxis } from 'recharts';
+      <h4 className="sub-title">{localeGet(locale, 'getting-started', 'step-3-title')}</h4>
+      <p className="paragraph-title">{localeGet(locale, 'getting-started', 'step-3-desc')}</p>
+      <div className="step-3">
+        <Highlight className="e4x">
+          {`import { LineChart, Line, CartesianGrid, XAxis, YAxis } from 'recharts';
 const data = [{name: 'Page A', uv: 400, pv: 2400, amt: 2400}, ...];
 
 const renderLineChart = (
@@ -113,31 +114,31 @@ const renderLineChart = (
     <YAxis />
   </LineChart>
 );`}
-      </Highlight>
+        </Highlight>
 
-      <LineChart
-        width={600}
-        height={300}
-        data={data}
-        margin={{
-          top: 20,
-          right: 20,
-          bottom: 5,
-          left: 0,
-        }}
-      >
-        <Line type="monotone" dataKey="uv" stroke="#8884d8" />
-        <CartesianGrid stroke="#ccc" strokeDasharray="5 5" />
-        <XAxis dataKey="name" />
-        <YAxis width={40} />
-      </LineChart>
-    </div>
+        <LineChart
+          width={600}
+          height={300}
+          data={data}
+          margin={{
+            top: 20,
+            right: 20,
+            bottom: 5,
+            left: 0,
+          }}
+        >
+          <Line type="monotone" dataKey="uv" stroke="#8884d8" />
+          <CartesianGrid stroke="#ccc" strokeDasharray="5 5" />
+          <XAxis dataKey="name" />
+          <YAxis width={40} />
+        </LineChart>
+      </div>
 
-    <h4 className="sub-title">{localeGet(locale, 'getting-started', 'step-4-title')}</h4>
-    <p className="paragraph-title">{localeGet(locale, 'getting-started', 'step-4-desc')}</p>
-    <div className="step-4">
-      <Highlight className="e4x">
-        {`import { LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip } from 'recharts';
+      <h4 className="sub-title">{localeGet(locale, 'getting-started', 'step-4-title')}</h4>
+      <p className="paragraph-title">{localeGet(locale, 'getting-started', 'step-4-desc')}</p>
+      <div className="step-4">
+        <Highlight className="e4x">
+          {`import { LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip } from 'recharts';
 const data = [{name: 'Page A', uv: 400, pv: 2400, amt: 2400}, ...];
 
 const renderLineChart = (
@@ -149,32 +150,32 @@ const renderLineChart = (
     <Tooltip />
   </LineChart>
 );`}
-      </Highlight>
+        </Highlight>
 
-      <LineChart
-        width={600}
-        height={300}
-        data={data}
-        margin={{
-          top: 20,
-          right: 20,
-          bottom: 5,
-          left: 0,
-        }}
-      >
-        <Line type="monotone" dataKey="uv" stroke="#8884d8" />
-        <CartesianGrid stroke="#ccc" strokeDasharray="5 5" />
-        <XAxis dataKey="name" />
-        <YAxis width={40} />
-        <Tooltip />
-      </LineChart>
-    </div>
+        <LineChart
+          width={600}
+          height={300}
+          data={data}
+          margin={{
+            top: 20,
+            right: 20,
+            bottom: 5,
+            left: 0,
+          }}
+        >
+          <Line type="monotone" dataKey="uv" stroke="#8884d8" />
+          <CartesianGrid stroke="#ccc" strokeDasharray="5 5" />
+          <XAxis dataKey="name" />
+          <YAxis width={40} />
+          <Tooltip />
+        </LineChart>
+      </div>
 
-    <h4 className="sub-title">{localeGet(locale, 'getting-started', 'step-5-title')}</h4>
-    <p className="paragraph-title">{localeGet(locale, 'getting-started', 'step-5-desc')}</p>
-    <div className="step-5">
-      <Highlight className="e4x">
-        {`import { LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip } from 'recharts';
+      <h4 className="sub-title">{localeGet(locale, 'getting-started', 'step-5-title')}</h4>
+      <p className="paragraph-title">{localeGet(locale, 'getting-started', 'step-5-desc')}</p>
+      <div className="step-5">
+        <Highlight className="e4x">
+          {`import { LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip } from 'recharts';
 const data = [{name: 'Page A', uv: 400, pv: 2400, amt: 2400}, ...];
 
 const renderCustomAxisTick = ({ x, y, payload }) => {
@@ -198,9 +199,9 @@ const renderCustomAxisTick = ({ x, y, payload }) => {
     </svg>
   );
 };`}
-      </Highlight>
-      <Highlight className="e4x">
-        {`const renderLineChart = (
+        </Highlight>
+        <Highlight className="e4x">
+          {`const renderLineChart = (
   <LineChart width={600} height={300} data={data} margin={{ top: 5, right: 20, bottom: 5, left: 0 }}>
     <Line type="monotone" dataKey="uv" stroke="#8884d8" />
     <CartesianGrid stroke="#ccc" strokeDasharray="5 5" />
@@ -210,27 +211,28 @@ const renderCustomAxisTick = ({ x, y, payload }) => {
   </LineChart>
 );
 `}
-      </Highlight>
+        </Highlight>
 
-      <LineChart
-        width={600}
-        height={300}
-        data={data}
-        margin={{
-          top: 20,
-          right: 20,
-          bottom: 5,
-          left: 0,
-        }}
-      >
-        <Line type="monotone" dataKey="uv" stroke="#8884d8" />
-        <CartesianGrid stroke="#ccc" strokeDasharray="5 5" />
-        <XAxis dataKey="name" tick={renderCustomAxisTick} />
-        <YAxis width={40} />
-        <Tooltip />
-      </LineChart>
+        <LineChart
+          width={600}
+          height={300}
+          data={data}
+          margin={{
+            top: 20,
+            right: 20,
+            bottom: 5,
+            left: 0,
+          }}
+        >
+          <Line type="monotone" dataKey="uv" stroke="#8884d8" />
+          <CartesianGrid stroke="#ccc" strokeDasharray="5 5" />
+          <XAxis dataKey="name" tick={renderCustomAxisTick} />
+          <YAxis width={40} />
+          <Tooltip />
+        </LineChart>
+      </div>
     </div>
-  </div>
-);
+  );
+}
 
 export default GettingStarted;

@@ -12,10 +12,10 @@ const getPath = (x: number, y: number, width: number, height: number) =>
 //   height: number;
 // };
 
-const TriangleBar = (props: any) => {
+function TriangleBar(props: any) {
   const { fill, x, y, width, height } = props;
 
   return <path d={getPath(x, y, width, height)} stroke="none" fill={fill} />;
-};
+}
 
 export default TriangleBar;

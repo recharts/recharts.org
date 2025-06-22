@@ -1,7 +1,7 @@
 import fetch from 'cross-fetch';
 
 const fetchFile = (url: string): Promise<string> =>
-  new Promise((resolve, reject) =>
+  new Promise((resolve, reject) => {
     fetch(url)
       // 没必要传参数，只要url拼接即可
       .then((res) => {
@@ -17,7 +17,7 @@ const fetchFile = (url: string): Promise<string> =>
             },
           );
         }
-      }),
-  );
+      });
+  });
 
 export default fetchFile;

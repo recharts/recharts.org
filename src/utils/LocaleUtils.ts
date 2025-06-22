@@ -8,13 +8,13 @@ export const localeGet = (locale: SupportedLocale, component: string, path: stri
 
 const isSupportedLocale = (locale: string): locale is SupportedLocale => {
   return supportedLocales.includes(locale as SupportedLocale);
-}
+};
 
 type LocaleProps = {
   location?: {
     pathname?: string;
-  }
-}
+  };
+};
 
 export const getLocaleType = (props: LocaleProps): SupportedLocale => {
   const pathname = (props && props.location && props.location.pathname) || '/';
