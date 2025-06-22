@@ -27,9 +27,8 @@ const Installation = ({ locale }: { locale: SupportedLocale }) => (
       &nbsp;)&nbsp; &nbsp;:
     </p>
     <Highlight className="html">
-      {`<script src="https://unpkg.com/react/umd/react.production.min.js"></script>
-<script src="https://unpkg.com/react-dom/umd/react-dom.production.min.js"></script>
-<script src="https://unpkg.com/prop-types/prop-types.min.js"></script>
+      {`<script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
 <script src="https://unpkg.com/recharts/umd/Recharts.js"></script>`}
     </Highlight>
     <p className="paragraph-title">
