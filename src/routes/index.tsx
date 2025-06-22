@@ -5,7 +5,7 @@ import { defaultLocale } from '../utils/LocaleUtils';
 
 export type RouteParams = {
   name?: string;
-}
+};
 
 export default () => (
   <Switch>
