@@ -1,4 +1,3 @@
-import React from 'react';
 import { LineChart, Line, XAxis, YAxis, Tooltip, CartesianGrid } from 'recharts';
 import Highlight from '../../utils/Highlight';
 import renderCustomAxisTick from './CustomAxisTick';
@@ -43,7 +42,7 @@ const data = [
   },
 ];
 
-const GettingStarted = ({ locale }) => (
+const GettingStarted = ({ locale }: { locale: string }) => (
   <div className="mod-getting-started" id="Getting_Started">
     <h3 className="page-title">{localeGet(locale, 'getting-started', 'getting-started')}</h3>
     <h4 className="sub-title">{localeGet(locale, 'getting-started', 'step-1-title')}</h4>
