@@ -1,0 +1,49 @@
+import React, { PureComponent } from 'react';
+// @ts-ignore
+import hljs from 'highlight.js';
+
+type HighlightProps = {
+  className?: string;
+};
+
+class Highlight extends PureComponent<HighlightProps> {
+  static defaultProps = {
+    className: null,
+  };
+
+  ref = React.createRef<HTMLPreElement>();
+
+  componentDidMount() {
+    this.highlightCode();
+  }
+
+  componentDidUpdate() {
+    this.highlightCode();
+  }
+
+  highlightCode() {
+    const domNode = this.ref.current;
+    if (domNode == null) {
+      return;
+    }
+    const nodes = domNode.querySelectorAll('pre code');
+
+    if (nodes.length > 0) {
+      for (let i = 0; i < nodes.length; i++) {
+        hljs.highlightBlock(nodes[i]);
+      }
+    }
+  }
+
+  render() {
+    const { children, className } = this.props;
+
+    return (
+      <pre ref={this.ref}>
+        <code className={className}>{children}</code>
+      </pre>
+    );
+  }
+}
+
+export default Highlight;

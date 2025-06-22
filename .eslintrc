@@ -12,14 +12,9 @@
     "mocha": true,
     "node": true
   },
-  "parser": "babel-eslint",
+  "parser": "@typescript-eslint/parser",
   "plugins": ["react"],
   "ignorePatterns": ["src/docs/**/*.js"],
-  "ecmaFeatures": {
-    "classes": true,
-    "jsx": true,
-    "experimentalDecorators": true
-  },
   "rules": {
     "prettier/prettier": [
       "error",
@@ -89,6 +84,14 @@
     "react/static-property-placement": "off",
     "react/jsx-one-expression-per-line": "off"
   },
+  "overrides": [
+    {
+      "files": ["*.ts", "*.tsx"],
+      "rules": {
+        "no-undef": "off"
+      }
+    }
+  ],
   "settings": {
     "import/resolver": {
       "node": {
