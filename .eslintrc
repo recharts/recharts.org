@@ -89,6 +89,14 @@
     "react/static-property-placement": "off",
     "react/jsx-one-expression-per-line": "off"
   },
+  "overrides": [
+    {
+      "files": ["*.ts", "*.tsx"],
+      "rules": {
+        "no-undef": "off"
+      }
+    }
+  ],
   "settings": {
     "import/resolver": {
       "node": {

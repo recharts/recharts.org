@@ -1,9 +1,9 @@
 /* eslint-disable class-methods-use-this */
-import React, { PureComponent } from 'react';
+import { PureComponent } from 'react';
 import _ from 'lodash';
-import PropTypes from 'prop-types';
 import { Link, withRouter } from 'react-router-dom';
 import Helmet from 'react-helmet';
+import { RouteComponentProps } from 'react-router';
 import API from '../docs/api';
 import APIExamples from '../docs/apiExamples';
 import Highlight from '../utils/Highlight';
@@ -11,14 +11,20 @@ import NewMenuTag from '../components/Shared/NewMenuTag';
 import { getLocaleType, localeGet, parseLocalObj } from '../utils/LocaleUtils';
 import apiCates, { NEW_APIS } from '../docs/apiCates';
 import './APIView.scss';
+import { RouteParams } from '../routes';
 
-class APIView extends PureComponent {
-  state = {
+type APIViewState = {
+  indexesPage: string;
+  activeDataCodeIndexes: number[];
+};
+
+class APIView extends PureComponent<RouteComponentProps<RouteParams>, APIViewState> {
+  state: APIViewState = {
     indexesPage: '',
     activeDataCodeIndexes: [],
   };
 
-  handleSwitchDataCode = (index, page, e) => {
+  handleSwitchDataCode = (index: number, page: any) => {
     const { activeDataCodeIndexes, indexesPage } = this.state;
     const indexes = page === indexesPage ? activeDataCodeIndexes : [];
     const i = indexes.indexOf(index);
@@ -36,7 +42,7 @@ class APIView extends PureComponent {
     }
   };
 
-  renderExamples(examples, locale, page) {
+  renderExamples(examples: ReadonlyArray<any>, locale: string, page: any) {
     if (!examples || !examples.length) {
       return null;
     }
@@ -85,8 +91,8 @@ class APIView extends PureComponent {
     );
   }
 
-  renderPropsExamples(examples, locale) {
-    return examples.map((entry, i) => (
+  renderPropsExamples(examples: any, locale: string) {
+    return examples.map((entry: any, i: number) => (
       <li key={`example-${i}`}>
         {entry.isExternal ? (
           <a href={entry.url} target="_blank" rel="noreferrer">
@@ -99,12 +105,12 @@ class APIView extends PureComponent {
     ));
   }
 
-  renderProps(props, locale) {
+  renderProps(props: ReadonlyArray<any>, locale: string) {
     if (!props || !props.length) {
       return null;
     }
 
-    return props.map((entry, i) => (
+    return props.map((entry: any, i: number) => (
       <li className="props-item" key={`props-${i}`} id={entry.name}>
         <p className={`header ${entry.deprecated ? 'deprecated' : ''}`}>
           <span className="title">
@@ -140,7 +146,7 @@ class APIView extends PureComponent {
     ));
   }
 
-  renderParent(components, locale) {
+  renderParent(components: ReadonlyArray<any>, locale: string) {
     return (
       <div>
         <h4 className="sub-title">{localeGet(locale, 'api', 'parent')}</h4>
@@ -161,12 +167,12 @@ class APIView extends PureComponent {
     );
   }
 
-  renderChildren(components, locale) {
+  renderChildren(components: any, locale: string) {
     return (
       <div>
         <h4 className="sub-title">{localeGet(locale, 'api', 'children')}</h4>
         <ul className="props-list">
-          {components.map((entry, index) => (
+          {components.map((entry: any, index: number) => (
             <li key={`item-${index}`} className="api-component-item">
               {entry.indexOf('svg') < 0 ? (
                 <code>
@@ -186,7 +192,9 @@ class APIView extends PureComponent {
     const { match } = this.props;
     const page = match?.params?.name ?? 'AreaChart';
 
+    // @ts-ignore
     const api = API[page];
+    // @ts-ignore
     const apiExamples = APIExamples[page];
     const locale = getLocaleType(this.props);
 
