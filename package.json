@@ -10,7 +10,8 @@
     "start": "npm run sync-examples-dev && vite",
     "autofix": "eslint src --fix",
     "lint": "eslint src",
-    "prettier": "prettier --write src/**/*.js"
+    "prettier": "prettier --write src/**/*.js",
+    "check-types": "tsc --noEmit"
   },
   "repository": {
     "type": "git",
@@ -22,6 +23,8 @@
     "@babel/plugin-proposal-decorators": "^7.12.12",
     "@babel/preset-env": "^7.12.11",
     "@babel/preset-react": "^7.12.10",
+    "@types/react": "^17.0.2",
+    "@types/react-dom": "^17.0.2",
     "@vitejs/plugin-react": "^4.3.4",
     "babel-eslint": "^10.1.0",
     "eslint": "^7.18.0",
