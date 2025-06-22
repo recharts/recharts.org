@@ -29,7 +29,7 @@ export default defineConfig({
   esbuild: {
     include: /\.[jt]s[x]?$/,
     exclude: [],
-    loader: 'jsx',
+    loader: 'tsx',
   },
   css: {
     preprocessorOptions: {

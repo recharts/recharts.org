@@ -1,7 +1,6 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import { Component } from 'react';
 import { Link } from 'react-router-dom';
-import { withRouter } from 'react-router';
+import { RouteComponentProps, withRouter } from 'react-router';
 import Helmet from 'react-helmet';
 import { getLocaleType, localeGet } from '../utils/LocaleUtils';
 import Affix from '../components/Affix';
@@ -14,12 +13,10 @@ const locales = [
   { locale: 'zh-CN', text: '中文' },
 ];
 
-class Frame extends Component {
-  static propTypes = {
-    children: PropTypes.node,
-  };
+type FrameProps = RouteComponentProps;
 
-  renderLocaleSwitch(curLocale) {
+class Frame extends Component<FrameProps> {
+  renderLocaleSwitch(curLocale: string) {
     const { location } = this.props;
     const pathName = location.pathname || '/';
 
