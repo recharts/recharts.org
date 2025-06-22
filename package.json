@@ -24,6 +24,7 @@
     "@babel/plugin-proposal-decorators": "^7.12.12",
     "@babel/preset-env": "^7.12.11",
     "@babel/preset-react": "^7.12.10",
+    "@types/lodash": "^4.17.18",
     "@types/react": "^17.0.2",
     "@types/react-dom": "^17.0.2",
     "@types/react-helmet": "^6.1.11",
