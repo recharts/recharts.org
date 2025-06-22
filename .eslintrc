@@ -12,14 +12,9 @@
     "mocha": true,
     "node": true
   },
-  "parser": "babel-eslint",
+  "parser": "@typescript-eslint/parser",
   "plugins": ["react"],
   "ignorePatterns": ["src/docs/**/*.js"],
-  "ecmaFeatures": {
-    "classes": true,
-    "jsx": true,
-    "experimentalDecorators": true
-  },
   "rules": {
     "prettier/prettier": [
       "error",
