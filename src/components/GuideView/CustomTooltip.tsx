@@ -22,13 +22,13 @@ function getIntroOfPage(label: string): string {
   return '';
 }
 
-type CustomTooltipProps = {
-  payload: ReadonlyArray<{ value: number }>;
-  label: string;
-  active: boolean;
-};
+// type CustomTooltipProps = {
+//   payload: ReadonlyArray<{ value: number }>;
+//   label: string;
+//   active: boolean;
+// };
 
-function CustomTooltip({ payload, label, active }: CustomTooltipProps) {
+function CustomTooltip({ payload, label, active }: any) {
   if (active) {
     return (
       <div className="custom-tooltip">

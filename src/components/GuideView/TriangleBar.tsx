@@ -4,15 +4,15 @@ const getPath = (x: number, y: number, width: number, height: number) =>
    C${x + width / 2},${y + height / 3} ${x + (2 * width) / 3},${y + height} ${x + width}, ${y + height}
    Z`;
 
-type TriangleBarProps = {
-  fill?: string;
-  x: number;
-  y: number;
-  width: number;
-  height: number;
-};
+// type TriangleBarProps = {
+//   fill?: string;
+//   x: number;
+//   y: number;
+//   width: number;
+//   height: number;
+// };
 
-const TriangleBar = (props: TriangleBarProps) => {
+const TriangleBar = (props: any) => {
   const { fill, x, y, width, height } = props;
 
   return <path d={getPath(x, y, width, height)} stroke="none" fill={fill} />;
