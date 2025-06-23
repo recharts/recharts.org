@@ -1,4 +1,4 @@
-import { Component } from 'react';
+import { Component, ReactNode } from 'react';
 import { Link } from 'react-router-dom';
 import { RouteComponentProps, withRouter } from 'react-router';
 import Helmet from 'react-helmet';
@@ -12,7 +12,9 @@ const locales = [
   { locale: 'zh-CN', text: '中文' },
 ];
 
-type FrameProps = RouteComponentProps;
+type FrameProps = RouteComponentProps & {
+  children: ReactNode;
+};
 
 class Frame extends Component<FrameProps> {
   renderLocaleSwitch(curLocale: string) {
