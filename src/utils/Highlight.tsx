@@ -1,9 +1,10 @@
-import React, { PureComponent } from 'react';
+import React, { PureComponent, ReactNode } from 'react';
 // @ts-ignore
 import hljs from 'highlight.js';
 
 type HighlightProps = {
   className?: string;
+  children: ReactNode;
 };
 
 class Highlight extends PureComponent<HighlightProps> {
@@ -26,7 +27,7 @@ class Highlight extends PureComponent<HighlightProps> {
     if (domNode == null) {
       return;
     }
-    const nodes = domNode.querySelectorAll('pre code');
+    const nodes: NodeListOf<HTMLElement> = domNode.querySelectorAll('pre code');
 
     if (nodes.length > 0) {
       for (let i = 0; i < nodes.length; i++) {

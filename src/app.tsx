@@ -1,5 +1,5 @@
 /* eslint-disable import/no-unresolved */
-import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import { loader } from '@monaco-editor/react';
 import * as monaco from 'monaco-editor';
 // @ts-ignore
@@ -37,4 +37,9 @@ loader.config({ monaco });
 
 loader.init().then(/* ... */);
 
-ReactDOM.render(<Root />, document.getElementById('app'));
+const container = document.getElementById('app');
+if (container == null) {
+  throw new Error('Container element with id "app" not found');
+}
+const root = createRoot(container);
+root.render(<Root />);
