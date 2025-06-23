@@ -31,7 +31,8 @@ class Highlight extends PureComponent<HighlightProps> {
 
     if (nodes.length > 0) {
       for (let i = 0; i < nodes.length; i++) {
-        hljs.highlightBlock(nodes[i]);
+        nodes[i].removeAttribute('data-highlighted');
+        hljs.highlightElement(nodes[i]);
       }
     }
   }
