@@ -4,8 +4,9 @@ import { RouteComponentProps, withRouter } from 'react-router';
 import Helmet from 'react-helmet';
 import { getLocaleType, localeGet } from '../utils/LocaleUtils.ts';
 import '../styles/app.scss';
+import { TargetBlankLink } from '../components/Shared/TargetBlankLink.tsx';
 
-const modules = ['guide', 'api', 'examples', 'blog', 'storybook'];
+const modules = ['guide', 'api', 'examples', 'storybook'];
 
 const locales = [
   { locale: 'en-US', text: 'En' },
@@ -68,15 +69,11 @@ class Frame extends Component<FrameProps> {
                     </Link>
                   </li>
                 ))}
+                <li className="github-wiki">
+                  <TargetBlankLink href="https://github.com/recharts/recharts/wiki">Wiki</TargetBlankLink>
+                </li>
                 <li className="github-wrapper">
-                  <a
-                    href="https://github.com/recharts/recharts"
-                    target="_blank"
-                    className="nav-github"
-                    rel="noreferrer"
-                  >
-                    GitHub
-                  </a>
+                  <TargetBlankLink href="https://github.com/recharts/recharts">GitHub</TargetBlankLink>
                 </li>
                 <li className="language-switch-wrapper">{this.renderLocaleSwitch(locale)}</li>
               </ul>
