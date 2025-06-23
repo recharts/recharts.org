@@ -1,5 +1,5 @@
 import { Redirect, Route, Switch } from 'react-router-dom';
-import { IndexView, GuideView, APIView, ExamplesView, BlogView, Storybook } from '../views';
+import { IndexView, GuideView, APIView, ExamplesView, Storybook } from '../views';
 import Frame from '../layouts/Frame';
 import { defaultLocale } from '../utils/LocaleUtils.ts';
 
@@ -7,7 +7,7 @@ export type RouteParams = {
   name?: string;
 };
 
-export default function () {
+export default function routes() {
   return (
     <Switch>
       <Route path="/" exact render={() => <Redirect to={`/${defaultLocale}`} />} />
@@ -32,14 +32,6 @@ export default function () {
         render={() => (
           <Frame>
             <ExamplesView />
-          </Frame>
-        )}
-      />
-      <Route
-        path="/*/blog"
-        render={() => (
-          <Frame>
-            <BlogView />
           </Frame>
         )}
       />
