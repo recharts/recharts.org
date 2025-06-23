@@ -1,10 +1,9 @@
-import React, { PureComponent, ReactNode } from 'react';
-// @ts-ignore
+import React, { PureComponent } from 'react';
 import hljs from 'highlight.js';
 
 type HighlightProps = {
   className?: string;
-  children: ReactNode;
+  children: string;
 };
 
 class Highlight extends PureComponent<HighlightProps> {

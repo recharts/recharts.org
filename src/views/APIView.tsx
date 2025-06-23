@@ -1,6 +1,5 @@
 /* eslint-disable class-methods-use-this */
 import { PureComponent } from 'react';
-import _ from 'lodash';
 import { Link, withRouter } from 'react-router-dom';
 import Helmet from 'react-helmet';
 import { RouteComponentProps } from 'react-router';
@@ -72,15 +71,13 @@ class APIView extends PureComponent<RouteComponentProps<RouteParams>, APIViewSta
                       </button>
                     ) : null}
                     <Highlight className="jsx">
-                      {_.trim(
-                        item.dataCode && isDataCodeActive
-                          ? `
+                      {item.dataCode && isDataCodeActive
+                        ? `
                             ${item.dataCode}
 
                             ${item.code}
-                          `
-                          : item.code,
-                      )}
+                          `.trim()
+                        : item.code.trim()}
                     </Highlight>
                   </div>
                 ) : null}
