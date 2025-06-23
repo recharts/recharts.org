@@ -69,17 +69,17 @@ const getIntroOfPage = (label) => {
 };
 
 const CustomTooltip = ({ active, payload, label }) => {
-  if (active && payload && payload.length) {
-    return (
-      <div className="custom-tooltip">
-        <p className="label">{`${label} : ${payload[0].value}`}</p>
-        <p className="intro">{getIntroOfPage(label)}</p>
-        <p className="desc">Anything you want can be displayed here.</p>
-      </div>
-    );
-  }
-
-  return null;
+  const isVisible = active && payload && payload.length;
+  return (
+    <div className="custom-tooltip" style={{ visibility: isVisible ? 'visible' : 'hidden' }}>
+      {isVisible && (
+        <>
+          <p className="label">{`${label} : ${payload[0].value}`}</p>
+          <p className="intro">{getIntroOfPage(label)}</p>
+          <p className="desc">Anything you want can be displayed here.</p></>
+      )}
+    </div>
+  );
 };
 
 export default class Example extends PureComponent {
@@ -102,7 +102,7 @@ export default class Example extends PureComponent {
           <CartesianGrid strokeDasharray="3 3" />
           <XAxis dataKey="name" />
           <YAxis />
-          <Tooltip content={<CustomTooltip />} />
+          <Tooltip content={CustomTooltip} />
           <Legend />
           <Bar dataKey="pv" barSize={20} fill="#8884d8" />
         </BarChart>
