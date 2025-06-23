@@ -58,7 +58,7 @@ function GettingStarted({ locale }: { locale: SupportedLocale }) {
       <p className="paragraph-title">{localeGet(locale, 'getting-started', 'step-1-desc')}</p>
 
       <div className="step-1">
-        <Highlight className="e4x">
+        <Highlight className="jsx">
           {`import { LineChart, Line } from 'recharts';
 const data = [{name: 'Page A', uv: 400, pv: 2400, amt: 2400}, ...];
 
@@ -77,7 +77,7 @@ const renderLineChart = (
       <h4 className="sub-title">{localeGet(locale, 'getting-started', 'step-2-title')}</h4>
       <p className="paragraph-title">{localeGet(locale, 'getting-started', 'step-2-desc')}</p>
       <div className="step-2">
-        <Highlight className="e4x">
+        <Highlight className="jsx">
           {`import { LineChart, Line, CartesianGrid, XAxis, YAxis } from 'recharts';
 const data = [{name: 'Page A', uv: 400, pv: 2400, amt: 2400}, ...];
 
@@ -102,7 +102,7 @@ const renderLineChart = (
       <h4 className="sub-title">{localeGet(locale, 'getting-started', 'step-3-title')}</h4>
       <p className="paragraph-title">{localeGet(locale, 'getting-started', 'step-3-desc')}</p>
       <div className="step-3">
-        <Highlight className="e4x">
+        <Highlight className="jsx">
           {`import { LineChart, Line, CartesianGrid, XAxis, YAxis } from 'recharts';
 const data = [{name: 'Page A', uv: 400, pv: 2400, amt: 2400}, ...];
 
@@ -137,7 +137,7 @@ const renderLineChart = (
       <h4 className="sub-title">{localeGet(locale, 'getting-started', 'step-4-title')}</h4>
       <p className="paragraph-title">{localeGet(locale, 'getting-started', 'step-4-desc')}</p>
       <div className="step-4">
-        <Highlight className="e4x">
+        <Highlight className="jsx">
           {`import { LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip } from 'recharts';
 const data = [{name: 'Page A', uv: 400, pv: 2400, amt: 2400}, ...];
 
@@ -174,7 +174,7 @@ const renderLineChart = (
       <h4 className="sub-title">{localeGet(locale, 'getting-started', 'step-5-title')}</h4>
       <p className="paragraph-title">{localeGet(locale, 'getting-started', 'step-5-desc')}</p>
       <div className="step-5">
-        <Highlight className="e4x">
+        <Highlight className="jsx">
           {`import { LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip } from 'recharts';
 const data = [{name: 'Page A', uv: 400, pv: 2400, amt: 2400}, ...];
 
@@ -200,7 +200,7 @@ const renderCustomAxisTick = ({ x, y, payload }) => {
   );
 };`}
         </Highlight>
-        <Highlight className="e4x">
+        <Highlight className="jsx">
           {`const renderLineChart = (
   <LineChart width={600} height={300} data={data} margin={{ top: 5, right: 20, bottom: 5, left: 0 }}>
     <Line type="monotone" dataKey="uv" stroke="#8884d8" />

@@ -71,7 +71,7 @@ class APIView extends PureComponent<RouteComponentProps<RouteParams>, APIViewSta
                         {localeGet(locale, 'api', isDataCodeActive ? 'hideData' : 'showData')}
                       </button>
                     ) : null}
-                    <Highlight className="e4x">
+                    <Highlight className="jsx">
                       {_.trim(
                         item.dataCode && isDataCodeActive
                           ? `
