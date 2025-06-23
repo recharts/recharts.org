@@ -103,7 +103,7 @@ class IndexView extends PureComponent<RouteComponentProps> {
               <Line type="monotone" dataKey="uv" stroke="#8884d8" />
               <Line type="monotone" dataKey="pv" stroke="#82ca9d" />
             </LineChart>
-            <Highlight className="e4x">{exCode}</Highlight>
+            <Highlight className="jsx">{exCode}</Highlight>
           </div>
         </div>
 

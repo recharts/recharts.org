@@ -1,10 +1,11 @@
-import _ from 'lodash';
+import { ReactNode } from 'react';
 import Locale, { SupportedLocale, supportedLocales } from '../locale';
 
 export const defaultLocale = 'en-US';
 
 export const localeGet = (locale: SupportedLocale, component: string, path: string) =>
-  _.get(Locale, `${locale}.${component}.${path}`);
+  // @ts-ignore
+  Locale?.[locale]?.[component]?.[path];
 
 const isSupportedLocale = (locale: string): locale is SupportedLocale => {
   return supportedLocales.includes(locale as SupportedLocale);
@@ -28,13 +29,13 @@ export const getLocaleType = (props: LocaleProps): SupportedLocale => {
   return locale;
 };
 
-export const parseLocalObj = (locale: SupportedLocale, value: string | object) => {
+export const parseLocalObj = (locale: SupportedLocale, value: string | Record<string, ReactNode>): ReactNode => {
   if (!value) {
     return '';
   }
 
-  if (_.isObject(value)) {
-    return _.get(value, `${locale}`, '') || _.get(value, 'en-US', '');
+  if (typeof value === 'object') {
+    return value[locale] ?? value['en-US'] ?? '';
   }
 
   return value || '';

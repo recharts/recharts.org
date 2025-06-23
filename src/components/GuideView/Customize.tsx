@@ -61,7 +61,7 @@ function Customize({ locale }: { locale: SupportedLocale }) {
       <h4 className="sub-title">{localeGet(locale, 'customize', 'step-1-title')}</h4>
       <p className="paragraph-title">{localeGet(locale, 'customize', 'step-1-desc')}</p>
       <div className="demo">
-        <Highlight className="e4x">
+        <Highlight className="jsx">
           {`import { BarChart, Bar, XAxis, YAxis } from 'recharts';
 const data = [{name: 'Page A', uv: 400, pv: 2400, amt: 2400}, ...];
 const renderCustomAxisTick = ({ x, y, payload }) => {
@@ -90,7 +90,7 @@ const renderCustomBarLabel = ({ payload, x, y, width, height, value }) => {
 };
 `}
         </Highlight>
-        <Highlight className="e4x">
+        <Highlight className="jsx">
           {`const renderBarChart = (
   <BarChart width={600} height={300} data={data}>
     <XAxis dataKey="name" tick={renderCustomAxisTick} />
@@ -111,7 +111,7 @@ const renderCustomBarLabel = ({ payload, x, y, width, height, value }) => {
       <h4 className="sub-title">{localeGet(locale, 'customize', 'step-2-title')}</h4>
       <p className="paragraph-title">{localeGet(locale, 'customize', 'step-2-desc')}</p>
       <div className="demo">
-        <Highlight className="e4x">
+        <Highlight className="jsx">
           {`import { BarChart, Bar, XAxis, YAxis } from 'recharts';
 const data = [{name: 'Page A', uv: 400, pv: 2400, amt: 2400}, ...];
 ...
@@ -131,7 +131,7 @@ const TriangleBar = (props) => {
 };
 `}
         </Highlight>
-        <Highlight className="e4x">
+        <Highlight className="jsx">
           {`const renderBarChart = (
   <BarChart width={600} height={300} data={data}>
     <XAxis dataKey="name" tick={renderCustomAxisTick} />
@@ -152,7 +152,7 @@ const TriangleBar = (props) => {
       <h4 className="sub-title">{localeGet(locale, 'customize', 'step-3-title')}</h4>
       <p className="paragraph-title">{localeGet(locale, 'customize', 'step-3-desc')}</p>
       <div className="demo">
-        <Highlight className="e4x">
+        <Highlight className="jsx">
           {`import { BarChart, Bar, XAxis, YAxis, Tooltip } from 'recharts';
 const data = [{name: 'Page A', uv: 400, pv: 2400, amt: 2400}, ...];
 ...
@@ -187,7 +187,7 @@ function CustomTooltip({ payload, label, active }) {
 }
 `}
         </Highlight>
-        <Highlight className="e4x">
+        <Highlight className="jsx">
           {`const renderBarChart = (
   <BarChart width={600} height={300} data={data}>
     <XAxis dataKey="name" tick={renderCustomAxisTick} />
@@ -210,7 +210,7 @@ function CustomTooltip({ payload, label, active }) {
       <h4 className="sub-title">{localeGet(locale, 'customize', 'step-4-title')}</h4>
       <p className="paragraph-title">{localeGet(locale, 'customize', 'step-4-desc')}</p>
       <div className="demo">
-        <Highlight className="e4x">
+        <Highlight className="jsx">
           {`import { BarChart, Bar, XAxis, YAxis, Tooltip, CartesianGrid } from 'recharts';
 const data = [{name: 'Page A', uv: 400, pv: 2400, amt: 2400}, ...];
 
@@ -237,7 +237,7 @@ const renderBarChart = (
       <h4 className="sub-title">{localeGet(locale, 'customize', 'step-5-title')}</h4>
       <p className="paragraph-title">{localeGet(locale, 'customize', 'step-5-desc')}</p>
       <div className="demo">
-        <Highlight className="e4x">
+        <Highlight className="jsx">
           {`import { BarChart, Bar, XAxis, YAxis, Tooltip, Legend, CartesianGrid } from 'recharts';
 const data = [{name: 'Page A', uv: 400, pv: 2400, amt: 2400}, ...];
 
