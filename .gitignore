@@ -6,3 +6,4 @@ build/
 public/examples
 /docs/
 /.idea/
+/coverage
