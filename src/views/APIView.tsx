@@ -1,8 +1,7 @@
 /* eslint-disable class-methods-use-this */
 import { PureComponent } from 'react';
-import { Link, withRouter } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Helmet from 'react-helmet';
-import { RouteComponentProps } from 'react-router';
 import API from '../docs/api';
 import APIExamples from '../docs/apiExamples';
 import Highlight from '../utils/Highlight.tsx';
@@ -10,15 +9,15 @@ import NewMenuTag from '../components/Shared/NewMenuTag';
 import { getLocaleType, localeGet, parseLocalObj } from '../utils/LocaleUtils.ts';
 import apiCates, { NEW_APIS } from '../docs/apiCates.ts';
 import './APIView.scss';
-import { RouteParams } from '../routes';
 import { SupportedLocale } from '../locale';
+import { RouteComponentProps, withRouter } from '../routes/withRouter.tsx';
 
 type APIViewState = {
   indexesPage: string;
   activeDataCodeIndexes: number[];
 };
 
-class APIView extends PureComponent<RouteComponentProps<RouteParams>, APIViewState> {
+class APIView extends PureComponent<RouteComponentProps, APIViewState> {
   state: APIViewState = {
     indexesPage: '',
     activeDataCodeIndexes: [],
@@ -187,8 +186,8 @@ class APIView extends PureComponent<RouteComponentProps<RouteParams>, APIViewSta
   }
 
   render() {
-    const { match } = this.props;
-    const page = match?.params?.name ?? 'AreaChart';
+    const { params } = this.props;
+    const page = params?.name ?? 'AreaChart';
 
     // @ts-ignore
     const api = API[page];

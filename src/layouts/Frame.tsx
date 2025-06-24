@@ -1,10 +1,10 @@
 import { Component, ReactNode } from 'react';
 import { Link } from 'react-router-dom';
-import { RouteComponentProps, withRouter } from 'react-router';
 import Helmet from 'react-helmet';
 import { getLocaleType, localeGet } from '../utils/LocaleUtils.ts';
 import '../styles/app.scss';
 import { TargetBlankLink } from '../components/Shared/TargetBlankLink.tsx';
+import { RouteComponentProps, withRouter } from '../routes/withRouter.tsx';
 
 const modules = ['guide', 'api', 'examples', 'storybook'];
 

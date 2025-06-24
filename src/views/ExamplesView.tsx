@@ -2,19 +2,18 @@
 /* eslint-disable jsx-a11y/interactive-supports-focus */
 import React, { PureComponent, ReactNode } from 'react';
 import Helmet from 'react-helmet';
-import { Link, withRouter } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { Runner } from 'react-runner';
 import * as ReactScope from 'react';
 import * as RechartsScope from 'recharts';
 import * as D3ShapeScope from 'd3-shape';
 import { Editor } from '@monaco-editor/react';
-import { RouteComponentProps } from 'react-router';
 import Examples from '../docs/exampleComponents';
 import { getLocaleType } from '../utils/LocaleUtils.ts';
 import './ExampleView.scss';
 import fetchFile from '../utils/fetchUtils.ts';
 import 'simple-line-icons/scss/simple-line-icons.scss';
-import { RouteParams } from '../routes';
+import { RouteComponentProps, withRouter } from '../routes/withRouter.tsx';
 
 // @ts-ignore
 const cates = Object.keys(Examples).sort((a, b) => Examples[a].order - Examples[b].order);
@@ -47,7 +46,7 @@ const parseExampleComponent = (compName: string): ExampleComponent | null => {
 
 const EXAMPLE_CODE_CACHE: Record<string, string> = {};
 
-type ExamplesViewProps = RouteComponentProps<RouteParams>;
+type ExamplesViewProps = RouteComponentProps;
 
 type ExamplesViewState = {
   isLoading: boolean | null;
@@ -69,8 +68,8 @@ class ExamplesView extends PureComponent<ExamplesViewProps, ExamplesViewState> {
   errorRetryAttempts = 0;
 
   static getDerivedStateFromProps(nextProps: ExamplesViewProps, prevState: ExamplesViewState) {
-    const { match } = nextProps;
-    const page = match?.params?.name;
+    const { params } = nextProps;
+    const page = params?.name;
     if (page !== prevState.prevPage) {
       return {
         prevPage: page,
@@ -247,8 +246,8 @@ class ExamplesView extends PureComponent<ExamplesViewProps, ExamplesViewState> {
   }
 
   getPage(): string {
-    const { match } = this.props;
-    const page = match?.params?.name ?? 'SimpleLineChart';
+    const { params } = this.props;
+    const page = params?.name ?? 'SimpleLineChart';
     return page;
   }
 
