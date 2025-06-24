@@ -15,6 +15,7 @@ import './ExampleView.scss';
 import fetchFile from '../utils/fetchUtils.ts';
 import 'simple-line-icons/scss/simple-line-icons.scss';
 import { RouteParams } from '../routes';
+import { StackBlitzLink } from '../components/Shared/StackBlitzLink.tsx';
 
 // @ts-ignore
 const cates = Object.keys(Examples).sort((a, b) => Examples[a].order - Examples[b].order);
@@ -279,16 +280,14 @@ class ExamplesView extends PureComponent<ExamplesViewProps, ExamplesViewState> {
                 {this.renderResult()}
                 {this.renderEditor(exampleResult)}
               </div>
-              {exampleResult.exampleComponent.demoUrl ? (
+              {this.state.exampleCode ? (
                 <p className="example-link-wrapper">
-                  <a
-                    className="example-code-sandbox-link"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href={exampleResult.exampleComponent.demoUrl}
+                  <StackBlitzLink
+                    code={this.state.exampleCode}
+                    title={`Recharts example: ${exampleResult.cateName} - ${exampleResult.exampleName}`}
                   >
-                    Try the demo in CodeSandbox &gt;&gt;
-                  </a>
+                    Try the demo in StackBlitz
+                  </StackBlitzLink>
                 </p>
               ) : null}
             </div>
