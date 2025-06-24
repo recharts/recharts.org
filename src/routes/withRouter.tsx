@@ -8,9 +8,13 @@
 import { ComponentType } from 'react';
 import { useLocation, useParams } from 'react-router';
 
+type MinimalLocation = {
+  pathname?: string;
+};
+
 export type RouteComponentProps = {
   params: Readonly<Record<string, string>>;
-  location: Location;
+  location: MinimalLocation;
 };
 
 type ParamsProvidedByHoc = keyof RouteComponentProps;
