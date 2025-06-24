@@ -1,5 +1,6 @@
 import { ReactNode } from 'react';
 import Locale, { SupportedLocale, supportedLocales } from '../locale';
+import { RouteComponentProps } from '../routes/withRouter.tsx';
 
 export const defaultLocale = 'en-US';
 
@@ -11,22 +12,12 @@ const isSupportedLocale = (locale: string): locale is SupportedLocale => {
   return supportedLocales.includes(locale as SupportedLocale);
 };
 
-type LocaleProps = {
-  location?: {
-    pathname?: string;
-  };
-};
-
-export const getLocaleType = (props: LocaleProps): SupportedLocale => {
-  const pathname = (props && props.location && props.location.pathname) || '/';
-  const routes = pathname.split('/');
-  const locale = routes && routes.length >= 2 ? routes[1] : defaultLocale;
-
-  if (!isSupportedLocale(locale)) {
-    return defaultLocale;
+export const getLocaleType = (props: RouteComponentProps): SupportedLocale => {
+  const localeFromParams = props.params?.locale;
+  if (localeFromParams && isSupportedLocale(localeFromParams)) {
+    return localeFromParams;
   }
-
-  return locale;
+  return defaultLocale;
 };
 
 export const parseLocalObj = (locale: SupportedLocale, value: string | Record<string, ReactNode>): ReactNode => {

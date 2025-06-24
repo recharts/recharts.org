@@ -46,8 +46,8 @@ class Frame extends Component<FrameProps> {
   }
 
   render() {
-    const { children, location } = this.props;
-    const page = location.pathname.split('/').filter((item) => !!item)[1] || 'index';
+    const { children, params } = this.props;
+    const page = params.name;
     const locale = getLocaleType(this.props);
 
     return (
