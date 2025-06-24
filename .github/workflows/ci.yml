@@ -19,9 +19,16 @@ jobs:
     build_test:
         name: Build & Test
         runs-on: ubuntu-latest
+        env:
+          # Codecov token is required for the build step to start uploading bundle size reports
+          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
         steps:
         - name: Checkout Repository
           uses: actions/checkout@v4
+          # Codecov wants fetch-depth > 1
+          # see https://docs.codecov.com/docs/environment-specific-requirements#github-actions
+          with:
+            fetch-depth: 2
 
         - name: Use Node.js ${{ env.NODE_VERSION }}
           uses: actions/setup-node@v4
