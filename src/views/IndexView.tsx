@@ -1,12 +1,12 @@
 import { PureComponent } from 'react';
-import { RouteComponentProps } from 'react-router';
-import { Link, withRouter } from 'react-router-dom';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid } from 'recharts';
+import { Link } from 'react-router';
 import Highlight from '../utils/Highlight.tsx';
 import { getLocaleType, localeGet } from '../utils/LocaleUtils.ts';
 import './IndexView.scss';
 import 'simple-line-icons/scss/simple-line-icons.scss';
 import users from '../docs/users/users';
+import { RouteComponentProps, withRouter } from '../routes/withRouter.tsx';
 
 const data = [
   {

@@ -1,56 +1,52 @@
-import { Redirect, Route, Switch } from 'react-router-dom';
+import { Navigate, Route, Routes } from 'react-router';
 import { IndexView, GuideView, APIView, ExamplesView, Storybook } from '../views';
 import Frame from '../layouts/Frame';
 import { defaultLocale } from '../utils/LocaleUtils.ts';
 
-export type RouteParams = {
-  name?: string;
-};
-
 export default function routes() {
   return (
-    <Switch>
-      <Route path="/" exact render={() => <Redirect to={`/${defaultLocale}`} />} />
+    <Routes>
+      <Route path="/" element={<Navigate to={`/${defaultLocale}`} />} />
       <Route
-        path="/*/guide/:name?"
-        render={() => (
+        path="/:locale/guide/:name?"
+        element={
           <Frame>
             <GuideView />
           </Frame>
-        )}
+        }
       />
       <Route
-        path="/*/api/:name?"
-        render={() => (
+        path="/:locale/api/:name?"
+        element={
           <Frame>
             <APIView />
           </Frame>
-        )}
+        }
       />
       <Route
-        path="/*/examples/:name?"
-        render={() => (
+        path="/:locale/examples/:name?"
+        element={
           <Frame>
             <ExamplesView />
           </Frame>
-        )}
+        }
       />
       <Route
-        path="/*/storybook"
-        render={() => (
+        path="/:locale/storybook"
+        element={
           <Frame>
             <Storybook />
           </Frame>
-        )}
+        }
       />
       <Route
         path="*"
-        render={() => (
+        element={
           <Frame>
             <IndexView />
           </Frame>
-        )}
+        }
       />
-    </Switch>
+    </Routes>
   );
 }
