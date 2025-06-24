@@ -1,4 +1,4 @@
-import { Navigate, Route, Routes } from 'react-router-dom';
+import { Navigate, Route, Routes } from 'react-router';
 import { IndexView, GuideView, APIView, ExamplesView, Storybook } from '../views';
 import Frame from '../layouts/Frame';
 import { defaultLocale } from '../utils/LocaleUtils.ts';

@@ -1,6 +1,6 @@
 import { Component, ReactNode } from 'react';
-import { Link } from 'react-router-dom';
 import Helmet from 'react-helmet';
+import { Link, NavLink } from 'react-router';
 import { getLocaleType, localeGet } from '../utils/LocaleUtils.ts';
 import '../styles/app.scss';
 import { TargetBlankLink } from '../components/Shared/TargetBlankLink.tsx';
@@ -29,7 +29,7 @@ class Frame extends Component<FrameProps> {
           const linkPath = pathName.indexOf(curLocale) >= 0 ? pathName.replace(curLocale, locale) : `/${locale}`;
 
           return (
-            <span key={`item-${index}`}>
+            <span key={locale}>
               {index ? <span>&nbsp;&nbsp;|&nbsp;&nbsp;</span> : null}
               {isActive ? (
                 <span className="switch-item active">{text}</span>
@@ -46,8 +46,7 @@ class Frame extends Component<FrameProps> {
   }
 
   render() {
-    const { children, params } = this.props;
-    const page = params.name;
+    const { children } = this.props;
     const locale = getLocaleType(this.props);
 
     return (
@@ -62,11 +61,9 @@ class Frame extends Component<FrameProps> {
             </h1>
             <nav>
               <ul className="nav" id="nav">
-                {modules.map((entry, index) => (
-                  <li key={`item-${index}`}>
-                    <Link className={`nav-link ${entry === page ? 'active' : ''}`} to={`/${locale}/${entry}`}>
-                      {localeGet(locale, 'frame', entry)}
-                    </Link>
+                {modules.map((entry) => (
+                  <li key={entry}>
+                    <NavLink to={`/${locale}/${entry}`}>{localeGet(locale, 'frame', entry)}</NavLink>
                   </li>
                 ))}
                 <li className="github-wiki">
@@ -84,7 +81,7 @@ class Frame extends Component<FrameProps> {
         <footer>
           <p>
             <span>Released under the </span>
-            <a href="http://opensource.org/licenses/MIT" target="_blank" rel="noreferrer">
+            <a href="https://opensource.org/licenses/MIT" target="_blank" rel="noreferrer">
               MIT License
             </a>
           </p>

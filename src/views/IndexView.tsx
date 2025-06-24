@@ -1,6 +1,6 @@
 import { PureComponent } from 'react';
-import { Link } from 'react-router-dom';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid } from 'recharts';
+import { Link } from 'react-router';
 import Highlight from '../utils/Highlight.tsx';
 import { getLocaleType, localeGet } from '../utils/LocaleUtils.ts';
 import './IndexView.scss';

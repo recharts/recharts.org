@@ -2,12 +2,12 @@
 /* eslint-disable jsx-a11y/interactive-supports-focus */
 import React, { PureComponent, ReactNode } from 'react';
 import Helmet from 'react-helmet';
-import { Link } from 'react-router-dom';
 import { Runner } from 'react-runner';
 import * as ReactScope from 'react';
 import * as RechartsScope from 'recharts';
 import * as D3ShapeScope from 'd3-shape';
 import { Editor } from '@monaco-editor/react';
+import { Link } from 'react-router';
 import Examples from '../docs/exampleComponents';
 import { getLocaleType } from '../utils/LocaleUtils.ts';
 import './ExampleView.scss';

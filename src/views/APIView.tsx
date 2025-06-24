@@ -1,7 +1,7 @@
 /* eslint-disable class-methods-use-this */
 import { PureComponent } from 'react';
-import { Link } from 'react-router-dom';
 import Helmet from 'react-helmet';
+import { Link } from 'react-router';
 import API from '../docs/api';
 import APIExamples from '../docs/apiExamples';
 import Highlight from '../utils/Highlight.tsx';

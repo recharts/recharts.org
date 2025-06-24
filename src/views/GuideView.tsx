@@ -1,5 +1,5 @@
 import { PureComponent } from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router';
 import { Installation, GettingStarted, Customize } from '../components/GuideView';
 import { getLocaleType, localeGet } from '../utils/LocaleUtils.ts';
 import { SupportedLocale } from '../locale';
