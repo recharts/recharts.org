@@ -1,6 +1,7 @@
 import { ReactNode } from 'react';
 import stackblitzSdk, { ProjectDependencies } from '@stackblitz/sdk';
 import { TargetBlankLink } from './TargetBlankLink.tsx';
+import { sendEvent } from '../analytics.ts';
 
 type StackBlitzLinkProps = {
   /**
@@ -51,6 +52,11 @@ export function StackBlitzLink({ code, title, children }: StackBlitzLinkProps) {
       href="#stackblitz-open-project"
       onClick={(e) => {
         e.preventDefault();
+        sendEvent({
+          category: 'StackBlitz',
+          action: 'Open Project',
+          label: title,
+        });
         /*
          * https://developer.stackblitz.com/guides/integration/create-with-sdk#creating-a-new-project
          */

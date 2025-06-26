@@ -15,6 +15,7 @@ import fetchFile from '../utils/fetchUtils.ts';
 import 'simple-line-icons/scss/simple-line-icons.scss';
 import { RouteComponentProps, withRouter } from '../routes/withRouter.tsx';
 import { StackBlitzLink } from '../components/Shared/StackBlitzLink.tsx';
+import { sendEvent } from '../components/analytics.ts';
 
 // @ts-ignore
 const cates = Object.keys(Examples).sort((a, b) => Examples[a].order - Examples[b].order);
@@ -156,6 +157,11 @@ class ExamplesView extends PureComponent<ExamplesViewProps, ExamplesViewState> {
 
   handleRunCode = () => {
     if (this.editorRef.current) {
+      sendEvent({
+        category: 'Examples',
+        action: 'Run Code',
+        label: this.getPage(),
+      });
       this.setState({
         // @ts-ignore
         exampleCode: this.editorRef.current.getValue(),
