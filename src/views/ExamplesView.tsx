@@ -1,14 +1,12 @@
-/* eslint-disable camelcase */
-/* eslint-disable jsx-a11y/interactive-supports-focus */
-import React, { PureComponent, ReactNode } from 'react';
+import React, * as ReactScope from 'react';
+import { ComponentType, PureComponent, ReactNode } from 'react';
 import Helmet from 'react-helmet';
 import { Runner } from 'react-runner';
-import * as ReactScope from 'react';
 import * as RechartsScope from 'recharts';
 import * as D3ShapeScope from 'd3-shape';
 import { Editor } from '@monaco-editor/react';
 import { Link } from 'react-router';
-import Examples from '../docs/exampleComponents';
+import { allExamples } from '../docs/exampleComponents';
 import { getLocaleType } from '../utils/LocaleUtils.ts';
 import './ExampleView.scss';
 import fetchFile from '../utils/fetchUtils.ts';
@@ -16,21 +14,20 @@ import 'simple-line-icons/scss/simple-line-icons.scss';
 import { RouteComponentProps, withRouter } from '../routes/withRouter.tsx';
 import { StackBlitzLink } from '../components/Shared/StackBlitzLink.tsx';
 import { sendEvent } from '../components/analytics.ts';
+import { ComponentExamples } from '../docs/exampleComponents/types.ts';
 
-// @ts-ignore
-const cates = Object.keys(Examples).sort((a, b) => Examples[a].order - Examples[b].order);
+const categoryNames = Object.keys(allExamples).sort((a, b) => allExamples[a].order - allExamples[b].order);
 
 type ExampleComponent = {
   cateName: string;
   exampleName: string;
-  exampleComponent: any;
+  exampleComponent: ComponentType;
 };
 
 const parseExampleComponent = (compName: string): ExampleComponent | null => {
-  const typeList = Object.keys(Examples);
+  const typeList = Object.keys(allExamples);
   const res = typeList.filter((key) => {
-    // @ts-ignore
-    const entry = Examples[key];
+    const entry: ComponentExamples = allExamples[key];
 
     return !!entry.examples[compName];
   });
@@ -39,8 +36,7 @@ const parseExampleComponent = (compName: string): ExampleComponent | null => {
     return {
       cateName: res[0],
       exampleName: compName,
-      // @ts-ignore
-      exampleComponent: Examples[res[0]].examples[compName],
+      exampleComponent: allExamples[res[0]].examples[compName],
     };
   }
   return null;
@@ -171,8 +167,7 @@ class ExamplesView extends PureComponent<ExamplesViewProps, ExamplesViewState> {
 
   renderMenuList(type: string, locale: string) {
     const page = this.getPage();
-    // @ts-ignore
-    const { examples } = Examples[type];
+    const { examples } = allExamples[type];
     const typeNameList = Object.keys(examples);
 
     const items = typeNameList.map((name) => (
@@ -254,8 +249,7 @@ class ExamplesView extends PureComponent<ExamplesViewProps, ExamplesViewState> {
 
   getPage(): string {
     const { params } = this.props;
-    const page = params?.name ?? 'SimpleLineChart';
-    return page;
+    return params?.name ?? 'SimpleLineChart';
   }
 
   render() {
@@ -270,8 +264,8 @@ class ExamplesView extends PureComponent<ExamplesViewProps, ExamplesViewState> {
         <div className="sidebar">
           <h2>Examples</h2>
 
-          {cates.map((cate, index) => (
-            <div className="sidebar-cate" key={`cate-${index}`}>
+          {categoryNames.map((cate) => (
+            <div className="sidebar-cate" key={cate}>
               <h4>{cate}</h4>
               {this.renderMenuList(cate, locale)}
             </div>

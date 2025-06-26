@@ -10,18 +10,20 @@ import TreeMapExamples from './TreeMap';
 import TooltipExamples from './Tooltip';
 import LegendExamples from './Legend';
 import ResponsiveContainerExamples from './ResponsiveContainer';
+import { AllExamples } from './types.ts';
 
-export default {
+export const allExamples: AllExamples = {
   LineChart: { examples: LineChartExamples, order: 1 },
   AreaChart: { examples: AreaChartExamples, order: 2 },
-  BarChart: { examples: BarChartExamples, order: 2 },
-  ComposedChart: { examples: ComposedChartExamples, order: 3 },
-  ScatterChart: { examples: ScatterChartExamples, order: 4 },
-  PieChart: { examples: PieChartExamples, order: 5 },
-  RadarChart: { examples: RadarChartExamples, order: 6 },
-  RadialBarChart: { examples: RadialBarChartExamples, order: 7 },
-  TreeMap: { examples: TreeMapExamples, order: 8 },
-  Tooltip: { examples: TooltipExamples, order: 9 },
-  Legend: { examples: LegendExamples, order: 10 },
-  ResponsiveContainer: { examples: ResponsiveContainerExamples, order: 11 },
+  BarChart: { examples: BarChartExamples, order: 3 },
+  ComposedChart: { examples: ComposedChartExamples, order: 4 },
+  ScatterChart: { examples: ScatterChartExamples, order: 5 },
+  PieChart: { examples: PieChartExamples, order: 6 },
+  RadarChart: { examples: RadarChartExamples, order: 7 },
+  RadialBarChart: { examples: RadialBarChartExamples, order: 8 },
+  TreeMap: { examples: TreeMapExamples, order: 9 },
+  Tooltip: { examples: TooltipExamples, order: 10 },
+  Legend: { examples: LegendExamples, order: 11 },
+  ResponsiveContainer: { examples: ResponsiveContainerExamples, order: 12 },
 };
+
