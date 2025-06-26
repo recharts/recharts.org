@@ -7,6 +7,7 @@ import { codecovVitePlugin } from '@codecov/vite-plugin';
 export default defineConfig({
   // depending on your application, base can also be "/"
   base: '/',
+  loader: { '.js': 'jsx' },
   plugins: [
     react({
       babel: {
