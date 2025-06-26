@@ -56,14 +56,13 @@ const map = {
   'getting-started': {
     'getting-started': 'Getting Started',
     'step-1-title': '1. Choose the type of chart you need',
-    'step-1-desc': 'Generate a simple chart by using plain javascript data (usually an array of objects).',
-    'step-2-title': '2. Add components that you want to be drawn',
-    'step-2-desc': 'LineChart can have XAxis, YAxis, Legend, CartesianGrid and so on.',
-    'step-3-title': '3. Adjust the props of some components',
-    'step-3-desc': `For example, margin-right should be bigger in order to display the right-most x-axis label
-    and the stroke style of the cartesian grid can be dashed for better readability.`,
+    'step-1-desc': 'Create a simple chart by using plain javascript data: an array of objects.',
+    'step-2-title': '2. Add more components',
+    'step-2-desc': 'LineChart can have XAxis, YAxis, Legend, CartesianGrid and more.',
+    'step-3-title': '3. Adjust the props of your components',
+    'step-3-desc': `Modify colors, sizes, and other properties of your components to fit your design.`,
     'step-4-title': '4. Add interactions',
-    'step-4-desc': 'We can easily drop-in a Tooltip component and have rich hovering tooltip functionality.',
+    'step-4-desc': 'Add a Tooltip component to display information when hovering over your chart.',
     'step-5-title': '5. Customize your components',
     'step-5-desc': `For example, you can edit your x-axis label very easily by passing in a custom axis
      tick render function. You can do similar things with other graphs as well, such as custom shapes for bar

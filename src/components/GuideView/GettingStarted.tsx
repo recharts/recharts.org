@@ -1,4 +1,4 @@
-import { LineChart, Line, XAxis, YAxis, Tooltip, CartesianGrid } from 'recharts';
+import { LineChart, Line, XAxis, YAxis, Tooltip, CartesianGrid, Legend } from 'recharts';
 import Highlight from '../../utils/Highlight.tsx';
 import renderCustomAxisTick from './CustomAxisTick';
 import { localeGet } from '../../utils/LocaleUtils.ts';
@@ -19,7 +19,7 @@ const data = [
   },
   {
     name: 'Page C',
-    uv: 300,
+    uv: 320,
     pv: 1398,
     amt: 2400,
   },
@@ -55,15 +55,15 @@ function GettingStarted({ locale }: { locale: SupportedLocale }) {
           {`import { LineChart, Line } from 'recharts';
 const data = [{name: 'Page A', uv: 400, pv: 2400, amt: 2400}, ...];
 
-const renderLineChart = (
-  <LineChart width={400} height={400} data={data}>
-    <Line type="monotone" dataKey="uv" stroke="#8884d8" />
+const MyChart = () => (
+  <LineChart width={600} height={300} data={data}>
+    <Line dataKey="uv" />
   </LineChart>
 );`}
         </Highlight>
 
         <LineChart width={600} height={300} data={data}>
-          <Line type="monotone" dataKey="uv" stroke="#8884d8" />
+          <Line dataKey="uv" />
         </LineChart>
       </div>
 
@@ -74,21 +74,23 @@ const renderLineChart = (
           {`import { LineChart, Line, CartesianGrid, XAxis, YAxis } from 'recharts';
 const data = [{name: 'Page A', uv: 400, pv: 2400, amt: 2400}, ...];
 
-const renderLineChart = (
+const MyChart = () => (
   <LineChart width={600} height={300} data={data}>
-    <Line type="monotone" dataKey="uv" stroke="#8884d8" />
-    <CartesianGrid stroke="#ccc" />
+    <CartesianGrid />
+    <Line dataKey="uv" />
     <XAxis dataKey="name" />
     <YAxis />
+    <Legend />
   </LineChart>
 );`}
         </Highlight>
 
         <LineChart width={600} height={300} data={data}>
-          <Line type="monotone" dataKey="uv" stroke="#8884d8" />
-          <CartesianGrid stroke="#ccc" />
+          <CartesianGrid />
+          <Line dataKey="uv" />
           <XAxis dataKey="name" />
           <YAxis />
+          <Legend />
         </LineChart>
       </div>
 
@@ -96,15 +98,16 @@ const renderLineChart = (
       <p className="paragraph-title">{localeGet(locale, 'getting-started', 'step-3-desc')}</p>
       <div className="step-3">
         <Highlight className="jsx">
-          {`import { LineChart, Line, CartesianGrid, XAxis, YAxis } from 'recharts';
+          {`import { LineChart, Line, CartesianGrid, XAxis, YAxis, Legend } from 'recharts';
 const data = [{name: 'Page A', uv: 400, pv: 2400, amt: 2400}, ...];
 
-const renderLineChart = (
+const MyChart = () => (
   <LineChart width={600} height={300} data={data} margin={{ top: 5, right: 20, bottom: 5, left: 0 }}>
-    <Line type="monotone" dataKey="uv" stroke="#8884d8" />
-    <CartesianGrid stroke="#ccc" strokeDasharray="5 5" />
+    <CartesianGrid stroke="#aaa" strokeDasharray="5 5" />
+    <Line type="monotone" dataKey="uv" stroke="purple" strokeWidth={2} name="My data series name" />
     <XAxis dataKey="name" />
-    <YAxis />
+    <YAxis width="auto" label={{ value: 'UV', position: 'insideLeft', angle: -90 }} />
+    <Legend align="right" />
   </LineChart>
 );`}
         </Highlight>
@@ -120,10 +123,11 @@ const renderLineChart = (
             left: 0,
           }}
         >
-          <Line type="monotone" dataKey="uv" stroke="#8884d8" />
-          <CartesianGrid stroke="#ccc" strokeDasharray="5 5" />
+          <CartesianGrid stroke="#aaa" strokeDasharray="5 5" />
+          <Line type="monotone" dataKey="uv" stroke="purple" strokeWidth={2} name="My data series name" />
           <XAxis dataKey="name" />
-          <YAxis width={40} />
+          <YAxis width="auto" label={{ value: 'UV', position: 'insideLeft', angle: -90 }} />
+          <Legend align="right" />
         </LineChart>
       </div>
 
@@ -131,15 +135,16 @@ const renderLineChart = (
       <p className="paragraph-title">{localeGet(locale, 'getting-started', 'step-4-desc')}</p>
       <div className="step-4">
         <Highlight className="jsx">
-          {`import { LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip } from 'recharts';
+          {`import { LineChart, Line, CartesianGrid, XAxis, YAxis, Legend, Tooltip } from 'recharts';
 const data = [{name: 'Page A', uv: 400, pv: 2400, amt: 2400}, ...];
 
-const renderLineChart = (
+const MyChart = () => (
   <LineChart width={600} height={300} data={data} margin={{ top: 5, right: 20, bottom: 5, left: 0 }}>
-    <Line type="monotone" dataKey="uv" stroke="#8884d8" />
-    <CartesianGrid stroke="#ccc" strokeDasharray="5 5" />
+    <CartesianGrid stroke="#aaa" strokeDasharray="5 5" />
+    <Line type="monotone" dataKey="uv" stroke="purple" strokeWidth={2} name="My data series name" />
     <XAxis dataKey="name" />
-    <YAxis />
+    <YAxis width="auto" label={{ value: 'UV', position: 'insideLeft', angle: -90 }} />
+    <Legend align="right" />
     <Tooltip />
   </LineChart>
 );`}
@@ -156,10 +161,11 @@ const renderLineChart = (
             left: 0,
           }}
         >
-          <Line type="monotone" dataKey="uv" stroke="#8884d8" />
-          <CartesianGrid stroke="#ccc" strokeDasharray="5 5" />
+          <CartesianGrid stroke="#aaa" strokeDasharray="5 5" />
+          <Line type="monotone" dataKey="uv" stroke="purple" strokeWidth={2} name="My data series name" />
           <XAxis dataKey="name" />
-          <YAxis width={40} />
+          <YAxis width="auto" label={{ value: 'UV', position: 'insideLeft', angle: -90 }} />
+          <Legend align="right" />
           <Tooltip />
         </LineChart>
       </div>
@@ -168,7 +174,7 @@ const renderLineChart = (
       <p className="paragraph-title">{localeGet(locale, 'getting-started', 'step-5-desc')}</p>
       <div className="step-5">
         <Highlight className="jsx">
-          {`import { LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip } from 'recharts';
+          {`import { LineChart, Line, CartesianGrid, XAxis, YAxis, Legend, Tooltip } from 'recharts';
 const data = [{name: 'Page A', uv: 400, pv: 2400, amt: 2400}, ...];
 
 const renderCustomAxisTick = ({ x, y, payload }) => {
@@ -191,15 +197,15 @@ const renderCustomAxisTick = ({ x, y, payload }) => {
       <path d={path} />
     </svg>
   );
-};`}
-        </Highlight>
-        <Highlight className="jsx">
-          {`const renderLineChart = (
+};
+
+const renderLineChart = (
   <LineChart width={600} height={300} data={data} margin={{ top: 5, right: 20, bottom: 5, left: 0 }}>
-    <Line type="monotone" dataKey="uv" stroke="#8884d8" />
-    <CartesianGrid stroke="#ccc" strokeDasharray="5 5" />
+    <CartesianGrid stroke="#aaa" strokeDasharray="5 5" />
+    <Line type="monotone" dataKey="uv" stroke="purple" strokeWidth={2} name="My data series name" />
     <XAxis dataKey="name" tick={renderCustomAxisTick} />
-    <YAxis />
+    <YAxis width="auto" label={{ value: 'UV', position: 'insideLeft', angle: -90 }} />
+    <Legend align="right" />
     <Tooltip />
   </LineChart>
 );
@@ -217,10 +223,11 @@ const renderCustomAxisTick = ({ x, y, payload }) => {
             left: 0,
           }}
         >
-          <Line type="monotone" dataKey="uv" stroke="#8884d8" />
-          <CartesianGrid stroke="#ccc" strokeDasharray="5 5" />
-          <XAxis dataKey="name" tick={renderCustomAxisTick} />
-          <YAxis width={40} />
+          <CartesianGrid stroke="#aaa" strokeDasharray="5 5" />
+          <Line type="monotone" dataKey="uv" stroke="purple" strokeWidth={2} name="My data series name" />
+          <XAxis dataKey="name" tick={renderCustomAxisTick} height={50} />
+          <YAxis width="auto" label={{ value: 'UV', position: 'insideLeft', angle: -90 }} />
+          <Legend align="right" />
           <Tooltip />
         </LineChart>
       </div>
