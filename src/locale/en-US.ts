@@ -55,8 +55,6 @@ const map = {
   },
   'getting-started': {
     'getting-started': 'Getting Started',
-    'with-help': 'With the help of ',
-    'plugin-desc': ', we can import components we actually need, making the project smaller than otherwise.',
     'step-1-title': '1. Choose the type of chart you need',
     'step-1-desc': 'Generate a simple chart by using plain javascript data (usually an array of objects).',
     'step-2-title': '2. Add components that you want to be drawn',

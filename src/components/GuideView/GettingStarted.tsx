@@ -48,13 +48,6 @@ function GettingStarted({ locale }: { locale: SupportedLocale }) {
     <div className="mod-getting-started" id="Getting_Started">
       <h3 className="page-title">{localeGet(locale, 'getting-started', 'getting-started')}</h3>
       <h4 className="sub-title">{localeGet(locale, 'getting-started', 'step-1-title')}</h4>
-      <p className="paragraph-title">
-        {localeGet(locale, 'getting-started', 'with-help')}
-        <a href="https://github.com/recharts/babel-plugin-recharts" target="_blank" rel="noreferrer">
-          babel-plugin-recharts
-        </a>
-        {localeGet(locale, 'getting-started', 'plugin-desc')}
-      </p>
       <p className="paragraph-title">{localeGet(locale, 'getting-started', 'step-1-desc')}</p>
 
       <div className="step-1">
