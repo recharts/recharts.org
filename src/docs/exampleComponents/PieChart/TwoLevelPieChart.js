@@ -22,7 +22,7 @@ const data02 = [
 ];
 
 export default class Example extends PureComponent {
-  static demoUrl = 'https://codesandbox.io/s/pie-chart-of-two-levels-gor24';
+
 
   render() {
     return (

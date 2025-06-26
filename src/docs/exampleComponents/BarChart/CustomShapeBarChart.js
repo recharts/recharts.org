@@ -86,4 +86,4 @@ export default function App() {
   );
 }
 
-App.demoUrl = 'https://codesandbox.io/p/sandbox/bar-chart-with-customized-shape-jpsj68';
+

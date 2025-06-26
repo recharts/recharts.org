@@ -52,7 +52,7 @@ const minX = Math.min(...data.map((d) => d.x));
 const minY = Math.min(...data.map((d) => d.y));
 
 export default class Example extends PureComponent {
-  static demoUrl = 'https://codesandbox.io/p/sandbox/line-chart-negative-values-w-ref-lines-rwfwh7';
+
 
   render() {
     return (

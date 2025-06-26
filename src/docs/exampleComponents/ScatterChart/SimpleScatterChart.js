@@ -11,7 +11,7 @@ const data = [
 ];
 
 export default class Example extends PureComponent {
-  static demoUrl = 'https://codesandbox.io/p/sandbox/scatter-chart-simple-y4mg7g';
+
 
   render() {
     return (

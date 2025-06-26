@@ -96,6 +96,6 @@ const Example = () => {
   );
 };
 
-Example.demoUrl = 'https://codesandbox.io/p/sandbox/customized-legend-event-gwscjg';
+
 
 export default Example;

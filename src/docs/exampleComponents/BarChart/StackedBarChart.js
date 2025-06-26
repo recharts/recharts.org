@@ -47,7 +47,7 @@ const data = [
 ];
 
 export default class Example extends PureComponent {
-  static demoUrl = 'https://codesandbox.io/p/sandbox/stacked-bar-chart-7fwfgj';
+
 
   render() {
     return (

@@ -29,7 +29,7 @@ const data02 = [
 ];
 
 export default class Example extends PureComponent {
-  static demoUrl = 'https://codesandbox.io/p/sandbox/scatter-chart-of-three-dimensions-nqkj42';
+
 
   render() {
     return (

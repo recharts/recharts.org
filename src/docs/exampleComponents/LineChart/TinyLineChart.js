@@ -56,6 +56,6 @@ const Example = () => {
   );
 };
 
-Example.demoUrl = 'https://codesandbox.io/p/sandbox/tiny-line-chart-5f5vq6';
+
 
 export default Example;

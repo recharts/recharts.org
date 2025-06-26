@@ -41,7 +41,7 @@ const data = [
 ];
 
 export default class Example extends PureComponent {
-  static demoUrl = 'https://codesandbox.io/p/sandbox/simple-radar-chart-2p5sxm';
+
 
   render() {
     return (

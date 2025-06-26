@@ -73,7 +73,7 @@ const renderTooltipContent = (o) => {
 };
 
 export default class Example extends PureComponent {
-  static demoUrl = 'https://codesandbox.io/p/sandbox/percent-stacked-area-chart-xn7gzq';
+
 
   render() {
     return (

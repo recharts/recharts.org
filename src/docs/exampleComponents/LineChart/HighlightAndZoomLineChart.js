@@ -59,7 +59,7 @@ const initialState = {
 };
 
 export default class Example extends PureComponent {
-  static demoUrl = 'https://codesandbox.io/p/sandbox/highlight-zoom-line-chart-rrj8f4';
+
 
   constructor(props) {
     super(props);

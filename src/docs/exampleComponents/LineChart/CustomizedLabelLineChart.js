@@ -75,7 +75,7 @@ class CustomizedAxisTick extends PureComponent {
 }
 
 export default class Example extends PureComponent {
-  static demoUrl = 'https://codesandbox.io/p/sandbox/line-chart-with-customized-label-d6rytv';
+
 
   render() {
     return (

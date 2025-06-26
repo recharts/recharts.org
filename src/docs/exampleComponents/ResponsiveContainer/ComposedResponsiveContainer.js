@@ -52,7 +52,7 @@ const data = [
 ];
 
 export default class Example extends PureComponent {
-  static demoUrl = 'https://codesandbox.io/p/sandbox/composed-chart-in-responsive-container-4vx38p';
+
 
   render() {
     return (

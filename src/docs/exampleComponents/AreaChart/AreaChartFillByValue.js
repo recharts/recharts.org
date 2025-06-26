@@ -63,7 +63,7 @@ const gradientOffset = () => {
 const off = gradientOffset();
 
 export default class Example extends PureComponent {
-  static demoUrl = 'https://codesandbox.io/p/sandbox/area-chart-filled-by-sign-td4jqk';
+
 
   render() {
     return (
