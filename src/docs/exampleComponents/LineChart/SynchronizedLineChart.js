@@ -59,7 +59,7 @@ const data = [
 ];
 
 export default class Example extends PureComponent {
-  static demoUrl = 'https://codesandbox.io/p/sandbox/synchronized-line-charts-37rhmf';
+
 
   render() {
     return (

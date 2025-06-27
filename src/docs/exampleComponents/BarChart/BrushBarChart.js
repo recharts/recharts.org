@@ -55,7 +55,7 @@ const data = [
 ];
 
 export default class Example extends PureComponent {
-  static demoUrl = 'https://codesandbox.io/p/sandbox/bar-chart-with-brush-twqyp2';
+
 
   render() {
     return (

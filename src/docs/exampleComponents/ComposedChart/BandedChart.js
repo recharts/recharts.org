@@ -42,7 +42,7 @@ const data = [
     b: 623,
   },
 ];
-  
+
 export default function Example() {
   const renderTooltipWithoutRange = ({ payload, content, ...rest }) => {
       const newPayload = payload.filter((x) => x.dataKey !== "a");
@@ -86,5 +86,4 @@ export default function Example() {
     </ResponsiveContainer>
   );
 }
-  
-Example.demoUrl = 'https://codesandbox.io/p/sandbox/simple-area-chart-forked-hncq3r';
+

@@ -142,6 +142,6 @@ const Example = () => {
   );
 };
 
-Example.demoUrl = 'https://codesandbox.io/p/sandbox/treemap-simple-hslkhr';
+
 
 export default Example;

@@ -76,7 +76,8 @@ export default {
       type: 'Function',
       isOptional: true,
       desc: {
-        'en-US': 'A function that generates the y-coordinates of all horizontal lines. The generator gets passed an object of the shape { yAxis, width, height, offset }.',
+        'en-US':
+          'A function that generates the y-coordinates of all horizontal lines. The generator gets passed an object of the shape { yAxis, width, height, offset }.',
         'zh-CN': '生成所有水平线的 y 坐标的函数。生成器传递一个形状为 { yAxis, width, height, offset } 的对象。',
       },
       format: [
@@ -105,7 +106,8 @@ export default {
       type: 'Function',
       isOptional: true,
       desc: {
-        'en-US': 'A function that generates the x-coordinates of all vertical lines. The generator gets passed an object of the shape { xAxis, width, height, offset }.',
+        'en-US':
+          'A function that generates the x-coordinates of all vertical lines. The generator gets passed an object of the shape { xAxis, width, height, offset }.',
         'zh-CN': '生成所有垂直线的 x 坐标的函数。生成器传递一个形状为 { xAxis, width, height, offset } 的对象',
       },
       format: [
@@ -140,9 +142,7 @@ export default {
         'en-US': 'The opacity of the background used to fill the space between grid lines',
         'zh-CN': '网格之间用于填充的背景的透明度',
       },
-      format: [
-        '<CartesianGrid strokeDasharray="3 3" fill="red" fillOpacity={0.6} />',
-      ],
+      format: ['<CartesianGrid strokeDasharray="3 3" fill="red" fillOpacity={0.6} />'],
     },
     {
       name: 'strokeDasharray',

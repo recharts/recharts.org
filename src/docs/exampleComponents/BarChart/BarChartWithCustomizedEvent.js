@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react';
 import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 
 export default class Example extends PureComponent {
-  static demoUrl = 'https://codesandbox.io/p/sandbox/bar-chart-with-customized-event-mmwz85';
+
 
   state = {
     data: [

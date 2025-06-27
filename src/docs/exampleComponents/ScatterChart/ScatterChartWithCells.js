@@ -36,4 +36,4 @@ export default function App() {
   );
 }
 
-App.demoUrl = 'https://codesandbox.io/p/sandbox/scatter-chart-with-cells-jjxq8y';
+

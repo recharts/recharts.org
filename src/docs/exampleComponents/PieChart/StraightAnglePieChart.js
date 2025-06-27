@@ -11,7 +11,7 @@ const data = [
 ];
 
 export default class Example extends PureComponent {
-  static demoUrl = 'https://codesandbox.io/s/pie-chart-of-straight-angle-oz0th';
+
 
   render() {
     return (

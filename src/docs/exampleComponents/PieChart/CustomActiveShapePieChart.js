@@ -55,7 +55,7 @@ const renderActiveShape = (props) => {
 };
 
 export default class Example extends PureComponent {
-  static demoUrl = 'https://codesandbox.io/s/pie-chart-with-customized-active-shape-y93si';
+
 
   render() {
     return (

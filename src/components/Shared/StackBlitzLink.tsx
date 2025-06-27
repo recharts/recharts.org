@@ -70,7 +70,7 @@ export function StackBlitzLink({ code, title, children }: StackBlitzLinkProps) {
             files: {
               'public/index.html': indexHtmlCode,
               /*
-               * This file has jsx in it, but create-react-app requires that the entry point is a src/index.js file.
+               * This file has jsx in it, but create-react-app requires that the entry point is a src/index.ts file.
                */
               'src/index.js': indexJsCode,
               'src/Example.jsx': code,

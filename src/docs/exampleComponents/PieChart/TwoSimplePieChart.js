@@ -20,7 +20,7 @@ const data02 = [
 ];
 
 export default class Example extends PureComponent {
-  static demoUrl = 'https://codesandbox.io/s/two-simple-pie-chart-otx9h';
+
 
   render() {
     return (

@@ -1,7 +1,6 @@
 export default {
   name: 'ComposedChart',
-  desc:
-    'A chart composed of line, area, and bar charts. When you just want to draw a chart of a single type like line, then LineChart is recommended.',
+  desc: 'A chart composed of line, area, and bar charts. When you just want to draw a chart of a single type like line, then LineChart is recommended.',
   props: [
     {
       name: 'layout',

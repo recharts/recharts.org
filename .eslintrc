@@ -83,6 +83,12 @@
     "react/jsx-props-no-spreading": "off",
     "react/state-in-constructor": "off",
     "react/prop-types": "off",
+    "import/no-unresolved": [
+      "error",
+      {
+        "ignore": ["\\?raw$"]
+      }
+    ],
     "react/static-property-placement": "off",
     "react/jsx-one-expression-per-line": "off"
   },

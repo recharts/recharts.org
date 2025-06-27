@@ -14,8 +14,7 @@ export default [
   {
     name: 'Fyndiq',
     url: 'https://fyndiq.se',
-    logoImgUrl:
-      '/assets/fyndiq.webp',
+    logoImgUrl: '/assets/fyndiq.webp',
   },
 
   {
@@ -27,8 +26,7 @@ export default [
   {
     name: 'Tracktl',
     url: 'https://www.tracktl.com/',
-    logoImgUrl:
-      '/assets/tracktl.png',
+    logoImgUrl: '/assets/tracktl.png',
   },
   {
     name: 'Demisto',
@@ -38,14 +36,12 @@ export default [
   {
     name: 'Rebla',
     url: 'http://boka-objekt.se/',
-    logoImgUrl:
-      '/assets/rebla.png',
+    logoImgUrl: '/assets/rebla.png',
   },
   {
     name: 'Squadlytics',
     url: 'https://squadlytics.com',
-    logoImgUrl:
-      '/assets/squadlytics.png',
+    logoImgUrl: '/assets/squadlytics.png',
   },
   {
     name: 'ahrefs',

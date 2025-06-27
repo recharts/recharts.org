@@ -23,7 +23,7 @@ const data = [
 ];
 
 export default class Example extends PureComponent {
-  static demoUrl = 'https://codesandbox.io/p/sandbox/composed-chart-with-best-fit-g7qqcm';
+
 
   render() {
     return (
