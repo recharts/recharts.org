@@ -26,4 +26,3 @@ export const allExamples: AllExamples = {
   Legend: { examples: LegendExamples, order: 11 },
   ResponsiveContainer: { examples: ResponsiveContainerExamples, order: 12 },
 };
-

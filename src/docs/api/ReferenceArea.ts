@@ -85,14 +85,12 @@ export default {
       defaultVal: "'discard'",
       isOptional: false,
       desc: {
-        'en-US':
-          `Defines how to draw the reference area if it falls partly outside the canvas.
+        'en-US': `Defines how to draw the reference area if it falls partly outside the canvas.
           If set to 'discard', the reference area will not be drawn at all.
           If set to 'hidden', the reference area will be clipped to the canvas.
           If set to 'visible', the reference area will be drawn completely.
           If set to 'extendDomain', the domain of the overflown axis will be extended such that the reference area fits into the canvas.`,
-        'zh-CN': 
-          `定義如果參考區域部分落在畫布之外，如何繪製參考區域
+        'zh-CN': `定義如果參考區域部分落在畫布之外，如何繪製參考區域
           如果設置為“discard“，則根本不會繪製參考區域
           如果設置為“hidden”，參考區域將被裁剪到畫布上
           如果設置為“visible“，參考區域將被完全繪製

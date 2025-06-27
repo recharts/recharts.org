@@ -61,14 +61,12 @@ export default {
       defaultVal: "'discard'",
       isOptional: false,
       desc: {
-        'en-US':
-          `Defines how to draw the reference dot if it falls partly outside the canvas.
+        'en-US': `Defines how to draw the reference dot if it falls partly outside the canvas.
           If set to 'discard', the reference dot will not be drawn at all.
           If set to 'hidden', the reference dot will be clipped to the canvas.
           If set to 'visible', the reference dot will be drawn completely.
           If set to 'extendDomain', the domain of the overflown axis will be extended such that the reference dot fits into the canvas.`,
-        'zh-CN': 
-          `定義如果參考點部分落在畫布之外，如何繪製參考點
+        'zh-CN': `定義如果參考點部分落在畫布之外，如何繪製參考點
           如果設置為“discard“，根本不會繪製參考點
           如果設置為“hidden”，參考點將被裁剪到畫布上
           如果設置為“visible“，參考點將被完全繪製

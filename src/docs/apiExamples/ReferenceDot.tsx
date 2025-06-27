@@ -4,7 +4,7 @@ type DataEntry = {
   x: number;
   y: number;
   z?: number;
-}
+};
 
 const data: DataEntry[] = [
   { x: 100, y: 200, z: 200 },
