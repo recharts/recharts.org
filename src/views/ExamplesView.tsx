@@ -78,15 +78,24 @@ class ExamplesView extends PureComponent<ExamplesViewProps, ExamplesViewState> {
 
   handleRunCode = () => {
     if (this.editorRef.current) {
-      sendEvent({
-        category: 'Examples',
-        action: 'Run Code',
-        label: this.getPage(),
-      });
-      this.setState({
-        // @ts-ignore
-        exampleCode: this.editorRef.current.getValue(),
-      });
+      // @ts-ignore
+      const newCode = this.editorRef.current.getValue();
+      if (newCode === this.state.exampleCode) {
+        sendEvent({
+          category: 'Examples',
+          action: 'Run Code',
+          label: this.getPage(),
+        });
+      } else {
+        sendEvent({
+          category: 'Examples',
+          action: 'Run Code - Code Changed',
+          label: this.getPage(),
+        });
+        this.setState({
+          exampleCode: newCode,
+        });
+      }
     }
   };
 
