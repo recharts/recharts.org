@@ -1,4 +1,5 @@
 import { AreaChart, XAxis, YAxis, CartesianGrid, Tooltip, Area } from 'recharts';
+import { ApiExample } from '../api/types.ts';
 
 const data = [
   {
@@ -145,7 +146,7 @@ const rangeExampleCode = `
 </AreaChart>
 `;
 
-export default [
+const AreaChartExamples: ReadonlyArray<ApiExample> = [
   {
     demo: example,
     code: exampleCode,
@@ -157,3 +158,4 @@ export default [
     code: rangeExampleCode,
   },
 ];
+export default AreaChartExamples;
