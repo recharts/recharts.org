@@ -5,9 +5,9 @@ import { getLocaleType, localeGet } from '../utils/LocaleUtils.ts';
 import { SupportedLocale } from '../locale';
 import { RouteComponentProps, withRouter } from '../routes/withRouter.tsx';
 
-const modules = ['installation', 'getting-started', 'customize'];
+const allGuides = ['installation', 'getting-started', 'customize'];
 
-function renderGuide(locale: SupportedLocale, page: string) {
+function Guide({ locale, page }: { locale: SupportedLocale; page: string }) {
   if (page === 'installation') {
     return <Installation locale={locale} />;
   }
@@ -23,7 +23,7 @@ function renderGuide(locale: SupportedLocale, page: string) {
 class GuideView extends PureComponent<RouteComponentProps> {
   render() {
     const { params } = this.props;
-    const page = params?.name ?? modules[0];
+    const page = params?.name ?? allGuides[0];
 
     const locale = getLocaleType(this.props);
 
@@ -33,8 +33,8 @@ class GuideView extends PureComponent<RouteComponentProps> {
           <div className="sidebar-cate">
             <h2>{localeGet(locale, 'guide', 'guide')}</h2>
             <ul className="menu">
-              {modules.map((entry, index) => (
-                <li key={`item-${index}`}>
+              {allGuides.map((entry) => (
+                <li key={entry}>
                   <Link to={`/${locale}/guide/${entry}`} className={entry === page ? 'active' : ''}>
                     {localeGet(locale, 'guide', entry)}
                   </Link>
@@ -43,7 +43,9 @@ class GuideView extends PureComponent<RouteComponentProps> {
             </ul>
           </div>
         </div>
-        <div className="content">{renderGuide(locale, page)}</div>
+        <div className="content">
+          <Guide locale={locale} page={page} />
+        </div>
       </div>
     );
   }
