@@ -42,6 +42,7 @@ const map = {
     installation: 'Installation',
     'getting-started': 'Getting Started',
     customize: 'Customize',
+    activeIndex: 'Active Index',
   },
   installation: {
     installation: 'Installation',

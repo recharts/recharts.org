@@ -1,21 +1,24 @@
-import { PureComponent } from 'react';
+import { ComponentType, PureComponent } from 'react';
 import { Link } from 'react-router';
 import { Installation, GettingStarted, Customize } from '../components/GuideView';
 import { getLocaleType, localeGet } from '../utils/LocaleUtils.ts';
 import { SupportedLocale } from '../locale';
 import { RouteComponentProps, withRouter } from '../routes/withRouter.tsx';
+import { ActiveIndex } from '../components/GuideView/ActiveIndex.tsx';
 
-const allGuides = ['installation', 'getting-started', 'customize'];
+const guideMap: Record<string, ComponentType<{ locale: SupportedLocale }>> = {
+  installation: Installation,
+  'getting-started': GettingStarted,
+  customize: Customize,
+  activeIndex: ActiveIndex,
+};
+
+const allGuides = Object.keys(guideMap);
 
 function Guide({ locale, page }: { locale: SupportedLocale; page: string }) {
-  if (page === 'installation') {
-    return <Installation locale={locale} />;
-  }
-  if (page === 'getting-started') {
-    return <GettingStarted locale={locale} />;
-  }
-  if (page === 'customize') {
-    return <Customize locale={locale} />;
+  const GuideComponent = guideMap[page];
+  if (GuideComponent) {
+    return <GuideComponent locale={locale} />;
   }
   return null;
 }
