@@ -11,6 +11,7 @@ import apiCates, { NEW_APIS } from '../docs/apiCates.ts';
 import './APIView.scss';
 import { SupportedLocale } from '../locale';
 import { RouteComponentProps, withRouter } from '../routes/withRouter.tsx';
+import { ApiDoc } from '../docs/api/types.ts';
 
 type APIViewState = {
   indexesPage: string;
@@ -189,8 +190,19 @@ class APIView extends PureComponent<RouteComponentProps, APIViewState> {
     const { params } = this.props;
     const page = params?.name ?? 'AreaChart';
 
-    // @ts-ignore
-    const api = API[page];
+    if (!(page in API)) {
+      return (
+        <div className="page page-api">
+          <Helmet title={page} />
+          <div className="content">
+            <h3 className="page-title">API Not Found</h3>
+            <p>The API documentation for "{page}" does not exist.</p>
+          </div>
+        </div>
+      );
+    }
+
+    const api: ApiDoc = API[page];
     // @ts-ignore
     const apiExamples = APIExamples[page];
     const locale = getLocaleType(this.props);

@@ -1,4 +1,6 @@
-export default {
+import { ApiDoc } from './types.ts';
+
+const Line: ApiDoc = {
   name: 'Line',
   props: [
     {
@@ -212,7 +214,7 @@ export default {
       type: 'String | Number',
       defaultVal: 'null',
       isOptional: true,
-      esc: {
+      desc: {
         'en-US': 'The unit of data. This option will be used in tooltip.',
         'zh-CN': '对应数据的单位，这个单位会展示在 Tooltip 的数值后面。',
       },
@@ -391,3 +393,4 @@ export default {
   parentComponents: ['LineChart', 'ComposedChart'],
   childrenComponents: ['LabelList', 'ErrorBar'],
 };
+export default Line;

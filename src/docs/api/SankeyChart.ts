@@ -1,4 +1,6 @@
-export default {
+import { ApiDoc } from './types.ts';
+
+const SankeyChart: ApiDoc = {
   name: 'SankeyChart',
   props: [
     {
@@ -222,3 +224,4 @@ export default {
   ],
   childrenComponents: ['Tooltip'],
 };
+export default SankeyChart;
