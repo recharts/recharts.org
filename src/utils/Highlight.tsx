@@ -1,5 +1,11 @@
 import React, { PureComponent } from 'react';
-import hljs from 'highlight.js';
+import hljs from 'highlight.js/lib/core';
+import xml from 'highlight.js/lib/languages/xml';
+import sh from 'highlight.js/lib/languages/bash';
+
+hljs.registerLanguage('jsx', xml);
+hljs.registerLanguage('html', xml);
+hljs.registerLanguage('sh', sh);
 
 type HighlightProps = {
   className?: string;
