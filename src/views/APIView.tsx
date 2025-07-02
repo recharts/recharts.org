@@ -11,6 +11,7 @@ import apiCates, { NEW_APIS } from '../docs/apiCates.ts';
 import './APIView.scss';
 import { SupportedLocale } from '../locale';
 import { RouteComponentProps, withRouter } from '../routes/withRouter.tsx';
+import { ApiDoc, ApiExample, ApiProps, PropExample } from '../docs/api/types.ts';
 
 type APIViewState = {
   indexesPage: string;
@@ -23,7 +24,7 @@ class APIView extends PureComponent<RouteComponentProps, APIViewState> {
     activeDataCodeIndexes: [],
   };
 
-  handleSwitchDataCode = (index: number, page: any) => {
+  handleSwitchDataCode = (index: number, page: string) => {
     const { activeDataCodeIndexes, indexesPage } = this.state;
     const indexes = page === indexesPage ? activeDataCodeIndexes : [];
     const i = indexes.indexOf(index);
@@ -41,7 +42,7 @@ class APIView extends PureComponent<RouteComponentProps, APIViewState> {
     }
   };
 
-  renderExamples(examples: ReadonlyArray<any>, locale: SupportedLocale, page: any) {
+  renderExamples(examples: ReadonlyArray<ApiExample>, locale: SupportedLocale, page: string) {
     if (!examples || !examples.length) {
       return null;
     }
@@ -51,7 +52,7 @@ class APIView extends PureComponent<RouteComponentProps, APIViewState> {
     return (
       <div className="examples">
         <ul className="example-list">
-          {examples.map((item, i) => {
+          {examples.map((item: ApiExample, i) => {
             const isDataCodeActive = page === indexesPage && activeDataCodeIndexes.indexOf(i) >= 0;
 
             return (
@@ -64,7 +65,6 @@ class APIView extends PureComponent<RouteComponentProps, APIViewState> {
                         type="button"
                         className="view-data-button"
                         onClick={this.handleSwitchDataCode.bind(this, i, page)}
-                        onKeyPress={this.handleSwitchDataCode.bind(this, i, page)}
                       >
                         {localeGet(locale, 'api', isDataCodeActive ? 'hideData' : 'showData')}
                       </button>
@@ -88,9 +88,9 @@ class APIView extends PureComponent<RouteComponentProps, APIViewState> {
     );
   }
 
-  renderPropsExamples(examples: any, locale: string) {
-    return examples.map((entry: any, i: number) => (
-      <li key={`example-${i}`}>
+  renderPropsExamples(examples: ReadonlyArray<PropExample>, locale: string) {
+    return examples.map((entry: PropExample) => (
+      <li key={entry.name}>
         {entry.isExternal ? (
           <a href={entry.url} target="_blank" rel="noreferrer">
             {entry.name}
@@ -102,13 +102,13 @@ class APIView extends PureComponent<RouteComponentProps, APIViewState> {
     ));
   }
 
-  renderProps(props: ReadonlyArray<any>, locale: SupportedLocale) {
+  renderProps(props: ReadonlyArray<ApiProps>, locale: SupportedLocale) {
     if (!props || !props.length) {
       return null;
     }
 
-    return props.map((entry: any, i: number) => (
-      <li className="props-item" key={`props-${i}`} id={entry.name}>
+    return props.map((entry: ApiProps) => (
+      <li className="props-item" key={entry.name} id={entry.name}>
         <p className={`header ${entry.deprecated ? 'deprecated' : ''}`}>
           <span className="title">
             <a href={`#${entry.name}`}>{entry.name}</a>
@@ -143,13 +143,13 @@ class APIView extends PureComponent<RouteComponentProps, APIViewState> {
     ));
   }
 
-  renderParent(components: ReadonlyArray<any>, locale: SupportedLocale) {
+  renderParent(components: ReadonlyArray<string>, locale: SupportedLocale) {
     return (
       <div>
         <h4 className="sub-title">{localeGet(locale, 'api', 'parent')}</h4>
         <ul className="props-list">
-          {components.map((entry, index) => (
-            <li key={`item-${index}`} className="api-component-item">
+          {components.map((entry) => (
+            <li key={entry} className="api-component-item">
               {entry.indexOf('svg') < 0 ? (
                 <code>
                   <Link to={`/${locale}/api/${entry}`}>{`<${entry} />`}</Link>
@@ -164,13 +164,13 @@ class APIView extends PureComponent<RouteComponentProps, APIViewState> {
     );
   }
 
-  renderChildren(components: any, locale: SupportedLocale) {
+  renderChildren(components: ReadonlyArray<string>, locale: SupportedLocale) {
     return (
       <div>
         <h4 className="sub-title">{localeGet(locale, 'api', 'children')}</h4>
         <ul className="props-list">
-          {components.map((entry: any, index: number) => (
-            <li key={`item-${index}`} className="api-component-item">
+          {components.map((entry: string) => (
+            <li key={entry} className="api-component-item">
               {entry.indexOf('svg') < 0 ? (
                 <code>
                   <Link to={`/${locale}/api/${entry}`}>{`<${entry} />`}</Link>
@@ -189,9 +189,19 @@ class APIView extends PureComponent<RouteComponentProps, APIViewState> {
     const { params } = this.props;
     const page = params?.name ?? 'AreaChart';
 
-    // @ts-ignore
-    const api = API[page];
-    // @ts-ignore
+    if (!(page in API)) {
+      return (
+        <div className="page page-api">
+          <Helmet title={page} />
+          <div className="content">
+            <h3 className="page-title">API Not Found</h3>
+            <p>The API documentation for &#34;{page}&#34; does not exist.</p>
+          </div>
+        </div>
+      );
+    }
+
+    const api: ApiDoc = API[page];
     const apiExamples = APIExamples[page];
     const locale = getLocaleType(this.props);
 
@@ -200,12 +210,12 @@ class APIView extends PureComponent<RouteComponentProps, APIViewState> {
         <Helmet title={page} />
         <div className="sidebar">
           <h2>API</h2>
-          {apiCates.map(({ name, items }, index) => (
-            <div className="sidebar-cate" key={`cate-${index}`}>
+          {apiCates.map(({ name, items }) => (
+            <div className="sidebar-cate" key={name}>
               <h4>{localeGet(locale, 'api', name)}</h4>
               <ul className="menu">
-                {items.map((compName, j) => (
-                  <li key={`item-${j}`}>
+                {items.map((compName) => (
+                  <li key={compName}>
                     <Link className={page === compName ? 'active' : ''} to={`/${locale}/api/${compName}`}>
                       {/* @ts-ignore */}
                       <NewMenuTag name={compName} isNew={NEW_APIS.indexOf(compName) >= 0} />

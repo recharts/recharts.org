@@ -18,8 +18,9 @@ import ErrorBar from './ErrorBar';
 import Label from './Label';
 import LabelList from './LabelList';
 import FunnelChart from './FunnelChart';
+import { ApiExample } from '../api/types.ts';
 
-export default {
+const allApiExamples: Record<string, ReadonlyArray<ApiExample>> = {
   AreaChart,
   BarChart,
   LineChart,
@@ -41,3 +42,4 @@ export default {
   FunnelChart,
   SankeyChart,
 };
+export default allApiExamples;
