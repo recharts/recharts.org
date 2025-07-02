@@ -69,7 +69,9 @@ export function ActiveIndex({ locale }: { locale: SupportedLocale }) {
         <Tooltip defaultIndex={2} />
       </PieChart>
       <Highlight className="jsx">
-        {`<PieChart width={400} height={400}>
+        {`import { Pie, PieChart, Tooltip } from 'recharts';
+
+<PieChart width={400} height={400}>
 <Pie
   activeShape={{
     fill: 'red',
@@ -114,7 +116,9 @@ export function ActiveIndex({ locale }: { locale: SupportedLocale }) {
         <Bar dataKey="uv" stackId="a" fill="green" activeBar={{ stroke: 'black', strokeWidth: 7 }} />
       </BarChart>
       <Highlight className="jsx">
-        {`<BarChart
+        {`import { Bar, BarChart, Tooltip } from 'recharts';
+
+<BarChart
   width={550}
   height={240}
   data={[
