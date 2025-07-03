@@ -181,22 +181,6 @@ export default {
       },
     },
     {
-      name: 'activeIndex',
-      type: 'Array',
-      defaultVal: 'null',
-      isOptional: false,
-      desc: {
-        'en-US': 'The index of active sector in Pie, this option can be changed in mouse event handlers.',
-        'zh-CN': '用来表示激活楔子的序号。可以通过自定义事件来指定这个值。',
-      },
-      examples: [
-        {
-          name: 'A pie chart with customized active shape',
-          url: '/examples/CustomActiveShapePieChart',
-        },
-      ],
-    },
-    {
       name: 'activeShape',
       type: 'Object | ReactElement | Function',
       defaultVal: 'null',
