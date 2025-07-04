@@ -38,6 +38,8 @@ const dependencies: ProjectDependencies = {
   'react-is': '^19.0.0',
   'react-dom': '^19.0.0',
   recharts: '^3.0.0',
+  '@types/react': '^18.3.1',
+  '@types/react-dom': '^18.3.1',
 };
 
 /*
@@ -73,13 +75,13 @@ export function StackBlitzLink({ code, title, children }: StackBlitzLinkProps) {
                * This file has jsx in it, but create-react-app requires that the entry point is a src/index.ts file.
                */
               'src/index.js': indexJsCode,
-              'src/Example.jsx': code,
+              'src/Example.tsx': code,
             },
             dependencies,
           },
           {
             newWindow: true,
-            openFile: 'src/Example.jsx',
+            openFile: 'src/Example.tsx',
             /*
              * In this simple case, there is really only one interesting file to look at,
              * so let's hide the sidebar by default.
