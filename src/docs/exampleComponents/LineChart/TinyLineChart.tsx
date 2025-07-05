@@ -1,5 +1,4 @@
-import React from 'react';
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+import { Line, LineChart, ResponsiveContainer } from 'recharts';
 
 const data = [
   {
@@ -46,7 +45,7 @@ const data = [
   },
 ];
 
-const Example = () => {
+export default function Example() {
   return (
     <ResponsiveContainer width="100%" height="100%">
       <LineChart width={300} height={100} data={data}>
@@ -54,8 +53,4 @@ const Example = () => {
       </LineChart>
     </ResponsiveContainer>
   );
-};
-
-
-
-export default Example;
+}
