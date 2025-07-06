@@ -100,37 +100,6 @@ export default {
       format: ["[{ value: 'item name', type: 'line', id: 'ID01' }]"],
     },
     {
-      name: 'chartWidth',
-      type: 'Number',
-      defaultVal: 'null',
-      isOptional: false,
-      desc: {
-        'en-US': 'The width of chart container, usually calculated internally.',
-        'zh-CN': '图表的宽度，通常父组件会传下来。',
-      },
-    },
-    {
-      name: 'chartHeight',
-      type: 'Number',
-      defaultVal: 'null',
-      isOptional: false,
-      desc: {
-        'en-US': 'The height of chart container, usually calculated internally.',
-        'zh-CN': '图表的高度，通常父组件会传下来。',
-      },
-    },
-    {
-      name: 'margin',
-      type: 'Object',
-      defaultVal: 'null',
-      isOptional: true,
-      desc: {
-        'en-US': 'The margin of chart container, usually calculated internally.',
-        'zh-CN': '父组件的 marign 值。',
-      },
-      format: ['{ top: 0, left: 0, right: 0, bottom: 0 }'],
-    },
-    {
       name: 'content',
       type: 'ReactElement | Function',
       defaultVal: 'null',
