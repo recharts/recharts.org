@@ -1,6 +1,5 @@
-/* eslint-disable max-classes-per-file */
 /* eslint-disable react/no-multi-comp */
-import React, { PureComponent } from 'react';
+import React from 'react';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 
 const data = [
@@ -48,38 +47,27 @@ const data = [
   },
 ];
 
-class CustomizedLabel extends PureComponent {
-  render() {
-    const { x, y, stroke, value } = this.props;
-
+const CustomizedLabel = ({ x, y, stroke, value }) => {
     return (
       <text x={x} y={y} dy={-4} fill={stroke} fontSize={10} textAnchor="middle">
         {value}
       </text>
     );
-  }
-}
+};
 
-class CustomizedAxisTick extends PureComponent {
-  render() {
-    const { x, y, stroke, payload } = this.props;
-
-    return (
+const CustomizedAxisTick = ({ x, y, stroke, payload }) => {
+  return (
       <g transform={`translate(${x},${y})`}>
         <text x={0} y={0} dy={16} textAnchor="end" fill="#666" transform="rotate(-35)">
           {payload.value}
         </text>
       </g>
     );
-  }
-}
+};
 
-export default class Example extends PureComponent {
-
-
-  render() {
-    return (
-      <ResponsiveContainer width="100%" height="100%">
+const Example = () => {
+  return (
+    <ResponsiveContainer width="100%" height="100%">
         <LineChart
           width={500}
           height={300}
@@ -100,6 +88,7 @@ export default class Example extends PureComponent {
           <Line type="monotone" dataKey="uv" stroke="#82ca9d" />
         </LineChart>
       </ResponsiveContainer>
-    );
-  }
-}
+  );
+};
+
+export default Example;
