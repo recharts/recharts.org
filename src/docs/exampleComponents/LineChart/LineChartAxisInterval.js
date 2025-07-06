@@ -46,10 +46,8 @@ const data = [
   },
 ];
 
-export default class Example extends PureComponent {
-
-
-  chart = (interval) => (
+const Example = () => {
+  const chart = (interval) => (
     <ResponsiveContainer height={250} width="100%">
       <LineChart data={data} margin={{ right: 25, top: 10 }}>
         <CartesianGrid strokeDasharray="3 3" />
@@ -61,15 +59,15 @@ export default class Example extends PureComponent {
     </ResponsiveContainer>
   );
 
-  render() {
-    return (
-      <>
-        {this.chart('preserveEnd')}
-        {this.chart('preserveStart')}
-        {this.chart('preserveStartEnd')}
-        {this.chart('equidistantPreserveStart')}
-        {this.chart(1)}
-      </>
-    );
-  }
-}
+  return (
+    <>
+      {chart('preserveEnd')}
+      {chart('preserveStart')}
+      {chart('preserveStartEnd')}
+      {chart('equidistantPreserveStart')}
+      {chart(1)}
+    </>
+  );
+};
+
+export default Example;
