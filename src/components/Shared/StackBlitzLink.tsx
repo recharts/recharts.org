@@ -33,11 +33,25 @@ root.render(<Example />);
 // language=HTML
 const indexHtmlCode = `<div id="root" style="width: 100vw; height: 100vh;" />`;
 
+// tsconfig.json
+const tsconfigJsonCode = `{
+  "compilerOptions": {
+    "target": "es5",
+    "strict": true,
+    "module": "esnext",
+    "jsx": "react-jsx",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+  }
+}`;
+
 const dependencies: ProjectDependencies = {
   react: '^19.0.0',
   'react-is': '^19.0.0',
   'react-dom': '^19.0.0',
   recharts: '^3.0.0',
+  '@types/react': '^19.0.0',
+  '@types/react-dom': '^19.0.0',
 };
 
 /*
@@ -73,13 +87,14 @@ export function StackBlitzLink({ code, title, children }: StackBlitzLinkProps) {
                * This file has jsx in it, but create-react-app requires that the entry point is a src/index.ts file.
                */
               'src/index.js': indexJsCode,
-              'src/Example.jsx': code,
+              'src/Example.tsx': code,
+              'tsconfig.json': tsconfigJsonCode,
             },
             dependencies,
           },
           {
             newWindow: true,
-            openFile: 'src/Example.jsx',
+            openFile: 'src/Example.tsx',
             /*
              * In this simple case, there is really only one interesting file to look at,
              * so let's hide the sidebar by default.
