@@ -1,6 +1,23 @@
-import { Pie, PieChart, ResponsiveContainer, Sector } from 'recharts';
-// eslint-disable-next-line import/no-unresolved
-import { PieSectorDataItem } from 'recharts/types/polar/Pie';
+import { Pie, PieChart, ResponsiveContainer, Sector, SectorProps } from 'recharts';
+
+type Coordinate = {
+  x: number;
+  y: number;
+};
+
+type PieSectorData = {
+  percent?: number;
+  name?: string | number;
+  midAngle?: number;
+  middleRadius?: number;
+  tooltipPosition?: Coordinate;
+  value?: number;
+  paddingAngle?: number;
+  dataKey?: string;
+  payload?: any;
+};
+
+type PieSectorDataItem = React.SVGProps<SVGPathElement> & Partial<SectorProps> & PieSectorData;
 
 const data = [
   { name: 'Group A', value: 400 },
