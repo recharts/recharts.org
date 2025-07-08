@@ -1,6 +1,38 @@
 import { Cell, Pie, PieChart, ResponsiveContainer } from 'recharts';
-// eslint-disable-next-line import/no-unresolved
-import { PieLabelProps } from 'recharts/types/polar/Pie';
+
+type TooltipPayload = ReadonlyArray<any>;
+
+type Coordinate = {
+  x: number;
+  y: number;
+};
+
+type PieSectorData = {
+  percent?: number;
+  name?: string | number;
+  midAngle?: number;
+  middleRadius?: number;
+  tooltipPosition?: Coordinate;
+  value?: number;
+  paddingAngle?: number;
+  dataKey?: string;
+  payload?: any;
+  tooltipPayload?: ReadonlyArray<TooltipPayload>;
+};
+
+type GeometrySector = {
+  cx: number;
+  cy: number;
+  innerRadius: number;
+  outerRadius: number;
+  startAngle: number;
+  endAngle: number;
+};
+
+type PieLabelProps = PieSectorData &
+  GeometrySector & {
+    tooltipPayload?: any;
+  };
 
 const data = [
   { name: 'Group A', value: 400 },
