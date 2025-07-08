@@ -1,6 +1,5 @@
-import React, { PureComponent } from 'react';
+import React, { useState } from 'react';
 import {
-  Label,
   LineChart,
   Line,
   CartesianGrid,
@@ -58,25 +57,21 @@ const initialState = {
   animation: true,
 };
 
-export default class Example extends PureComponent {
-
-
-  constructor(props) {
-    super(props);
-    this.state = initialState;
-  }
-
-  zoom() {
-    let { refAreaLeft, refAreaRight } = this.state;
-    const { data } = this.state;
+const Example = () => {
+  const [state, setState] = useState(initialState);  
+  
+  const zoom = () => {
+    let { refAreaLeft, refAreaRight } = state;
+    const { data } = state;
 
     if (refAreaLeft === refAreaRight || refAreaRight === '') {
-      this.setState(() => ({
+      setState((prevState) => ( {
+        ...prevState,
         refAreaLeft: '',
         refAreaRight: '',
       }));
       return;
-    }
+    };
 
     // xAxis domain
     if (refAreaLeft > refAreaRight) [refAreaLeft, refAreaRight] = [refAreaRight, refAreaLeft];
@@ -85,7 +80,8 @@ export default class Example extends PureComponent {
     const [bottom, top] = getAxisYDomain(refAreaLeft, refAreaRight, 'cost', 1);
     const [bottom2, top2] = getAxisYDomain(refAreaLeft, refAreaRight, 'impression', 50);
 
-    this.setState(() => ({
+    setState((prevState) => ({
+      ...prevState,
       refAreaLeft: '',
       refAreaRight: '',
       data: data.slice(),
@@ -96,11 +92,12 @@ export default class Example extends PureComponent {
       bottom2,
       top2,
     }));
-  }
+  };
 
-  zoomOut() {
-    const { data } = this.state;
-    this.setState(() => ({
+  const zoomOut = () => {
+    const { data } = state;
+    setState((prevState) => ({
+      ...prevState,
       data: data.slice(),
       refAreaLeft: '',
       refAreaRight: '',
@@ -111,41 +108,50 @@ export default class Example extends PureComponent {
       top2: 'dataMax+50',
       bottom2: 'dataMin+50',
     }));
-  }
+  };
 
-  render() {
-    const { data, barIndex, left, right, refAreaLeft, refAreaRight, top, bottom, top2, bottom2 } = this.state;
+  const {
+    data,
+    refAreaLeft,
+    refAreaRight,
+    left,
+    right,
+    top,
+    bottom,
+    top2,
+    bottom2,
+  } = state;
 
-    return (
-      <div className="highlight-bar-charts" style={{ userSelect: 'none', width: '100%' }}>
-        <button type="button" className="btn update" onClick={this.zoomOut.bind(this)}>
-          Zoom Out
-        </button>
+  return (
+    <div className="highlight-bar-charts" style={{ userSelect: 'none', width: '100%' }}>
+      <button type="button" className="btn update" onClick={zoomOut}>
+        Zoom Out
+      </button>
 
-        <ResponsiveContainer width="100%" height={400}>
-          <LineChart
-            width={800}
-            height={400}
-            data={data}
-            onMouseDown={(e) => this.setState({ refAreaLeft: e.activeLabel })}
-            onMouseMove={(e) => this.state.refAreaLeft && this.setState({ refAreaRight: e.activeLabel })}
-            // eslint-disable-next-line react/jsx-no-bind
-            onMouseUp={this.zoom.bind(this)}
-          >
-            <CartesianGrid strokeDasharray="3 3" />
-            <XAxis allowDataOverflow dataKey="name" domain={[left, right]} type="number" />
-            <YAxis allowDataOverflow domain={[bottom, top]} type="number" yAxisId="1" />
-            <YAxis orientation="right" allowDataOverflow domain={[bottom2, top2]} type="number" yAxisId="2" />
-            <Tooltip />
-            <Line yAxisId="1" type="natural" dataKey="cost" stroke="#8884d8" animationDuration={300} />
-            <Line yAxisId="2" type="natural" dataKey="impression" stroke="#82ca9d" animationDuration={300} />
+      <ResponsiveContainer width="100%" height={400}>
+        <LineChart
+          width={800}
+          height={400}
+          data={data}
+          onMouseDown={(e) => setState(prevState => ({ ...prevState, refAreaLeft: e.activeLabel }))}
+          onMouseMove={(e) => state.refAreaLeft && setState(prevState => ({ ...prevState, refAreaRight: e.activeLabel }))}
+          onMouseUp={zoom}
+        >
+          <CartesianGrid strokeDasharray="3 3" />
+          <XAxis allowDataOverflow dataKey="name" domain={[left, right]} type="number" />
+          <YAxis allowDataOverflow domain={[bottom, top]} type="number" yAxisId="1" />
+          <YAxis orientation="right" allowDataOverflow domain={[bottom2, top2]} type="number" yAxisId="2" />
+          <Tooltip />
+          <Line yAxisId="1" type="natural" dataKey="cost" stroke="#8884d8" animationDuration={300} />
+          <Line yAxisId="2" type="natural" dataKey="impression" stroke="#82ca9d" animationDuration={300} />
 
-            {refAreaLeft && refAreaRight ? (
-              <ReferenceArea yAxisId="1" x1={refAreaLeft} x2={refAreaRight} strokeOpacity={0.3} />
-            ) : null}
-          </LineChart>
-        </ResponsiveContainer>
-      </div>
-    );
-  }
-}
+          {refAreaLeft && refAreaRight ? (
+            <ReferenceArea yAxisId="1" x1={refAreaLeft} x2={refAreaRight} strokeOpacity={0.3} />
+          ) : null}
+        </LineChart>
+      </ResponsiveContainer>
+    </div>
+  );
+};
+
+export default Example;
