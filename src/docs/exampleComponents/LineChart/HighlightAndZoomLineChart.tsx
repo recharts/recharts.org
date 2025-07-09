@@ -1,14 +1,5 @@
-import React, { useState } from 'react';
-import {
-  LineChart,
-  Line,
-  CartesianGrid,
-  XAxis,
-  YAxis,
-  Tooltip,
-  ReferenceArea,
-  ResponsiveContainer,
-} from 'recharts';
+import { useState } from 'react';
+import { CartesianGrid, Line, LineChart, ReferenceArea, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
 
 const initialData = [
   { name: 1, cost: 4.11, impression: 100 },
@@ -33,7 +24,12 @@ const initialData = [
   { name: 20, cost: 7, impression: 100 },
 ];
 
-const getAxisYDomain = (from, to, ref, offset) => {
+enum DataRef {
+  cost = 'cost',
+  impression = 'impression',
+}
+
+const getAxisYDomain = (from: number, to: number, ref: DataRef, offset: number) => {
   const refData = initialData.slice(from - 1, to);
   let [bottom, top] = [refData[0][ref], refData[0][ref]];
   refData.forEach((d) => {
@@ -46,81 +42,64 @@ const getAxisYDomain = (from, to, ref, offset) => {
 
 const initialState = {
   data: initialData,
-  left: 'dataMin',
-  right: 'dataMax',
-  refAreaLeft: '',
-  refAreaRight: '',
-  top: 'dataMax+1',
-  bottom: 'dataMin-1',
-  top2: 'dataMax+20',
-  bottom2: 'dataMin-20',
-  animation: true,
+  left: 'dataMin' as number | string,
+  right: 'dataMax' as number | string,
+  refAreaLeft: '' as number | string,
+  refAreaRight: '' as number | string,
+  top: 'dataMax+1' as number | string,
+  bottom: 'dataMin-1' as number | string,
+  top2: 'dataMax+20' as number | string,
+  bottom2: 'dataMin-20' as number | string,
 };
 
-const Example = () => {
-  const [state, setState] = useState(initialState);  
-  
+export default function HighlightAndZoomLineChart() {
+  const [data, setData] = useState(initialState.data);
+  const [left, setLeft] = useState(initialState.left);
+  const [right, setRight] = useState(initialState.right);
+  const [refAreaLeft, setRefAreaLeft] = useState(initialState.refAreaLeft);
+  const [refAreaRight, setRefAreaRight] = useState(initialState.refAreaRight);
+  const [top, setTop] = useState(initialState.top);
+  const [bottom, setBottom] = useState(initialState.bottom);
+  const [top2, setTop2] = useState(initialState.top2);
+  const [bottom2, setBottom2] = useState(initialState.bottom2);
+
   const zoom = () => {
-    let { refAreaLeft, refAreaRight } = state;
-    const { data } = state;
+    let leftVal = refAreaLeft;
+    let rightVal = refAreaRight;
 
-    if (refAreaLeft === refAreaRight || refAreaRight === '') {
-      setState((prevState) => ( {
-        ...prevState,
-        refAreaLeft: '',
-        refAreaRight: '',
-      }));
+    if (leftVal === rightVal || rightVal === '') {
+      setRefAreaLeft('');
+      setRefAreaRight('');
       return;
-    };
+    }
 
-    // xAxis domain
-    if (refAreaLeft > refAreaRight) [refAreaLeft, refAreaRight] = [refAreaRight, refAreaLeft];
+    if (leftVal > rightVal) [leftVal, rightVal] = [rightVal, leftVal];
 
-    // yAxis domain
-    const [bottom, top] = getAxisYDomain(refAreaLeft, refAreaRight, 'cost', 1);
-    const [bottom2, top2] = getAxisYDomain(refAreaLeft, refAreaRight, 'impression', 50);
+    const [newBottom, newTop] = getAxisYDomain(Number(leftVal), Number(rightVal), DataRef.cost, 1);
+    const [newBottom2, newTop2] = getAxisYDomain(Number(leftVal), Number(rightVal), DataRef.impression, 50);
 
-    setState((prevState) => ({
-      ...prevState,
-      refAreaLeft: '',
-      refAreaRight: '',
-      data: data.slice(),
-      left: refAreaLeft,
-      right: refAreaRight,
-      bottom,
-      top,
-      bottom2,
-      top2,
-    }));
+    setRefAreaLeft('');
+    setRefAreaRight('');
+    setData(data.slice());
+    setLeft(leftVal);
+    setRight(rightVal);
+    setBottom(newBottom);
+    setTop(newTop);
+    setBottom2(newBottom2);
+    setTop2(newTop2);
   };
 
   const zoomOut = () => {
-    const { data } = state;
-    setState((prevState) => ({
-      ...prevState,
-      data: data.slice(),
-      refAreaLeft: '',
-      refAreaRight: '',
-      left: 'dataMin',
-      right: 'dataMax',
-      top: 'dataMax+1',
-      bottom: 'dataMin',
-      top2: 'dataMax+50',
-      bottom2: 'dataMin+50',
-    }));
+    setData(initialData.slice());
+    setRefAreaLeft('');
+    setRefAreaRight('');
+    setLeft('dataMin');
+    setRight('dataMax');
+    setTop('dataMax+1');
+    setBottom('dataMin');
+    setTop2('dataMax+50');
+    setBottom2('dataMin+50');
   };
-
-  const {
-    data,
-    refAreaLeft,
-    refAreaRight,
-    left,
-    right,
-    top,
-    bottom,
-    top2,
-    bottom2,
-  } = state;
 
   return (
     <div className="highlight-bar-charts" style={{ userSelect: 'none', width: '100%' }}>
@@ -133,8 +112,8 @@ const Example = () => {
           width={800}
           height={400}
           data={data}
-          onMouseDown={(e) => setState(prevState => ({ ...prevState, refAreaLeft: e.activeLabel }))}
-          onMouseMove={(e) => state.refAreaLeft && setState(prevState => ({ ...prevState, refAreaRight: e.activeLabel }))}
+          onMouseDown={(e) => setRefAreaLeft(e?.activeLabel ?? 0)}
+          onMouseMove={(e) => refAreaLeft && setRefAreaRight(e?.activeLabel ?? 0)}
           onMouseUp={zoom}
         >
           <CartesianGrid strokeDasharray="3 3" />
@@ -152,6 +131,4 @@ const Example = () => {
       </ResponsiveContainer>
     </div>
   );
-};
-
-export default Example;
+}
