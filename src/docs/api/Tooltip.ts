@@ -258,6 +258,15 @@ export default {
       },
     },
     {
+      name: 'shared',
+      type: 'Boolean',
+      defaultVal: 'true',
+      isOptional: true,
+      desc: {
+        'en-US': `If true, tooltip will appear on top of all bars on an axis tick. If false, tooltip will appear on individual bars. Currently only supported in BarChart and RadialBarChart.`,
+      },
+    },
+    {
       name: 'isAnimationActive',
       type: 'Boolean',
       defaultVal: 'true in CSR, and false in SSR',
