@@ -148,7 +148,7 @@ export default {
       name: 'strokeDasharray',
       type: 'String',
       defaultVal: 'null',
-      isOptional: false,
+      isOptional: true,
       desc: {
         'en-US': 'The pattern of dashes and gaps used to paint the lines of the grid',
         'zh-CN': '用于绘制网格的虚线和间隔的模式',
@@ -158,6 +158,26 @@ export default {
         '<CartesianGrid strokeDasharray="4 1" />',
         '<CartesianGrid strokeDasharray="4 1 2" />',
       ],
+    },
+    {
+      name: 'xAxisId',
+      type: 'String | Number',
+      defaultVal: 0,
+      isOptional: true,
+      desc: {
+        'en-US': 'The id of x-axis which you would like to add grid lines for. Required if xAxisId is set on XAxis.',
+      },
+      format: ['<CartesianGrid xAxisId="top" />', '<XAxis xAxisId="top" />'],
+    },
+    {
+      name: 'yAxisId',
+      type: 'String | Number',
+      defaultVal: 0,
+      isOptional: true,
+      desc: {
+        'en-US': 'The id of y-axis which you would like to add grid lines for. Required if yAxisId is set on YAxis.',
+      },
+      format: ['<CartesianGrid yAxisId="left" />', '<XAxis yAxisId="left" />'],
     },
   ],
   parentComponents: ['AreaChart', 'BarChart', 'LineChart', 'ComposedChart', 'ScatterChart'],
