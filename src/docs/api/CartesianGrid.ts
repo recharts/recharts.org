@@ -165,9 +165,10 @@ export default {
       defaultVal: 0,
       isOptional: true,
       desc: {
-        'en-US': 'The id of x-axis which you would like to add grid lines for. Required if xAxisId is set on XAxis.',
+        'en-US': `The id of x-axis which you would like to add grid lines for. Must match if xAxisId is set on
+          XAxis or a graphical component .`,
       },
-      format: ['<CartesianGrid xAxisId="top" />', '<XAxis xAxisId="top" />'],
+      format: ['<CartesianGrid xAxisId="top" />', '<XAxis xAxisId="top" />', '<Bar dataKey="temp" xAxisId="top" />'],
     },
     {
       name: 'yAxisId',
@@ -175,9 +176,10 @@ export default {
       defaultVal: 0,
       isOptional: true,
       desc: {
-        'en-US': 'The id of y-axis which you would like to add grid lines for. Required if yAxisId is set on YAxis.',
+        'en-US': `The id of y-axis which you would like to add grid lines for. Must match if yAxisId is set on
+        YAxis or a graphical component.`,
       },
-      format: ['<CartesianGrid yAxisId="left" />', '<XAxis yAxisId="left" />'],
+      format: ['<CartesianGrid yAxisId="left" />', '<YAxis yAxisId="left" />', '<Bar dataKey="temp" yAxisId="left" />'],
     },
   ],
   parentComponents: ['AreaChart', 'BarChart', 'LineChart', 'ComposedChart', 'ScatterChart'],
