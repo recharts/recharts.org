@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react';
+import React from 'react';
 import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 
 const data = [
@@ -46,11 +46,8 @@ const data = [
   },
 ];
 
-export default class Example extends PureComponent {
-
-
-  render() {
-    return (
+const Example = () => {
+  return (
       <div style={{ width: '100%', height: 300 }}>
         <ResponsiveContainer>
           <AreaChart
@@ -71,5 +68,6 @@ export default class Example extends PureComponent {
         </ResponsiveContainer>
       </div>
     );
-  }
-}
+};
+
+export default Example;
