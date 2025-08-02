@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react';
+import React from 'react';
 import {
   ComposedChart,
   Line,
@@ -51,11 +51,8 @@ const data = [
   },
 ];
 
-export default class Example extends PureComponent {
-
-
-  render() {
-    return (
+const Example = () => {
+  return (
       <ResponsiveContainer width="100%" height="100%">
         <ComposedChart
           width={500}
@@ -79,5 +76,6 @@ export default class Example extends PureComponent {
         </ComposedChart>
       </ResponsiveContainer>
     );
-  }
-}
+};
+
+export default Example;

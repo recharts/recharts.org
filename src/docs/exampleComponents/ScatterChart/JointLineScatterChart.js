@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react';
+import React from 'react';
 import {
   ScatterChart,
   Scatter,
@@ -27,11 +27,8 @@ const data02 = [
   { x: 120, y: 190 },
 ];
 
-export default class Example extends PureComponent {
-
-
-  render() {
-    return (
+const Example = () => {
+  return (
       <ResponsiveContainer width="100%" height={400}>
         <ScatterChart
           margin={{
@@ -52,5 +49,6 @@ export default class Example extends PureComponent {
         </ScatterChart>
       </ResponsiveContainer>
     );
-  }
-}
+};
+
+export default Example;

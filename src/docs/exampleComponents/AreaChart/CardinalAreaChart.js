@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react';
+import React from 'react';
 import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 import { curveCardinal } from 'd3-shape';
 
@@ -49,11 +49,8 @@ const data = [
 
 const cardinal = curveCardinal.tension(0.2);
 
-export default class Example extends PureComponent {
-
-
-  render() {
-    return (
+const Example = () => {
+  return (
       <ResponsiveContainer width="100%" height="100%">
         <AreaChart
           width={500}
@@ -75,5 +72,6 @@ export default class Example extends PureComponent {
         </AreaChart>
       </ResponsiveContainer>
     );
-  }
-}
+};
+
+export default Example;

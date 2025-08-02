@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react';
+import React from 'react';
 import { ResponsiveContainer, PieChart, Pie, Legend } from 'recharts';
 
 const data = [
@@ -8,11 +8,8 @@ const data = [
   { name: 'Group D', value: 200 },
 ];
 
-export default class Example extends PureComponent {
-
-
-  render() {
-    return (
+const Example = () => {
+  return (
       <div style={{ width: '100%', height: 300 }}>
         <ResponsiveContainer>
           <PieChart>
@@ -21,5 +18,6 @@ export default class Example extends PureComponent {
         </ResponsiveContainer>
       </div>
     );
-  }
-}
+};
+
+export default Example;
