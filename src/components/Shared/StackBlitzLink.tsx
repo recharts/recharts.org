@@ -3,7 +3,7 @@ import stackblitzSdk, { ProjectDependencies } from '@stackblitz/sdk';
 import { TargetBlankLink } from './TargetBlankLink.tsx';
 import { sendEvent } from '../analytics.ts';
 
-type StackBlitzLinkProps = {
+type StackBlitzLinkProps = Readonly<{
   /**
    * The code to be included in the StackBlitz project.
    */
@@ -17,11 +17,11 @@ type StackBlitzLinkProps = {
    * The children to be rendered inside the link.
    */
   children: ReactNode;
-};
+}>;
 
 // React 18+ boilerplate
-// language=jsx
-const indexJsCode = `
+// language=tsx
+const indexTsxCode = `
 import React from 'react';
 import { createRoot } from 'react-dom/client';
 import Example from './Example';
@@ -37,12 +37,24 @@ const indexHtmlCode = `<div id="root" style="width: 100vw; height: 100vh;" />`;
 const tsconfigJsonCode = `{
   "compilerOptions": {
     "target": "es5",
+    "lib": ["dom", "dom.iterable", "es6"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
     "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
     "module": "esnext",
-    "jsx": "react-jsx",
     "moduleResolution": "node",
     "resolveJsonModule": true,
-  }
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx"
+  },
+  "include": [
+    "src"
+  ]
 }`;
 
 const dependencies: ProjectDependencies = {
@@ -52,13 +64,14 @@ const dependencies: ProjectDependencies = {
   recharts: '^3.0.0',
   '@types/react': '^19.0.0',
   '@types/react-dom': '^19.0.0',
+  typescript: '^5.0.0',
 };
 
 /*
  * This creates a link that creates a new StackBlitz project
  * with the provided code and opens it in a new tab.
  * This assumes that the code is a Recharts example component which exports the React component as the default export.
- * This uses a javascript template, no typescript support in this one.
+ * This uses TypeScript with full type checking enabled.
  */
 export function StackBlitzLink({ code, title, children }: StackBlitzLinkProps) {
   return (
@@ -84,9 +97,9 @@ export function StackBlitzLink({ code, title, children }: StackBlitzLinkProps) {
             files: {
               'public/index.html': indexHtmlCode,
               /*
-               * This file has jsx in it, but create-react-app requires that the entry point is a src/index.ts file.
+               * This file has tsx in it, and create-react-app supports TypeScript out of the box.
                */
-              'src/index.js': indexJsCode,
+              'src/index.tsx': indexTsxCode,
               'src/Example.tsx': code,
               'tsconfig.json': tsconfigJsonCode,
             },
