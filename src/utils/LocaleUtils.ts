@@ -20,7 +20,10 @@ export const getLocaleType = (props: RouteComponentProps): SupportedLocale => {
   return defaultLocale;
 };
 
-export const parseLocalObj = (locale: SupportedLocale, value: string | Record<string, ReactNode>): ReactNode => {
+export const parseLocalObj = (
+  locale: SupportedLocale,
+  value: undefined | string | Partial<Record<string, ReactNode>>,
+): ReactNode => {
   if (!value) {
     return '';
   }

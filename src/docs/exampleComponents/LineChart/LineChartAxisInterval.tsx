@@ -1,5 +1,6 @@
-import React, { PureComponent } from 'react';
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, ResponsiveContainer } from 'recharts';
+import { CartesianGrid, Line, LineChart, ResponsiveContainer, XAxis, YAxis } from 'recharts';
+
+type AxisInterval = number | 'preserveStart' | 'preserveEnd' | 'preserveStartEnd' | 'equidistantPreserveStart';
 
 const data = [
   {
@@ -46,10 +47,8 @@ const data = [
   },
 ];
 
-export default class Example extends PureComponent {
-
-
-  chart = (interval) => (
+function Chart({ interval }: Readonly<{ interval: AxisInterval }>) {
+  return (
     <ResponsiveContainer height={250} width="100%">
       <LineChart data={data} margin={{ right: 25, top: 10 }}>
         <CartesianGrid strokeDasharray="3 3" />
@@ -60,16 +59,16 @@ export default class Example extends PureComponent {
       </LineChart>
     </ResponsiveContainer>
   );
+}
 
-  render() {
-    return (
-      <>
-        {this.chart('preserveEnd')}
-        {this.chart('preserveStart')}
-        {this.chart('preserveStartEnd')}
-        {this.chart('equidistantPreserveStart')}
-        {this.chart(1)}
-      </>
-    );
-  }
+export default function Example() {
+  return (
+    <>
+      <Chart interval="preserveEnd" />
+      <Chart interval="preserveStart" />
+      <Chart interval="preserveStartEnd" />
+      <Chart interval="equidistantPreserveStart" />
+      <Chart interval={1} />
+    </>
+  );
 }

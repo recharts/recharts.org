@@ -1,4 +1,6 @@
-export default {
+import { ApiDoc } from './types.ts';
+
+const Text: ApiDoc = {
   name: 'Text',
   props: [
     {
@@ -46,3 +48,4 @@ export default {
     },
   ],
 };
+export default Text;

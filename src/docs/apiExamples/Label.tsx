@@ -1,6 +1,7 @@
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Label, LabelList } from 'recharts';
 import { localeGet } from '../../utils/LocaleUtils.ts';
 import { SupportedLocale } from '../../locale';
+import { ApiExample } from '../api/types.ts';
 
 const data = [
   {
@@ -47,9 +48,9 @@ const data = [
   },
 ];
 
-const example = (local: SupportedLocale) => (
+const example = (locale: SupportedLocale) => (
   <div>
-    <p style={{ fontSize: 18 }}>{localeGet(local, 'label', 'cartesian-title')}</p>
+    <p style={{ fontSize: 18 }}>{localeGet(locale, 'label', 'cartesian-title')}</p>
     <div className="cartesian-label-position">
       <svg width={600} height={400}>
         <rect x={100} y={100} width={400} height={200} stroke="#000" fill="none" />
@@ -120,7 +121,7 @@ const example = (local: SupportedLocale) => (
         </g>
       </svg>
     </div>
-    <p style={{ fontSize: 18 }}>{localeGet(local, 'label', 'polar-title')}</p>
+    <p style={{ fontSize: 18 }}>{localeGet(locale, 'label', 'polar-title')}</p>
     <div className="poral-label-position">
       <svg width={700} height={400}>
         <path
@@ -198,7 +199,7 @@ const chartExample = () => (
   </BarChart>
 );
 
-export default [
+const labelExamples: ReadonlyArray<ApiExample> = [
   {
     demo: example,
     code: '',
@@ -225,3 +226,4 @@ export default [
     dataCode: `const data = ${JSON.stringify(data, null, 2)}`,
   },
 ];
+export default labelExamples;

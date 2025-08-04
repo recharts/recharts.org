@@ -48,8 +48,9 @@ import Dot from './Dot';
 import Polygon from './Polygon';
 import Rectangle from './Rectangle';
 import Sector from './Sector';
+import { ApiDoc } from './types.ts';
 
-export default {
+const allExamples: Record<string, ApiDoc> = {
   AreaChart,
   BarChart,
   LineChart,
@@ -101,3 +102,5 @@ export default {
   Rectangle,
   Sector,
 };
+
+export default allExamples;

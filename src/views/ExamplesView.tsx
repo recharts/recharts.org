@@ -32,7 +32,7 @@ const parseExampleComponent = (compName: string): ExampleComponent | null => {
     return !!entry.examples[compName];
   });
 
-  if (res && res.length) {
+  if (res?.length) {
     return {
       cateName: res[0],
       exampleName: compName,
@@ -78,15 +78,24 @@ class ExamplesView extends PureComponent<ExamplesViewProps, ExamplesViewState> {
 
   handleRunCode = () => {
     if (this.editorRef.current) {
-      sendEvent({
-        category: 'Examples',
-        action: 'Run Code',
-        label: this.getPage(),
-      });
-      this.setState({
-        // @ts-ignore
-        exampleCode: this.editorRef.current.getValue(),
-      });
+      // @ts-ignore
+      const newCode = this.editorRef.current.getValue();
+      if (newCode === this.state.exampleCode) {
+        sendEvent({
+          category: 'Examples',
+          action: 'Run Code',
+          label: this.getPage(),
+        });
+      } else {
+        sendEvent({
+          category: 'Examples',
+          action: 'Run Code - Code Changed',
+          label: this.getPage(),
+        });
+        this.setState({
+          exampleCode: newCode,
+        });
+      }
     }
   };
 
@@ -120,12 +129,18 @@ class ExamplesView extends PureComponent<ExamplesViewProps, ExamplesViewState> {
           <Editor
             key={`editor-${exampleResult.exampleName}`}
             value={this.state.exampleCode}
-            defaultLanguage="javascript"
+            defaultLanguage="typescript"
             options={{ tabSize: 2 }}
             onMount={(editor) => {
               // @ts-ignore
               // noinspection JSConstantReassignment
               this.editorRef.current = editor;
+            }}
+            beforeMount={(monaco) => {
+              monaco.languages.typescript.typescriptDefaults.setCompilerOptions({
+                jsx: monaco.languages.typescript.JsxEmit.React, // enables TSX/JSX
+                allowJs: true,
+              });
             }}
           />
         </div>

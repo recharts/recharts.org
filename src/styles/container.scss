@@ -1,6 +1,3 @@
-.container {
-}
-
 header {
   width: 100%;
   background-color: #fcfcfc;
@@ -130,6 +127,7 @@ footer {
     min-width: 1200px;
     padding-left: 300px;
 
+    h1,
     .page-title {
       padding-top: 30px;
       margin-bottom: 30px;
@@ -138,6 +136,7 @@ footer {
       color: $gray-dark;
     }
 
+    h2,
     .sub-title {
       height: 40px;
       line-height: 40px;
@@ -146,6 +145,7 @@ footer {
       border-bottom: 1px solid $gray-lighter;
     }
 
+    p,
     .paragraph-title {
       margin: 20px 0;
     }
