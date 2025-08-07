@@ -37,12 +37,12 @@ export default {
     },
     {
       name: 'outerRadius',
-      type: 'Percentage | Number',
+      type: 'Percentage | Number | Function',
       defaultVal: "'80%'",
       isOptional: false,
       desc: {
         'en-US':
-          'The outer radius of all the sectors. If set a percentage, the final value is obtained by multiplying the percentage of maxRadius which is calculated by the width, height, cx, cy.',
+          'The outer radius of all the sectors. If set a percentage, the final value is obtained by multiplying the percentage of maxRadius which is calculated by the width, height, cx, cy. Function should return a string percentage or number',
         'zh-CN':
           '饼图的外径。如果值为百分比，我们首先会根据圆心的坐标、图表的宽度、图表的高度计算一个最大半径，然后根据这个最大半径来计算真实的半径。',
       },
