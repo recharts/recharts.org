@@ -48,6 +48,7 @@ import Dot from './Dot';
 import Polygon from './Polygon';
 import Rectangle from './Rectangle';
 import Sector from './Sector';
+import Trapezoid from './Trapezoid';
 import { ApiDoc } from './types.ts';
 
 const allExamples: Record<string, ApiDoc> = {
@@ -101,6 +102,7 @@ const allExamples: Record<string, ApiDoc> = {
   Polygon,
   Rectangle,
   Sector,
+  Trapezoid,
 };
 
 export default allExamples;

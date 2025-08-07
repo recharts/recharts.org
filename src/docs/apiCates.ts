@@ -45,7 +45,7 @@ export default [
   },
   {
     name: 'shapes',
-    items: ['Cross', 'Curve', 'Dot', 'Polygon', 'Rectangle', 'Sector'],
+    items: ['Cross', 'Curve', 'Dot', 'Polygon', 'Rectangle', 'Sector', 'Trapezoid'],
   },
 ];
 
