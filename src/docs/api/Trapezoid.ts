@@ -54,7 +54,8 @@ export default {
       type: 'Boolean',
       defaultVal: 'false',
       desc: {
-        'en-US': 'If set to true, trapezoid will update and render with a gradual fade-in animation from left to right.'
+        'en-US':
+          'If set to true, trapezoid will update and render with a gradual fade-in animation from left to right.',
       },
     },
     {
