@@ -31,7 +31,20 @@ root.render(<Example />);
 `.trim();
 
 // language=HTML
-const indexHtmlCode = `<div id="root" style="width: 100vw; height: 100vh;" />`;
+const indexHtmlCode = (title: string) => `
+  <!doctype html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>${title}</title>
+  </head>
+  <body>
+  <div id="root" style="width: 100vw; height: 100vh;"></div>
+  <script type="module" src="./src/index.tsx"></script>
+  </body>
+  </html>
+`;
 
 // tsconfig.json
 const tsconfigJsonCode = `{
@@ -57,15 +70,42 @@ const tsconfigJsonCode = `{
   ]
 }`;
 
+const reactVersion = '^19.0.0';
+
 const dependencies: ProjectDependencies = {
-  react: '^19.0.0',
-  'react-is': '^19.0.0',
-  'react-dom': '^19.0.0',
-  recharts: '^3.1.0',
-  '@types/react': '^19.0.0',
-  '@types/react-dom': '^19.0.0',
-  typescript: '^5.0.0',
+  react: reactVersion,
+  'react-is': reactVersion,
+  'react-dom': reactVersion,
+  recharts: '^3.2.1',
 };
+
+const devDependencies: ProjectDependencies = {
+  '@types/react': reactVersion,
+  '@types/react-dom': reactVersion,
+  typescript: '^5.0.0',
+  vite: '^7.0.0',
+  '@vitejs/plugin-react': '^5.0.2',
+};
+
+const packageJson = {
+  name: 'recharts-stackblitz-example',
+  version: '0.0.1',
+  main: 'index.js',
+  scripts: {
+    dev: 'vite',
+  },
+  dependencies,
+  devDependencies,
+};
+
+const viteConfigTs = `import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+
+// https://vite.dev/config/
+export default defineConfig({
+  plugins: [react()],
+})
+`;
 
 /*
  * This creates a link that creates a new StackBlitz project
@@ -92,18 +132,19 @@ export function StackBlitzLink({ code, title, children }: StackBlitzLinkProps) {
            * https://developer.stackblitz.com/platform/api/javascript-sdk-options
            */
           {
-            template: 'create-react-app',
+            template: 'node',
             title,
             files: {
-              'public/index.html': indexHtmlCode,
+              'index.html': indexHtmlCode(title),
               /*
                * This file has tsx in it, and create-react-app supports TypeScript out of the box.
                */
               'src/index.tsx': indexTsxCode,
               'src/Example.tsx': code,
               'tsconfig.json': tsconfigJsonCode,
+              'package.json': JSON.stringify(packageJson, null, 2),
+              'vite.config.ts': viteConfigTs,
             },
-            dependencies,
           },
           {
             newWindow: true,
@@ -114,6 +155,11 @@ export function StackBlitzLink({ code, title, children }: StackBlitzLinkProps) {
              * People interested in browsing package.json or other files can always open the sidebar with a click.
              */
             showSidebar: false,
+            /*
+             * The only interesting message in the terminal is "Vite dev server running at..."
+             * so it doesn't need to be very tall.
+             */
+            terminalHeight: 10,
           },
         );
       }}
