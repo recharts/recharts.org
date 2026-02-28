@@ -1,4 +1,4 @@
-# recharts.org
+# #recharts.org
 
 **This repository is archived and no longer active.**
 
@@ -10,7 +10,7 @@ Please open all issues and pull requests against the [recharts/recharts](https:/
 
 This site is built with react and react-router. Pull requests welcome!
 
-## Developing
+## Developing for you
 
 Start a dev server at localhost:4000:
 
